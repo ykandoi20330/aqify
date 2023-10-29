@@ -25,6 +25,15 @@ import FourthCard4 from "./Aqify project/image 2 (3).png"
 import sildeImg from "./Aqify project/Frame 65.png"
 import profileImg from "./Aqify project/Ellipse 8 (1).png"
 
+//six section images
+import quoteImg from "./Aqify project/Vector.png"
+import personImg from "./Aqify project/Ellipse 8.png"
+
+//seven section images 
+import sevenImg1 from "./Aqify project/Rectangle 9.png"
+import sevenImg2 from "./Aqify project/Rectangle 10.png"
+import sevenImg3 from "./Aqify project/Rectangle 11.png"
+import sevenImg4 from "./Aqify project/Rectangle 12.png"
 
 const Home = () => {
   return (
@@ -229,7 +238,7 @@ const Home = () => {
       <section className='fourth-main'>
         <div>
           <div className='d-flex flex-column align-items-center justify-content-center'>
-            <h1 style={{ width: '30%', textAlign: 'center', fontWeight: '700' }}>The Fatest And Simplest Way To Get Acquired</h1>
+            <h1 className='fourth-h1'>The Fatest And Simplest Way To Get Acquired</h1>
             <button style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='btn btn-outline-primary my-5'>Find your valuation<img style={{ width: '20px' }} src={vectorArrow} alt="" /></button>
           </div>
         </div>
@@ -264,14 +273,16 @@ const Home = () => {
           <div className="slider-img">
             <img style={{ width: "100%", position: "relative" }} src={sildeImg} />
             <div className="overlay-slide">
-              <div>
-                <img style={{ width: "35%" }} src={profileImg} alt="" />
-                <span>Owner</span>
-                <span>BitsCool.com</span>
+              <div className='d-flex flex-row align-items-center'>
+                <img style={{ width: "30%" }} src={profileImg} alt="" />
+                <div className='mx-3'>
+                  <span style={{ fontSize: '1.5rem', color: '#fff' }}>Owner</span><br />
+                  <span style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                </div>
               </div>
               <div>
-                <a href=""><i class="fa-solid fa-arrow-left"></i></a>
-                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                <a className='SlideCard-arrow' href=""><i class="fa-solid fa-arrow-left"></i></a>
+                <a className='SlideCard-arrow' href=""><i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -286,6 +297,65 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/**Six home section */}
+      <section className='six-main'>
+        <div className="six-content">
+          <div style={{left:'50px',position:'relative'}} className='d-flex justify-content-between align-items-center'>
+            <div>
+              <h1 className='six-h1'>Stories From Founders And Buyers</h1>
+              <div className='my-5'>
+                <a className='six-arrow' href=""><i class="fa-solid fa-arrow-left"></i></a>
+                <a className='six-arrow' href=""><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div>
+              <img className='quoteImg' src={quoteImg} alt="" />
+            </div>
+          </div>
+
+          <div className='d-flex justify-content-evenly my-4'>
+            <div className="six-card">
+              <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+              <div className='d-flex flex-row align-items-center'>
+                <img style={{ width: "15%" }} src={personImg} alt="" />
+                <div className='mx-3'>
+                  <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                  <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="six-card">
+              <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+              <div className='d-flex flex-row align-items-center'>
+                <img style={{ width: "15%" }} src={personImg} alt="" />
+                <div className='mx-3'>
+                  <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                  <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/**seven home section */}
+
+      <section className='seven-section'>
+      <div>
+          <div className='d-flex flex-column align-items-center justify-content-center'>
+            <h1 className='fourth-h1'>Your First Step To An Acquisition Starts Here</h1>
+            <button style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='btn btn-primary my-5'>Join Now <img style={{ width: '20px' }} src={arrow} alt="" /></button>
+          </div>
+        </div>
+        <div className='d-flex justify-content-center'>
+          <img className='sevenImg' src={sevenImg1} alt="" />
+          <img className='sevenImg' src={sevenImg2} alt="" />
+          <img className='sevenImg' src={sevenImg3} alt="" />
+          <img className='sevenImg' src={sevenImg4} alt="" />
         </div>
       </section>
     </>
