@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aqify/static/css/main.39e25ed2.css",
-    "main.js": "/aqify/static/js/main.0fab9e53.js",
+    "main.js": "/aqify/static/js/main.d9afea00.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.eb0136b7b5c10baf1515.png",
     "static/media/Ellipse 7.png": "/aqify/static/media/Ellipse 7.6e342b4c0558fa85b80c.png",
@@ -13,11 +13,11 @@
     "static/media/image 2.png": "/aqify/static/media/image 2.1b69158d192669f992c4.png",
     "index.html": "/aqify/index.html",
     "main.39e25ed2.css.map": "/aqify/static/css/main.39e25ed2.css.map",
-    "main.0fab9e53.js.map": "/aqify/static/js/main.0fab9e53.js.map",
+    "main.d9afea00.js.map": "/aqify/static/js/main.d9afea00.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39e25ed2.css",
-    "static/js/main.0fab9e53.js"
+    "static/js/main.d9afea00.js"
   ]
 }
