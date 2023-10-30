@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.d92552ca.css",
-    "main.js": "/aqify/static/js/main.10d40464.js",
+    "main.css": "/aqify/static/css/main.841d7bb7.css",
+    "main.js": "/aqify/static/js/main.0db6bf65.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
-    "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.eb0136b7b5c10baf1515.png",
+    "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.74bc4a2b0219bc8a815d.png",
+    "static/media/Rectangle.png": "/aqify/static/media/Rectangle.dcf5b78e1bdae3ab6d72.png",
     "static/media/Ellipse 7.png": "/aqify/static/media/Ellipse 7.6e342b4c0558fa85b80c.png",
+    "static/media/Rectangle16.png": "/aqify/static/media/Rectangle16.acbee556c9c822c32ad6.png",
     "static/media/Frame 65.png": "/aqify/static/media/Frame 65.45d4f4e2c6efc5fc0862.png",
     "static/media/Rectangle 9.png": "/aqify/static/media/Rectangle 9.d5929ed1ac2a705ffda6.png",
     "static/media/Rectangle 12.png": "/aqify/static/media/Rectangle 12.8f37a9f8b749c6278b66.png",
     "static/media/Rectangle 11.png": "/aqify/static/media/Rectangle 11.d947b129226e41916218.png",
     "static/media/Rectangle 10.png": "/aqify/static/media/Rectangle 10.2b3fad3c46780012301d.png",
     "static/media/Ellipse 8 (1).png": "/aqify/static/media/Ellipse 8 (1).19caa5c716b2527bef98.png",
+    "static/media/Ellipse 8.png": "/aqify/static/media/Ellipse 8.8b847066bee64f59ac21.png",
     "static/media/image 2 (1).png": "/aqify/static/media/image 2 (1).33c87a554dd51d2a5d3e.png",
     "static/media/image 2 (2).png": "/aqify/static/media/image 2 (2).7bc061ced9fa1ee7f7c4.png",
-    "static/media/Ellipse 8.png": "/aqify/static/media/Ellipse 8.8b847066bee64f59ac21.png",
     "static/media/image 2 (3).png": "/aqify/static/media/image 2 (3).6450e15f390055af49fd.png",
     "static/media/image 2.png": "/aqify/static/media/image 2.1b69158d192669f992c4.png",
+    "static/media/Frame 105.png": "/aqify/static/media/Frame 105.98a053f1cddae5685f3b.png",
     "index.html": "/aqify/index.html",
-    "main.d92552ca.css.map": "/aqify/static/css/main.d92552ca.css.map",
-    "main.10d40464.js.map": "/aqify/static/js/main.10d40464.js.map",
+    "main.841d7bb7.css.map": "/aqify/static/css/main.841d7bb7.css.map",
+    "main.0db6bf65.js.map": "/aqify/static/js/main.0db6bf65.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d92552ca.css",
-    "static/js/main.10d40464.js"
+    "static/css/main.841d7bb7.css",
+    "static/js/main.0db6bf65.js"
   ]
 }
