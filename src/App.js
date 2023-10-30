@@ -7,6 +7,9 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Owner from './Components/Owner';
+import Acquirers from './Components/Acquirers';
+import Pricing from './Components/Pricing';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/owner" element={<Owner/>} />
+        <Route path="/acquire" element={<Acquirers/>} />
+        <Route path="/pricing" element={<Pricing/>} />
       </Routes>
       <Footer/>
     </HashRouter>

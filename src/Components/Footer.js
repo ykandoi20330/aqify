@@ -11,19 +11,19 @@ const Footer = () => {
     return (
         <>
             <section className='footer-section'>
-                <div>
-                    <div className='d-flex justify-content-between'>
-                        <div className="footer-main col-6">
-                            <img style={{ width: '25%' }} src={Logo} alt="" />
-                            <span style={{ color: '#C0C0C0' }}>-Leading acquistion platform</span>
-                            <div className='' style={{ color: '#C0C0C0' }}>
+                <div className='d-grid align-content-between align-items-center'>
+                    <div style={{width:'95%',top:'5vh',position:"relative"}} className='d-flex justify-content-between'>
+                        <div className="footer-main col-5">
+                            <img style={{ width: '35%', marginRight:'1rem' }} src={Logo} alt="" />
+                            <span style={{ color: '#C0C0C0',fontSize:'20px' }}>-Leading acquistion platform</span>
+                            <div className='my-4' style={{ color: '#C0C0C0' }}>
                                 Acqify  is an up-market acquisition platform for $100K+ revenue startups. Our global marketplace makes it free and anonymous for business owners to attract full and partial acquisition offers directly. No listing fees. 100% anonymity.
                             </div>
                         </div>
 
                         <div>
-                            <ul style={{ listStyle: 'none' }}>
-                                <li style={{ color: '#fff' }}>Platform</li>
+                            <ul className='first-ul' style={{ listStyle: 'none' }}>
+                                <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px" ,width:'70%' }}>Platform</li>
                                 <li style={{ color: '#C0C0C0' }}>For owners</li>
                                 <li style={{ color: '#C0C0C0' }}>For acquires</li>
                                 <li style={{ color: '#C0C0C0' }}>Market</li>
@@ -31,8 +31,8 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div>
-                            <ul style={{ listStyle: 'none' }}>
-                                <li style={{ color: '#fff' }}>Company</li>
+                            <ul className='first-ul' style={{ listStyle: 'none' }}>
+                                <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px"  ,width:'75%'  }}>Company</li>
                                 <li style={{ color: '#C0C0C0' }}>About</li>
                                 <li style={{ color: '#C0C0C0' }}>FAQ</li>
                                 <li style={{ color: '#C0C0C0' }}>Pricing</li>
@@ -40,8 +40,8 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div>
-                            <ul style={{ listStyle: 'none' }}>
-                                <li style={{ color: '#fff' }}>Legal</li>
+                            <ul className='first-ul' style={{ listStyle: 'none' }}>
+                                <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px"  ,width:'45%'  }}>Legal</li>
                                 <li style={{ color: '#C0C0C0' }}>Imprint</li>
                                 <li style={{ color: '#C0C0C0' }}>Terms and Conditions</li>
                             </ul>

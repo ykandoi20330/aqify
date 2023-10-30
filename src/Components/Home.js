@@ -35,6 +35,10 @@ import sevenImg2 from "./Aqify project/Rectangle 10.png"
 import sevenImg3 from "./Aqify project/Rectangle 11.png"
 import sevenImg4 from "./Aqify project/Rectangle 12.png"
 
+//circle images
+import circle1 from "./Aqify project/Ellipse 57.png"
+import circle2 from "./Aqify project/Ellipse 58.png"
+
 const Home = () => {
   return (
     <>
@@ -64,6 +68,11 @@ const Home = () => {
                 <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
               </ul>
             </div>
+          </div>
+
+          <div style={{bottom: '0',right: '0',position: 'absolute'}}>
+            <img className='bottomCircle1' src={circle1} alt="" />
+            <img className='bottomCircle2' src={circle2} alt="" />
           </div>
         </div>
       </section>

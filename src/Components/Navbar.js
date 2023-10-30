@@ -10,22 +10,22 @@ const Navbar = () => {
   return (
     <>
       <div className='hero1'>
-        <nav className='navbar navbar-dark navline' id="middleNav" style={{ top: '10px', zIndex: "5" }}>
+        <nav className='navbar navbar-dark navline' id="middleNav" style={{ top: '10px', zIndex: "5",  position: 'absolute', width: '100%' }}>
          
             <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link>
          
             <ul className="ul nav justify-content-between">
               <li className="nav-item">
-                <Link className="link active" aria-current="page" to="/">Fundriser</Link>
+                <Link className="nav-link " aria-current="page" to="/">Fundriser</Link>
               </li>
               <li className="nav-item">
-                <Link className="link" to="/acquire">For Acquirers</Link>
+                <Link className="nav-link" to="/acquire">For Acquirers</Link>
               </li>
               <li className="nav-item">
-                <Link className="link" to="/owner">For Owners</Link>
+                <Link className="nav-link" to="/owner">For Owners</Link>
               </li>
               <li className="nav-item">
-                <Link className="link" to="/pricing">Pricing</Link>
+                <Link className="nav-link" to="/pricing">Pricing</Link>
               </li>
             </ul>
           
