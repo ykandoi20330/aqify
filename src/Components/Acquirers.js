@@ -19,24 +19,56 @@ import cardIcon2 from "./Acquirers/Frame 100 (4).png"
 import cardIcon3 from "./Acquirers/Frame 100 (5).png"
 import BackSidePhoto from "./Acquirers/Rectangle16.png"
 
+import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
+import { TypeAnimation } from 'react-type-animation';
+
 const Acquirers = () => {
-  return (
-    <>
+    return (
+        <>
+
+            <section>
+                <Navbar />
+            </section>
+            {/** */}
             <section>
                 <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'>Acquire (un) profitable tech & internet businesses
+                                <h1 className='main-h1 col-6'>Acquire (un) profitable tech & internet businesses<br/>
+                                    <TypeAnimation className='typeAnimation'
+                                        sequence={[
+                                            'Ecommerce', // Types 'One'
+                                            1000, // Waits 1s
+                                            'Saas', // Deletes 'One' and types 'Two'
+                                            2000, // Waits 
+                                            'Community',
+                                            2000,
+                                            'Marketplace',
+                                            2000,
+                                            'Crypto',
+                                            2000,
+                                            'Wordpress',
+                                            2000,
+                                            'Content',
+                                            2000,
+                                            'Services',
+                                            2000,
+                                        ]}
+                                        wrapper="span"
+                                        cursor={false}
+                                        repeat={Infinity}
+                                    />.
                                 </h1>
                             </div>
                             <div className='my-4'>
                                 <span className='main-span col-6 d-flex'>
-                                Make your profile to negotiate directly with founders of vetted $100K+ revenue startups, scale-ups and SMBs.
+                                    Make your profile to negotiate directly with founders of vetted $100K+ revenue startups, scale-ups and SMBs.
                                 </span>
                             </div>
                             <div className=''>
-                                <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>Make your Profile<img style={{ width: '10%' }} src={arrow} alt="" /></button>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singin">Make your Profile<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -46,7 +78,7 @@ const Acquirers = () => {
             <section className='owner-first-section'>
                 <div>
                     <div className='d-flex flex-column align-items-center justify-content-center'>
-                        <h1 className='fourth-h1' style={{width:'60%'}}>Find Internet Startups And SMBs With Product-Market Fit...</h1>
+                        <h1 className='fourth-h1' style={{ width: '60%' }}>Find Internet Startups And SMBs With Product-Market Fit...</h1>
                         <span style={{ color: '#636363', fontSize: '20px', margin: '1rem 0 3rem 0' }}>Every Monday we publish new businesses for sale on our marketplace.</span>
                     </div>
                 </div>
@@ -73,10 +105,10 @@ const Acquirers = () => {
                 <div className="Sell-detail">
                     <div>
                         <div className='d-flex flex-column align-items-center justify-content-center'>
-                            <h1 className='fourth-h1' style={{ marginBottom: '3rem',width:'60%' }}>Trusted By Professionals For Sourcing Quality Deals</h1>
+                            <h1 className='fourth-h1' style={{ marginBottom: '3rem', width: '60%' }}>Trusted By Professionals For Sourcing Quality Deals</h1>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain '}}>
+                    <div style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain ' }}>
                         <div className='d-flex flex-row align-items-center'>
                             <img style={{ width: '17%', margin: '0 3rem' }} src={roundedImg} alt="" />
                             <div>
@@ -109,14 +141,14 @@ const Acquirers = () => {
                     <div>
                         <h1 className='owner-third-h1 col-4'>Get Acquisition Offers And Sell In 3 Easy Steps</h1>
                         <div className='my-5'>
-                            <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>Access Marketplace<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></button>
+                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Access Marketplace<img style={{ width: '7%', margin: '0 0 0 4rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </div>
 
                 <div className="owner-third-card">
                     <h3>1.</h3>
-                    <div style={{padding:"2rem 6rem 4rem 3rem"}} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon1} alt="" />
                             <h4>Qualitative details</h4>
@@ -132,7 +164,7 @@ const Acquirers = () => {
                 </div>
                 <div className="owner-third-card">
                     <h3>2.</h3>
-                    <div style={{padding:"2rem 6rem 4rem 3rem"}} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon2} alt="" />
                             <h4>Quantitative data</h4>
@@ -148,7 +180,7 @@ const Acquirers = () => {
                 </div>
                 <div className="owner-third-card">
                     <h3>3.</h3>
-                    <div style={{padding:"2rem 6rem 4rem 3rem"}} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon3} alt="" />
                             <h4>Preferred terms of a deal</h4>
@@ -165,20 +197,20 @@ const Acquirers = () => {
             </section>
 
             <section className='owner-four-section'>
-                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ',backgroundPosition:'right'}}>
-                <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                        <h1 className='owner-four-h1'>Get Verified And Contact Owners Today</h1>
-                        <span className='col-8 d-flex' style={{color:'#fff',fontSize:'20px'}}>Acquire an internet business with $100K to $50M in annual revenue - either fully or partially.</span>
-                        <div className='my-5'>
-                            <button style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light'>Join</button>
+                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <div>
+                            <h1 className='owner-four-h1'>Get Verified And Contact Owners Today</h1>
+                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>Acquire an internet business with $100K to $50M in annual revenue - either fully or partially.</span>
+                            <div className='my-5'>
+                                <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Join</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
             </section>
         </>
-  )
+    )
 }
 
 export default Acquirers

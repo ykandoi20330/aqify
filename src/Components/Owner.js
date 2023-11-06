@@ -19,16 +19,48 @@ import cardIcon2 from "./Owner/Frame 100 (4).png"
 import cardIcon3 from "./Owner/Frame 100 (5).png"
 import BackSidePhoto from "./Owner/Rectangle16.png"
 
+import { Link } from 'react-router-dom'
+import Navbar from "./Navbar"
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Owner = () => {
     return (
         <>
+        <section>
+            <Navbar/>
+        </section>
+
+        {/** */}
             <section>
                 <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'>Acquire Without Cost: Have Your Cake and Eat It, Too!
+                                <h1 className='main-h1 col-6'><span style={{marginRight:'1rem'}}>Acquire Without Cost: Have Your Cake and Eat It, Too!</span>
+                                <TypeAnimation className='typeAnimation'
+                                        sequence={[
+                                            'Ecommerce', // Types 'One'
+                                            1000, // Waits 1s
+                                            'Saas', // Deletes 'One' and types 'Two'
+                                            2000, // Waits 
+                                            'Community',
+                                            2000,
+                                            'Marketplace',
+                                            2000,
+                                            'Crypto',
+                                            2000,
+                                            'Wordpress',
+                                            2000,
+                                            'Content',
+                                            2000,
+                                            'Services',
+                                            2000,
+                                        ]}
+                                        wrapper="span"
+                                        cursor={false}
+                                        repeat={Infinity}
+                                    />.
                                 </h1>
                             </div>
                             <div className='my-4'>
@@ -37,7 +69,7 @@ const Owner = () => {
                                 </span>
                             </div>
                             <div className=''>
-                                <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>List your business<img style={{ width: '10%' }} src={arrow} alt="" /></button>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singin">List your business<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -110,7 +142,7 @@ const Owner = () => {
                     <div>
                         <h1 className='owner-third-h1 col-4'>Get Acquisition Offers And Sell In 3 Easy Steps</h1>
                         <div className='my-5'>
-                            <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>List your business<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></button>
+                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">List your business<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </div>
@@ -172,7 +204,7 @@ const Owner = () => {
                         <h1 className='owner-four-h1'>Get Offers From Professional Acquirers</h1>
                         <span className='col-8 d-flex' style={{color:'#fff',fontSize:'20px'}}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>
                         <div className='my-5'>
-                            <button style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light'>Advisor Activity</button>
+                            <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Advisor Activity</Link>
                         </div>
                     </div>
                 </div>
