@@ -83,12 +83,7 @@ const DashboardProfile = () => {
                 </div> */}
 
                 <div className="sideContent">
-                    <div className="d-flex justify-content-end">
-                        <div><Link to="/"><img src={message} alt="" /></Link></div>
-                        <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                        <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                    </div>
-
+                    
                     <div>
                         <h1 style={{ fontWeight: '700' }}>Profile</h1>
                         <span style={{ color: '#636363' }}>Update your information below</span>

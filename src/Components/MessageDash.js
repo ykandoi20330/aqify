@@ -1,19 +1,12 @@
 import React from 'react'
 import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg"
-import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+
 
 const MessageDash = () => {
     return (
         <>
             <div className="sideContent">
-            <div className="d-flex justify-content-end">
-                        <div><Link to="/"><img src={message} alt="" /></Link></div>
-                        <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                        <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                    </div>
 
                 <div className="message-card">
                     <div>

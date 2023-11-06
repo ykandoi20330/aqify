@@ -39,9 +39,11 @@ import sevenImg4 from "./Aqify project/Rectangle 12.png"
 import circle1 from "./Aqify project/Ellipse 57.png"
 import circle2 from "./Aqify project/Ellipse 58.png"
 
+import Footer from "./Footer"
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation';
-// import animationPage from "./6394734fa1fe7a1774da8f52_First-Fold_Half-Res.gif"
+import animationPage from "./HomePage/Image.png"
+import outline from "./HomePage/output-onlinegiftools.gif"
 
 const Home = () => {
   return (
@@ -146,9 +148,13 @@ const Home = () => {
               </ul>
             </div>
 
-            {/* <div>
-                <img src={animationPage} alt="" />
-              </div> */}
+            <div style={{position:'relative', left:'-38vw'}}>
+              <img  style={{width:'55%', position:'relative', zIndex:'10'}}  src={animationPage} alt="" />
+              <div>
+                <img  style={{width:'55%', position:'absolute',top:'0'}}  src={outline} alt="" />
+              </div>
+            </div>
+
           </div>
 
           <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
@@ -186,12 +192,12 @@ const Home = () => {
                 <div >
                   <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
                   <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option11">
-                  <i class="fa-solid fa-eye"></i>1.2K</label>
+                    <i class="fa-solid fa-eye"></i>1.2K</label>
                 </div>
                 <div >
                   <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
                   <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
-                  <i class="fa-solid fa-heart"></i></label>
+                    <i class="fa-solid fa-heart"></i></label>
                 </div>
 
                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
@@ -267,12 +273,12 @@ const Home = () => {
                 <div >
                   <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
                   <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
-                  <i class="fa-solid fa-eye"></i>1.2K</label>
+                    <i class="fa-solid fa-eye"></i>1.2K</label>
                 </div>
                 <div >
                   <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
                   <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
-                  <i class="fa-solid fa-heart"></i></label>
+                    <i class="fa-solid fa-heart"></i></label>
                 </div>
 
                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
@@ -540,6 +546,10 @@ const Home = () => {
           <img className='sevenImg' src={sevenImg4} alt="" />
         </div>
       </section >
+
+      <section>
+        <Footer />
+      </section>
     </>
   )
 }

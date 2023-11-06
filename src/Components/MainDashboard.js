@@ -23,6 +23,10 @@ import MarketDashDetail from './MarketDashDetail'
 import ProjectBuying from './ProjectBuying'
 import MyProject from './MyProject'
 
+import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+import message1 from "./ProfileDashbaord/chatteardropdots1.svg"
+
 const MainDashboard = () => {
 
     const [Show, setShow] = useState(1)
@@ -39,7 +43,7 @@ const MainDashboard = () => {
                             <br />
                         </Link>
                         <hr />
-                        <Link className='text-white' style={{textDecoration:'none'}} onClick={Show => setShow(1)}>
+                        <Link className='text-white' style={{ textDecoration: 'none' }} onClick={Show => setShow(1)}>
                             <h2> Dashboard</h2>
                         </Link>
                         <ul class="nav flex-column mb-auto"> {/**nav-pills */}
@@ -55,7 +59,7 @@ const MainDashboard = () => {
                                     My Projects
                                 </Link>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><Link class="dropdown-item"  onClick={Show => setShow(12)}>Project Lists</Link></li>
+                                    <li><Link class="dropdown-item" onClick={Show => setShow(12)}>Project Lists</Link></li>
                                     <li><Link class="dropdown-item" onClick={Show => setShow(11)}>Projects Buying</Link></li>
                                 </ul>
                             </li>
@@ -115,6 +119,23 @@ const MainDashboard = () => {
                 </div>
 
                 <div className="sideContent">
+                    <div className="d-flex justify-content-end">
+                        <div className='mx-2'><Link to="/message"><img src={message1} alt="" /></Link></div>
+                        <div className='mx-1'><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
+                        <div className='mx-1'>
+                            {/* <Link to="/"></Link> */}
+                            <div class="dropdown" >
+                                <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src={threeDots} alt="" />
+                                </Link>
+                                <ul  style={{border:'none'}} class="dropdown-menu dropdown-menu-lg-end shadow">
+                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{color: "#005eff"}}></i>My Profile</Link></li>
+                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{color: "#005eff"}}></i>Sign out</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     {Show === 6 &&
                         <DashboardProfile />}
                     {Show === 2 &&

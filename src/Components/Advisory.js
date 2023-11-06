@@ -15,6 +15,7 @@ import cardLogo4 from "./Market/Frame 33 (7).png"
 import cardProfile from "./Market/Rectangle 25.png"
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Advisory = () => {
     return (
@@ -466,6 +467,10 @@ const Advisory = () => {
                         <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View Listing<img style={{ width: '20px', marginLeft: '1rem' }} src={arrow} alt="" /> </Link>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
 
         </>

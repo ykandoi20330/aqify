@@ -32,12 +32,6 @@ const MarketDashDetail = () => {
             {show === 1 && <>
                 <section>
                     <div className="sideContent">
-                        <div className="d-flex justify-content-end">
-                            <div><Link to="/"><img src={message} alt="" /></Link></div>
-                            <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                            <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                        </div>
-
                         <div>
                             <Link onClick={show => setShow(2)}><img src={back} alt="" /></Link>
                             <span className='mx-3' style={{ color: '#636363' }}>Go back Marketplace</span>

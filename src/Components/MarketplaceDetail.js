@@ -24,6 +24,7 @@ import smallMap from "./MarketDash/VectorSmap.svg"
 import Right from "./MarketDash/VectorRight.svg"
 import Left from "./MarketDash/VectorLeft.svg"
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+import Footer from './Footer'
 
 const MarketplaceDetail = () => {
     return (
@@ -222,6 +223,10 @@ const MarketplaceDetail = () => {
 
                             </div>
                         </section>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

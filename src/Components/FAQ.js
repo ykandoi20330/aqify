@@ -2,6 +2,7 @@ import React from 'react'
 import backgroundImg from "./Pricing/unsplash_5U_28ojjgms.png"
 
 import Navbar from "./Navbar"
+import Footer from './Footer'
 
 const FAQ = () => {
     return (
@@ -95,6 +96,10 @@ const FAQ = () => {
                         
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

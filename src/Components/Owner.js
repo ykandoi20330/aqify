@@ -22,6 +22,7 @@ import BackSidePhoto from "./Owner/Rectangle16.png"
 import { Link } from 'react-router-dom'
 import Navbar from "./Navbar"
 import { TypeAnimation } from 'react-type-animation';
+import Footer from './Footer'
 
 
 const Owner = () => {
@@ -69,7 +70,7 @@ const Owner = () => {
                                 </span>
                             </div>
                             <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singin">List your business<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/sellingDash">List your business<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -142,7 +143,7 @@ const Owner = () => {
                     <div>
                         <h1 className='owner-third-h1 col-4'>Get Acquisition Offers And Sell In 3 Easy Steps</h1>
                         <div className='my-5'>
-                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">List your business<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></Link>
+                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/sellingDash">List your business<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </div>
@@ -209,6 +210,10 @@ const Owner = () => {
                     </div>
                 </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

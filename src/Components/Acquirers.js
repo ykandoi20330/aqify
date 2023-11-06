@@ -21,6 +21,7 @@ import BackSidePhoto from "./Acquirers/Rectangle16.png"
 
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import Footer from "./Footer"
 import { TypeAnimation } from 'react-type-animation';
 
 const Acquirers = () => {
@@ -208,6 +209,10 @@ const Acquirers = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer />
             </section>
         </>
     )

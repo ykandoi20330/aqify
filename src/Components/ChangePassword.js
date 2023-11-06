@@ -8,12 +8,7 @@ const ChangePassword = () => {
     return (
         <>
             <div className="sideContent">
-                <div className="d-flex justify-content-end">
-                    <div><Link to="/"><img src={message} alt="" /></Link></div>
-                    <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                    <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                </div>
-
+                
                 <div>
                     <h1 style={{ fontWeight: '700', paddingBottom: '0.5rem' }}>Change Password</h1>
                     <span style={{ color: '#636363' }}>Update your email or password below</span>

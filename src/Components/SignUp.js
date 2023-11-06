@@ -69,7 +69,7 @@ const SignUp = () => {
                       onClick={onAlreadyHaveAnClick}
                     >
                       <span>{`Already have an account? `}</span>
-                      <span className="logIn">Log in</span>
+                      <span className="logIn"><Link to="/singin">Log in</Link></span>
                     </div>
                   </div>
                   <div className="frameWrapper2">
@@ -93,18 +93,18 @@ const SignUp = () => {
                 <div className="component1focus8Parent">
                   <div class="form-floating mb-3 component1focus8">
                     <input type="text" class="form-control" id="floatingInput" placeholder="" style={{ background: "#121314", color: '#c0c0c0', border: "none" }} />
-                    <label for="floatingInput"><i style={{color:'#fff'}}  class="fa-regular fa-user mx-2"></i></label>
+                    <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-regular fa-user mx-2"></i></label>
                   </div>
 
                   <div class="form-floating mb-3 component1focus8">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style={{ background: "#121314", color: '#c0c0c0', border: "none" }} />
-                    <label for="floatingInput"><i style={{color:'#fff'}}  class="fa-regular fa-envelope mx-2"></i></label>
+                    <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-regular fa-envelope mx-2"></i></label>
                   </div>
 
                   <div className="component1focus8Group">
                     <div class="form-floating mb-3 component1focus8">
                       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style={{ background: "#121314", color: '#c0c0c0', border: "none" }} />
-                      <label for="floatingInput"><i style={{color:'#fff'}} class="fa-solid fa-shield-cat mx-2"></i></label>
+                      <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-solid fa-shield-cat mx-2"></i></label>
                     </div>
                     <div className="minimum8Characters">
                       Minimum 8 characters
@@ -115,40 +115,31 @@ const SignUp = () => {
                       Indicate your main account type
                     </div>
                     <div className="frameParent4">
-                      <div className="frameParent5">
-                        <div className="vectorWrapper">
-                          <img
-                            className="vectorIcon1"
-                            alt=""
-                            src={vector2}
-                          />
-                        </div>
-                        <div className="signUpWith">
-                          Owner ( Seller )
-                        </div>
+                      
+                      <div >
+                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
+                        <label class="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option11">
+                          <i class="fa-solid fa-circle-check mx-2"></i>
+                          Owner ( Seller )</label>
                       </div>
-                      <div className="frameParent5">
-                        <div className="vectorWrapper">
-                          <img
-                            className="vectorIcon1"
-                            alt=""
-                            src={vector2}
-                          />
-                        </div>
-                        <div className="signUpWith">
-                          Acquirer (buyer)
-                        </div>
+                      
+                      <div >
+                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
+                        <label class="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option12">
+                          <i class="fa-solid fa-circle-check mx-2"></i>
+                          Acquirer (buyer)</label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
+              <Link
                 className="joinWrapper"
-                onClick={onFrameContainer22Click}
+                // onClick={onFrameContainer22Click}
+                style={{ textDecoration: 'none', color: '#fff' }} to="/onboard"
               >
-                <div className="signUpWith"><Link style={{textDecoration:'none',color:'#fff'}} to="/onboard">Join</Link></div>
-              </div>
+                <span className="signUpWith">Join</span>
+              </Link>
             </div>
           </div>
         </div>

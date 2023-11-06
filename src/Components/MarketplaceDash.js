@@ -24,11 +24,6 @@ const MarketplaceDash = () => {
         <>
             <section>
                 <div className="sideContent">
-                    <div className="d-flex justify-content-end">
-                        <div><Link to="/"><img src={message} alt="" /></Link></div>
-                        <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                        <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                    </div>
 
                     <div>
                         <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>

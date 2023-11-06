@@ -7,6 +7,7 @@ import personImg from "./Aqify project/Ellipse 8.png"
 import BackSidePhoto from "./Owner/Rectangle16.png"
 import { Link } from 'react-router-dom'
 import Navbar from "./Navbar"
+import Footer from './Footer'
 
 const Testimonials = () => {
     return (
@@ -124,6 +125,10 @@ const Testimonials = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

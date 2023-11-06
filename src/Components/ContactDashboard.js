@@ -79,12 +79,7 @@ const ContactDashboard = () => {
                 </div> */}
 
                 <div className="sideContent">
-                    <div className="d-flex justify-content-end">
-                        <div><a href="/"><img src={message} alt="" /></a></div>
-                        <div><a href="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></a></div>
-                        <div><a href="/"><img src={threeDots} alt="" /></a></div>
-                    </div>
-
+            
                     <div className='contactDashboard-card d-flex'>
                     <div>
                     <h1 style={{fontWeight:'700',width:'28%',borderBottom:"4px solid #3247ff",borderRadius:'5px'}}>Contact us</h1>

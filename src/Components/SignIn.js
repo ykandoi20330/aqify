@@ -51,7 +51,7 @@ const SignIn = () => {
                     onClick={onDontHaveAnyClick}
                   >
                     <span>{`Don’t have any account? `}</span>
-                    <span className={styles.joinNow}>Join now</span>
+                    <span className={styles.joinNow}><Link  to="/singup">Join now</Link></span>
                   </div>
                 </div>
                 <div className={styles.component1focus8Parent}>
@@ -71,14 +71,15 @@ const SignIn = () => {
                   </div>
                 </div>
               </div>
-              <div
+              <Link
                 className={styles.joinWrapper}
-                onClick={onFrameContainer9Click}
+                // onClick={onFrameContainer9Click}
+                style={{textDecoration:'none',color:'#fff'}}  to="/MainDashboard"
               >
                 <div className={styles.labelName}>
-                  <Link style={{textDecoration:'none',color:'#fff'}}  to="/MainDashboard">Join</Link>
+                  <span>Join</span>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className={styles.rectangleParent}>
               <div className={styles.frameChild} />

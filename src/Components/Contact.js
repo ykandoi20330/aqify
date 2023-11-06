@@ -3,6 +3,7 @@ import backgroundImg from "./Pricing/unsplash_5U_28ojjgms.png"
 import arrow from "./Aqify project/Vector (1).png"
 
 import Navbar from "./Navbar"
+import Footer from './Footer'
 
 const Contact = () => {
     return (
@@ -35,6 +36,10 @@ const Contact = () => {
                     </div>
                     <button class="btn btn-primary my-3" type="submit" style={{width:'30%', padding:"1.5rem 2.5rem"}}>Send Us <img style={{ width: '10%' }} src={arrow} alt="" /></button>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

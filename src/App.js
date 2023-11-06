@@ -1,7 +1,7 @@
 import './App.css';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 import Home from './Components/Home';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import {
   HashRouter,
   Routes,
@@ -23,6 +23,7 @@ import ValuationTool from './Components/ValuationTool';
 import Testimonials from './Components/Testimonials';
 import Advisory from './Components/Advisory';
 import MarketplaceDetail from './Components/MarketplaceDetail';
+import MessageDash2 from './Components/MessageDash2';
 
 function App() {
   return (
@@ -47,8 +48,9 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/advisory" element={<Advisory />} />
           <Route path="/placeDetail" element={<MarketplaceDetail />} />
+          <Route path="/message" element={<MessageDash2 />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </HashRouter>
     </>
   );

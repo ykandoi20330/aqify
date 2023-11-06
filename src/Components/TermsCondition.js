@@ -2,6 +2,7 @@ import React from 'react'
 import backgroundImg from "./Term & privacy/unsplash_5U_28ojjgms.png"
 
 import Navbar from "./Navbar"
+import Footer from './Footer'
 
 const TermsCondition = () => {
     return (
@@ -21,6 +22,10 @@ const TermsCondition = () => {
                 <div className="terms-card">
                     <span className='text-center' style={{color:'#636363',fontWeight:'bolder',fontSize:'4rem'}}>text field</span>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

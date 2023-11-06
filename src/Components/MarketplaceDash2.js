@@ -32,12 +32,7 @@ const MarketplaceDash2 = () => {
                 <>
                     <section>
                         <div className="sideContent">
-                            <div className="d-flex justify-content-end">
-                                <div><Link to="/"><img src={message} alt="" /></Link></div>
-                                <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                                <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                            </div>
-
+                            
                             <div>
                                 <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>
                                 <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
@@ -105,16 +100,19 @@ const MarketplaceDash2 = () => {
                                 <div className="market-card" style={{ padding: "2rem" }} >
                                     <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex align-items-center'>
+                                        <div className='d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
                                             <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                                <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
+                                                <h3 style={{ fontSize: '30px', fontWeight: '700' }}>UI Medical Website</h3>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                            </div>
+                                            <div >
+                                                <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
                                             </div>
                                         </div>
                                         <div className='my-4'>
@@ -123,7 +121,14 @@ const MarketplaceDash2 = () => {
 
                                         <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                             <h3 className='card-h3'>Metrics</h3>
-                                            <button style={{ padding: '12px 38px' }} className='btn btn-primary'  onClick={detail=>setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                            <div className='d-flex'>
+                                                <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                                <div >
+                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
+                                                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
+                                                        <i class="fa-solid fa-heart"></i></label>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -158,19 +163,23 @@ const MarketplaceDash2 = () => {
                                         </div>
 
                                     </div>
+
                                     {/** */}
                                     <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex align-items-center'>
+                                        <div className='d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
                                             <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                                <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
+                                                <h3 style={{ fontSize: '30px', fontWeight: '700' }}>UI Medical Website</h3>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                            </div>
+                                            <div >
+                                                <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
                                             </div>
                                         </div>
                                         <div className='my-4'>
@@ -179,7 +188,14 @@ const MarketplaceDash2 = () => {
 
                                         <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                             <h3 className='card-h3'>Metrics</h3>
-                                            <button style={{ padding: '12px 38px' }} className='btn btn-primary'  onClick={detail=>setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                            <div className='d-flex'>
+                                                <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                                <div >
+                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
+                                                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
+                                                        <i class="fa-solid fa-heart"></i></label>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -212,21 +228,24 @@ const MarketplaceDash2 = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
+
                                     {/** */}
                                     <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex align-items-center'>
+                                        <div className='d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
                                             <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                                <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
+                                                <h3 style={{ fontSize: '30px', fontWeight: '700' }}>UI Medical Website</h3>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                            </div>
+                                            <div >
+                                                <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
                                             </div>
                                         </div>
                                         <div className='my-4'>
@@ -235,7 +254,14 @@ const MarketplaceDash2 = () => {
 
                                         <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                             <h3 className='card-h3'>Metrics</h3>
-                                            <button style={{ padding: '12px 38px' }} className='btn btn-primary' onClick={detail=>setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                            <div className='d-flex'>
+                                                <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                                <div >
+                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
+                                                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
+                                                        <i class="fa-solid fa-heart"></i></label>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -268,21 +294,24 @@ const MarketplaceDash2 = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
+
                                     {/** */}
                                     <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex align-items-center'>
+                                        <div className='d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
                                             <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                                <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
+                                                <h3 style={{ fontSize: '30px', fontWeight: '700' }}>UI Medical Website</h3>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
                                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                            </div>
+                                            <div >
+                                                <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
                                             </div>
                                         </div>
                                         <div className='my-4'>
@@ -291,7 +320,14 @@ const MarketplaceDash2 = () => {
 
                                         <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                             <h3 className='card-h3'>Metrics</h3>
-                                            <button style={{ padding: '12px 38px' }} className='btn btn-primary'  onClick={detail=>setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                            <div className='d-flex'>
+                                                <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                                <div >
+                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option15" autocomplete="off" />
+                                                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option15">
+                                                        <i class="fa-solid fa-heart"></i></label>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -326,13 +362,15 @@ const MarketplaceDash2 = () => {
                                         </div>
                                     </div>
                                 </div>
+                                {/** */}
                             </div>
                         </section>
                     </section>
                 </>
             }
-            { detail === 2 && 
-            <MarketDashDetail/>
+            {
+                detail === 2 &&
+                <MarketDashDetail />
             }
         </>
     )

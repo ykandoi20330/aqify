@@ -19,11 +19,6 @@ const MyProject = () => {
             {show === 1 &&
                 <>
                     <div className="sideContent">
-                        <div className="d-flex justify-content-end">
-                            <div><a href="/"><img src={message} alt="" /></a></div>
-                            <div><a href="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></a></div>
-                            <div><a href="/"><img src={threeDots} alt="" /></a></div>
-                        </div>
 
                         <div className='d-flex justify-content-between align-items-center' style={{ marginTop: '5vh' }}>
                             <div>

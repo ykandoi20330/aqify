@@ -9,6 +9,7 @@ import arrow from "./Aqify project/Vector (1).png"
 import analytics from "./MarketDash/Vertical.png"
 import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 const ValuationTool = () => {
     return (
@@ -154,6 +155,10 @@ const ValuationTool = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )

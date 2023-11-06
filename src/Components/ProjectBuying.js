@@ -13,11 +13,6 @@ const ProjectBuying = () => {
         <>
         {show === 1 && <>
             <div className="sideContent">
-                <div className="d-flex justify-content-end">
-                    <div><Link to="/"><img src={message} alt="" /></Link></div>
-                    <div><Link to="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></Link></div>
-                    <div><Link to="/"><img src={threeDots} alt="" /></Link></div>
-                </div>
 
                 <div className='d-flex justify-content-between align-items-center' style={{ marginTop: '5vh' }}>
                     <div>

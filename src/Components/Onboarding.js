@@ -76,12 +76,13 @@ const Onboarding = () => {
                   </div>
                 </div>
               </div>
-              <div
+              <Link
                 className={styles.continueWrapper}
-                onClick={onFrameContainer9Click}
+                // onClick={onFrameContainer9Click}
+                style={{textDecoration:'none',color:'#fff'}} to="/MainDashboard"
               >
-                <div className={styles.howDidYou}><Link style={{textDecoration:'none',color:'#fff'}} to="/MainDashboard">Continue</Link></div>
-              </div>
+                <span className={styles.howDidYou}>Continue</span>
+              </Link>
             </div>
           </div>
         </div>

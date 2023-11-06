@@ -4,6 +4,7 @@ import trueImg from "./Pricing/Frame 147.png"
 import arrow from "./Aqify project/Vector (1).png"
 
 import Navbar from "./Navbar"
+import Footer from './Footer'
 
 const Pricing = () => {
 
@@ -150,6 +151,10 @@ const Pricing = () => {
                         </div>
                     </div>
                 </>}
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </>
     )
