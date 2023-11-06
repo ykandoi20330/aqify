@@ -8,12 +8,6 @@ import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import Logo from "./Selling/Frame 18.svg"
 import clip from "./Selling/VectorClip.svg"
 import back from "./MarketDash/VectorBackArrow.svg"
-// import Onboard2 from './Onboard2'
-// import Onboard3 from './Onboard3'
-// import Onboard1 from './Onboard1'
-// import Onboard4 from './Onboard4'
-// import Onboard5 from './Onboard5'
-// import Onboard1 from './Onboard1'
 import upload from "./Selling/VectorUpload.svg"
 import trueImg from "./Pricing/Frame 147.png"
 import BlackLogo from "./Aqify project/FrameblackLogo.svg"
@@ -559,11 +553,6 @@ const SellingDash = () => {
                 </div>
             </>}
 
-                {/* {currentStep === 1 && <Onboard1 />}
-                {currentStep === 2 && <Onboard2 />}
-                {currentStep === 3 && <Onboard3 />}
-                {currentStep === 4 && <Onboard4 />}
-                {currentStep === 5 && <Onboard5 />} */}
 
                 {/**Side stepper */}
 
