@@ -498,6 +498,7 @@ ul {
   padding: 6px 10px;
   border-radius: 50px;
   margin: 0 0.3rem;
+  cursor: pointer;
 }
 
 
@@ -534,6 +535,7 @@ ul {
   border-radius: 50px;
   margin: 0 0.3rem;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .six-card {
@@ -2802,11 +2804,11 @@ input[type="file"] {
     font-size: 1.3rem !important;
   }
 
-  .firstPart h3{
+  .firstPart h3 {
     font-size: 2rem !important;
   }
 
-  .secondPart span{
+  .secondPart span {
     font-size: 1rem !important;
   }
 
@@ -2850,23 +2852,28 @@ input[type="file"] {
 
   .fourth-main {
     height: 100% !important;
- }
+  }
+
+  .largeSpan {
+    font-size: 14px !important;
+  }
 
   /* Fifth Main home section */
   .fifth-main {
     height: 160vh !important;
   }
 
-  .fifth-div{
+  .fifth-div {
     display: flex;
     flex-direction: column !important;
   }
+
   .fourth-h1 {
     width: 70% !important;
     font-size: 3rem !important;
   }
 
-  .sildeimg{
+  .sildeimg {
     width: 88% !important;
   }
 
@@ -2903,12 +2910,574 @@ input[type="file"] {
     font-size: 0.8rem !important;
   }
 
-  .bitsCool{
+  .bitsCool {
     font-size: 1.5rem !important;
   }
 
   /* Seven home section*/
   .seven-section {
     height: 100vh !important;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .card {
+    width: 180% !important;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+
+  /* Side Navbar section */
+
+  .Logo {
+    width: 50%;
+    left: 0px !important;
+    position: relative;
+  }
+
+  .Logo1 {
+    width: 50%;
+    left: 0px !important;
+    position: relative;
+  }
+
+  .navbar-expand-lg .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    justify-content: center;
+    align-items: flex-start !important;
+    position: relative;
+    flex-direction: column !important;
+  }
+
+  /* home content section */
+
+  .content {
+    left: 60px !important;
+  }
+
+  .main-h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .col-7 {
+    flex: 0 0 auto;
+    width: 80.333333%;
+  }
+
+  .main-span {
+    font-size: 1.1rem !important;
+  }
+
+  .col-6 {
+    width: 72% !important;
+  }
+
+  .main-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  .main-ul li {
+    margin-right: 1rem !important;
+  }
+
+  /*Home Listing section*/
+  .Home-listing {
+    height: 100% !important;
+    padding: 7rem;
+  }
+
+  .card {
+    width: 160% !important;
+  }
+
+  .card-main1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .card-points {
+    width: 100% !important;
+  }
+
+  .listing-h1 {
+    font-size: 3rem !important;
+  }
+
+  .listing-span {
+    font-size: 1.3rem !important;
+  }
+
+  .firstPart {
+    width: 120% !important;
+  }
+
+  .firstPart h3 {
+    font-size: 2rem !important;
+  }
+
+  .secondPart span {
+    font-size: 0.8rem !important;
+  }
+
+  .card-span {
+    font-size: 1.5rem !important;
+  }
+
+  .btn-card {
+    font-size: 17px !important;
+  }
+
+  /* Third Main home section */
+  .round-middle-img {
+    top: 80vh !important;
+  }
+
+  .data-content {
+    left: 75px !important;
+  }
+
+  .data-ul {
+    list-style: none;
+    display: flex;
+    align-items: start !important;
+    flex-direction: column !important;
+  }
+
+  .data-ul li {
+    margin-right: 2rem !important;
+    padding: 0px 0px 0 20px !important;
+  }
+
+  .data-h1 {
+    width: 66% !important;
+    font-weight: 700;
+  }
+
+  .data-span {
+    width: 68% !important;
+  }
+
+  .data-2-h1 {
+    width: 50% !important;
+    font-weight: 700;
+  }
+
+  .data-2-span {
+    width: 65% !important;
+  }
+
+  /* fourth Main home section */
+
+  .fourth-main {
+    height: 100% !important;
+  }
+
+  .fourth-h1 {
+    width: 85% !important;
+    font-size: 2rem !important;
+  }
+
+  .largeSpan {
+    font-size: 14px !important;
+  }
+
+  .info-card {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .card-four {
+    width: 85%;
+  }
+
+  /* Fifth Main home section */
+  .fifth-main {
+    height: 160vh !important;
+  }
+
+  .fifth-div {
+    display: flex;
+    flex-direction: column !important;
+    left: 27px !important;
+  }
+
+  .sildeimg {
+    width: 88% !important;
+  }
+
+  .fifth-main-arrow {
+    width: 50%;
+  }
+
+  .data-2-content {
+    left: 60px !important;
+  }
+
+  .detail-h1 {
+    width: 68%;
+    font-weight: 700;
+    font-size: 2.5rem !important;
+  }
+
+
+  /* six home section */
+  .six-main {
+    height: 100% !important;
+  }
+
+  .six-card-main {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .six-h1 {
+    font-size: 3rem !important;
+    width: 100% !important;
+  }
+
+  .quoteImg {
+    width: 45%;
+    left: 0px;
+  }
+
+  .six-card {
+    width: 95% !important;
+  }
+
+  .six-card-content {
+    font-size: 0.8rem !important;
+  }
+
+  .bitsCool {
+    font-size: 1.5rem !important;
+  }
+
+  /* Seven home section*/
+  .seven-section {
+    height: 80vh !important;
+  }
+
+  /*Footer section*/
+  .footer-section {
+    height: 100% !important;
+  }
+
+  .footer-main {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .col-5 {
+    flex: auto;
+    width: 100%;
+  }
+
+  .Social-logo {
+    margin-top: 5vh !important;
+  }
+}
+
+@media screen and (max-width:500px) {
+
+  /* Side Navbar section */
+
+  .Logo {
+    width: 50%;
+    left: 0px !important;
+    position: relative;
+  }
+
+  .Logo1 {
+    width: 50%;
+    left: 0px !important;
+    position: relative;
+  }
+
+  .navbar-expand-lg .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    justify-content: center;
+    align-items: flex-start !important;
+    position: relative;
+    flex-direction: column !important;
+  }
+
+  /* home content section */
+
+  .content {
+    left: 60px !important;
+  }
+
+  .main-h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .col-7 {
+    flex: 0 0 auto;
+    width: 80.333333%;
+  }
+
+  .main-span {
+    font-size: 1.1rem !important;
+  }
+
+  .col-6 {
+    width: 72% !important;
+  }
+
+  .main-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  .main-ul li {
+    margin-right: 1rem !important;
+  }
+
+  /*Home Listing section*/
+  .Home-listing {
+    height: 100% !important;
+    padding: 7rem;
+  }
+
+  .card {
+    width: 160% !important;
+  }
+
+  .card-main1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .card-points {
+    width: 100% !important;
+  }
+
+  .listing-h1 {
+    font-size: 3rem !important;
+  }
+
+  .listing-span {
+    font-size: 1.3rem !important;
+  }
+
+  .firstPart {
+    width: 120% !important;
+  }
+
+  .firstPart h3 {
+    font-size: 2rem !important;
+  }
+
+  .secondPart span {
+    font-size: 0.8rem !important;
+  }
+
+  .card-span {
+    font-size: 1.5rem !important;
+  }
+
+  .Metrics-card {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .moreDetialBtn{
+    font-size: 0px !important;
+  }
+
+  .btn-card {
+    font-size: 17px !important;
+  }
+
+  /* Third Main home section */
+  .round-middle-img {
+    top: 85vh !important;
+  }
+
+  .data-2-section {
+    height: 100% !important;
+  }
+
+  .data-content {
+    left: 75px !important;
+  }
+
+  .data-ul {
+    list-style: none;
+    display: flex;
+    align-items: start !important;
+    flex-direction: column !important;
+  }
+
+  .data-ul li {
+    margin-right: 2rem !important;
+    padding: 0px 0px 0 20px !important;
+  }
+
+  .data-h1 {
+    width: 66% !important;
+    font-weight: 700;
+  }
+
+  .data-span {
+    width: 68% !important;
+  }
+
+  .data-2-h1 {
+    width: 50% !important;
+    font-weight: 700;
+  }
+
+  .data-2-span {
+    width: 65% !important;
+  }
+
+  .data-2-content {
+    left: 40px !important;
+  }
+
+  /* fourth Main home section */
+
+  .fourth-main {
+    height: 100% !important;
+  }
+
+  .fourth-h1 {
+    width: 85% !important;
+    font-size: 2rem !important;
+  }
+
+  .largeSpan {
+    font-size: 14px !important;
+  }
+
+  .info-card {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .card-four {
+    width: 85%;
+  }
+
+  /* Fifth Main home section */
+  .fifth-main {
+    height: 160vh !important;
+  }
+
+  .fifth-div {
+    display: flex;
+    flex-direction: column !important;
+    left: 12px !important;
+  }
+
+  .sildeimg {
+    width: 95% !important;
+  }
+
+  .fifth-main-arrow {
+    width: 50%;
+  }
+
+  .detail-h1 {
+    width: 68%;
+    font-weight: 700;
+    font-size: 2.5rem !important;
+  }
+
+  .overlay-span {
+    font-size: 20px !important;
+  }
+
+
+  /* six home section */
+  .six-main {
+    height: 100% !important;
+  }
+
+  .six-card-main {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .six-h1 {
+    font-size: 3rem !important;
+    width: 100% !important;
+  }
+
+  .quoteImg {
+    width: 45%;
+    left: 0px;
+  }
+
+  .six-card {
+    width: 95% !important;
+  }
+
+  .six-card-content {
+    font-size: 0.8rem !important;
+  }
+
+  .bitsCool {
+    font-size: 1.5rem !important;
+  }
+
+  /* Seven home section*/
+  .seven-section {
+    height: 65vh !important;
+  }
+
+  /*Footer section*/
+  .footer-section {
+    height: 100% !important;
+  }
+
+  .footer-main {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .col-5 {
+    flex: auto;
+    width: 100%;
+  }
+
+  .Social-logo {
+    margin-top: 5vh !important;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .navbar-brand {
+    width: 70% !important;
+  }
+
+  /*Home Listing section*/
+  .card {
+    width: 200% !important;
+  }
+}
+
+@media screen and (max-width:400px) {
+
+  /*Home Listing section*/
+  .card {
+    width: 225% !important;
   }
 }

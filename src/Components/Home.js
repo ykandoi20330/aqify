@@ -42,8 +42,6 @@ import circle2 from "./Aqify project/Ellipse 58.png"
 import Footer from "./Footer"
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation';
-import animationPage from "./HomePage/Image.png"
-import outline from "./HomePage/output-onlinegiftools.gif"
 
 const Home = () => {
   return (
@@ -147,14 +145,6 @@ const Home = () => {
                 <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
               </ul>
             </div>
-
-            <div style={{position:'relative', left:'-38vw'}}>
-              <img  style={{width:'55%', position:'relative', zIndex:'10'}}  src={animationPage} alt="" />
-              <div>
-                <img  style={{width:'55%', position:'absolute',top:'0'}}  src={outline} alt="" />
-              </div>
-            </div>
-
           </div>
 
           <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
@@ -172,7 +162,7 @@ const Home = () => {
 
           <div className="card">
 
-            <div className='d-flex'>
+            <div className='card-main1 d-flex'>
               <div className="firstPart">
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Fintech Startup</h3>
                 <button className='btn-card btn btn-outline-primary'>Businesses</button>
@@ -185,7 +175,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+            <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
               <h3 className='card-h3'>Metrics</h3>
               <div className='d-flex'>
 
@@ -200,11 +190,11 @@ const Home = () => {
                     <i class="fa-solid fa-heart"></i></label>
                 </div>
 
-                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
               </div>
             </div>
 
-            <div className='d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
+            <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
               <div style={{ margin: '0 3rem 0 0' }}>
                 <span style={{ color: '#636363', fontWeight: '600' }}>Team Members</span>
                 <div className='d-flex justify-content-start align-items-center'>
@@ -253,7 +243,7 @@ const Home = () => {
           {/**card-2 */}
           <div className="card">
 
-            <div className='d-flex'>
+            <div className='card-main1 d-flex'>
               <div className="firstPart">
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Strategic incumbent</h3>
                 <button className='btn-card btn btn-outline-primary'>Acquirers</button>
@@ -266,7 +256,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+            <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
               <h3 className='card-h3'>Metrics</h3>
               <div className='d-flex'>
 
@@ -281,11 +271,11 @@ const Home = () => {
                     <i class="fa-solid fa-heart"></i></label>
                 </div>
 
-                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
               </div>
             </div>
 
-            <div className='d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
+            <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
               <div style={{ margin: '0 3rem 0 0' }}>
                 <span style={{ color: '#636363', fontWeight: '600' }}>Businesses Type</span>
                 <div className='d-flex justify-content-start align-items-center'>
@@ -375,7 +365,7 @@ const Home = () => {
           <div className="card-four">
             <img width={150} src={FourthCard2} alt="" />
             <h3 className='my-3'>Largest Buyers Ecosystem</h3>
-            <span>Explore unparalleled opportunities with the largest buyer ecosystem. Maximize your options, elevate your transactions, and achieve success on a grand scale.</span>
+            <span className='largeSpan'>Explore unparalleled opportunities with the largest buyer ecosystem. Maximize your options, elevate your transactions, and achieve success on a grand scale.</span>
           </div>
           <div className="card-four">
             <img width={150} src={FourthCard3} alt="" />
@@ -385,7 +375,7 @@ const Home = () => {
           <div className="card-four">
             <img width={150} src={FourthCard4} alt="" />
             <h3 className='my-3'>Access to best counsel</h3>
-            <span>Gain an edge with access to the best counsel. Elevate your decisions with expert guidance and strategic insights for unparalleled success.</span>
+            <span  className='largeSpan'>Gain an edge with access to the best counsel. Elevate your decisions with expert guidance and strategic insights for unparalleled success.</span>
           </div>
         </div>
       </section >
@@ -404,13 +394,13 @@ const Home = () => {
                     <div className='d-flex flex-row align-items-center'>
                       <img style={{ width: "30%" }} src={profileImg} alt="" />
                       <div className='mx-3'>
-                        <span style={{ fontSize: '1.5rem', color: '#fff' }}>Owner</span><br />
-                        <span style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                        <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Owner</span><br />
+                        <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></a>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -423,13 +413,13 @@ const Home = () => {
                     <div className='d-flex flex-row align-items-center'>
                       <img style={{ width: "30%" }} src={profileImg} alt="" />
                       <div className='mx-3'>
-                        <span style={{ fontSize: '1.5rem', color: '#fff' }}>Acquirer</span><br />
-                        <span style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                        <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Acquirer</span><br />
+                        <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></a>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -459,8 +449,8 @@ const Home = () => {
             <div>
               <h1 className='six-h1'>Stories From Founders And Buyers</h1>
               <div className='my-5'>
-                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></a>
+                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
             <div>
@@ -472,7 +462,7 @@ const Home = () => {
             <div class="carousel-inner">
               <div class="carousel-item active">
 
-                <div className='d-flex justify-content-evenly my-4'>
+                <div className='six-card-main d-flex justify-content-evenly my-4'>
                   <div className="six-card">
                     <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
                     <div className='d-flex flex-row align-items-center'>
@@ -499,7 +489,7 @@ const Home = () => {
 
               <div class="carousel-item">
 
-                <div className='d-flex justify-content-evenly my-4'>
+                <div className='six-card-main d-flex justify-content-evenly my-4'>
                   <div className="six-card">
                     <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
                     <div className='d-flex flex-row align-items-center'>

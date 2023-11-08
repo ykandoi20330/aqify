@@ -53,7 +53,7 @@ const Market = () => {
 
                                     <ul className="ul  navbar-nav  nav justify-content-between">
                                         <li className="nav-item">
-                                            <Link className="nav-link " aria-current="page" to="/">Fundriser</Link>
+                                            <Link className="nav-link " aria-current="page" to="/market">Marketplace</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/acquire">For Acquirers</Link>
@@ -86,7 +86,7 @@ const Market = () => {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel" style={{color:'#3247FF'}}>New Tamplate</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style={{ color: '#3247FF' }}>New Tamplate</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -94,7 +94,7 @@ const Market = () => {
                             <div className="marketInner-card ">
                                 <div className="firstMarket">
                                     {/* <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} /> */}
-                                    <div className='divInput' style={{width:'100%'}}>
+                                    <div className='divInput' style={{ width: '100%' }}>
                                         <div className='d-flex flex-column align-items-center justify-content-center'>
                                             <div className="img-container" id="display_image">
                                                 <img src={image} className="" id="img" alt="" />
