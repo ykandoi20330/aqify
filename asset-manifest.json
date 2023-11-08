@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.1a2ca267.css",
-    "main.js": "/aqify/static/js/main.47823932.js",
+    "main.css": "/aqify/static/css/main.1868ec85.css",
+    "main.js": "/aqify/static/js/main.8a6c1232.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.8f932f73036e36f7ea58.png",
     "static/media/unsplash5u-28ojjgms@2x.png": "/aqify/static/media/unsplash5u-28ojjgms@2x.a6da078b66460b54a67e.png",
@@ -13,10 +13,8 @@
     "static/media/Rectangle 9.png": "/aqify/static/media/Rectangle 9.d5929ed1ac2a705ffda6.png",
     "static/media/Rectangle 12.png": "/aqify/static/media/Rectangle 12.8f37a9f8b749c6278b66.png",
     "static/media/Rectangle 11.png": "/aqify/static/media/Rectangle 11.d947b129226e41916218.png",
-    "static/media/output-onlinegiftools.gif": "/aqify/static/media/output-onlinegiftools.be2a73648f38d293c088.gif",
     "static/media/Rectangle 10.png": "/aqify/static/media/Rectangle 10.2b3fad3c46780012301d.png",
     "static/media/Rectangle 25.png": "/aqify/static/media/Rectangle 25.41ab70f7fd1f600f7f07.png",
-    "static/media/Image.png": "/aqify/static/media/Image.1a9c37c503c8309f683b.png",
     "static/media/Ellipse 8 (1).png": "/aqify/static/media/Ellipse 8 (1).19caa5c716b2527bef98.png",
     "static/media/Ellipse 8.png": "/aqify/static/media/Ellipse 8.8b847066bee64f59ac21.png",
     "static/media/Vertical.png": "/aqify/static/media/Vertical.db0ae84e8adc5e69a198.png",
@@ -70,12 +68,12 @@
     "static/media/VectorLeft.svg": "/aqify/static/media/VectorLeft.6f33e1208a87368b88632228ceb64d8a.svg",
     "static/media/VectorRight.svg": "/aqify/static/media/VectorRight.1902edab36a079f8251d9985a08ea9eb.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
-    "main.1a2ca267.css.map": "/aqify/static/css/main.1a2ca267.css.map",
-    "main.47823932.js.map": "/aqify/static/js/main.47823932.js.map",
+    "main.1868ec85.css.map": "/aqify/static/css/main.1868ec85.css.map",
+    "main.8a6c1232.js.map": "/aqify/static/js/main.8a6c1232.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a2ca267.css",
-    "static/js/main.47823932.js"
+    "static/css/main.1868ec85.css",
+    "static/js/main.8a6c1232.js"
   ]
 }
