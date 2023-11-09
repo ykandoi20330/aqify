@@ -20,7 +20,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className="ligh-back" style={{ height: '120vh' }} >
+            <section className="contact-back" style={{ height: '120vh' }} >
                 <div className="contact-card">
                     <div class="mb-3 my-3">
                         <label for="exampleFormControlInput1" class="form-label" style={{color:'#636363'}}>Please enter your full name</label>
@@ -34,7 +34,7 @@ const Contact = () => {
                         <label for="exampleFormControlTextarea1" class="form-label" style={{color:'#636363'}}>Please enter your message below</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='&#128386; message'></textarea>
                     </div>
-                    <button class="btn btn-primary my-3" type="submit" style={{width:'30%', padding:"1.5rem 2.5rem"}}>Send Us <img style={{ width: '10%' }} src={arrow} alt="" /></button>
+                    <button class="contact-btn btn btn-primary my-3" type="submit" style={{width:'30%', padding:"1.5rem 2.5rem"}}>Send Us <img style={{ width: '10%' }} src={arrow} alt="" /></button>
                 </div>
             </section>
 

@@ -924,6 +924,13 @@ ul {
 
 /******** FAQ Section *********/
 
+.FAQ-back {
+  background: #EEF0FE;
+  display: flex;
+  justify-content: center;
+  height: 100% !important;
+}
+
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
   --bs-accordion-bg: var(--bs-body-bg);
@@ -1025,6 +1032,12 @@ ul {
 
 
 /******* Contact section *******/
+
+.contact-back {
+  background: #EEF0FE;
+  display: flex;
+  justify-content: center;
+}
 
 .contact-card {
   top: -150px;
@@ -1183,380 +1196,6 @@ textarea.form-control {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-
-
-/********* sign Up section *********/
-
-.unsplash5u28ojjgmsIcon {
-  position: absolute;
-  top: 0;
-  left: 3px;
-  /* width: 1437px; */
-  width: 100%;
-  height: 1022px;
-  object-fit: cover;
-}
-
-.vectorIcon {
-  width: 40.4px;
-  height: 41.75px;
-}
-
-.acqify,
-.vectorIcon {
-  position: relative;
-}
-
-.frameContainer,
-.frameDiv,
-.vectorParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.vectorParent {
-  justify-content: center;
-  gap: 5.92px;
-}
-
-.frameContainer,
-.frameDiv {
-  justify-content: flex-start;
-}
-
-.frameContainer {
-  width: 160px;
-  align-items: flex-start;
-  justify-content: space-between;
-  font-family: var(--font-brevenews-medium);
-}
-
-.makeYourProfile,
-.signUpFor {
-  position: relative;
-  font-size: var(--h2-bold-size);
-  line-height: 120%;
-  display: inline-block;
-  width: 542px;
-}
-
-.makeYourProfile {
-  font-size: var(--font-size-xl);
-  line-height: 160%;
-  color: var(--gray-light);
-  width: 601px;
-}
-
-.frameGroup {
-  gap: var(--gap-13xl);
-}
-
-.frameGroup,
-.frameWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.joinNowOn {
-  position: relative;
-  line-height: 120%;
-  display: inline-block;
-  width: 332px;
-}
-
-.logIn {
-  text-decoration: underline;
-  color: #7b87ff;
-}
-
-.alreadyHaveAnContainer {
-  position: relative;
-  font-size: 15px;
-  line-height: 160%;
-  text-align: left;
-  cursor: pointer;
-  color: var(--gray-light);
-}
-
-.joinNowOnAcqifyParent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-5xs);
-}
-
-.googleSvgIcon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.signUpWith {
-  position: relative;
-  line-height: 160%;
-}
-
-.googleSvgParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-base);
-}
-
-.frameParent3,
-.frameWrapper2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.frameWrapper2 {
-  border-radius: var(--br-5xs);
-  background-color: var(--color-white);
-  width: 423px;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: left;
-  font-size: var(--p2-size);
-  color: var(--black);
-}
-
-.frameParent3 {
-  gap: var(--gap-base);
-  cursor: pointer;
-  text-align: center;
-  font-size: var(--h4-bold-size);
-}
-
-.frameChild,
-.or {
-  position: relative;
-}
-
-.frameChild {
-  border-radius: var(--br-69xl);
-  background-color: var(--color-dimgray-100);
-  width: 81px;
-  height: 3px;
-}
-
-.or {
-  line-height: 160%;
-  display: inline-block;
-  width: 25px;
-  flex-shrink: 0;
-}
-
-.rectangleParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-13xl);
-}
-
-.component1focus8Child {
-  position: relative;
-  width: 30px;
-  height: 31.36px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.component1focus8,
-.labelNameWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.component1focus8 {
-  border-radius: var(--br-5xs);
-  background-color: var(--color-gray-100);
-  border: 1px solid var(--blacktxt);
-  box-sizing: border-box;
-  width: 426px;
-  height: 70px;
-  justify-content: flex-start;
-  /* padding: var(--padding-5xs) var(--padding-base) var(--padding-5xs)
-    var(--padding-5xs); */
-  gap: var(--gap-9xs);
-}
-
-.minimum8Characters {
-  position: relative;
-  font-size: var(--caption1-size);
-  line-height: 120%;
-  color: var(--color-white);
-}
-
-.component1focus8Group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-5xs);
-}
-
-.vectorIcon1 {
-  position: relative;
-  width: 8.5px;
-  height: 6.74px;
-}
-
-.vectorWrapper {
-  border-radius: var(--br-193xl-5);
-  background-color: var(--blacktxt);
-  height: 17px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4.25px;
-  box-sizing: border-box;
-}
-
-.frameParent4,
-.frameParent5 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--gap-5xs);
-}
-
-.frameParent5 {
-  border-radius: var(--br-481xl);
-  background-color: var(--color-white);
-  height: 35px;
-  align-items: center;
-  padding: var(--padding-5xs);
-  box-sizing: border-box;
-}
-
-.frameParent4 {
-  align-items: flex-start;
-  color: var(--black);
-}
-
-.indicateYourMainAccountTypParent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-base);
-  color: var(--color-white);
-}
-
-.component1focus8Parent {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-base);
-  color: var(--gray-light);
-}
-
-.component1focus8Parent,
-.frameParent1,
-.joinWrapper {
-  flex-direction: column;
-  justify-content: center;
-}
-
-.joinWrapper {
-  border-radius: var(--br-base);
-  background: linear-gradient(259.43deg, #3247ff, #5b5eeb);
-  width: 423px;
-  height: 69px;
-  display: flex;
-  align-items: center;
-  padding: var(--padding-base) var(--padding-13xl);
-  box-sizing: border-box;
-  cursor: pointer;
-  font-size: var(--font-size-xl);
-}
-
-.frameParent1 {
-  gap: var(--gap-13xl);
-}
-
-.frameParent,
-.frameParent1,
-.frameWrapper1 {
-  display: flex;
-  align-items: center;
-}
-
-.frameWrapper1 {
-  border-radius: var(--br-base);
-  background-color: #18191a;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--padding-13xl);
-  font-size: var(--p2-size);
-}
-
-.frameParent {
-  position: absolute;
-  top: calc(50% - 374.5px);
-  left: calc(50% - 548px);
-  width: 1095px;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.signUp,
-.unsplash5u28ojjgmsParent {
-  background-color: var(--color-black);
-  height: 1024px;
-  overflow: hidden;
-}
-
-.unsplash5u28ojjgmsParent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* width: 1440px; */
-  width: 100%;
-}
-
-.signUp {
-  position: relative;
-  width: 100%;
-  text-align: left;
-  font-size: 33.35px;
-  color: var(--color-white);
-  font-family: var(--caption1);
-}
-
-.form-floating>.form-control-plaintext~label,
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-select~label {
-  color: gray;
-  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
-  background-color: transparent !important;
-}
-
-.form-floating>.form-control-plaintext~label::after,
-.form-floating>.form-control:focus~label::after,
-.form-floating>.form-control:not(:placeholder-shown)~label::after,
-.form-floating>.form-select~label::after {
-  position: absolute;
-  inset: 1rem 0.375rem;
-  z-index: -1;
-  height: 1.5em;
-  content: "";
-  background-color: transparent !important;
-  border-radius: none !important;
-}
 
 
 /**************** profile Dashboard **************/
@@ -2597,6 +2236,180 @@ input[type="file"] {
 }
 
 
+/****************************** Sign in Section *********************************/
+
+.form-floating>.form-control-plaintext~label,
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
+  color: gray;
+  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+  background-color: transparent !important;
+}
+
+.form-floating>.form-control-plaintext~label::after,
+.form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after,
+.form-floating>.form-select~label::after {
+  position: absolute;
+  inset: 1rem 0.375rem;
+  z-index: -1;
+  height: 1.5em;
+  content: "";
+  background-color: transparent !important;
+  border-radius: none !important;
+}
+
+/* Sign in Css*/
+
+.Signin-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signIn-card {
+  padding: 3rem;
+  border-radius: 20px;
+  border: none;
+  margin: 2rem 0;
+  width: 35%;
+  margin: 0.5rem 0.5rem;
+  --bs-card-spacer-y: 1rem !important;
+  --bs-card-spacer-x: 1rem !important;
+  --bs-card-title-spacer-y: 0.5rem !important;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  --bs-card-border-radius: var(--bs-border-radius) !important;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+  --bs-card-cap-padding-y: 0.5rem !important;
+  --bs-card-cap-padding-x: 1rem !important;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-img-overlay-padding: 1rem !important;
+  --bs-card-group-margin: 0.75rem !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  height: var(--bs-card-height) !important;
+  color: var(--bs-body-color) !important;
+  word-wrap: break-word !important;
+  background-color: #18191A !important;
+  background-clip: border-box !important;
+}
+
+.or-line {
+  border-radius: var(--br-69xl);
+  background-color: #606060;
+  width: 81px;
+  height: 3px;
+}
+
+
+/*************************** Sign Up Section ***************************/
+
+.SignUp-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp-card {
+  padding: 3rem;
+  border-radius: 20px;
+  border: none;
+  margin: 2rem 0;
+  width: 120%;
+  margin: 0.5rem 0.5rem;
+  --bs-card-spacer-y: 1rem !important;
+  --bs-card-spacer-x: 1rem !important;
+  --bs-card-title-spacer-y: 0.5rem !important;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  --bs-card-border-radius: var(--bs-border-radius) !important;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+  --bs-card-cap-padding-y: 0.5rem !important;
+  --bs-card-cap-padding-x: 1rem !important;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-img-overlay-padding: 1rem !important;
+  --bs-card-group-margin: 0.75rem !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  height: var(--bs-card-height) !important;
+  color: var(--bs-body-color) !important;
+  word-wrap: break-word !important;
+  background-color: #18191A !important;
+  background-clip: border-box !important;
+}
+
+/***************** Onboard section ********************/
+
+.onboard-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.onboard-card {
+  padding: 3rem;
+  border-radius: 20px;
+  border: none;
+  margin: 2rem 0;
+  width: 40%;
+  margin: 0.5rem 0.5rem;
+  --bs-card-spacer-y: 1rem !important;
+  --bs-card-spacer-x: 1rem !important;
+  --bs-card-title-spacer-y: 0.5rem !important;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  --bs-card-border-radius: var(--bs-border-radius) !important;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+  --bs-card-cap-padding-y: 0.5rem !important;
+  --bs-card-cap-padding-x: 1rem !important;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-img-overlay-padding: 1rem !important;
+  --bs-card-group-margin: 0.75rem !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  height: var(--bs-card-height) !important;
+  color: var(--bs-body-color) !important;
+  word-wrap: break-word !important;
+  background-color: #18191A !important;
+  background-clip: border-box !important;
+}
+
+.onboard-input {
+  background-color: #121314;
+  height: 9vh;
+}
+
+
+
 
 
 
@@ -2680,6 +2493,27 @@ input[type="file"] {
   /****************** Pricing section **********************/
   .pricing-btn2 {
     font-size: 1rem !important;
+  }
+
+  /************************* Contact Section ************************/
+  .contact-card {
+    width: 80%;
+  }
+
+  /********************* Advisory Section ************************/
+  .advisory-div1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  /***************** Sign in Section *******************/
+  .signIn-card {
+    width: 45% !important;
+  }
+
+  /***************** Onbaord Section *******************/
+  .onboard-card {
+    width: 50%;
   }
 
 }
@@ -2817,6 +2651,41 @@ input[type="file"] {
   .pricing-btn2 {
     font-size: 1rem !important;
   }
+
+  /********************* Advisory Section ************************/
+  .AdvisoryMarket-card {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .advisory-div1 {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .advisory-span {
+    font-size: 16px !important;
+  }
+
+  /***************** Sign in Section *******************/
+  .signIn-card {
+    width: 55% !important;
+  }
+
+
+  /*************************** Sign Up Section ************************/
+  .SignUp-back {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+
+   /***************** Onbaord Section *******************/
+   .onboard-card {
+    width: 60%;
+  }
+
 }
 
 
@@ -3064,7 +2933,78 @@ input[type="file"] {
   /******************** Testimonails section **********************/
   .Testimonails-ul li {
     padding: 0 10px 0 10px !important;
-  } 
+  }
+
+  /************************* Contact Section ************************/
+
+  .contact-card {
+    width: 90%;
+    height: 80%;
+  }
+
+  .form-control {
+    height: 7vh;
+  }
+
+  textarea.form-control {
+    height: 20vh;
+  }
+
+  .contact-btn {
+    width: 55% !important;
+  }
+
+  /*************** Valuation Tool section *****************/
+  .Valuation-card {
+    padding: 1rem !important;
+  }
+
+  .valuation-row1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .valuation-row2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .valuation-row3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .valuation-row4 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .valuation-input {
+    width: 100% !important;
+  }
+
+  /***************** Sign in Section *******************/
+  .signIn-card {
+    width: 65% !important;
+  }
+
+  /*************************** Sign Up Section ************************/
+  .SignUp-back{
+    height: 150% !important;
+  }
+  .signUp-card {
+    width: 100% !important;
+  }
+
+  .SignUp-first{
+    width: 85% !important;
+  }
+
+   /***************** Onbaord Section *******************/
+   .onboard-card {
+    width: 70%;
+  }
+
 
 }
 
@@ -3082,6 +3022,22 @@ input[type="file"] {
   .owner-four-h1 {
     font-size: 2rem !important;
   }
+
+  /********************* Advisory Section ************************/
+  .AdvisoryMarket-card {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .advisory-div1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .secondPart {
+    width: 110% !important;
+  }
+
 }
 
 
@@ -3361,10 +3317,59 @@ input[type="file"] {
     padding: 2rem !important;
   }
 
-    /******************** Testimonails section **********************/
-    .Testimonails-ul li {
-      font-size: 30px !important;
-    } 
+  /******************** Testimonails section **********************/
+  .Testimonails-ul li {
+    font-size: 30px !important;
+  }
+
+  /************************* Contact Section ************************/
+
+  .contact-card {
+    width: 90%;
+    height: 60%;
+  }
+
+  .form-control {
+    height: 5vh;
+  }
+
+  textarea.form-control {
+    height: 18vh;
+  }
+
+  /**************************** FAQ Section ************************/
+
+  .accordion-flush .accordion-item .accordion-button,
+  .accordion-flush .accordion-item .accordion-button.collapsed {
+    font-size: 18px !important;
+  }
+
+  /********************* Advisory Section ************************/
+  .AdvisoryMarket-card {
+    display: flex;
+    flex-direction: column !important;
+    padding: 1rem !important;
+    align-items: center;
+  }
+
+  .advisory-div1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .secondPart {
+    width: 110% !important;
+  }
+
+  /***************** Sign in Section *******************/
+  .signIn-card {
+    width: 75% !important;
+  }
+
+   /***************** Onbaord Section *******************/
+   .onboard-card {
+    width: 80%;
+  }
 
 }
 
@@ -3718,13 +3723,50 @@ input[type="file"] {
     padding: 0 0 0px 2rem;
   }
 
-   /******************** Testimonails section **********************/
-   .pricing-backgroundImage h1 {
+  /******************** Testimonails section **********************/
+  .pricing-backgroundImage h1 {
     font-size: 3rem !important;
   }
-   .Testimonails-ul li {
+
+  .Testimonails-ul li {
     font-size: 25px !important;
-  } 
+  }
+
+  /************************* Contact Section ************************/
+
+  .contact-card {
+    width: 90%;
+    height: 60%;
+    padding: 0px 1.5rem !important;
+  }
+
+  .form-control {
+    height: 7vh;
+  }
+
+  textarea.form-control {
+    height: 20vh;
+  }
+
+  .contact-btn {
+    width: 55% !important;
+    padding: 0.9rem 1.5rem !important;
+  }
+
+  .pricing-backgroundImage span {
+    width: 100% !important;
+  }
+
+  /***************** Sign in Section *******************/
+  .signIn-card {
+    width: 95% !important;
+  }
+
+   /***************** Onbaord Section *******************/
+   .onboard-card {
+    width: 95%;
+  }
+
 
 }
 
@@ -3746,6 +3788,11 @@ input[type="file"] {
 
   .marketTypeAnimation {
     font-size: 1.5rem !important;
+  }
+
+  /********************* Advisory Section ************************/
+  .advisory-btn {
+    font-size: 0px !important;
   }
 }
 

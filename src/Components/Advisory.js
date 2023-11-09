@@ -79,13 +79,13 @@ const Advisory = () => {
             </section>
 
             <section>
-                <div className="ligh-back" style={{ height: '120vh' }}>
+                <div className="ligh-back" style={{ height: '100%' }}>
                     <div className="AdvisoryMarket-card " style={{ padding: "3rem" }} >
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -98,7 +98,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -106,7 +106,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -144,9 +144,9 @@ const Advisory = () => {
 
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -159,7 +159,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -167,7 +167,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -205,13 +205,13 @@ const Advisory = () => {
 
                     </div>
                 </div>
-                <div className="ligh-back" style={{ height: '120vh' }}>
+                <div className="ligh-back" style={{ height: '100%' }}>
                     <div className="AdvisoryMarket-card " style={{ padding: "3rem" }} >
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -224,7 +224,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -232,7 +232,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -270,9 +270,9 @@ const Advisory = () => {
 
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -285,7 +285,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -293,7 +293,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -331,13 +331,13 @@ const Advisory = () => {
 
                     </div>
                 </div>
-                <div className="ligh-back" style={{ height: '120vh' }}>
+                <div className="ligh-back" style={{ height: '100%' }}>
                     <div className="AdvisoryMarket-card " style={{ padding: "3rem" }} >
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -350,7 +350,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -358,7 +358,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
@@ -396,9 +396,9 @@ const Advisory = () => {
 
                         <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
-                            <div className='d-flex align-items-center'>
+                            <div className='advisory-div1 d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={280} src={cardProfile} alt="" />
+                                    <img style={{width:'100%'}} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
@@ -411,7 +411,7 @@ const Advisory = () => {
                             </div>
                             <div className='my-4'>
                                 <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                <span className='col-6' style={{ color: '#636363', fontSize: '18px' }}>
+                                <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
                                     Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
                                     An experienced dealmaker with extensive connections in the CPG space,
                                     Taliesen’s insights into e-commerce mergers......</span>
@@ -419,7 +419,7 @@ const Advisory = () => {
 
                             <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='advisory-btn btn btn-primary' to="/singup">View more<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>

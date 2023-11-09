@@ -38,20 +38,20 @@ const ValuationTool = () => {
                             <img src={Close} alt="" />
                         </div>
 
-                        <div className='d-flex my-3' style={{ width: '100%' }}>
-                            <div className="" style={{ width: '35%' }}>
+                        <div className='valuation-row1 d-flex my-3' style={{ width: '100%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Revenue / Year</label>
                                 <div className='d-flex'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$000" />
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Costs / Year</label>
                                 <div className='d-flex'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$000" />
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Net income / Year</label>
                                 <div className='d-flex'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$000" />
@@ -59,21 +59,21 @@ const ValuationTool = () => {
                             </div>
                         </div>
 
-                        <div className='d-flex my-3' style={{ width: '100%' }}>
-                            <div className="" style={{ width: '35%' }}>
+                        <div className='valuation-row2  d-flex my-3' style={{ width: '100%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Type of site</label>
                                 <div className='d-flex'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="membership" />
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">How much time do you spend on it per week?</label>
                                 <div className='d-flex align-items-center'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="10" />
                                     <span style={{ fontSize: '10px' }}>Hour</span>
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Your own labor cost/ year</label>
                                 <div className='d-flex align-items-center'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="35" />
@@ -82,21 +82,21 @@ const ValuationTool = () => {
                             </div>
                         </div>
 
-                        <div className='d-flex my-3' style={{ width: '100%' }}>
-                            <div className="" style={{ width: '35%' }}>
+                        <div className='valuation-row3 d-flex my-3' style={{ width: '100%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Revenue growth rate/year</label>
                                 <div className='d-flex'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="25,000" />
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Monthly Net Profit</label>
                                 <div className='d-flex align-items-center'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="10" />
                                     <span>%</span>
                                 </div>
                             </div>
-                            <div className="" style={{ width: '35%' }}>
+                            <div className="valuation-input" style={{ width: '35%' }}>
                                 <label for="inputEmail4" class="form-label">Cost growth rate/year</label>
                                 <div className='d-flex align-items-center'>
                                     <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="5" />
@@ -105,8 +105,8 @@ const ValuationTool = () => {
                             </div>
                         </div>
 
-                        <div className="d-flex justify-content-between my-3">
-                            <div className="" style={{ width: '45%' }}>
+                        <div className="valuation-row4 d-flex justify-content-between my-3">
+                            <div className="valuation-input" style={{ width: '45%' }}>
                                 <div className='d-flex'>
                                     <div style={{ width: '100%' }}>
                                         <label for="inputEmail5" class="form-label">Monthly Active Users</label>
@@ -124,7 +124,7 @@ const ValuationTool = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="" style={{ width: '45%' }}>
+                            <div className="valuation-input" style={{ width: '45%' }}>
                                 <div className='d-flex'>
                                     <div style={{ width: '100%' }}>
                                         <label for="inputEmail5" class="form-label">Twitter Followers</label>

@@ -18,7 +18,7 @@ const FAQ = () => {
                 </div>
             </section>
 
-            <section className="ligh-back" style={{height:'120vh'}} >
+            <section className="FAQ-back" >
                 <div style={{position:'relative',top:'-80px'}}>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
