@@ -33,7 +33,7 @@ const Pricing = () => {
                 </div>
             </section>
 
-            <section className="ligh-back" >
+            <section className="pricing-back" >
                 {show === 1 && <>
                     <div className="pricing-card" style={{ height: '60%', position: 'relative', top: '-152px' }}>
                         <span className='span1'>Basic</span>
@@ -45,7 +45,7 @@ const Pricing = () => {
                         </div>
                     </div>
 
-                    <div className="pricing-card" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
                         <span className='span1'>Prime</span>
                         <h1>Free</h1>
                         <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>No hidden fees, zero middlemen.</span>
@@ -72,7 +72,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>List your business<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn btn btn-primary'>List your business<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
                         </div>
                     </div>
                 </>
@@ -89,7 +89,7 @@ const Pricing = () => {
                         </div>
                     </div>
 
-                    <div className="pricing-card" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
                         <span className='span1'>Premium</span>
                         <h1>$99<span style={{ fontSize: '20px', }}>/year</span></h1>
                         <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Go premium, never miss a deal.</span>
@@ -116,11 +116,11 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
                         </div>
                     </div>
 
-                    <div className="pricing-card" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
                         <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Go pro, close deals for free</span>
@@ -147,7 +147,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
                         </div>
                     </div>
                 </>}

@@ -106,7 +106,7 @@ const Market = () => {
                                         </div>
                                     </div>
                                     {/** */}
-                                    <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                                    <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                         <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                         <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                         <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -164,7 +164,7 @@ const Market = () => {
                         <div>
                             <div className='my-5'>
                                 <h1 className='main-h1 col-6'>Welcome to the Marketplace
-                                    <TypeAnimation className='typeAnimation' style={{ marginLeft: '1rem', fontSize: '3rem' }}
+                                    <TypeAnimation className='typeAnimation marketTypeAnimation' style={{ marginLeft: '1rem', fontSize: '3rem' }}
                                         sequence={[
                                             'Ecommerce', // Types 'One'
                                             1000, // Waits 1s
@@ -241,12 +241,12 @@ const Market = () => {
                 </div>
             </section>
 
-            <section style={{ background: '#EEF0FE ', padding: '3rem' }}>
+            <section className='marketMain' style={{ background: '#EEF0FE ', padding: '3rem' }}>
                 <section className="ligh-back  my-5" style={{ height: '120%' }} >
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -265,7 +265,7 @@ const Market = () => {
                                     <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                                 </div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -276,7 +276,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -293,7 +293,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -304,7 +304,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -321,7 +321,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -333,7 +333,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -350,7 +350,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -361,7 +361,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -378,7 +378,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -389,7 +389,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -406,7 +406,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -418,7 +418,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -435,7 +435,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -446,7 +446,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -463,7 +463,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -474,7 +474,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -491,7 +491,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -503,7 +503,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -520,7 +520,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -531,7 +531,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -548,7 +548,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
@@ -559,7 +559,7 @@ const Market = () => {
                     <div className="marketInner-card ">
                         <div className="firstMarket">
                             <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstPart" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
+                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
                                 <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
@@ -576,7 +576,7 @@ const Market = () => {
                                 <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
                                 <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
                             </div>
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
                                 <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>

@@ -54,14 +54,14 @@ const Testimonials = () => {
                         <div class="carousel-inner">
                             <div class="carousel-item active">
 
-                                <div className='d-flex justify-content-evenly my-4'>
+                                <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">
                                         <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
                                         <div className='d-flex flex-row align-items-center'>
                                             <img style={{ width: "15%" }} src={personImg} alt="" />
                                             <div className='mx-3'>
                                                 <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                                                <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                                                <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@ const Testimonials = () => {
                                             <img style={{ width: "15%" }} src={personImg} alt="" />
                                             <div className='mx-3'>
                                                 <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                                                <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                                                <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -81,14 +81,14 @@ const Testimonials = () => {
 
                             <div class="carousel-item">
 
-                                <div className='d-flex justify-content-evenly my-4'>
+                                <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">
                                         <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
                                         <div className='d-flex flex-row align-items-center'>
                                             <img style={{ width: "15%" }} src={personImg} alt="" />
                                             <div className='mx-3'>
                                                 <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                                                <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                                                <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@ const Testimonials = () => {
                                             <img style={{ width: "15%" }} src={personImg} alt="" />
                                             <div className='mx-3'>
                                                 <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                                                <span style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                                                <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@ const Testimonials = () => {
 
             <section className='owner-four-section'>
                 <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
-                    <div className='d-flex justify-content-between align-items-center'>
+                    <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Get Offers From Professional Acquirers</h1>
                             <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>

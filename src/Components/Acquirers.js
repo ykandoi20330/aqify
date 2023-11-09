@@ -80,7 +80,7 @@ const Acquirers = () => {
                 <div>
                     <div className='d-flex flex-column align-items-center justify-content-center'>
                         <h1 className='fourth-h1' style={{ width: '60%' }}>Find Internet Startups And SMBs With Product-Market Fit...</h1>
-                        <span style={{ color: '#636363', fontSize: '20px', margin: '1rem 0 3rem 0' }}>Every Monday we publish new businesses for sale on our marketplace.</span>
+                        <span style={{ color: '#636363', fontSize: '20px', margin: '1rem 0 3rem 0', textAlign:'center' }}>Every Monday we publish new businesses for sale on our marketplace.</span>
                     </div>
                 </div>
                 <div className='Owner-card-div'>
@@ -109,23 +109,23 @@ const Acquirers = () => {
                             <h1 className='fourth-h1' style={{ marginBottom: '3rem', width: '60%' }}>Trusted By Professionals For Sourcing Quality Deals</h1>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain ' }}>
+                    <div className='owner-second-background' style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain ' }}>
                         <div className='d-flex flex-row align-items-center'>
                             <img style={{ width: '17%', margin: '0 3rem' }} src={roundedImg} alt="" />
-                            <div>
+                            <div className='owner-write-detail'>
                                 <span style={{ width: '70%', display: 'flex', fontSize: '20px' }}>"Calm Capital acquires and invests in good profitable businesses from independent founders looking for smoother waters.</span><br />
                                 <span style={{ width: '70%', display: 'flex', fontSize: '20px' }}>"Calm Capital acquires and invests in good profitable businesses from independent founders looking for smoother waters.</span>
                             </div>
                         </div>
-                        <div className='d-flex justify-content-end'>
-                            <div className='d-flex flex-row align-items-center' style={{ position: 'relative', left: '230px' }}>
+                        <div className='founder-content d-flex justify-content-end'>
+                            <div className='owner-Co-founder d-flex flex-row align-items-center' style={{ position: 'relative', left: '230px' }}>
                                 <div className='mx-3 text-end'>
                                     <span style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>David Horne</span><br />
                                     <span style={{ fontSize: '1.5rem', color: '#fff' }}>Co-founder, Managing Partner</span>
                                 </div>
                                 <img style={{ width: "20%" }} src={profileImg} alt="" />
                             </div>
-                            <div className='d-flex flex-row align-items-center' style={{ position: 'relative', left: '110px' }}>
+                            <div className='owner-Co-founder1 d-flex flex-row align-items-center' style={{ position: 'relative', left: '110px' }}>
                                 <div className='mx-3 text-end'>
                                     <span style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>Marty Balkema</span><br />
                                     <span style={{ fontSize: '1.5rem', color: '#fff' }}>Co-founder, Managing Partner</span>
@@ -149,7 +149,7 @@ const Acquirers = () => {
 
                 <div className="owner-third-card">
                     <h3>1.</h3>
-                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon1} alt="" />
                             <h4>Qualitative details</h4>
@@ -165,7 +165,7 @@ const Acquirers = () => {
                 </div>
                 <div className="owner-third-card">
                     <h3>2.</h3>
-                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon2} alt="" />
                             <h4>Quantitative data</h4>
@@ -181,7 +181,7 @@ const Acquirers = () => {
                 </div>
                 <div className="owner-third-card">
                     <h3>3.</h3>
-                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon3} alt="" />
                             <h4>Preferred terms of a deal</h4>
@@ -199,7 +199,7 @@ const Acquirers = () => {
 
             <section className='owner-four-section'>
                 <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
-                    <div className='d-flex justify-content-between align-items-center'>
+                    <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Get Verified And Contact Owners Today</h1>
                             <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>Acquire an internet business with $100K to $50M in annual revenue - either fully or partially.</span>
