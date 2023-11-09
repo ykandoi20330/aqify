@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.54b2507b.css",
-    "main.js": "/aqify/static/js/main.526d028b.js",
+    "main.css": "/aqify/static/css/main.f405e81b.css",
+    "main.js": "/aqify/static/js/main.ba3ab664.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.8f932f73036e36f7ea58.png",
     "static/media/unsplash5u-28ojjgms@2x.png": "/aqify/static/media/unsplash5u-28ojjgms@2x.a6da078b66460b54a67e.png",
@@ -31,12 +31,12 @@
     "static/media/ellipse-60@2x.png": "/aqify/static/media/ellipse-60@2x.ad1de14b31023dbcfaec.png",
     "static/media/Doctor.jpg": "/aqify/static/media/Doctor.1852949178fd30705ec9.jpg",
     "static/media/Frame 105.png": "/aqify/static/media/Frame 105.98a053f1cddae5685f3b.png",
+    "static/media/Frame 21.svg": "/aqify/static/media/Frame 21.6f442d3e707ca56ab526dcab923c5466.svg",
     "static/media/FrameWhiteLogo.svg": "/aqify/static/media/FrameWhiteLogo.1389bc6a0bbaebfff8aec0f4e69ca71a.svg",
     "static/media/Frame 18.svg": "/aqify/static/media/Frame 18.f8af2642c0db1aff7d399e91795b494a.svg",
     "static/media/FrameblackLogo.svg": "/aqify/static/media/FrameblackLogo.7e4e59d5465c9ce5bde43d6a00b8cde3.svg",
     "static/media/gear.svg": "/aqify/static/media/gear.9016f452e188022fb7bd5d8518cd5654.svg",
-    "static/media/vector.svg": "/aqify/static/media/vector.f154708a04009d6c8a29ee5145ef10e3.svg",
-    "static/media/vector1.svg": "/aqify/static/media/vector1.184731ff08f7e086292b56594dc26f63.svg",
+    "static/media/vector1.svg": "/aqify/static/media/vector1.38e17caea8eb66cd813088062e5509ee.svg",
     "static/media/VectorFilter.svg": "/aqify/static/media/VectorFilter.fc6405ebb8bdd9765511c2db1bb6eb24.svg",
     "static/media/listnumbers.svg": "/aqify/static/media/listnumbers.464a77b49de03f2ae2b894b75f0eed34.svg",
     "static/media/VectorUpload.svg": "/aqify/static/media/VectorUpload.db5a8d287d681f48272f076ccccb3177.svg",
@@ -68,12 +68,12 @@
     "static/media/VectorLeft.svg": "/aqify/static/media/VectorLeft.6f33e1208a87368b88632228ceb64d8a.svg",
     "static/media/VectorRight.svg": "/aqify/static/media/VectorRight.1902edab36a079f8251d9985a08ea9eb.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
-    "main.54b2507b.css.map": "/aqify/static/css/main.54b2507b.css.map",
-    "main.526d028b.js.map": "/aqify/static/js/main.526d028b.js.map",
+    "main.f405e81b.css.map": "/aqify/static/css/main.f405e81b.css.map",
+    "main.ba3ab664.js.map": "/aqify/static/js/main.ba3ab664.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54b2507b.css",
-    "static/js/main.526d028b.js"
+    "static/css/main.f405e81b.css",
+    "static/js/main.ba3ab664.js"
   ]
 }
