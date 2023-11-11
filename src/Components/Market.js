@@ -201,7 +201,7 @@ const Market = () => {
             </section>
 
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
-                <div className="advisory-card">
+                <div className="MarketTool-card">
                     <div className="second-line d-flex">
                         <div class="mb-3 my-3 form-floating" style={{ width: '100%' }}>
                             <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control" placeholder="Search" />

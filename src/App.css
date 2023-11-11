@@ -127,25 +127,75 @@ nav {
   left: 100px;
   position: relative;
   color: #fff;
-  /* top: 50px; */
-  top: 150px;
+  top: 50px;
+  /* top: 150px; */
 }
 
-.hero-images-wrapper {
+/* .hero-images-wrapper {
   flex-direction: column;
   display: flex;
-}
+}*/
 
 .split-content.home-hero-right {
   justify-content: end;
   margin-top: 120px;
   /* margin-right: -184px; */
   display: flex;
-}
+} 
 .image.home-hero {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0 7px 27px rgba(38, 55, 147, .05);
+}
+
+.hero-images-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+    align-items: center; */
+  /* height: 29vh; */
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  20% {
+    transform: translateY(-10);
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.hero-images-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  /*  justify-content: center;
+    align-items: center; */
+  /* height: 29vh; */
+  animation: move1 10s linear infinite;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateY(-40%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
 }
 
 .main-h1 {
@@ -1212,6 +1262,47 @@ textarea.form-control {
   width: 90%;
   /* justify-content: center; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.MarketTool-card {
+  top: -150px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 35vh;
+  margin: 2rem 0rem;
+  padding: 3rem;
+
+  border-radius: 20px;
+  border: none;
+  --bs-card-spacer-y: 1rem !important;
+  --bs-card-spacer-x: 1rem !important;
+  --bs-card-title-spacer-y: 0.5rem !important;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  --bs-card-border-radius: var(--bs-border-radius) !important;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+  --bs-card-cap-padding-y: 0.5rem !important;
+  --bs-card-cap-padding-x: 1rem !important;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-img-overlay-padding: 1rem !important;
+  --bs-card-group-margin: 0.75rem !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  /* height: var(--bs-card-height) !important; */
+  color: var(--bs-body-color) !important;
+  word-wrap: break-word !important;
+  background-color: var(--bs-card-bg) !important;
+  background-clip: border-box !important;
 }
 
 
@@ -2623,7 +2714,7 @@ input[type="file"] {
 
   /* home content section */
 
-  .parallax-display{
+  .parallax-display {
     display: none !important;
   }
 
@@ -2842,6 +2933,13 @@ input[type="file"] {
 
   .main-ul li {
     margin-right: 1rem !important;
+  }
+
+  .hero-images-wrapper{
+    display: none !important;
+  }
+  .hero-images-wrapper2{
+    display: none !important;
   }
 
   /*Home Listing section*/
@@ -3283,6 +3381,11 @@ input[type="file"] {
     font-size: 2rem !important;
   }
 
+  /********************* Market Section ************************/
+  .MarketTool-card {
+    height: 40vh !important;
+  }
+
   /********************* Advisory Section ************************/
   .AdvisoryMarket-card {
     display: flex;
@@ -3714,8 +3817,8 @@ input[type="file"] {
     font-size: 1rem !important;
   }
 
-  /************* Dashboard selling section **************/ 
-  .social-input{
+  /************* Dashboard selling section **************/
+  .social-input {
     display: unset !important;
   }
 
@@ -3751,7 +3854,8 @@ input[type="file"] {
   /* home content section */
 
   .content {
-    left: 60px !important;
+    /* left: 60px !important; */
+    left: 35px !important;
   }
 
   .main-h1 {
@@ -4198,7 +4302,7 @@ input[type="file"] {
     padding: 2rem !important;
   }
 
-  .btn2{
+  .btn2 {
     font-size: 14px !important;
   }
 
@@ -4228,7 +4332,7 @@ input[type="file"] {
     width: 200% !important;
   }
 
-  .main-h1{
+  .main-h1 {
     line-break: anywhere !important;
   }
 

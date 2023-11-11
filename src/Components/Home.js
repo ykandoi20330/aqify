@@ -56,7 +56,7 @@ import svg8 from "./HomePage/5f80f0e35451d7944febd06d_image-home-hero-06-market-
 import svg9 from "./HomePage/5f80f26477a2809783cf89ac_image-home-hero-09-market-template.svg"
 
 //parallax
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+// import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 
 const Home = () => {
@@ -114,13 +114,13 @@ const Home = () => {
       {/** */}
       < section >
         <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
-          <Parallax pages={2}>
+          {/* <Parallax pages={2}>
             <ParallaxLayer
               offset={1}
               speed={1}
               factor={1}
               sticky={{ start: 0, end: 2 }}
-            >
+            > */}
               <div className="content">
                 <div>
                   <div className='my-5'>
@@ -162,7 +162,7 @@ const Home = () => {
                     <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/market">Access Marketplace<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                   </div>
                 </div>
-                <div className='my-5' style={{ marginLeft: '-0px', position: 'relative' }}>
+                <div className='' style={{ marginLeft: '-0px', position: 'relative' }}>
                   <ul className='main-ul'>
                     <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
                     <li>345<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
@@ -175,18 +175,18 @@ const Home = () => {
                 <img className='bottomCircle1' src={circle1} alt="" />
                 <img className='bottomCircle2' src={circle2} alt="" />
               </div>
-            </ParallaxLayer>
             {/** */}
+            {/* </ParallaxLayer> */}
 
 
             <div class="split-content home-hero-right">
-              <ParallaxLayer
+              {/* <ParallaxLayer
                 offset={0}
                 speed={1}
                 opacity={0.390162}
                 className="parallax  parallax-display"
                 style={{ width: '15%', position: 'relative' }}
-              >
+              > */}
                 <div data-w-id="d0dc91ae-0e51-8fb8-c700-6d8bdc10f1e6" class="hero-images-wrapper" style={{ willChange: "transform", transform: "translate3d(0px, -14.782px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" }}>
                   <img src={svg1} alt="Tablet Mockups" class="image home-hero" />
                   <img src={svg3} alt="Typography" class="image home-hero" />
@@ -200,14 +200,18 @@ const Home = () => {
                   <img src={svg3} alt="Typography" class="image home-hero" />
                   <img src={svg2} alt="Phone Mockups" class="image home-hero last" />
                 </div>
-              </ParallaxLayer>
+              {/* </ParallaxLayer>
               <ParallaxLayer
                className='parallax-display' 
                 offset={0.2}
                 speed={0.05}
                 style={{ width: '15%', position: 'relative', margin: '0 0.5rem' }}
-              >
-                <div data-w-id="f5511c85-57f1-a4a9-ef4d-cdaeee61b9e9" class="hero-images-wrapper center" style={{ willChange: "transform", transform: "translate3d(0px, 46.521px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" }}>
+              > */}<br/>
+                <div data-w-id="f5511c85-57f1-a4a9-ef4d-cdaeee61b9e9" class="hero-images-wrapper2 center mx-2" style={{ willChange: "transform", transform: "translate3d(0px, 46.521px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" }}>
+                  <img src={svg4} alt="Cards Mockup" class="image home-hero" />
+                  <img src={svg5} alt="iPhone Mockups" class="image home-hero" />
+                  <img src={svg6} alt="Wearables" class="image home-hero last" />
+
                   <img src={svg4} alt="Cards Mockup" class="image home-hero" />
                   <img src={svg5} alt="iPhone Mockups" class="image home-hero" />
                   <img src={svg6} alt="Wearables" class="image home-hero last" />
@@ -216,10 +220,10 @@ const Home = () => {
                   <img src={svg5} alt="iPhone Mockups" class="image home-hero" />
                   <img src={svg6} alt="Wearables" class="image home-hero last" />
                 </div>
-              </ParallaxLayer>
+              {/* </ParallaxLayer> */}
             </div>
+          {/* </Parallax > */}
             {/** */}
-          </Parallax >
         </div>
       </section >
 
