@@ -22,7 +22,7 @@ const ValuationTool = () => {
                         </div>
                         <div className="d-flex justify-content-end">
                             <div><a href="/"><img src={message} alt="" /></a></div>
-                            <div><a href="/"><img style={{ width: '2.8vw' }} src={profileIcon} alt="" /></a></div>
+                            <div><a href="/"><img style={{ width: '40px' }} src={profileIcon} alt="" /></a></div>
                             <div><a href="/"><img src={threeDots} alt="" /></a></div>
                         </div>
                     </div>
