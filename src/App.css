@@ -4206,6 +4206,10 @@ input[type="file"] {
     width: 200% !important;
   }
 
+  .main-h1{
+    line-break: anywhere !important;
+  }
+
 
   /************* Market section ****************/
   .owner-content {
@@ -4227,6 +4231,10 @@ input[type="file"] {
   /*Home Listing section*/
   .card {
     width: 225% !important;
+  }
+
+  .offcanvas {
+    max-width: 70% !important;
   }
 
 }
