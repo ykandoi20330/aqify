@@ -29,7 +29,7 @@ const MessageDash2 = () => {
                             <div className='d-flex'>
                                 <img src={img1} alt="" />
                                 <div className='mx-3'>
-                                    <h2>Akash Ku. Padhi</h2>
+                                    <h2 className='msg-h2'>Akash Ku. Padhi</h2>
                                     <span style={{ color: '#c0c0c0' }}>ZyShip.com</span>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const MessageDash2 = () => {
                             <div className='d-flex'>
                                 <img src={img2} alt="" />
                                 <div className='mx-3'>
-                                    <h2>Akash Ku. Padhi</h2>
+                                    <h2 className='msg-h2'>Akash Ku. Padhi</h2>
                                     <span style={{ color: '#c0c0c0' }}>ZyShip.com</span>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const MessageDash2 = () => {
                             <div className='d-flex'>
                                 <img src={img3} alt="" />
                                 <div className='mx-3'>
-                                    <h2>Akash Ku. Padhi</h2>
+                                    <h2 className='msg-h2'>Akash Ku. Padhi</h2>
                                     <span style={{ color: '#c0c0c0' }}>ZyShip.com</span>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ const MessageDash2 = () => {
                             <div className='d-flex'>
                                 <img src={img4} alt="" />
                                 <div className='mx-3'>
-                                    <h2>Akash Ku. Padhi</h2>
+                                    <h2 className='msg-h2'>Akash Ku. Padhi</h2>
                                     <span style={{ color: '#c0c0c0' }}>ZyShip.com</span>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ const MessageDash2 = () => {
                             <div className='d-flex'>
                                 <img src={img5} alt="" />
                                 <div className='mx-3'>
-                                    <h2>Akash Ku. Padhi</h2>
+                                    <h2 className='msg-h2'>Akash Ku. Padhi</h2>
                                     <span style={{ color: '#c0c0c0' }}>ZyShip.com</span>
                                 </div>
                             </div>

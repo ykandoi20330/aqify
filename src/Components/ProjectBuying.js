@@ -20,21 +20,21 @@ const ProjectBuying = () => {
                         <span style={{ color: '#636363' }}>0 active purchases, Buy your first Project.</span>
                     </div>
                     <div>
-                        <Link className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }}onClick={show => setShow(2)} > <img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt="" />Marketplace</Link>
+                        <Link className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }}onClick={show => setShow(2)} ><img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt=""/>Marketplace</Link> {/**  <i class="fa-solid fa-arrow-trend-up mx-1" style={{color: "#ffffff"}}></i> */}
                     </div>
                 </div>
 
 
                 <div className="buying-card">
-                    <div className='d-flex flex-column justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
-                        <ul className='d-flex justify-content-between' style={{ listStyle: 'none', width: '92%', marginBottom: '1rem' }}>
+                    <div className='buying-content d-flex flex-column justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
+                        <ul className='buying-div1 d-flex justify-content-between' style={{ listStyle: 'none', width: '92%', marginBottom: '1rem' }}>
                             <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Project Name</Link></li>
                             <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Active Status</Link></li>
                             <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Invoices</Link></li>
                             <li className='card-h3' style={{ position: 'relative', left: '-66px', padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Prices</Link></li>
                         </ul>
                         
-                        <div>
+                        <div className='buying-div2'>
                             <div className='d-flex justify-content-between align-items-center my-2' style={{ listStyle: 'none' }}>
                                 <span>UI Medical website</span>
                                 <span><Link style={{ padding: '0.3rem 1rem' }} className="btn btn-outline-primary rounded-pill" href="">Reviewing</Link></span>

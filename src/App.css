@@ -1261,8 +1261,9 @@ textarea.form-control {
 
 .dropdown-menu-dark {
   position: relative !important;
-  top: -70px !important;
+  top: -0px !important;
   margin: 0.5rem 0 !important;
+  width: 100%;
 }
 
 .dropdown-menu-dark {
@@ -1295,6 +1296,11 @@ dropdown-toggle::after {
   position: absolute;
 }
 
+
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  transform: none !important;
+}
 
 .profile-card {
   /* height: 50% !important; */
@@ -1439,9 +1445,9 @@ dropdown-toggle::after {
 
 /********* Message Dashboard section**********/
 .message-card {
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   padding: 3rem;
-
+  width: 100%;
   border-radius: 20px;
   border: none;
   --bs-card-spacer-y: 1rem !important;
@@ -1604,6 +1610,46 @@ dropdown-toggle::after {
   background-clip: border-box !important;
 }
 
+/***********************  MarketPlace 2 Dashbaord *************************/
+.marketDash2-back {
+  background: #EEF0FE;
+  display: flex;
+  justify-content: center;
+}
+
+.card1 {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  color: var(--bs-body-color);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  /* border: var(--bs-card-border-width) solid var(--bs-card-border-color); */
+  /* border-radius: var(--bs-card-border-radius); */
+  border-radius: 20px;
+}
 
 /*************** Project buying dashboard ******************/
 
@@ -1651,7 +1697,7 @@ dropdown-toggle::after {
 .analytic-card {
   width: 100%;
   height: 70vh;
-  margin: 2rem 1rem;
+  /* margin: 2rem 1rem; */
   padding: 3rem;
 
   border-radius: 20px;
@@ -2437,6 +2483,24 @@ input[type="file"] {
     width: 50% !important;
   }
 
+  /****************** marketplace 2 Dashboard section **********************/
+  .marketDash2-back {
+    height: 100% !important;
+  }
+
+  .market-card {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card1 {
+    width: 95% !important;
+  }
+
 }
 
 @media screen and (max-width:1200px) {
@@ -2681,9 +2745,34 @@ input[type="file"] {
     flex-direction: column;
   }
 
-   /***************** Onbaord Section *******************/
-   .onboard-card {
+  /***************** Onbaord Section *******************/
+  .onboard-card {
     width: 60%;
+  }
+
+  /********** Dashboard Navbar section ***********/
+
+  .dashboard {
+    position: absolute;
+    top: 0;
+  }
+
+  /********************* Dashobard Pricing Section ************************/
+  .dashPricing {
+    height: 35% !important;
+  }
+
+  /*************** Dashboard Selling section ****************/
+  .first-sell {
+    padding: 1rem 1rem !important;
+  }
+
+  .Onboard-card {
+    padding: 3rem !important;
+  }
+
+  .Onboard-card div span {
+    width: 100% !important;
   }
 
 }
@@ -2989,22 +3078,171 @@ input[type="file"] {
   }
 
   /*************************** Sign Up Section ************************/
-  .SignUp-back{
+  .SignUp-back {
     height: 150% !important;
   }
+
   .signUp-card {
-    width: 100% !important;
+    width: 97% !important;
   }
 
-  .SignUp-first{
+  .SignUp-first {
     width: 85% !important;
   }
 
-   /***************** Onbaord Section *******************/
-   .onboard-card {
+  /***************** Onbaord Section *******************/
+  .onboard-card {
     width: 70%;
   }
 
+  /***************** MarketPlace List dashboard Section *******************/
+
+  .first-line {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .Search-from {
+    width: 95% !important;
+  }
+
+  .form-select {
+    width: 95% !important;
+    margin: 0.2rem 0;
+  }
+
+  .form-floating {
+    position: relative;
+    width: 100%;
+  }
+
+  .second-line {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .cardOption {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .marketDash-card {
+    margin: 2rem 0 !important;
+    width: 100%;
+  }
+
+  .marketDash-card2 {
+    margin: 2rem 0 !important;
+    width: 100% !important;
+  }
+
+  .more-filters {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .offersRecieved {
+    width: 100% !important;
+  }
+
+  .btn-group .btn {
+    padding: 1rem 3rem !important;
+  }
+
+  /**************** Dashboard Change Password section *****************/
+  .password-card {
+    margin: 2rem 0rem !important;
+    padding: 2rem 2rem !important;
+  }
+
+  .password-btn {
+    width: 55% !important;
+  }
+
+  /**************** Dashboard My Project section *****************/
+  .buying-card {
+    margin: 2rem 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buying-content {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+  }
+
+  .buying-div1 {
+    width: 20% !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .buying-div1 li {
+    left: 0px !important;
+  }
+
+  .buying-div2 {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .buying-div2 div {
+    display: flex;
+    flex-direction: column !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: -2rem !important;
+  }
+
+  .buying-div1 li {
+    padding: 0 0 1.5rem !important;
+    margin: 0.5rem 0 0 !important;
+  }
+
+  .Myproject-btn {
+    margin: 0.5rem 0 !important;
+  }
+
+  .My-btns {
+    text-align: center !important;
+  }
+
+
+  /*************** Dashboard Message 2 section ****************/
+  .msg-h2 {
+    font-size: 1.2rem !important;
+  }
+
+
+  /*************** Dashboard Selling section ****************/
+  .first-sell {
+    padding: 1rem 1rem !important;
+  }
+
+  .Onboard-card {
+    padding: 3rem !important;
+  }
+
+  .Onboard-card div span {
+    width: 100% !important;
+  }
+
+  .Onboard-card2 {
+    padding: 3rem !important;
+  }
+
+  .Onboard-card3 {
+    padding: 3rem !important;
+  }
+
+  .Onboard-card4 {
+    padding: 3rem !important;
+  }
+
+  .Onboard-card5 {
+    padding: 3rem !important;
+  }
 
 }
 
@@ -3036,6 +3274,80 @@ input[type="file"] {
 
   .secondPart {
     width: 110% !important;
+  }
+
+  /********************* Dashboard Profile Section ************************/
+  .profile-card {
+    /* height: 50% !important; */
+    margin: 2rem 0 !important;
+    padding: 2rem !important;
+  }
+
+  .profile-content {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .profile-content div {
+    width: 100% !important;
+  }
+
+  .profile-btn {
+    width: 50% !important;
+  }
+
+  /*************** Dashboard Selling section ****************/
+  .first-sell {
+    padding: 6rem 1rem !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .step-item:not(:first-child):before {
+    content: '';
+    background-color: #c0c0cc6c;
+    width: 70% !important;
+    height: 4px !important;
+    position: absolute;
+    top: 25px !important;
+  }
+
+  .StepBar .steps {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .step-item {
+    position: relative;
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .tagname {
+    position: relative;
+    right: 35px;
+    color: #c0c0c0;
+    background: transparent;
+    top: -35px;
+  }
+
+  .Onboard-card {
+    width: 100% !important;
+  }
+
+  .Onboard-card2 {
+    width: 100% !important;
+  }
+
+  .Onboard-card3 {
+    width: 100% !important;
+  }
+
+  .Onboard-card4 {
+    width: 100% !important;
+  }
+
+  .Onboard-card5 {
+    width: 100% !important;
   }
 
 }
@@ -3366,9 +3678,23 @@ input[type="file"] {
     width: 75% !important;
   }
 
-   /***************** Onbaord Section *******************/
-   .onboard-card {
+  /***************** Onbaord Section *******************/
+  .onboard-card {
     width: 80%;
+  }
+
+  /*************** Dashboard Message 2 section ****************/
+  .message-card {
+    padding: 1.5rem !important;
+  }
+
+  .msg-h2 {
+    font-size: 1rem !important;
+  }
+
+  /************* Dashboard selling section **************/ 
+  .social-input{
+    display: unset !important;
   }
 
 }
@@ -3754,7 +4080,7 @@ input[type="file"] {
   }
 
   .pricing-backgroundImage span {
-    width: 100% !important;
+    width: 80% !important;
   }
 
   /***************** Sign in Section *******************/
@@ -3762,12 +4088,112 @@ input[type="file"] {
     width: 95% !important;
   }
 
-   /***************** Onbaord Section *******************/
-   .onboard-card {
+  /***************** Onbaord Section *******************/
+  .onboard-card {
     width: 95%;
   }
 
 
+  /***************** dashboard Section *******************/
+  .sideContent {
+    padding: 0.5rem !important;
+  }
+
+  .message-card div h2 {
+    /* width: 50% !important; */
+    width: 100% !important;
+  }
+
+  .message-card div h1 {
+    /* width: 50% !important; */
+    width: 100% !important;
+  }
+
+
+  /****************** marketplace 2 Dashboard section **********************/
+
+  .sideInfo {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .firstPart {
+    margin-left: 0rem !important;
+  }
+
+
+  /******************  Contact Us Dashboard section **********************/
+
+  .contactDashboard-card {
+    margin: 2rem 0 !important;
+    padding: 2rem !important;
+  }
+
+  .contactDashboard-card div h1 {
+    width: 50% !important;
+  }
+
+  /**************** Dashboard My Project section *****************/
+  .buying-div2 span {
+    text-align: center !important;
+  }
+
+  /*************** Dashboard Selling section ****************/
+  .steps .circle {
+    /* height: 100px; */
+    height: 45px !important;
+    width: 30px !important;
+    color: #EEF0FE;
+    border-radius: 50%;
+    font-size: 15px !important;
+  }
+
+  .step-item:not(:first-child):before {
+    content: '';
+    background-color: #c0c0cc6c;
+    width: 80% !important;
+    height: 4px !important;
+    position: absolute;
+    top: 20px !important;
+  }
+
+  .tagname {
+    position: relative;
+    right: 28px !important;
+    color: #c0c0c0;
+    background: transparent;
+    top: -35px;
+    font-size: 10px !important;
+  }
+
+  .Onboard-card {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+
+  .Onboard-card2 {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+
+  .btn2{
+    font-size: 14px !important;
+  }
+
+  .Onboard-card3 {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+
+  .Onboard-card4 {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+
+  .Onboard-card5 {
+    width: 100% !important;
+    padding: 2rem !important;
+  }
 }
 
 @media screen and (max-width:450px) {
@@ -3802,4 +4228,20 @@ input[type="file"] {
   .card {
     width: 225% !important;
   }
+
+}
+
+@media screen and (max-width:360px) {
+
+  /* ************** Dashboard Selling section *************** */
+
+  .step-item:not(:first-child):before {
+    content: '';
+    background-color: #c0c0cc6c;
+    width: 80% !important;
+    height: 4px !important;
+    position: absolute;
+    top: 18px !important;
+  }
+
 }

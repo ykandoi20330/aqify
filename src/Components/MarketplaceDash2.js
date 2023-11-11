@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 //
 import doller from "./MarketDash/VectorDoller.svg"
@@ -49,7 +45,7 @@ const MarketplaceDash2 = () => {
                     <section>
                         <div className='first-line d-flex align-items-center'>
                             <div class="mb-3 my-3 form-floating">
-                                <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Search" />
+                                <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" />
                                 <label for="floatingInputValue"><img src={search} alt="" /></label>
                             </div>
                             <div class="form-floating">
@@ -95,12 +91,12 @@ const MarketplaceDash2 = () => {
                     </section>
 
                     <section>
-                        <section className="ligh-back" style={{ height: '180vh' }} >
+                        <section className="marketDash2-back" style={{ height: '180vh' }} >
                             <div className='d-flex'>
                                 <div className="market-card" style={{ padding: "2rem" }} >
-                                    <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex'>
+                                        <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
@@ -165,9 +161,9 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex'>
+                                        <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
@@ -231,9 +227,9 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex'>
+                                        <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>
@@ -297,9 +293,9 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
-                                        <div className='d-flex'>
+                                        <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
                                             </div>

@@ -1,8 +1,4 @@
 import React from 'react'
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 const ChangePassword = () => {
     return (
@@ -23,7 +19,7 @@ const ChangePassword = () => {
                         <label for="exampleFormControlInput1" class="form-label" style={{color:'#636363'}}>Current Password</label>
                         <input type="password" class="form-control"  id="exampleFormControlInput1" placeholder="akashkumar0007"/>
                     </div>
-                    <button class="btn btn-primary my-3 rounded-pill" type="submit" style={{width:'30%', padding:"0.9rem 1.5rem"}}>Save changes</button>
+                    <button class="password-btn btn btn-primary my-3 rounded-pill" type="submit" style={{width:'30%', padding:"0.9rem 1.5rem"}}>Save changes</button>
                     </div>
             </div>
         </>

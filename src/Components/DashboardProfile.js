@@ -8,9 +8,6 @@ import React from 'react'
 // import tag from "./ProfileDashbaord/tag.svg"
 
 //side content
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import profilePhoto from "./ProfileDashbaord/group-11.svg"
 
 //card content
@@ -90,7 +87,7 @@ const DashboardProfile = () => {
                     </div>
 
                     <div className='profile-card d-flex'>
-                        <div className='d-flex justify-content-around align-items-center'>
+                        <div className='profile-content d-flex justify-content-around align-items-center'>
                             <div className="profilePhoto d-flex flex-column align-items-center">
                                 <img src={profilePhoto} alt="" />
                                 <Link to="/" className='btn btn-primary rounded-pill' style={{ padding: '0.5rem 0.8rem' }}><img src={verify} alt="" />Verify</Link>
@@ -148,7 +145,7 @@ const DashboardProfile = () => {
 
                                     </div>
                                 </div>
-                                <button class="btn btn-primary my-3 rounded-pill" type="submit" style={{ width: '40%', padding: "0.8rem 1.5rem" }}>Save changes</button>
+                                <button class="profile-btn btn btn-primary my-3 rounded-pill" type="submit" style={{ width: '40%', padding: "0.8rem 1.5rem" }}>Save changes</button>
                             </div>
                         </div>
                     </div>

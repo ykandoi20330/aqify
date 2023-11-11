@@ -31,7 +31,7 @@ const PaymentDash = () => {
                 <div className="message-card">
                     <div className='d-flex flex-column justify-content-center align-items-center' style={{ height: '50vh' }}>
                         <img width={70} src={credit} alt="" />
-                        <span className='col-6 my-4 text-center' style={{ color: '#c0c0c0', fontSize: '25px' }}>Your p hereayments history will automatically appear</span>
+                        <span className='col-6 my-4 text-center' style={{ color: '#c0c0c0', fontSize: '25px' }}>Your payments history will automatically appear here</span>
                     </div>
                 </div>
             </div>

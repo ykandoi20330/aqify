@@ -43,7 +43,7 @@ const MarketplaceDash = () => {
             <section>
                 <div className='first-line d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Search" />
+                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" />
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
                     <div class="form-floating">
@@ -88,7 +88,7 @@ const MarketplaceDash = () => {
                 </div>
             </section>
 
-            <section className='d-flex'>
+            <section className='cardOption d-flex'>
                 <div className="marketDash-card flex-wrap">
                     <div className='d-flex justify-content-end'>
                         <img src={Close} alt="" />
@@ -113,12 +113,12 @@ const MarketplaceDash = () => {
                         <img src={Close} alt="" />
                     </div>
 
-                    <div className="d-flex justify-content-between my-3">
+                    <div className="more-filters d-flex justify-content-between my-3">
                         <div className="">
                             <label for="inputEmail4" class="form-label">Community Size</label>
                             <input style={{ height: '7vh' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$ 000" />
                         </div>
-                        <div className="" style={{ width: '45%' }}>
+                        <div className="offersRecieved" style={{ width: '45%' }}>
                             <label for="inputEmail4" class="form-label">Offers Recieved</label>
                             <div className='d-flex'>
                                 <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="Yes" />
