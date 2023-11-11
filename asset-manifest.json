@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.9f0d8470.css",
-    "main.js": "/aqify/static/js/main.75bcfd56.js",
+    "main.css": "/aqify/static/css/main.cf92aabc.css",
+    "main.js": "/aqify/static/js/main.46623bd9.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.8f932f73036e36f7ea58.png",
     "static/media/unsplash5u-28ojjgms@2x.png": "/aqify/static/media/unsplash5u-28ojjgms@2x.a6da078b66460b54a67e.png",
@@ -78,12 +78,12 @@
     "static/media/VectorRight.svg": "/aqify/static/media/VectorRight.1902edab36a079f8251d9985a08ea9eb.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
     "static/media/_image-home-hero-03-market-template.svg": "/aqify/static/media/5f80f0e3c460585ec0bb1214_image-home-hero-03-market-template.415dd52cf209279c6f3a344ceeee6fb5.svg",
-    "main.9f0d8470.css.map": "/aqify/static/css/main.9f0d8470.css.map",
-    "main.75bcfd56.js.map": "/aqify/static/js/main.75bcfd56.js.map",
+    "main.cf92aabc.css.map": "/aqify/static/css/main.cf92aabc.css.map",
+    "main.46623bd9.js.map": "/aqify/static/js/main.46623bd9.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f0d8470.css",
-    "static/js/main.75bcfd56.js"
+    "static/css/main.cf92aabc.css",
+    "static/js/main.46623bd9.js"
   ]
 }
