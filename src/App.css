@@ -127,7 +127,25 @@ nav {
   left: 100px;
   position: relative;
   color: #fff;
-  top: 50px;
+  /* top: 50px; */
+  top: 150px;
+}
+
+.hero-images-wrapper {
+  flex-direction: column;
+  display: flex;
+}
+
+.split-content.home-hero-right {
+  justify-content: end;
+  margin-top: 120px;
+  /* margin-right: -184px; */
+  display: flex;
+}
+.image.home-hero {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 27px rgba(38, 55, 147, .05);
 }
 
 .main-h1 {
@@ -2604,6 +2622,10 @@ input[type="file"] {
   }
 
   /* home content section */
+
+  .parallax-display{
+    display: none !important;
+  }
 
   .main-h1 {
     font-size: 3rem !important;

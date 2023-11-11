@@ -43,6 +43,22 @@ import Footer from "./Footer"
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation';
 
+import svg1 from "./HomePage/5f80f0e213df6c88e425c56c_image-home-hero-01-market-template.svg"
+import svg2 from "./HomePage/5f80f0e3840eee5b8df71ace_image-home-hero-07-market-template.svg"
+import svg3 from "./HomePage/5f80f0e3dc86b57c86503709_image-home-hero-04-market-template.svg"
+
+import svg4 from "./HomePage/5f80f0e2d032426fae5d2793_image-home-hero-02-market-template.svg"
+import svg5 from "./HomePage/5f80f0e2d77e086f71078ffe_image-home-hero-05-market-template.svg"
+import svg6 from "./HomePage/5f80f0e3e068d55b031fc921_image-home-hero-08-market-template.svg"
+
+import svg7 from "./HomePage/5f80f0e3c460585ec0bb1214_image-home-hero-03-market-template.svg"
+import svg8 from "./HomePage/5f80f0e35451d7944febd06d_image-home-hero-06-market-template.svg"
+import svg9 from "./HomePage/5f80f26477a2809783cf89ac_image-home-hero-09-market-template.svg"
+
+//parallax
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
+
 const Home = () => {
   return (
     <>
@@ -82,6 +98,7 @@ const Home = () => {
                   </ul>
 
                   <Link>
+                  {/**style={{zIndex:'5',background:'#0e0e111f'}} */}
                     <Link class="btn btn-outline-light mx-3" to="/singin" type="submit">Sign in</Link>
                     <Link class="btn btn-primary" to="/singup" type="submit">Join <img style={{ width: '30%' }} src={arrow} alt="" /></Link>
                   </Link>
@@ -97,60 +114,112 @@ const Home = () => {
       {/** */}
       < section >
         <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
-          <div className="content">
-            <div>
-              <div className='my-5'>
-                <h1 className='main-h1 col-7'>
-                  <span>Future Lift: Elevate with
-                    Acqify's Effortless Start</span><br />
-                  <TypeAnimation className='typeAnimation'
-                    sequence={[
-                      'Ecommerce', // Types 'One'
-                      1000, // Waits 1s
-                      'Saas apps', // Deletes 'One' and types 'Two'
-                      2000, // Waits 
-                      'Community',
-                      2000,
-                      'Marketplace',
-                      2000,
-                      'Crypto',
-                      2000,
-                      'Wordpress',
-                      2000,
-                      'Content',
-                      2000,
-                      'Services',
-                      2000,
-                    ]}
-                    wrapper="span"
-                    cursor={false}
-                    repeat={Infinity}
-                  />.
-                </h1>
+          <Parallax pages={2}>
+            <ParallaxLayer
+              offset={1}
+              speed={1}
+              factor={1}
+              sticky={{ start: 0, end: 2 }}
+            >
+              <div className="content">
+                <div>
+                  <div className='my-5'>
+                    <h1 className='main-h1 col-7'>
+                      <span>Future Lift: Elevate with
+                        Acqify's Effortless Start</span><br />
+                      <TypeAnimation className='typeAnimation'
+                        sequence={[
+                          'Ecommerce', // Types 'One'
+                          1000, // Waits 1s
+                          'Saas apps', // Deletes 'One' and types 'Two'
+                          2000, // Waits 
+                          'Community',
+                          2000,
+                          'Marketplace',
+                          2000,
+                          'Crypto',
+                          2000,
+                          'Wordpress',
+                          2000,
+                          'Content',
+                          2000,
+                          'Services',
+                          2000,
+                        ]}
+                        wrapper="span"
+                        cursor={false}
+                        repeat={Infinity}
+                      />.
+                    </h1>
+                  </div>
+                  <div className='my-4'>
+                    <span className='main-span col-6 d-flex'>
+                      Future Entrepreneurship: Simple Founder Exits. Join the
+                      Exclusive Marketplace - Free, Direct, Private!
+                    </span>
+                  </div>
+                  <div className=''>
+                    <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/market">Access Marketplace<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                  </div>
+                </div>
+                <div className='my-5' style={{ marginLeft: '-0px', position: 'relative' }}>
+                  <ul className='main-ul'>
+                    <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
+                    <li>345<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
+                    <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
+                  </ul>
+                </div>
               </div>
-              <div className='my-4'>
-                <span className='main-span col-6 d-flex'>
-                  Future Entrepreneurship: Simple Founder Exits. Join the
-                  Exclusive Marketplace - Free, Direct, Private!
-                </span>
-              </div>
-              <div className=''>
-                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/market">Access Marketplace<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
-              </div>
-            </div>
-            <div style={{ marginLeft: '-0px', position: 'relative' }}>
-              <ul className='main-ul'>
-                <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
-                <li>345<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
-                <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
-              </ul>
-            </div>
-          </div>
 
-          <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
-            <img className='bottomCircle1' src={circle1} alt="" />
-            <img className='bottomCircle2' src={circle2} alt="" />
-          </div>
+              <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
+                <img className='bottomCircle1' src={circle1} alt="" />
+                <img className='bottomCircle2' src={circle2} alt="" />
+              </div>
+            </ParallaxLayer>
+            {/** */}
+
+
+            <div class="split-content home-hero-right">
+              <ParallaxLayer
+                offset={0}
+                speed={1}
+                opacity={0.390162}
+                className="parallax  parallax-display"
+                style={{ width: '15%', position: 'relative' }}
+              >
+                <div data-w-id="d0dc91ae-0e51-8fb8-c700-6d8bdc10f1e6" class="hero-images-wrapper" style={{ willChange: "transform", transform: "translate3d(0px, -14.782px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" }}>
+                  <img src={svg1} alt="Tablet Mockups" class="image home-hero" />
+                  <img src={svg3} alt="Typography" class="image home-hero" />
+                  <img src={svg2} alt="Phone Mockups" class="image home-hero last" />
+
+                  <img src={svg7} alt="Logos" class="image home-hero" />
+                  <img src={svg8} alt="Style Guide" class="image home-hero" />
+                  <img src={svg9} alt="UI Kit" class="image home-hero" />
+
+                  <img src={svg1} alt="Tablet Mockups" class="image home-hero" />
+                  <img src={svg3} alt="Typography" class="image home-hero" />
+                  <img src={svg2} alt="Phone Mockups" class="image home-hero last" />
+                </div>
+              </ParallaxLayer>
+              <ParallaxLayer
+               className='parallax-display' 
+                offset={0.2}
+                speed={0.05}
+                style={{ width: '15%', position: 'relative', margin: '0 0.5rem' }}
+              >
+                <div data-w-id="f5511c85-57f1-a4a9-ef4d-cdaeee61b9e9" class="hero-images-wrapper center" style={{ willChange: "transform", transform: "translate3d(0px, 46.521px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" }}>
+                  <img src={svg4} alt="Cards Mockup" class="image home-hero" />
+                  <img src={svg5} alt="iPhone Mockups" class="image home-hero" />
+                  <img src={svg6} alt="Wearables" class="image home-hero last" />
+
+                  <img src={svg4} alt="Cards Mockup" class="image home-hero" />
+                  <img src={svg5} alt="iPhone Mockups" class="image home-hero" />
+                  <img src={svg6} alt="Wearables" class="image home-hero last" />
+                </div>
+              </ParallaxLayer>
+            </div>
+            {/** */}
+          </Parallax >
         </div>
       </section >
 
@@ -375,7 +444,7 @@ const Home = () => {
           <div className="card-four">
             <img width={150} src={FourthCard4} alt="" />
             <h3 className='my-3'>Access to best counsel</h3>
-            <span  className='largeSpan'>Gain an edge with access to the best counsel. Elevate your decisions with expert guidance and strategic insights for unparalleled success.</span>
+            <span className='largeSpan'>Gain an edge with access to the best counsel. Elevate your decisions with expert guidance and strategic insights for unparalleled success.</span>
           </div>
         </div>
       </section >
