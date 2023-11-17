@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Pricing/unsplash_5U_28ojjgms.svg"
+import backgroundImg from "./Pricing/unsplash_5U_28ojjgms2.png"
 
 import Navbar from "./Navbar"
 import Footer from './Footer'

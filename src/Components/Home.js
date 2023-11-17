@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Aqify project/unsplash_5U_28ojjgms.svg"
+import backgroundImg from "./Aqify project/unsplash_5U_28ojjgms2.png"
 import arrow from "./Aqify project/Vector (1).png"
 import vectorArrow from "./Aqify project/Vector-arrow.png"
 
@@ -13,7 +13,7 @@ import cardLogo5 from "./Aqify project/Frame 33 (4).png"
 
 //logo
 import Logo from "./Aqify project/Frame 7.png"
-import roundImg from './Aqify project/Ellipse 7.png'
+import roundImg from './Aqify project/Ellipse 72.png'
 
 //fourth-section card images
 import FourthCard1 from "./Aqify project/image 2.png"

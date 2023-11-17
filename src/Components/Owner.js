@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Owner/unsplash_5U_28ojjgms.svg"
+import backgroundImg from "./Owner/unsplash_5U_28ojjgms2.png"
 import arrow from "./Aqify project/Vector (1).png"
 
 //Logo images
@@ -8,7 +8,7 @@ import cardLogo2 from "./Owner/Frame 100 (1).png"
 import cardLogo3 from "./Owner/Frame 100 (2).png"
 
 //owner second section
-import BackPhoto from "./Owner/Rectangle.svg"
+import BackPhoto from "./Owner/Rectangle2.png"
 import roundedImg from "./Owner/Frame 105.png"
 import profileImg from "./Owner/Ellipse 8.png"
 

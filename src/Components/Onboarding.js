@@ -1,4 +1,4 @@
-import background from "./Onboard/unsplash_5U_28ojjgms.svg"
+import background from "./Onboard/unsplash5u-28ojjgms@2x2.png"
 import { Link } from "react-router-dom";
 import React from 'react'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import google from "./SignIn/google-svg.svg"
-import background from "./SignIn/unsplash_5U_28ojjgms.svg"
+import background from "./SignIn/unsplash5u-28ojjgms@2x2.png"
 import vector from "./SignIn/Frame 21.svg"
 import { Link } from "react-router-dom";
 

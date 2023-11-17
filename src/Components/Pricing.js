@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import backgroundImg from "./Pricing/unsplash_5U_28ojjgms.svg"
+import backgroundImg from "./Pricing/unsplash_5U_28ojjgms2.png"
 import trueImg from "./Pricing/Frame 147.png"
 import arrow from "./Aqify project/Vector (1).png"
 
