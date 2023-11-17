@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/aqify/static/css/main.0981d058.css",
-    "main.js": "/aqify/static/js/main.6910a1b8.js",
+    "main.js": "/aqify/static/js/main.e0ebcf46.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
-    "static/media/unsplash_5U_28ojjgms.svg": "/aqify/static/media/unsplash_5U_28ojjgms.10f7a8d2c86098fba687184b1a84fa3e.svg",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.32ced7bf2156e9cc06cb.png",
-    "static/media/Ellipse 7.png": "/aqify/static/media/Ellipse 7.6e342b4c0558fa85b80c.png",
     "static/media/Rectangle16.png": "/aqify/static/media/Rectangle16.acbee556c9c822c32ad6.png",
     "static/media/Frame 65.png": "/aqify/static/media/Frame 65.45d4f4e2c6efc5fc0862.png",
+    "static/media/unsplash_5U_28ojjgms2.png": "/aqify/static/media/unsplash_5U_28ojjgms2.07c2472fbd921a1c069f.png",
+    "static/media/unsplash5u-28ojjgms@2x2.png": "/aqify/static/media/unsplash5u-28ojjgms@2x2.e688679dcf0fd7c785ad.png",
     "static/media/market.png": "/aqify/static/media/market.bb7926e58d3907e0ac01.png",
     "static/media/Rectangle 9.png": "/aqify/static/media/Rectangle 9.d5929ed1ac2a705ffda6.png",
     "static/media/Rectangle 12.png": "/aqify/static/media/Rectangle 12.8f37a9f8b749c6278b66.png",
+    "static/media/Rectangle2.png": "/aqify/static/media/Rectangle2.365d251930f225324487.png",
+    "static/media/unsplash_5U_28ojjgms_2.png": "/aqify/static/media/unsplash_5U_28ojjgms_2.13b9c8cbd1beb697b135.png",
     "static/media/Rectangle 11.png": "/aqify/static/media/Rectangle 11.d947b129226e41916218.png",
+    "static/media/Ellipse 72.png": "/aqify/static/media/Ellipse 72.a86cf86c50917f443733.png",
     "static/media/Rectangle 10.png": "/aqify/static/media/Rectangle 10.2b3fad3c46780012301d.png",
-    "static/media/unsplash_5U_28ojjgms_2.png": "/aqify/static/media/unsplash_5U_28ojjgms_2.97d8c6bf0bc80d8e8d9b.png",
     "static/media/Rectangle 25.png": "/aqify/static/media/Rectangle 25.41ab70f7fd1f600f7f07.png",
-    "static/media/Rectangle.svg": "/aqify/static/media/Rectangle.1e2005612d849297ac64ddaeab2c0018.svg",
     "static/media/Ellipse 8 (1).png": "/aqify/static/media/Ellipse 8 (1).19caa5c716b2527bef98.png",
     "static/media/Ellipse 8.png": "/aqify/static/media/Ellipse 8.8b847066bee64f59ac21.png",
     "static/media/Vertical.png": "/aqify/static/media/Vertical.db0ae84e8adc5e69a198.png",
@@ -71,11 +72,11 @@
     "static/media/VectorRight.svg": "/aqify/static/media/VectorRight.1902edab36a079f8251d9985a08ea9eb.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
     "main.0981d058.css.map": "/aqify/static/css/main.0981d058.css.map",
-    "main.6910a1b8.js.map": "/aqify/static/js/main.6910a1b8.js.map",
+    "main.e0ebcf46.js.map": "/aqify/static/js/main.e0ebcf46.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0981d058.css",
-    "static/js/main.6910a1b8.js"
+    "static/js/main.e0ebcf46.js"
   ]
 }
