@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import backgroundImg from "./Market/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Market/unsplash_5U_28ojjgms.svg"
 import arrow from "./Aqify project/Vector (1).png"
 
 import { TypeAnimation } from 'react-type-animation'

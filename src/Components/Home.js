@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Aqify project/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Aqify project/unsplash_5U_28ojjgms.svg"
 import arrow from "./Aqify project/Vector (1).png"
 import vectorArrow from "./Aqify project/Vector-arrow.png"
 

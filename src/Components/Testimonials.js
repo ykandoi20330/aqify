@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Testimonials/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Testimonials/unsplash_5U_28ojjgms_2.png"
 
 //six section images
 import quoteImg from "./Aqify project/Vector.png"

@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Owner/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Owner/unsplash_5U_28ojjgms.svg"
 //
 import location from "./MarketDash/VectorLoaction.svg"
 import search from "./MarketDash/VectorSearch.svg"
