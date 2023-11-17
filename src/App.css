@@ -3482,6 +3482,10 @@ input[type="file"] {
 
   /* Side Navbar section */
 
+  .beta{
+    right: 0px !important;
+  }
+
   .Logo {
     width: 50%;
     left: 0px !important;

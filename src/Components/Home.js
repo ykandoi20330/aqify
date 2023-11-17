@@ -42,13 +42,14 @@ import circle2 from "./Aqify project/Ellipse 58.png"
 import Footer from "./Footer"
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation';
+import Navbar from "./Navbar"
 
 
 const Home = () => {
   return (
     <>
       {/**Nav section */}
-      <section>
+      {/* <section>
         <div className='hero1'>
           <nav className='navbar navbar-expand-lg navbar-dark navline' id="middleNav" style={{ zIndex: "5", position: 'absolute', width: '100%' }}>
 
@@ -65,7 +66,7 @@ const Home = () => {
                 <div class="offcanvas-body">
 
 
-                  {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link> */}
+                  {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link> 
 
                   <ul className="ul  navbar-nav  nav justify-content-between">
                     <li className="nav-item">
@@ -83,7 +84,7 @@ const Home = () => {
                   </ul>
 
                   <Link>
-                    {/**style={{zIndex:'5',background:'#0e0e111f'}} */}
+                    *style={{zIndex:'5',background:'#0e0e111f'}}
                     <Link class="btn btn-outline-light mx-3" to="/singin" type="submit">Sign in</Link>
                     <Link class="btn btn-primary" to="/singup" type="submit">Join <img style={{ width: '30%' }} src={arrow} alt="" /></Link>
                   </Link>
@@ -94,7 +95,11 @@ const Home = () => {
             </div>
           </nav>
         </div >
-      </section >
+      </section > */}
+
+      <section>
+        <Navbar />
+      </section>
 
       {/** */}
       < section >
