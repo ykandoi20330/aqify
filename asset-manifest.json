@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aqify/static/css/main.cf92aabc.css",
-    "main.js": "/aqify/static/js/main.46623bd9.js",
+    "main.js": "/aqify/static/js/main.6b3d27e6.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.8f932f73036e36f7ea58.png",
     "static/media/unsplash5u-28ojjgms@2x.png": "/aqify/static/media/unsplash5u-28ojjgms@2x.a6da078b66460b54a67e.png",
@@ -38,10 +38,8 @@
     "static/media/gear.svg": "/aqify/static/media/gear.9016f452e188022fb7bd5d8518cd5654.svg",
     "static/media/vector.svg": "/aqify/static/media/vector.f154708a04009d6c8a29ee5145ef10e3.svg",
     "static/media/vector1.svg": "/aqify/static/media/vector1.38e17caea8eb66cd813088062e5509ee.svg",
-    "static/media/_image-home-hero-04-market-template.svg": "/aqify/static/media/5f80f0e3dc86b57c86503709_image-home-hero-04-market-template.a6cae6ce421bba151e7ad2b69c639006.svg",
     "static/media/VectorFilter.svg": "/aqify/static/media/VectorFilter.fc6405ebb8bdd9765511c2db1bb6eb24.svg",
     "static/media/listnumbers.svg": "/aqify/static/media/listnumbers.464a77b49de03f2ae2b894b75f0eed34.svg",
-    "static/media/_image-home-hero-08-market-template.svg": "/aqify/static/media/5f80f0e3e068d55b031fc921_image-home-hero-08-market-template.e84ec966ccac7da6dbd34e87f17c11e9.svg",
     "static/media/VectorUpload.svg": "/aqify/static/media/VectorUpload.db5a8d287d681f48272f076ccccb3177.svg",
     "static/media/VectorCart.svg": "/aqify/static/media/VectorCart.d8409430fd05880652f042df552a4715.svg",
     "static/media/dotsthreeoutlinevertical.svg": "/aqify/static/media/dotsthreeoutlinevertical.c01880dea9f6763ad6c4f614a64b9649.svg",
@@ -54,7 +52,6 @@
     "static/media/chatteardropdots.svg": "/aqify/static/media/chatteardropdots.5942d5b44e44104ceba05e61104c2e3f.svg",
     "static/media/VectorSmap.svg": "/aqify/static/media/VectorSmap.d46b259e11d7952612a590328de197fd.svg",
     "static/media/chatteardropdots1.svg": "/aqify/static/media/chatteardropdots1.6f48031cb3aa8883d07f5fce2eb636b9.svg",
-    "static/media/_image-home-hero-05-market-template.svg": "/aqify/static/media/5f80f0e2d77e086f71078ffe_image-home-hero-05-market-template.944391a3f4380ad228dce916653c4c21.svg",
     "index.html": "/aqify/index.html",
     "static/media/bell.svg": "/aqify/static/media/bell.460104f57a0ab9df7410204f2521b756.svg",
     "static/media/VectorCredit.svg": "/aqify/static/media/VectorCredit.6d3d993202aa8ab05bde4c36f04d314e.svg",
@@ -63,27 +60,21 @@
     "static/media/VectorProject.svg": "/aqify/static/media/VectorProject.25c90c68837cc4455fd056c351b79294.svg",
     "static/media/VectorAnylatics.svg": "/aqify/static/media/VectorAnylatics.0356000b2a934cc318ed3b1d10b3ba2d.svg",
     "static/media/FrameRed.svg": "/aqify/static/media/FrameRed.836d078c7e7ea339827acb69fb617d61.svg",
-    "static/media/_image-home-hero-09-market-template.svg": "/aqify/static/media/5f80f26477a2809783cf89ac_image-home-hero-09-market-template.8d8d1ad12e26c1bc3804edb72536642e.svg",
-    "static/media/_image-home-hero-01-market-template.svg": "/aqify/static/media/5f80f0e213df6c88e425c56c_image-home-hero-01-market-template.f998821832543e63a461ad8ef47bb512.svg",
     "static/media/tag.svg": "/aqify/static/media/tag.9b558576d1fde627466edb04e9b4ce08.svg",
     "static/media/ArrowUp.svg": "/aqify/static/media/ArrowUp.752606b5fad925729a5bd4a9c710db50.svg",
-    "static/media/_image-home-hero-07-market-template.svg": "/aqify/static/media/5f80f0e3840eee5b8df71ace_image-home-hero-07-market-template.c99e781b63daf3afdee94e179c74588c.svg",
     "static/media/google-svg.svg": "/aqify/static/media/google-svg.3e3038a624d49c6df6efc1f35745d366.svg",
-    "static/media/_image-home-hero-06-market-template.svg": "/aqify/static/media/5f80f0e35451d7944febd06d_image-home-hero-06-market-template.88d2290ecabe208efcfe9099944061fb.svg",
     "static/media/VectorClose.svg": "/aqify/static/media/VectorClose.725f5f41eadf64d36f8640194bc3cd2b.svg",
-    "static/media/_image-home-hero-02-market-template.svg": "/aqify/static/media/5f80f0e2d032426fae5d2793_image-home-hero-02-market-template.a93da4dc0d622e362d31f08014071dca.svg",
     "static/media/VectorBackArrow.svg": "/aqify/static/media/VectorBackArrow.d69afac35afde0e185b2beb7dc7ce3e3.svg",
     "static/media/VectorOffer.svg": "/aqify/static/media/VectorOffer.bb59e319b29cf560038f6b144ea58769.svg",
     "static/media/VectorLeft.svg": "/aqify/static/media/VectorLeft.6f33e1208a87368b88632228ceb64d8a.svg",
     "static/media/VectorRight.svg": "/aqify/static/media/VectorRight.1902edab36a079f8251d9985a08ea9eb.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
-    "static/media/_image-home-hero-03-market-template.svg": "/aqify/static/media/5f80f0e3c460585ec0bb1214_image-home-hero-03-market-template.415dd52cf209279c6f3a344ceeee6fb5.svg",
     "main.cf92aabc.css.map": "/aqify/static/css/main.cf92aabc.css.map",
-    "main.46623bd9.js.map": "/aqify/static/js/main.46623bd9.js.map",
+    "main.6b3d27e6.js.map": "/aqify/static/js/main.6b3d27e6.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf92aabc.css",
-    "static/js/main.46623bd9.js"
+    "static/js/main.6b3d27e6.js"
   ]
 }
