@@ -163,8 +163,8 @@ const Market = () => {
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'>Welcome to the Marketplace
-                                    <TypeAnimation className='typeAnimation marketTypeAnimation' style={{ marginLeft: '1rem', fontSize: '3rem' }}
+                                <h1 className='main-h1 col-6'>Welcome to the Marketplace<br/>
+                                    <TypeAnimation className='typeAnimation marketTypeAnimation' style={{ fontSize: '3rem' }}
                                         sequence={[
                                             'Ecommerce', // Types 'One'
                                             1000, // Waits 1s

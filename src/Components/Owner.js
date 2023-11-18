@@ -34,7 +34,7 @@ const Owner = () => {
 
         {/** */}
             <section>
-                <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>

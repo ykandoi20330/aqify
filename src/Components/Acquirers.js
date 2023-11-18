@@ -33,11 +33,11 @@ const Acquirers = () => {
             </section>
             {/** */}
             <section>
-                <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'>Acquire (un) profitable tech & internet businesses<br/>
+                                <h1 className='main-h1 col-7'>Acquire (un) profitable tech & internet businesses<br/>
                                     <TypeAnimation className='typeAnimation'
                                         sequence={[
                                             'Ecommerce', // Types 'One'
