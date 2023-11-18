@@ -108,9 +108,83 @@ nav {
 
 /*first Home Scetion */
 
+#hand{
+  animation: owner 3s linear infinite;
+}
+
+@keyframes owner {
+  from {
+    transform:rotateX(12deg);
+  }to{
+    transform: rotateX(-12deg);
+  }  
+}
+
+#hand2{
+  animation: owner1 3s linear infinite;
+}
+
+@keyframes owner1 {
+  from {
+    transform:rotateY(10deg);
+  }to{
+    transform: rotateY(-12deg);
+  }  
+}
+
+#hand3{
+  animation: side 3s linear infinite;
+}
+
+@keyframes side {
+  from {
+    transform:rotateX(-12deg);
+  }to{
+    transform: rotateX(10deg);
+  }  
+}
+
+.plant{
+  animation: Myplant 12s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes Myplant {
+  from {
+    scale: .7;
+  }to{
+    scale: 1.02;
+  }  
+}
+.web{
+  animation: My 12s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes My {
+  from {
+    scale: 0.9;
+  }to{
+    scale:1;
+  }  
+}
+
+
+.homeSvg{
+  width: 100% !important;
+}
+
+.hoverContent:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; ;
+  scale: 1.01;
+  fill: rgb(64, 123, 255)!important
+}
+
 .main {
   width: 100%;
-  height: 120vh;
+  height: 130vh;
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -2576,6 +2650,10 @@ input[type="file"] {
 @media screen and (max-width:1680px) {}
 
 @media screen and (max-width:1400px) {
+  /* Home Section*/
+  .main-h1 {
+    font-size: 3rem !important;
+  }
 
   /* Navbar section */
   .navbar-expand-lg .offcanvas .offcanvas-body {
@@ -2693,6 +2771,35 @@ input[type="file"] {
 
 @media screen and (max-width:1000px) {
 
+    /* ******* Home section ******/
+    .main{
+      height: 100% !important;
+    }
+
+    .homeSection{
+      height: 120% !important;
+    }
+    .home-animation{
+      display: flex;
+      flex-direction: column-reverse !important;
+    }
+  
+    .animation-div{
+      top: 100px;
+      position: relative;
+    }
+
+    .homeSvg{
+      width: 100% !important;
+    }
+    .home-number{
+      margin: 2rem 0 4rem 0;
+    }
+
+    /* .home-number{
+      margin: 2rem 0 4rem 0 !important;
+    } */
+
   /* Side Navbar section */
 
   .Logo1 {
@@ -2720,6 +2827,7 @@ input[type="file"] {
 
   .main-h1 {
     font-size: 3rem !important;
+    text-wrap: balance;
   }
 
   .col-7 {
@@ -2893,6 +3001,11 @@ input[type="file"] {
 
 @media screen and (max-width:800px) {
 
+  /* Home section */
+  .homeSvg{
+    width: 100% !important;
+  }
+
   /* Side Navbar section */
 
   .Logo1 {
@@ -2916,6 +3029,7 @@ input[type="file"] {
 
   .main-h1 {
     font-size: 2.5rem !important;
+    text-wrap: balance;
   }
 
   .col-7 {
