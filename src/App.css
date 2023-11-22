@@ -108,43 +108,65 @@ nav {
 
 /*first Home Scetion */
 
-#hand{
+.fade-contain{
+  display: flex!important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video-div{
+  width: 50%;
+}
+
+.video{
+  height: 100%;
+    width: 95%;
+    border-radius: 11px;
+}
+
+#hand {
   animation: owner 3s linear infinite;
 }
 
 @keyframes owner {
   from {
-    transform:rotateX(12deg);
-  }to{
+    transform: rotateX(12deg);
+  }
+
+  to {
     transform: rotateX(-12deg);
-  }  
+  }
 }
 
-#hand2{
+#hand2 {
   animation: owner1 3s linear infinite;
 }
 
 @keyframes owner1 {
   from {
-    transform:rotateY(10deg);
-  }to{
+    transform: rotateY(10deg);
+  }
+
+  to {
     transform: rotateY(-12deg);
-  }  
+  }
 }
 
-#hand3{
+#hand3 {
   animation: side 3s linear infinite;
 }
 
 @keyframes side {
   from {
-    transform:rotateX(-12deg);
-  }to{
+    transform: rotateX(-12deg);
+  }
+
+  to {
     transform: rotateX(10deg);
-  }  
+  }
 }
 
-.plant{
+.plant {
   animation: Myplant 12s linear infinite;
   transform-origin: bottom;
   transform-box: fill-box;
@@ -153,11 +175,14 @@ nav {
 @keyframes Myplant {
   from {
     scale: .7;
-  }to{
+  }
+
+  to {
     scale: 1.02;
-  }  
+  }
 }
-.web{
+
+.web {
   animation: My 12s linear infinite;
   transform-origin: bottom;
   transform-box: fill-box;
@@ -166,20 +191,23 @@ nav {
 @keyframes My {
   from {
     scale: 0.9;
-  }to{
-    scale:1;
-  }  
+  }
+
+  to {
+    scale: 1;
+  }
 }
 
 
-.homeSvg{
+.homeSvg {
   width: 100% !important;
 }
 
-.hoverContent:hover{
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; ;
+.hoverContent:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  ;
   scale: 1.01;
-  fill: rgb(64, 123, 255)!important
+  fill: rgb(64, 123, 255) !important
 }
 
 .main {
@@ -215,7 +243,8 @@ nav {
   margin-top: 120px;
   /* margin-right: -184px; */
   display: flex;
-} 
+}
+
 .image.home-hero {
   border-radius: 20px;
   margin-bottom: 20px;
@@ -1404,7 +1433,10 @@ textarea.form-control {
 .Navdashboard {
   /* width: 280px; */
   width: 100%;
-  height: 120vh
+  height: 120vh;
+  overflow-y: scroll;
+  top: 0;
+  position: relative;
 }
 
 
@@ -1671,6 +1703,10 @@ dropdown-toggle::after {
   word-wrap: break-word !important;
   background-color: var(--bs-card-bg) !important;
   background-clip: border-box !important;
+}
+
+.btn-outline-primary:hover .creditIcon {
+  color: white !important;
 }
 
 
@@ -2482,7 +2518,8 @@ input[type="file"] {
 .form-floating>.form-control:not(:placeholder-shown)~label,
 .form-floating>.form-select~label {
   color: gray;
-  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+  /* transform: scale(.85) translateY(-0.5rem) translateX(0.15rem); */
+  transform: scale(.85) translateY(0.5rem) translateX(0.15rem);
   background-color: transparent !important;
 }
 
@@ -2648,6 +2685,92 @@ input[type="file"] {
 }
 
 
+/************** Payment Cart Dashboard ****************/
+.cart-card {
+  /* height: 50% !important; */
+  margin: 0 1rem;
+  padding: 3rem;
+  border-radius: 20px;
+  border: none;
+  --bs-card-spacer-y: 1rem !important;
+  --bs-card-spacer-x: 1rem !important;
+  --bs-card-title-spacer-y: 0.5rem !important;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  --bs-card-border-radius: var(--bs-border-radius) !important;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+  --bs-card-cap-padding-y: 0.5rem !important;
+  --bs-card-cap-padding-x: 1rem !important;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-img-overlay-padding: 1rem !important;
+  --bs-card-group-margin: 0.75rem !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  /* height: var(--bs-card-height) !important; */
+  color: var(--bs-body-color) !important;
+  word-wrap: break-word !important;
+  background-color: var(--bs-card-bg) !important;
+  background-clip: border-box !important;
+}
+
+/************ Tamplate section  ******************/
+
+.Tamplate-main {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-tamplate {
+  padding: 3rem !important;
+  border-radius: 20px !important;
+  border: none !important;
+  margin: 2rem 0 I !important;
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  color: var(--bs-body-color);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
 
 
 
@@ -2660,6 +2783,7 @@ input[type="file"] {
 @media screen and (max-width:1680px) {}
 
 @media screen and (max-width:1400px) {
+
   /* Home Section*/
   .main-h1 {
     font-size: 3rem !important;
@@ -2781,32 +2905,41 @@ input[type="file"] {
 
 @media screen and (max-width:1000px) {
 
-    /* ******* Home section ******/
-    .main{
-      height: 100% !important;
-    }
+  /* ******* Home section ******/
+  .fade-contain{
+    display: flex!important;
+    justify-content: center !important;
+    align-items: center;
+    flex-direction: column-reverse !important;
+  }
 
-    .homeSection{
-      height: 120% !important;
-    }
-    .home-animation{
-      display: flex;
-      flex-direction: column-reverse !important;
-    }
-  
-    .animation-div{
-      top: 100px;
-      position: relative;
-    }
+  .main {
+    height: 100% !important;
+  }
 
-    .homeSvg{
-      width: 100% !important;
-    }
-    .home-number{
-      margin: 2rem 0 4rem 0;
-    }
+  .homeSection {
+    height: 120% !important;
+  }
 
-    /* .home-number{
+  .home-animation {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .animation-div {
+    top: 100px;
+    position: relative;
+  }
+
+  .homeSvg {
+    width: 100% !important;
+  }
+
+  .home-number {
+    margin: 2rem 0 4rem 0;
+  }
+
+  /* .home-number{
       margin: 2rem 0 4rem 0 !important;
     } */
 
@@ -2822,7 +2955,8 @@ input[type="file"] {
     display: flex;
     flex-grow: 0;
     padding: 0;
-    overflow-y: visible;
+    /* overflow-y: visible; */
+    overflow-y: scroll !important;
     justify-content: center;
     align-items: flex-start !important;
     position: relative;
@@ -3005,13 +3139,49 @@ input[type="file"] {
     width: 100% !important;
   }
 
+  /************** Payment Cart Dashboard ****************/
+  .cart-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-card {
+    margin: 0 !important;
+  }
+
+  .cartPart1 {
+    width: 95% !important;
+    padding: 0 !important;
+  }
+
+  .cartPart2 {
+    width: 95% !important;
+    padding: 0 !important;
+  }
+
+  /************ Tamplate section  ******************/
+  .Explore-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Imageowner-third-card {
+    margin: 1rem 0;
+  }
+
+  .explore-div {
+    width: 100% !important;
+  }
+
 }
 
 
 @media screen and (max-width:800px) {
 
   /* Home section */
-  .homeSvg{
+  .homeSvg {
     width: 100% !important;
   }
 
@@ -3058,10 +3228,11 @@ input[type="file"] {
     margin-right: 1rem !important;
   }
 
-  .hero-images-wrapper{
+  .hero-images-wrapper {
     display: none !important;
   }
-  .hero-images-wrapper2{
+
+  .hero-images-wrapper2 {
     display: none !important;
   }
 
@@ -3487,6 +3658,16 @@ input[type="file"] {
     padding: 3rem !important;
   }
 
+  /************ Tamplate section  ******************/
+  .tamplate-logoBox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-tamplate{
+    margin: 0.5rem 0;
+  }
+
 }
 
 @media screen and (max-width:700px) {
@@ -3605,7 +3786,7 @@ input[type="file"] {
 
   /* Side Navbar section */
 
-  .beta{
+  .beta {
     right: 0px !important;
   }
 
@@ -3633,6 +3814,10 @@ input[type="file"] {
   }
 
   /* home content section */
+
+  .video-div {
+    width: 70% !important;
+  }
 
   .content {
     left: 60px !important;
@@ -3923,7 +4108,8 @@ input[type="file"] {
 
   .secondPart {
     width: 110% !important;
-  }
+    margin: 15px 0;
+  }  
 
   /***************** Sign in Section *******************/
   .signIn-card {
@@ -4062,12 +4248,25 @@ input[type="file"] {
     align-items: center;
   }
 
+  .card-h3{
+    margin-bottom: 20px;
+  }
+
+  .list-icon{
+    margin: 15px 0 !important;
+  }
+
   .moreDetialBtn {
     font-size: 0px !important;
   }
 
   .btn-card {
     font-size: 17px !important;
+  }
+
+  .ViewAllBtn{
+    padding: 20px 20px !important;
+    font-size: 1rem !important;
   }
 
   /* Third Main home section */
@@ -4080,7 +4279,7 @@ input[type="file"] {
   }
 
   .data-content {
-    left: 75px !important;
+    left: 40px !important;
   }
 
   .data-ul {
@@ -4143,7 +4342,7 @@ input[type="file"] {
 
   /* Fifth Main home section */
   .fifth-main {
-    height: 160vh !important;
+    height: 140vh !important;
   }
 
   .fifth-div {
@@ -4378,6 +4577,17 @@ input[type="file"] {
     margin-left: 0rem !important;
   }
 
+  .Marketside{
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .AddButton{
+    width: 40% !important;
+  }
+
 
   /******************  Contact Us Dashboard section **********************/
 
@@ -4451,7 +4661,19 @@ input[type="file"] {
     width: 100% !important;
     padding: 2rem !important;
   }
+
+  /************** Payment Cart Dashboard ****************/
+  .shopping-cart {
+    display: flex;
+    flex-direction: column;
+  }
+  /************** Tamplate section ****************/
+
+  .Tamplate-secondPart{
+    padding: 2rem !important;
+  }
 }
+
 
 @media screen and (max-width:450px) {
   .navbar-brand {
@@ -4487,6 +4709,14 @@ input[type="file"] {
 
   .offcanvas {
     max-width: 70% !important;
+  }
+
+  .data-section {
+    height: 110vh;
+  }
+
+  .round-middle-img {
+    top: 95vh !important;
   }
 
 }

@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
-import anylatics from "./MyProject/VectorAnylatics.svg"
+// import anylatics from "./MyProject/VectorAnylatics.svg"
 import add from "./MyProject/VectorProject.svg"
-import MyAnylatics from './MyAnylatics'
+// import MyAnylatics from './MyAnylatics'
 
 const MyProject = () => {
 
-    const [show, setShow] = useState(1)
+    // const [show, setShow] = useState(1)
 
     return (
         <>
-            {show === 1 &&
+            {/* {show === 1 && } */}
                 <>
                     <div className="sideContent">
 
@@ -22,7 +22,7 @@ const MyProject = () => {
                                 <span style={{ color: '#636363' }}>0 active purchases, Buy your first Project.</span>
                             </div>
                             <div className='My-btns'>
-                                <Link className='btn btn-outline-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} onClick={show => setShow(2)}  > <img style={{ width: '10%', marginRight: '10px' }} src={anylatics} alt="" />Analytics</Link>
+                                {/* <Link className='btn btn-outline-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} onClick={show => setShow(2)}  > <img style={{ width: '10%', marginRight: '10px' }} src={anylatics} alt="" />Analytics</Link> */}
                                 <Link className='Myproject-btn btn btn-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="/sellingDash" > <img style={{ width: '10%', marginRight: '10px' }} src={add} alt="" />New Project</Link>
                             </div>
                         </div>
@@ -56,9 +56,9 @@ const MyProject = () => {
                             </div>
                         </div>
                     </div>
-                </>}
+                </>
 
-            {show === 2 && <MyAnylatics />}
+            {/* {show === 2 && <MyAnylatics />} */}
             {/* {show === 3 && <SellingDash/> } */}
         </>
     )

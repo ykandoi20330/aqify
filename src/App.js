@@ -24,6 +24,9 @@ import Testimonials from './Components/Testimonials';
 import Advisory from './Components/Advisory';
 import MarketplaceDetail from './Components/MarketplaceDetail';
 import MessageDash2 from './Components/MessageDash2';
+import PaymentCardDash from './Components/PaymentCardDash';
+import DashboardProfile from './Components/DashboardProfile';
+import Home1 from './Components/Home1';
 
 function App() {
   return (
@@ -31,7 +34,8 @@ function App() {
       <HashRouter>
         {/* <Navbar /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home1 />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/owner" element={<Owner />} />
           <Route path="/acquire" element={<Acquirers />} />
           <Route path="/pricing" element={<Pricing />} />
@@ -49,6 +53,8 @@ function App() {
           <Route path="/advisory" element={<Advisory />} />
           <Route path="/placeDetail" element={<MarketplaceDetail />} />
           <Route path="/message" element={<MessageDash2 />} />
+          <Route path="/payCart" element={<PaymentCardDash />} />
+          <Route path="/proflie" element={<DashboardProfile />} />
         </Routes>
         {/* <Footer /> */}
       </HashRouter>

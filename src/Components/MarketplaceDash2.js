@@ -1,13 +1,4 @@
-import React, { useState } from 'react'
-
-//
-import doller from "./MarketDash/VectorDoller.svg"
-// import downIcon from "./MarketDash/VectorDownIcon.svg"
-import filter from "./MarketDash/VectorFilter.svg"
-import location from "./MarketDash/VectorLoaction.svg"
-import pie from "./MarketDash/VectorPie.svg"
-import search from "./MarketDash/VectorSearch.svg"
-// import Close from "./MarketDash/VectorClose.svg"
+import React, {  useState } from 'react'
 
 // card logo images
 import cardLogo1 from "./Market/Frame 33.png"
@@ -27,75 +18,11 @@ const MarketplaceDash2 = () => {
             {detail === 1 &&
                 <>
                     <section>
-                        <div className="sideContent">
-                            
-                            <div>
-                                <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>
-                                <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
-                                <div className='my-3'>
-                                    <div class="btn-group" role="group" aria-label="Basic outlined example" style={{ background: 'transparent' }}>
-                                        <button style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Businesses</button>
-                                        <button style={{ padding: "1rem 4rem", }} type="button" class="btn btn-outline-primary" onClick={show => setShow(2)}>Acquirers</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <div className='first-line d-flex align-items-center'>
-                            <div class="mb-3 my-3 form-floating">
-                                <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" />
-                                <label for="floatingInputValue"><img src={search} alt="" /></label>
-                            </div>
-                            <div class="form-floating">
-                                <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example">
-                                    <option id="floatingInputValue" selected>Price</option>
-                                    <option value="1">0</option>
-                                    <option value="2">99</option>
-                                    <option value="3">10000</option>
-                                </select>
-                                <label for="floatingInputValue"><img src={doller} alt="" /></label>
-                            </div>
-                        </div>
-
-                        <div className="second-line d-flex">
-                            <div class="form-floating">
-                                <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
-                                    <option id="floatingInputValue" selected>Categories</option>
-                                    <option value="1">UI Websites</option>
-                                    <option value="2">UI Medical Websites</option>
-                                    <option value="3">Start-Ups</option>
-                                </select>
-                                <label for="floatingInputValue"><img src={pie} alt="" /></label>
-                            </div>
-                            <div class="form-floating">
-                                <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
-                                    <option id="floatingInputValue" selected>Company Location</option>
-                                    <option value="1">Mumbai</option>
-                                    <option value="2">Hydrabad</option>
-                                    <option value="3">Banglore</option>
-                                </select>
-                                <label for="floatingInputValue"><img src={location} alt="" /></label>
-                            </div>
-                            <div class="form-floating">
-                                <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
-                                    <option id="floatingInputValue" selected>More Filters</option>
-                                    <option value="1">Pricing</option>
-                                    <option value="2">Budget</option>
-                                    <option value="3">More</option>
-                                </select>
-                                <label for="floatingInputValue"><img src={filter} alt="" /></label>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
                         <section className="marketDash2-back" style={{ height: '180vh' }} >
                             <div className='d-flex'>
                                 <div className="market-card" style={{ padding: "2rem" }} >
-                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
-
+                                    <div className="card1"  style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+        
                                         <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
                                                 <img width={200} src={cardProfile} alt="" />
@@ -120,7 +47,7 @@ const MarketplaceDash2 = () => {
                                             <div className='d-flex'>
                                                 <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
                                                 <div >
-                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
+                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off"  />
                                                     <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
                                                         <i class="fa-solid fa-heart"></i></label>
                                                 </div>
@@ -161,7 +88,7 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" id={2} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
                                         <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
@@ -227,7 +154,7 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" id={3} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
                                         <div className='sideInfo d-flex'>
                                             <div className='secondPart'>
@@ -293,7 +220,7 @@ const MarketplaceDash2 = () => {
                                     </div>
 
                                     {/** */}
-                                    <div className="card1" style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                    <div className="card1" id={4} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
                                         <div className='sideInfo d-flex'>
                                             <div className='secondPart'>

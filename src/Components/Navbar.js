@@ -25,9 +25,9 @@ const Navbar = () => {
               <div class="offcanvas-body">
 
                 <ul className="ul navbar-nav nav justify-content-between">
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link className="nav-link " aria-current="page" to="/market">Marketplace</Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link className="nav-link" to="/acquire">For Acquirers</Link>
                   </li>

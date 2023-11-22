@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import backgroundImg from "./Aqify project/unsplash_5U_28ojjgms2.png"
 import arrow from "./Aqify project/Vector (1).png"
 import vectorArrow from "./Aqify project/Vector-arrow.png"
@@ -47,11 +47,20 @@ import Navbar from "./Navbar"
 import Aos from 'aos';
 import "aos/dist/aos.css"
 
+import acqify from "./acqify.mp4"
+import CountUp from 'react-countup';
+//scroll trigger
+import ScrollTrigger from 'react-scroll-trigger';
+
 
 const Home = () => {
+
+  const [counterOn, setCounterOn] = useState(false)
+
   useEffect(() => {
     Aos.init();
-}, [])
+  }, [])
+
   return (
     <>
       {/**Nav section */}
@@ -111,7 +120,7 @@ const Home = () => {
       < section className='homeSection'>
         <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
           <div className='home-animation d-flex flex-row'>
-            <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300"	 className='d-flex'>
+            <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className='d-flex'>
               <div className="content">
                 <div>
                   <div className='my-5'>
@@ -154,17 +163,25 @@ const Home = () => {
                   </div>
                 </div>
                 <div className='home-number' style={{ marginLeft: '-0px', position: 'relative' }}>
-                  <ul className='main-ul'>
-                    <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
-                    <li>345<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
-                    <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
-                  </ul>
+                  <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+                    <ul className='main-ul'>
+                      <li>{counterOn &&
+                        <CountUp start={0} end={2000} duration={10} delay={0} />
+                      }+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
+                      <li>{counterOn &&
+                        <CountUp start={0} end={345} duration={10} delay={0} />
+                      }<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
+                      <li>{counterOn &&
+                        <CountUp start={0} end={150} duration={10} delay={0} />
+                      }<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
+                    </ul>
+                  </ScrollTrigger>
                 </div>
               </div>
             </div>
 
             {/** */}
-            <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300"	 className='animation-div d-flex'>
+            {/* <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300"	 className='animation-div d-flex'>
               <svg className='homeSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
                 <g className='plant' id="freepik--background-complete--inject-6">
                   <path d="M508.52,361.82a35,35,0,0,0-15-5.15c-2.44-.25-5.11-.18-7.07,1.3a1.45,1.45,0,0,0-.73,1.29,1.63,1.63,0,0,0,.69.89c6.09,4.64,15.29,5.22,22.07,1.67" style={{ fill: "#e0e0e0" }}></path>
@@ -609,7 +626,7 @@ const Home = () => {
                   <path d="M101,203.19s0,.19-.07.57-.15.94-.26,1.66c-.24,1.49-.59,3.65-1.05,6.42-.94,5.6-2.29,13.69-4,23.74v0c1,13.48,2.21,30.69,3.6,50l0,.22-.21.05-19.54,4.44-.28.07,0-.29c-.45-3.8-.92-7.83-1.4-11.91-.92-7.89-1.82-15.59-2.69-23q-.65-5.58-1.27-11l-.62-5.31a36.63,36.63,0,0,1,.09-5.25c.55-6.88,1.51-13.35,2.4-19.41s1.84-11.68,2.75-16.8,1.79-9.75,2.65-13.8A42.81,42.81,0,0,1,82.57,178a34.89,34.89,0,0,1,2-4.42,51.37,51.37,0,0,1,3.54-5.7c.45-.62.81-1.08,1-1.39s.39-.45.39-.45l-.35.48-1,1.42a53.38,53.38,0,0,0-3.45,5.73,34.33,34.33,0,0,0-1.94,4.42,41.35,41.35,0,0,0-1.4,5.56c-.84,4-1.7,8.67-2.58,13.8s-1.8,10.75-2.69,16.8-1.8,12.53-2.34,19.38a35.77,35.77,0,0,0-.08,5.18c.2,1.75.41,3.52.62,5.31q.63,5.35,1.29,10.94c.87,7.44,1.77,15.14,2.7,23,.48,4.08,1,8.11,1.39,11.91l-.31-.22L99,285.34l-.2.26c-1.33-19.34-2.53-36.55-3.46-50v0c1.76-10,3.17-18.12,4.14-23.71.5-2.77.88-4.92,1.15-6.4.13-.72.24-1.27.31-1.66S101,203.19,101,203.19Z" style={{ fill: "#263238" }}></path>
                   <path d="M138.71,218a9.31,9.31,0,0,0,1.47-2.34,38.94,38.94,0,0,0,1.87-6.46,45.2,45.2,0,0,0,.82-6.69,23.13,23.13,0,0,1,.13-2.81,11.79,11.79,0,0,1,.24,2.81,33.38,33.38,0,0,1-.68,6.79,30.55,30.55,0,0,1-2.05,6.52A4.31,4.31,0,0,1,138.71,218Z" style={{ fill: "#263238" }}></path>
                 </g>
-                {/** */}
+               
                 <g className='web' transform="matrix(0.32, 0, 0, 0.42, 573.36, 91)"  >
                   <g vector-effect="non-scaling-stroke"  >
                     <g transform="matrix(1 0 0 1 0.62 0.46)"  >
@@ -647,176 +664,179 @@ const Home = () => {
               </g>
 
             </svg>
+          </div> */}
+            <video className='spire' autoPlay loop muted playsInline >
+              <source src={acqify} type='video/mp4' />
+            </video>
+            {/** */}
           </div>
-          {/** */}
-        </div>
-        <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
-          <img className='bottomCircle1' src={circle1} alt="" />
-          <img className='bottomCircle2' src={circle2} alt="" />
-        </div>
-      </div >
-    </section >
-
-      {/*second section */ }
-      < section >
-      <div className='Home-listing'>
-        <h1 className='listing-h1'>Our Latest Listings</h1>
-        <span className='listing-span text-center'>Every Monday we publish new businesses for sale on our marketplace</span>
-
-        <div data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300"	 className="card">
-
-          <div className='card-main1 d-flex'>
-            <div className="firstPart">
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Fintech Startup</h3>
-              <button className='btn-card btn btn-outline-primary'>Businesses</button>
-              <button className='btn-card btn btn-outline-primary'>Banking</button>
-            </div>
-            <div className='secondPart'>
-              <span className='d-flex' style={{ color: '#636363', fontSize: '1.2rem' }}>
-                We lend capital to businesses of all sizes, including startups that normally wouldn't qualify for a loan, by collateralising debt financing using recurring revenue backed securities. We are acquiring a banking...
-              </span>
-            </div>
+          <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
+            <img className='bottomCircle1' src={circle1} alt="" />
+            <img className='bottomCircle2' src={circle2} alt="" />
           </div>
-
-          <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-            <h3 className='card-h3'>Metrics</h3>
-            <div className='d-flex'>
-
-              <div >
-                <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
-                <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option11">
-                  <i class="fa-solid fa-eye"></i>1.2K</label>
-              </div>
-              <div >
-                <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
-                <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
-                  <i class="fa-solid fa-heart"></i></label>
-              </div>
-
-              <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-            </div>
-          </div>
-
-          <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Team Members</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo} alt="" />
-                <span className='card-span'>3-5</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>TTM Net Profit</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo1} alt="" />
-                <span className='card-span'>$342 K</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>TTM Gross revenue</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo2} alt="" />
-                <span className='card-span'>$342 K</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Based in</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo3} alt="" />
-                <span className='card-span'>AMER</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo4} alt="" />
-                <span className='card-span'>Full</span>
-              </div>
-            </div>
-            <div style={{ margin: '3rem 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Desired valuation</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo5} alt="" />
-                <span className='card-span'>Open to offers</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        {/**card-2 */}
-        <div data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400" className="card">
-
-          <div className='card-main1 d-flex'>
-            <div className="firstPart">
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Strategic incumbent</h3>
-              <button className='btn-card btn btn-outline-primary'>Acquirers</button>
-              <button className='btn-card btn btn-outline-primary'>Consumer Staples</button>
-            </div>
-            <div className='secondPart'>
-              <span className='d-flex' style={{ color: '#636363', fontSize: '1.2rem' }}>
-                Physical retailer in the apparel space looking for prominent DTC brands to buy into and collaborate with. Our supply-chain offers strong operational efficiencies which coupled with the right online
-              </span>
-            </div>
-          </div>
-
-          <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-            <h3 className='card-h3'>Metrics</h3>
-            <div className='d-flex'>
-
-              <div >
-                <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
-                <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
-                  <i class="fa-solid fa-eye"></i>1.2K</label>
-              </div>
-              <div >
-                <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
-                <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
-                  <i class="fa-solid fa-heart"></i></label>
-              </div>
-
-              <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-            </div>
-          </div>
-
-          <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Businesses Type</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo} alt="" />
-                <span className='card-span'>3-5</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Based in</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo3} alt="" />
-                <span className='card-span'>Anywhere</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo4} alt="" />
-                <span className='card-span'>Full</span>
-              </div>
-            </div>
-            <div style={{ margin: '0 3rem 0 0' }}>
-              <span style={{ color: '#636363', fontWeight: '600' }}>Valuation</span>
-              <div className='d-flex justify-content-start align-items-center'>
-                <img width={40} src={cardLogo5} alt="" />
-                <span className='card-span'>$150 k</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <Link style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='btn btn-primary' to="/singup">View All Listings</Link>
-      </div>
+        </div >
       </section >
 
-  {/**Third home section */ }
-  < section className = 'Third-main' >
-        <section  className='data-section'>
+      {/*second section */}
+      < section >
+        <div className='Home-listing'>
+          <h1 className='listing-h1 text-center'>Our Latest Listings</h1>
+          <span className='listing-span text-center'>Every Monday we publish new businesses for sale on our marketplace</span>
+
+          <div data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300" className="card">
+
+            <div className='card-main1 d-flex'>
+              <div className="firstPart">
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Fintech Startup</h3>
+                <button className='btn-card btn btn-outline-primary'>Businesses</button>
+                <button className='btn-card btn btn-outline-primary'>Banking</button>
+              </div>
+              <div className='secondPart'>
+                <span className='d-flex' style={{ color: '#636363', fontSize: '1.2rem' }}>
+                  We lend capital to businesses of all sizes, including startups that normally wouldn't qualify for a loan, by collateralising debt financing using recurring revenue backed securities. We are acquiring a banking...
+                </span>
+              </div>
+            </div>
+
+            <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+              <h3 className='card-h3'>Metrics</h3>
+              <div className='d-flex'>
+
+                <div >
+                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
+                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option11">
+                    <i class="fa-solid fa-eye"></i>1.2K</label>
+                </div>
+                <div >
+                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
+                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
+                    <i class="fa-solid fa-heart"></i></label>
+                </div>
+
+                <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+              </div>
+            </div>
+
+            <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Team Members</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo} alt="" />
+                  <span className='card-span'>3-5</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>TTM Net Profit</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo1} alt="" />
+                  <span className='card-span'>$342 K</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>TTM Gross revenue</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo2} alt="" />
+                  <span className='card-span'>$342 K</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Based in</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo3} alt="" />
+                  <span className='card-span'>AMER</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo4} alt="" />
+                  <span className='card-span'>Full</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '3rem 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Desired valuation</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo5} alt="" />
+                  <span className='card-span'>Open to offers</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          {/**card-2 */}
+          <div data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400" className="card">
+
+            <div className='card-main1 d-flex'>
+              <div className="firstPart">
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700' }}>Strategic incumbent</h3>
+                <button className='btn-card btn btn-outline-primary'>Acquirers</button>
+                <button className='btn-card btn btn-outline-primary'>Consumer Staples</button>
+              </div>
+              <div className='secondPart'>
+                <span className='d-flex' style={{ color: '#636363', fontSize: '1.2rem' }}>
+                  Physical retailer in the apparel space looking for prominent DTC brands to buy into and collaborate with. Our supply-chain offers strong operational efficiencies which coupled with the right online
+                </span>
+              </div>
+            </div>
+
+            <div className='Metrics-card d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+              <h3 className='card-h3'>Metrics</h3>
+              <div className='d-flex'>
+
+                <div >
+                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
+                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
+                    <i class="fa-solid fa-eye"></i>1.2K</label>
+                </div>
+                <div >
+                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
+                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
+                    <i class="fa-solid fa-heart"></i></label>
+                </div>
+
+                <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+              </div>
+            </div>
+
+            <div className='card-points d-flex justify-content-between flex-wrap' style={{ width: '80%' }}>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Businesses Type</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo} alt="" />
+                  <span className='card-span'>3-5</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Based in</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo3} alt="" />
+                  <span className='card-span'>Anywhere</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo4} alt="" />
+                  <span className='card-span'>Full</span>
+                </div>
+              </div>
+              <div className='list-icon' style={{ margin: '0 3rem 0 0' }}>
+                <span style={{ color: '#636363', fontWeight: '600' }}>Valuation</span>
+                <div className='d-flex justify-content-start align-items-center'>
+                  <img width={40} src={cardLogo5} alt="" />
+                  <span className='card-span'>$150 k</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <Link style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='ViewAllBtn btn btn-primary' to="/singup">View All Listings</Link>
+        </div>
+      </section >
+
+      {/**Third home section */}
+      < section className='Third-main' >
+        <section className='data-section'>
           <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className="d-flex justify-content-evenly">
             <div className="data-content">
               <div className="data">
@@ -824,11 +844,19 @@ const Home = () => {
                 <span className='data-span'>Unite buyers and sellers in the dynamic realm of online businesses. Our platform fosters seamless connections, facilitating successful transactions and empowering entrepreneurs to navigate the digital marketplace with confidence.</span>
               </div>
               <div>
-                <ul className='data-ul'>
-                  <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
-                  <li>345<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
-                  <li>150<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
-                </ul>
+                <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+                  <ul className='data-ul'>
+                    <li>{counterOn &&
+                      <CountUp start={0} end={2000} duration={10} delay={0} />
+                    }+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Startup</span></li>
+                    <li>{counterOn &&
+                      <CountUp start={0} end={345} duration={10} delay={0} />
+                    }<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Founders</span> </li>
+                    <li>{counterOn &&
+                      <CountUp start={0} end={150} duration={10} delay={0} />
+                    }<br /> <span style={{ fontSize: '20px', fontWeight: '100' }}>Deal Done</span></li>
+                  </ul>
+                </ScrollTrigger>
               </div>
             </div>
             <div>
@@ -837,11 +865,11 @@ const Home = () => {
           </div>
         </section>
         <div >
-          <img  data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" className='round-middle-img' src={roundImg} alt="" />
+          <img data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" className='round-middle-img' src={roundImg} alt="" />
         </div>
         <section>
           <div className='data-2-section'>
-            <div  data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300"  className='data-2-content'>
+            <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className='data-2-content'>
               <button className='btn-card btn btn-outline-primary my-5' style={{ fontSize: '1.5rem', padding: "10px 30px" }}>FOR OWNERS</button>
               <h1 className='data-2-h1'>Get Offers from Professional Acquirers</h1>
               <span className='data-2-span'>For funded founders and bootstrapped owners of SaaS, eCommerce, marketplace, fintech, content, mobile, agency, web3 and other internet startups with annual revenues of $100,000 and above.</span>
@@ -851,8 +879,8 @@ const Home = () => {
         </section>
       </section >
 
-  {/**Fourth section home*/ }
-  < section className = 'fourth-main' >
+      {/**Fourth section home*/}
+      < section className='fourth-main' >
         <div>
           <div className='d-flex flex-column align-items-center justify-content-center'>
             <h1 className='fourth-h1'>The Fatest And Simplest Way To Get Acquired</h1>
@@ -883,149 +911,149 @@ const Home = () => {
         </div>
       </section >
 
-  {/**Fifth home section */ }
+      {/**Fifth home section */}
 
-  < section className = 'fifth-main' >
-    <div className='d-flex fifth-div' style={{ left: '50px', position: 'relative' }}>
-      <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" id="carouselExampleAutoplaying1" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-        <div class="carousel-inner">
-          <div className="slider-img">
-            <div class="carousel-item active">
+      < section className='fifth-main' >
+        <div className='d-flex fifth-div' style={{ left: '50px', position: 'relative' }}>
+          <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" id="carouselExampleAutoplaying1" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+            <div class="carousel-inner">
+              <div className="slider-img">
+                <div class="carousel-item active">
 
-              <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
-              <div className="overlay-slide">
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "30%" }} src={profileImg} alt="" />
-                  <div className='mx-3'>
-                    <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Owner</span><br />
-                    <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                  <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
+                  <div className="overlay-slide">
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "30%" }} src={profileImg} alt="" />
+                      <div className='mx-3'>
+                        <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Owner</span><br />
+                        <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
+                    <div className='fifth-main-arrow'>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                   </div>
                 </div>
-                <div className='fifth-main-arrow'>
-                  <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                  <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div className="slider-img">
+                <div class="carousel-item active">
+
+                  <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
+                  <div className="overlay-slide">
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "30%" }} src={profileImg} alt="" />
+                      <div className='mx-3'>
+                        <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Acquirer</span><br />
+                        <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
+                    <div className='fifth-main-arrow'>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" className="slider-detail">
+            <div>
+              <div className='data-2-content'>
+                <button className='btn-card btn btn-outline-primary my-3' style={{ fontSize: '1.5rem', padding: "10px 30px" }}>FOR ACQUIRERS</button>
+                <h1 className='detail-h1'>Get In Touch With Business Owners Today</h1>
+                <span className='detail-span'>For professional buyers including acquisition entrepreneurs, search funds, private equity firms, high net worth individuals, family offices, angels and strategic investors.</span>
+                <Link style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='btn btn-primary' to="/singup">Make your Profile<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
               </div>
             </div>
           </div>
-          <div className="slider-img">
-            <div class="carousel-item active">
-
-              <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
-              <div className="overlay-slide">
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "30%" }} src={profileImg} alt="" />
-                  <div className='mx-3'>
-                    <span className='overlay-span' style={{ fontSize: '1.5rem', color: '#fff' }}>Acquirer</span><br />
-                    <span className='overlay-span' style={{ fontSize: '2rem', color: '#fff', fontWeight: '700' }}>BitsCool.com</span>
-                  </div>
-                </div>
-                <div className='fifth-main-arrow'>
-                  <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                  <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-
-
-      <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" className="slider-detail">
-        <div>
-          <div className='data-2-content'>
-            <button className='btn-card btn btn-outline-primary my-3' style={{ fontSize: '1.5rem', padding: "10px 30px" }}>FOR ACQUIRERS</button>
-            <h1 className='detail-h1'>Get In Touch With Business Owners Today</h1>
-            <span className='detail-span'>For professional buyers including acquisition entrepreneurs, search funds, private equity firms, high net worth individuals, family offices, angels and strategic investors.</span>
-            <Link style={{ padding: '18px 48px', fontSize: '1.4rem' }} className='btn btn-primary' to="/singup">Make your Profile<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-          </div>
-        </div>
-      </div>
-    </div>
       </section >
 
-  {/**Six home section */ }
-  < section className = 'six-main' >
-    <div className="six-content">
-      <div style={{ left: '50px', position: 'relative' }} className='d-flex justify-content-between align-items-center'>
-        <div>
-          <h1 className='six-h1'>Stories From Founders And Buyers</h1>
-          <div className='my-5'>
-            <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-            <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+      {/**Six home section */}
+      < section className='six-main' >
+        <div className="six-content">
+          <div style={{ left: '50px', position: 'relative' }} className='d-flex justify-content-between align-items-center'>
+            <div>
+              <h1 className='six-h1'>Stories From Founders And Buyers</h1>
+              <div className='my-5'>
+                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div>
+              <img className='quoteImg' src={quoteImg} alt="" />
+            </div>
           </div>
-        </div>
-        <div>
-          <img className='quoteImg' src={quoteImg} alt="" />
-        </div>
-      </div>
 
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+            <div class="carousel-inner">
+              <div class="carousel-item active">
 
-            <div className='six-card-main d-flex justify-content-evenly my-4'>
-              <div className="six-card">
-                <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "15%" }} src={personImg} alt="" />
-                  <div className='mx-3'>
-                    <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                    <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                <div className='six-card-main d-flex justify-content-evenly my-4'>
+                  <div className="six-card">
+                    <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "15%" }} src={personImg} alt="" />
+                      <div className='mx-3'>
+                        <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                        <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="six-card">
+                    <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "15%" }} src={personImg} alt="" />
+                      <div className='mx-3'>
+                        <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                        <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
               </div>
-              <div className="six-card">
-                <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "15%" }} src={personImg} alt="" />
-                  <div className='mx-3'>
-                    <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                    <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+
+              <div class="carousel-item">
+
+                <div className='six-card-main d-flex justify-content-evenly my-4'>
+                  <div className="six-card">
+                    <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "15%" }} src={personImg} alt="" />
+                      <div className='mx-3'>
+                        <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                        <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="six-card">
+                    <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
+                    <div className='d-flex flex-row align-items-center'>
+                      <img style={{ width: "15%" }} src={personImg} alt="" />
+                      <div className='mx-3'>
+                        <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
+                        <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
               </div>
+
             </div>
 
           </div>
-
-          <div class="carousel-item">
-
-            <div className='six-card-main d-flex justify-content-evenly my-4'>
-              <div className="six-card">
-                <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "15%" }} src={personImg} alt="" />
-                  <div className='mx-3'>
-                    <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                    <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
-                  </div>
-                </div>
-              </div>
-              <div className="six-card">
-                <span className="six-card-content">“Acqify helped us get acquired catalysing our growth exponentially. Quality advice & ready documentation helped us smoothly close our deal in record time. Strongly recommend this platform to other founders!"</span>
-                <div className='d-flex flex-row align-items-center'>
-                  <img style={{ width: "15%" }} src={personImg} alt="" />
-                  <div className='mx-3'>
-                    <span style={{ fontSize: '1.5rem', color: '#636363' }}>Owner</span><br />
-                    <span className='bitsCool' style={{ fontSize: '2rem', color: '#000', fontWeight: '700' }}>BitsCool.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-
-      </div>
-    </div>
       </section >
 
-  {/**seven home section */ }
+      {/**seven home section */}
 
-  < section className = 'seven-section' >
+      < section className='seven-section' >
         <div>
           <div className='d-flex flex-column align-items-center justify-content-center'>
             <h1 className='fourth-h1'>Your First Step To An Acquisition Starts Here</h1>
@@ -1040,9 +1068,9 @@ const Home = () => {
         </div>
       </section >
 
-  <section>
-    <Footer />
-  </section>
+      <section>
+        <Footer />
+      </section>
     </>
   )
 }

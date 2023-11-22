@@ -52,9 +52,9 @@ const Market = () => {
                                     {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link> */}
 
                                     <ul className="ul  navbar-nav  nav justify-content-between">
-                                        <li className="nav-item">
+                                        {/* <li className="nav-item">
                                             <Link className="nav-link " aria-current="page" to="/market">Marketplace</Link>
-                                        </li>
+                                        </li> */}
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/acquire">For Acquirers</Link>
                                         </li>
@@ -69,7 +69,7 @@ const Market = () => {
                                     <Link>
                                         <Link class="btn btn-outline-light mx-2" to="/singin" type="submit">Sign in</Link>
                                         <Link class="btn btn-primary" to="/singup" type="submit">Join <img style={{ width: '30%' }} src={arrow} alt="" /></Link>
-                                        <Link class="btn btn-primary mx-2" to="/" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Tamplate<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link>
+                                        {/* <Link class="btn btn-primary mx-2" to="/" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Tamplate<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link> */}
                                     </Link>
                                 </div>
 
@@ -295,7 +295,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -323,7 +323,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -352,7 +352,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -380,7 +380,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -408,7 +408,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -437,7 +437,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -465,7 +465,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -493,7 +493,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -522,7 +522,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -550,7 +550,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
@@ -578,7 +578,7 @@ const Market = () => {
                             </div>
                             <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                 <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
+                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
                             </div>
                             <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
                         </div>
