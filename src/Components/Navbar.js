@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className='navbar navbar-expand-lg navbar-dark navline' id="middleNav" style={{ zIndex: "5", position: 'absolute', width: '100%' }}>
 
           <div class="container-fluid">
-            <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link>
+            <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /><span className='beta' style={{color:'#c0c0c0',fontSize:'12px',position:'relative',right:'-78px',top:'8px'}}>Beta</span></Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,9 +25,9 @@ const Navbar = () => {
               <div class="offcanvas-body">
 
                 <ul className="ul navbar-nav nav justify-content-between">
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link className="nav-link " aria-current="page" to="/market">Marketplace</Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link className="nav-link" to="/acquire">For Acquirers</Link>
                   </li>

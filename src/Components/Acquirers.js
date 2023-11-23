@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Acquirers/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Acquirers/unsplash_5U_28ojjgms2.png"
 import arrow from "./Aqify project/Vector (1).png"
 
 //Logo images
@@ -8,7 +8,7 @@ import cardLogo2 from "./Acquirers/Frame 100 (1).png"
 import cardLogo3 from "./Acquirers/Frame 100 (2).png"
 
 //owner second section
-import BackPhoto from "./Acquirers/Rectangle.png"
+import BackPhoto from "./Acquirers/Rectangle2.png"
 import roundedImg from "./Acquirers/Frame 105.png"
 import profileImg from "./Acquirers/Ellipse 8.png"
 
@@ -33,11 +33,11 @@ const Acquirers = () => {
             </section>
             {/** */}
             <section>
-                <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'>Acquire (un) profitable tech & internet businesses<br/>
+                                <h1 className='main-h1 col-7'>Acquire (un) profitable tech & internet businesses<br/>
                                     <TypeAnimation className='typeAnimation'
                                         sequence={[
                                             'Ecommerce', // Types 'One'

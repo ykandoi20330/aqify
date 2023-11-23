@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Owner/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Owner/unsplash_5U_28ojjgms2.png"
 import arrow from "./Aqify project/Vector (1).png"
 
 //Logo images
@@ -8,7 +8,7 @@ import cardLogo2 from "./Owner/Frame 100 (1).png"
 import cardLogo3 from "./Owner/Frame 100 (2).png"
 
 //owner second section
-import BackPhoto from "./Owner/Rectangle.png"
+import BackPhoto from "./Owner/Rectangle2.png"
 import roundedImg from "./Owner/Frame 105.png"
 import profileImg from "./Owner/Ellipse 8.png"
 
@@ -34,7 +34,7 @@ const Owner = () => {
 
         {/** */}
             <section>
-                <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>

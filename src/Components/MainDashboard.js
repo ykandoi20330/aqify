@@ -6,11 +6,13 @@ import list from "./ProfileDashbaord/listnumbers.svg"
 import bell from "./ProfileDashbaord/bell.svg"
 import setting from "./ProfileDashbaord/gear.svg"
 import tag from "./ProfileDashbaord/tag.svg"
+import analytic from "./ProfileDashbaord/VectorAnalytics.svg"
+import heart from "./ProfileDashbaord/VectorHeart.svg"
+import proof from "./ProfileDashbaord/VectorProof.svg"
 
 //card content
 import { Link } from 'react-router-dom'
 import ContactDashboard from './ContactDashboard'
-import DashboardProfile from './DashboardProfile'
 import MessageDash from './MessageDash'
 import message from "./ProfileDashbaord/chatteardropdots.svg"
 import PaymentDash from './PaymentDash'
@@ -22,12 +24,16 @@ import MarketplaceDash2 from './MarketplaceDash2'
 import MarketDashDetail from './MarketDashDetail'
 import ProjectBuying from './ProjectBuying'
 import MyProject from './MyProject'
+import MyAnalytics from "./MyAnylatics"
 
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import message1 from "./ProfileDashbaord/chatteardropdots1.svg"
 
 import logo1 from "./SignIn/vector.svg"
+import DashboardValuation from './DashboardValuation'
+import ProofOfFund from './ProofOfFund'
+import Favourite from './Favourite'
 
 import { useNavigate } from 'react-router-dom'
 const MainDashboard = () => {
@@ -44,10 +50,10 @@ const MainDashboard = () => {
             <section className='profile-section'>
                 <nav className='navbar navbar-expand-lg dashboard' style={{ top: '0px' }}>
                     <div class="container-fluid" style={{ padding: "0rem" }}>
-                        <button style={{margin:'0 1.5rem'}} class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <button style={{ margin: '0 1.5rem' }} class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div style={{left:'0', transform:'translateX(-100%)'}} class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div style={{ left: '0', transform: 'translateX(-100%)' }} class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
                                     <Link className="navbar-brand" to="/"><img src={logo1} alt="Logo" style={{ left: "0px" }} className='Logo' /></Link>
@@ -75,6 +81,12 @@ const MainDashboard = () => {
                                                 Lists
                                             </Link>
                                         </li>
+                                        <li class="nav-item">
+                                            <Link to="#" class="nav-link1 text-white" aria-current="page" onClick={Show => setShow(16)}>
+                                                <img style={{ marginRight: "1rem" }} src={heart} alt="" />
+                                                Favourite Lists
+                                            </Link>
+                                        </li>
                                         <li class="nav-item dropdown">
                                             <Link class="nav-link1 text-white dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <img style={{ marginRight: "1rem" }} src={folder} alt="" />
@@ -87,13 +99,19 @@ const MainDashboard = () => {
                                         </li>
 
                                         <li>
+                                            <Link onClick={Show => setShow(13)} class="nav-link1 text-white">
+                                                <img style={{ marginRight: "1rem" }} src={analytic} alt="" />
+                                                Analytics
+                                            </Link>
+                                        </li>
+                                        <li>
                                             <Link onClick={Show => setShow(3)} class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={message} alt="" />
                                                 Messages
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="#" class="nav-link1 text-white" onClick={Show => setShow("")}>
+                                            <Link class="nav-link1 text-white" onClick={Show => setShow("")}> 
                                                 <img style={{ marginRight: "1rem" }} src={bell} alt="" />
                                                 Notifications
                                             </Link>
@@ -104,11 +122,17 @@ const MainDashboard = () => {
                                                 Settings
                                             </Link>
                                             <ul class="dropdown-menu dropdown-menu-dark">
-                                                <li><Link class="dropdown-item" onClick={Show => setShow(6)}>Profile</Link></li>
+                                                <li><Link class="dropdown-item" to='/proflie'>Profile</Link></li>
                                                 <li><Link class="dropdown-item" onClick={Show => setShow(5)}>Change Password</Link></li>
                                                 <li><Link class="dropdown-item" onClick={Show => setShow(4)} >Payments</Link></li>
                                                 <li><Link class="dropdown-item">Connect</Link></li>
-                                            </ul>
+                                            </ul> 
+                                        </li>
+                                        <li>
+                                            <Link to="#" class="nav-link1 text-white" onClick={Show => setShow(15)}>
+                                                <img style={{ marginRight: "1rem" }} src={proof} alt="" />
+                                                Proof of Funds
+                                            </Link>
                                         </li>
                                         <li>
                                             <Link to="#" class="nav-link1 text-white" onClick={Show => setShow(7)}>
@@ -120,6 +144,13 @@ const MainDashboard = () => {
                                             <Link onClick={Show => setShow(2)} class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={address} alt="" />
                                                 Contact us
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link onClick={Show => setShow(14)} class="nav-link1 text-white">
+                                                {/* <img style={{ marginRight: "1rem" }} src={""} alt="" /> */}
+                                                <i class="fa-solid fa-calculator" style={{ color: "#f5f5f5", fontSize: '1.5rem', margin: '0 1rem 0 0.5rem' }}></i>
+                                                Valuation Tools
                                             </Link>
                                         </li>
                                     </ul>
@@ -146,7 +177,7 @@ const MainDashboard = () => {
                 <div className="sideContent">
                     <div className="d-flex justify-content-end">
                         <div className='mx-2'><Link to="/message"><img src={message1} alt="" /></Link></div>
-                        <div className='mx-1'><Link to="/"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
+                        <div className='mx-1'><Link to="/proflie"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
                         <div className='mx-1'>
                             {/* <Link to="/"></Link> */}
                             <div class="dropdown" >
@@ -154,16 +185,18 @@ const MainDashboard = () => {
                                     <img src={threeDots} alt="" />
                                 </Link>
                                 <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
+<<<<<<< HEAD
                                     <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
                                     {/* <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li> */}
                                     <li><button class="dropdown-item" onClick={logout}><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</button></li>
+=======
+                                    <li><Link class="dropdown-item" to="/proflie"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
+                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
+>>>>>>> 70d8146ef26d7fe998f42a5b1f2c0fa803ce1ebb
                                 </ul>
                             </div>
                         </div>
                     </div>
-
-                    {Show === 6 &&
-                        <DashboardProfile />}
                     {Show === 2 &&
                         <ContactDashboard />}
                     {Show === 3 &&
@@ -195,6 +228,18 @@ const MainDashboard = () => {
                     }
                     {Show === 12 &&
                         <MyProject />
+                    }
+                    {Show === 13 &&
+                        <MyAnalytics />
+                    }
+                    {Show === 14 &&
+                        <DashboardValuation />
+                    }
+                    {Show === 15 &&
+                        <ProofOfFund />
+                    }
+                    {Show === 16 &&
+                        <Favourite />
                     }
                 </div>
             </section >

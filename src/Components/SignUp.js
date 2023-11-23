@@ -1,5 +1,5 @@
 import google from "./SignUp/google-svg.svg"
-import background from "./SignUp/unsplash5u-28ojjgms@2x.png"
+import background from "./SignUp/unsplash5u-28ojjgms@2x2.png"
 import { Link } from "react-router-dom";
 import vector from "./SignIn/Frame 21.svg"
 import React,{useState} from 'react';

@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImg from "./Owner/unsplash_5U_28ojjgms.png"
+import backgroundImg from "./Owner/unsplash_5U_28ojjgms2.png"
 //
 import location from "./MarketDash/VectorLoaction.svg"
 import search from "./MarketDash/VectorSearch.svg"
@@ -26,7 +26,7 @@ const Advisory = () => {
 
             {/** */}
             <section>
-                <div className='main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
