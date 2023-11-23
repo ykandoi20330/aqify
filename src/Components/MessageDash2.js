@@ -1,6 +1,6 @@
 import React from 'react'
 import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg"
+// import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg"
 import img2 from "./Message/Ellipse 59 (1).svg"
 import img3 from "./Message/Ellipse 59 (2).svg"
 import img4 from "./Message/Ellipse 59 (3).svg"

@@ -1,7 +1,7 @@
 import React , { useState } from 'react'
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
+// import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+// import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import arrow from "./Aqify project/Vector (1).png"
 

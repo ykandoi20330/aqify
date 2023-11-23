@@ -1,6 +1,6 @@
 import React from 'react'
 import backgroundImg from "./Market/unsplash_5U_28ojjgms.png"
-import arrow from "./Aqify project/Vector (1).png"
+// import arrow from "./Aqify project/Vector (1).png"
 
 import {
     Link
@@ -13,7 +13,7 @@ import cardProfile from "./Market/Rectangle 25.png"
 
 //dash
 import slideImg from "./MarketDash/Doctor.jpg"
-import back from "./MarketDash/VectorBackArrow.svg"
+// import back from "./MarketDash/VectorBackArrow.svg"
 import chart from "./MarketDash/Vertical.png"
 
 //side card

@@ -204,7 +204,7 @@ const Acquirers = () => {
                             <h1 className='owner-four-h1'>Get Verified And Contact Owners Today</h1>
                             <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>Acquire an internet business with $100K to $50M in annual revenue - either fully or partially.</span>
                             <div className='my-5'>
-                                <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Join</Link>
+                                <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Join</Link>
                             </div>
                         </div>
                     </div>

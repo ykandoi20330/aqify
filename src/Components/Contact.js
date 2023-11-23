@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React,{useState} from 'react'
 import backgroundImg from "./Pricing/unsplash_5U_28ojjgms.png"
-=======
-import React from 'react'
-import backgroundImg from "./Pricing/unsplash_5U_28ojjgms2.png"
->>>>>>> 70d8146ef26d7fe998f42a5b1f2c0fa803ce1ebb
 import arrow from "./Aqify project/Vector (1).png"
 import Navbar from "./Navbar"
 import Footer from './Footer'

@@ -185,14 +185,9 @@ const MainDashboard = () => {
                                     <img src={threeDots} alt="" />
                                 </Link>
                                 <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
-<<<<<<< HEAD
                                     <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
                                     {/* <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li> */}
                                     <li><button class="dropdown-item" onClick={logout}><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</button></li>
-=======
-                                    <li><Link class="dropdown-item" to="/proflie"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
->>>>>>> 70d8146ef26d7fe998f42a5b1f2c0fa803ce1ebb
                                 </ul>
                             </div>
                         </div>
