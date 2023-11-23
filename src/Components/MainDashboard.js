@@ -29,10 +29,16 @@ import message1 from "./ProfileDashbaord/chatteardropdots1.svg"
 
 import logo1 from "./SignIn/vector.svg"
 
+import { useNavigate } from 'react-router-dom'
 const MainDashboard = () => {
 
     const [Show, setShow] = useState(1)
-
+    const navigate=useNavigate();
+    
+    const logout=()=>{
+        localStorage.clear();
+        navigate('/');
+    }
     return (
         <>
             <section className='profile-section'>
@@ -149,7 +155,8 @@ const MainDashboard = () => {
                                 </Link>
                                 <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
                                     <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
+                                    {/* <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li> */}
+                                    <li><button class="dropdown-item" onClick={logout}><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</button></li>
                                 </ul>
                             </div>
                         </div>

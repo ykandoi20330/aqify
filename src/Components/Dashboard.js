@@ -7,6 +7,8 @@ import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import Arrow from "./ProfileDashbaord/ArrowUp.svg"
 
 const Dashboard = () => {
+    let userName=JSON.parse(localStorage.getItem('user'));
+    userName = userName.userName;
     return (
         <>
             <div className="sideContent">
@@ -14,7 +16,7 @@ const Dashboard = () => {
                 <div className='d-flex justify-content-between' style={{marginTop:'6vh'}}>
                     <div>
                         <span style={{ color: '#636363', fontWeight: '500' }}>Welcome back,</span>
-                        <h1 style={{ fontWeight: '700', paddingBottom: '0.5rem', color: '#3247ff' }}>Smruti Ranjan Nayak</h1>
+                        <h1 style={{ fontWeight: '700', paddingBottom: '0.5rem', color: '#3247ff' }}>{userName}</h1>
                     </div>
                     <div>
                         <a href="#" style={{ padding: '0.5rem 1.3rem' }} className='btn btn-primary rounded-pill'>Upgrade<img src={Arrow} alt="" /></a>
