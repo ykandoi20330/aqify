@@ -41,8 +41,8 @@ const Testimonials = () => {
                         <div>
                             <h1 className='six-h1'>Stories From Founders And Buyers</h1>
                             <div className='my-5'>
-                                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></a>
-                                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></a>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></Link>
                             </div>
                         </div>
                         <div>
@@ -120,7 +120,7 @@ const Testimonials = () => {
                             <h1 className='owner-four-h1'>Get Offers From Professional Acquirers</h1>
                             <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>
                             <div className='my-5'>
-                                <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Advisor Activity</Link>
+                                <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Advisor Activity</Link>
                             </div>
                         </div>
                     </div>

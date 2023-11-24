@@ -2,6 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 
+// import message from "./ProfileDashbaord/chatteardropdots1.svg"
+import { Link } from 'react-router-dom'
+import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+// import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+
+
 // card logo images
 import cardLogo2 from "./Market/Frame 34 (1).png"
 import cardProfile from "./Market/Rectangle 25.png"

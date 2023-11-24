@@ -930,8 +930,8 @@ const Home = () => {
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
                     </div>
                   </div>
                 </div>
@@ -939,7 +939,7 @@ const Home = () => {
               <div className="slider-img">
                 <div class="carousel-item active">
 
-                  <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
+                  <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} alt='' />
                   <div className="overlay-slide">
                     <div className='d-flex flex-row align-items-center'>
                       <img style={{ width: "30%" }} src={profileImg} alt="" />
@@ -949,8 +949,8 @@ const Home = () => {
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                      <a className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
                     </div>
                   </div>
                 </div>
@@ -980,8 +980,8 @@ const Home = () => {
             <div>
               <h1 className='six-h1'>Stories From Founders And Buyers</h1>
               <div className='my-5'>
-                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
+                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
               </div>
             </div>
             <div>

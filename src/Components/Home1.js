@@ -28,9 +28,9 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 
 import acqify from "./acqify.mp4"
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 //scroll trigger
-import ScrollTrigger from 'react-scroll-trigger';
+// import ScrollTrigger from 'react-scroll-trigger';
 
 const Home1 = () => {
     useEffect(() => {
@@ -159,7 +159,7 @@ const Home1 = () => {
                                             </div>
                                         </div>
                                         <div className=''>
-                                            <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-light' to="/market">Explore Listing</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/market">Explore Listing</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -190,8 +190,8 @@ const Home1 = () => {
                                             </div>
                                         </div>
                                         <div className='my-5'>
-                                            <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
-                                            <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="/">Demo</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="/">Demo</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -241,8 +241,8 @@ const Home1 = () => {
                         <div>
                             <h1 className='six-h1'>Stories From Founders And Buyers</h1>
                             <div className='my-5'>
-                                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></a>
-                                <a className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></a>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
                             </div>
                         </div>
                         <div>

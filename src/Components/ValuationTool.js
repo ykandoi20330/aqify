@@ -1,6 +1,8 @@
 import React from 'react'
 import Close from "./MarketDash/VectorClose.svg"
 
+// import arrow from "./Aqify project/Vector (1).png"
+
 import analytics from "./MarketDash/Vertical.png"
 import { Link } from 'react-router-dom'
 import Footer from './Footer'

@@ -27,6 +27,8 @@ const MarketplaceDash2 = () => {
     }
 
     const [show, setShow] = useState(1)
+    // const [show, setShow] = useState(1)
+
     const [detail, setDetail] = useState(1)
 
     return (

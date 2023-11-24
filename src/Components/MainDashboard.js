@@ -33,10 +33,16 @@ import Favourite from './Favourite'
 import NotifactionDash from './NotifactionDash'
 import TopMessage from './TopMessage'
 
+import { useNavigate } from 'react-router-dom'
 const MainDashboard = () => {
 
     const [Show, setShow] = useState(1)
-
+    const navigate=useNavigate();
+    
+    const logout=()=>{
+        localStorage.clear();
+        navigate('/');
+    }
     return (
         <>
             <section className='profile-section'>
@@ -167,8 +173,26 @@ const MainDashboard = () => {
                 </nav>
 
                 <div className="sideContent">
+
                     <TopMessage/>
 
+                    <div className="d-flex justify-content-end">
+                        <div className='mx-2'><Link to="/message"><img src={message1} alt="" /></Link></div>
+                        <div className='mx-1'><Link to="/proflie"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
+                        <div className='mx-1'>
+                            {/* <Link to="/"></Link> */}
+                            <div class="dropdown" >
+                                <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src={threeDots} alt="" />
+                                </Link>
+                                <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
+                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
+                                    {/* <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li> */}
+                                    <li><button class="dropdown-item" onClick={logout}><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     {Show === 2 &&
                         <ContactDashboard />}
                     {Show === 3 &&
