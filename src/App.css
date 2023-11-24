@@ -1418,7 +1418,49 @@ textarea.form-control {
   background-clip: border-box !important;
 }
 
+/*************** Market Place Detail ****************/
 
+.MarketPlace-card {
+  margin: 0 1rem;
+  /* padding: 0 4rem; */
+  border-radius: 20px !important;
+  border: none !important;
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  color: var(--bs-body-color);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
+/*Rating*/
+input[type=radio]{
+  display: none;
+}
 
 /**************** profile Dashboard **************/
 .profile-section {
@@ -2771,6 +2813,45 @@ input[type="file"] {
   border-radius: var(--bs-card-border-radius);
 }
 
+/************* Notification Dashboards **************/
+
+.Notifaction-Card {
+  padding: 3rem !important;
+  border-radius: 20px !important;
+  border: none !important;
+  margin: 2rem 0 !important;
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  color: var(--bs-body-color);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
 
 
 
@@ -2860,6 +2941,23 @@ input[type="file"] {
 
   .marketInner-card {
     margin: 1rem 1rem;
+  }
+
+  /************** Market Place Detail **************/
+  
+  .detailContent{
+    display: flex;
+    flex-direction: column !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .Placecontent{
+    width: 100% !important;
+  }
+
+  .AskingPlace{
+    width: 100% !important;
   }
 
   /*********** Acquirer section ***********/
@@ -3431,6 +3529,26 @@ input[type="file"] {
   .pricing-btn {
     font-size: 1rem !important;
   }
+
+  /************** Market Place Detail **************/
+  
+  .placeDetail-section{
+    padding: 0px !important;
+  }
+
+  .detailContent {
+    width: 95% !important;
+  }
+
+  .FirstContent{
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .card-img{
+    width: 100% !important;
+  }
+
 
 
   /******************** Testimonails section **********************/
@@ -4053,6 +4171,12 @@ input[type="file"] {
     left: 60px !important;
   }
 
+   /************** Market Place Detail **************/
+
+  .detailContent {
+    width: 93% !important;
+  }
+
   /************* Acquire section ****************/
   .owner-card {
     width: 100% !important;
@@ -4226,8 +4350,11 @@ input[type="file"] {
     font-size: 1.3rem !important;
   }
 
-  .firstPart {
+  /* .firstPart {
     width: 120% !important;
+  } */
+  .firstPart {
+    width: 100% !important;
   }
 
   .firstPart h3 {

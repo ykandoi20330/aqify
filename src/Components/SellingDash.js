@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 //
 import Logo from "./Selling/Frame 18.svg"
@@ -10,6 +7,7 @@ import clip from "./Selling/VectorClip.svg"
 import back from "./MarketDash/VectorBackArrow.svg"
 import upload from "./Selling/VectorUpload.svg"
 import trueImg from "./Pricing/Frame 147.png"
+import TopMessage from './TopMessage'
 import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 
 const SellingDash = () => {
@@ -53,29 +51,14 @@ const SellingDash = () => {
     return (
         <>
             <section>
-                <div className=""  style={{ background: "#EEF0FE", width: "100%", padding: "1.3rem" }}>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div>
-                            <Link to="/"><img src={BlackLogo} alt="" /></Link>
-                        </div>
-                        <div className='d-flex justify-content-end'>
-                            <div className='mx-2'><Link to="/message"><img src={message} alt="" /></Link></div>
-                            <div className='mx-1'><Link to="/"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
-                            <div className='mx-1'>
-                            <div class="dropdown" >
-                                <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={threeDots} alt="" />
-                                </Link>
-                                <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
-                                </ul>
-                            </div>
-                        </div>
+                <div className='d-flex justify-content-around'>
+
+                    <div style={{ background: "#EEF0FE", width: "100%", padding: "1.3rem" }}>
+                        <Link to="/"><img src={BlackLogo} alt="" /></Link>
                     </div>
+                    <TopMessage />
                 </div>
-            </div>
-        </section >
+            </section >
 
             <section className='first-sell d-flex justify-content-between align-items-center' style={{ padding: '3rem 6rem', background: '#EEF0FE' }}>
 

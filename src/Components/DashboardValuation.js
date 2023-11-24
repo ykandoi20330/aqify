@@ -1,13 +1,6 @@
 import React from 'react'
 import Close from "./MarketDash/VectorClose.svg"
-
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
-import arrow from "./Aqify project/Vector (1).png"
-
 import analytics from "./MarketDash/Vertical.png"
-import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 import { Link } from 'react-router-dom'
 
 const DashboardValuation = () => {

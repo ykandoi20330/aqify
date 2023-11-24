@@ -1,30 +1,23 @@
 import React from 'react'
 import Close from "./MarketDash/VectorClose.svg"
 
-import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
-import arrow from "./Aqify project/Vector (1).png"
-
 import analytics from "./MarketDash/Vertical.png"
-import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import TopMessage from './TopMessage'
+import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 
 const ValuationTool = () => {
     return (
         <>
             <section style={{ background: '#EEF0FE' }}>
                 <div className="sideContent">
-                    <div className='d-flex justify-content-between flex-row align-items-center'>
-                        <div>
+                    <div className='d-flex justify-content-around'>
+
+                        <div style={{ background: "#EEF0FE", width: "100%", padding: "1.3rem" }}>
                             <Link to="/"><img src={BlackLogo} alt="" /></Link>
                         </div>
-                        <div className="d-flex justify-content-end">
-                            <div><a href="/"><img src={message} alt="" /></a></div>
-                            <div><a href="/"><img style={{ width: '40px' }} src={profileIcon} alt="" /></a></div>
-                            <div><a href="/"><img src={threeDots} alt="" /></a></div>
-                        </div>
+                        <TopMessage />
                     </div>
 
                     <div className='my-5'>
@@ -158,7 +151,7 @@ const ValuationTool = () => {
             </section>
 
             <section>
-                <Footer/>
+                <Footer />
             </section>
         </>
     )

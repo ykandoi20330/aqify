@@ -56,17 +56,17 @@ const MarketplaceDash = () => {
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header" style={{border:'none'}}>
                             <h1 class="modal-title fs-5" id="exampleModalLabel" style={{ color: '#3247FF' }}>New Tamplate</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             {/** */}
-                            <div className="card1" style={{ width: "100%", boxShadow: "rgba(149, 157, 165, 0.2)" }}>
+                            <div className="card1" style={{ width: "100%", background:'#f4f3f9',padding:'0.7rem', boxShadow:'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;' }}>
 
                                 <div className='sideInfo d-flex'>
-                                    <div className='' id="display_image" style={{width:'100%'}}>
-                                        <div className='divInput' style={{ width: '100%',height:'35vh' }}>
+                                    <div className='' id="display_image" style={{ width: '100%' }}>
+                                        <div className='divInput' style={{ width: '100%', height: '35vh' }}>
                                             <div className='d-flex flex-column align-items-center justify-content-center'>
                                                 <div className="img-container" id="display_image">
                                                     <img src={image} className="" id="img" alt="" />
@@ -78,17 +78,37 @@ const MarketplaceDash = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="" style={{ marginLeft: "2rem" }}>
+                                    <div className="" style={{ marginLeft: "2rem", width:'70%' }}>
                                         <h3 style={{ fontSize: '30px', fontWeight: '700' }}>
                                             <div class="mb-3 my-3">
                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363', fontSize: '1.3rem' }}>Website Name</label>
                                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Full Name" />
                                             </div>
                                         </h3>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                        {/** */}
+                                        <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
+                                            <div style={{width:'48%'}}>
+                                                <div class="mb-3 my-3" >
+                                                    <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Nesxt Js" />
+                                                </div>
+                                            </div>
+                                            <div style={{width:'48%'}}>
+                                                <div class="mb-3 my-3" >
+                                                    <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Firebase" />
+                                                </div>
+                                            </div>
+                                            <div style={{width:'48%'}}>
+                                                <div class="mb-3 my-3">
+                                                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Medical" />
+                                                </div>
+                                            </div>
+                                            <div style={{width:'48%'}}>
+                                                <div class="mb-3 my-3">
+                                                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="SaaS" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/** */}
                                     </div>
                                     <div >
                                         <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
@@ -121,95 +141,35 @@ const MarketplaceDash = () => {
                                 <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                                     <div>
                                         <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput5" class="form-label" style={{ color: '#636363' }}>Please Enter Bussiness Type</label>
-                                                <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Enter Full Name" />
-                                            </div>
+                                            <label for="exampleFormControlInput5" class="form-label" style={{ color: '#636363' }}>Please Enter Bussiness Type</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Enter Full Name" />
+                                        </div>
                                     </div>
                                     <div>
                                         <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput4" class="form-label" style={{ color: '#636363' }}>Please Enter Based on Location</label>
-                                                <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Enter Full Name" />
-                                            </div>
+                                            <label for="exampleFormControlInput4" class="form-label" style={{ color: '#636363' }}>Please Enter Based on Location</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Enter Full Name" />
+                                        </div>
                                     </div>
                                     <div>
                                         <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput3" class="form-label" style={{ color: '#636363' }}>Please Enter Acquisition Type</label>
-                                                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Type" />
-                                            </div>
+                                            <label for="exampleFormControlInput3" class="form-label" style={{ color: '#636363' }}>Please Enter Acquisition Type</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Type" />
+                                        </div>
                                     </div>
                                     <div >
                                         <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput2" class="form-label" style={{ color: '#636363' }}>Please Enter valuation Amount</label>
-                                                <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="$000" />
-                                            </div>
+                                            <label for="exampleFormControlInput2" class="form-label" style={{ color: '#636363' }}>Please Enter valuation Amount</label>
+                                            <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="$000" />
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
-
-
-                            {/** */}
-                            {/* <div className="marketInner-card ">
-                                <div className="firstMarket">
-                                    <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                                    <div className='divInput' style={{ width: '100%' }}>
-                                        <div className='d-flex flex-column align-items-center justify-content-center'>
-                                            <div className="img-container" id="display_image">
-                                                <img src={image} className="" id="img" alt="" />
-                                            </div>
-                                            <div>
-                                                <input type="file" class="form-label" id="image_input1" multiple accept='images/*' onChange={input} />
-                                                <label for="image_input1" class="form-label text-center" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Listing images</span></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    *
-                                    <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Nesxt Js</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                                    </div>
-                                </div>
-                                <div style={{ padding: '2rem' }}>
-                                    <div>
-                                        <div>
-                                            <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Website Name</label>
-                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Full Name" />
-                                            </div>
-                                            <h3>DoYogo - Website</h3>
-                                            <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                                        </div>
-                                        <div className='d-flex justify-content-between my-4'>
-                                            <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                            <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                            <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                                        </div>
-                                    </div>
-                                    <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                        <div className='d-flex'>
-                                            <div class="mb-3 my-3">
-                                                <label for="exampleFormControlInput2" class="form-label" style={{ color: '#636363' }}>Please Enter Amount</label>
-                                                <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="$000" />
-                                            </div>
-                                            <div class="mb-3 my-3 mx-2">
-                                                <label for="exampleFormControlInput3" class="form-label" style={{ color: '#636363' }}>Link Your Project</label>
-                                                <input type="url" class="form-control" id="exampleFormControlInput3" placeholder="URL" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 my-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label" style={{ color: '#636363' }}>Please enter description below</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Write a Description'></textarea>
-                                    </div>
-                                </div>
-                            </div> */}
-
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Add Tamplate</button>
+                        <div class="modal-footer" style={{border:'none'}}>
+                            <button type="button" class="btn btn-secondary py-3" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary py-3">Add Tamplate</button>
                         </div>
                     </div>
                 </div>

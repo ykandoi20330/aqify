@@ -26,14 +26,12 @@ import ProjectBuying from './ProjectBuying'
 import MyProject from './MyProject'
 import MyAnalytics from "./MyAnylatics"
 
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
-import message1 from "./ProfileDashbaord/chatteardropdots1.svg"
-
 import logo1 from "./SignIn/vector.svg"
 import DashboardValuation from './DashboardValuation'
 import ProofOfFund from './ProofOfFund'
 import Favourite from './Favourite'
+import NotifactionDash from './NotifactionDash'
+import TopMessage from './TopMessage'
 
 const MainDashboard = () => {
 
@@ -105,7 +103,7 @@ const MainDashboard = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="nav-link1 text-white" onClick={Show => setShow("")}> 
+                                            <Link class="nav-link1 text-white" onClick={Show => setShow(17)}> 
                                                 <img style={{ marginRight: "1rem" }} src={bell} alt="" />
                                                 Notifications
                                             </Link>
@@ -169,22 +167,8 @@ const MainDashboard = () => {
                 </nav>
 
                 <div className="sideContent">
-                    <div className="d-flex justify-content-end">
-                        <div className='mx-2'><Link to="/message"><img src={message1} alt="" /></Link></div>
-                        <div className='mx-1'><Link to="/proflie"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
-                        <div className='mx-1'>
-                            {/* <Link to="/"></Link> */}
-                            <div class="dropdown" >
-                                <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={threeDots} alt="" />
-                                </Link>
-                                <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
-                                    <li><Link class="dropdown-item" to="/proflie"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <TopMessage/>
+
                     {Show === 2 &&
                         <ContactDashboard />}
                     {Show === 3 &&
@@ -228,6 +212,9 @@ const MainDashboard = () => {
                     }
                     {Show === 16 &&
                         <Favourite />
+                    }
+                    {Show === 17 &&
+                        <NotifactionDash />
                     }
                 </div>
             </section >

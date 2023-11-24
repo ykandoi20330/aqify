@@ -317,7 +317,7 @@ const Home1 = () => {
             <section>
                 <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
                     <h2 className='fourth-h1'>Acqify Premium</h2>
-                    <span style={{ color: '#636363' }}>Everything you need to acquire your next project.</span>
+                    <span className='text-center' style={{ color: '#636363' }}>Everything you need to acquire your next project.</span>
                 </div>
                 <div className="pricing-back" style={{ height: '120vh' }}>
                     <div className="pricing-card" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ height: '90%' }}>
@@ -389,6 +389,82 @@ const Home1 = () => {
                         </div>
                         <div className='my-4'>
                             <Link style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary' to="/singup">Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='d-flex align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Join Premium Now <i class="fa-solid fa-chevron-right" style={{color: "#ffffff"}}></i>
+                </button>
+
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style={{borderRadius:'20px'}}>
+                            <div class="modal-header" style={{border:'none'}}>
+                                <div>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style={{fontWeight:'700'}}>Pricing plans</h1>
+                                    <span>Choose a plan that's right for you.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div className='' style={{border:'1px solid lightgray',borderRadius:'20px',padding:'2rem'}}>
+                                    <div class="form-check d-flex justify-content-between">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
+                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault1">
+                                                Premium Annually
+                                            </label>
+                                            <br />
+                                            <span>Get full access every 6 months.</span>
+                                            <br />
+                                            <br />
+                                            <ul>
+                                                <li>Project metrics</li>
+                                                <li>Send Message</li>
+                                                <li>Make Offers</li>
+                                                <li>One Click Purchase</li>
+                                                <li>Community Access</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3>$149<span style={{fontSize:'15px',color:'#636363'}}>/6mths</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='my-3' style={{border:'1px solid lightgray',borderRadius:'20px',padding:'2rem'}}>
+                                    <div class="form-check d-flex justify-content-between">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
+                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault2">
+                                                Pro Annually
+                                            </label>
+                                            <br />
+                                            <span>Get full access on an annual basis.</span>
+                                            <br />
+                                            <br />
+                                            <ul>
+                                                <li>Project metrics</li>
+                                                <li>Send Message</li>
+                                                <li>Make Offers</li>
+                                                <li>One Click Purchase</li>
+                                                <li>Community Access</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3>$199<span style={{fontSize:'15px',color:'#636363'}}>/year</span></h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer" style={{border:'none'}}>
+                                <button type="button" class="btn btn-primary py-2 px-5">Confirm</button>
+                            </div>
                         </div>
                     </div>
                 </div>

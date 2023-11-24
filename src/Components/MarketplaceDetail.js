@@ -54,13 +54,13 @@ const MarketplaceDetail = () => {
 
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
 
-                <section style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
-                    <div className="card d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
+                <section className='placeDetail-section' style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
+                <div className="detailContent MarketPlace-card d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
 
-                        <div style={{ width: '55%', overflowY: 'scroll' }}>
-                            <div className='d-flex align-items-center'>
+                        <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
+                            <div className='FirstContent d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={400} src={cardProfile} alt="" />
+                                    <img className='card-img' width={400} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
@@ -178,7 +178,7 @@ const MarketplaceDetail = () => {
                             </div>
                         </div>
 
-                        <div style={{ width: '40%', position: "sticky" }}>
+                        <div className='AskingPlace' style={{ width: '40%', position: "sticky" }}>
                             <div className="sideCard d-flex flex-column justify-content-between" style={{ background: '#EEF0FE', borderRadius: '10px', padding: '1rem', height: '100%',overflowY:'scroll' }}>
                                 <div>
                                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
