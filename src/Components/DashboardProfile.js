@@ -24,19 +24,19 @@ import "react-toastify/dist/ReactToastify.css";
 // import pic from '../images/profile-images/group-11.svg'
 
 //card content
-// import ContactDashboard from './ContactDashboard'
-// import MessageDash from './MessageDash'
-// import message from "./ProfileDashbaord/chatteardropdots.svg"
-// import PaymentDash from './PaymentDash'
-// import ChangePassword from './ChangePassword'
-// import Dashboard from './Dashboard'
-// import PricingDash from './PricingDash'
-// import MarketplaceDash from './MarketplaceDash'
-// import MarketplaceDash2 from './MarketplaceDash2'
-// import MarketDashDetail from './MarketDashDetail'
-// import ProjectBuying from './ProjectBuying'
-// import MyProject from './MyProject'
-// import MyAnalytics from "./MyAnylatics"
+import ContactDashboard from './ContactDashboard'
+import MessageDash from './MessageDash'
+import message from "./ProfileDashbaord/chatteardropdots.svg"
+import PaymentDash from './PaymentDash'
+import ChangePassword from './ChangePassword'
+import Dashboard from './Dashboard'
+import PricingDash from './PricingDash'
+import MarketplaceDash from './MarketplaceDash'
+import MarketplaceDash2 from './MarketplaceDash2'
+import MarketDashDetail from './MarketDashDetail'
+import ProjectBuying from './ProjectBuying'
+import MyProject from './MyProject'
+import MyAnalytics from "./MyAnylatics"
 
 
 import logo1 from "./SignIn/vector.svg"
@@ -49,6 +49,19 @@ import Favourite from './Favourite'
 const DashboardProfile = () => {
 
     const [visible, setVisible] = useState(true)
+    const [own, setOwn] = useState(1)
+    const [Show, setShow] = useState(6)
+
+     // const [profileImage,setprofileImage]=useState(pic);
+       
+     const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        userName: '',
+        about: '',
+        role: ''
+    });
+
 
     // import logo1 from "./SignIn/vector.svg"
 
@@ -61,20 +74,14 @@ const DashboardProfile = () => {
             theme: "dark",
             color: "blue"
         };
-
-        // const [profileImage,setprofileImage]=useState(pic);
-        const [own, setOwn] = useState(1)
-        const [Show, setShow] = useState(6)
-        const [formData, setFormData] = useState({
-            firstName: '',
-            lastName: '',
-            userName: '',
-            about: '',
-            role: ''
-        });
     }
 
+    const handleChange = () =>{
+        //
+    }
 
+    let collectData;
+        
         return (
             <>
                 <section className='profile-section'>

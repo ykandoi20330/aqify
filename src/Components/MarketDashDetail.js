@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 
 // import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'

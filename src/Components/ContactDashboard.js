@@ -1,5 +1,3 @@
-import React from 'react'
-
 //side content
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom';
