@@ -3193,6 +3193,12 @@ input[type="file"] {
     font-size: 16px !important;
   }
 
+  /***************** Market section ********************/
+
+  .market-btns{ 
+    width: 100% !important;
+  }
+
   /***************** Sign in Section *******************/
   .signIn-card {
     width: 55% !important;
@@ -3530,6 +3536,12 @@ input[type="file"] {
     font-size: 1rem !important;
   }
 
+  /*************** Market section ****************/
+
+  .MarketTool-card {
+    height: 55vh !important;
+  }
+
   /************** Market Place Detail **************/
   
   .placeDetail-section{
@@ -3805,7 +3817,7 @@ input[type="file"] {
 
   /********************* Market Section ************************/
   .MarketTool-card {
-    height: 40vh !important;
+    height: 50vh !important;
   }
 
   /********************* Advisory Section ************************/

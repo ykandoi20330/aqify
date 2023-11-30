@@ -10,9 +10,10 @@ import search from "./MarketDash/VectorSearch.svg";
 
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Navbar from "./Navbar"
 //logo
-import Logo from "./Aqify project/Frame 7.png";
-import upload from "./Selling/VectorUpload.svg";
+// import Logo from "./Aqify project/Frame 7.png";
+// import upload from "./Selling/VectorUpload.svg";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -239,7 +240,12 @@ const Market = () => {
   return (
     <>
       {/**Nav section */}
+
       <section>
+        <Navbar />
+      </section>
+
+      {/* <section>
         <ToastContainer />
         <div className="hero1">
           <nav
@@ -281,7 +287,7 @@ const Market = () => {
                   ></button>
                 </div>
                 <div class="offcanvas-body">
-                  {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link> */}
+                  <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link>
 
                   <ul className="ul  navbar-nav  nav justify-content-between">
                     <li className="nav-item">
@@ -340,11 +346,11 @@ const Market = () => {
             </div>
           </nav>
         </div>
-      </section>
+      </section> */}
 
       {/** modal for add cart */}
 
-      <div
+      {/* <div
         class="modal fade"
         id="exampleModal"
         tabindex="-1"
@@ -371,7 +377,6 @@ const Market = () => {
             <div class="modal-body">
               <div className="marketInner-card ">
                 <div className="firstMarket">
-                  {/* <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} /> */}
                   <div className="divInput" style={{ width: "100%" }}>
                     <div className="d-flex flex-column align-items-center justify-content-center">
                       <div className="img-container" id="display_image">
@@ -403,7 +408,7 @@ const Market = () => {
                       </div>
                     </div>
                   </div>
-                  {/** */}
+
                   <div
                     className="firstSide-top"
                     style={{
@@ -477,7 +482,6 @@ const Market = () => {
                           onChange={handleChange}
                         />
                       </div>
-                      {/* <h3>DoYogo - Website</h3> */}
                       <Link
                         style={{
                           padding: "0.5rem 1.5rem",
@@ -597,7 +601,7 @@ const Market = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/** */}
       <section className="pricing-first-section">
@@ -615,10 +619,10 @@ const Market = () => {
             <div>
               <div className="my-5">
                 <h1 className="main-h1 col-6">
-                  Welcome to the Marketplace
+                  Welcome to the Marketplace <br/>
                   <TypeAnimation
                     className="typeAnimation marketTypeAnimation"
-                    style={{ marginLeft: "1rem", fontSize: "3rem" }}
+                    style={{fontSize: "3rem" }}
                     sequence={[
                       "Ecommerce", // Types 'One'
                       1000, // Waits 1s
@@ -664,7 +668,7 @@ const Market = () => {
       >
         <div className="MarketTool-card">
           <div className="second-line d-flex">
-            <div class="mb-3 my-3 form-floating" style={{ width: "100%" }}>
+            <div class="form-floating mb-2" style={{ width: "100%" }}>
               <input
                 style={{ width: "100%" }}
                 type="email"
@@ -680,10 +684,10 @@ const Market = () => {
           </div>
 
           <div className="first-line d-flex">
-            <div class="form-floating mr-2" style={{ width: "100%" }}>
+            <div class="form-floating" style={{ width: "100%" }}>
               <select
                 style={{ width: "97%", color: "#3247ff" }}
-                class="form-control form-select form-select-lg"
+                class="form-control form-select form-select-lg mb-2"
                 value={filter.category}
                 onChange={handleCategoryChange}
                 aria-label="Large select example"
@@ -711,12 +715,13 @@ const Market = () => {
                                 <option value="HTML,CSS">HTML,CSS</option>
                             </select> */}
               <div style={{ position: "relative" }}>
-                <div 
+                <div  class="form-control mb-2 px-5 d-flex align-items-center"
                   style={{
-                    width: '97%', color: '#3247ff',
+                    width: '95%', color: '#3247ff',
                     border: "1px solid #ccc",
                     // padding: "5px",
                     cursor: "pointer",
+                    height:'8vh',
                   }}
                   onClick={toggleDropdown}
                 >
@@ -767,7 +772,7 @@ const Market = () => {
                 )}
                 {/* Rest of your component */}
               </div>
-              <label for="floatingInputValue">
+              <label className="" for="floatingInputValue">
                 <img src="" alt="" />
                 <i
                   class="fa-solid fa-screwdriver-wrench"
@@ -796,7 +801,7 @@ const Market = () => {
             </div>
             
           </div>
-          <button style={{ padding: "18px 48px", width:"20%" }} className="btn btn-primary" onClick={applyFilters}>Apply Filter
+          <button style={{width:"20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
                 <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt=""/>{" "}
           </button>
         </div>
