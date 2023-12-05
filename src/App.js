@@ -27,6 +27,7 @@ import MessageDash2 from './Components/MessageDash2';
 import PaymentCardDash from './Components/PaymentCardDash';
 import DashboardProfile from './Components/DashboardProfile';
 import Home1 from './Components/Home1';
+import SellerDash from './Components/SellerDash';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/message" element={<MessageDash2 />} />
           <Route path="/payCart" element={<PaymentCardDash />} />
           <Route path="/proflie" element={<DashboardProfile />} />
+          <Route path="/seller" element={<SellerDash />} />
         </Routes>
         {/* <Footer /> */}
       </HashRouter>

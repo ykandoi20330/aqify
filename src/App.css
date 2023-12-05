@@ -2888,6 +2888,7 @@ input[type="file"] {
   /****************** marketplace 2 Dashboard section **********************/
   .marketDash2-back {
     height: 100% !important;
+    display: unset !important;
   }
 
   .market-card {
@@ -3222,7 +3223,7 @@ input[type="file"] {
 
   .dashboard {
     position: absolute;
-    top: 0;
+    top: 15px !important;
   }
 
   /********************* Dashobard Pricing Section ************************/
@@ -4837,6 +4838,12 @@ input[type="file"] {
   .advisory-btn {
     font-size: 0px !important;
   }
+
+  /* Dashboard Market place*/
+
+  .market-card {
+    padding: 1rem !important;
+  }
 }
 
 @media screen and (max-width:400px) {
@@ -4856,6 +4863,15 @@ input[type="file"] {
 
   .round-middle-img {
     top: 95vh !important;
+  }
+
+  /* Dashboard Market place*/
+
+  .market-card {
+    padding: 1rem !important;
+  }
+  .card1 {
+    width: 100% !important;
   }
 
 }

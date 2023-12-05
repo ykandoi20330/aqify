@@ -18,6 +18,7 @@ import upload from "./Selling/VectorUpload.svg"
 const MarketplaceDash = () => {
 
     const [show, setShow] = useState(1)
+    const [number, setNumber] = useState(0)
 
     //for image Upload
     const [image, setImage] = useState(null)
@@ -29,6 +30,7 @@ const MarketplaceDash = () => {
             setImage(URL.createObjectURL(files[0]))
         }
     }
+
 
     return (
         <>
@@ -47,7 +49,7 @@ const MarketplaceDash = () => {
                     </div>
                 </div>
                 <div className='AddButton' style={{ width: '16%' }}>
-                    <Link class="btn btn-primary mx-2" to="/" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add List<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link>
+                    <Link class="btn btn-primary mx-2" to="/seller" >Add List<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link> {/* type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" */}
                 </div>
             </section>
 
@@ -56,13 +58,13 @@ const MarketplaceDash = () => {
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header" style={{border:'none'}}>
+                        <div class="modal-header" style={{ border: 'none' }}>
                             <h1 class="modal-title fs-5" id="exampleModalLabel" style={{ color: '#3247FF' }}>New Tamplate</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             {/** */}
-                            <div className="card1" style={{ width: "100%", background:'#f4f3f9',padding:'0.7rem', boxShadow:'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;' }}>
+                            <div className="card1" style={{ width: "100%", background: '#f4f3f9', padding: '0.7rem', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;' }}>
 
                                 <div className='sideInfo d-flex'>
                                     <div className='' id="display_image" style={{ width: '100%' }}>
@@ -78,7 +80,7 @@ const MarketplaceDash = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="" style={{ marginLeft: "2rem", width:'70%' }}>
+                                    <div className="" style={{ marginLeft: "2rem", width: '70%' }}>
                                         <h3 style={{ fontSize: '30px', fontWeight: '700' }}>
                                             <div class="mb-3 my-3">
                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363', fontSize: '1.3rem' }}>Website Name</label>
@@ -87,22 +89,22 @@ const MarketplaceDash = () => {
                                         </h3>
                                         {/** */}
                                         <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
-                                            <div style={{width:'48%'}}>
+                                            <div style={{ width: '48%' }}>
                                                 <div class="mb-3 my-3" >
                                                     <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Nesxt Js" />
                                                 </div>
                                             </div>
-                                            <div style={{width:'48%'}}>
+                                            <div style={{ width: '48%' }}>
                                                 <div class="mb-3 my-3" >
                                                     <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Firebase" />
                                                 </div>
                                             </div>
-                                            <div style={{width:'48%'}}>
+                                            <div style={{ width: '48%' }}>
                                                 <div class="mb-3 my-3">
                                                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Medical" />
                                                 </div>
                                             </div>
-                                            <div style={{width:'48%'}}>
+                                            <div style={{ width: '48%' }}>
                                                 <div class="mb-3 my-3">
                                                     <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="SaaS" />
                                                 </div>
@@ -167,7 +169,7 @@ const MarketplaceDash = () => {
 
                             </div>
                         </div>
-                        <div class="modal-footer" style={{border:'none'}}>
+                        <div class="modal-footer" style={{ border: 'none' }}>
                             <button type="button" class="btn btn-secondary py-3" data-bs-dismiss="modal">Cancel</button>
                             <button type="button" class="btn btn-primary py-3">Add Tamplate</button>
                         </div>
@@ -259,8 +261,18 @@ const MarketplaceDash = () => {
                             <div className="offersRecieved" style={{ width: '45%' }}>
                                 <label for="inputEmail4" class="form-label">Offers Recieved</label>
                                 <div className='d-flex'>
-                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="Yes" />
-                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="No" />
+                                    {/* <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="Yes" /> */}
+                                    {/* <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="No" /> */}
+                                    <div>
+                                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option1" placeholder="Yes" autocomplete="off" value=""/>
+                                        <label class="btn1" style={{ margin: '0.3rem 0.7rem 0 0',padding:'10px 40px', background: "#EEF0FE"}} for="option1">
+                                            Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option2" placeholder="No" autocomplete="off" value=""/>
+                                        <label class="btn1" style={{ padding: "10px 40px", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option2">
+                                            No</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -277,8 +289,18 @@ const MarketplaceDash = () => {
                         <div className='my-3'>
                             <div>
                                 <label style={{ color: "#636363" }} for="customRange1" class="form-label">Project Age ( premium listing )</label>
-                                <input type="range" class="form-range" id="customRange1" />
+                                <input type="range" min="1" max='10' value={number} onChange={(e) => setNumber(e.target.value)} class="form-range" id="customRange1" />
+                                <div className='d-flex justify-content-between'>
+                                    <span>
+                                        <span className='number'>{number} Years</span>
+                                    </span>
+                                    <span className='number'>{number} Years</span>
+                                </div>
                             </div>
+                        </div>
+                        <div className='my-2 d-flex  justify-content-end'>
+                            <Link className='btn btn-outline-primary rounded-pill py-2 px-4' to="/">clear</Link>
+                            <Link className='btn btn-outline-primary rounded-pill py-2 px-4 mx-2' to="/">apply</Link>
                         </div>
                     </div>
 

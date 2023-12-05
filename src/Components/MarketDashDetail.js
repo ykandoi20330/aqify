@@ -43,11 +43,12 @@ const MarketDashDetail = () => {
                     <section>
                         <div className="sideContent d-flex justify-content-between">
                             <div>
-                                <Link onClick={show => setShow(2)}><img src={back} alt="" /></Link>
-                                <span className='mx-3' style={{ color: '#636363' }}>Go back Marketplace</span>
+                                {/* <Link onClick={show => setShow(2)}><img src={back} alt="" /></Link>
+                                <span className='mx-3' style={{ color: '#636363' }}>Go back Marketplace</span> */}
+                                <br />
                             </div>
                             <div>
-                                <Link className='btn btn-primary rounded-pill px-5 py-2' onClick={show => setShow(3)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i></Link>
+                                <Link className='btn btn-primary rounded-pill px-5 py-2' data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={show => setShow(2)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i></Link>
                             </div>
                         </div>
                     </section>
@@ -72,6 +73,7 @@ const MarketDashDetail = () => {
                                 </div>
                                 <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
                                     <h3 className='card-h3'>Metrics</h3>
+                                    <Link> <i class="fa-solid fa-heart"></i></Link>
                                 </div>
 
                                 <div className='my-4'>
@@ -83,10 +85,21 @@ const MarketDashDetail = () => {
                                 </div>
 
                                 <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
-                                    <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+
+                                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div className='d-flex justify-content-between' style={{ position: 'absolute', width: '100%' }}>
-                                        <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }}><img src={Left} alt="" /></Link>
-                                        <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }}><img src={Right} alt="" /></Link>
+                                        <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><img src={Left} alt="" /></Link>
+                                        <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><img src={Right} alt="" /></Link>
                                     </div>
                                 </div>
 
@@ -204,6 +217,10 @@ const MarketDashDetail = () => {
                                             <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                             <span className='mx-2' >Watch video Path</span>
                                         </Link>
+                                        <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                            <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                                            <span className='mx-2' >Share</span>
+                                        </Link>
                                         <div className='my-3'>
                                             <Link style={{ width: '100%' }} className='btn btn-primary' onClick={buy => setBuy(2)}><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
                                         </div>
@@ -232,7 +249,44 @@ const MarketDashDetail = () => {
 
                 {show === 2 && <MarketplaceDash2 />}
 
-                {show === 3 &&
+                <section>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} class="modal-content">
+                                <div class="modal-header" style={{ border: 'none' }}>
+                                    <br />
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <h6 className='text-center mb-4'>How Was the Listing and Pricing?</h6>
+                                    </div>
+                                    <div style={{ fontSize: '1.7rem' }} className='d-flex align-items-center justify-content-center'>
+                                        {[...Array(5)].map((star, index) => {
+                                            const currentRating = index + 1
+                                            return (
+                                                <label >
+                                                    <input type="radio" value={currentRating} onClick={() => setRating(currentRating)} />
+                                                    <FaStar className='star mx-2'
+                                                        color={currentRating <= (rating || hover) ? "#3247FF" : '#fff'}
+                                                        onMouseEnter={() => setHover(currentRating)}
+                                                        onMouseLeave={() => setHover(null)}
+                                                    />
+                                                </label>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className='mt-2 d-flex justify-content-around'>
+                                        <div><span style={{ fontSize: '11px' }}>Very bad</span></div>
+                                        <div><span style={{ fontSize: '11px' }}>Very good</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* {show === 3 &&
                     <>
                         <section>
                             <div className="sideContent d-flex justify-content-between">
@@ -263,7 +317,7 @@ const MarketDashDetail = () => {
                                                     const currentRating = index + 1
                                                     return (
                                                         <label >
-                                                            <input type="radio"  value={currentRating} onClick={() => setRating(currentRating)} />
+                                                            <input type="radio" value={currentRating} onClick={() => setRating(currentRating)} />
                                                             <FaStar className='star mx-2'
                                                                 color={currentRating <= (rating || hover) ? "#3247FF" : '#fff'}
                                                                 onMouseEnter={() => setHover(currentRating)}
@@ -435,6 +489,10 @@ const MarketDashDetail = () => {
                                                 <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                                 <span className='mx-2' >Watch video Path</span>
                                             </Link>
+                                            <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                                <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                                                <span className='mx-2' >Share</span>
+                                            </Link>
                                             <div className='my-3'>
                                                 <Link style={{ width: '100%' }} className='btn btn-primary' onClick={buy => setBuy(2)}><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
                                             </div>
@@ -459,7 +517,9 @@ const MarketDashDetail = () => {
                             </div>
 
                         </section>
-                    </>} </>}
+                    </>}  */}
+
+            </>}
 
             {buy === 2 &&
                 <PaymentDash />

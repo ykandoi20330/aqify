@@ -55,7 +55,7 @@ const MarketplaceDetail = () => {
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
 
                 <section className='placeDetail-section' style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
-                <div className="detailContent MarketPlace-card d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
+                    <div className="detailContent MarketPlace-card d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
 
                         <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
                             <div className='FirstContent d-flex align-items-center'>
@@ -82,11 +82,22 @@ const MarketplaceDetail = () => {
                                 </span>
                             </div>
 
-                            <div className="imgSlider  d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
-                                <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                            <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
+
+                                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div className='d-flex justify-content-between' style={{ position: 'absolute', width: '100%' }}>
-                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }}><img src={Left} alt="" /></Link>
-                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }}><img src={Right} alt="" /></Link>
+                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><img src={Left} alt="" /></Link>
+                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><img src={Right} alt="" /></Link>
                                 </div>
                             </div>
 
@@ -179,7 +190,7 @@ const MarketplaceDetail = () => {
                         </div>
 
                         <div className='AskingPlace' style={{ width: '40%', position: "sticky" }}>
-                            <div className="sideCard d-flex flex-column justify-content-between" style={{ background: '#EEF0FE', borderRadius: '10px', padding: '1rem', height: '100%',overflowY:'scroll' }}>
+                            <div className="sideCard d-flex flex-column justify-content-between" style={{ background: '#EEF0FE', borderRadius: '10px', padding: '1rem', height: '100%', overflowY: 'scroll' }}>
                                 <div>
                                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
                                         <h5 className='card-h3'>Asking Price</h5>
@@ -188,22 +199,26 @@ const MarketplaceDetail = () => {
                                         <h1>$3000</h1>
                                     </div>
 
-                                    <div className='my-3' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center' }}>
+                                    <Link to="/message" className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <img src={blueMsg} alt="" />
                                         <span className='mx-2'>Message Seller</span>
-                                    </div>
-                                    <div className='my-3' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center' }}>
+                                    </Link>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                                         <span className='mx-2'>Audio Call</span>
-                                    </div>
-                                    <div className='my-3' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center' }}>
+                                    </Link>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <img src={offer} alt="" />
                                         <span className='mx-2' >Make Offer</span>
-                                    </div>
-                                    <div className='my-3' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center' }}>
+                                    </Link>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                         <span className='mx-2' >Watch video Path</span>
-                                    </div>
+                                    </Link>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                        <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                                        <span className='mx-2' >Share</span>
+                                    </Link>
                                     <div className='my-3'>
                                         <Link style={{ width: '100%' }} className='btn btn-primary' to="/singup"><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
                                     </div>
