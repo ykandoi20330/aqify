@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // card logo images
 import cardLogo1 from "./Market/Frame 33.png"
@@ -15,18 +15,27 @@ import { Link } from 'react-router-dom'
 
 const MarketplaceDash2 = () => {
 
+    const [card, setCard] = useState([])
+
     const { favourite, addToFavorites, removeFromFavorites } = useAppContext();
 
     console.log('favorites are', favourite)
 
-    const [card, setCard] = useState([])
 
     const favoriteChecker = (id) => {
         const boolean = favourite.some((card) => card.id === id);
         return boolean;
     }
 
-    const [show, setShow] = useState(1)
+    useEffect(() => {
+        Promise.resolve('Promise')
+            .then((res) => {
+                console.log(res)
+                setCard(res)
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
     // const [show, setShow] = useState(1)
 
     const [detail, setDetail] = useState(1)
@@ -39,10 +48,11 @@ const MarketplaceDash2 = () => {
                         <section className="marketDash2-back" style={{ height: '180vh' }} >
                             <div className='d-flex'>
                                 <div className="market-card" style={{ padding: "2rem" }} >
-                                    {[...Array(4)].map((num ,index) => {
+                                {/* [...Array(4)] */}
+                                    {[...card].map((num, index) => {
                                         const id = index + 1
                                         return (
-                                            <div className="card1" id={1} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                            <div className="card1" key={index.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
 
                                                 <div className='sideInfo d-flex'>
                                                     <div className='secondPart'>
@@ -66,16 +76,16 @@ const MarketplaceDash2 = () => {
                                                 <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                                     <h3 className='card-h3'>Metrics</h3>
                                                     <div className='d-flex'>
-                                                        <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img style={{ width: '20px' }} src={arrow} alt="" /> </button>
+                                                        <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img  className='mx-2' style={{ width: '15px' }}src={arrow} alt="" /> </button>
                                                         {/* <div >
                                                     <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option16" autocomplete="off"  onClick={()=>addToFavorites(book)} />
                                                     <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option16">
                                                         <i class="fa-solid fa-heart"></i></label>
                                                 </div> */}
-                                                        {favoriteChecker() ?
-                                                            <Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart"></i></Link>
+                                                        {favoriteChecker(card.id) ?
+                                                            (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart"></i></Link>)
                                                             :
-                                                            <Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart"></i></Link>}
+                                                            (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart"></i></Link>)}
                                                     </div>
                                                 </div>
 
