@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'
@@ -23,16 +23,52 @@ import smallMap from "./MarketDash/VectorSmap.svg"
 import Right from "./MarketDash/VectorRight.svg"
 import Left from "./MarketDash/VectorLeft.svg"
 
-import MarketplaceDash2 from "./MarketplaceDash2"
-
+import MarketplaceDash2 from './MarketplaceDash2'
+import axios from 'axios'
+import {jwtDecode} from "jwt-decode"
 
 import { FaStar } from "react-icons/fa"
 
 const MarketDashDetail = () => {
 
+    useEffect(() => {
+        getCard();
+    }, []);
+
+    const getCard = async () => {
+        const token = localStorage.getItem("token");
+        if (token) {
+            const decoded = jwtDecode(token);
+            const id = decoded.id;
+            try {
+                const response = await axios.get(
+                    "http://localhost:5000/business/getbusiness",
+                    {
+                        headers: { "x-auth-token": id },
+                    }
+                );
+                console.log(response.data.business);
+                setCard(response.data.business);
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    };
+
     const [show, setShow] = useState(1)
+
+    const [buy, setBuy] = useState(1)
+    const [card, setCard] = useState([]);
+    
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
+
+    const handleShare = () => {
+        console.log("share")
+        window.location.href = 'whatsapp://send?text=http://localhost:3000/aqify#/proflie';
+    }
+
 
     return (
         <>

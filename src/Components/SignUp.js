@@ -91,10 +91,12 @@ const SignUp = () => {
         if (response.status === 201) {
           const data = await response.json();
           localStorage.setItem('user',JSON.stringify(data));
+          localStorage.setItem("token",data.token);
           setFormData({
             userName: '',
             email: '',
             password: '',
+            role:'',
           });
           navigate('/MainDashboard')
         }
