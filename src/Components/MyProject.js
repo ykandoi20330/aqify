@@ -23,7 +23,7 @@ const MyProject = () => {
                             </div>
                             <div className='My-btns'>
                                 {/* <Link className='btn btn-outline-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} onClick={show => setShow(2)}  > <img style={{ width: '10%', marginRight: '10px' }} src={anylatics} alt="" />Analytics</Link> */}
-                                <Link className='Myproject-btn btn btn-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="/sellingDash" > <img style={{ width: '10%', marginRight: '10px' }} src={add} alt="" />New Project</Link>
+                                <Link className='Myproject-btn btn btn-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="/seller" > <img style={{ width: '10%', marginRight: '10px' }} src={add} alt="" />New Project</Link>
                             </div>
                         </div>
 

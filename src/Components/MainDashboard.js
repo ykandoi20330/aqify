@@ -11,43 +11,23 @@ import heart from "./ProfileDashbaord/VectorHeart.svg"
 import proof from "./ProfileDashbaord/VectorProof.svg"
 
 //card content
-import { Link } from 'react-router-dom'
-import ContactDashboard from './ContactDashboard'
-import MessageDash from './MessageDash'
+import { Link, NavLink } from 'react-router-dom'
 import message from "./ProfileDashbaord/chatteardropdots.svg"
-import PaymentDash from './PaymentDash'
-import ChangePassword from './ChangePassword'
-import Dashboard from './Dashboard'
-import PricingDash from './PricingDash'
-import MarketplaceDash from './MarketplaceDash'
-import MarketplaceDash2 from './MarketplaceDash2'
-import MarketDashDetail from './MarketDashDetail'
-import ProjectBuying from './ProjectBuying'
-import MyProject from './MyProject'
-import MyAnalytics from "./MyAnylatics"
-
 import logo1 from "./SignIn/vector.svg"
-import DashboardValuation from './DashboardValuation'
-import ProofOfFund from './ProofOfFund'
-import Favourite from './Favourite'
-import NotifactionDash from './NotifactionDash'
 import TopMessage from './TopMessage'
 
-import message1 from "./ProfileDashbaord/chatteardropdots1.svg"
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 import { useNavigate } from 'react-router-dom'
 const MainDashboard = () => {
 
-    const [Show, setShow] = useState(1)
-    const navigate=useNavigate();
-    
-    const logout=()=>{
+    const navigate = useNavigate();
+
+    const logout = () => {
         localStorage.clear();
         navigate('/');
     }
-    return (
+
+     return (
         <>
             <section className='profile-section'>
                 <nav className='navbar navbar-expand-lg dashboard' style={{ top: '0px' }}>
@@ -73,18 +53,18 @@ const MainDashboard = () => {
                                         <br />
                                     </Link>
                                     <hr />
-                                    <Link className='text-white' style={{ textDecoration: 'none' }} onClick={Show => setShow(1)}>
+                                    <NavLink className='text-white' style={{ textDecoration: 'none' }} to="/MainDashboard/Dashbaord" >
                                         <h2> Dashboard</h2>
-                                    </Link>
-                                    <ul class="nav flex-column mb-auto"> {/**nav-pills */}
+                                    </NavLink>
+                                    <ul class="nav flex-column mb-auto">
                                         <li class="nav-item">
-                                            <Link to="#" class="nav-link1 text-white" aria-current="page" onClick={Show => setShow(8)}>
+                                            <Link to="/MainDashboard/MarketDash" class="nav-link1 text-white" aria-current="page" >
                                                 <img style={{ marginRight: "1rem" }} src={list} alt="" />
                                                 Lists
                                             </Link>
                                         </li>
                                         <li class="nav-item">
-                                            <Link to="#" class="nav-link1 text-white" aria-current="page" onClick={Show => setShow(16)}>
+                                            <Link to="/MainDashboard/favorites" class="nav-link1 text-white" aria-current="page" >
                                                 <img style={{ marginRight: "1rem" }} src={heart} alt="" />
                                                 Favourite Lists
                                             </Link>
@@ -95,25 +75,25 @@ const MainDashboard = () => {
                                                 My Projects
                                             </Link>
                                             <ul class="dropdown-menu dropdown-menu-dark">
-                                                <li><Link class="dropdown-item" onClick={Show => setShow(12)}>Project Lists</Link></li>
-                                                <li><Link class="dropdown-item" onClick={Show => setShow(11)}>Projects Buying</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/MyProject" >Project Lists</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/ProjectBuying">Projects Buying</Link></li>
                                             </ul>
                                         </li>
 
                                         <li>
-                                            <Link onClick={Show => setShow(13)} class="nav-link1 text-white">
+                                            <Link to="/MainDashboard/MyAnalytics" class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={analytic} alt="" />
                                                 Analytics
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link onClick={Show => setShow(3)} class="nav-link1 text-white">
+                                            <Link to="/MainDashboard/MessageDash" class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={message} alt="" />
                                                 Messages
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="nav-link1 text-white" onClick={Show => setShow(17)}> 
+                                            <Link to="/MainDashboard/Notification" class="nav-link1 text-white" >
                                                 <img style={{ marginRight: "1rem" }} src={bell} alt="" />
                                                 Notifications
                                             </Link>
@@ -124,33 +104,32 @@ const MainDashboard = () => {
                                                 Settings
                                             </Link>
                                             <ul class="dropdown-menu dropdown-menu-dark">
-                                                <li><Link class="dropdown-item" to='/proflie'>Profile</Link></li>
-                                                <li><Link class="dropdown-item" onClick={Show => setShow(5)}>Change Password</Link></li>
-                                                <li><Link class="dropdown-item" onClick={Show => setShow(4)} >Payments</Link></li>
+                                                <li><Link class="dropdown-item" to='/MainDashboard/proflie'>Profile</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/ChangePassword" >Change Password</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/PaymentDash"  >Payments</Link></li>
                                                 <li><Link class="dropdown-item">Connect</Link></li>
-                                            </ul> 
+                                            </ul>
                                         </li>
                                         <li>
-                                            <Link to="#" class="nav-link1 text-white" onClick={Show => setShow(15)}>
+                                            <Link to="/MainDashboard/ProofFund" class="nav-link1 text-white" >
                                                 <img style={{ marginRight: "1rem" }} src={proof} alt="" />
                                                 Proof of Funds
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="#" class="nav-link1 text-white" onClick={Show => setShow(7)}>
+                                            <Link to="/MainDashboard/PricingDash" class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={tag} alt="" />
                                                 pricings
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link onClick={Show => setShow(2)} class="nav-link1 text-white">
+                                            <Link to="/MainDashboard/contactDashboard" class="nav-link1 text-white">
                                                 <img style={{ marginRight: "1rem" }} src={address} alt="" />
                                                 Contact us
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link onClick={Show => setShow(14)} class="nav-link1 text-white">
-                                                {/* <img style={{ marginRight: "1rem" }} src={""} alt="" /> */}
+                                            <Link to="/MainDashboard/DashValuation" class="nav-link1 text-white">
                                                 <i class="fa-solid fa-calculator" style={{ color: "#f5f5f5", fontSize: '1.5rem', margin: '0 1rem 0 0.5rem' }}></i>
                                                 Valuation Tools
                                             </Link>
@@ -175,75 +154,8 @@ const MainDashboard = () => {
                         </div>
                     </div>
                 </nav>
-
                 <div className="sideContent">
-
-                    <TopMessage/>
-
-                    {/* <div className="d-flex justify-content-end">
-                        <div className='mx-2'><Link to="/message"><img src={message1} alt="" /></Link></div>
-                        <div className='mx-1'><Link to="/proflie"><img style={{ width: '40px' }} src={profileIcon} alt="" /></Link></div>
-                        <div className='mx-1'>
-                            <div class="dropdown" >
-                                <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={threeDots} alt="" />
-                                </Link>
-                                <ul style={{ border: 'none' }} class="dropdown-menu dropdown-menu-lg-end shadow">
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-user mx-2" style={{ color: "#005eff" }}></i>My Profile</Link></li>
-                                    <li><Link class="dropdown-item" to="#"><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</Link></li>
-                                    <li><button class="dropdown-item" onClick={logout}><i class="fa-solid fa-right-from-bracket mx-2" style={{ color: "#005eff" }}></i>Sign out</button></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> */}
-                    
-                    {Show === 2 &&
-                        <ContactDashboard />}
-                    {Show === 3 &&
-                        <MessageDash />
-                    }
-                    {Show === 4 &&
-                        <PaymentDash />
-                    }
-                    {Show === 5 &&
-                        <ChangePassword />
-                    }
-                    {Show === 1 &&
-                        <Dashboard />
-                    }
-                    {Show === 7 &&
-                        <PricingDash />
-                    }
-                    {Show === 8 &&
-                        <MarketplaceDash />
-                    }
-                    {Show === 9 &&
-                        <MarketplaceDash2 />
-                    }
-                    {Show === 10 &&
-                        <MarketDashDetail />
-                    }
-                    {Show === 11 &&
-                        <ProjectBuying />
-                    }
-                    {Show === 12 &&
-                        <MyProject />
-                    }
-                    {Show === 13 &&
-                        <MyAnalytics />
-                    }
-                    {Show === 14 &&
-                        <DashboardValuation />
-                    }
-                    {Show === 15 &&
-                        <ProofOfFund />
-                    }
-                    {Show === 16 &&
-                        <Favourite />
-                    }
-                    {Show === 17 &&
-                        <NotifactionDash />
-                    }
+                    <TopMessage />
                 </div>
             </section >
         </>

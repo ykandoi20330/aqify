@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-// import message from "./ProfileDashbaord/chatteardropdots1.svg"
 // import { Link } from 'react-router-dom'
 import trueImg from "./Pricing/Frame 147.png"
 import arrow from "./Aqify project/Vector (1).png"
-// import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-// import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 
 const PricingDash = () => {

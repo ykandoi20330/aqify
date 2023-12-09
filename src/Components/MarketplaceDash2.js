@@ -7,7 +7,8 @@ import cardLogo3 from "./Market/Frame 33 (6).png"
 import cardLogo4 from "./Market/Frame 33 (7).png"
 import cardProfile from "./Market/Rectangle 25.png"
 import arrow from "./Aqify project/Vector (1).png"
-import MarketDashDetail from './MarketDashDetail'
+
+import MarketDashDetail from "./MarketDashDetail"
 
 //app Context
 import { useAppContext } from './Context/appContext'
@@ -36,23 +37,22 @@ const MarketplaceDash2 = () => {
             .catch((err) => console.log(err));
     }, []);
 
-    // const [show, setShow] = useState(1)
+    const [detail, setDetail] = useState(1);
 
-    const [detail, setDetail] = useState(1)
 
     return (
         <>
-            {detail === 1 &&
+            {detail === 1 && (
                 <>
                     <section>
-                        <section className="marketDash2-back" style={{ height: '180vh' }} >
+                        <section className="marketDash2-back" style={{ height: '100%' }} >
                             <div className='d-flex'>
-                                <div className="market-card" style={{ padding: "2rem" }} >
-                                {/* [...Array(4)] */}
+                                <div className="market-card my-4" >
+                                    {/* [...Array(4)] */}
                                     {[...card].map((num, index) => {
                                         const id = index + 1
                                         return (
-                                            <div className="card1" key={index.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                                            <div className="card1" key={index.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "44%" }}>
 
                                                 <div className='sideInfo d-flex'>
                                                     <div className='secondPart'>
@@ -75,17 +75,12 @@ const MarketplaceDash2 = () => {
 
                                                 <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                                                     <h3 className='card-h3'>Metrics</h3>
-                                                    <div className='d-flex'>
-                                                        <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img  className='mx-2' style={{ width: '15px' }}src={arrow} alt="" /> </button>
-                                                        {/* <div >
-                                                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option16" autocomplete="off"  onClick={()=>addToFavorites(book)} />
-                                                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option16">
-                                                        <i class="fa-solid fa-heart"></i></label>
-                                                </div> */}
+                                                    <div className='d-flex align-items-center'>
+                                                        <Link style={{ padding: '12px 38px' }} onClick={(detail) => setDetail(2)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
                                                         {favoriteChecker(card.id) ?
-                                                            (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart"></i></Link>)
+                                                            (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart" style={{ color: 'blue' }}></i></Link>)
                                                             :
-                                                            (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart"></i></Link>)}
+                                                            (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                                                     </div>
                                                 </div>
 
@@ -128,11 +123,8 @@ const MarketplaceDash2 = () => {
                         </section>
                     </section>
                 </>
-            }
-            {
-                detail === 2 &&
-                <MarketDashDetail />
-            }
+            )}
+            {detail === 2 && <MarketDashDetail />}
         </>
     )
 }

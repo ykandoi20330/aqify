@@ -16,7 +16,7 @@ const Pricing = () => {
                 <Navbar />
             </section>
 
-            {/** */}
+
             <section className='pricing-first-section'>
                 <div style={{ height: "95vh", background: "linear-gradient(359deg, black, #000000f5)" }}>
                     <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>

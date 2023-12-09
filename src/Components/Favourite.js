@@ -29,9 +29,9 @@ const Favourite = () => {
 
   return (
     <>
-      <section className="marketDash2-back" style={{ height: '180vh' }} >
+      <section className="marketDash2-back" style={{ height: '100%' }} >
         <div className='d-flex'>
-          <div className="market-card" style={{ padding: "2rem" }} > 
+          <div className="market-card" > 
             {favourite.length > 0 ? favourite.map((num, index) => {
               const id = index + 1
               return (
@@ -60,15 +60,10 @@ const Favourite = () => {
                     <h3 className='card-h3'>Metrics</h3>
                     <div className='d-flex'>
                       <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </button>
-                      {/* <div >
-                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option16" autocomplete="off"  onClick={()=>addToFavorites(book)} />
-                    <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option16">
-                        <i class="fa-solid fa-heart"></i></label>
-                </div> */}
                       {favoriteChecker(card.id) ?
-                        (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart"></i></Link>)
+                        (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart" style={{color:'blue'}}></i></Link>)
                         :
-                        (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart"></i></Link>)}
+                        (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart" style={{color:'#c0c0c0'}}></i></Link>)}
                     </div>
                   </div>
 
@@ -105,7 +100,7 @@ const Favourite = () => {
 
                 </div>
               )
-            }): <h1 style={{color:'#c0c0c0'}}>You Don't have Any Favorites Yet!</h1>}
+            }): <h1 className='' style={{color:'#c0c0c0'}}>You Don't have Any Favorites Yet!</h1>}
           </div>
         </div>
       </section>

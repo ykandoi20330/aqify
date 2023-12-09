@@ -1,17 +1,11 @@
-import React , { useState } from 'react'
-// import message from "./ProfileDashbaord/chatteardropdots1.svg"
+import React from 'react'
 import { Link } from 'react-router-dom'
-// import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import arrow from "./Aqify project/Vector (1).png"
 
-import MarketplaceDash from './MarketplaceDash'
-
 const ProjectBuying = () => {
-    const [show, setShow] = useState(1)
     return (
         <>
-        {show === 1 && <>
             <div className="sideContent">
 
                 <div className='d-flex justify-content-between align-items-center' style={{ marginTop: '5vh' }}>
@@ -20,7 +14,7 @@ const ProjectBuying = () => {
                         <span style={{ color: '#636363' }}>0 active purchases, Buy your first Project.</span>
                     </div>
                     <div>
-                        <Link className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }}onClick={show => setShow(2)} ><img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt=""/>Marketplace</Link> {/**  <i class="fa-solid fa-arrow-trend-up mx-1" style={{color: "#ffffff"}}></i> */}
+                        <Link to='/MainDashboard/MarketDash' className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} ><img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt=""/>Marketplace</Link> {/**  <i class="fa-solid fa-arrow-trend-up mx-1" style={{color: "#ffffff"}}></i> */}
                     </div>
                 </div>
 
@@ -53,8 +47,6 @@ const ProjectBuying = () => {
                     </div>
                 </div>
             </div>
-            </>}
-            { show === 2 && <MarketplaceDash/>}
         </>
     )
 }
