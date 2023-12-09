@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 //
@@ -13,12 +13,41 @@ import Close from "./MarketDash/VectorClose.svg"
 import MarketplaceDash2 from './MarketplaceDash2'
 // import arrow from "./Aqify project/Vector (1).png"
 import upload from "./Selling/VectorUpload.svg"
+import {jwtDecode} from "jwt-decode";
+import axios from "axios";
+
 
 
 const MarketplaceDash = () => {
 
+    useEffect(() => {
+        getCard();
+        }, []);
+
+    const getCard = async () => {
+        const token = localStorage.getItem("token");
+        if (token) {
+          const decoded = jwtDecode(token);
+          const id = decoded.id;
+          try {
+            const response = await axios.get(
+              "http://localhost:5000/business/getbusiness" ,
+              {
+                headers: { "x-auth-token": id },
+              }
+            );
+            console.log(response.data.business);
+            setCard(response.data.business);
+           
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      };
+
     const [show, setShow] = useState(1)
     const [number, setNumber] = useState(0)
+    const [card, setCard] = useState([])
 
     //for image Upload
     const [image, setImage] = useState(null)

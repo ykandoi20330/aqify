@@ -43,10 +43,6 @@ const MainDashboard = () => {
     const [Show, setShow] = useState(1)
     const navigate=useNavigate();
     
-    const logout=()=>{
-        localStorage.clear();
-        navigate('/');
-    }
     return (
         <>
             <section className='profile-section'>
