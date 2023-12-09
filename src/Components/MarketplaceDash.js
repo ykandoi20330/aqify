@@ -93,7 +93,7 @@ const MarketplaceDash = () => {
                         </div>
                         <div class="modal-body">
                             {/** */}
-                            <div className="card1" style={{ width: "100%", background: '#f4f3f9', padding: '0.7rem', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;' }}>
+                            <div className="card1" style={{ width: "100%", background: '#f4f3f9', padding: '0.7rem', boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
 
                                 <div className='sideInfo d-flex'>
                                     <div className='' id="display_image" style={{ width: '100%' }}>

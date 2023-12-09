@@ -23,7 +23,7 @@ const MyAnylatics = () => {
                                 </div>
                                 <div className='My-btns'>
                                     {/* <Link className='btn btn-outline-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} onClick={show => setShow(2)}  > <img style={{ width: '10%', marginRight: '10px' }} src={anylatics} alt="" />Analytics</Link> */}
-                                    <Link className='Myproject-btn btn btn-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="/sellingDash" >Google Analytics<img style={{ width: '10%', marginLeft: '10px' }} src={arrow} alt="" /></Link>
+                                    <Link className='Myproject-btn btn btn-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="#" >Google Analytics<img style={{ width: '10%', marginLeft: '10px' }} src={arrow} alt="" /></Link>
                                 </div>
                             </div>
 

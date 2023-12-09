@@ -4,9 +4,11 @@ import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg";
 import Arrow from "./ProfileDashbaord/ArrowUp.svg";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import PricingDash from "./PricingDash"
 
 const Dashboard = () => {
-  const [username, setUsername] = useState("");
+    const [username, setUsername] = useState("");
+    const [Show, setShow] = useState(1)
 
   useEffect(() => {
     const getUsername = async () => {
@@ -20,11 +22,13 @@ const Dashboard = () => {
         }
       }
 
+
       if (!token) {
         const user = JSON.parse(localStorage.getItem("user"));
         token = user.token;
         localStorage.setItem("token", token);
       }
+
 
       if (token) {
         const decoded = jwtDecode(token);
@@ -45,6 +49,8 @@ const Dashboard = () => {
 
     getUsername();
   }, [setUsername]);
+
+  
 
   return (
     <>
