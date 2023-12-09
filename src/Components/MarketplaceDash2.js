@@ -112,76 +112,61 @@ const MarketplaceDash2 = () => {
                           </span>
                         </div>
 
-                        <div className="d-flex justify-content-between" style={{ margin: "2rem 0 2rem 0" }}>
-                          <h3 className="card-h3">Metrics</h3>
-                          <div className="d-flex">
-                            <button style={{ padding: "12px 38px" }} className="btn btn-primary mx-2" onClick={(detail) => setDetail(2)}>
-                              View Listing
-                              <img
-                                className="mx-2"
-                                style={{ width: "15px" }}
-                                src={arrow}
-                                alt=""
-                              />{" "}
-                            </button>
+                        <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
+                          <h3 className='card-h3'>Metrics</h3>
+                          <div className='d-flex align-items-center'>
+                            <Link style={{ padding: '12px 38px' }} onClick={(detail) => setDetail(2)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
+                            {favoriteChecker(card.id) ?
+                              (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart" style={{ color: 'blue' }}></i></Link>)
+                              :
+                              (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                          </div>
+                        </div>
 
-                            <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                              <h3 className='card-h3'>Metrics</h3>
-                              <div className='d-flex align-items-center'>
-                                <Link style={{ padding: '12px 38px' }} onClick={(detail) => setDetail(2)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
-                                {favoriteChecker(card.id) ?
-                                  (<Link onClick={() => removeFromFavorites(card.id)}> <i class="fa-solid fa-heart" style={{ color: 'blue' }}></i></Link>)
-                                  :
-                                  (<Link onClick={() => addToFavorites(card)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
-                              </div>
+                        <div className="d-flex justify-content-between flex-wrap" style={{ width: "100%" }}>
+                          <div style={{ margin: "1rem 3rem 0 0" }}>
+                            <span style={{ color: "#636363", fontWeight: "600" }}>
+                              Businesses Type
+                            </span>
+                            <div className="d-flex justify-content-start align-items-center">
+                              <img width={40} src={cardLogo1} alt="" />
+                              <span className="card-span" style={{ fontSize: "1.5rem" }}>
+                                E-Commerce
+                              </span>
                             </div>
 
-                            <div className="d-flex justify-content-between flex-wrap" style={{ width: "100%" }}>
-                              <div style={{ margin: "1rem 3rem 0 0" }}>
-                                <span style={{ color: "#636363", fontWeight: "600" }}>
-                                  Businesses Type
-                                </span>
-                                <div className="d-flex justify-content-start align-items-center">
-                                  <img width={40} src={cardLogo1} alt="" />
-                                  <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                    E-Commerce
-                                  </span>
-                                </div>
-
-                              </div>
-                              <div style={{ margin: "1rem 3rem 0 0" }}>
-                                <span style={{ color: "#636363", fontWeight: "600" }} >
-                                  Based in
-                                </span>
-                                <div className="d-flex justify-content-start align-items-center">
-                                  <img width={40} src={cardLogo2} alt="" />
-                                  <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                    Anywhere
-                                  </span>
-                                </div>
-                              </div>
-                              <div style={{ margin: "1rem 3rem 0 0" }}>
-                                <span style={{ color: "#636363", fontWeight: "600" }} >
-                                  Acquisition type
-                                </span>
-                                <div className="d-flex justify-content-start align-items-center">
-                                  <img width={40} src={cardLogo3} alt="" />
-                                  <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                    Full
-                                  </span>
-                                </div>
-                              </div>
-                              <div style={{ margin: "1rem 3rem 0 0" }}>
-                                <span style={{ color: "#636363", fontWeight: "600" }} >
-                                  Valuation
-                                </span>
-                                <div className="d-flex justify-content-start align-items-center">
-                                  <img width={40} src={cardLogo4} alt="" />
-                                  <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                    $150K +
-                                  </span>
-                                </div>
-                              </div>
+                          </div>
+                          <div style={{ margin: "1rem 3rem 0 0" }}>
+                            <span style={{ color: "#636363", fontWeight: "600" }} >
+                              Based in
+                            </span>
+                            <div className="d-flex justify-content-start align-items-center">
+                              <img width={40} src={cardLogo2} alt="" />
+                              <span className="card-span" style={{ fontSize: "1.5rem" }}>
+                                Anywhere
+                              </span>
+                            </div>
+                          </div>
+                          <div style={{ margin: "1rem 3rem 0 0" }}>
+                            <span style={{ color: "#636363", fontWeight: "600" }} >
+                              Acquisition type
+                            </span>
+                            <div className="d-flex justify-content-start align-items-center">
+                              <img width={40} src={cardLogo3} alt="" />
+                              <span className="card-span" style={{ fontSize: "1.5rem" }}>
+                                Full
+                              </span>
+                            </div>
+                          </div>
+                          <div style={{ margin: "1rem 3rem 0 0" }}>
+                            <span style={{ color: "#636363", fontWeight: "600" }} >
+                              Valuation
+                            </span>
+                            <div className="d-flex justify-content-start align-items-center">
+                              <img width={40} src={cardLogo4} alt="" />
+                              <span className="card-span" style={{ fontSize: "1.5rem" }}>
+                                $150K +
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -191,7 +176,7 @@ const MarketplaceDash2 = () => {
                 </div>
               </div>
             </section>
-          </section>
+          </section >
         </>
       )}
       {detail === 2 && <MarketDashDetail />}
