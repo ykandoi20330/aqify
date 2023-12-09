@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect } from 'react'
 
 // import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'
@@ -25,16 +25,50 @@ import Left from "./MarketDash/VectorLeft.svg"
 
 import MarketplaceDash2 from './MarketplaceDash2'
 import PaymentDash from "./PaymentDash"
-
+import axios from 'axios'
+import {jwtDecode} from "jwt-decode"
 import { FaStar } from "react-icons/fa"
 
 const MarketDashDetail = () => {
 
+    useEffect(() => {
+        getCard();
+        }, []);
+
+    const getCard = async () => {
+        const token = localStorage.getItem("token");
+        if (token) {
+          const decoded = jwtDecode(token);
+          const id = decoded.id;
+          try {
+            const response = await axios.get(
+              "http://localhost:5000/business/getbusiness" ,
+              {
+                headers: { "x-auth-token": id },
+              }
+            );
+            console.log(response.data.business);
+            setCard(response.data.business);
+           
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      };
+
     const [show, setShow] = useState(1)
     const [buy, setBuy] = useState(1)
+    const [card, setCard] = useState([]);
+    
 
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
+
+    const handleShare = () => { 
+        console.log("share")
+        window.location.href = 'whatsapp://send?text=http://localhost:3000/aqify#/proflie';
+    }
+
 
     return (
         <>
@@ -217,10 +251,10 @@ const MarketDashDetail = () => {
                                             <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                             <span className='mx-2' >Watch video Path</span>
                                         </Link>
-                                        <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                        <button className='my-3 d-flex align-items-center justify-content-center'onClick={handleShare} style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                             <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
                                             <span className='mx-2' >Share</span>
-                                        </Link>
+                                        </button>
                                         <div className='my-3'>
                                             <Link style={{ width: '100%' }} className='btn btn-primary' onClick={buy => setBuy(2)}><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
                                         </div>

@@ -35,6 +35,10 @@ import acqify from "./acqify.mp4"
 const Home1 = () => {
     useEffect(() => {
         Aos.init();
+        const token = localStorage.getItem("token");
+        if (token) {
+            window.location.href = "http://localhost:3000/aqify#/MainDashboard";
+        }
     }, [])
     return (
         <>

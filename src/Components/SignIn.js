@@ -44,7 +44,6 @@ const SignIn = () => {
   
     if (validation()) {
       try {
-        console.warn(formData);
         const response = await fetch('http://localhost:5000/users/login', {
           method: 'POST',
           headers: {
@@ -53,12 +52,8 @@ const SignIn = () => {
           credentials: 'include',
           body: JSON.stringify(formData),
         });
-  
-
-        console.warn(response)
-        if (response.status === 200) {
+          if (response.status === 200) {
           const data = await response.json();
-          console.warn(data);
           localStorage.setItem('user',JSON.stringify(data));
           setFormData({
             email: '',
