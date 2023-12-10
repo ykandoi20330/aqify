@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from "./Aqify project/FrameWhiteLogo.svg"
 import folder from "./ProfileDashbaord/folder.svg"
 import address from "./ProfileDashbaord/addressbook.svg"
@@ -15,7 +15,7 @@ import { Link, NavLink } from 'react-router-dom'
 import message from "./ProfileDashbaord/chatteardropdots.svg"
 import logo1 from "./SignIn/vector.svg"
 import TopMessage from './TopMessage'
-
+// import Dashbaord from './Dashboard'
 
 import { useNavigate } from 'react-router-dom'
 const MainDashboard = () => {
@@ -77,7 +77,7 @@ const MainDashboard = () => {
                                             </Link>
                                             <ul class="dropdown-menu dropdown-menu-dark">
                                                 <li><Link class="dropdown-item" to="/MainDashboard/MyProject" >Project Lists</Link></li>
-                                                <li><Link class="dropdown-item" to="/MainDashboard/ProjectBuying">Projects Buying</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/ProjectBuying" >Projects Buying</Link></li>
                                             </ul>
                                         </li>
 
@@ -156,7 +156,8 @@ const MainDashboard = () => {
                     </div>
                 </nav>
                 <div className="sideContent">
-                    <TopMessage />
+                    <TopMessage /> 
+                    {/* <Dashbaord /> */}
                 </div>
             </section >
         </>

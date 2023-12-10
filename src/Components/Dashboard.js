@@ -6,8 +6,8 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 const Dashboard = () => {
-    const [username, setUsername] = useState("");
-    const [Show, setShow] = useState(1)
+  const [username, setUsername] = useState("");
+  const [Show, setShow] = useState(1)
 
 
   useEffect(() => {
@@ -49,67 +49,70 @@ const Dashboard = () => {
     getUsername();
   }, [setUsername]);
 
-  
+
 
   return (
     <>
-      <div className="sideContent">
-        <div
-          className="d-flex justify-content-between"
-          style={{ marginTop: "6vh" }}
-        >
-          <div>
-            <span style={{ color: "#636363", fontWeight: "500" }}>
-              Welcome back,
-            </span>
-            <h1
-              style={{
-                fontWeight: "700",
-                paddingBottom: "0.5rem",
-                color: "#3247ff",
-              }}
-            >
-              {username}
-            </h1>{" "}
-          </div>
-          <div>
-            <a
-              href="/"
-              style={{ padding: "0.5rem 1.3rem" }}
-              className="btn btn-primary rounded-pill"
-            >
-              Upgrade
-              <img src={Arrow} alt="" />
-            </a>
-          </div>
-        </div>
-        <br />
-
-        <div className="message-card">
-          <div>
-            <h2
-              style={{
-                fontWeight: "700",
-                width: "28%",
-                borderBottom: "4px solid #3247ff",
-                borderRadius: "5px",
-                paddingBottom: "0.5rem",
-              }}
-            >
-              {" "}
-              <img src={message} alt="" /> Messages
-            </h2>
-          </div>
-
+      {Show === 1 &&
+        <>
+        <div className="sideContent">
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
-            style={{ height: "70vh", color: "#c0c0c0" }}
+            className="d-flex justify-content-between"
+            style={{ marginTop: "6vh" }}
           >
-            <img width={50} src={lightMessage} alt="" />
-            <span style={{ fontSize: "25px" }}>No conversations yet</span>
+            <div>
+              <span style={{ color: "#636363", fontWeight: "500" }}>
+                Welcome back,
+              </span>
+              <h1
+                style={{
+                  fontWeight: "700",
+                  paddingBottom: "0.5rem",
+                  color: "#3247ff",
+                }}
+              >
+                {username}
+              </h1>{" "}
+            </div>
+            <div>
+              <a
+                href="/"
+                style={{ padding: "0.5rem 1.3rem" }}
+                className="btn btn-primary rounded-pill"
+              >
+                Upgrade
+                <img src={Arrow} alt="" />
+              </a>
+            </div>
+          </div>
+          <br />
+
+          <div className="message-card">
+            <div>
+              <h2
+                style={{
+                  fontWeight: "700",
+                  width: "28%",
+                  borderBottom: "4px solid #3247ff",
+                  borderRadius: "5px",
+                  paddingBottom: "0.5rem",
+                }}
+              >
+                {" "}
+                <img src={message} alt="" /> Messages
+              </h2>
+            </div>
+
+            <div
+              className="d-flex justify-content-center align-items-center flex-column"
+              style={{ height: "70vh", color: "#c0c0c0" }}
+            >
+              <img width={50} src={lightMessage} alt="" />
+              <span style={{ fontSize: "25px" }}>No conversations yet</span>
+            </div>
           </div>
         </div>
-      </div>
+    </>}
     </>
   );
 };

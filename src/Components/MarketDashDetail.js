@@ -57,8 +57,6 @@ const MarketDashDetail = () => {
     };
 
     const [show, setShow] = useState(1)
-
-    const [buy, setBuy] = useState(1)
     const [card, setCard] = useState([]);
     
     const [rating, setRating] = useState(null)
@@ -88,8 +86,9 @@ const MarketDashDetail = () => {
 
                 <section className='placeDetail-section'>
 
-
-                    <div className="detailContent MarketPlace-card  d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
+                { card.map((item, index) => {
+                    return (
+                    <div key={index} className="detailContent MarketPlace-card  d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
 
                         <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
                             <div className='FirstContent d-flex align-items-center'>
@@ -97,23 +96,24 @@ const MarketDashDetail = () => {
                                     <img width={200} src={cardProfile} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                    <h3 style={{ fontSize: '20px', fontWeight: '700' }}>UI Medical Website</h3>
-                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Nesxt Js</button>
-                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Firebase</button>
-                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>Medical</button>
-                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>SaaS</button>
+                                    <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
+                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                                    <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
                                 </div>
                             </div>
                             <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
                                 <h3 className='card-h3'>Metrics</h3>
-                                <Link> <i class="fa-solid fa-heart"></i></Link>
+                                {/* <Link> <i class="fa-solid fa-heart"></i></Link> */}
                             </div>
 
                             <div className='my-4'>
                                 <span className='col-6' style={{ color: '#636363', fontSize: '16px' }}>
-                                    A design inspiration platform for SaaS apps that helps designers find inspiration for their next project by showcasing over 1,000 pages from over 100 SaaS apps, organized by category and page type. Designers can also
+                                    {/* A design inspiration platform for SaaS apps that helps designers find inspiration for their next project by showcasing over 1,000 pages from over 100 SaaS apps, organized by category and page type. Designers can also
                                     filter designs by color and fonts, and bookmark their favorites for later.<br /><br />
-                                    Project can be grown by doing proper content marketing through blogs and social media, further paid ads can also be utilized to get more customers for the app.
+                                    Project can be grown by doing proper content marketing through blogs and social media, further paid ads can also be utilized to get more customers for the app. */}
+                                    {item.description}
                                 </span>
                             </div>
 
@@ -139,45 +139,45 @@ const MarketDashDetail = () => {
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>Asking Price</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.askingPrice}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>Multiplies</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.multiplies}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>TTM Revenue</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmRevenue}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>TTM Profit</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmProfit}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>Monthly Revenue</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyRevenue}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>Monthly Profit</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>Feature Value</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyProfit}</span>
                                     </div>
                                 </div>
                             </div>
@@ -193,32 +193,32 @@ const MarketDashDetail = () => {
 
                                 <div className='d-flex flex-wrap justify-content-between'>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>TTM Gross Revenue</span>
+                                        <h5>{item.ttmGrossRevenue}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>TTM Net Profit</span>
+                                        <h5>{item.ttmNetProfit}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>Last months gross Revenue</span>
+                                        <h5>{item.lastMonthGrossRevenue}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>Last months net Profit</span>
+                                        <h5>{item.lastMonthNetProfit}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 3rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>Customers</span>
+                                        <h5>{item.customers}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>Annual Recurring Revenue</span>
+                                        <h5>{item.annualRecurringRevenue}</h5>
                                     </div>
                                     <div style={{ margin: '1rem 1rem 0 0' }}>
-                                        <span style={{ color: '#636363' }}>Details Name</span>
-                                        <h5>Details value</h5>
+                                        <span style={{ color: '#636363' }}>Annual Growth Rate</span>
+                                        <h5>{item.annualGrowthRate}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +231,7 @@ const MarketDashDetail = () => {
                                         <h5 className='card-h3'>Asking Price</h5>
                                     </div>
                                     <div className='my-3'>
-                                        <h1>$3000</h1>
+                                        <h1>{item.askingPrice}</h1>
                                     </div>
 
                                     <Link to="/message" className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
@@ -276,6 +276,8 @@ const MarketDashDetail = () => {
                         </div>
 
                     </div>
+                     );
+                    })}
 
                 </section>
 

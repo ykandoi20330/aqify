@@ -14,7 +14,14 @@ import {jwtDecode} from "jwt-decode";
 import axios from "axios";
 
 
-const MarketplaceDash = () => {
+const MarketplaceDash = ({ onSearch }) => {
+
+    const [show, setShow] = useState(1)
+    const [number, setNumber] = useState(0)
+    const [card, setCard] = useState([])
+    const [records, setRecords] = useState([])
+
+    const [searchTerm, setSearchTerm] = useState([]);
 
     useEffect(() => {
         getCard();
@@ -34,16 +41,12 @@ const MarketplaceDash = () => {
             );
             console.log(response.data.business);
             setCard(response.data.business);
-           
+            setRecords(response.data.business)   
           } catch (error) {
             console.error(error);
           }
         }
       };
-
-    const [show, setShow] = useState(1)
-    const [number, setNumber] = useState(0)
-    const [card, setCard] = useState([])
 
     //for image Upload
     const [image, setImage] = useState(null)
@@ -56,6 +59,14 @@ const MarketplaceDash = () => {
         }
     }
 
+    // const searchFilter = (event) => {
+    //     setRecords(card.filter(f => f.name?.toLowerCase().includes(event.target.value)))
+    // }
+
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value);
+        onSearch(e.target.value);
+    }
 
     return (
         <>
@@ -82,10 +93,10 @@ const MarketplaceDash = () => {
             <section>
                 <div className='first-line d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" />
+                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm}  onChange={handleSearch}  /> {/**onChange={searchFilter} */}
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
-                    <div class="form-floating">
+                    <div class="form-floating" >
                         <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example">
                             <option id="floatingInputValue" selected>Price</option>
                             <option value="1">0</option>
@@ -206,7 +217,9 @@ const MarketplaceDash = () => {
                 </section >
             </>}
 
-            {show === 2 && <MarketplaceDash2 />}
+            {show === 2 && <>
+                <MarketplaceDash2 />
+             </> }
         </>
     )
 }

@@ -176,24 +176,24 @@ const Home1 = () => {
                                         <h1>Sell a tiny project</h1>
                                         <span className='d-flex col-8' style={{ fontSize: '20px', fontWeight: '500' }}>Liquidate that side project quickly, easily and for a fair price.</span>
                                         <div className='my-4'>
-                                            <div className='my-2'>
+                                            <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >View all $100k+ revenue listings</span>
                                             </div>
-                                            <div className='my-2'>
+                                            <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >Make offers through the platform</span>
                                             </div>
-                                            <div className='my-2'>
+                                            <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >Connect your card, buy projects</span>
                                             </div>
-                                            <div className='my-2'>
+                                            <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >View all $100k+ revenue listings</span>
                                             </div>
                                         </div>
-                                        <div className='my-5'>
+                                        <div className=''>
                                             <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
                                             <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="/">Demo</Link>
                                         </div>

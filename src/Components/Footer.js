@@ -17,7 +17,7 @@ const Footer = () => {
                     <div style={{width:'95%',top:'5vh',position:"relative"}} className='footer-main d-flex justify-content-between'>
                         <div className="footer-main col-5">
                             <Link to="/"><img style={{ width: '35%', marginRight:'1rem' }} src={Logo} alt="" /></Link>
-                            <span style={{ color: '#C0C0C0',fontSize:'20px' }}>-Leading acquistion platform</span>
+                            <span style={{ color: '#C0C0C0',fontSize:'20px' }}>- Leading acquistion platform</span>
                             <div className='my-4' style={{ color: '#C0C0C0' }}>
                                 Acqify  is an up-market acquisition platform for $100K+ revenue startups. Our global marketplace makes it free and anonymous for business owners to attract full and partial acquisition offers directly. No listing fees. 100% anonymity.
                             </div>
@@ -55,7 +55,7 @@ const Footer = () => {
 
                     <div>
                         <div className='Social-logo d-flex justify-content-between'>
-                            <div style={{ color: '#C0C0C0' }}>Copyright @Acquify</div>
+                            <div style={{ color: '#C0C0C0' }}>Copyright @Acqify</div>
                             <div>
                                 <ul style={{ listStyle: 'none' }} className='d-flex'>
                                     <li><Link to="/"><img className='socailLogo' src={socail2} alt="" /></Link></li>
