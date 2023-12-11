@@ -5,6 +5,10 @@ import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png";
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg";
 import BlackLogo from "./Aqify project/FrameblackLogo.svg";
 import { useNavigate } from "react-router-dom";
+import {jwtDecode} from "jwt-decode";
+import axios from "axios";
+import { useEffect } from "react";  
+
 
 const TopMessage = () => {
   const navigate = useNavigate();
@@ -13,6 +17,30 @@ const TopMessage = () => {
     window.location.href = "http://localhost:3000/aqify#/singin";
     localStorage.clear();
   };
+
+  const [pic, setPic] = React.useState("");
+
+  useEffect(() => {
+    const getUser = async () => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const decoded = jwtDecode(token);
+        const id = decoded.id;
+        try {
+          const response = await axios.get(
+            "http://localhost:5000/users/getUser",
+            {
+              headers: { "x-auth-token": id },
+            }
+          );
+          setPic(response.data.user.pic);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
+    getUser();
+  }, []);
 
 
   return (
@@ -31,7 +59,7 @@ const TopMessage = () => {
             </div>
             <div className="mx-1">
               <Link to="/proflie">
-                <img style={{ width: "40px" }} src={profileIcon} alt="" />
+                <img style={{ width: "40px" , borderRadius:50 }} src={pic} alt="" />
               </Link>
             </div>
             <div className="mx-1">

@@ -51,12 +51,13 @@ const DashboardProfile = () => {
   const [own, setOwn] = useState(true);
   const [Show, setShow] = useState(6);
 
-  const [formData, setFormData] = useState({
+  const [form, setform] = useState({
     firstName: "",
     lastName: "",
     userName: "",
     about: "",
     role: "",
+    pic: "",
   });
   useEffect(() => {
     const getUser = async () => {
@@ -71,12 +72,13 @@ const DashboardProfile = () => {
               headers: { "x-auth-token": id },
             }
           );
-          setFormData({
+          setform({
             firstName: response.data.user.firstName,
             lastName: response.data.user.lastName,
             userName: response.data.user.userName,
             about: response.data.user.about,
             role: response.data.user.role,
+            pic: response.data.user.pic,
           });
         } catch (error) {
           console.error(error);
@@ -101,30 +103,32 @@ const DashboardProfile = () => {
   // }
 
   const validation = () => {
-    if (!formData.firstName) {
+    console.log(form);
+    if (!form.firstName) {
       toast.error("First name is required.", toastOptions);
       return false;
     }
 
-    if (!formData.lastName) {
+    if (!form.lastName) {
       toast.error("Last name is required.", toastOptions);
       return false;
     }
 
-    if (!formData.userName) {
+    if (!form.userName) {
       toast.error("Username is required.", toastOptions);
       return false;
     }
 
-    if (!formData.about) {
+    if (!form.about) {
       toast.error("Description is required.", toastOptions);
       return false;
     }
 
-    if (!formData.role) {
+    if (!form.role) {
       toast.error("Role is required.", toastOptions);
       return false;
     }
+
 
     return true;
   };
@@ -142,34 +146,35 @@ const DashboardProfile = () => {
             break;
           }
         }
-  
+
         if (!token) {
           const user = JSON.parse(localStorage.getItem("user"));
           token = user.token;
         }
-  
+
         if (token) {
           const decoded = jwtDecode(token);
           const userId = decoded.id;
-        const response = await fetch(
-          "http://localhost:5000/users/updateProfile",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            credentials: "include",
-            body: JSON.stringify({ formData, userId }),
+          const response = await fetch(
+            "http://localhost:5000/users/updateProfile",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              credentials: "include",
+              body: JSON.stringify({ form, userId }),
+            }
+          );
+          console.warn(response);
+          const data = await response.json();
+          if (response.status === 200) {
+            toast.success(data.message, toastOptions);
+            window.location.reload();
+          } else {
+            toast.error(data.message, toastOptions);
           }
-        );
-        console.warn(response);
-        const data = await response.json();
-        if (response.status === 200) {
-          toast.success(data.message, toastOptions);
-          window.location.reload();
-        } else {
-          toast.error(data.message, toastOptions);
-        }}
+        }
       } catch (error) {
         console.error("Error:", error);
       }
@@ -178,8 +183,8 @@ const DashboardProfile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       [name]: value,
     });
   };
@@ -190,24 +195,54 @@ const DashboardProfile = () => {
     } else {
       setVisible(true);
     }
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "owner and acquirer",
     });
   };
 
+  const upload = (e) => {
+    const file = e.target.files[0];
+  
+    const formData = new FormData();
+    formData.append('image', file);
+  
+    axios.post(
+      'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+    )
+    .then((res) => {
+      console.log(res.data.data.url);
+      setform({
+        ...form,
+        pic: res.data.data.url,
+      });
+
+      console.log(form);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
+  
+
   const changeRoleowner = () => {
     setVisible(true);
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "owner",
     });
   };
 
   const changeRoleacquire = () => {
     setVisible(false);
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "acquirer",
     });
   };
@@ -532,14 +567,26 @@ const DashboardProfile = () => {
               <div className="profile-card d-flex">
                 <div className="profile-content d-flex justify-content-around align-items-center">
                   <div className="profilePhoto d-flex flex-column align-items-center">
-                    <img src={profilePhoto} alt="" />
-                    <Link
+                    <img
+                      style={{ width: "50%", height: "50%", borderRadius: "50%" }}
+                      src={
+                        form.pic ||
+                        "https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+                      }
+                      alt=""
+                    />
+                    <label className="btn btn-primary my-3 rounded-pill">
+                      {" "}
+                      Upload photo{" "}
+                      <input  type="file" name="pic" onChange={upload} />{" "}
+                    </label>
+                    {/* <Link
                       className="btn btn-primary rounded-pill"
                       style={{ padding: "0.5rem 0.8rem" }}
                     >
                       <img src={verify} alt="" />
                       Verify
-                    </Link>
+                    </Link> */}
                   </div>
 
                   <div style={{ width: "60%" }}>
@@ -559,7 +606,7 @@ const DashboardProfile = () => {
                             class="form-control"
                             aria-label="First name"
                             name="firstName"
-                            value={formData.firstName}
+                            value={form.firstName}
                             onChange={handleChange}
                           />
                         </div>
@@ -577,7 +624,7 @@ const DashboardProfile = () => {
                             class="form-control"
                             aria-label="Last name"
                             name="lastName"
-                            value={formData.lastName}
+                            value={form.lastName}
                             onChange={handleChange}
                           />
                         </div>
@@ -597,7 +644,7 @@ const DashboardProfile = () => {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="userName"
-                        value={formData.userName}
+                        value={form.userName}
                         onChange={handleChange}
                       />
                     </div>
@@ -615,7 +662,7 @@ const DashboardProfile = () => {
                         id="exampleFormControlTextarea1"
                         rows="3"
                         name="about"
-                        value={formData.about}
+                        value={form.about}
                         onChange={handleChange}
                       ></textarea>
                     </div>
