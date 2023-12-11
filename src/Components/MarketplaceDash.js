@@ -27,26 +27,17 @@ const MarketplaceDash = ({ onSearch }) => {
         getCard();
         }, []);
 
-    const getCard = async () => {
-        const token = localStorage.getItem("token");
-        if (token) {
-          const decoded = jwtDecode(token);
-          const id = decoded.id;
-          try {
-            const response = await axios.get(
-              "http://localhost:5000/business/getbusiness" ,
-              {
-                headers: { "x-auth-token": id },
-              }
-            );
-            console.log(response.data.business);
-            setCard(response.data.business);
-            setRecords(response.data.business)   
-          } catch (error) {
-            console.error(error);
-          }
+        const getCard = async () => {
+            try {
+                const response = await axios.get(
+                    "http://localhost:5000/business/getbusiness" ); 
+                console.log(response.data.business);
+                setCard(response.data.business);
+
+            } catch (error) {
+                console.error(error);
+            }
         }
-      };
 
     //for image Upload
     const [image, setImage] = useState(null)

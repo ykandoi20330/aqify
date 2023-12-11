@@ -57,7 +57,7 @@ const TopMessage = () => {
                 </Link>
               </div>
               <div className="mx-1">
-                <Link to="/proflie">
+                <Link to="/MainDashboard/proflie">
                   <img
                     style={{ width: "40px", borderRadius: 50 }}
                     src={pic}
