@@ -78,7 +78,7 @@ const MarketplaceDash = ({ onSearch }) => {
                         <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
                         <div className='my-3'>
                             <div class="btn-group" role="group" aria-label="Basic outlined example" style={{ background: 'transparent' }}>
-                                <Link style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Businesses</Link>
+                                <Link style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Filters</Link>
                                 <Link style={{ padding: "1rem 4rem", }} type="button" class="btn btn-outline-primary" onClick={show => setShow(2)}>Market</Link>
                             </div>
                         </div>

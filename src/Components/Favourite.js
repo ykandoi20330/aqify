@@ -35,7 +35,7 @@ const Favourite = () => {
             {favourite.length > 0 ? favourite.map((item, index) => {
               const id = index + 1
               return (
-                <div className="card1" key={item.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "50%" }}>
+                <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
 
                   <div className='sideInfo d-flex'>
                     <div className='secondPart'>

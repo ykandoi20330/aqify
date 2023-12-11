@@ -81,10 +81,10 @@ const MarketplaceDash2 = () => {
                   { card.map((item, index) => {
                     const id = index + 1
                     return (
-                      <div className="card1" key={item.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "44%" }}>
+                      <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
                         <div className="sideInfo d-flex">
                           <div className="secondPart">
-                            <img width={200} src={item.ownerImage} alt="" />
+                            <img width={200} src={cardProfile} alt="" /> {/**item.ownerImage */}
                           </div>
                           <div className="firstPart" style={{ marginLeft: "2rem" }}>
                             <h3 style={{ fontSize: "30px", fontWeight: "700" }}>

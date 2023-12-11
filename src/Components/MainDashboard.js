@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import logo from "./Aqify project/FrameWhiteLogo.svg"
 import folder from "./ProfileDashbaord/folder.svg"
 import address from "./ProfileDashbaord/addressbook.svg"
@@ -11,7 +11,7 @@ import heart from "./ProfileDashbaord/VectorHeart.svg"
 import proof from "./ProfileDashbaord/VectorProof.svg"
 
 //card content
-import { Link, NavLink } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import message from "./ProfileDashbaord/chatteardropdots.svg"
 import logo1 from "./SignIn/vector.svg"
 import TopMessage from './TopMessage'
@@ -54,9 +54,9 @@ const MainDashboard = () => {
                                         <br />
                                     </Link>
                                     <hr />
-                                    <NavLink className='text-white' style={{ textDecoration: 'none' }} to="/MainDashboard/Dashbaord" >
+                                    <Link className='text-white' style={{ textDecoration: 'none' }} to="/MainDashboard/Dashbaord" >
                                         <h2> Dashboard</h2>
-                                    </NavLink>
+                                    </Link>
                                     <ul class="nav flex-column mb-auto">
                                         <li class="nav-item">
                                             <Link to="/MainDashboard/MarketDash" class="nav-link1 text-white" aria-current="page" >
@@ -143,9 +143,7 @@ const MainDashboard = () => {
                                 <strong>mdo</strong>
                             </Link>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                                <li><Link class="dropdown-item" to="#">New project...</Link></li>
                                 <li><Link class="dropdown-item" to="#">Settings</Link></li>
-                                <li><Link class="dropdown-item" to="#">Profile</Link></li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><Link class="dropdown-item" to="#">Sign out</Link></li>
                             </ul>
@@ -156,8 +154,12 @@ const MainDashboard = () => {
                     </div>
                 </nav>
                 <div className="sideContent">
-                    <TopMessage /> 
+                    <TopMessage />
                     {/* <Dashbaord /> */}
+
+                    <section>
+                        <Outlet />
+                    </section>
                 </div>
             </section >
         </>

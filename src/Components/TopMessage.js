@@ -1,6 +1,6 @@
 import React from 'react'
 import message from "./ProfileDashbaord/chatteardropdots1.svg"
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import BlackLogo from "./Aqify project/FrameblackLogo.svg"
@@ -13,6 +13,7 @@ const TopMessage = () => {
     const logout = () => {
         window.location.href = "http://localhost:3000/aqify#/singin";
         localStorage.clear();
+        navigate('/')
     };
 
     return (
@@ -40,9 +41,6 @@ const TopMessage = () => {
                 </div>
             </section >
 
-            <section>
-                <Outlet />
-            </section>
         </>
     )
 }
