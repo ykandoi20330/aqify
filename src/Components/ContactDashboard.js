@@ -1,21 +1,9 @@
 //side content
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom';
-// import logo from "./ProfileDashbaord/vector.svg"
-// import folder from "./ProfileDashbaord/folder.svg"
-// import address from "./ProfileDashbaord/addressbook.svg"
-// import list from "./ProfileDashbaord/listnumbers.svg"
-// import bell from "./ProfileDashbaord/bell.svg"
-// import setting from "./ProfileDashbaord/gear.svg"
-// import tag from "./ProfileDashbaord/tag.svg"
-
-//side content
-// import message from "./ProfileDashbaord/chatteardropdots1.svg"
-// import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
-// import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
-import arrow from "./Aqify project/Vector (1).png"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import arrow from "./Aqify project/Vector (1).png"
 
 const ContactDashboard = () => {
     const toastOptions = {

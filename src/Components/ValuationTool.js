@@ -19,7 +19,7 @@ const ValuationTool = () => {
                         <div style={{ background: "#EEF0FE", width: "100%", padding: "1.3rem" }}>
                             <Link to="/"><img src={BlackLogo} alt="" /></Link>
                         </div>
-                        <TopMessage />
+                        {/* <TopMessage /> */}
                     </div>
 
                     <div className='my-5'>

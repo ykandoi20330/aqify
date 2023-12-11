@@ -206,7 +206,7 @@ const SellerDash = () => {
       if (response.status === 201) {
         const data = await response.json();
         console.warn(data);
-        navigate("/MainDashboard");
+        navigate("/MainDashboard/MarketDash");
       } else if (response.status === 400) {
         console.log("Already Exist");
       } else {
@@ -549,7 +549,7 @@ const SellerDash = () => {
                     <Link
                       style={{ textDecoration: "none", color: "#636363" }}
                       id="prev"
-                      to="/MainDashboard"
+                      to="/MainDashboard/MarketDash"
                       onClick={() => {
                         setCurrentStep((prev) => prev - 1);
                       }}

@@ -32,6 +32,7 @@ const MarketplaceDetail = () => {
             <section>
                 <Navbar />
             </section>
+
             <section className='pricing-first-section'>
                 <div className="pricing-backgroundImage align-items-start" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                     <div className="owner-content">

@@ -29,6 +29,24 @@ import DashboardProfile from './Components/DashboardProfile';
 import Home1 from './Components/Home1';
 import SellerDash from './Components/SellerDash';
 
+//dashboard
+import PaymentDash from './Components/PaymentDash'
+import ChangePassword from './Components/ChangePassword'
+import Dashboard from './Components/Dashboard'
+import PricingDash from './Components/PricingDash'
+import MarketplaceDash from './Components/MarketplaceDash'
+import MarketplaceDash2 from './Components/MarketplaceDash2'
+import MarketDashDetail from './Components/MarketDashDetail'
+import ProjectBuying from './Components/ProjectBuying'
+import MyProject from './Components/MyProject'
+import MyAnalytics from "./Components/MyAnylatics"
+import ContactDashboard from './Components/ContactDashboard'
+import MessageDash from './Components/MessageDash'
+import DashboardValuation from './Components/DashboardValuation'
+import ProofOfFund from './Components/ProofOfFund'
+import Favourite from './Components/Favourite'
+import NotifactionDash from './Components/NotifactionDash'
+
 function App() {
   return (
     <>
@@ -47,7 +65,6 @@ function App() {
           <Route path="/singup" element={<SignUp />} />
           <Route path="/singin" element={<SignIn />} />
           <Route path="/onboard" element={<Onboarding />} />
-          <Route path="/MainDashboard" element={<MainDashboard />} />
           <Route path="/sellingDash" element={<SellingDash />} />
           <Route path="/valuation" element={<ValuationTool />} />
           <Route path="/testimonials" element={<Testimonials />} />
@@ -55,8 +72,28 @@ function App() {
           <Route path="/placeDetail" element={<MarketplaceDetail />} />
           <Route path="/message" element={<MessageDash2 />} />
           <Route path="/payCart" element={<PaymentCardDash />} />
-          <Route path="/proflie" element={<DashboardProfile />} />
           <Route path="/seller" element={<SellerDash />} />
+
+          <Route path="/MainDashboard" element={<MainDashboard />} >
+            <Route path="proflie" element={<DashboardProfile />} />
+            <Route path="contactDashboard" element={<ContactDashboard />} />
+            <Route path="MessageDash" element={<MessageDash />} />
+            <Route path="PaymentDash" element={<PaymentDash />} />
+            <Route path="ChangePassword" element={<ChangePassword />} />
+            <Route path="Dashbaord" element={<Dashboard />} />
+            <Route path="MarketDash" element={<MarketplaceDash />} />
+            <Route path="MarketDash2" element={<MarketplaceDash2 />} />
+            <Route path="MarketDetail" element={<MarketDashDetail />} />
+            <Route path="ProjectBuying" element={<ProjectBuying />} />
+            <Route path="PricingDash" element={<PricingDash />} />
+            <Route path="MyProject" element={<MyProject />} />
+            <Route path="MyAnalytics" element={<MyAnalytics />} />
+            <Route path="DashValuation" element={<DashboardValuation />} />
+            <Route path="ProofFund" element={<ProofOfFund />} />
+            <Route path="favorites" element={<Favourite />} />
+            <Route path="Notification" element={<NotifactionDash />} />
+          </Route>
+          
         </Routes>
         {/* <Footer /> */}
       </HashRouter>

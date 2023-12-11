@@ -11,7 +11,6 @@ const TermsCondition = () => {
             <Navbar/>
         </section>
 
-        {/** */}
             <section className='pricing-first-section'>
                 <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                     <h1 className='col-6 text-center'>Terms & Privacy</h1>

@@ -19,8 +19,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Market = () => {
-  const [fetchedtemplates, setfetchedtemplates] = useState([]); 
-//   const [templates, settemplates] = useState(fetchedtemplates);
+  const [fetchedtemplates, setfetchedtemplates] = useState([]);
+  //   const [templates, settemplates] = useState(fetchedtemplates);
   const [image, setImage] = useState(null);
   const [fileName, setfileName] = useState("");
   const [file, setFile] = useState(null);
@@ -36,9 +36,9 @@ const Market = () => {
   const [filter, setFilter] = useState({
     category: "",
     tools: [],
-    technology:''
+    technology: ''
   });
-  
+
   const input = ({ target: { files } }) => {
     files[0] && setfileName(files[0].name);
     if (files) {
@@ -218,20 +218,20 @@ const Market = () => {
   };
 
   const applyFilters = () => {
-     
-    let Filteredtemplates=[...fetchedtemplates];
+
+    let Filteredtemplates = [...fetchedtemplates];
 
     if (filter.category) {
       Filteredtemplates = Filteredtemplates.filter(template => template.category === filter.category);
     }
 
     if (filter.tools.length > 0) {
-        Filteredtemplates = Filteredtemplates.filter(template => filter.tools.every(tool => template.tools.includes(tool)));
+      Filteredtemplates = Filteredtemplates.filter(template => filter.tools.every(tool => template.tools.includes(tool)));
     }
 
     if (filter.technology) {
-        Filteredtemplates = Filteredtemplates.filter(template => template.technology === filter.technology);
-      }
+      Filteredtemplates = Filteredtemplates.filter(template => template.technology === filter.technology);
+    }
 
     settemplates(Filteredtemplates);
     console.log(Filteredtemplates);
@@ -244,364 +244,6 @@ const Market = () => {
       <section>
         <Navbar />
       </section>
-
-      {/* <section>
-        <ToastContainer />
-        <div className="hero1">
-          <nav
-            className="navbar navbar-expand-lg navbar-dark navline"
-            id="middleNav"
-            style={{ zIndex: "5", position: "absolute", width: "100%" }}
-          >
-            <div class="container-fluid">
-              <Link className="navbar-brand" to="/">
-                <img src={Logo} alt="Logo" className="Logo" />
-              </Link>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar"
-                aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="offcanvas offcanvas-end text-bg-dark"
-                tabindex="-1"
-                id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                    <Link className="navbar-brand" to="/">
-                      <img src={Logo} alt="Logo" className="Logo1" />
-                    </Link>
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body">
-                  <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link>
-
-                  <ul className="ul  navbar-nav  nav justify-content-between">
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link "
-                        aria-current="page"
-                        to="/market"
-                      >
-                        Marketplace
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/acquire">
-                        For Acquirers
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/owner">
-                        For Owners
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/pricing">
-                        Pricing
-                      </Link>
-                    </li>
-                  </ul>
-
-                  <Link>
-                    <Link
-                      class="btn btn-outline-light mx-2"
-                      to="/singin"
-                      type="submit"
-                    >
-                      Sign in
-                    </Link>
-                    <Link class="btn btn-primary" to="/singup" type="submit">
-                      Join <img style={{ width: "30%" }} src={arrow} alt="" />
-                    </Link>
-                    <Link
-                      class="btn btn-primary mx-2"
-                      to="/"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      Add Tamplate
-                      <i
-                        class="fa-solid fa-circle-plus mx-2"
-                        style={{ color: "#fff" }}
-                      ></i>
-                    </Link>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </section> */}
-
-      {/** modal for add cart */}
-
-      {/* <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1
-                class="modal-title fs-5"
-                id="exampleModalLabel"
-                style={{ color: "#3247FF" }}
-              >
-                New Tamplate
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div className="marketInner-card ">
-                <div className="firstMarket">
-                  <div className="divInput" style={{ width: "100%" }}>
-                    <div className="d-flex flex-column align-items-center justify-content-center">
-                      <div className="img-container" id="display_image">
-                        <img src={image} className="" id="img" alt="" />
-                      </div>
-                      <div>
-                        <input
-                          type="file"
-                          class="form-label"
-                          id="image_input1"
-                          multiple
-                          accept="images/*"
-                          onChange={(e) => {
-                            input(e);
-                            handleFileChange(e);
-                          }}
-                        />
-                        <label
-                          for="image_input1"
-                          class="form-label text-center"
-                          style={{ color: "#636363" }}
-                        >
-                          {" "}
-                          <img src={upload} alt="" />
-                          <br />
-                          <br />
-                          <span>Upload Listing images</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="firstSide-top"
-                    style={{
-                      position: "absolute",
-                      top: "0",
-                      right: "0px",
-                      width: "50%",
-                      textAlign: "end",
-                    }}
-                  >
-                    <button
-                      className="btn-card btn btn-outline-primary my-2"
-                      style={{
-                        fontSize: "13px",
-                        background: "#fff",
-                        color: "#3247FF ",
-                      }}
-                    >
-                      Next Js
-                    </button>
-                    <button
-                      className="btn-card btn btn-outline-primary my-2"
-                      style={{
-                        fontSize: "13px",
-                        background: "#fff",
-                        color: "#3247FF ",
-                      }}
-                    >
-                      Firebase
-                    </button>
-                    <button
-                      className="btn-card btn btn-outline-primary my-2"
-                      style={{
-                        fontSize: "13px",
-                        background: "#fff",
-                        color: "#3247FF ",
-                      }}
-                    >
-                      Medical
-                    </button>
-                    <button
-                      className="btn-card btn btn-outline-primary my-2"
-                      style={{
-                        fontSize: "13px",
-                        background: "#fff",
-                        color: "#3247FF ",
-                      }}
-                    >
-                      SaaS
-                    </button>
-                  </div>
-                </div>
-                <div style={{ padding: "2rem" }}>
-                  <div>
-                    <div>
-                      <div class="mb-3 my-3">
-                        <label
-                          for="exampleFormControlInput1"
-                          class="form-label"
-                          style={{ color: "#636363" }}
-                        >
-                          Website Name
-                        </label>
-                        <input
-                          type="text"
-                          name="websiteName"
-                          class="form-control"
-                          id="exampleFormControlInput1"
-                          placeholder="Enter Full Name"
-                          value={formData.websiteName}
-                          onChange={handleChange}
-                        />
-                      </div>
-                      <Link
-                        style={{
-                          padding: "0.5rem 1.5rem",
-                          background: "#EEF0FE",
-                          color: "#3247FF",
-                          border: "none",
-                        }}
-                        to="#"
-                        className="btn btn-primary rounded-pill"
-                      >
-                        Template
-                      </Link>
-                    </div>
-                    <div className="d-flex justify-content-between my-4">
-                      <div>
-                        <span className="mx-2">Favorites</span>
-                        <i
-                          class="fa-regular fa-heart"
-                          style={{ color: "#005eff" }}
-                        ></i>
-                      </div>
-                      <div>
-                        <span className="mx-2">Net Profit</span>
-                        <i
-                          class="fa-solid fa-lock"
-                          style={{ color: "#005eff" }}
-                        ></i>
-                      </div>
-                      <div>
-                        <span className="mx-2">India</span>
-                        <i
-                          class="fa-solid fa-location-dot"
-                          style={{ color: "#005eff" }}
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="d-flex justify-content-between"
-                    style={{ margin: "2rem 0 2rem 0" }}
-                  >
-                    <div className="d-flex">
-                      <div class="mb-3 my-3">
-                        <label
-                          for="exampleFormControlInput2"
-                          class="form-label"
-                          style={{ color: "#636363" }}
-                        >
-                          Please Enter Amount
-                        </label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          name="amount"
-                          id="exampleFormControlInput2"
-                          placeholder="$000"
-                          value={formData.amount}
-                          onChange={handleChange}
-                        />
-                      </div>
-                      <div class="mb-3 my-3 mx-2">
-                        <label
-                          for="exampleFormControlInput3"
-                          class="form-label"
-                          style={{ color: "#636363" }}
-                        >
-                          Link Your Project
-                        </label>
-                        <input
-                          type="url"
-                          class="form-control"
-                          name="link"
-                          id="exampleFormControlInput3"
-                          placeholder="URL"
-                          value={formData.link}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-3 my-3">
-                    <label
-                      for="exampleFormControlTextarea1"
-                      class="form-label"
-                      style={{ color: "#636363" }}
-                    >
-                      Please enter description below
-                    </label>
-                    <textarea
-                      class="form-control"
-                      name="description"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                      placeholder="Write a Description"
-                      value={formData.description}
-                      onChange={handleChange}
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                onClick={collectData}
-              >
-                Add Tamplate
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/** */}
       <section className="pricing-first-section">
@@ -619,10 +261,10 @@ const Market = () => {
             <div>
               <div className="my-5">
                 <h1 className="main-h1 col-6">
-                  Welcome to the Marketplace <br/>
+                  Welcome to the Marketplace <br />
                   <TypeAnimation
                     className="typeAnimation marketTypeAnimation"
-                    style={{fontSize: "3rem" }}
+                    style={{ fontSize: "3rem" }}
                     sequence={[
                       "Ecommerce", // Types 'One'
                       1000, // Waits 1s
@@ -715,17 +357,17 @@ const Market = () => {
                                 <option value="HTML,CSS">HTML,CSS</option>
                             </select> */}
               <div style={{ position: "relative" }}>
-                <div  class="form-control mb-2 px-5 d-flex align-items-center"
+                <div class="form-control mb-2 px-5 d-flex align-items-center"
                   style={{
                     width: '95%', color: '#3247ff',
                     border: "1px solid #ccc",
                     // padding: "5px",
                     cursor: "pointer",
-                    height:'8vh',
+                    height: '8vh',
                   }}
                   onClick={toggleDropdown}
                 >
-                Tools
+                  Tools
                 </div>
                 {isOpen && (
                   <div
@@ -776,7 +418,7 @@ const Market = () => {
                 <img src="" alt="" />
                 <i
                   class="fa-solid fa-screwdriver-wrench"
-                  style={{ color: "#005eff" ,marginRight:'5px'}}
+                  style={{ color: "#005eff", marginRight: '5px' }}
                 ></i>
               </label>
             </div>
@@ -799,13 +441,13 @@ const Market = () => {
                 <i class="fa-solid fa-list" style={{ color: "#005eff" }}></i>
               </label>
             </div>
-            
+
           </div>
-          <button style={{width:"20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
-                <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt=""/>{" "}
+          <button style={{ width: "20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
+            <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt="" />{" "}
           </button>
         </div>
-        
+
       </section>
 
       <section
