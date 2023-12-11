@@ -59,11 +59,7 @@ const SignIn = () => {
             email: '',
             password: '',
           });
-<<<<<<< HEAD
-          navigate('/MainDashboard/Dashbaord')
-=======
           navigate('/MainDashboard/Dashboard')
->>>>>>> 80e9d17e86579577c80a5aba6fab3f2b9d76e087
         }
         else if(response.status === 401){
           toast.error("Invalid Email or Password", toastOptions);

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import message from "./ProfileDashbaord/chatteardropdots1.svg"
 import { Link } from 'react-router-dom'
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 import BlackLogo from "./Aqify project/FrameblackLogo.svg"
-=======
-import React from "react";
-import message from "./ProfileDashbaord/chatteardropdots1.svg";
-import { Link, Outlet } from "react-router-dom";
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png";
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg";
-import BlackLogo from "./Aqify project/FrameblackLogo.svg";
->>>>>>> 80e9d17e86579577c80a5aba6fab3f2b9d76e087
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
@@ -21,14 +12,8 @@ import { useEffect } from "react";
 const TopMessage = () => {
   const [pic, setPic] = React.useState("");
 
-<<<<<<< HEAD
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const logout = () => {
-        window.location.href = "http://localhost:3000/aqify#/singin";
-        localStorage.clear();
-        navigate('/')
-=======
   useEffect(() => {
     const getUser = async () => {
       const token = localStorage.getItem("token");
@@ -47,12 +32,10 @@ const TopMessage = () => {
           console.error(error);
         }
       }
->>>>>>> 80e9d17e86579577c80a5aba6fab3f2b9d76e087
     };
     getUser();
   }, []);
 
-  const navigate = useNavigate();
 
   const logout = () => {
     window.location.href = "http://localhost:3000/aqify#/singin";
@@ -122,19 +105,8 @@ const TopMessage = () => {
           </div>
         </div>
       </section>
-      <section>
-        <Outlet />
-      </section>
     </>
   );
 };
 
-<<<<<<< HEAD
-        </>
-    )
-}
-
 export default TopMessage;
-=======
-export default TopMessage;
->>>>>>> 80e9d17e86579577c80a5aba6fab3f2b9d76e087

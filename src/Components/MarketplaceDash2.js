@@ -74,11 +74,7 @@ const MarketplaceDash2 = () => {
                       <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
                         <div className="sideInfo d-flex">
                           <div className="secondPart">
-<<<<<<< HEAD
-                            <img width={200} src={cardProfile} alt="" /> {/**item.ownerImage */}
-=======
                             <img width={200} src={item.link} alt="" />
->>>>>>> 80e9d17e86579577c80a5aba6fab3f2b9d76e087
                           </div>
                           <div className="firstPart" style={{ marginLeft: "2rem" }}>
                             <h3 style={{ fontSize: "30px", fontWeight: "700" }}>
