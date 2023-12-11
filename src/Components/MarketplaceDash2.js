@@ -74,7 +74,7 @@ const MarketplaceDash2 = () => {
                       <div className="card1" key={item.id} style={{ margin: "1rem 1rem", padding: "1rem", width: "44%" }}>
                         <div className="sideInfo d-flex">
                           <div className="secondPart">
-                            <img width={200} src={item.ownerImage} alt="" />
+                            <img width={200} src={item.link} alt="" />
                           </div>
                           <div className="firstPart" style={{ marginLeft: "2rem" }}>
                             <h3 style={{ fontSize: "30px", fontWeight: "700" }}>
