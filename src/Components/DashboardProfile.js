@@ -17,13 +17,13 @@ const DashboardProfile = () => {
   // const [own, setOwn] = useState(true);
   // const [Show, setShow] = useState(6);
 
-
-  const [formData, setFormData] = useState({
+  const [form, setform] = useState({
     firstName: "",
     lastName: "",
     userName: "",
     about: "",
     role: "",
+    pic: "",
   });
 
   useEffect(() => {
@@ -39,12 +39,13 @@ const DashboardProfile = () => {
               headers: { "x-auth-token": id },
             }
           );
-          setFormData({
+          setform({
             firstName: response.data.user.firstName,
             lastName: response.data.user.lastName,
             userName: response.data.user.userName,
             about: response.data.user.about,
             role: response.data.user.role,
+            pic: response.data.user.pic,
           });
         } catch (error) {
           console.error(error);
@@ -68,30 +69,32 @@ const DashboardProfile = () => {
   };
 
   const validation = () => {
-    if (!formData.firstName) {
+    console.log(form);
+    if (!form.firstName) {
       toast.error("First name is required.", toastOptions);
       return false;
     }
 
-    if (!formData.lastName) {
+    if (!form.lastName) {
       toast.error("Last name is required.", toastOptions);
       return false;
     }
 
-    if (!formData.userName) {
+    if (!form.userName) {
       toast.error("Username is required.", toastOptions);
       return false;
     }
 
-    if (!formData.about) {
+    if (!form.about) {
       toast.error("Description is required.", toastOptions);
       return false;
     }
 
-    if (!formData.role) {
+    if (!form.role) {
       toast.error("Role is required.", toastOptions);
       return false;
     }
+
 
     return true;
   };
@@ -112,10 +115,12 @@ const DashboardProfile = () => {
           }
         }
 
+
         if (!token) {
           const user = JSON.parse(localStorage.getItem("user"));
           token = user.token;
         }
+
 
         if (token) {
           const decoded = jwtDecode(token);
@@ -128,7 +133,7 @@ const DashboardProfile = () => {
                 "Content-Type": "application/json",
               },
               credentials: "include",
-              body: JSON.stringify({ formData, userId }),
+              body: JSON.stringify({ form, userId }),
             }
           );
           console.warn(response);
@@ -148,8 +153,8 @@ const DashboardProfile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       [name]: value,
     });
   };
@@ -160,24 +165,54 @@ const DashboardProfile = () => {
     } else {
       setVisible(true);
     }
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "owner and acquirer",
     });
   };
 
+  const upload = (e) => {
+    const file = e.target.files[0];
+  
+    const formData = new FormData();
+    formData.append('image', file);
+  
+    axios.post(
+      'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+    )
+    .then((res) => {
+      console.log(res.data.data.url);
+      setform({
+        ...form,
+        pic: res.data.data.url,
+      });
+
+      console.log(form);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
+  
+
   const changeRoleowner = () => {
     setVisible(true);
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "owner",
     });
   };
 
   const changeRoleacquire = () => {
     setVisible(false);
-    setFormData({
-      ...formData,
+    setform({
+      ...form,
       role: "acquirer",
     });
   };
@@ -197,105 +232,108 @@ const DashboardProfile = () => {
             </span>
           </div>
 
-          <div className="profile-card d-flex">
-            <div className="profile-content d-flex justify-content-around align-items-center">
-              <div className="profilePhoto d-flex flex-column align-items-center">
-                <div className="inpu-count d-flex flex-column flow-reverse text-center">
-                  <img className="DashprofileImage" src={profilePhoto} alt="" />
-                  {/* <img style={{width:'12rem', height:'12rem', borderRadius:'200px'}} className="DashprofileImage" src={image} alt="" />
-                  <form>
-                    <input type="file" id="image_input" multiple accept='image/*' />
-                    <label style={{ position: 'relative', right: '-45px', top: '-40px' }} htmlFor="image_input">
-                      <i class="fa-solid fa-circle-plus mx-2" style={{ color: "blue", fontSize: '2rem', background: '#fff', borderRadius: '50px' }}></i>
+              <div className="profile-card d-flex">
+                <div className="profile-content d-flex justify-content-around align-items-center">
+                  <div className="profilePhoto d-flex flex-column align-items-center">
+                    <img
+                      style={{ width: "50%", height: "50%", borderRadius: "50%" }}
+                      src={
+                        form.pic ||
+                        "https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+                      }
+                      alt=""
+                    />
+                    <label className="btn btn-primary my-3 rounded-pill">
+                      {" "}
+                      Upload photo{" "}
+                      <input  type="file" name="pic" onChange={upload} />{" "}
                     </label>
-                  </form> */}
-                </div>
-                <Link
-                  className="btn btn-primary rounded-pill"
-                  style={{ padding: "0.5rem 0.8rem" }}
-                >
-                  <img src={verify} alt="" />
-                  Verify
-                </Link>
-              </div>
-
-              <div style={{ width: "60%" }}>
-                <div class="mb-3 my-3">
-                  <div class="row">
-                    <div class="col">
-                      <label
-                        for="exampleFormControlInput1"
-                        class="form-label"
-                        style={{ color: "#636363" }}
-                      >
-                        First name
-                      </label>
-                      <input
-                        style={{ height: "6vh" }}
-                        type="text"
-                        class="form-control"
-                        aria-label="First name"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div class="col">
-                      <label
-                        for="exampleFormControlInput1"
-                        class="form-label"
-                        style={{ color: "#636363" }}
-                      >
-                        Last name
-                      </label>
-                      <input
-                        style={{ height: "6vh" }}
-                        type="text"
-                        class="form-control"
-                        aria-label="Last name"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                      />
-                    </div>
+                    {/* <Link
+                      className="btn btn-primary rounded-pill"
+                      style={{ padding: "0.5rem 0.8rem" }}
+                    >
+                      <img src={verify} alt="" />
+                      Verify
+                    </Link> */}
                   </div>
-                </div>
-                <div class="mb-3 my-3">
-                  <label
-                    for="exampleFormControlInput1"
-                    class="form-label"
-                    style={{ color: "#636363" }}
-                  >
-                    Username
-                  </label>
-                  <input
-                    style={{ height: "6vh" }}
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    name="userName"
-                    value={formData.userName}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div class="mb-3 my-3">
-                  <label
-                    for="exampleFormControlTextarea1"
-                    class="form-label"
-                    style={{ color: "#636363" }}
-                  >
-                    About me
-                  </label>
-                  <textarea
-                    style={{ height: "25vh" }}
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                    name="about"
-                    value={formData.about}
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
+
+                  <div style={{ width: "60%" }}>
+                    <div class="mb-3 my-3">
+                      <div class="row">
+                        <div class="col">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            style={{ color: "#636363" }}
+                          >
+                            First name
+                          </label>
+                          <input
+                            style={{ height: "6vh" }}
+                            type="text"
+                            class="form-control"
+                            aria-label="First name"
+                            name="firstName"
+                            value={form.firstName}
+                            onChange={handleChange}
+                          />
+                        </div>
+                        <div class="col">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            style={{ color: "#636363" }}
+                          >
+                            Last name
+                          </label>
+                          <input
+                            style={{ height: "6vh" }}
+                            type="text"
+                            class="form-control"
+                            aria-label="Last name"
+                            name="lastName"
+                            value={form.lastName}
+                            onChange={handleChange}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3 my-3">
+                      <label
+                        for="exampleFormControlInput1"
+                        class="form-label"
+                        style={{ color: "#636363" }}
+                      >
+                        Username
+                      </label>
+                      <input
+                        style={{ height: "6vh" }}
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        name="userName"
+                        value={form.userName}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div class="mb-3 my-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label"
+                        style={{ color: "#636363" }}
+                      >
+                        About me
+                      </label>
+                      <textarea
+                        style={{ height: "25vh" }}
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                        name="about"
+                        value={form.about}
+                        onChange={handleChange}
+                      ></textarea>
+                    </div>
 
                 <div>
                   <span className="my-5" style={{ color: "#636363" }}>

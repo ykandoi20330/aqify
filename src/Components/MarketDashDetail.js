@@ -36,17 +36,9 @@ const MarketDashDetail = () => {
     }, []);
 
     const getCard = async () => {
-        const token = localStorage.getItem("token");
-        if (token) {
-            const decoded = jwtDecode(token);
-            const id = decoded.id;
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/business/getbusiness",
-                    {
-                        headers: { "x-auth-token": id },
-                    }
-                );
+                    "http://localhost:5000/business/getbusiness" ); 
                 console.log(response.data.business);
                 setCard(response.data.business);
 
@@ -54,19 +46,21 @@ const MarketDashDetail = () => {
                 console.error(error);
             }
         }
-    };
+    
 
     
     const [username, setUsername] = useState("");
     const [show, setShow] = useState(1)
     const [card, setCard] = useState([]);
+    const [text, setText] = useState("Share")
     
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
 
     const handleShare = () => {
         console.log("share")
-        window.location.href = 'whatsapp://send?text=http://localhost:3000/aqify#/proflie';
+        setText("Link Copied")
+        navigator.clipboard.writeText("http://localhost:3000/aqify#/MainDashboard/MarketDash")
     }
 
 
@@ -137,7 +131,7 @@ const MarketDashDetail = () => {
                         <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
                             <div className='FirstContent d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={200} src={cardProfile} alt="" />
+                                    <img width={200} src={item.link} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
@@ -294,9 +288,9 @@ const MarketDashDetail = () => {
                                         <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                         <span className='mx-2' >Watch video Path</span>
                                     </Link>
-                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' onClick={handleShare} style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
-                                        <span className='mx-2' >Share</span>
+                                        <span className='mx-2' >{text}</span>
                                     </Link>
                                     <div className='my-3'>
                                         <Link style={{ width: '100%' }} className='btn btn-primary' to="/MainDashboard/PaymentDash"><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
@@ -308,9 +302,9 @@ const MarketDashDetail = () => {
                                         <h5 className='card-h3 py-2'>About the Seller</h5>
                                     </div>
                                     <div className='d-flex align-items-center'>
-                                        <img src={profileIcon} alt="" />
+                                        <img src={item.ownerImage} alt="" style={{borderRadius : "50px" , height:"50px" , width:"50px"}}/>
                                         <div className='mx-2'>
-                                            <h4>{username}</h4> {/**Akash ku. Padhi */}
+                                            <h4>{item.ownerName}</h4> 
                                             <span><img className='mx-1' src={smallMap} alt="" />{item.location}</span>
                                         </div>
                                     </div>
