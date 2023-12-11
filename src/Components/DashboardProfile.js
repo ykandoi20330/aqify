@@ -14,8 +14,8 @@ import "react-toastify/dist/ReactToastify.css";
 const DashboardProfile = () => {
 
   const [visible, setVisible] = useState(true);
-  const [own, setOwn] = useState(true);
-  const [Show, setShow] = useState(6);
+  // const [own, setOwn] = useState(true);
+  // const [Show, setShow] = useState(6);
 
   const [form, setform] = useState({
     firstName: "",

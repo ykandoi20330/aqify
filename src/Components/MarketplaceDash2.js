@@ -156,6 +156,7 @@ const MarketplaceDash2 = () => {
                               <img width={40} src={cardLogo3} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
                                 {/* {item}  */}
+                                Full
                               </span>
                             </div>
                           </div>

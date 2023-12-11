@@ -86,7 +86,7 @@ const Favourite = () => {
                       <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
                       <div className='d-flex justify-content-start align-items-center'>
                         <img width={40} src={cardLogo3} alt="" />
-                        <span className='card-span' style={{ fontSize: '1.5rem' }}>{/*{item} */}</span>
+                        <span className='card-span' style={{ fontSize: '1.5rem' }}>{/*{item} */}Full</span>
                       </div>
                     </div>
                     <div style={{ margin: '1rem 3rem 0 0' }}>
