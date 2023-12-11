@@ -13,12 +13,12 @@ import BlackLogo from "./Aqify project/FrameblackLogo.svg";
 import analytics from "./MarketDash/Vertical.png";
 import { useNavigate } from "react-router-dom";
 //
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 //
 
 const SellerDash = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
 
   const steps = [
@@ -90,9 +90,42 @@ const SellerDash = () => {
     minPrice: "",
   });
 
+  const [text, setText] = useState("upload")
+
+  const submitUpload = (e) => {
+    const file = e.target.files[0];
+  
+    const logo = new FormData();
+    logo.append('image', file);
+  
+    axios.post(
+      'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
+      logo,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+    )
+    .then((res) => {
+      console.log(res.data.data.url);
+      setformData({
+        ...formData,
+        link: res.data.data.url,
+      });
+setText("Uploaded")
+      console.log(formData);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
+  
+
+
   useEffect(() => {
     const getUser = async () => {
-    const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
       if (token) {
         const decoded = jwtDecode(token);
         const id = decoded.id;
@@ -108,6 +141,7 @@ const SellerDash = () => {
             ownerName: response.data.user.userName,
             ownerId: id,
             ownerEmail: response.data.user.email,
+            ownerImage: response.data.user.pic || "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=",
           });
         } catch (error) {
           console.error(error);
@@ -185,8 +219,6 @@ const SellerDash = () => {
     }
   };
 
-  
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
@@ -254,25 +286,27 @@ const SellerDash = () => {
                     Get your listing ready to be seen by thousands of buyers
                   </span>
                 </div>
-
                 <div>
-                  <div class="mb-3 my-3 form-floating">
-                    <input
-                      style={{ width: "100%" }}
-                      type="text"
-                      name="link"
-                      id="floatingInputValue"
-                      class="form-control"
-                      placeholder="Enter Full URL"
-                      value={formData.link}
-                      onChange={handleChange}
-                    />
-                    <label for="floatingInputValue">
-                      <img src={clip} alt="" />
+                  <div class="mb-3 my-3">
+                    <label for="logoInput" class="form-label">
+                      Upload Image Logo
                     </label>
-                    <span style={{ fontSize: "15px" }}>
-                      Your project should contain a URL
-                    </span>
+                    <input
+                      style={{display: "none"}}
+                      type="file"
+                      accept="image/*"
+                      id="logoInput"
+                      onChange={submitUpload}
+                    />
+                    <label for="logoInput" class="custom-file-upload">
+                      <i class="fas fa-cloud-upload-alt"></i>{text}
+                    </label>
+                    <img
+                      src="#"
+                      alt="Logo Preview"
+                      id="logoPreview"
+                      style={{width : "200px", display: "none"}}
+                    />
                   </div>
                 </div>
 

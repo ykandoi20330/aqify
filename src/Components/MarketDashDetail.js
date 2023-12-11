@@ -131,7 +131,7 @@ const MarketDashDetail = () => {
                         <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
                             <div className='FirstContent d-flex align-items-center'>
                                 <div className='secondPart'>
-                                    <img width={200} src={cardProfile} alt="" />
+                                    <img width={200} src={item.link} alt="" />
                                 </div>
                                 <div className="firstPart" style={{ marginLeft: "2rem" }}>
                                     <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
@@ -302,9 +302,9 @@ const MarketDashDetail = () => {
                                         <h5 className='card-h3 py-2'>About the Seller</h5>
                                     </div>
                                     <div className='d-flex align-items-center'>
-                                        <img src={profileIcon} alt="" />
+                                        <img src={item.ownerImage} alt="" style={{borderRadius : "50px" , height:"50px" , width:"50px"}}/>
                                         <div className='mx-2'>
-                                            <h4>{username}</h4> {/**Akash ku. Padhi */}
+                                            <h4>{item.ownerName}</h4> 
                                             <span><img className='mx-1' src={smallMap} alt="" />{item.location}</span>
                                         </div>
                                     </div>
