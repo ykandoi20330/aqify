@@ -36,17 +36,9 @@ const MarketDashDetail = () => {
     }, []);
 
     const getCard = async () => {
-        const token = localStorage.getItem("token");
-        if (token) {
-            const decoded = jwtDecode(token);
-            const id = decoded.id;
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/business/getbusiness",
-                    {
-                        headers: { "x-auth-token": id },
-                    }
-                );
+                    "http://localhost:5000/business/getbusiness" ); 
                 console.log(response.data.business);
                 setCard(response.data.business);
 
@@ -54,17 +46,19 @@ const MarketDashDetail = () => {
                 console.error(error);
             }
         }
-    };
+    
 
     const [show, setShow] = useState(1)
     const [card, setCard] = useState([]);
+    const [text, setText] = useState("Share")
     
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
 
     const handleShare = () => {
         console.log("share")
-        window.location.href = 'whatsapp://send?text=http://localhost:3000/aqify#/proflie';
+        setText("Link Copied")
+        navigator.clipboard.writeText("http://localhost:3000/aqify#/MainDashboard/MarketDash")
     }
 
 
@@ -250,9 +244,9 @@ const MarketDashDetail = () => {
                                         <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                         <span className='mx-2' >Watch video Path</span>
                                     </Link>
-                                    <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                    <Link className='my-3 d-flex align-items-center justify-content-center' onClick={handleShare} style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                         <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
-                                        <span className='mx-2' >Share</span>
+                                        <span className='mx-2' >{text}</span>
                                     </Link>
                                     <div className='my-3'>
                                         <Link style={{ width: '100%' }} className='btn btn-primary' to="/MainDashboard/PaymentDash"><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
