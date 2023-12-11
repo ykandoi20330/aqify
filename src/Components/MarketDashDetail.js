@@ -56,6 +56,8 @@ const MarketDashDetail = () => {
         }
     };
 
+    
+    const [username, setUsername] = useState("");
     const [show, setShow] = useState(1)
     const [card, setCard] = useState([]);
     
@@ -66,6 +68,48 @@ const MarketDashDetail = () => {
         console.log("share")
         window.location.href = 'whatsapp://send?text=http://localhost:3000/aqify#/proflie';
     }
+
+
+    //seller username
+
+    useEffect(() => {
+      const getUsername = async () => {
+        let token = null;
+        const cookies = document.cookie.split(";");
+        for (let cookie of cookies) {
+          const [cookieName, cookieValue] = cookie.trim().split("=");
+          if (cookieName === "token") {
+            token = cookieValue;
+            localStorage.setItem("token", token);
+          }
+        }
+  
+        if (!token) {
+          const user = JSON.parse(localStorage.getItem("user"));
+          token = user.token;
+          localStorage.setItem("token", token);
+        }
+  
+  
+        if (token) {
+          const decoded = jwtDecode(token);
+          const id = decoded.id;
+          try {
+            const response = await axios.get(
+              "http://localhost:5000/users/getUser",
+              {
+                headers: { "x-auth-token": id },
+              }
+            );
+            setUsername(response.data.user.userName);
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      };
+  
+      getUsername();
+    }, [setUsername]);
 
 
     return (
@@ -104,7 +148,7 @@ const MarketDashDetail = () => {
                                 </div>
                             </div>
                             <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
-                                <h3 className='card-h3'>Metrics</h3>
+                                <h3 className='card-h3 py-2'>Description</h3>
                                 {/* <Link> <i class="fa-solid fa-heart"></i></Link> */}
                             </div>
 
@@ -139,10 +183,10 @@ const MarketDashDetail = () => {
 
                             <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                                    <span style={{ color: '#636363', fontWeight: '500' }}>Asking Price</span>
+                                    <span style={{ color: '#636363', fontWeight: '500' }}>Financing</span>
                                     <div className='d-flex justify-content-start align-items-center'>
                                         <img width={35} src={cardLogo2} alt="" />
-                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.askingPrice}</span>
+                                        <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.financing}</span>
                                     </div>
                                 </div>
                                 <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
@@ -188,7 +232,7 @@ const MarketDashDetail = () => {
 
                             <div className="description">
                                 <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
-                                    <h3 className='card-h3'>Metrics</h3>
+                                    <h3 className='card-h3 py-2'>Metrics</h3>
                                 </div>
 
                                 <div className='d-flex flex-wrap justify-content-between'>
@@ -228,7 +272,7 @@ const MarketDashDetail = () => {
                             <div className="sideCard d-flex flex-column justify-content-between" style={{ background: '#EEF0FE', borderRadius: '10px', padding: '1rem', height: '100%', overflowY: 'scroll' }}>
                                 <div>
                                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
-                                        <h5 className='card-h3'>Asking Price</h5>
+                                        <h5 className='card-h3 py-2'>Asking Price</h5>
                                     </div>
                                     <div className='my-3'>
                                         <h1>{item.askingPrice}</h1>
@@ -261,13 +305,13 @@ const MarketDashDetail = () => {
 
                                 <div>
                                     <div className='d-flex justify-content-between my-3' style={{ margin: '1rem 0 0rem 0' }}>
-                                        <h5 className='card-h3'>About the Seller</h5>
+                                        <h5 className='card-h3 py-2'>About the Seller</h5>
                                     </div>
                                     <div className='d-flex align-items-center'>
                                         <img src={profileIcon} alt="" />
                                         <div className='mx-2'>
-                                            <h4>Akash ku. Padhi</h4>
-                                            <span><img src={smallMap} alt="" />India</span>
+                                            <h4>{username}</h4> {/**Akash ku. Padhi */}
+                                            <span><img className='mx-1' src={smallMap} alt="" />{item.location}</span>
                                         </div>
                                     </div>
                                 </div>
