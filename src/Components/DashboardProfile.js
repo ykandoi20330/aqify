@@ -14,8 +14,8 @@ import "react-toastify/dist/ReactToastify.css";
 const DashboardProfile = () => {
 
   const [visible, setVisible] = useState(true);
-  const [own, setOwn] = useState(true);
-  const [Show, setShow] = useState(6);
+  // const [own, setOwn] = useState(true);
+  // const [Show, setShow] = useState(6);
 
 
   const [formData, setFormData] = useState({
@@ -200,7 +200,16 @@ const DashboardProfile = () => {
           <div className="profile-card d-flex">
             <div className="profile-content d-flex justify-content-around align-items-center">
               <div className="profilePhoto d-flex flex-column align-items-center">
-                <img src={profilePhoto} alt="" />
+                <div className="inpu-count d-flex flex-column flow-reverse text-center">
+                  <img className="DashprofileImage" src={profilePhoto} alt="" />
+                  {/* <img style={{width:'12rem', height:'12rem', borderRadius:'200px'}} className="DashprofileImage" src={image} alt="" />
+                  <form>
+                    <input type="file" id="image_input" multiple accept='image/*' />
+                    <label style={{ position: 'relative', right: '-45px', top: '-40px' }} htmlFor="image_input">
+                      <i class="fa-solid fa-circle-plus mx-2" style={{ color: "blue", fontSize: '2rem', background: '#fff', borderRadius: '50px' }}></i>
+                    </label>
+                  </form> */}
+                </div>
                 <Link
                   className="btn btn-primary rounded-pill"
                   style={{ padding: "0.5rem 0.8rem" }}

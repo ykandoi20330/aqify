@@ -195,7 +195,7 @@ const Home1 = () => {
                                         </div>
                                         <div className=''>
                                             <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
-                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="/">Demo</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="#video">Demo</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -481,7 +481,7 @@ const Home1 = () => {
                     <span style={{ color: '#636363' }}>Everything you need to acquire your next project.</span>
                 </div>
 
-                <div data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="200" className='d-flex align-items-center justify-content-center'>
+                <div id="video" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="200" className='d-flex align-items-center justify-content-center'>
                     <div className="card d-flex align-items-center justify-content-center" style={{ width: '80%', height: '80vh', margin: '1rem' }}>
                         <h1>Video</h1>
                     </div>
