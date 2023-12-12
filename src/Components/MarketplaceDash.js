@@ -11,6 +11,7 @@ import Close from "./MarketDash/VectorClose.svg"
 import MarketplaceDash2 from "./MarketplaceDash2" 
 // import {jwtDecode} from "jwt-decode";
 import axios from "axios";
+import ENV from '../config.js';
 
 
 const MarketplaceDash = ({ onSearch }) => {
@@ -31,7 +32,7 @@ const MarketplaceDash = ({ onSearch }) => {
         const getCard = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/business/getbusiness" ); 
+                    `${ENV.BACKEND_URL}/business/getbusiness` ); 
                 console.log(response.data.business);
                 setCard(response.data.business);
 

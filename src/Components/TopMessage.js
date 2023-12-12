@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import { useEffect } from "react";
+import ENV from "../config.js";
 
 const TopMessage = () => {
   const [pic, setPic] = React.useState("");
@@ -22,7 +23,7 @@ const TopMessage = () => {
         const id = decoded.id;
         try {
           const response = await axios.get(
-            "http://localhost:5000/users/getUser",
+            `${ENV.BACKEND_URL}/users/getUser`,
             {
               headers: { "x-auth-token": id },
             }
@@ -38,7 +39,7 @@ const TopMessage = () => {
 
 
   const logout = () => {
-    window.location.href = "http://localhost:3000/aqify#/singin";
+    window.location.href = `${ENV.FRONTEND_URL}/aqify#/singin`;
     localStorage.clear();
   };
 
@@ -81,7 +82,7 @@ const TopMessage = () => {
                     class="dropdown-menu dropdown-menu-lg-end shadow"
                   >
                     <li>
-                      <Link class="dropdown-item" to="/proflie">
+                      <Link class="dropdown-item" to="/MainDashboard/proflie">
                         <i
                           class="fa-solid fa-user mx-2"
                           style={{ color: "#005eff" }}

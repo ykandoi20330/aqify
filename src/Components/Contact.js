@@ -5,6 +5,7 @@ import Navbar from "./Navbar"
 import Footer from './Footer'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ENV from '../config.js';
 
 const Contact = () => {
     const toastOptions = {
@@ -50,7 +51,7 @@ const Contact = () => {
         if (validation()) {
           try {
             console.warn(formData);
-            const response = await fetch('http://localhost:5000/contact/send', {
+            const response = await fetch(`${ENV.BACKEND_URL}/contact/send`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

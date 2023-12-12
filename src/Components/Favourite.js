@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 // card logo images
 import cardLogo1 from "./Market/Frame 33.png"
@@ -31,7 +31,7 @@ const Favourite = () => {
     <>
       <section className="marketDash2-back" style={{ height: '100%' }} >
         <div className='d-flex'>
-          <div className="market-card" > 
+          <div className="market-card" >
             {favourite.length > 0 ? favourite.map((item, index) => {
               const id = index + 1
               return (
@@ -39,7 +39,7 @@ const Favourite = () => {
 
                   <div className='sideInfo d-flex'>
                     <div className='secondPart'>
-                      <img style={{borderRadius:'8px'}} width={200} src={item.link} alt="" />
+                      <img style={{ borderRadius: '8px' }} width={200} src={item.link} alt="" />
                     </div>
                     <div className="firstPart" style={{ marginLeft: "2rem" }}>
                       <h3 style={{ fontSize: '30px', fontWeight: '700' }}>{item.projectName}</h3>
@@ -61,9 +61,9 @@ const Favourite = () => {
                     <div className='d-flex justify-content-center align-items-center'>
                       <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </button>
                       {favoriteChecker(item.id) ?
-                        (<Link onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{color:''}}></i></Link>)
+                        (<Link onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                         :
-                        (<Link onClick={() => addToFavorites(item)}> <i class="fa-solid fa-heart" style={{color:'#c0c0c0'}}></i></Link>)}
+                        (<Link onClick={() => addToFavorites(item)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                     </div>
                   </div>
 
@@ -100,7 +100,7 @@ const Favourite = () => {
 
                 </div>
               )
-            }): <h1 className='' style={{color:'#c0c0c0'}}>You Don't have Any Favorites Yet!</h1>}
+            }) : <h1 className='' style={{ color: '#c0c0c0' }}>You Don't have Any Favorites Yet!</h1>}
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 //
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-//
+import ENV from "../config.js";
 
 const SellerDash = () => {
   const navigate = useNavigate();
@@ -131,7 +131,7 @@ const SellerDash = () => {
         const id = decoded.id;
         try {
           const response = await axios.get(
-            "http://localhost:5000/users/getUser",
+            `${ENV.BACKEND_URL}/users/getUser`,
             {
               headers: { "x-auth-token": id },
             }
@@ -224,7 +224,7 @@ const SellerDash = () => {
     console.log(formData);
     try {
       const response = await fetch(
-        "http://localhost:5000/business/addBusiness",
+        `${ENV.BACKEND_URL}/business/addBusiness`,
         {
           method: "POST",
           headers: {

@@ -10,6 +10,7 @@ import arrow from "./Aqify project/Vector (1).png";
 import MarketDashDetail from "./MarketDashDetail";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import ENV from "../config.js";
 
 //app Context
 import { useAppContext } from "./Context/appContext";
@@ -96,9 +97,9 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (display) => {
-    if(display === card.category){
+    if (display === card.category) {
       setShow(true);
-    }else{
+    } else {
       setShow(false)
     }
   }
@@ -120,9 +121,10 @@ const MarketplaceDash2 = () => {
   const getCard = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/business/getbusiness");
+        `${ENV.BACKEND_URL}/business/getbusiness`);
       console.log(response.data.business);
       setCard(response.data.business);
+
     } catch (error) {
       console.error(error);
     }

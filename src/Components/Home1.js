@@ -6,8 +6,10 @@ import arrow from "./Aqify project/Vector (1).png"
 import FourthCard1 from "./Aqify project/image 2.png"
 import FourthCard2 from "./Aqify project/image 2 (1).png"
 import FourthCard3 from "./Aqify project/image 2 (2).png"
+
 import FourthCard4 from "./Aqify project/image 2 (3).png"
 
+import ENV from '../config.js';
 
 //six section images
 import quoteImg from "./Aqify project/Vector.png"
@@ -37,7 +39,7 @@ const Home1 = () => {
         Aos.init();
         const token = localStorage.getItem("token");
         if (token) {
-            window.location.href = "http://localhost:3000/aqify#/MainDashboard";
+            window.location.href = `${ENV.FRONTEND_URL}/aqify#/MainDashboard`;
         }
     }, [])
     return (

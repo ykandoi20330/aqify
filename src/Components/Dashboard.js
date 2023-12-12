@@ -4,6 +4,7 @@ import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg";
 import Arrow from "./ProfileDashbaord/ArrowUp.svg";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import ENV from '../config.js';
 
 const Dashboard = () => {
   const [username, setUsername] = useState("");
@@ -34,7 +35,7 @@ const Dashboard = () => {
         const id = decoded.id;
         try {
           const response = await axios.get(
-            "http://localhost:5000/users/getUser",
+            `${ENV.BACKEND_URL}/users/getUser`,
             {
               headers: { "x-auth-token": id },
             }

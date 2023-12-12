@@ -6,6 +6,7 @@
 // // import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
 
 
+
 // // card logo images
 // import cardLogo2 from "./Market/Frame 34 (1).png"
 // import cardProfile from "./Market/Rectangle 25.png"
@@ -35,12 +36,14 @@
 //         getCard();
 //     }, []);
 
-//     const getCard = async () => {
-//             try {
-//                 const response = await axios.get(
-//                     "http://localhost:5000/business/getbusiness" ); 
-//                 console.log(response.data.business);
-//                 setCard(response.data.business);
+
+
+    // const getCard = async () => {
+    //         try {
+    //             const response = await axios.get(
+    //                 `${ENV.BACKEND_URL}/business/getbusiness` ); 
+    //             console.log(response.data.business);
+    //             setCard(response.data.business);
 
 //             } catch (error) {
 //                 console.error(error);
@@ -57,11 +60,12 @@
 //     const [rating, setRating] = useState(null)
 //     const [hover, setHover] = useState(null)
 
-//     const handleShare = () => {
-//         console.log("share")
-//         setText("Link Copied")
-//         navigator.clipboard.writeText("http://localhost:3000/aqify#/MainDashboard/MarketDash")
-//     }
+
+    // const handleShare = () => {
+    //     console.log("share")
+    //     setText("Link Copied")
+    //     navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash`)
+    // }
 
 
 //     //seller username
@@ -85,22 +89,23 @@
 //         }
   
   
-//         if (token) {
-//           const decoded = jwtDecode(token);
-//           const id = decoded.id;
-//           try {
-//             const response = await axios.get(
-//               "http://localhost:5000/users/getUser",
-//               {
-//                 headers: { "x-auth-token": id },
-//               }
-//             );
-//             setUsername(response.data.user.userName);
-//           } catch (error) {
-//             console.error(error);
-//           }
-//         }
-//       };
+
+      //   if (token) {
+      //     const decoded = jwtDecode(token);
+      //     const id = decoded.id;
+      //     try {
+      //       const response = await axios.get(
+      //           `${ENV.BACKEND_URL}/users/getUser`,
+      //         {
+      //           headers: { "x-auth-token": id },
+      //         }
+      //       );
+      //       setUsername(response.data.user.userName);
+      //     } catch (error) {
+      //       console.error(error);
+      //     }
+      //   }
+      // };
   
 //       getUsername();
 //     }, [setUsername]);
