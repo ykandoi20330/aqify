@@ -1,9 +1,9 @@
-import React from "react";
-import message from "./ProfileDashbaord/chatteardropdots1.svg";
-import { Link, Outlet } from "react-router-dom";
-import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png";
-import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg";
-import BlackLogo from "./Aqify project/FrameblackLogo.svg";
+import React from 'react'
+import message from "./ProfileDashbaord/chatteardropdots1.svg"
+import { Link } from 'react-router-dom'
+import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+import BlackLogo from "./Aqify project/FrameblackLogo.svg"
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
@@ -12,6 +12,8 @@ import ENV from "../config.js";
 
 const TopMessage = () => {
   const [pic, setPic] = React.useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getUser = async () => {
@@ -35,7 +37,6 @@ const TopMessage = () => {
     getUser();
   }, []);
 
-  const navigate = useNavigate();
 
   const logout = () => {
     window.location.href = `${ENV.FRONTEND_URL}/aqify#/singin`;
@@ -104,9 +105,6 @@ const TopMessage = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <Outlet />
       </section>
     </>
   );

@@ -99,7 +99,7 @@ const SignUp = () => {
             password: '',
             role:'',
           });
-          navigate('/MainDashboard')
+          navigate('/MainDashboard/Dashbaord')
         }
         else if(response.status === 404){
           toast.error("User Already Exist", toastOptions);

@@ -158,7 +158,7 @@ const MarketDashDetail = () => {
 
                             <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-                                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                                <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
@@ -170,8 +170,8 @@ const MarketDashDetail = () => {
                                 </div>
 
                                 <div className='d-flex justify-content-between' style={{ position: 'absolute', width: '100%' }}>
-                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><img src={Left} alt="" /></Link>
-                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><img src={Right} alt="" /></Link>
+                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target={`#carouselExampleAutoplaying${index}`} data-bs-slide="next" ><img src={Left} alt="" /></Link>
+                                    <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target={`#carouselExampleAutoplaying${index}`} data-bs-slide="prev" ><img src={Right} alt="" /></Link>
                                 </div>
                             </div>
 
