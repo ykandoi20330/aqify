@@ -77,7 +77,7 @@ const MainDashboard = () => {
                                             </Link>
                                             <ul class="dropdown-menu dropdown-menu-dark">
                                                 <li><Link class="dropdown-item" to="/MainDashboard/MyProject" >Project Lists</Link></li>
-                                                <li><Link class="dropdown-item" to="/MainDashboard/ProjectBuying" >Projects Buying</Link></li>
+                                                <li><Link class="dropdown-item" to="/MainDashboard/ProjectBuying">Projects Buying</Link></li>
                                             </ul>
                                         </li>
 

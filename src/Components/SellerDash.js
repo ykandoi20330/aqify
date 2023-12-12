@@ -90,14 +90,14 @@ const SellerDash = () => {
     minPrice: "",
   });
 
-  const [text, setText] = useState("upload")
+  const [text, setText] = useState("Upload Image/Logo")
 
   const submitUpload = (e) => {
     const file = e.target.files[0];
-  
+
     const logo = new FormData();
     logo.append('image', file);
-  
+
     axios.post(
       'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
       logo,
@@ -107,20 +107,20 @@ const SellerDash = () => {
         }
       }
     )
-    .then((res) => {
-      console.log(res.data.data.url);
-      setformData({
-        ...formData,
-        link: res.data.data.url,
+      .then((res) => {
+        console.log(res.data.data.url);
+        setformData({
+          ...formData,
+          link: res.data.data.url,
+        });
+        setText("Uploaded")
+        console.log(formData);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-setText("Uploaded")
-      console.log(formData);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
   };
-  
+
 
 
   useEffect(() => {
@@ -287,25 +287,26 @@ setText("Uploaded")
                   </span>
                 </div>
                 <div>
-                  <div class="mb-3 my-3">
-                    <label for="logoInput" class="form-label">
-                      Upload Image Logo
-                    </label>
-                    <input
-                      style={{display: "none"}}
+                  <label style={{ color: "#636363" }} for="logoInput" class="form-label">
+                    {text}
+                  </label>
+                  <div class="mb-3 my-2">
+                    <input 
+                      style={{ display: "none" }}
                       type="file"
                       accept="image/*"
                       id="logoInput"
                       onChange={submitUpload}
                     />
-                    <label for="logoInput" class="custom-file-upload">
-                      <i class="fas fa-cloud-upload-alt"></i>{text}
+                    <label style={{height:'8vh',width:'100%',background: '#EEF0FE',borderRadius: '0.375rem',border: '1px solid #C0C0C0'}}
+                     for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
+                      <i class="fas fa-cloud-upload-alt mx-2" style={{color: "#c0c0c0"}}></i>
                     </label>
                     <img
                       src="#"
                       alt="Logo Preview"
                       id="logoPreview"
-                      style={{width : "200px", display: "none"}}
+                      style={{ width: "200px", display: "none" }}
                     />
                   </div>
                 </div>
@@ -679,7 +680,7 @@ setText("Uploaded")
                     >
                       What is your project name?
                     </label>
-                    <select
+                    {/* <select
                       style={{
                         width: "50%",
                         color: "#636363",
@@ -699,7 +700,17 @@ setText("Uploaded")
                       <option value="Artificial Intelligence">
                         Artifitial Intelligence
                       </option>
-                    </select>
+                    </select> */}
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="projectName"
+                      id="efloatingInputValue"
+                      placeholder="Acqify"
+                      value={formData.projectName}
+                      onChange={handleChange}
+                      style={{ width: '50%' }}
+                    />
                   </div>
                 </div>
 
@@ -1552,16 +1563,14 @@ setText("Uploaded")
                   className={`step-item ${currentStep === i + 1 && "active"}`}
                 >
                   <div
-                    className={`circle ${currentStep === i + 1 && "active"} ${
-                      (i + 1 < currentStep || complete) && "complete"
-                    }`}
+                    className={`circle ${currentStep === i + 1 && "active"} ${(i + 1 < currentStep || complete) && "complete"
+                      }`}
                   >
                     {i + 1}
                   </div>
                   <p
-                    className={`tagname ${currentStep === i + 1 && "active"} ${
-                      (i + 1 < currentStep || complete) && "tagComplete"
-                    }`}
+                    className={`tagname ${currentStep === i + 1 && "active"} ${(i + 1 < currentStep || complete) && "tagComplete"
+                      }`}
                   >
                     {step}
                   </p>

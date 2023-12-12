@@ -10,6 +10,7 @@ import verify from "./ProfileDashbaord/vector1.svg";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MainDashboard from "./MainDashboard";
 
 const DashboardProfile = () => {
 
@@ -173,10 +174,10 @@ const DashboardProfile = () => {
 
   const upload = (e) => {
     const file = e.target.files[0];
-  
+
     const formData = new FormData();
     formData.append('image', file);
-  
+
     axios.post(
       'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
       formData,
@@ -186,20 +187,20 @@ const DashboardProfile = () => {
         }
       }
     )
-    .then((res) => {
-      console.log(res.data.data.url);
-      setform({
-        ...form,
-        pic: res.data.data.url,
-      });
+      .then((res) => {
+        console.log(res.data.data.url);
+        setform({
+          ...form,
+          pic: res.data.data.url,
+        });
 
-      console.log(form);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+        console.log(form);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-  
+
 
   const changeRoleowner = () => {
     setVisible(true);
@@ -232,108 +233,116 @@ const DashboardProfile = () => {
             </span>
           </div>
 
-              <div className="profile-card d-flex">
-                <div className="profile-content d-flex justify-content-around align-items-center">
-                  <div className="profilePhoto d-flex flex-column align-items-center">
-                    <img
-                      style={{ width: "50%", height: "50%", borderRadius: "50%" }}
-                      src={
-                        form.pic ||
-                        "https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
-                      }
-                      alt=""
-                    />
-                    <label className="btn btn-primary my-3 rounded-pill">
-                      {" "}
-                      Upload photo{" "}
-                      <input  type="file" name="pic" onChange={upload} />{" "}
+          <div className="profile-card d-flex">
+            <div className="profile-content d-flex justify-content-around align-items-center">
+              <div className="profilePhoto d-flex flex-column align-items-center">
+                <img
+                  style={{ width: "12rem", height: "12rem", borderRadius: "50%" }}
+                  src={
+                    form.pic ||
+                    "https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+                  }
+                  alt=""
+                />
+                {/* <label className="btn btn-primary my-3 rounded-pill">
+                  {" "}
+                  Upload photo{" "}
+                  <input type="file" name="pic" onChange={upload} />{" "}
+                </label> */}
+                <span>
+                  <form>
+                    <input type="file" id="image_input" name="pic" onChange={upload} />
+                    <label htmlFor="image_input">
+                      <i class="fa-solid fa-circle-plus mx-2" style={{ color: "blue", fontSize: '2rem', top: '-35px', right: '-45px', background: '#fff', position: 'relative', borderRadius: '50px' }}></i>
                     </label>
-                    {/* <Link
-                      className="btn btn-primary rounded-pill"
-                      style={{ padding: "0.5rem 0.8rem" }}
-                    >
-                      <img src={verify} alt="" />
-                      Verify
-                    </Link> */}
-                  </div>
+                  </form>
+                </span>
+                <Link
+                  className="btn btn-primary rounded-pill"
+                  style={{ padding: "0.5rem 0.8rem" }}
+                >
+                  <img src={verify} alt="" />
+                  Verify
+                </Link>
+              </div>
 
-                  <div style={{ width: "60%" }}>
-                    <div class="mb-3 my-3">
-                      <div class="row">
-                        <div class="col">
-                          <label
-                            for="exampleFormControlInput1"
-                            class="form-label"
-                            style={{ color: "#636363" }}
-                          >
-                            First name
-                          </label>
-                          <input
-                            style={{ height: "6vh" }}
-                            type="text"
-                            class="form-control"
-                            aria-label="First name"
-                            name="firstName"
-                            value={form.firstName}
-                            onChange={handleChange}
-                          />
-                        </div>
-                        <div class="col">
-                          <label
-                            for="exampleFormControlInput1"
-                            class="form-label"
-                            style={{ color: "#636363" }}
-                          >
-                            Last name
-                          </label>
-                          <input
-                            style={{ height: "6vh" }}
-                            type="text"
-                            class="form-control"
-                            aria-label="Last name"
-                            name="lastName"
-                            value={form.lastName}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-3 my-3">
+              <div style={{ width: "60%" }}>
+                <div class="mb-3 my-3">
+                  <div class="row">
+                    <div class="col">
                       <label
                         for="exampleFormControlInput1"
                         class="form-label"
                         style={{ color: "#636363" }}
                       >
-                        Username
+                        First name
                       </label>
                       <input
                         style={{ height: "6vh" }}
-                        type="email"
+                        type="text"
                         class="form-control"
-                        id="exampleFormControlInput1"
-                        name="userName"
-                        value={form.userName}
+                        aria-label="First name"
+                        name="firstName"
+                        value={form.firstName}
                         onChange={handleChange}
                       />
                     </div>
-                    <div class="mb-3 my-3">
+                    <div class="col">
                       <label
-                        for="exampleFormControlTextarea1"
+                        for="exampleFormControlInput1"
                         class="form-label"
                         style={{ color: "#636363" }}
                       >
-                        About me
+                        Last name
                       </label>
-                      <textarea
-                        style={{ height: "25vh" }}
+                      <input
+                        style={{ height: "6vh" }}
+                        type="text"
                         class="form-control"
-                        id="exampleFormControlTextarea1"
-                        rows="3"
-                        name="about"
-                        value={form.about}
+                        aria-label="Last name"
+                        name="lastName"
+                        value={form.lastName}
                         onChange={handleChange}
-                      ></textarea>
+                      />
                     </div>
+                  </div>
+                </div>
+                <div class="mb-3 my-3">
+                  <label
+                    for="exampleFormControlInput1"
+                    class="form-label"
+                    style={{ color: "#636363" }}
+                  >
+                    Username
+                  </label>
+                  <input
+                    style={{ height: "6vh" }}
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="userName"
+                    value={form.userName}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div class="mb-3 my-3">
+                  <label
+                    for="exampleFormControlTextarea1"
+                    class="form-label"
+                    style={{ color: "#636363" }}
+                  >
+                    About me
+                  </label>
+                  <textarea
+                    style={{ height: "25vh" }}
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    name="about"
+                    value={form.about}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
 
                 <div>
                   <span className="my-5" style={{ color: "#636363" }}>

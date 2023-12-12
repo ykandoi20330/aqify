@@ -39,7 +39,7 @@ const Favourite = () => {
 
                   <div className='sideInfo d-flex'>
                     <div className='secondPart'>
-                      <img width={200} src={item.ownerImage} alt="" />
+                      <img style={{borderRadius:'8px'}} width={200} src={item.link} alt="" />
                     </div>
                     <div className="firstPart" style={{ marginLeft: "2rem" }}>
                       <h3 style={{ fontSize: '30px', fontWeight: '700' }}>{item.projectName}</h3>
@@ -86,7 +86,7 @@ const Favourite = () => {
                       <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
                       <div className='d-flex justify-content-start align-items-center'>
                         <img width={40} src={cardLogo3} alt="" />
-                        <span className='card-span' style={{ fontSize: '1.5rem' }}>{/*{item} */}Full</span>
+                        <span className='card-span' style={{ fontSize: '1.5rem' }}>Full</span>
                       </div>
                     </div>
                     <div style={{ margin: '1rem 3rem 0 0' }}>

@@ -9,8 +9,7 @@ import pie from "./MarketDash/VectorPie.svg"
 import search from "./MarketDash/VectorSearch.svg"
 import Close from "./MarketDash/VectorClose.svg"
 import MarketplaceDash2 from "./MarketplaceDash2" 
-import upload from "./Selling/VectorUpload.svg"
-import {jwtDecode} from "jwt-decode";
+// import {jwtDecode} from "jwt-decode";
 import axios from "axios";
 
 
@@ -19,7 +18,9 @@ const MarketplaceDash = ({ onSearch }) => {
     const [show, setShow] = useState(1)
     const [number, setNumber] = useState(0)
     const [card, setCard] = useState([])
-    const [records, setRecords] = useState([])
+    // const [records, setRecords] = useState([])
+    const [isOpen, setIsOpen] = useState(false)
+    const [isOpenCategory, setIsOpenCategory] = useState(false)
 
     const [searchTerm, setSearchTerm] = useState([]);
 
@@ -39,20 +40,18 @@ const MarketplaceDash = ({ onSearch }) => {
             }
         }
 
-    //for image Upload
-    const [image, setImage] = useState(null)
-    const [fileName, setfileName] = useState("")
-
-    const input = ({ target: { files } }) => {
-        files[0] && setfileName(files[0].name)
-        if (files) {
-            setImage(URL.createObjectURL(files[0]))
-        }
-    }
 
     // const searchFilter = (event) => {
     //     setRecords(card.filter(f => f.name?.toLowerCase().includes(event.target.value)))
     // }
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+      };
+
+    const toggleDropdownCategory = () => {
+        setIsOpenCategory(!isOpenCategory);
+      };
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);
@@ -82,7 +81,7 @@ const MarketplaceDash = ({ onSearch }) => {
 
             {/** */}
             <section>
-                <div className='first-line d-flex align-items-center'>
+                <div className='first-line mb-3 d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
                         <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm}  onChange={handleSearch}  /> {/**onChange={searchFilter} */}
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
@@ -100,12 +99,7 @@ const MarketplaceDash = ({ onSearch }) => {
 
                 <div className="second-line d-flex">
                     <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
-                            <option id="floatingInputValue" selected>Categories</option>
-                            <option value="1">UI Websites</option>
-                            <option value="2">UI Medical Websites</option>
-                            <option value="3">Start-Ups</option>
-                        </select>
+                        <div style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select mb-3 mx-2" onClick={toggleDropdownCategory}>Categories</div>
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
                     </div>
                     <div class="form-floating">
@@ -118,12 +112,7 @@ const MarketplaceDash = ({ onSearch }) => {
                         <label for="floatingInputValue"><img src={location} alt="" /></label>
                     </div>
                     <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
-                            <option id="floatingInputValue" selected>More Filters</option>
-                            <option value="1">Pricing</option>
-                            <option value="2">Budget</option>
-                            <option value="3">More</option>
-                        </select>
+                        <div class="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }}  onClick={toggleDropdown}>More Filters</div>
                         <label for="floatingInputValue"><img src={filter} alt="" /></label>
                     </div>
                 </div>
@@ -132,6 +121,7 @@ const MarketplaceDash = ({ onSearch }) => {
             {show === 1 && <>
 
                 <section className='cardOption d-flex'>
+                    { isOpenCategory && (
                     <div className="marketDash-card flex-wrap">
                         <div className='d-flex justify-content-end'>
                             <img src={Close} alt="" />
@@ -148,8 +138,9 @@ const MarketplaceDash = ({ onSearch }) => {
                             <button className='btn-card btn btn-outline-primary my-1'>Chrome-extension</button>
                             <button className='btn-card btn btn-outline-primary my-1'>Crypto</button>
                         </div>
-                    </div>
+                    </div>)}
 
+                    { isOpen && (
                     <div className="marketDash-card2">
                         <div className='d-flex justify-content-between mb-3'>
                             <span style={{ color: '#636363' }}>More Filters</span>
@@ -203,7 +194,7 @@ const MarketplaceDash = ({ onSearch }) => {
                             <Link className='btn btn-outline-primary rounded-pill py-2 px-4' to="#">clear</Link>
                             <Link className='btn btn-outline-primary rounded-pill py-2 px-4 mx-2' to="#">apply</Link>
                         </div>
-                    </div>
+                    </div>)}
 
                 </section >
             </>}
