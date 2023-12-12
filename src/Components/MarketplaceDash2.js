@@ -50,7 +50,7 @@ const MarketplaceDash2 = () => {
   const handleShare = () => {
     console.log("share")
     setText("Link Copied")
-    navigator.clipboard.writeText("http://localhost:3000/aqify#/MainDashboard/MarketDash")
+    navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash`)
   }
 
   //seller username
@@ -79,7 +79,7 @@ const MarketplaceDash2 = () => {
         const id = decoded.id;
         try {
           const response = await axios.get(
-            "http://localhost:5000/users/getUser",
+            `${ENV.BACKEND_URL}/users/getUser`,
             {
               headers: { "x-auth-token": id },
             }
