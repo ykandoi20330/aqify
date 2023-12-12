@@ -39,7 +39,7 @@ const Favourite = () => {
 
                   <div className='sideInfo d-flex'>
                     <div className='secondPart'>
-                      <img width={200} src={item.ownerImage} alt="" />
+                      <img width={200} src={item.link} alt="" />
                     </div>
                     <div className="firstPart" style={{ marginLeft: "2rem" }}>
                       <h3 style={{ fontSize: '30px', fontWeight: '700' }}>{item.projectName}</h3>

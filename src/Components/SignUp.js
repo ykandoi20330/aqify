@@ -6,6 +6,7 @@ import React,{useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ENV from '../config.js';
 
 const SignUp = () => {
 
@@ -32,7 +33,7 @@ const SignUp = () => {
 
   const handleClick = () => {
     if (role === 'owner' || role === 'acquirer') {
-      window.location.href = 'http://localhost:5000/auth/google';
+      window.location.href = `${ENV.BACKEND_URL}/auth/google`;
     }
     else{
       toast.error("Firstly Select the Role", toastOptions);
@@ -77,7 +78,7 @@ const SignUp = () => {
     if (validation()) {
       try {
         console.warn(formData,role);
-        const response = await fetch('http://localhost:5000/users/register', {
+        const response = await fetch(`${ENV.BACKEND_URL}users/register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

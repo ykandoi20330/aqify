@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ENV from '../config.js';
 
 const SignIn = () => {
 
@@ -23,6 +24,8 @@ const SignIn = () => {
     password: '',
   });
   const navigate = useNavigate();
+
+  
 
   const validation = () => {
 
@@ -44,7 +47,7 @@ const SignIn = () => {
   
     if (validation()) {
       try {
-        const response = await fetch('http://localhost:5000/users/login', {
+        const response = await fetch(`${ENV.BACKEND_URL}/users/login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -59,7 +62,7 @@ const SignIn = () => {
             email: '',
             password: '',
           });
-          navigate('/MainDashboard/Dashboard')
+          window.location.href = `${ENV.FRONTEND_URL}/aqify#/MainDashboard/Dashbaord`;
         }
         else if(response.status === 401){
           toast.error("Invalid Email or Password", toastOptions);
@@ -81,6 +84,7 @@ const SignIn = () => {
       [name]: value,
     });
   };
+
 
   return (
     <>
@@ -130,7 +134,7 @@ const SignIn = () => {
             </div>
 
             <div>
-            <Link to="http://localhost:5000/auth/google">
+            <Link to={ENV.GOOGLE}>
                 <button style={{ width: '100%', background: '#fff', color: '#282A2B',padding:'0.8rem' }} className="btn">
                 <img className='mx-3' src={google} alt="" />
                 Sign  up with Google

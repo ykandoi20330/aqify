@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import ENV from '../config.js';
 
 //side content
 import profilePhoto from "./ProfileDashbaord/group-11.svg";
@@ -34,7 +35,7 @@ const DashboardProfile = () => {
         const id = decoded.id;
         try {
           const response = await axios.get(
-            "http://localhost:5000/users/getUser",
+            `${ENV.BACKEND_URL}/users/getUser`,
             {
               headers: { "x-auth-token": id },
             }
@@ -126,7 +127,7 @@ const DashboardProfile = () => {
           const decoded = jwtDecode(token);
           const userId = decoded.id;
           const response = await fetch(
-            "http://localhost:5000/users/updateProfile",
+            `${ENV.BACKEND_URL}/users/updateProfile`,
             {
               method: "POST",
               headers: {
