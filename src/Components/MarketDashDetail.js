@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
 // import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+import ENV from '../config.js';
 
 
 // card logo images
@@ -38,7 +39,7 @@ const MarketDashDetail = () => {
     const getCard = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/business/getbusiness" ); 
+                    `${ENV.BACKEND_URL}/business/getbusiness` ); 
                 console.log(response.data.business);
                 setCard(response.data.business);
 
@@ -60,7 +61,7 @@ const MarketDashDetail = () => {
     const handleShare = () => {
         console.log("share")
         setText("Link Copied")
-        navigator.clipboard.writeText("http://localhost:3000/aqify#/MainDashboard/MarketDash")
+        navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash`)
     }
 
 
@@ -90,7 +91,7 @@ const MarketDashDetail = () => {
           const id = decoded.id;
           try {
             const response = await axios.get(
-              "http://localhost:5000/users/getUser",
+                `${ENV.BACKEND_URL}/users/getUser`,
               {
                 headers: { "x-auth-token": id },
               }

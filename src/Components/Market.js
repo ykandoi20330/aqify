@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import backgroundImg from "./Market/unsplash_5U_28ojjgms.png";
 import arrow from "./Aqify project/Vector (1).png";
+import ENV from "../config.js";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -95,7 +96,7 @@ const Market = () => {
       try {
         console.warn(form);
         const response = await fetch(
-          "http://localhost:5000/template/addTemplate",
+          `${ENV.BACKEND_URL}/template/addTemplate`,
           {
             method: "POST",
             body: form,
@@ -163,7 +164,7 @@ const Market = () => {
 
   const gettemplates = async () => {
     try {
-      let response = await fetch("http://localhost:5000/template/getTemplate", {
+      let response = await fetch(`${ENV.BACKEND_URL}/template/getTemplate`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -193,7 +194,7 @@ const Market = () => {
     if (key) {
       try {
         const response = await fetch(
-          `http://localhost:5000/template/searchTemplate/${key}`,
+          `${ENV.BACKEND_URL}/template/searchTemplate/${key}`,
           {
             method: "GET",
             headers: {
