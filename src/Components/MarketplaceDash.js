@@ -41,10 +41,6 @@ const MarketplaceDash = (props) => {
     }
 
 
-    // const searchFilter = (event) => {
-    //     setRecords(card.filter(f => f.name?.toLowerCase().includes(event.target.value)))
-    // }
-
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
@@ -87,7 +83,7 @@ const MarketplaceDash = (props) => {
             <section>
                 <div className='first-line mb-3 d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff'}} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} /> {/**onChange={searchFilter} */}
+                        <input style={{ width: '41vw', background: '#fff'}} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} /> 
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
                     <div class="form-floating" >
