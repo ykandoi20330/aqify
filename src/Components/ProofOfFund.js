@@ -27,7 +27,7 @@ const ProofOfFund = () => {
       <section className='first-sell d-flex justify-content-between align-items-center' style={{ padding: '3rem 6rem', background: '#EEF0FE' }}>
 
         {currentStep === 1 && <>
-          <div className="Onboard-card" style={{width:'100%'}}>
+          <div className="Onboard-card" style={{ width: '100%' }}>
             <div>
               <h3 style={{ fontWeight: '700,', fontSize: '30px' }}>Tell us about yourself</h3>
               <span style={{ fontSize: '18px', color: '#636363' }} className='d-flex col-8 mt-2 mb-4'>We need this information to qualify you as a buyer. Only qualified buyers can get funding for deals and contact sellers.</span>
@@ -44,32 +44,22 @@ const ProofOfFund = () => {
 
             <div>
               <div class="mb-3 my-3">
-                <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>What is your project name?</label>
-                <select style={{ width: '80%', color: '#636363', fontSize: '16px' }} class="form-control form-select form-select-lg" aria-label="Large select example">
-                  <option id="floatingInputValue" selected>Select project name</option>
-                  <option value="1">UI Design</option>
-                  <option value="2">UI  Development</option>
-                  <option value="3">Artifitial Intelligence</option>
-                </select>
+                <label for="exampleFormControlInput2" class="form-label" style={{ color: '#636363' }}>What is your project name?</label>
+                  <input  style={{ width:'80%' }} type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter project name" />
               </div>
             </div>
 
             <div>
               <div class="mb-3 my-3">
-                <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Where is your business located?</label>
-                <select style={{ width: '80%', color: '#636363', fontSize: '16px' }} class="form-control form-select form-select-lg" aria-label="Large select example">
-                  <option id="floatingInputValue" selected>Select Location name</option>
-                  <option value="1">India</option>
-                  <option value="2">USA</option>
-                  <option value="3">Europe</option>
-                </select>
+                <label for="exampleFormControlInput2" class="form-label" style={{ color: '#636363' }}>Where is your business located?</label>
+                  <input  style={{ width:'80%' }} type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter Location name" />
               </div>
             </div>
 
 
             <div className='button d-flex justify-content-between align-items-center'>
               <div className='mt-5'>
-                <Link style={{ textDecoration: 'none', color: '#636363' }} id="prev" to="/MainDashboard" ><img src={back} alt="" /> <span className='mx-3'>Back</span></Link>
+                <Link style={{ textDecoration: 'none', color: '#636363' }} id="prev" to="/MainDashboard/Dashbaord" ><img src={back} alt="" /> <span className='mx-3'>Back</span></Link>
               </div>
               <div className='mt-5'>
                 {!complete &&
@@ -84,7 +74,7 @@ const ProofOfFund = () => {
         </>}
 
         {currentStep === 2 && <>
-          <div className="Onboard-card2" style={{width:'100%'}}>
+          <div className="Onboard-card2" style={{ width: '100%' }}>
             <div style={{ overflow: 'hidden', overflowY: 'scroll' }}>
               <div>
                 <h3 style={{ fontWeight: '700,', fontSize: '30px' }}>Provide proof of funds for</h3>
@@ -100,7 +90,7 @@ const ProofOfFund = () => {
                     </div>
                     <div>
                       <input type="file" class="form-label" id="image_input2" multiple accept='image/*' onChange={inputDocument} />
-                      <label for="image_input2" class="form-label text-center" style={{ color: '#636363' }}> <img src={proof} alt="" /><br /><br /><h4 style={{color:'#18191'}} >Upload proof of funds</h4><span>Bank statements, bank certificates or liquid investments</span></label>
+                      <label for="image_input2" class="form-label text-center" style={{ color: '#636363' }}> <img src={proof} alt="" /><br /><br /><h4 style={{ color: '#18191' }} >Upload proof of funds</h4><span>Bank statements, bank certificates or liquid investments</span></label>
                     </div>
                   </div>
                 </div>
@@ -114,7 +104,7 @@ const ProofOfFund = () => {
                     </div>
                     <div>
                       <input type="file" class="form-label" id="image_input2" multiple accept='image/*' onChange={inputDocument} />
-                      <label for="image_input2" class="form-label text-center" style={{ color: '#636363' }}> <img src={proof} alt="" /><br /><br /><h4 style={{color:'#18191'}} >Upload proof of funds</h4><span>Bank statements, bank certificates or liquid investments</span></label>
+                      <label for="image_input2" class="form-label text-center" style={{ color: '#636363' }}> <img src={proof} alt="" /><br /><br /><h4 style={{ color: '#18191' }} >Upload proof of funds</h4><span>Bank statements, bank certificates or liquid investments</span></label>
                     </div>
                   </div>
                 </div>

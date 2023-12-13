@@ -32,6 +32,7 @@ import Right from "./MarketDash/VectorRight.svg"
 import Left from "./MarketDash/VectorLeft.svg"
 
 import { FaStar } from "react-icons/fa"
+import MarketplaceDash from "./MarketplaceDash.js";
 ///////////////
 
 const MarketplaceDash2 = () => {
@@ -39,6 +40,8 @@ const MarketplaceDash2 = () => {
   const [card, setCard] = useState([]);
   const [detail, setDetail] = useState([]);
   const [show, setShow] = useState(true);
+  const [filterLocation, setFilterLocation] = useState([]);
+  const [filterSearch, setFilterSearch] = useState([]);
 
   //////MarketPlaceDetail
   const [text, setText] = useState("Share")
@@ -97,7 +100,7 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (display) => {
-    if (display === card.category) {
+    if (display.category === card.category) {
       setShow(true);
     } else {
       setShow(false)
@@ -124,6 +127,7 @@ const MarketplaceDash2 = () => {
         `${ENV.BACKEND_URL}/business/getbusiness`);
       console.log(response.data.business);
       setCard(response.data.business);
+      setFilterSearch(response.data.business)
 
     } catch (error) {
       console.error(error);
@@ -144,23 +148,41 @@ const MarketplaceDash2 = () => {
   //     .catch((err) => console.log(err));
   // }, []);
 
-  const handleSearch = (searchTerm) => {
-    const filteredCards = card.filter((cards) =>
-      cards.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setCard(filteredCards)
+
+
+  const onSearch = (searchTerm) => {
+    setFilterSearch(card.filter(f => f.projectName.toLowerCase().includes(searchTerm.toLowerCase())))
   }
+
+
+  const onFilterLocationSelected = (filterValue) => {
+    setFilterLocation(filterValue);
+  }
+
+  const locationList = card.filter((data) => {
+    if (filterLocation === data.location) {
+      return data.card === true;
+    } else if (filterLocation === !data.location) {
+      return data.card === false;
+    } else {
+      return data;
+    }
+  })
 
 
   return (
     <>
+      <section>
+        <MarketplaceDash filterLocationSelected={onFilterLocationSelected} onSearching={onSearch} />
+      </section>
+
       {show === true && (
         <>
-          <section>
+          <section  >
             <section className="marketDash2-back" style={{ height: '100%' }} >
               <div className='d-flex'>
                 <div className="market-card my-4" >
-                  {card.map((item, index) => {
+                  {filterSearch.map((item, index) => {
                     const id = index + 1
                     return (
                       <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
@@ -260,7 +282,7 @@ const MarketplaceDash2 = () => {
                               <img width={40} src={cardLogo4} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
                                 {/* $150K + */}
-                                {item.valuation}
+                                ${item.valuation}k +
                               </span>
                             </div>
                           </div>
@@ -287,7 +309,7 @@ const MarketplaceDash2 = () => {
               </div>
               <div>
                 <Link className='btn btn-primary rounded-pill px-5 py-2' data-bs-toggle="modal" data-bs-target="#exampleModal1"
-                  onClick={show => exploreMore()}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
+                  onClick={exploreMore}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
                 </Link>
               </div>
             </div>
@@ -440,7 +462,7 @@ const MarketplaceDash2 = () => {
                           <h5 className='card-h3 py-2'>Asking Price</h5>
                         </div>
                         <div className='my-3'>
-                          <h1>{item.askingPrice}</h1>
+                          <h1>${item.askingPrice}</h1>
                         </div>
 
                         <Link to="/message" className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>

@@ -59,7 +59,7 @@ const MainDashboard = () => {
                                     </Link>
                                     <ul class="nav flex-column mb-auto">
                                         <li class="nav-item">
-                                            <Link to="/MainDashboard/MarketDash" class="nav-link1 text-white" aria-current="page" >
+                                            <Link to="/MainDashboard/MarketDash2" class="nav-link1 text-white" aria-current="page" >
                                                 <img style={{ marginRight: "1rem" }} src={list} alt="" />
                                                 Lists
                                             </Link>

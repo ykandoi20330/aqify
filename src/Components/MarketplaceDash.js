@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 //
@@ -8,15 +8,14 @@ import location from "./MarketDash/VectorLoaction.svg"
 import pie from "./MarketDash/VectorPie.svg"
 import search from "./MarketDash/VectorSearch.svg"
 import Close from "./MarketDash/VectorClose.svg"
-import MarketplaceDash2 from "./MarketplaceDash2" 
 // import {jwtDecode} from "jwt-decode";
 import axios from "axios";
 import ENV from '../config.js';
 
 
-const MarketplaceDash = ({ onSearch }) => {
+const MarketplaceDash = (props) => {
 
-    const [show, setShow] = useState(1)
+    // const [show, setShow] = useState(1)
     const [number, setNumber] = useState(0)
     const [card, setCard] = useState([])
     // const [records, setRecords] = useState([])
@@ -27,19 +26,19 @@ const MarketplaceDash = ({ onSearch }) => {
 
     useEffect(() => {
         getCard();
-        }, []);
+    }, []);
 
-        const getCard = async () => {
-            try {
-                const response = await axios.get(
-                    `${ENV.BACKEND_URL}/business/getbusiness` ); 
-                console.log(response.data.business);
-                setCard(response.data.business);
+    const getCard = async () => {
+        try {
+            const response = await axios.get(
+                `${ENV.BACKEND_URL}/business/getbusiness`);
+            console.log(response.data.business);
+            setCard(response.data.business);
 
-            } catch (error) {
-                console.error(error);
-            }
+        } catch (error) {
+            console.error(error);
         }
+    }
 
 
     // const searchFilter = (event) => {
@@ -48,15 +47,19 @@ const MarketplaceDash = ({ onSearch }) => {
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
-      };
+    };
 
     const toggleDropdownCategory = () => {
         setIsOpenCategory(!isOpenCategory);
-      };
+    };
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);
-        onSearch(e.target.value);
+        props.onSearching(e.target.value);
+    }
+
+    const onFilterLocation = (event) => {
+        props.filterLocationSelected(event.target.value)
     }
 
     return (
@@ -67,12 +70,12 @@ const MarketplaceDash = ({ onSearch }) => {
                     <div className=''>
                         <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>
                         <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
-                        <div className='my-3'>
+                        {/* <div className='my-3'>
                             <div class="btn-group" role="group" aria-label="Basic outlined example" style={{ background: 'transparent' }}>
                                 <Link style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Filters</Link>
                                 <Link style={{ padding: "1rem 4rem", }} type="button" class="btn btn-outline-primary" onClick={show => setShow(2)}>Market</Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='AddButton' style={{ width: '16%' }}>
@@ -84,15 +87,18 @@ const MarketplaceDash = ({ onSearch }) => {
             <section>
                 <div className='first-line mb-3 d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm}  onChange={handleSearch}  /> {/**onChange={searchFilter} */}
+                        <input style={{ width: '41vw', background: '#fff'}} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} /> {/**onChange={searchFilter} */}
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
                     <div class="form-floating" >
                         <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example">
                             <option id="floatingInputValue" selected>Price</option>
-                            <option value="1">0</option>
-                            <option value="2">99</option>
-                            <option value="3">10000</option>
+                            {/* <option value="1">0</option> */}
+                            {card.map((price, index) => {
+                                return (
+                                    <option key={index} value="0">{price.askingPrice}</option>
+                                )
+                            })}
                         </select>
                         <label for="floatingInputValue"><img src={doller} alt="" /></label>
                     </div>
@@ -104,46 +110,42 @@ const MarketplaceDash = ({ onSearch }) => {
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
                     </div>
                     <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example" >
                             <option id="floatingInputValue" selected>Company Location</option>
-                            <option value="1">Mumbai</option>
-                            <option value="2">Hydrabad</option>
-                            <option value="3">Banglore</option>
+                            {card.map((item, index) => {
+                                return (
+                                    <option key={index} onChange={onFilterLocation} value="Mumbai">{item.location}</option>
+                                )
+                            })}
                         </select>
                         <label for="floatingInputValue"><img src={location} alt="" /></label>
                     </div>
                     <div class="form-floating">
-                        <div class="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }}  onClick={toggleDropdown}>More Filters</div>
+                        <div class="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }} onClick={toggleDropdown}>More Filters</div>
                         <label for="floatingInputValue"><img src={filter} alt="" /></label>
                     </div>
                 </div>
             </section>
 
-            {show === 1 && <>
 
-                <section className='cardOption d-flex'>
-                    { isOpenCategory && (
+            <section className='cardOption d-flex'>
+                {isOpenCategory && (
                     <div className="marketDash-card flex-wrap">
                         <div className='d-flex justify-content-end'>
                             <img src={Close} alt="" />
                         </div>
                         <div>
-                            <button className='btn-card btn btn-outline-primary my-1'>Ecommerce</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>SaaS</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Acquirers</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Community</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Content</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Service</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Wordpress</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Add-on</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Chrome-extension</button>
-                            <button className='btn-card btn btn-outline-primary my-1'>Crypto</button>
+                            {card.map((cate, index) => {
+                                return (
+                                    <button key={index} className='btn-card btn btn-outline-primary my-1'>{cate.category}</button>
+                                )
+                            })}
                         </div>
                     </div>)}
 
-                    { isOpen && (
+                {isOpen && (
                     <div className="marketDash-card2">
-                        <div className='d-flex justify-content-between mb-3'>
+                        <div className='filters d-flex justify-content-between mb-3'>
                             <span style={{ color: '#636363' }}>More Filters</span>
                             <img src={Close} alt="" />
                         </div>
@@ -197,12 +199,7 @@ const MarketplaceDash = ({ onSearch }) => {
                         </div>
                     </div>)}
 
-                </section >
-            </>}
-
-            {show === 2 && <>
-                <MarketplaceDash2 />
-             </> }
+            </section >
         </>
     )
 }

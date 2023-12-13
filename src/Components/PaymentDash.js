@@ -14,7 +14,7 @@ const PaymentDash = () => {
                     <span style={{ color: '#636363' }}>View and edit your payment settings</span>
                     </div>
                     <div className='My-btns'>
-                        <Link className='Myproject-btn btn btn-outline-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="/" ><i class="fa-regular fa-credit-card creditIcon mx-2" style={{color: "#005eff"}}></i>$2500</Link>
+                        <Link className='Myproject-btn btn btn-outline-primary rounded-pill mx-2' style={{ padding: '0.6rem 1.2rem' }} to="#" ><i class="fa-regular fa-credit-card creditIcon mx-2" style={{color: "#005eff"}}></i>$2500</Link>
                     </div>
                 </div>
 
