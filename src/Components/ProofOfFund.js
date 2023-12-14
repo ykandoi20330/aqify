@@ -107,6 +107,7 @@ const ProofOfFund = () => {
                 </span>
               </div>
 
+
               <div>
                 <div>
                   <div class="mb-3 my-3">
@@ -157,7 +158,7 @@ const ProofOfFund = () => {
                     </option>
                   </select>
                 </div>
-              </div>
+
 
               <div>
                 <div class="mb-3 my-3">
@@ -184,7 +185,7 @@ const ProofOfFund = () => {
                     <option value="Europe">Europe</option>
                   </select>
                 </div>
-              </div>
+
 
               <div className="button d-flex justify-content-between align-items-center">
                 <div className="mt-5">
@@ -211,7 +212,7 @@ const ProofOfFund = () => {
                     </Link>
                   )}
                 </div>
-              </div>
+
             </div>
           </>
         )}
@@ -265,47 +266,9 @@ const ProofOfFund = () => {
                           </span>
                         </label>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                {/* <div className="my-4">
-                  <div className="divInput-document">
-                    <div className="d-flex flex-column align-items-center justify-content-center">
-                      <div className="img-container" id="display_image">
-                        <img src={document} className="" id="img" alt="" />
-                      </div>
-                      <div>
-                        <input
-                          type="file"
-                          class="form-label"
-                          id="image_input2"
-                          multiple
-                          accept="image/*"
-                          onChange={inputDocument}
-                        />
-                        <label
-                          for="image_input2"
-                          class="form-label text-center"
-                          style={{ color: "#636363" }}
-                        >
-                          {" "}
-                          <img src={proof} alt="" />
-                          <br />
-                          <br />
-                          <h4 style={{ color: "#18191" }}>
-                            Upload proof of funds
-                          </h4>
-                          <span>
-                            Bank statements, bank certificates or liquid
-                            investments
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
+
+
 
               <div className="button d-flex justify-content-between align-items-center">
                 <div className="mt-5">

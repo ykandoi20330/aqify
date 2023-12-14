@@ -133,7 +133,7 @@ const MainDashboard = () => {
                   <ul class="nav flex-column mb-auto">
                     <li class="nav-item">
                       <Link
-                        to="/MainDashboard/MarketDash"
+                        to="/MainDashboard/MarketDash2"
                         class="nav-link1 text-white"
                         aria-current="page"
                       >
