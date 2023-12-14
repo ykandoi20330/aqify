@@ -107,7 +107,6 @@ const ProofOfFund = () => {
                 </span>
               </div>
 
-
               <div>
                 <div>
                   <div class="mb-3 my-3">
@@ -158,7 +157,7 @@ const ProofOfFund = () => {
                     </option>
                   </select>
                 </div>
-
+              </div>
 
               <div>
                 <div class="mb-3 my-3">
@@ -185,7 +184,7 @@ const ProofOfFund = () => {
                     <option value="Europe">Europe</option>
                   </select>
                 </div>
-
+              </div>
 
               <div className="button d-flex justify-content-between align-items-center">
                 <div className="mt-5">
@@ -212,7 +211,7 @@ const ProofOfFund = () => {
                     </Link>
                   )}
                 </div>
-
+              </div>
             </div>
           </>
         )}
@@ -266,48 +265,49 @@ const ProofOfFund = () => {
                           </span>
                         </label>
                       </div>
-
-
-
-
-              <div className="button d-flex justify-content-between align-items-center">
-                <div className="mt-5">
-                  <Link
-                    id="prev"
-                    style={{ textDecoration: "none", color: "#636363" }}
-                    onClick={() => {
-                      currentStep === 1
-                        ? setComplete(true)
-                        : setCurrentStep((prev) => prev - 1);
-                    }}
-                  >
-                    <img src={back} alt="" />
-                    <span className="mx-3">Back</span>
-                  </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-5">
-                  {!complete && (
+
+                <div className="button d-flex justify-content-between align-items-center">
+                  <div className="mt-5">
                     <Link
-                      id="next"
-                      className="btn btn-primary rounded-pill px-5 py-2"
+                      id="prev"
+                      style={{ textDecoration: "none", color: "#636363" }}
                       onClick={() => {
-                        currentStep === steps.length
+                        currentStep === 1
                           ? setComplete(true)
-                          : setCurrentStep((prev) => prev + 1);
+                          : setCurrentStep((prev) => prev - 1);
                       }}
                     >
-                      {currentStep === steps.length ? (
-                        <button
-                          className="btn btn-primary rounded-pill px-5 py-2"
-                          onClick={handleSubmit}
-                        >
-                          Finish
-                        </button>
-                      ) : (
-                        "Next"
-                      )}
+                      <img src={back} alt="" />
+                      <span className="mx-3">Back</span>
                     </Link>
-                  )}
+                  </div>
+                  <div className="mt-5">
+                    {!complete && (
+                      <Link
+                        id="next"
+                        className="btn btn-primary rounded-pill px-5 py-2"
+                        onClick={() => {
+                          currentStep === steps.length
+                            ? setComplete(true)
+                            : setCurrentStep((prev) => prev + 1);
+                        }}
+                      >
+                        {currentStep === steps.length ? (
+                          <button
+                            className="btn btn-primary rounded-pill px-5 py-2"
+                            onClick={handleSubmit}
+                          >
+                            Finish
+                          </button>
+                        ) : (
+                          "Next"
+                        )}
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -316,6 +316,8 @@ const ProofOfFund = () => {
       </section>
     </>
   );
-};
+}
+
+
 
 export default ProofOfFund;
