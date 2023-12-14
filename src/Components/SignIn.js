@@ -1,3 +1,4 @@
+
 import React ,{useState}from 'react'
 import google from "./SignIn/google-svg.svg"
 import background from "./SignIn/unsplash5u-28ojjgms@2x2.png"
@@ -52,12 +53,11 @@ const SignIn = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          credentials: 'include',
           body: JSON.stringify(formData),
         });
           if (response.status === 200) {
           const data = await response.json();
-          localStorage.setItem('user',JSON.stringify(data));
+          localStorage.setItem('user',JSON.stringify(data)); 
           setFormData({
             email: '',
             password: '',
