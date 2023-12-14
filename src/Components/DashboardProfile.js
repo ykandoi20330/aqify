@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-import ENV from '../config.js';
+import ENV from "../config.js";
 
 //side content
 import profilePhoto from "./ProfileDashbaord/group-11.svg";
@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 import MainDashboard from "./MainDashboard";
 
 const DashboardProfile = () => {
-
   const [visible, setVisible] = useState(true);
   // const [own, setOwn] = useState(true);
   // const [Show, setShow] = useState(6);
@@ -26,6 +25,7 @@ const DashboardProfile = () => {
     about: "",
     role: "",
     pic: "",
+    statusOfFund: "",
   });
 
   useEffect(() => {
@@ -35,12 +35,9 @@ const DashboardProfile = () => {
         const decoded = jwtDecode(token);
         const id = decoded.id;
         try {
-          const response = await axios.get(
-            `${ENV.BACKEND_URL}/users/getUser`,
-            {
-              headers: { "x-auth-token": id },
-            }
-          );
+          const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
+            headers: { "x-auth-token": id },
+          });
           setform({
             firstName: response.data.user.firstName,
             lastName: response.data.user.lastName,
@@ -48,7 +45,9 @@ const DashboardProfile = () => {
             about: response.data.user.about,
             role: response.data.user.role,
             pic: response.data.user.pic,
+            statusOfFund: response.data.status ? response.data.status.status || "" : "",
           });
+          console.log(form.statusOfFund);
         } catch (error) {
           console.error(error);
         }
@@ -97,11 +96,8 @@ const DashboardProfile = () => {
       return false;
     }
 
-
     return true;
   };
-
-
 
   const collectData = async (e) => {
     e.preventDefault();
@@ -117,12 +113,10 @@ const DashboardProfile = () => {
           }
         }
 
-
         if (!token) {
           const user = JSON.parse(localStorage.getItem("user"));
           token = user.token;
         }
-
 
         if (token) {
           const decoded = jwtDecode(token);
@@ -133,6 +127,7 @@ const DashboardProfile = () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
               },
               credentials: "include",
               body: JSON.stringify({ form, userId }),
@@ -177,17 +172,18 @@ const DashboardProfile = () => {
     const file = e.target.files[0];
 
     const formData = new FormData();
-    formData.append('image', file);
+    formData.append("image", file);
 
-    axios.post(
-      'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
-      formData,
-      {
-        headers: {
-          'Content-Type': 'multipart/form-data'
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
-      }
-    )
+      )
       .then((res) => {
         console.log(res.data.data.url);
         setform({
@@ -201,7 +197,6 @@ const DashboardProfile = () => {
         console.log(error);
       });
   };
-
 
   const changeRoleowner = () => {
     setVisible(true);
@@ -219,9 +214,11 @@ const DashboardProfile = () => {
     });
   };
 
+console.log(form.statusOfFund)
+
   return (
     <>
-      <section className='profile-section'>
+      <section className="profile-section">
         {/** Profile content */}
 
         <div className="sideContent">
@@ -238,33 +235,59 @@ const DashboardProfile = () => {
             <div className="profile-content d-flex justify-content-around align-items-center">
               <div className="profilePhoto d-flex flex-column align-items-center">
                 <img
-                  style={{ width: "12rem", height: "12rem", borderRadius: "50%" }}
+                  style={{
+                    width: "12rem",
+                    height: "12rem",
+                    borderRadius: "50%",
+                  }}
                   src={
                     form.pic ||
                     "https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
                   }
                   alt=""
                 />
-                {/* <label className="btn btn-primary my-3 rounded-pill">
-                  {" "}
-                  Upload photo{" "}
-                  <input type="file" name="pic" onChange={upload} />{" "}
-                </label> */}
                 <span>
                   <form>
-                    <input type="file" id="image_input" name="pic" onChange={upload} />
+                    <input
+                      type="file"
+                      id="image_input"
+                      name="pic"
+                      onChange={upload}
+                    />
                     <label htmlFor="image_input">
-                      <i class="fa-solid fa-circle-plus mx-2" style={{ color: "blue", fontSize: '2rem', top: '-35px', right: '-45px', background: '#fff', position: 'relative', borderRadius: '50px' }}></i>
+                      <i
+                        className="fa-solid fa-circle-plus mx-2"
+                        style={{
+                          color: "blue",
+                          fontSize: "2rem",
+                          top: "-35px",
+                          right: "-45px",
+                          background: "#fff",
+                          position: "relative",
+                          borderRadius: "50px",
+                        }}
+                      ></i>
                     </label>
                   </form>
                 </span>
-                <Link
-                  className="btn btn-primary rounded-pill"
-                  style={{ padding: "0.5rem 0.8rem" }}
-                >
-                  <img src={verify} alt="" />
-                  Verify
-                </Link>
+                {form.statusOfFund === "verify" ? (
+                  
+                  <Link
+                    className="btn btn-primary rounded-pill"
+                    style={{ padding: "0.5rem 0.8rem" }}
+                  >
+                    <img src={verify} alt="" />
+                    Verify
+                  </Link>
+                ) : (
+                  <Link
+                    className="btn btn-primary rounded-pill"
+                    style={{ padding: "0.5rem 0.8rem" }}
+                  >
+                    {/* <img src={verify} alt="" /> */}
+                    Not Verify
+                  </Link>
+                )}
               </div>
 
               <div style={{ width: "60%" }}>
@@ -434,7 +457,7 @@ const DashboardProfile = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
     </>
   );
 };
