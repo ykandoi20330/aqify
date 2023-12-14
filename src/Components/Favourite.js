@@ -59,7 +59,7 @@ const Favourite = () => {
                   <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                     <h3 className='card-h3'>Metrics</h3>
                     <div className='d-flex justify-content-center align-items-center'>
-                      <button style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' onClick={detail => setDetail(2)}>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </button>
+                      <Link style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' to="/MainDashboard/MarketDash">View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
                       {favoriteChecker(item.id) ?
                         (<Link onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                         :
@@ -93,7 +93,7 @@ const Favourite = () => {
                       <span style={{ color: '#636363', fontWeight: '600' }}>Valuation</span>
                       <div className='d-flex justify-content-start align-items-center'>
                         <img width={40} src={cardLogo4} alt="" />
-                        <span className='card-span' style={{ fontSize: '1.5rem' }}> {item.valuation}</span>
+                        <span className='card-span' style={{ fontSize: '1.5rem' }}> ${item.valuation}k +</span>
                       </div>
                     </div>
                   </div>
