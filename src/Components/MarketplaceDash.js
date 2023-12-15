@@ -58,6 +58,12 @@ const MarketplaceDash = (props) => {
         props.filterLocationSelected(event.target.value)
     }
 
+    // const filterCategoryData = (cat) => {
+    //     const newItems = card.filter((newData) => newData.category === cat)
+    //     props.setCategoryFilter(newItems)
+    //     console.log("category items", newItems)
+    // }
+
     return (
         <>
             <section className='Marketside d-flex align-items-center'>
@@ -66,12 +72,6 @@ const MarketplaceDash = (props) => {
                     <div className=''>
                         <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>
                         <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
-                        {/* <div className='my-3'>
-                            <div class="btn-group" role="group" aria-label="Basic outlined example" style={{ background: 'transparent' }}>
-                                <Link style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Filters</Link>
-                                <Link style={{ padding: "1rem 4rem", }} type="button" class="btn btn-outline-primary" onClick={show => setShow(2)}>Market</Link>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <div className='AddButton' style={{ width: '16%' }}>
@@ -83,7 +83,7 @@ const MarketplaceDash = (props) => {
             <section>
                 <div className='first-line mb-3 d-flex align-items-center'>
                     <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff'}} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} /> 
+                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} />
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
                     <div class="form-floating" >
@@ -133,7 +133,7 @@ const MarketplaceDash = (props) => {
                         <div>
                             {card.map((cate, index) => {
                                 return (
-                                    <button key={index} className='btn-card btn btn-outline-primary my-1'>{cate.category}</button>
+                                    <button key={index} className='btn-card btn btn-outline-primary my-1' >{cate.category}</button>
                                 )
                             })}
                         </div>

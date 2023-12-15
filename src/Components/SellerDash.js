@@ -584,7 +584,7 @@ const SellerDash = () => {
                     <Link
                       style={{ textDecoration: "none", color: "#636363" }}
                       id="prev"
-                      to="/MainDashboard/MarketDash"
+                      to="/MainDashboard/MarketDash2"
                       onClick={() => {
                         setCurrentStep((prev) => prev - 1);
                       }}

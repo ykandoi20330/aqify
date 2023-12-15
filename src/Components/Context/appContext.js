@@ -17,10 +17,10 @@ const AppContextProvider = ( {children} ) => {
 
     const [favourite, setFavourite] = useState([]);
 
-    const addToFavorites = (item) => {
+    const addToFavorites = (item, id) => {
         const oldFavorites = [...favourite];
 
-        const newFavorites = oldFavorites.concat(item);
+        const newFavorites = oldFavorites.filter((item)=>item.id !== id).concat(item);
 
         setFavourite(newFavorites);
     }
