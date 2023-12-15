@@ -53,7 +53,7 @@ const ProofOfFund = () => {
       );
         const data = await response.json();
         console.warn(data);
-        navigate("/MainDashboard/MarketDash");
+        navigate("/MainDashboard/MarketDash2");
     } catch (error) {
       console.log(error);
     }
