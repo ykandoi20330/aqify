@@ -1924,6 +1924,35 @@ dropdown-toggle::after {
   border-radius: 20px;
 }
 
+/*************** Feedback options *****************/
+
+.feedback{
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid #dfe3ff; */
+  background-color: #eef0fe;
+  border-radius: 10px;
+}
+
+.feedbtn{
+  background: #3247FF;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+   rgb(10 37 64 / 16%) 0px -2px 6px 0px inset;
+}
+.feedbtn:hover{
+  background: #192ee8;
+  color: #fff;
+}
+
+
 /*************** Project buying dashboard ******************/
 
 .buying-card {

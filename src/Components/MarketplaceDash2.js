@@ -43,12 +43,22 @@ const MarketplaceDash2 = () => {
   const [filterLocation, setFilterLocation] = useState([]);
   const [filterSearch, setFilterSearch] = useState([]);
 
+  
   //////MarketPlaceDetail
   const [text, setText] = useState("Share")
   const [username, setUsername] = useState("");
-
+  
   const [rating, setRating] = useState(null)
   const [hover, setHover] = useState(null)
+  
+  const [currentStep, setCurrentStep] = useState(1);
+  const [complete, setComplete] = useState(false);
+
+  const steps = [
+    "Basic Feedback",
+    "More Details",
+    "Build Feedback"
+  ];
 
   const handleShare = () => {
     console.log("share")
@@ -138,6 +148,8 @@ const MarketplaceDash2 = () => {
     return boolean;
   };
 
+  console.log('favorites are added', favourite)
+
 
   // useEffect(() => {
   //   Promise.resolve("Promise")
@@ -159,21 +171,26 @@ const MarketplaceDash2 = () => {
     setFilterLocation(filterValue);
   }
 
-  const locationList = card.filter((data) => {
-    if (filterLocation === data.location) {
-      return data.card === true;
-    } else if (filterLocation === !data.location) {
-      return data.card === false;
+  const locationList = card.filter((Loc) => {
+    if (filterLocation === Loc) {
+      return card.category === true;
+    } else if (filterLocation === !Loc) {
+      return card.category === false;
     } else {
-      return data;
+      return Loc;
     }
   })
+
 
 
   return (
     <>
       <section>
-        <MarketplaceDash filterLocationSelected={onFilterLocationSelected} onSearching={onSearch} />
+        <MarketplaceDash 
+        filterLocationSelected={onFilterLocationSelected} 
+        
+        onSearching={onSearch} 
+        />
       </section>
 
       {show === true && (
@@ -232,9 +249,9 @@ const MarketplaceDash2 = () => {
                           <div className='d-flex align-items-center'>
                             <Link style={{ padding: '12px 38px' }} onClick={() => detailPage(item)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
                             {favoriteChecker(item.id) ?
-                              (<Link onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
+                              (<Link key={item.id} onClick={() => removeFromFavorites(item.id)}>remove<i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                               :
-                              (<Link onClick={() => addToFavorites(item)}><i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                              (<Link key={item.id} onClick={() => addToFavorites(item)}>add<i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                           </div>
                         </div>
 
@@ -297,7 +314,7 @@ const MarketplaceDash2 = () => {
         </>
       )}
 
-      {/* {detail  && <MarketDashDetail onSearch={handleSearch} />} */}
+      {/* MarketPlace Detail Dashbaord */}
       {show === false &&
         <>
           <section>
@@ -308,7 +325,8 @@ const MarketplaceDash2 = () => {
                 <br />
               </div>
               <div>
-                <Link className='btn btn-primary rounded-pill px-5 py-2' data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                {/** data-bs-toggle="modal" data-bs-target="#exampleModal1" */}
+                <Link className='btn btn-primary rounded-pill px-5 py-2' 
                   onClick={exploreMore}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
                 </Link>
               </div>
@@ -453,6 +471,119 @@ const MarketplaceDash2 = () => {
                         </div>
                       </div>
                     </div>
+
+                    <div>
+                      {currentStep === 1 && (
+                      <div className="feedback my-3">
+                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                          <h3 style={{ color: '#000' }}>Did you Like it?</h3>
+                          <span style={{color:'#636363'}}></span>
+                        </div>
+                        <div className="SecondFeedback d-flex">
+                          <div className="mt-4">
+                            <Link
+                              style={{ textDecoration: "none", color: "#636363" }}
+                              id="prev"
+                              onClick={() => {
+                                setCurrentStep((prev) => prev - 1);
+                              }}
+                            >
+                              <span className="feedbtn mx-5 my-2">No</span>
+                            </Link>
+                          </div>
+                          <div className="mt-4">
+                            {!complete && (
+                              <Link
+                                id="next"
+                                className="feedbtn mx-5 my-2"
+                                onClick={() => {
+                                  currentStep === 3
+                                    ? setComplete(true)
+                                    : setCurrentStep((prev) => prev + 1);
+                                }}
+                              >
+                                {currentStep === 3 ? "Finish" : "Yes"}
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      </div>)}
+                    </div>
+                    <div>
+                      {currentStep === 2 && (
+                      <div className="feedback my-3">
+                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                          <h3 style={{ color: '#000' }}>How was the Pricing?</h3>
+                          <span style={{color:'#636363'}}></span>
+                          <span></span>
+                        </div>
+                        <div className="SecondFeedback d-flex">
+                          <div className="mt-4">
+                            <Link
+                              style={{ textDecoration: "none", color: "#636363" }}
+                              id="prev"
+                              onClick={() => {
+                                setCurrentStep((prev) => prev - 1);
+                              }}
+                            >
+                              <span className="feedbtn mx-5 my-2">Very bad</span>
+                            </Link>
+                          </div>
+                          <div className="mt-4">
+                            {!complete && (
+                              <Link
+                                id="next"
+                                className="feedbtn mx-5 my-2"
+                                onClick={() => {
+                                  currentStep === steps.length
+                                    ? setComplete(true)
+                                    : setCurrentStep((prev) => prev + 1);
+                                }}
+                              >
+                                {currentStep === steps.length ? "Finish" : "Very good"}
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      </div>)}
+                    </div>
+                    <div>
+                      {currentStep === 3 && (
+                      <div className="feedback my-3">
+                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                          <h3 style={{ color: '#000' }}>Acquisition financing?</h3>
+                          <span style={{color:'#636363'}}>( not having enough money )</span>
+                        </div>
+                        <div className="SecondFeedback d-flex">
+                          <div className="mt-4">
+                            <Link
+                              style={{ textDecoration: "none", color: "#636363" }}
+                              id="prev"
+                              onClick={() => {
+                                setCurrentStep((prev) => prev - 1);
+                              }}
+                            >
+                              <span className="feedbtn mx-5 my-2">No</span>
+                            </Link>
+                          </div>
+                          <div className="mt-4">
+                            {!complete && (
+                              <Link
+                                id="next"
+                                className="feedbtn mx-5 my-2"
+                                onClick={() => {
+                                  currentStep === 2
+                                    ? setComplete(true)
+                                    : setCurrentStep((prev) => prev + 1);
+                                }}
+                              >
+                                {currentStep === steps.length ? "Yes" : "Yes"}
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      </div>)}
+                    </div>
                   </div>
 
                   <div className='AskingPlace' style={{ width: '40%', position: "sticky" }}>
@@ -511,45 +642,45 @@ const MarketplaceDash2 = () => {
             })}
 
           </section>
+        </>
+      }
 
-          <section>
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog  modal-dialog-centered">
-                <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} class="modal-content">
-                  <div class="modal-header" style={{ border: 'none' }}>
-                    <br />
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div>
-                      <h6 className='text-center mb-4'>How Was the Listing and Pricing?</h6>
-                    </div>
-                    <div style={{ fontSize: '1.7rem' }} className='d-flex align-items-center justify-content-center'>
-                      {[...Array(5)].map((star, index) => {
-                        const currentRating = index + 1
-                        return (
-                          <label >
-                            <input type="radio" value={currentRating} onClick={() => setRating(currentRating)} />
-                            <FaStar className='star mx-2'
-                              color={currentRating <= (rating || hover) ? "#3247FF" : '#fff'}
-                              onMouseEnter={() => setHover(currentRating)}
-                              onMouseLeave={() => setHover(null)}
-                            />
-                          </label>
-                        )
-                      })}
-                    </div>
-                    <div className='mt-2 d-flex justify-content-around'>
-                      <div><span style={{ fontSize: '11px' }}>Very bad</span></div>
-                      <div><span style={{ fontSize: '11px' }}>Very good</span></div>
-                    </div>
-                  </div>
+      {/* <section>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog  modal-dialog-centered">
+            <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} class="modal-content">
+              <div class="modal-header" style={{ border: 'none' }}>
+                <br />
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <h6 className='text-center mb-4'>How Was the Listing and Pricing?</h6>
+                </div>
+                <div style={{ fontSize: '1.7rem' }} className='d-flex align-items-center justify-content-center'>
+                  {[...Array(5)].map((star, index) => {
+                    const currentRating = index + 1
+                    return (
+                      <label >
+                        <input type="radio" value={currentRating} onClick={() => setRating(currentRating)} />
+                        <FaStar className='star mx-2'
+                          color={currentRating <= (rating || hover) ? "#3247FF" : '#fff'}
+                          onMouseEnter={() => setHover(currentRating)}
+                          onMouseLeave={() => setHover(null)}
+                        />
+                      </label>
+                    )
+                  })}
+                </div>
+                <div className='mt-2 d-flex justify-content-around'>
+                  <div><span style={{ fontSize: '11px' }}>Very bad</span></div>
+                  <div><span style={{ fontSize: '11px' }}>Very good</span></div>
                 </div>
               </div>
             </div>
-          </section>
-        </>
-      }
+          </div>
+        </div>
+      </section> */}
 
     </>
   );
