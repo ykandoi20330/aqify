@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import threeDots from "./ProfileDashbaord/dotsthreeoutlinevertical.svg"
+import {jwtDecode} from 'jwt-decode'
+import ENV from '../config.js'
+import axios from 'axios'
+
 
 // import anylatics from "./MyProject/VectorAnylatics.svg"
 import add from "./MyProject/VectorProject.svg"
@@ -8,7 +12,34 @@ import add from "./MyProject/VectorProject.svg"
 
 const MyProject = () => {
 
-    // const [show, setShow] = useState(1)
+const token = localStorage.getItem('token')
+const decoded = jwtDecode(token)
+console.log(decoded.id)
+
+useEffect(() => {
+    getCard();
+  }, []);
+
+    const [card, setCard] = React.useState([]);
+
+  const getCard = async () => {
+    try {
+      const response = await axios.get(
+        `${ENV.BACKEND_URL}/business/getbusinessById`,{
+            params: {
+                id: decoded.id
+            }
+        });
+      console.log(response.data.business);
+      setCard(response.data.business);
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+
 
     return (
         <>
