@@ -65,7 +65,7 @@ const MarketplaceDash2 = () => {
   const handleShare = () => {
     console.log("share")
     setText("Link Copied")
-    navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash`)
+    navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash2`)
   }
 
   //seller username

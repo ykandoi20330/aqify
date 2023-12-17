@@ -147,7 +147,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan <img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
                         </div>
                     </div>
                 </>}

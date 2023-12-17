@@ -78,7 +78,7 @@ const SignUp = () => {
     if (validation()) {
       try {
         console.warn(formData,role);
-        const response = await fetch(`${ENV.BACKEND_URL}users/register`, {
+        const response = await fetch(`${ENV.BACKEND_URL}/users/register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

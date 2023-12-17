@@ -3,8 +3,8 @@
   "name": "aqify",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://aqify-backend.onrender.com",
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@react-spring/parallax": "^9.7.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
