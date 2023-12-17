@@ -22,7 +22,7 @@ const Favourite = () => {
   const [detail, setDetail] = useState(1)
 
   const favoriteChecker = (id) => {
-    const boolean = favourite.some((item) => item.id === id);
+    const boolean = favourite.some((items) => items.id === id);
     return boolean;
   }
 
@@ -60,10 +60,11 @@ const Favourite = () => {
                     <h3 className='card-h3'>Metrics</h3>
                     <div className='d-flex justify-content-center align-items-center'>
                       <Link style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' to="/MainDashboard/MarketDash2">View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
+                      {/* <Link onClick={() => removeFromFavorites(item.id)}><i class="fa-solid fa-heart" style={{ color: '' }}></i></Link> */}
                       {favoriteChecker(item.id) ?
-                        (<Link onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
+                        (<Link key={item.id} onClick={() => removeFromFavorites(item.id)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                         :
-                        (<Link onClick={() => addToFavorites(item)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                        (<Link key={item.id} onClick={() => addToFavorites(item)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                     </div>
                   </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import backgroundImg from "./Market/unsplash_5U_28ojjgms.png";
 import arrow from "./Aqify project/Vector (1).png";
 import ENV from "../config.js";
+import axios from "axios";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -9,7 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 import search from "./MarketDash/VectorSearch.svg";
 // import img from "./Market/market.png";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar"
 //logo
@@ -18,12 +19,37 @@ import Navbar from "./Navbar"
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MarketplaceDetail from "./MarketplaceDetail.js";
+
+/////////////
+import cardLogo2 from "./Market/Frame 34 (1).png"
+import cardProfile from "./Market/Rectangle 25.png"
+
+//dash
+import slideImg from "./MarketDash/Doctor.jpg"
+// import back from "./MarketDash/VectorBackArrow.svg"
+import chart from "./MarketDash/Vertical.png"
+
+//side card
+import cart from "./MarketDash/VectorCart.svg"
+import blueMsg from "./MarketDash/VectorBlueMsg.svg"
+import offer from "./MarketDash/VectorOffer.svg"
+import smallMap from "./MarketDash/VectorSmap.svg"
+import Right from "./MarketDash/VectorRight.svg"
+import Left from "./MarketDash/VectorLeft.svg"
+import profileIcon from "./ProfileDashbaord/ellipse-60@2x.png"
+////////////
 
 const Market = () => {
   const [fetchedtemplates, setfetchedtemplates] = useState([]);
-  //   const [templates, settemplates] = useState(fetchedtemplates);
-  const [image, setImage] = useState(null);
-  const [fileName, setfileName] = useState("");
+  const [card, setCard] = useState([]);
+  const [show, setShow] = useState(true);
+  const [detail, setDetail] = useState([]);
+  const [filterSearch, setFilterSearch] = useState([]);
+  const [searchTerm, setSearchTerm] = useState([]);
+
+  const navigate = useNavigate();
+  // const [templates, settemplates] = useState(fetchedtemplates);
   const [file, setFile] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,17 +65,6 @@ const Market = () => {
     tools: [],
     technology: ''
   });
-
-  const input = ({ target: { files } }) => {
-    files[0] && setfileName(files[0].name);
-    if (files) {
-      setImage(URL.createObjectURL(files[0]));
-    }
-  };
-
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
 
   const toastOptions = {
     position: "top-right",
@@ -158,33 +173,65 @@ const Market = () => {
     setIsOpen(!isOpen);
   };
 
+  // useEffect(() => {
+  //   gettemplates();
+  // }, []);
+
+  // const gettemplates = async () => {
+  //   try {
+  //     let response = await fetch(`${ENV.BACKEND_URL}/template/getTemplate`, {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       credentials: "include",
+  //       // body: JSON.stringify(),
+  //     });
+
+  //     if (response.status === 200) {
+  //       response = await response.json();
+  //       console.log(response);
+  //       setfetchedtemplates(response);
+  //       settemplates(response)
+  //     } else {
+  //       console.error("Error fetching products:", response.statusText);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching products:", error);
+  //   }
+  // };
+
   useEffect(() => {
     gettemplates();
   }, []);
 
   const gettemplates = async () => {
     try {
-      let response = await fetch(`${ENV.BACKEND_URL}/template/getTemplate`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        // body: JSON.stringify(),
-      });
+      const response = await axios.get(
+        `${ENV.BACKEND_URL}/business/getbusiness`);
+      console.log(response.data.business);
+      setCard(response.data.business);
+      setFilterSearch(response.data.business);
 
-      if (response.status === 200) {
-        response = await response.json();
-        console.log(response);
-        setfetchedtemplates(response);
-        settemplates(response)
-      } else {
-        console.error("Error fetching products:", response.statusText);
-      }
     } catch (error) {
-      console.error("Error fetching products:", error);
+      console.error(error);
     }
-  };
+  }
+
+  const onSearch = (searchTerm) => {
+    setFilterSearch(card.filter(f => f.projectName.toLowerCase().includes(searchTerm.toLowerCase())))
+  }
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    onSearch(e.target.value);
+  }
+
+  const detailPage = (Product) => {
+    let detailItems = [{ ...Product }];
+    setDetail(detailItems)
+    setShow(false)
+  }
 
   const [templates, settemplates] = useState(fetchedtemplates);
 
@@ -247,706 +294,636 @@ const Market = () => {
       </section>
 
       {/** */}
-      <section className="pricing-first-section">
-        <div
-          className="pricing-backgroundImage"
-          style={{
-            backgroundImage: `url(${backgroundImg})`,
-            width: "100%",
-            height: "100vh",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="owner-content">
-            <div>
-              <div className="my-5">
-                <h1 className="main-h1 col-6">
-                  Welcome to the Marketplace <br />
-                  <TypeAnimation
-                    className="typeAnimation marketTypeAnimation"
-                    style={{ fontSize: "3rem" }}
-                    sequence={[
-                      "Ecommerce", // Types 'One'
-                      1000, // Waits 1s
-                      "Saas", // Deletes 'One' and types 'Two'
-                      2000, // Waits
-                      "Community",
-                      2000,
-                      "Crypto",
-                      2000,
-                      "Wordpress",
-                      2000,
-                      "Content",
-                      2000,
-                      "Services",
-                      2000,
-                    ]}
-                    wrapper="span"
-                    cursor={false}
-                    repeat={Infinity}
-                  />
-                  .
-                </h1>
-              </div>
-              <div className="my-4">
-                <span className="main-span col-6 d-flex">
-                  List your startup for free with total anonymity to receive
-                  full or partial acquisition offers from verified buyers
-                  commission-free.List your business anonymously on the
-                  Marketplace to receive offers from acquirers
-                </span>
-              </div>
-              {/* <div className=''>
+      {show === true && <>
+        <section className="pricing-first-section">
+          <div
+            className="pricing-backgroundImage"
+            style={{
+              backgroundImage: `url(${backgroundImg})`,
+              width: "100%",
+              height: "100vh",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="owner-content">
+              <div>
+                <div className="my-5">
+                  <h1 className="main-h1 col-6">
+                    Welcome to the Marketplace <br />
+                    <TypeAnimation
+                      className="typeAnimation marketTypeAnimation"
+                      style={{ fontSize: "3rem" }}
+                      sequence={[
+                        "Ecommerce", // Types 'One'
+                        1000, // Waits 1s
+                        "Saas", // Deletes 'One' and types 'Two'
+                        2000, // Waits
+                        "Community",
+                        2000,
+                        "Crypto",
+                        2000,
+                        "Wordpress",
+                        2000,
+                        "Content",
+                        2000,
+                        "Services",
+                        2000,
+                      ]}
+                      wrapper="span"
+                      cursor={false}
+                      repeat={Infinity}
+                    />
+                    .
+                  </h1>
+                </div>
+                <div className="my-4">
+                  <span className="main-span col-6 d-flex">
+                    List your startup for free with total anonymity to receive
+                    full or partial acquisition offers from verified buyers
+                    commission-free.List your business anonymously on the
+                    Marketplace to receive offers from acquirers
+                  </span>
+                </div>
+                {/* <div className=''>
                                 <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singin">List your business<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                             </div> */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        className="d-flex justify-content-center"
-        style={{ background: "#EEF0FE" }}
-      >
-        <div className="MarketTool-card">
-          <div className="second-line d-flex">
-            <div class="form-floating mb-2" style={{ width: "100%" }}>
-              <input
-                style={{ width: "100%" }}
-                type="email"
-                id="floatingInputValue"
-                class="form-control"
-                placeholder="Search"
-                onChange={searchhandle}
-              />
-              <label for="floatingInputValue">
-                <img src={search} alt="" />
-              </label>
+        <section
+          className="d-flex justify-content-center"
+          style={{ background: "#EEF0FE" }}
+        >
+          <div className="MarketTool-card">
+            <div className="second-line d-flex">
+              <div class="form-floating mb-2" style={{ width: "100%" }}>
+                <input
+                  style={{ width: "100%" }}
+                  type="email"
+                  id="floatingInputValue"
+                  class="form-control"
+                  placeholder="Search"
+                  onChange={handleSearch}
+                />
+                {/* onChange={searchhandle} */}
+                <label for="floatingInputValue">
+                  <img src={search} alt="" />
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div className="first-line d-flex">
-            <div class="form-floating" style={{ width: "100%" }}>
-              <select
-                style={{ width: "97%", color: "#3247ff" }}
-                class="form-control form-select form-select-lg mb-2"
-                value={filter.category}
-                onChange={handleCategoryChange}
-                aria-label="Large select example"
-              >
-                <option id="floatingInputValue" selected>
-                  Category
-                </option>
-                <option value="Ecommerce">Ecommerce</option>
-                <option value="Saas apps">Saas apps</option>
-                <option value="Wordpress">Wordpress</option>
-              </select>
-              <label for="floatingInputValue">
-                <img src="" alt="" />
-                <i
-                  class="fa-brands fa-squarespace"
-                  style={{ color: "#005eff" }}
-                ></i>
-              </label>
-            </div>
-            <div class="form-floating mr-2" style={{ width: "100%" }}>
-              {/* <select style={{ width: '97%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" value={filter.tools[0] || ''} onChange={handleToolChange} aria-label="Large select example">
+            <div className="first-line d-flex">
+              <div class="form-floating" style={{ width: "100%" }}>
+                <select
+                  style={{ width: "97%", color: "#3247ff" }}
+                  class="form-control form-select form-select-lg mb-2"
+                  value={filter.category}
+                  onChange={handleCategoryChange}
+                  aria-label="Large select example"
+                >
+                  <option id="floatingInputValue" selected>
+                    Category
+                  </option>
+                  <option value="Ecommerce">Ecommerce</option>
+                  <option value="Saas apps">Saas apps</option>
+                  <option value="Wordpress">Wordpress</option>
+                </select>
+                <label for="floatingInputValue">
+                  <img src="" alt="" />
+                  <i
+                    class="fa-brands fa-squarespace"
+                    style={{ color: "#005eff" }}
+                  ></i>
+                </label>
+              </div>
+              <div class="form-floating mr-2" style={{ width: "100%" }}>
+                {/* <select style={{ width: '97%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" value={filter.tools[0] || ''} onChange={handleToolChange} aria-label="Large select example">
                                 <option id="floatingInputValue" selected>Tool</option>
                                 <option value="ReactJs">ReactJs</option>
                                 <option value="NodeJs">NodeJs</option>
                                 <option value="HTML,CSS">HTML,CSS</option>
                             </select> */}
-              <div style={{ position: "relative" }}>
-                <div class="form-control mb-2 px-5 d-flex align-items-center"
-                  style={{
-                    width: '95%', color: '#3247ff',
-                    border: "1px solid #ccc",
-                    // padding: "5px",
-                    cursor: "pointer",
-                    height: '8vh',
-                  }}
-                  onClick={toggleDropdown}
-                >
-                  Tools
-                </div>
-                {isOpen && (
-                  <div
+                <div style={{ position: "relative" }}>
+                  <div class="form-control mb-2 px-5 d-flex align-items-center"
                     style={{
-                      position: "absolute",
-                      width: "200px",
+                      width: '95%', color: '#3247ff',
                       border: "1px solid #ccc",
-                      padding: "5px",
-                      background: "#fff",
-                      zIndex: "1",
-                      marginTop: "5px",
+                      // padding: "5px",
+                      cursor: "pointer",
+                      height: '8vh',
                     }}
+                    onClick={toggleDropdown}
                   >
-                    <label>
-                      <input
-                        type="checkbox"
-                        value="ReactJs"
-                        checked={filter.tools.includes("ReactJs")}
-                        onChange={() => handleToolChange("ReactJs")}
-                      />
-                      ReactJs
-                    </label>
-                    <br />
-                    <label>
-                      <input
-                        type="checkbox"
-                        value="NodeJs"
-                        checked={filter.tools.includes("NodeJs")}
-                        onChange={() => handleToolChange("NodeJs")}
-                      />
-                      NodeJs
-                    </label>
-                    <br />
-                    <label>
-                      <input
-                        type="checkbox"
-                        value="HTML,CSS"
-                        checked={filter.tools.includes("HTML,CSS")}
-                        onChange={() => handleToolChange("HTML,CSS")}
-                      />
-                      HTML,CSS
-                    </label>
+                    Tools
                   </div>
-                )}
-                {/* Rest of your component */}
-              </div>
-              <label className="" for="floatingInputValue">
-                <img src="" alt="" />
-                <i
-                  class="fa-solid fa-screwdriver-wrench"
-                  style={{ color: "#005eff", marginRight: '5px' }}
-                ></i>
-              </label>
-            </div>
-            <div class="form-floating mr-2" style={{ width: "100%" }}>
-              <select
-                style={{ width: "100%", color: "#3247ff" }}
-                class="form-control form-select form-select-lg mb-3"
-                aria-label="Large select example"
-                value={filter.technology} onChange={handleTechnologyChange}
-              >
-                <option id="floatingInputValue" selected >
-                  Sort by
-                </option>
-                <option value="UI Design">UI Design</option>
-                <option value="UI Development">UI Deveploment</option>
-                <option value="Saas">Saas</option>
-              </select>
-              <label for="floatingInputValue">
-                <img src="" alt="" />
-                <i class="fa-solid fa-list" style={{ color: "#005eff" }}></i>
-              </label>
-            </div>
-
-          </div>
-          <button style={{ width: "20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
-            <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt="" />{" "}
-          </button>
-        </div>
-
-      </section>
-
-      <section
-        className="marketMain"
-        style={{ background: "#EEF0FE ", padding: "3rem" }}
-      >
-        <section className="ligh-back my-5" style={{ height: "120%" }}>
-          <div
-            className="card-container"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "20px",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            {templates.length > 0 ? (
-              templates.map((item, index) => (
-                <div
-                  className="marketInner-card"
-                  key={index}
-                  style={{
-                    width: "30%",
-                    height: "32%",
-                    borderRadius: "20px",
-                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-                  }}
-                >
-                  <div className="firstMarket">
-                    <img
-                      src={require(`../images/template-images/${item.websiteName}.jpg`)}
-                      alt=""
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "200px",
-                        objectFit: "cover",
-                        borderRadius: "20px 20px 0 0",
-                      }}
-                    />
+                  {isOpen && (
                     <div
-                      className="firstSide-top"
                       style={{
                         position: "absolute",
-                        top: "0",
-                        right: "0px",
-                        width: "50%",
-                        textAlign: "end",
+                        width: "200px",
+                        border: "1px solid #ccc",
+                        padding: "5px",
+                        background: "#fff",
+                        zIndex: "1",
+                        marginTop: "5px",
                       }}
                     >
-                      <button
-                        className="btn-card btn btn-outline-primary my-2"
-                        style={{
-                          fontSize: "13px",
-                          background: "#fff",
-                          color: "#3247FF ",
-                        }}
-                      >
-                        Next Js
-                      </button>
-                      <button
-                        className="btn-card btn btn-outline-primary my-2"
-                        style={{
-                          fontSize: "13px",
-                          background: "#fff",
-                          color: "#3247FF ",
-                        }}
-                      >
-                        Firebase
-                      </button>
-                      <button
-                        className="btn-card btn btn-outline-primary my-2"
-                        style={{
-                          fontSize: "13px",
-                          background: "#fff",
-                          color: "#3247FF ",
-                        }}
-                      >
-                        Medical
-                      </button>
-                      <button
-                        className="btn-card btn btn-outline-primary my-2"
-                        style={{
-                          fontSize: "13px",
-                          background: "#fff",
-                          color: "#3247FF ",
-                        }}
-                      >
-                        SaaS
-                      </button>
+                      <label>
+                        <input
+                          type="checkbox"
+                          value="ReactJs"
+                          checked={filter.tools.includes("ReactJs")}
+                          onChange={() => handleToolChange("ReactJs")}
+                        />
+                        ReactJs
+                      </label>
+                      <br />
+                      <label>
+                        <input
+                          type="checkbox"
+                          value="NodeJs"
+                          checked={filter.tools.includes("NodeJs")}
+                          onChange={() => handleToolChange("NodeJs")}
+                        />
+                        NodeJs
+                      </label>
+                      <br />
+                      <label>
+                        <input
+                          type="checkbox"
+                          value="HTML,CSS"
+                          checked={filter.tools.includes("HTML,CSS")}
+                          onChange={() => handleToolChange("HTML,CSS")}
+                        />
+                        HTML,CSS
+                      </label>
                     </div>
-                  </div>
-                  <div style={{ padding: "2rem" }}>
-                    <div>
-                      <div>
-                        <h3>{item.websiteName}</h3>
-                        <Link
+                  )}
+                  {/* Rest of your component */}
+                </div>
+                <label className="" for="floatingInputValue">
+                  <img src="" alt="" />
+                  <i
+                    class="fa-solid fa-screwdriver-wrench"
+                    style={{ color: "#005eff", marginRight: '5px' }}
+                  ></i>
+                </label>
+              </div>
+              <div class="form-floating mr-2" style={{ width: "100%" }}>
+                <select
+                  style={{ width: "100%", color: "#3247ff" }}
+                  class="form-control form-select form-select-lg mb-3"
+                  aria-label="Large select example"
+                  value={filter.technology} onChange={handleTechnologyChange}
+                >
+                  <option id="floatingInputValue" selected >
+                    Sort by
+                  </option>
+                  <option value="UI Design">UI Design</option>
+                  <option value="UI Development">UI Deveploment</option>
+                  <option value="Saas">Saas</option>
+                </select>
+                <label for="floatingInputValue">
+                  <img src="" alt="" />
+                  <i class="fa-solid fa-list" style={{ color: "#005eff" }}></i>
+                </label>
+              </div>
+
+            </div>
+            <button style={{ width: "20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
+              <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt="" />{" "}
+            </button>
+          </div>
+
+        </section>
+
+        <section
+          className="marketMain"
+          style={{ background: "#EEF0FE ", padding: "3rem" }}
+        >
+          <section className="ligh-back my-5" style={{ height: "120%" }}>
+            <div
+              className="card-container"
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                width: "100%",
+              }}
+            >
+              {/* templates */}
+              {filterSearch.length > 0 ? (
+                filterSearch.map((item, index) => (
+                  <div
+                    className="marketInner-card"
+                    key={index}
+                    style={{
+                      width: "30%",
+                      height: "100%",
+                      borderRadius: "20px",
+                      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+                    }}
+                  >
+                    <div className="firstMarket">
+                      <img
+                        src={item.link}
+                        // src={require(`../images/template-images/${item.websiteName}.jpg`)}
+                        alt=""
+                        style={{
+                          position: "relative",
+                          width: "100%",
+                          height: "200px",
+                          objectFit: "cover",
+                          borderRadius: "20px 20px 0 0",
+                        }}
+                      />
+                      <div
+                        className="firstSide-top"
+                        style={{
+                          position: "absolute",
+                          top: "0",
+                          right: "0px",
+                          width: "65%",
+                          textAlign: "end",
+                        }}
+                      >
+                        <button
+                          className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            padding: "0.5rem 1.5rem",
-                            background: "#EEF0FE",
-                            color: "#3247FF",
-                            border: "none",
+                            fontSize: "13px",
+                            background: "#fff",
+                            color: "#3247FF ",
                           }}
-                          to="#"
-                          className="btn btn-primary rounded-pill"
                         >
-                          Template
+                          {item.techStack}
+                        </button>
+                        <button
+                          className="btn-card btn btn-outline-primary my-2"
+                          style={{
+                            fontSize: "13px",
+                            background: "#fff",
+                            color: "#3247FF ",
+                          }}
+                        >
+                          {item.techStack}
+                        </button>
+                        <button
+                          className="btn-card btn btn-outline-primary my-2"
+                          style={{
+                            fontSize: "13px",
+                            background: "#fff",
+                            color: "#3247FF ",
+                          }}
+                        >
+                          {item.techStack}
+                        </button>
+                        <button
+                          className="btn-card btn btn-outline-primary my-2"
+                          style={{
+                            fontSize: "13px",
+                            background: "#fff",
+                            color: "#3247FF ",
+                          }}
+                        >
+                          {item.techStack}
+                        </button>
+                      </div>
+                    </div>
+                    <div style={{ padding: "2rem" }}>
+                      <div>
+                        <div>
+                          <h3>{item.projectName}</h3>
+                          <Link
+                            style={{
+                              padding: "0.5rem 1.5rem",
+                              background: "#EEF0FE",
+                              color: "#3247FF",
+                              border: "none",
+                            }}
+                            to="#"
+                            className="btn btn-primary rounded-pill"
+                          >
+                            Template
+                          </Link>
+                        </div>
+                        <div className="d-flex justify-content-between my-4">
+                          <div>
+                            <span className="mx-2">Favorites</span>
+                            <i
+                              className="fa-regular fa-heart"
+                              style={{ color: "#005eff" }}
+                            ></i>
+                          </div>
+                          <div>
+                            <span className="mx-2">Net Profit</span>
+                            <i
+                              className="fa-solid fa-lock"
+                              style={{ color: "#005eff" }}
+                            ></i>
+                          </div>
+                          <div>
+                            <span className="mx-2">{item.location}</span>
+                            <i
+                              className="fa-solid fa-location-dot"
+                              style={{ color: "#005eff" }}
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="priceTag-div d-flex justify-content-between"
+                        style={{ margin: "2rem 0 2rem 0" }}
+                      >
+                        <h3
+                          className=""
+                          style={{ fontWeight: "bolder", fontSize: "3rem" }}
+                        >
+                          ${item.askingPrice}
+                        </h3>
+                        <Link
+                          style={{ padding: "18px 48px" }}
+                          className="btn btn-primary"
+                          // to={`/placeDetail/${item.id}`}
+                          onClick={() => detailPage(item)}
+                        >
+                          View details
+                          <img
+                            style={{ width: "20px" }}
+                            src={arrow}
+                            alt=""
+                          />{" "}
                         </Link>
                       </div>
-                      <div className="d-flex justify-content-between my-4">
-                        <div>
-                          <span className="mx-2">Favorites</span>
-                          <i
-                            className="fa-regular fa-heart"
-                            style={{ color: "#005eff" }}
-                          ></i>
-                        </div>
-                        <div>
-                          <span className="mx-2">Net Profit</span>
-                          <i
-                            className="fa-solid fa-lock"
-                            style={{ color: "#005eff" }}
-                          ></i>
-                        </div>
-                        <div>
-                          <span className="mx-2">India</span>
-                          <i
-                            className="fa-solid fa-location-dot"
-                            style={{ color: "#005eff" }}
-                          ></i>
-                        </div>
-                      </div>
+                      <span>{item.description}</span>
                     </div>
-                    <div
-                      className="priceTag-div d-flex justify-content-between"
-                      style={{ margin: "2rem 0 2rem 0" }}
-                    >
-                      <h3
-                        className=""
-                        style={{ fontWeight: "bolder", fontSize: "3rem" }}
-                      >
-                        ${item.amount}
-                      </h3>
-                      <Link
-                        style={{ padding: "18px 48px" }}
-                        className="btn btn-primary"
-                        to="/placeDetail"
-                      >
-                        View details
-                        <img
-                          style={{ width: "20px" }}
-                          src={arrow}
-                          alt=""
-                        />{" "}
-                      </Link>
+                  </div>
+                ))
+              ) : (
+                <h1 className="col-span-1 text-center text-3xl font-extrabold">
+                  No Result Found!..
+                </h1>
+              )}
+            </div>
+          </section>
+
+          <section style={{ background: "#EEF0FE " }}>
+            <div>
+              <div className="d-flex justify-content-center">
+                <Link
+                  style={{ padding: "18px 48px" }}
+                  className="btn btn-primary"
+                  to="/singup"
+                >
+                  View more
+                  <img
+                    style={{ width: "20px", marginLeft: "1rem" }}
+                    src={arrow}
+                    alt=""
+                  />{" "}
+                </Link>
+              </div>
+            </div>
+          </section>
+        </section>
+      </>}
+
+
+
+
+
+      {/**Marketplace details section */}
+      <section>
+        {show === false &&
+          //////
+          <>
+            <section className='pricing-first-section'>
+              <div className="pricing-backgroundImage align-items-start" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="owner-content">
+                  <div>
+                    {detail.map((dt, index) => {
+                      return (<>
+                        <div className='my-5'>
+                          <h1 key={index} className='main-h1 '>{dt.projectName}</h1>
+                        </div>
+                        <div className='my-4'>
+                          <span className='main-span col-7 d-flex'>
+                            {/* Affordable advice on valuations, negotiations, legal, tax, accounting & due diligence. */}
+                            {dt.tagline}
+                          </span>
+                        </div>
+                      </>
+                      )
+                    })}
+                    <div className=''>
+                      <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' onClick={()=>setShow(true)} >Back to your List<img className="mx-2" style={{ width: '8%' }} src={arrow} alt="" /></Link>
                     </div>
-                    <span>{item.description}</span>
                   </div>
                 </div>
-              ))
-            ) : (
-              <h1 className="col-span-1 text-center text-3xl font-extrabold">
-                No Result Found!..
-              </h1>
-            )}
-          </div>
-        </section>
+              </div>
+            </section>
 
-        {/* <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+            <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
-                </section>
-                <section className="ligh-back  my-5" style={{ height: '120%' }} >
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+              <section className='placeDetail-section' style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
+                <>
+                  {detail.map((item, index) => {
+                    return (
+                      <div key={item.id} className="detailContent MarketPlace-card d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
+                        <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
+                          <div className='FirstContent d-flex align-items-center'>
+                            <div className='secondPart'>
+                              <img className='card-img' width={200} src={item.link} alt="" />
                             </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
+                            <div className="firstPart" style={{ marginLeft: "2rem" }}>
+                              <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
                             </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+                          </div>
+                          <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
+                            <h3 className='card-h3'>Metrics</h3>
+                          </div>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
-                </section>
-                <section className="ligh-back  my-5" style={{ height: '120%' }} >
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+                          <div className='my-4'>
+                            <span className='col-6' style={{ color: '#636363', fontSize: '16px' }}>
+                              {item.description}
+                              {/* A design inspiration platform for SaaS apps that helps designers find inspiration for their next project by showcasing over 1,000 pages from over 100 SaaS apps, organized by category and page type. Designers can also
+                                                filter designs by color and fonts, and bookmark their favorites for later.<br /><br />
+                                                Project can be grown by doing proper content marketing through blogs and social media, further paid ads can also be utilized to get more customers for the app. */}
+                            </span>
+                          </div>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+                          <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
+                            <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                  <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                </div>
+                              </div>
                             </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
-                </section>
-                <section className="ligh-back my-5" style={{ height: '120%' }} >
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
+                            <div className='d-flex justify-content-between' style={{ position: 'absolute', width: '100%' }}>
+                              <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target={`#carouselExampleAutoplaying${index}`} data-bs-slide="next"><img src={Left} alt="" /></Link>
+                              <Link style={{ background: '#3247ff', borderRadius: '50px', padding: '0.3rem 0.8rem' }} data-bs-target={`#carouselExampleAutoplaying${index}`} data-bs-slide="prev"><img src={Right} alt="" /></Link>
                             </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div>
-                    </div>
+                          </div>
 
-                    <div className="marketInner-card ">
-                        <div className="firstMarket">
-                            <img src={img} alt="" style={{ position: 'relative', width: '100%', borderRadius: '20px 20px 0 0' }} />
-                            <div className="firstSide-top" style={{ position: 'absolute', top: '0', right: '0px', width: '50%', textAlign: 'end' }}>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Next Js</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Firebase</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>Medical</button>
-                                <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px', background: "#fff", color: "#3247FF " }}>SaaS</button>
-                            </div>
-                        </div>
-                        <div style={{ padding: '2rem' }}>
-                            <div>
-                                <h3>DoYogo - Website</h3>
-                                <Link style={{ padding: '0.5rem 1.5rem', background: '#EEF0FE', color: '#3247FF', border: 'none' }} to="#" className='btn btn-primary rounded-pill'>Template</Link>
-                            </div>
-                            <div className='d-flex justify-content-between my-4'>
-                                <div><span className='mx-2'>Favorites</span><i class="fa-regular fa-heart" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>Net Profit</span><i class="fa-solid fa-lock" style={{ color: "#005eff" }}></i></div>
-                                <div><span className='mx-2'>India</span><i class="fa-solid fa-location-dot" style={{ color: "#005eff" }}></i></div>
-                            </div>
-                            <div className='priceTag-div d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
-                                <h3 className='' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>$25</h3>
-                                <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/placeDetail">View details<img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
-                            </div>
-                            <span>DoYoga is Professional and clean one page Webflow app template that can be used for any apps</span>
-                        </div> */}
-        {/* </div> */}
 
-        <section style={{ height: "20vh", background: "#EEF0FE " }}>
-          <div>
-            <div className="d-flex justify-content-center">
-              <Link
-                style={{ padding: "18px 48px" }}
-                className="btn btn-primary"
-                to="/singup"
-              >
-                View more
-                <img
-                  style={{ width: "20px", marginLeft: "1rem" }}
-                  src={arrow}
-                  alt=""
-                />{" "}
-              </Link>
-            </div>
-          </div>
-        </section>
+                          <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.financing}</span>
+                              </div>
+                            </div>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.multiplies}</span>
+                              </div>
+                            </div>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmRevenue}</span>
+                              </div>
+                            </div>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmProfit}</span>
+                              </div>
+                            </div>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyRevenue}</span>
+                              </div>
+                            </div>
+                            <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <div className='d-flex justify-content-start align-items-center'>
+                                <img width={35} src={cardLogo2} alt="" />
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyProfit}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="chart my-3">
+                            <img style={{ width: '100%' }} src={chart} alt="" />
+                          </div>
+
+                          <div className="description">
+                            <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
+                              <h3 className='card-h3'>Metrics</h3>
+                            </div>
+
+                            <div className='d-flex flex-wrap justify-content-between'>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.ttmGrossRevenue}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.ttmNetProfit}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.lastMonthGrossRevenue}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.lastMonthNetProfit}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 3rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.customers}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.annualRecurringRevenue}</h5>
+                              </div>
+                              <div style={{ margin: '1rem 1rem 0 0' }}>
+                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <h5>{item.annualGrowthRate}</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className='AskingPlace' style={{ width: '40%', position: "sticky" }}>
+                          <div className="sideCard d-flex flex-column justify-content-between" style={{ background: '#EEF0FE', borderRadius: '10px', padding: '1rem', height: '100%', overflowY: 'scroll' }}>
+                            <div>
+                              <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
+                                <h5 className='card-h3'>Asking Price</h5>
+                              </div>
+                              <div className='my-3'>
+                                <h1>${item.askingPrice}</h1>
+                              </div>
+
+                              <Link to="/signup" className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                <img src={blueMsg} alt="" />
+                                <span className='mx-2'>Message Seller</span>
+                              </Link>
+                              <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+                                <span className='mx-2'>Audio Call</span>
+                              </Link>
+                              <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                <img src={offer} alt="" />
+                                <span className='mx-2' >Make Offer</span>
+                              </Link>
+                              <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
+                                <span className='mx-2' >Watch video Path</span>
+                              </Link>
+                              <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                                <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                                <span className='mx-2' >Share</span>
+                              </Link>
+                              <div className='my-3'>
+                                <Link style={{ width: '100%' }} className='btn btn-primary' to="/singup"><img src={cart} alt="" className='mx-2' /> Buy Now</Link>
+                              </div>
+                            </div>
+
+                            <div>
+                              <div className='d-flex justify-content-between my-3' style={{ margin: '1rem 0 0rem 0' }}>
+                                <h5 className='card-h3'>About the Seller</h5>
+                              </div>
+                              <div className='d-flex align-items-center'>
+                                <img src={item.ownerImage} alt="" style={{ borderRadius: "50px", height: "50px", width: "50px" }} />
+                                <div className='mx-2'>
+                                  <h4>{item.ownerName}</h4>
+                                  <span><img src={smallMap} alt="" />{item.location}</span>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>)
+                  })}
+                </>
+              </section>
+            </section>
+          </>
+          //////
+        }
       </section>
 
       <section>

@@ -31,7 +31,7 @@ import smallMap from "./MarketDash/VectorSmap.svg"
 import Right from "./MarketDash/VectorRight.svg"
 import Left from "./MarketDash/VectorLeft.svg"
 
-import { FaStar } from "react-icons/fa"
+// import { FaStar } from "react-icons/fa"
 import MarketplaceDash from "./MarketplaceDash.js";
 ///////////////
 
@@ -41,23 +41,25 @@ const MarketplaceDash2 = () => {
   const [detail, setDetail] = useState([]);
   const [show, setShow] = useState(true);
   const [filterLocation, setFilterLocation] = useState([]);
+  const [categoryFilter, setCategoryFilter] = useState([]);
   const [filterSearch, setFilterSearch] = useState([]);
 
-  
+
   //////MarketPlaceDetail
   const [text, setText] = useState("Share")
   const [username, setUsername] = useState("");
-  
-  const [rating, setRating] = useState(null)
-  const [hover, setHover] = useState(null)
-  
+
+  // const [rating, setRating] = useState(null)
+  // const [hover, setHover] = useState(null)
+
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
 
   const steps = [
     "Basic Feedback",
     "More Details",
-    "Build Feedback"
+    "Build Feedback",
+    "Other Feedback",
   ];
 
   const handleShare = () => {
@@ -110,12 +112,23 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (display) => {
-    if (display.category === card.category) {
-      setShow(true);
-    } else {
+    const oldExplore = [...card];
+    const filterExplore = oldExplore.filter((i) => i.projectName === display);
+    
+    if(filterExplore){
+      setShow(true)
+    }else{
       setShow(false)
     }
   }
+
+  // const exploreMore = (display) => {
+  //   if (display.category === card.category) {
+  //     setShow(true);
+  //   } else {
+  //     setShow(false)
+  //   }
+  // }
 
 
   ////////
@@ -138,15 +151,16 @@ const MarketplaceDash2 = () => {
       console.log(response.data.business);
       setCard(response.data.business);
       setFilterSearch(response.data.business)
+      setCategoryFilter(response.data.business)
 
     } catch (error) {
       console.error(error);
     }
   }
-  const favoriteChecker = (id) => {
-    const boolean = favourite.some((items) => items.id === id);
-    return boolean;
-  };
+  // const favoriteChecker = (id) => {
+  //   const boolean = favourite.some((items) => items.id === id);
+  //   return boolean;
+  // };
 
   console.log('favorites are added', favourite)
 
@@ -171,25 +185,37 @@ const MarketplaceDash2 = () => {
     setFilterLocation(filterValue);
   }
 
-  const locationList = card.filter((Loc) => {
-    if (filterLocation === Loc) {
-      return card.category === true;
-    } else if (filterLocation === !Loc) {
-      return card.category === false;
-    } else {
-      return Loc;
-    }
-  })
+  // const locationList = card.filter((Loc) => {
+  //   if (filterLocation === Loc) {
+  //     return card.category === true;
+  //   } else if (filterLocation === !Loc) {
+  //     return card.category === false;
+  //   } else {
+  //     return Loc;
+  //   }
+  // })
 
+  //  const [records, setRecords] = useState([])
+
+  const filterCategory = (cate) => {
+    const updatedCate = categoryFilter.filter((cateElm) => {
+        return cateElm.category === cate;
+    })
+
+    setCategoryFilter(updatedCate);
+    console.log("category items", updatedCate);
+}
 
 
   return (
     <>
       <section>
-        <MarketplaceDash 
-        filterLocationSelected={onFilterLocationSelected} 
-        
-        onSearching={onSearch} 
+        <MarketplaceDash
+        filterLocationSelected={onFilterLocationSelected}
+
+          onSearching={onSearch}
+
+          filterCategory={filterCategory}
         />
       </section>
 
@@ -199,7 +225,7 @@ const MarketplaceDash2 = () => {
             <section className="marketDash2-back" style={{ height: '100%' }} >
               <div className='d-flex'>
                 <div className="market-card my-4" >
-                  {filterSearch.map((item, index) => {
+                  {categoryFilter.map((item, index) => {
                     const id = index + 1
                     return (
                       <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
@@ -248,10 +274,11 @@ const MarketplaceDash2 = () => {
                           <h3 className='card-h3'>Metrics</h3>
                           <div className='d-flex align-items-center'>
                             <Link style={{ padding: '12px 38px' }} onClick={() => detailPage(item)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
-                            {favoriteChecker(item.id) ?
-                              (<Link key={item.id} onClick={() => removeFromFavorites(item.id)}>remove<i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
+                            {/* {favoriteChecker(item.id) ?
+                              (<Link key={item.id} onClick={() => removeFromFavorites(item.id)}><i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                               :
-                              (<Link key={item.id} onClick={() => addToFavorites(item)}>add<i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                              (<Link key={item.id} onClick={() => addToFavorites(item)}><i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)} */}
+                              <Link key={item.id} onClick={() => addToFavorites(item)}><i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>
                           </div>
                         </div>
 
@@ -326,7 +353,7 @@ const MarketplaceDash2 = () => {
               </div>
               <div>
                 {/** data-bs-toggle="modal" data-bs-target="#exampleModal1" */}
-                <Link className='btn btn-primary rounded-pill px-5 py-2' 
+                <Link className='btn btn-primary rounded-pill px-5 py-2'
                   onClick={exploreMore}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
                 </Link>
               </div>
@@ -474,115 +501,163 @@ const MarketplaceDash2 = () => {
 
                     <div>
                       {currentStep === 1 && (
-                      <div className="feedback my-3">
-                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
-                          <h3 style={{ color: '#000' }}>Did you Like it?</h3>
-                          <span style={{color:'#636363'}}></span>
-                        </div>
-                        <div className="SecondFeedback d-flex">
-                          <div className="mt-4">
-                            <Link
-                              style={{ textDecoration: "none", color: "#636363" }}
-                              id="prev"
-                              onClick={() => {
-                                setCurrentStep((prev) => prev - 1);
-                              }}
-                            >
-                              <span className="feedbtn mx-5 my-2">No</span>
-                            </Link>
+                        <div className="feedback my-3">
+                          <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                            <h3 style={{ color: '#000' }}>Did you Like it?</h3>
+                            <span style={{ color: '#636363' }}></span>
                           </div>
-                          <div className="mt-4">
-                            {!complete && (
+                          <div className="SecondFeedback d-flex">
+                            <div className="mt-4">
                               <Link
-                                id="next"
-                                className="feedbtn mx-5 my-2"
+                                style={{ textDecoration: "none", color: "#636363" }}
+                                id="prev"
                                 onClick={() => {
-                                  currentStep === 3
-                                    ? setComplete(true)
-                                    : setCurrentStep((prev) => prev + 1);
+                                  setCurrentStep((prev) => prev - 1);
                                 }}
                               >
-                                {currentStep === 3 ? "Finish" : "Yes"}
+                                <span className="feedbtn mx-5 my-2">No</span>
                               </Link>
-                            )}
+                            </div>
+                            <div className="mt-4">
+                              {!complete && (
+                                <Link
+                                  id="next"
+                                  className="feedbtn mx-5 my-2"
+                                  onClick={() => {
+                                    currentStep === 4
+                                      ? setComplete(true)
+                                      : setCurrentStep((prev) => prev + 1);
+                                  }}
+                                >
+                                  {currentStep === 3 ? "Finish" : "Yes"}
+                                </Link>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </div>)}
+                        </div>)}
                     </div>
                     <div>
                       {currentStep === 2 && (
-                      <div className="feedback my-3">
-                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
-                          <h3 style={{ color: '#000' }}>How was the Pricing?</h3>
-                          <span style={{color:'#636363'}}></span>
-                          <span></span>
-                        </div>
-                        <div className="SecondFeedback d-flex">
-                          <div className="mt-4">
-                            <Link
-                              style={{ textDecoration: "none", color: "#636363" }}
-                              id="prev"
-                              onClick={() => {
-                                setCurrentStep((prev) => prev - 1);
-                              }}
-                            >
-                              <span className="feedbtn mx-5 my-2">Very bad</span>
-                            </Link>
+                        <div className="feedback my-3">
+                          <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                            <h3 style={{ color: '#000' }}>How was the Pricing?</h3>
+                            <span style={{ color: '#636363' }}></span>
+                            <span></span>
                           </div>
-                          <div className="mt-4">
-                            {!complete && (
+                          <div className="SecondFeedback d-flex">
+                            <div className="mt-4">
                               <Link
-                                id="next"
-                                className="feedbtn mx-5 my-2"
+                                style={{ textDecoration: "none", color: "#636363" }}
+                                id="prev"
                                 onClick={() => {
-                                  currentStep === steps.length
-                                    ? setComplete(true)
-                                    : setCurrentStep((prev) => prev + 1);
+                                  setCurrentStep((prev) => prev - 1);
                                 }}
                               >
-                                {currentStep === steps.length ? "Finish" : "Very good"}
+                                <span className="feedbtn mx-5 my-2">Very bad</span>
                               </Link>
-                            )}
+                            </div>
+                            <div className="mt-4">
+                              {!complete && (
+                                <Link
+                                  id="next"
+                                  className="feedbtn mx-5 my-2"
+                                  onClick={() => {
+                                    currentStep === steps.length
+                                      ? setComplete(true)
+                                      : setCurrentStep((prev) => prev + 1);
+                                  }}
+                                >
+                                  {currentStep === steps.length ? "Finish" : "Very good"}
+                                </Link>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </div>)}
+                        </div>)}
                     </div>
                     <div>
                       {currentStep === 3 && (
-                      <div className="feedback my-3">
-                        <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
-                          <h3 style={{ color: '#000' }}>Acquisition financing?</h3>
-                          <span style={{color:'#636363'}}>( not having enough money )</span>
-                        </div>
-                        <div className="SecondFeedback d-flex">
-                          <div className="mt-4">
-                            <Link
-                              style={{ textDecoration: "none", color: "#636363" }}
-                              id="prev"
-                              onClick={() => {
-                                setCurrentStep((prev) => prev - 1);
-                              }}
-                            >
-                              <span className="feedbtn mx-5 my-2">No</span>
-                            </Link>
+                        <div className="feedback my-3">
+                          <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                            <h3 style={{ color: '#000' }}>Acquisition financing?</h3>
+                            <span style={{ color: '#636363' }}>( not having enough money )</span>
                           </div>
-                          <div className="mt-4">
-                            {!complete && (
+                          <div className="SecondFeedback d-flex">
+                            <div className="mt-4">
                               <Link
-                                id="next"
-                                className="feedbtn mx-5 my-2"
+                                style={{ textDecoration: "none", color: "#636363" }}
+                                id="prev"
                                 onClick={() => {
-                                  currentStep === 2
-                                    ? setComplete(true)
-                                    : setCurrentStep((prev) => prev + 1);
+                                  setCurrentStep((prev) => prev - 1);
                                 }}
                               >
-                                {currentStep === steps.length ? "Yes" : "Yes"}
+                                <span className="feedbtn mx-5 my-2">No</span>
                               </Link>
-                            )}
+                            </div>
+                            <div className="mt-4">
+                              {!complete && (
+                                <Link
+                                  id="next"
+                                  className="feedbtn mx-5 my-2"
+                                  onClick={() => {
+                                    currentStep === steps.length
+                                      ? setComplete(true)
+                                      : setCurrentStep((prev) => prev + 1);
+                                  }}
+                                >
+                                  {currentStep === steps.length ? "Yes" : "Yes"}
+                                </Link>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </div>)}
+                        </div>)}
+                    </div>
+                    <div>
+                      {currentStep === 4 && (
+                        <div className="feedback my-3">
+                          <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
+                            <h3 style={{ color: '#000' }}>Other feedback you’re giving?</h3>
+                              <div style={{color: '#636363' , width: "100%" }}>
+                                <input
+                                  style={{ height: "6vh", width: "100%"}}
+                                  type="text"
+                                  id="inputEmail10"
+                                  class="form-control"
+                                  name="otherFeedback"
+                                  placeholder="Enter comment..."
+                                  value={""}
+                                  onChange={""}
+                                />
+                              </div>
+                          </div>
+                          <div className="SecondFeedback d-flex">
+                            <div className="mt-4">
+                              <Link
+                                style={{ textDecoration: "none", color: "#636363" }}
+                                id="prev"
+                                onClick={() => {
+                                  setCurrentStep((prev) => prev - 1);
+                                }}
+                              >
+                                <span className="feedbtn mx-5 my-2">Cancel</span>
+                              </Link>
+                            </div>
+                            <div className="mt-4">
+                              {!complete && (
+                                <Link
+                                  id="next"
+                                  className="feedbtn mx-5 my-2"
+                                  onClick={() => {
+                                    currentStep === 3
+                                      ? setComplete(true)
+                                      : setCurrentStep((prev) => prev + 1);
+                                  }}
+                                >
+                                  {currentStep === steps.length ? "Send" : "Send"}
+                                </Link>
+                              )}
+                            </div>
+                          </div>
+                        </div>)}
                     </div>
                   </div>
 

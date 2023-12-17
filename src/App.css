@@ -1753,6 +1753,11 @@ dropdown-toggle::after {
   color: white !important;
 }
 
+.messageSend:hover{
+  transform: scale(1.1);
+}
+
+
 
 /********** Change Password Dashboard section ************/
 
@@ -2972,8 +2977,15 @@ input[type="file"] {
     flex-direction: column !important;
   }
 
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .marketInner-card {
     margin: 1rem 1rem;
+    width: 50% !important;
   }
 
   /************** Market Place Detail **************/
@@ -3236,6 +3248,11 @@ input[type="file"] {
     width: 100% !important;
   }
 
+  .marketInner-card {
+    margin: 1rem 1rem;
+    width: 60% !important;
+  }
+
   /***************** Sign in Section *******************/
   .signIn-card {
     width: 55% !important;
@@ -3314,6 +3331,14 @@ input[type="file"] {
 
   .explore-div {
     width: 100% !important;
+  }
+
+  /********** Message Dashboard section **********/
+  .messageSendBtn{
+    width: 9% !important;
+    top: -74px;
+    right: -91% !important;
+    position: relative;
   }
 
 }
@@ -3579,6 +3604,11 @@ input[type="file"] {
     height: 55vh !important;
   }
 
+  .marketInner-card {
+    margin: 1rem 1rem;
+    width: 70% !important;
+  }
+
   /************** Market Place Detail **************/
 
   .placeDetail-section {
@@ -3835,6 +3865,14 @@ input[type="file"] {
     margin: 0.5rem 0;
   }
 
+  /********** Message Dashboard section **********/
+  .messageSendBtn{
+    width: 11% !important;
+    top: -74px;
+    right: -84% !important;
+    position: relative;
+  }
+
 }
 
 @media screen and (max-width:700px) {
@@ -3855,6 +3893,11 @@ input[type="file"] {
   /********************* Market Section ************************/
   .MarketTool-card {
     height: 50vh !important;
+  }
+
+  .marketInner-card {
+    margin: 1rem 1rem;
+    width: 80% !important;
   }
 
   /********************* Advisory Section ************************/
@@ -4228,6 +4271,11 @@ input[type="file"] {
   /************* Market section ****************/
   .owner-content {
     left: 60px !important;
+  }
+
+  .marketInner-card {
+    margin: 1rem 1rem;
+    width: 90% !important;
   }
 
   /************** Market Place Detail **************/
@@ -4640,10 +4688,11 @@ input[type="file"] {
 
   .marketInner-card {
     margin: 1rem 1rem;
+    width: 100% !important;
   }
 
   .firstSide-top {
-    width: 70% !important;
+    width: 85% !important;
   }
 
   .priceTag-div {
@@ -4754,6 +4803,8 @@ input[type="file"] {
   }
 
 
+
+
   /****************** marketplace 2 Dashboard section **********************/
 
   .sideInfo {
@@ -4861,6 +4912,14 @@ input[type="file"] {
   .Tamplate-secondPart {
     padding: 2rem !important;
   }
+
+   /********** Message Dashboard section **********/
+   .messageSendBtn{
+    width: 15% !important;
+    top: -74px;
+    right: -80% !important;
+    position: relative;
+  }
 }
 
 
@@ -4922,6 +4981,14 @@ input[type="file"] {
 
   .card1 {
     width: 100% !important;
+  }
+
+   /********** Message Dashboard section **********/
+   .messageSendBtn{
+    width: 18% !important;
+    top: -74px;
+    right: -80% !important;
+    position: relative;
   }
 
 }

@@ -23,6 +23,7 @@ const MarketplaceDash = (props) => {
     const [isOpenCategory, setIsOpenCategory] = useState(false)
 
     const [searchTerm, setSearchTerm] = useState([]);
+    const [catTerm, setCatTerm] = useState([]);
 
     useEffect(() => {
         getCard();
@@ -63,6 +64,10 @@ const MarketplaceDash = (props) => {
     //     props.setCategoryFilter(newItems)
     //     console.log("category items", newItems)
     // }
+
+    const handlecategory = (e) => {
+        props.filterCategory(e.target.value);
+    }
 
     return (
         <>
@@ -110,7 +115,7 @@ const MarketplaceDash = (props) => {
                             <option id="floatingInputValue" selected>Company Location</option>
                             {card.map((item, index) => {
                                 return (
-                                    <option key={index} onChange={onFilterLocation} value="Mumbai">{item.location}</option>
+                                    <option key={index} onChange={onFilterLocation} value={''}>{item.location}</option>
                                 )
                             })}
                         </select>
@@ -131,9 +136,9 @@ const MarketplaceDash = (props) => {
                             <img src={Close} alt="" />
                         </div>
                         <div>
-                            {card.map((cate, index) => {
+                            {card.map((cate) => {
                                 return (
-                                    <button key={index} className='btn-card btn btn-outline-primary my-1' >{cate.category}</button>
+                                    <button key={cate.id} className='btn-card btn btn-outline-primary my-1' onClick={()=> handlecategory(cate)} >{cate.category}</button>
                                 )
                             })}
                         </div>
