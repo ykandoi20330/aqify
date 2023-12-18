@@ -191,7 +191,7 @@ const ProofOfFund = () => {
                   <Link
                     style={{ textDecoration: "none", color: "#636363" }}
                     id="prev"
-                    to="/MainDashboard"
+                    to="/MainDashboard/Dashbaord"
                   >
                     <img src={back} alt="" /> <span className="mx-3">Back</span>
                   </Link>

@@ -23,7 +23,7 @@ const MarketplaceDash = (props) => {
     const [isOpenCategory, setIsOpenCategory] = useState(false)
 
     const [searchTerm, setSearchTerm] = useState([]);
-    const [catTerm, setCatTerm] = useState([]);
+    // const [locTerm, setLocTerm] = useState([]);
 
     useEffect(() => {
         getCard();
@@ -56,17 +56,16 @@ const MarketplaceDash = (props) => {
     }
 
     const onFilterLocation = (event) => {
-        props.filterLocationSelected(event.target.value)
+        props.filterLocation(event.target.value)
     }
 
-    // const filterCategoryData = (cat) => {
-    //     const newItems = card.filter((newData) => newData.category === cat)
-    //     props.setCategoryFilter(newItems)
-    //     console.log("category items", newItems)
-    // }
 
     const handlecategory = (e) => {
         props.filterCategory(e.target.value);
+    }
+
+    const handlePrice = (el) => {
+        props.filterPrice(el.target.value)
     }
 
     return (
@@ -92,12 +91,12 @@ const MarketplaceDash = (props) => {
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
                     <div class="form-floating" >
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example">
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example"
+                            onChange={handlePrice}>
                             <option id="floatingInputValue" selected>Price</option>
-                            {/* <option value="1">0</option> */}
-                            {card.map((price, index) => {
+                            {card.map((price) => {
                                 return (
-                                    <option key={index} value="0">{price.askingPrice}</option>
+                                    <option key={price.id} value={price.askingPrice}>{price.askingPrice}</option>
                                 )
                             })}
                         </select>
@@ -111,11 +110,12 @@ const MarketplaceDash = (props) => {
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
                     </div>
                     <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example" >
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example"
+                            onChange={onFilterLocation} >
                             <option id="floatingInputValue" selected>Company Location</option>
-                            {card.map((item, index) => {
+                            {card.map((item) => {
                                 return (
-                                    <option key={index} onChange={onFilterLocation} value={''}>{item.location}</option>
+                                    <option key={item.id} value={item.location}>{item.location}</option>
                                 )
                             })}
                         </select>
@@ -136,9 +136,14 @@ const MarketplaceDash = (props) => {
                             <img src={Close} alt="" />
                         </div>
                         <div>
-                            {card.map((cate) => {
+                            {card.map((cate, index) => {
                                 return (
-                                    <button key={cate.id} className='btn-card btn btn-outline-primary my-1' onClick={()=> handlecategory(cate)} >{cate.category}</button>
+                                    <>
+                                        <input type="radio" class="btn-check rounded-pill" name="options-base" id={`option${index}`} autocomplete="off" onChange={handlecategory} value={cate.category} />
+                                        <label className="btnFilter" for={`option${index}`}>
+                                            {cate.category}
+                                        </label>
+                                    </>
                                 )
                             })}
                         </div>

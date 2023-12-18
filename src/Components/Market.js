@@ -144,30 +144,30 @@ const Market = () => {
     });
   };
 
-  const handleCategoryChange = (e) => {
-    const selectedCategory = e.target.value;
-    console.log(selectedCategory);
-    setFilter({ ...filter, category: selectedCategory });
-  };
+  // const handleCategoryChange = (e) => {
+  //   const selectedCategory = e.target.value;
+  //   console.log(selectedCategory);
+  //   setFilter({ ...filter, category: selectedCategory });
+  // };
 
-  const handleTechnologyChange = (e) => {
-    const selectedTechnology = e.target.value;
-    console.log(selectedTechnology);
-    setFilter({ ...filter, technology: selectedTechnology });
-  };
+  // const handleTechnologyChange = (e) => {
+  //   const selectedTechnology = e.target.value;
+  //   console.log(selectedTechnology);
+  //   setFilter({ ...filter, technology: selectedTechnology });
+  // };
 
-  const handleToolChange = (selectedOption) => {
-    const isSelected = filter.tools.includes(selectedOption);
+  // const handleToolChange = (selectedOption) => {
+  //   const isSelected = filter.tools.includes(selectedOption);
 
-    if (!isSelected) {
-      setFilter({ ...filter, tools: [...filter.tools, selectedOption] });
-    } else {
-      setFilter({
-        ...filter,
-        tools: filter.tools.filter((tool) => tool !== selectedOption),
-      });
-    }
-  };
+  //   if (!isSelected) {
+  //     setFilter({ ...filter, tools: [...filter.tools, selectedOption] });
+  //   } else {
+  //     setFilter({
+  //       ...filter,
+  //       tools: filter.tools.filter((tool) => tool !== selectedOption),
+  //     });
+  //   }
+  // };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -231,6 +231,43 @@ const Market = () => {
     let detailItems = [{ ...Product }];
     setDetail(detailItems)
     setShow(false)
+  }
+
+  //category filters
+
+  const filterCategory = (cate) => {
+    const updatedCate = card?.filter((c) => c.category === cate)
+
+    setFilterSearch(updatedCate);
+    console.log("category filters", updatedCate);
+  }
+
+  const handleCategoryChange = (e) => {
+    filterCategory(e.target.value);
+  };
+
+
+  //TechStack filters
+
+  const filterTech = (tech) => {
+    const updatedTech = card?.filter((t) => t.techStack === tech)
+
+    setFilterSearch(updatedTech);
+  }
+
+  const handleToolChange = (el) => {
+    filterTech(el.target.value)
+  }
+
+  //Sort by Price
+  const filterPrice = (el) => {
+    const price = card?.filter((p) => p.askingPrice === el)
+  
+    setFilterSearch(price)
+  }
+
+  const handleTechnologyChange = (el) => {
+    filterPrice(el.target.value)
   }
 
   const [templates, settemplates] = useState(fetchedtemplates);
@@ -380,16 +417,15 @@ const Market = () => {
                 <select
                   style={{ width: "97%", color: "#3247ff" }}
                   class="form-control form-select form-select-lg mb-2"
-                  value={filter.category}
                   onChange={handleCategoryChange}
                   aria-label="Large select example"
                 >
-                  <option id="floatingInputValue" selected>
-                    Category
-                  </option>
-                  <option value="Ecommerce">Ecommerce</option>
-                  <option value="Saas apps">Saas apps</option>
-                  <option value="Wordpress">Wordpress</option>
+                  <option id="floatingInputValue" selected>Categories</option>
+                  {card.map((cate) => {
+                    return (
+                      <option key={cate.id} value={cate.category}>{cate.category}</option>
+                    )
+                  })}
                 </select>
                 <label for="floatingInputValue">
                   <img src="" alt="" />
@@ -400,13 +436,16 @@ const Market = () => {
                 </label>
               </div>
               <div class="form-floating mr-2" style={{ width: "100%" }}>
-                {/* <select style={{ width: '97%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" value={filter.tools[0] || ''} onChange={handleToolChange} aria-label="Large select example">
-                                <option id="floatingInputValue" selected>Tool</option>
-                                <option value="ReactJs">ReactJs</option>
-                                <option value="NodeJs">NodeJs</option>
-                                <option value="HTML,CSS">HTML,CSS</option>
-                            </select> */}
-                <div style={{ position: "relative" }}>
+                <select style={{ width: '97%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" onChange={handleToolChange} aria-label="Large select example">
+                  {/* value={filter.tools[0] || ''} */}
+                  <option id="floatingInputValue" selected>Tool</option>
+                  {[...new Set(card)].map((tech) => {
+                    return (
+                      <option key={tech.id} value={tech.techStack}>{tech.techStack}</option>
+                    )
+                  })}
+                </select>
+                {/* <div style={{ position: "relative" }}>
                   <div class="form-control mb-2 px-5 d-flex align-items-center"
                     style={{
                       width: '95%', color: '#3247ff',
@@ -462,8 +501,8 @@ const Market = () => {
                       </label>
                     </div>
                   )}
-                  {/* Rest of your component */}
-                </div>
+                  {/* Rest of your component //
+                </div> */}
                 <label className="" for="floatingInputValue">
                   <img src="" alt="" />
                   <i
@@ -477,14 +516,18 @@ const Market = () => {
                   style={{ width: "100%", color: "#3247ff" }}
                   class="form-control form-select form-select-lg mb-3"
                   aria-label="Large select example"
-                  value={filter.technology} onChange={handleTechnologyChange}
+                  // value={filter.technology} 
+                  onChange={handleTechnologyChange}
                 >
                   <option id="floatingInputValue" selected >
                     Sort by
                   </option>
-                  <option value="UI Design">UI Design</option>
-                  <option value="UI Development">UI Deveploment</option>
-                  <option value="Saas">Saas</option>
+                  {card.map((price) => {
+                    return (
+                      <option key={price.id} value={price.askingPrice}>{price.askingPrice}</option>
+                    )
+                  })}
+
                 </select>
                 <label for="floatingInputValue">
                   <img src="" alt="" />
@@ -717,7 +760,7 @@ const Market = () => {
                       )
                     })}
                     <div className=''>
-                      <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' onClick={()=>setShow(true)} >Back to your List<img className="mx-2" style={{ width: '8%' }} src={arrow} alt="" /></Link>
+                      <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' onClick={() => setShow(true)} >Back to your List<img className="mx-2" style={{ width: '8%' }} src={arrow} alt="" /></Link>
                     </div>
                   </div>
                 </div>
@@ -780,45 +823,45 @@ const Market = () => {
 
                           <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Financing</span>
                               <div className='d-flex justify-content-start align-items-center'>
                                 <img width={35} src={cardLogo2} alt="" />
                                 <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.financing}</span>
                               </div>
                             </div>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Multiplies</span>
                               <div className='d-flex justify-content-start align-items-center'>
                                 <img width={35} src={cardLogo2} alt="" />
                                 <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.multiplies}</span>
                               </div>
                             </div>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
-                              <div className='d-flex justify-content-start align-items-center'>
-                                <img width={35} src={cardLogo2} alt="" />
-                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmRevenue}</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>TTM Revenue</span>
+                              <div className='d-flex justify-content-center align-items-center'>
+                                {/* <img width={35} src={cardLogo2} alt="" /> */}
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></span>
                               </div>
                             </div>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
-                              <div className='d-flex justify-content-start align-items-center'>
-                                <img width={35} src={cardLogo2} alt="" />
-                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.ttmProfit}</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>TTM Profit</span>
+                              <div className='d-flex justify-content-center align-items-center'>
+                                {/* <img width={35} src={cardLogo2} alt="" /> */}
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></span>
                               </div>
                             </div>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
-                              <div className='d-flex justify-content-start align-items-center'>
-                                <img width={35} src={cardLogo2} alt="" />
-                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyRevenue}</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Monthly Revenue</span>
+                              <div className='d-flex justify-content-center align-items-center'>
+                                {/* <img width={35} src={cardLogo2} alt="" /> */}
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></span>
                               </div>
                             </div>
                             <div style={{ margin: '1rem 1rem 0 0', background: '#EEF0FE', borderRadius: '10px', padding: '1rem' }}>
-                              <span style={{ color: '#636363', fontWeight: '500' }}>Feature Name</span>
-                              <div className='d-flex justify-content-start align-items-center'>
-                                <img width={35} src={cardLogo2} alt="" />
-                                <span className='card-span' style={{ fontSize: '1.4rem' }}>{item.monthlyProfit}</span>
+                              <span style={{ color: '#636363', fontWeight: '500' }}>Monthly Profit</span>
+                              <div className='d-flex justify-content-center align-items-center'>
+                                {/* <img width={35} src={cardLogo2} alt="" /> */}
+                                <span className='card-span' style={{ fontSize: '1.4rem' }}><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></span>
                               </div>
                             </div>
                           </div>
@@ -834,31 +877,31 @@ const Market = () => {
 
                             <div className='d-flex flex-wrap justify-content-between'>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
-                                <h5>{item.ttmGrossRevenue}</h5>
+                                <span style={{ color: '#636363' }}>TTM Gross Revenue</span>
+                                <h5><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></h5>
                               </div>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
-                                <h5>{item.ttmNetProfit}</h5>
+                                <span style={{ color: '#636363' }}>TTM Net Profit</span>
+                                <h5><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></h5>
                               </div>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
-                                <h5>{item.lastMonthGrossRevenue}</h5>
+                                <span style={{ color: '#636363' }}>LastMonth Gross Revenue</span>
+                                <h5><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></h5>
                               </div>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
-                                <h5>{item.lastMonthNetProfit}</h5>
+                                <span style={{ color: '#636363' }}>LastMonth Net Profit</span>
+                                <h5 ><i className="fa-solid fa-lock" style={{ color: "#005eff" }}></i></h5>
                               </div>
                               <div style={{ margin: '1rem 3rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <span style={{ color: '#636363' }}>Customers</span>
                                 <h5>{item.customers}</h5>
                               </div>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <span style={{ color: '#636363' }}>Annual Recurring Revenue</span>
                                 <h5>{item.annualRecurringRevenue}</h5>
                               </div>
                               <div style={{ margin: '1rem 1rem 0 0' }}>
-                                <span style={{ color: '#636363' }}>Details Name</span>
+                                <span style={{ color: '#636363' }}>Annual Growth Rate</span>
                                 <h5>{item.annualGrowthRate}</h5>
                               </div>
                             </div>

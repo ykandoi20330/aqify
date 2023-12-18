@@ -1483,6 +1483,29 @@ input[type=radio] {
   position: relative;
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .navCollaspe{
+    width: 77px;
+    overflow-x: hidden !important;
+  }
+
+  .navCollaspe .nav-link1 span{
+    display: none;
+  }
+
+  .navCollaspe .dash{
+    display: none;
+  }
+  
+  .navCollaspe .dashLogo{
+    display: none;
+  }
+  
+}
 
 .sideContent {
   background: #EEF0FE;
@@ -1753,7 +1776,7 @@ dropdown-toggle::after {
   color: white !important;
 }
 
-.messageSend:hover{
+.messageSend:hover {
   transform: scale(1.1);
 }
 
@@ -1888,6 +1911,25 @@ dropdown-toggle::after {
   background-clip: border-box !important;
 }
 
+.btnFilter {
+  color: #3247FF;
+  border: 2px solid #3247FF;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  margin: 0.3rem 0.7rem 0 0;
+}
+
+.btn-check:checked+.btnFilter,
+.btnFilter.active,
+.btnFilter.show,
+.btnFilter:first-child:active,
+:not(.btn-check)+.btnFilter:active {
+  background: #3247ff !important;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+}
+
 /***********************  MarketPlace 2 Dashbaord *************************/
 .marketDash2-back {
   background: #EEF0FE;
@@ -1931,7 +1973,7 @@ dropdown-toggle::after {
 
 /*************** Feedback options *****************/
 
-.feedback{
+.feedback {
   height: 25vh;
   display: flex;
   align-items: center;
@@ -1942,17 +1984,18 @@ dropdown-toggle::after {
   border-radius: 10px;
 }
 
-.feedbtn{
+.feedbtn {
   background: #3247FF;
   padding: 0.5rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-   rgb(10 37 64 / 16%) 0px -2px 6px 0px inset;
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgb(10 37 64 / 16%) 0px -2px 6px 0px inset;
 }
-.feedbtn:hover{
+
+.feedbtn:hover {
   background: #192ee8;
   color: #fff;
 }
@@ -2977,7 +3020,7 @@ input[type="file"] {
     flex-direction: column !important;
   }
 
-  .card-container{
+  .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -3334,7 +3377,7 @@ input[type="file"] {
   }
 
   /********** Message Dashboard section **********/
-  .messageSendBtn{
+  .messageSendBtn {
     width: 9% !important;
     top: -74px;
     right: -91% !important;
@@ -3866,7 +3909,7 @@ input[type="file"] {
   }
 
   /********** Message Dashboard section **********/
-  .messageSendBtn{
+  .messageSendBtn {
     width: 11% !important;
     top: -74px;
     right: -84% !important;
@@ -3935,7 +3978,7 @@ input[type="file"] {
     width: 50% !important;
   }
 
-  .inpu-count{
+  .inpu-count {
     display: flex;
     align-items: center !important;
   }
@@ -4913,8 +4956,8 @@ input[type="file"] {
     padding: 2rem !important;
   }
 
-   /********** Message Dashboard section **********/
-   .messageSendBtn{
+  /********** Message Dashboard section **********/
+  .messageSendBtn {
     width: 15% !important;
     top: -74px;
     right: -80% !important;
@@ -4983,8 +5026,8 @@ input[type="file"] {
     width: 100% !important;
   }
 
-   /********** Message Dashboard section **********/
-   .messageSendBtn{
+  /********** Message Dashboard section **********/
+  .messageSendBtn {
     width: 18% !important;
     top: -74px;
     right: -80% !important;

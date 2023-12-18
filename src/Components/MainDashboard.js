@@ -29,6 +29,7 @@ const MainDashboard = () => {
   };
 
   const [role, setRole] = useState("");
+  const [navCollapse, setNavCollapse] = useState(false);
 
   useEffect(() => {
     const getUsername = async () => {
@@ -69,7 +70,7 @@ const MainDashboard = () => {
     <>
       <section className="profile-section">
         <nav
-          className="navbar navbar-expand-lg dashboard"
+          className={`navbar navbar-expand-lg dashboard ${navCollapse ? "navCollaspe" : ''}`}
           style={{ top: "0px" }}
         >
           <div class="container-fluid" style={{ padding: "0rem" }}>
@@ -113,22 +114,31 @@ const MainDashboard = () => {
               <div class="offcanvas-body" style={{ left: "0px" }}>
                 {/** */}
                 <div class="Navdashboard d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
-                  <Link
-                    to="/"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-                  >
-                    <img src={logo} alt="" />
-                    <br />
-                    <br />
-                    <br />
-                  </Link>
+                  {/** */}
+                  <div className="d-flex justify-content-bewteen align-items-center">
+                    <Link
+                      to="/"
+                      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+                    >
+                      <img className="dashLogo" src={logo} alt="" />
+                      <br />
+                      <br />
+                      <br />
+                    </Link>
+                    <div>
+                      <Link className="d-flex align-items-center" style={{ background: '#000', padding: '0.6rem', borderRadius: '200px' }} onClick={() => setNavCollapse(!navCollapse)}>
+                        <img src={logo1} alt="Logo" style={{ width: "20px" }} className="" />
+                      </Link>
+                    </div>
+                  </div>
+                  {/** */}
                   <hr />
                   <Link
                     className="text-white"
                     style={{ textDecoration: "none" }}
                     to="/MainDashboard/Dashbaord"
                   >
-                    <h2> Dashboard</h2>
+                    <h2 className="dash"> Dashboard</h2>
                   </Link>
                   <ul class="nav flex-column mb-auto">
                     <li class="nav-item">
@@ -137,12 +147,12 @@ const MainDashboard = () => {
                         class="nav-link1 text-white"
                         aria-current="page"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={list}
                           alt=""
                         />
-                        Lists
+                        <span>Lists</span>
                       </Link>
                     </li>
                     <li class="nav-item">
@@ -151,12 +161,12 @@ const MainDashboard = () => {
                         class="nav-link1 text-white"
                         aria-current="page"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={heart}
                           alt=""
                         />
-                        Favourite Lists
+                        <span>Favourite Lists</span>
                       </Link>
                     </li>
                     <li className="nav-item dropdown">
@@ -167,12 +177,17 @@ const MainDashboard = () => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <img
-                          style={{ marginRight: "1rem" }}
-                          src={folder}
-                          alt=""
-                        />
-                        My Projects
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div>
+                            <img className="dashIcon"
+                              style={{ marginRight: "1rem" }}
+                              src={folder}
+                              alt=""
+                            />
+                            <span>My Projects</span>
+                          </div>
+                          <span><i class="fa-solid fa-circle-notch"></i></span>
+                        </div>
                       </Link>
                       {role === "acquirer" && (
                         <ul className="dropdown-menu dropdown-menu-dark">
@@ -225,12 +240,12 @@ const MainDashboard = () => {
                         to="/MainDashboard/MyAnalytics"
                         class="nav-link1 text-white"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={analytic}
                           alt=""
                         />
-                        Analytics
+                        <span>Analytics</span>
                       </Link>
                     </li>
                     <li>
@@ -238,12 +253,12 @@ const MainDashboard = () => {
                         to="/MainDashboard/MessageDash"
                         class="nav-link1 text-white"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={message}
                           alt=""
                         />
-                        Messages
+                        <span>Messages</span>
                       </Link>
                     </li>
                     <li>
@@ -251,12 +266,12 @@ const MainDashboard = () => {
                         to="/MainDashboard/Notification"
                         class="nav-link1 text-white"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={bell}
                           alt=""
                         />
-                        Notifications
+                        <span>Notifications</span>
                       </Link>
                     </li>
                     <li class="nav-item dropdown">
@@ -267,12 +282,17 @@ const MainDashboard = () => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <img
-                          style={{ marginRight: "1rem" }}
-                          src={setting}
-                          alt=""
-                        />
-                        Settings
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div>
+                            <img className="dashIcon"
+                              style={{ marginRight: "1rem" }}
+                              src={setting}
+                              alt=""
+                            />
+                            <span>Settings</span>
+                          </div>
+                          <span><i class="fa-solid fa-circle-notch"></i></span>
+                        </div>
                       </Link>
                       <ul class="dropdown-menu dropdown-menu-dark">
                         <li>
@@ -309,12 +329,12 @@ const MainDashboard = () => {
                         to="/MainDashboard/ProofFund"
                         class="nav-link1 text-white"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={proof}
                           alt=""
                         />
-                        Proof of Funds
+                        <span>Proof of Funds</span>
                       </Link>
                     </li>
                     <li>
@@ -322,8 +342,8 @@ const MainDashboard = () => {
                         to="/MainDashboard/PricingDash"
                         class="nav-link1 text-white"
                       >
-                        <img style={{ marginRight: "1rem" }} src={tag} alt="" />
-                        pricings
+                        <img className="dashIcon" style={{ marginRight: "1rem" }} src={tag} alt="" />
+                        <span>pricings</span>
                       </Link>
                     </li>
                     <li>
@@ -331,12 +351,12 @@ const MainDashboard = () => {
                         to="/MainDashboard/contactDashboard"
                         class="nav-link1 text-white"
                       >
-                        <img
+                        <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
                           src={address}
                           alt=""
                         />
-                        Contact us
+                        <span>Contact us</span>
                       </Link>
                     </li>
                     <li>
@@ -345,21 +365,21 @@ const MainDashboard = () => {
                         class="nav-link1 text-white"
                       >
                         <i
-                          class="fa-solid fa-calculator"
+                          class="dashIcon fa-solid fa-calculator"
                           style={{
                             color: "#f5f5f5",
                             fontSize: "1.5rem",
                             margin: "0 1rem 0 0.5rem",
                           }}
                         ></i>
-                        Valuation Tools
+                        <span>Valuation Tools</span>
                       </Link>
                     </li>
                   </ul>
                   <hr />
                   {/* <div class="dropdown">
                             <Link to="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
+                                 <img className="dashIcon"   src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
                                 <strong>mdo</strong>
                             </Link>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
