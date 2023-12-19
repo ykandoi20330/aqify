@@ -5,6 +5,7 @@ import Arrow from "./ProfileDashbaord/ArrowUp.svg";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import ENV from '../config.js';
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [username, setUsername] = useState("");
@@ -76,14 +77,14 @@ const Dashboard = () => {
               </h1>{" "}
             </div>
             <div>
-              <a
-                href="/"
+              <Link
+                to="/MainDashboard/PricingDash"
                 style={{ padding: "0.5rem 1.3rem" }}
                 className="btn btn-primary rounded-pill"
               >
                 Upgrade
                 <img src={Arrow} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
           <br />

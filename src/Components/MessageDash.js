@@ -18,16 +18,20 @@ const MessageDash = () => {
                         <span style={{ fontSize: '25px' }}>No conversations yet</span>
                     </div>
 
-                    <div >
-                        <div className='' style={{ color: '#636363', width: "100%", position:'relative',top:'75px' }}>
-                            <div class="mb-3 my-3 form-floating">
-                                <input style={{ width: '100', background: '#fff', borderRadius:'50px' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" />
-                                <label for="floatingInputValue"><i class="fa-regular fa-face-smile"></i></label>
+                    <div>
+                        <div className='' style={{ color: '#636363', width: "100%" }}>
+                            <div class="d-flex mb-3 my-3 ">
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <i style={{color:'#3247FF', fontSize:'1.5rem'}} class="fa-solid fa-camera mx-2"></i>
+                                <i style={{color:'#3247FF', fontSize:'1.5rem'}}  class="fa-solid fa-microphone mx-2"></i>
+                                <i style={{color:'#3247FF', fontSize:'1.5rem'}}  class="fa-solid fa-face-smile mx-2"></i>
                             </div>
-                            <Link className='messageSendBtn text-center mx-2 d-flex  justify-content-center' 
-                            style={{width:'7%', border:'1px solid #c0c0c0', borderRadius:'50px',background: '#3247FF',color:'#EEF0FE', top:'-74px',right:'-93%', position:'relative',textDecoration:'none'}}>
-                                <><i style={{fontSize:'1.5rem'}} class="messageSend fa-regular fa-paper-plane py-3"></i></>
-                            </Link> 
+                                <input style={{ width: '100', background: '#fff', borderRadius: '50px' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." />
+                                <Link className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
+                                    style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none' }}>
+                                    <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

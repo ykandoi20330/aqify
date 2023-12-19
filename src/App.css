@@ -3378,10 +3378,17 @@ input[type="file"] {
 
   /********** Message Dashboard section **********/
   .messageSendBtn {
-    width: 9% !important;
-    top: -74px;
-    right: -91% !important;
+    right: 9% !important;
     position: relative;
+  }
+
+  .showProfile{
+    width: 100% !important;
+  }
+
+  .detailmessage{
+    display: flex;
+    flex-direction: column !important;
   }
 
 }
@@ -3910,9 +3917,7 @@ input[type="file"] {
 
   /********** Message Dashboard section **********/
   .messageSendBtn {
-    width: 11% !important;
-    top: -74px;
-    right: -84% !important;
+    right: 13% !important;
     position: relative;
   }
 
@@ -4409,6 +4414,11 @@ input[type="file"] {
   /************* Dashboard selling section **************/
   .social-input {
     display: unset !important;
+  }
+
+  /************** Message dashboard section ***************/
+  .messageSend{
+    font-size: 1rem !important;
   }
 
 }
@@ -4958,10 +4968,13 @@ input[type="file"] {
 
   /********** Message Dashboard section **********/
   .messageSendBtn {
-    width: 15% !important;
-    top: -74px;
-    right: -80% !important;
+    right: 16% !important;
     position: relative;
+    font-size: 1.2rem !important;
+  }
+
+  .messageSend{
+    font-size: 1rem !important;
   }
 }
 
@@ -5028,9 +5041,7 @@ input[type="file"] {
 
   /********** Message Dashboard section **********/
   .messageSendBtn {
-    width: 18% !important;
-    top: -74px;
-    right: -80% !important;
+    right: 20% !important;
     position: relative;
   }
 

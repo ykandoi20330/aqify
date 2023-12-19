@@ -469,7 +469,7 @@ const Home1 = () => {
                                 </div>
                             </div>
                             <div class="modal-footer" style={{border:'none'}}>
-                                <button type="button" class="btn btn-primary py-2 px-5">Confirm</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
                             </div>
                         </div>
                     </div>
