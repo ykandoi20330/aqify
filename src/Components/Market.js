@@ -552,7 +552,10 @@ const Market = () => {
               className="card-container"
               style={{
                 display: "flex",
-                flexWrap: "wrap",
+                // flexWrap: "wrap",
+                flexDirection:'column',
+                justifyContent:'center',
+                alignItems:'center',
                 width: "100%",
               }}
             >
@@ -560,11 +563,11 @@ const Market = () => {
               {filterSearch.length > 0 ? (
                 filterSearch.map((item, index) => (
                   <div
-                    className="marketInner-card"
+                    className="marketInner-card my-3"
                     key={index}
                     style={{
-                      width: "30%",
-                      height: "100%",
+                      // width: "30%",
+                      // height: "100%",
                       borderRadius: "20px",
                       boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
                     }}
@@ -711,7 +714,7 @@ const Market = () => {
             </div>
           </section>
 
-          <section style={{ background: "#EEF0FE " }}>
+          {/* <section style={{ background: "#EEF0FE " }}>
             <div>
               <div className="d-flex justify-content-center">
                 <Link
@@ -728,7 +731,7 @@ const Market = () => {
                 </Link>
               </div>
             </div>
-          </section>
+          </section> */}
         </section>
       </>}
 

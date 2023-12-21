@@ -178,29 +178,30 @@ const MarketplaceDash2 = () => {
 
   return (
     <>
-      <section>
-        <MarketplaceDash
-          onSearching={onSearch}
-
-          filterCategory={filterCategory}
-
-          filterLocation={filterLocation}
-
-          filterPrice={filterPrice}
-        />
-      </section>
 
       {show === true && (
         <>
-          <section  >
+          <section>
+            <MarketplaceDash
+              onSearching={onSearch}
+
+              filterCategory={filterCategory}
+
+              filterLocation={filterLocation}
+
+              filterPrice={filterPrice}
+            />
+          </section>
+
+          <section style={{ background: '#EEF0FE' }} >
             <section className="marketDash2-back" style={{ height: '100%' }} >
               <div className='d-flex'>
                 <div className="market-card my-4" >
                   {filterSearch.map((item, index) => {
                     const id = index + 1
                     return (
-                      <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "34vw" }}>
-                        <div className="sideInfo d-flex">
+                      <div className="card1" key={item.id} style={{ margin: "1rem 0.5rem", padding: "1rem", width: "85%" }}>
+                        <div className="sideInfo d-flex align-items-center">
                           <div className="secondPart">
                             <img style={{ borderRadius: '8px' }} width={200} src={item.link} alt="" />
                           </div>
@@ -330,11 +331,11 @@ const MarketplaceDash2 = () => {
             </div>
           </section>
 
-          <section className='placeDetail-section'>
+          <section className='placeDetail-section' style={{background:'#EEF0FE'}}>
 
             {detail.map((item, index) => {
               return (
-                <div key={item.id} className="detailContent MarketPlace-card  d-flex flex-row justify-content-between" style={{ margin: "1rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "100%" }}>
+                <div key={item.id} className="detailContent MarketPlace-card  d-flex flex-row justify-content-between" style={{ margin: "0rem 1rem", padding: "2rem", height: '100vh', overflow: 'hidden', width: "98%" }}>
 
                   <div className='Placecontent' style={{ width: '55%', overflowY: 'scroll' }}>
                     <div className='FirstContent d-flex align-items-center'>
@@ -696,21 +697,21 @@ const MarketplaceDash2 = () => {
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body">
-                  <div class="mb-3">
-                    {detail.map((i) => {
-                      return (
-                        <>
-                          <div className="d-flex">
-                            <img key={i.id} src={i.ownerImage} alt="" style={{ borderRadius: "50px", height: "50px", width: "50px" }} />
-                            <div className='mx-2'>
-                              <h4 style={{ margin: '0px' }}>{i.ownerName}</h4>
-                              <span><img className='mx-1' src={smallMap} alt="" />{i.location}</span>
-                            </div>
+                <div class="mb-3">
+                  {detail.map((i) => {
+                    return (
+                      <>
+                        <div className="d-flex">
+                          <img key={i.id} src={i.ownerImage} alt="" style={{ borderRadius: "50px", height: "50px", width: "50px" }} />
+                          <div className='mx-2'>
+                            <h4 style={{ margin: '0px' }}>{i.ownerName}</h4>
+                            <span><img className='mx-1' src={smallMap} alt="" />{i.location}</span>
                           </div>
-                        </>
-                      )
-                    })}
-                  </div>
+                        </div>
+                      </>
+                    )
+                  })}
+                </div>
               </div>
               <div>
                 <div className='mx-3' style={{ color: '#636363', width: "100%" }}>

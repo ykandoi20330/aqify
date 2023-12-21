@@ -78,6 +78,18 @@ nav {
   border-radius: 5px;
 }
 
+.dropdown-toggle::after {
+  border-top: none !important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-color: #ffffff !important;
+  --bs-dropdown-link-color: #fff !important;
+  --bs-dropdown-bg: #000 !important;
+  --bs-dropdown-link-hover-color: #efefef !important;
+  --bs-dropdown-link-hover-bg: #313234 !important;
+}
+
 /* .hero1 {
   width: 100%;
   height: 0vh !important;
@@ -1331,11 +1343,11 @@ textarea.form-control {
 
 .market-card {
   display: flex;
-  flex-wrap: wrap;
-  /* align-content: center;
+  /* flex-wrap: wrap;
+  align-content: center; */
   align-items: center;
   justify-content: center;
-  flex-direction: column; */
+  flex-direction: column;
 }
 
 .marketInner-card {
@@ -1364,7 +1376,7 @@ textarea.form-control {
   --bs-card-group-margin: 0.75rem !important;
   position: relative !important;
   display: flex !important;
-  flex-direction: column !important;
+  /* flex-direction: column !important; */
   min-width: 0 !important;
   /* height: var(--bs-card-height) !important; */
   color: var(--bs-body-color) !important;
@@ -1875,7 +1887,8 @@ dropdown-toggle::after {
 }
 
 .marketDash-card2 {
-  width: 55%;
+  /* width: 55%; */
+  width: 35%;
   margin: 2rem 1rem;
   padding: 3rem;
 
@@ -2932,6 +2945,12 @@ input[type="file"] {
   border-radius: var(--bs-card-border-radius);
 }
 
+/***************** Transfer Services Section *******************/
+
+.transferCard{
+  background-color: #fff !important;
+}
+
 
 
 
@@ -3029,6 +3048,8 @@ input[type="file"] {
   .marketInner-card {
     margin: 1rem 1rem;
     width: 50% !important;
+    display: flex;
+    flex-direction: column !important;
   }
 
   /************** Market Place Detail **************/
@@ -4741,7 +4762,7 @@ input[type="file"] {
 
   .marketInner-card {
     margin: 1rem 1rem;
-    width: 100% !important;
+    width: 95% !important;
   }
 
   .firstSide-top {

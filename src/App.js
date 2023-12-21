@@ -46,6 +46,7 @@ import DashboardValuation from './Components/DashboardValuation'
 import ProofOfFund from './Components/ProofOfFund'
 import Favourite from './Components/Favourite'
 import NotifactionDash from './Components/NotifactionDash'
+import TransferService from './Components/TransferService';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
           <Route path="/owner" element={<Owner />} />
           <Route path="/acquire" element={<Acquirers />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/TransferService" element={<TransferService/>} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<TermsCondition />} />
@@ -73,6 +75,7 @@ function App() {
           <Route path="/message" element={<MessageDash2 />} />
           <Route path="/payCart" element={<PaymentCardDash />} />
           <Route path="/seller" element={<SellerDash />} />
+          <Route path="MarketDash2" element={<MarketplaceDash2 />} />
 
           <Route path="/MainDashboard" element={<MainDashboard />} >
             <Route path="proflie" element={<DashboardProfile />} />
@@ -82,7 +85,6 @@ function App() {
             <Route path="ChangePassword" element={<ChangePassword />} />
             <Route path="Dashbaord" element={<Dashboard />} />
             <Route path="MarketDash" element={<MarketplaceDash />} />
-            <Route path="MarketDash2" element={<MarketplaceDash2 />} />
             <Route path="MarketDetail" element={<MarketDashDetail />} />
             <Route path="ProjectBuying" element={<ProjectBuying />} />
             <Route path="PricingDash" element={<PricingDash />} />
@@ -93,7 +95,7 @@ function App() {
             <Route path="favorites" element={<Favourite />} />
             <Route path="Notification" element={<NotifactionDash />} />
           </Route>
-          
+
         </Routes>
         {/* <Footer /> */}
       </HashRouter>

@@ -70,22 +70,22 @@ const MarketplaceDash = (props) => {
 
     return (
         <>
-            <section className='Marketside d-flex align-items-center'>
-                <div className="sideContent">
+            <section className='Marketside d-flex justify-content-evenly align-items-center' style={{background:'#EEF0FE'}}>
+                <div className="sideContent d-flex justify-content-center">
 
                     <div className=''>
-                        <h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1>
+                        <Link to="/MainDashboard/Dashbaord" style={{color:'#000', textDecoration:'none'}}><h1 className='my-3' style={{ fontWeight: '700' }}>Marketplace lists</h1></Link>
                         <span style={{ color: '#636363' }}>Free for owners and affordable for acquirers.</span>
                     </div>
                 </div>
-                <div className='AddButton' style={{ width: '16%' }}>
+                <div className='AddButton d-flex justify-content-center' style={{ width: '77%' }}>
                     <Link class="btn btn-primary mx-2" to="/seller" >Add List<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link> {/* type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" */}
                 </div>
             </section>
 
             {/** */}
-            <section>
-                <div className='first-line mb-3 d-flex align-items-center'>
+            <section style={{background:'#EEF0FE'}}>
+                <div className='first-line mb-3 d-flex justify-content-center align-items-center'>
                     <div class="mb-3 my-3 form-floating">
                         <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} />
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
@@ -104,7 +104,7 @@ const MarketplaceDash = (props) => {
                     </div>
                 </div>
 
-                <div className="second-line d-flex">
+                <div className="second-line d-flex justify-content-center">
                     <div class="form-floating">
                         <div style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select mb-3 mx-2" onClick={toggleDropdownCategory}>Categories</div>
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
@@ -129,7 +129,7 @@ const MarketplaceDash = (props) => {
             </section>
 
 
-            <section className='cardOption d-flex'>
+            <section className='cardOption d-flex justify-content-center' style={{background:'#EEF0FE'}}>
                 {isOpenCategory && (
                     <div className="marketDash-card flex-wrap">
                         <div className='d-flex justify-content-end'>
@@ -150,7 +150,7 @@ const MarketplaceDash = (props) => {
                     </div>)}
 
                 {isOpen && (
-                    <div className="marketDash-card2">
+                    <div className="marketDash-card2" >
                         <div className='filters d-flex justify-content-between mb-3'>
                             <span style={{ color: '#636363' }}>More Filters</span>
                             <img src={Close} alt="" />
