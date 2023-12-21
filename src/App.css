@@ -1850,7 +1850,8 @@ dropdown-toggle::after {
 }
 
 .marketDash-card {
-  width: 35%;
+  /* width: 35%; */
+  width: 30%;
   margin: 2rem 1rem;
   padding: 2rem;
 

@@ -175,6 +175,12 @@ const MarketplaceDash2 = () => {
     setFilterSearch(price)
   }
 
+  const filterTech = (t) => {
+    const tech = card?.filter((p) => p.techStack === t)
+
+    setFilterSearch(tech)
+  }
+
 
   return (
     <>
@@ -190,6 +196,8 @@ const MarketplaceDash2 = () => {
               filterLocation={filterLocation}
 
               filterPrice={filterPrice}
+
+              filterTech={filterTech}
             />
           </section>
 
