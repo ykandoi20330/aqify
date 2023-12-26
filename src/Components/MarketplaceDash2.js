@@ -33,6 +33,8 @@ import Left from "./MarketDash/VectorLeft.svg"
 
 // import { FaStar } from "react-icons/fa"
 import MarketplaceDash from "./MarketplaceDash.js";
+
+import { useNavigate } from "react-router-dom";
 ///////////////
 
 const MarketplaceDash2 = () => {
@@ -41,6 +43,10 @@ const MarketplaceDash2 = () => {
   const [detail, setDetail] = useState([]);
   const [show, setShow] = useState(true);
   const [filterSearch, setFilterSearch] = useState([]);
+
+  // Chat
+  const [listingMessage, setListingMessage] = useState('');
+  const [ws, setWs] = useState(null);
 
 
   //////MarketPlaceDetail
@@ -65,6 +71,8 @@ const MarketplaceDash2 = () => {
     setText("Link Copied")
     navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash2`)
   }
+
+  const navigate = useNavigate();
 
   //seller username
 
@@ -144,6 +152,44 @@ const MarketplaceDash2 = () => {
   useEffect(() => {
     getCard();
   }, []);
+
+  const connectToWs = () => {
+    const ws = new WebSocket('ws://localhost:5000');
+    setWs(ws);
+    ws.addEventListener('message', handleMessage);
+    ws.addEventListener('close', () => {
+      setTimeout(() => {
+        console.log('Disconnected. Trying to reconnect.');
+        connectToWs();
+      }, 10000);
+    });
+  }
+
+  const sendMessage = (ev) => {
+    if (ev) ev.preventDefault();
+    ws.send(JSON.stringify({
+      reciever: detail[0].ownerId,
+      messageString: listingMessage,
+    }));
+    setListingMessage('');
+    navigate('/MainDashboard/MessageDash');
+  }
+
+  const handleMessage = (ev) => {
+    // const messageData = JSON.parse(ev.data);
+    // console.log({ ev, messageData });
+    // if ('message' in messageData) {
+    //     if (messageData.sender === selectedUserId) {
+    //         setMessages(prev => ([...prev, { ...messageData }]));
+    //     }
+    // }
+    console.log('Running')
+  }
+
+  useEffect(() => {
+    connectToWs();
+  }, []);
+
 
   const { favourite, addToFavorites, removeFromFavorites } = useAppContext();
 
@@ -357,7 +403,7 @@ const MarketplaceDash2 = () => {
             </div>
           </section>
 
-          <section className='placeDetail-section' style={{background:'#EEF0FE'}}>
+          <section className='placeDetail-section' style={{ background: '#EEF0FE' }}>
 
             {detail.map((item, index) => {
               return (
@@ -649,10 +695,10 @@ const MarketplaceDash2 = () => {
                                       : setCurrentStep((prev) => prev + 1);
                                   }}
                                 >
-                                  {currentStep === steps.length ? <Link style={{textDecoration: "none" , color : "white"}} onClick={handleFeedback}>Send</Link>
+                                  {currentStep === steps.length ? <Link style={{ textDecoration: "none", color: "white" }} onClick={handleFeedback}>Send</Link>
                                     : "Send"}
-                                    </Link>
-                                                )}
+                                </Link>
+                              )}
                             </div>
                           </div>
                         </div>)}
@@ -748,11 +794,14 @@ const MarketplaceDash2 = () => {
                       <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-microphone mx-2"></i>
                       <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
                     </div>
-                    <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." />
-                    <Link className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
-                      style={{ color: '#3247FF', right: '12%', position: 'relative', textDecoration: 'none' }}>
+                    <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
+                    <div
+                      className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
+                      style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
+                      onClick={() => sendMessage()}
+                    >
                       <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
-                    </Link>
+                    </div>
                   </div>
                 </div>
               </div>
