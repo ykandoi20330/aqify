@@ -107,6 +107,24 @@ const MarketplaceDash2 = () => {
     getUsername();
   }, [setUsername]);
 
+  const [feedback, setFeedback] = useState("");
+
+  const handleFeedback = async () => {
+    try {
+      const response = await axios.post(
+        `${ENV.BACKEND_URL}/users/feedback`,
+        {
+          feedback,
+          username,
+        }
+      );
+      console.log(response.data);
+      setFeedback("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
 
   const exploreMore = (pro) => {
@@ -603,8 +621,8 @@ const MarketplaceDash2 = () => {
                                 class="form-control"
                                 name="otherFeedback"
                                 placeholder="Enter comment..."
-                                value={""}
-                                onChange={""}
+                                value={feedback}
+                                onChange={(e) => setFeedback(e.target.value)}
                               />
                             </div>
                           </div>
@@ -631,9 +649,10 @@ const MarketplaceDash2 = () => {
                                       : setCurrentStep((prev) => prev + 1);
                                   }}
                                 >
-                                  {currentStep === steps.length ? "Send" : "Send"}
-                                </Link>
-                              )}
+                                  {currentStep === steps.length ? <Link style={{textDecoration: "none" , color : "white"}} onClick={handleFeedback}>Send</Link>
+                                    : "Send"}
+                                    </Link>
+                                                )}
                             </div>
                           </div>
                         </div>)}
