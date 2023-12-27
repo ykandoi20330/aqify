@@ -291,16 +291,16 @@ const SellerDash = () => {
                     {text}
                   </label>
                   <div class="mb-3 my-2">
-                    <input 
+                    <input
                       style={{ display: "none" }}
                       type="file"
                       accept="image/*"
                       id="logoInput"
                       onChange={submitUpload}
                     />
-                    <label style={{height:'8vh',width:'100%',background: '#EEF0FE',borderRadius: '0.375rem',border: '1px solid #C0C0C0'}}
-                     for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
-                      <i class="fas fa-cloud-upload-alt mx-2" style={{color: "#c0c0c0"}}></i>
+                    <label style={{ height: '8vh', width: '100%', background: '#EEF0FE', borderRadius: '0.375rem', border: '1px solid #C0C0C0' }}
+                      for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
+                      <i class="fas fa-cloud-upload-alt mx-2" style={{ color: "#c0c0c0" }}></i>
                     </label>
                     <img
                       src="#"
@@ -846,6 +846,50 @@ const SellerDash = () => {
                   </div>
                 </div>
 
+                <div style={{ color: "#636363", fontWeight: "500", fontSize: "18px", }}>
+                  Carousel Images
+                </div>
+                <div className="d-flex" style={{width:'100%'}}>
+                  <div class="mb-3 mx-2 my-2" style={{width:'48%'}}>
+                    <input
+                      style={{ display: "none" }}
+                      type="file"
+                      accept="image/*"
+                      id="logoInput"
+                      onChange={submitUpload}
+                    />
+                    <label style={{ height: '8vh', width: '100%', background: '#EEF0FE', borderRadius: '0.375rem', border: '1px solid #C0C0C0' }}
+                      for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
+                      <i class="fas fa-cloud-upload-alt mx-2" style={{ color: "#c0c0c0" }}></i>
+                    </label>
+                    <img
+                      src="#"
+                      alt="Logo Preview"
+                      id="logoPreview"
+                      style={{ width: "200px", display: "none" }}
+                    />
+                  </div>
+                  <div class="mb-3 mx-2 my-2" style={{width:'48%'}}>
+                    <input
+                      style={{ display: "none" }}
+                      type="file"
+                      accept="image/*"
+                      id="logoInput"
+                      onChange={submitUpload}
+                    />
+                    <label style={{ height: '8vh', width: '100%', background: '#EEF0FE', borderRadius: '0.375rem', border: '1px solid #C0C0C0' }}
+                      for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
+                      <i class="fas fa-cloud-upload-alt mx-2" style={{ color: "#c0c0c0" }}></i>
+                    </label>
+                    <img
+                      src="#"
+                      alt="Logo Preview"
+                      id="logoPreview"
+                      style={{ width: "200px", display: "none" }}
+                    />
+                  </div>
+                </div>
+
                 <div className="button d-flex justify-content-between align-items-center">
                   <div className="mt-5">
                     <Link
@@ -898,7 +942,7 @@ const SellerDash = () => {
                   </span>
                 </div>
 
-                <div class="mb-3 my-3">
+                {/* <div class="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
                     class="form-label"
@@ -932,6 +976,66 @@ const SellerDash = () => {
                     <option value="Wordpress">Wordpress</option>
                     <option value="Community">Community</option>
                   </select>
+                </div> */}
+
+                <div className="my-5">
+                  <div >
+                    <label
+                      style={{
+                        color: "#636363",
+                        fontWeight: "500",
+                        fontWeight: "bold",
+                        fontSize: "18px",
+                      }}
+                      for="inputEmail4"
+                      class="form-label"
+                    >
+                      Tech Stack
+                    </label>
+                    <div className="d-flex flex-wrap">
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail5"
+                        class="form-control mx-1 my-2"
+                        name="techStack"
+                        placeholder="Ecommerce"
+                        value={formData.techStack}
+                        onChange={handleChange}
+                      />
+
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail6"
+                        class="form-control mx-1 my-2"
+                        name="techStack"
+                        placeholder="WooCommerce"
+                        value={formData.techStack}
+                        onChange={handleChange}
+                      />
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail7"
+                        class="form-control mx-1 my-2"
+                        name="techStack"
+                        placeholder="Saas"
+                        value={formData.techStack}
+                        onChange={handleChange}
+                      />
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail8"
+                        class="form-control mx-1 my-2"
+                        name="techStack"
+                        placeholder="Wordpress"
+                        value={formData.techStack}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div>
@@ -1214,16 +1318,25 @@ const SellerDash = () => {
                       Google Analytics
                     </span>
                   </div>
-                  <div
-                    className="d-flex align-items-center justify-content-center"
+                  <input
+                    type="file"
+                    id="image_input4"
+                    className="form-label "
+                  />
+                  <label
+                    for="image_input4"
+                    class="form-label d-flex align-items-center justify-content-center"
                     style={{
                       background: "#EEF0FE",
                       borderRadius: "20px",
-                      height: "10vh",
+                      height: "8vh",
+                      width: '98%',
+                      textDecoration: 'none',
                     }}
                   >
                     <span>Add google Analytics</span>
-                  </div>
+                  </label>
+
 
                   <div>
                     <img style={{ width: "100%" }} src={analytics} alt="" />

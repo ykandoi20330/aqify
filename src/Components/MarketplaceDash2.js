@@ -447,7 +447,7 @@ const MarketplaceDash2 = () => {
                             <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
                           </div>
                           <div class="carousel-item">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" /> 
                           </div>
                         </div>
                       </div>
