@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.bb2ffd23.css",
-    "main.js": "/aqify/static/js/main.8d10658b.js",
+    "main.css": "/aqify/static/css/main.f4dfcc0d.css",
+    "main.js": "/aqify/static/js/main.dd357db1.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.32ced7bf2156e9cc06cb.png",
     "static/media/acqify.mp4": "/aqify/static/media/acqify.2f40c62005e4d3642e7a.mp4",
@@ -14,22 +14,16 @@
     "static/media/Rectangle 25.png": "/aqify/static/media/Rectangle 25.41ab70f7fd1f600f7f07.png",
     "static/media/Ellipse 8.png": "/aqify/static/media/Ellipse 8.8b847066bee64f59ac21.png",
     "static/media/Vertical.png": "/aqify/static/media/Vertical.db0ae84e8adc5e69a198.png",
-    "static/media/Ellipse 59 (1).svg": "/aqify/static/media/Ellipse 59 (1).61eb3ffdee288a3639c3936e901e395a.svg",
     "static/media/image 2 (1).png": "/aqify/static/media/image 2 (1).33c87a554dd51d2a5d3e.png",
-    "static/media/Ellipse 59 (2).svg": "/aqify/static/media/Ellipse 59 (2).f18d3218a3864826c40680fac8e5c184.svg",
     "static/media/group-11.svg": "/aqify/static/media/group-11.693ea88d801a0cc2db14ecd2028e68f6.svg",
-    "static/media/Ellipse 59.svg": "/aqify/static/media/Ellipse 59.34cf09cd0b6c7f7dbc51400c52b50637.svg",
     "static/media/image 2 (2).png": "/aqify/static/media/image 2 (2).7bc061ced9fa1ee7f7c4.png",
     "static/media/image 2 (3).png": "/aqify/static/media/image 2 (3).6450e15f390055af49fd.png",
-    "static/media/Ellipse 59 (3).svg": "/aqify/static/media/Ellipse 59 (3).4bf774624132ef032cb6f3431764959c.svg",
     "static/media/image 2.png": "/aqify/static/media/image 2.1b69158d192669f992c4.png",
-    "static/media/Ellipse 59 (4).svg": "/aqify/static/media/Ellipse 59 (4).7491239c7d5ed038bc554224f0c27b58.svg",
     "static/media/ellipse-60@2x.png": "/aqify/static/media/ellipse-60@2x.ad1de14b31023dbcfaec.png",
     "static/media/Doctor.jpg": "/aqify/static/media/Doctor.1852949178fd30705ec9.jpg",
     "static/media/Frame 105.png": "/aqify/static/media/Frame 105.98a053f1cddae5685f3b.png",
     "static/media/Frame 21.svg": "/aqify/static/media/Frame 21.6f442d3e707ca56ab526dcab923c5466.svg",
     "static/media/FrameWhiteLogo.svg": "/aqify/static/media/FrameWhiteLogo.1389bc6a0bbaebfff8aec0f4e69ca71a.svg",
-    "static/media/Frame 18.svg": "/aqify/static/media/Frame 18.f8af2642c0db1aff7d399e91795b494a.svg",
     "static/media/FrameblackLogo.svg": "/aqify/static/media/FrameblackLogo.7e4e59d5465c9ce5bde43d6a00b8cde3.svg",
     "static/media/gear.svg": "/aqify/static/media/gear.9016f452e188022fb7bd5d8518cd5654.svg",
     "static/media/vector.svg": "/aqify/static/media/vector.f154708a04009d6c8a29ee5145ef10e3.svg",
@@ -55,7 +49,6 @@
     "static/media/vectorCredit1.svg": "/aqify/static/media/vectorCredit1.fb4bafadae1ac550a43c846fabbd0712.svg",
     "static/media/VectorSearch.svg": "/aqify/static/media/VectorSearch.87b77d211785bf961dd48d8354a87c46.svg",
     "static/media/VectorProject.svg": "/aqify/static/media/VectorProject.25c90c68837cc4455fd056c351b79294.svg",
-    "static/media/FrameRed.svg": "/aqify/static/media/FrameRed.836d078c7e7ea339827acb69fb617d61.svg",
     "static/media/tag.svg": "/aqify/static/media/tag.9b558576d1fde627466edb04e9b4ce08.svg",
     "static/media/VectorHeart.svg": "/aqify/static/media/VectorHeart.7872628d293e4ddbf49f1d839dfdc66b.svg",
     "static/media/ArrowUp.svg": "/aqify/static/media/ArrowUp.752606b5fad925729a5bd4a9c710db50.svg",
@@ -69,12 +62,12 @@
     "static/media/VectorProof.svg": "/aqify/static/media/VectorProof.e476e67ddfa0eaf428892ed880ef1532.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
     "static/media/VectorFund.svg": "/aqify/static/media/VectorFund.9a2fa827de189b67a6ba7b2e7d06eb20.svg",
-    "main.bb2ffd23.css.map": "/aqify/static/css/main.bb2ffd23.css.map",
-    "main.8d10658b.js.map": "/aqify/static/js/main.8d10658b.js.map",
+    "main.f4dfcc0d.css.map": "/aqify/static/css/main.f4dfcc0d.css.map",
+    "main.dd357db1.js.map": "/aqify/static/js/main.dd357db1.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb2ffd23.css",
-    "static/js/main.8d10658b.js"
+    "static/css/main.f4dfcc0d.css",
+    "static/js/main.dd357db1.js"
   ]
 }
