@@ -6,6 +6,8 @@ import arrow from "./Aqify project/Vector (1).png"
 import Navbar from "./Navbar"
 import Footer from './Footer'
 
+import { Link } from 'react-router-dom'
+
 const Pricing = () => {
 
     const [show, setShow] = useState(1)
@@ -72,7 +74,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn btn btn-primary'>List your business<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <Link to="/singup" style={{ fontSize: '1.5rem' }} className='pricing-btn btn btn-primary'>List your business<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </>
@@ -116,7 +118,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <Link to="/singup" style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
 
@@ -147,7 +149,7 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div className='my-4'>
-                            <button style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan <img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></button>
+                            <Link to="/singup" style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary'>Select Plan <img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </>}

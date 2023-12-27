@@ -116,7 +116,7 @@ const Contact = () => {
                 name="name"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="&#128100; Name"
+                placeholder="Name"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -134,7 +134,7 @@ const Contact = () => {
                 name="email"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="&#128386; Email Address"
+                placeholder="Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -152,7 +152,7 @@ const Contact = () => {
                 name="message"
                 id="exampleFormControlTextarea1"
                 rows="3"
-                placeholder="&#128386; Message"
+                placeholder="Message"
                 onChange={handleChange}
                 value={formData.message}
               ></textarea>

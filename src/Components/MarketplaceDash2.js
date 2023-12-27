@@ -110,8 +110,8 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (pro) => {
-    const oldExplore = [...card];
-    const filterExplore = oldExplore?.filter((ex) => ex.category === pro)
+    // const oldExplore = [...card];
+    const filterExplore = card?.filter((ex) => ex.category === pro)
     setShow(filterExplore ? true : false)
   }
 

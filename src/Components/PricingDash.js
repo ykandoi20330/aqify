@@ -101,7 +101,7 @@ const PricingDash = () => {
 
             <div
               className="pricing-card pricingCard2"
-              style={{ height: "110%", position: "relative", width: "65%" }}
+              style={{ height: "100%", position: "relative", width: "65%" }}
             >
               <span className="span1">Prime</span>
               <h1>Free</h1>
@@ -114,8 +114,8 @@ const PricingDash = () => {
               >
                 No hidden fees, zero middlemen.
               </span>
-              <div className="my-4">
-                <div className="my-3">
+              <div className="my-3">
+                <div className="my-2">
                   <img
                     style={{ marginRight: "1rem" }}
                     width={40}
@@ -126,7 +126,7 @@ const PricingDash = () => {
                     View verified buyers on the marketplace
                   </span>
                 </div>
-                <div className="my-3">
+                <div className="my-2">
                   <img
                     style={{ marginRight: "1rem" }}
                     width={40}
@@ -137,7 +137,7 @@ const PricingDash = () => {
                     List your business anonymously for free
                   </span>
                 </div>
-                <div className="my-3">
+                <div className="my-2">
                   <img
                     style={{ marginRight: "1rem" }}
                     width={40}
@@ -148,7 +148,7 @@ const PricingDash = () => {
                     Broadcast safely to 1,000s of acquirers
                   </span>
                 </div>
-                <div className="my-3">
+                <div className="my-2">
                   <img
                     style={{ marginRight: "1rem" }}
                     width={40}
@@ -159,7 +159,7 @@ const PricingDash = () => {
                     Receive offers from verified acquirers
                   </span>
                 </div>
-                <div className="my-3">
+                <div className="my-2">
                   <img
                     style={{ marginRight: "1rem" }}
                     width={40}
@@ -171,7 +171,7 @@ const PricingDash = () => {
                   </span>
                 </div>
               </div>
-              <div className="my-4">
+              <div className="mt-2">
                 <button
                   style={{ fontSize: "1.5rem" }}
                   className="pricing-btn btn btn-primary"
@@ -218,7 +218,7 @@ const PricingDash = () => {
 
             <div
               className="pricing-card pricingCard2"
-              style={{ height: "110%", position: "relative", width: "60%" }}
+              style={{ height: "100%", position: "relative", width: "60%" }}
             >
               <span className="span1">Premium</span>
               <h1>
@@ -233,7 +233,7 @@ const PricingDash = () => {
               >
                 Go premium, never miss a deal.
               </span>
-              <div className="my-4">
+              <div className="my-3">
                 <div className="my-3">
                   <img
                     style={{ marginRight: "1rem" }}
@@ -288,7 +288,7 @@ const PricingDash = () => {
                   </span>
                 </div>
               </div>
-              <div className="my-4">
+              <div className="mt-2">
                 <button
                   style={{ fontSize: "1.5rem" }}
                   className="pricing-btn2 btn btn-primary"

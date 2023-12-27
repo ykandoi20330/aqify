@@ -107,7 +107,7 @@ const ContactDashboard = () => {
                 class="form-control"
                 name="name"
                 id="exampleFormControlInput1"
-                placeholder="&#128100; Name"
+                placeholder="Name"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -125,7 +125,7 @@ const ContactDashboard = () => {
                 class="form-control"
                 name="email"
                 id="exampleFormControlInput1"
-                placeholder="&#128386; Email Address"
+                placeholder="Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -143,7 +143,7 @@ const ContactDashboard = () => {
                 id="exampleFormControlTextarea1"
                 name="message"
                 rows="3"
-                placeholder="&#128386; Message"
+                placeholder="Message"
                 onChange={handleChange}
                 disabled={state.submitting}
                 value={formData.message}
