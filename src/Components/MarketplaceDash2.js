@@ -136,9 +136,9 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (pro) => {
-    // const oldExplore = [...card];
-    const filterExplore = card?.filter((ex) => ex.category === pro)
-    setShow(filterExplore ? true : false)
+    const filterExplore = card?.filter((ex) => ex.projectName === pro)
+    setShow(true)
+    setFilterSearch(filterExplore)
   }
 
 
@@ -396,9 +396,12 @@ const MarketplaceDash2 = () => {
               </div>
               <div>
                 {/** data-bs-toggle="modal" data-bs-target="#exampleModal1" */}
-                <Link className='btn btn-primary rounded-pill px-5 py-2'
-                  onClick={exploreMore}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
-                </Link>
+                {detail.map((it, i) => {
+                  return (
+                    <Link key={i} className='btn btn-primary rounded-pill px-5 py-2'
+                      onClick={() => exploreMore(it.projectName)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
+                    </Link>)
+                })}
               </div>
             </div>
           </section>
@@ -797,7 +800,7 @@ const MarketplaceDash2 = () => {
                     <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
                     <div
                       className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
-                      style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
+                      style={{ color: '#3247FF', right: '15%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
                       onClick={() => sendMessage()}
                     >
                       <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>

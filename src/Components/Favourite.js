@@ -30,8 +30,8 @@ const Favourite = () => {
   return (
     <>
       <section className="marketDash2-back" style={{ height: '100%' }} >
-        <div className='d-flex'>
-          <div className="market-card" >
+        <div className='d-flex flex-wrap'>
+          <div className=" d-flex flex-wrap" > {/**market-card */}
             {favourite.length > 0 ? favourite.map((item, index) => {
               const id = index + 1
               return (

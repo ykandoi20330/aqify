@@ -73,10 +73,10 @@ const MyProject = () => {
                                     return (
                                         <>
                                             <div key={item.id} className='d-flex justify-content-between align-items-center my-2' style={{ listStyle: 'none' }}>
-                                                <span>{item.projectName}</span>
+                                                <span className='d-flex flex-wrap'>{item.projectName}</span>
                                                 <span><Link style={{ padding: '0.3rem 1rem' }} className="btn btn-outline-primary rounded-pill" href="">Reviewing</Link></span>
                                                 <span>0/0</span>
-                                                <span>0</span>
+                                                <span>{item.askingPrice}</span>
                                                 <span><Link><img src={threeDots} alt="" /></Link></span>
                                             </div>
                                         </>

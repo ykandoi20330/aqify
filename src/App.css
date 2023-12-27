@@ -3413,6 +3413,11 @@ input[type="file"] {
     flex-direction: column !important;
   }
 
+  .showMessage{
+    height: 93% !important;
+  }
+
+
 }
 
 

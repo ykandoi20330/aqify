@@ -235,8 +235,8 @@ const MarketplaceDash = (props) => {
                         <div className='d-flex justify-content-end'>
                             <img src={Close} alt="" />
                         </div>
-                        <div className='d-flex'>
-                            <div>
+                        <div className='d-flex my-3'>
+                            <div className='d-flex flex-column'>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
                                     <label class="form-check-label" for="inlineCheckbox1">Most Favorited</label>
@@ -251,7 +251,7 @@ const MarketplaceDash = (props) => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='d-flex flex-column'>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" />
                                     <label class="form-check-label" for="inlineCheckbox4">Sold</label>
