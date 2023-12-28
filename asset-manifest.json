@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aqify/static/css/main.f4dfcc0d.css",
-    "main.js": "/aqify/static/js/main.5da393cb.js",
+    "main.js": "/aqify/static/js/main.5277f8e3.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.32ced7bf2156e9cc06cb.png",
     "static/media/acqify.mp4": "/aqify/static/media/acqify.2f40c62005e4d3642e7a.mp4",
@@ -63,11 +63,11 @@
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
     "static/media/VectorFund.svg": "/aqify/static/media/VectorFund.9a2fa827de189b67a6ba7b2e7d06eb20.svg",
     "main.f4dfcc0d.css.map": "/aqify/static/css/main.f4dfcc0d.css.map",
-    "main.5da393cb.js.map": "/aqify/static/js/main.5da393cb.js.map",
+    "main.5277f8e3.js.map": "/aqify/static/js/main.5277f8e3.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4dfcc0d.css",
-    "static/js/main.5da393cb.js"
+    "static/js/main.5277f8e3.js"
   ]
 }
