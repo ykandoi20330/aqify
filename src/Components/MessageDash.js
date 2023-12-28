@@ -17,6 +17,8 @@ const MessageDash = () => {
     const [id, setId] = useState(null) // this is the id of the user that is currently logged in
 
     const [emoji, setEmoji] = useState(false)
+    const [chosenEmoji, setChosenEmoji] = useState('')
+    // chosenEmoji.emoji
     const [show, setShow] = useState(true)
 
     const emojiDropdown = () => {
@@ -166,7 +168,7 @@ const MessageDash = () => {
                                                     )
                                                 })}
                                             </div>
-                                            {emoji && <EmojiPicker style={{ position: 'absolute' }} />}
+                                            {emoji && <EmojiPicker onEmojiClick={(e)=> setChosenEmoji(e)} style={{ position: 'absolute' }} />}
                                             {
                                                 selectedUserId ? <>
                                                     <div className='d-flex justify-content-center flex-column' style={{ color: '#c0c0c0', width: '100%', height: '75%', overflowY: 'scroll', padding: '50px' }}>
@@ -181,14 +183,6 @@ const MessageDash = () => {
                                                     <div className='' style={{ color: '#636363', width: "100%" }}>
                                                         <div class="d-flex mb-3 my-3 ">
                                                             <div className='d-flex justify-content-center align-items-center'>
-                                                                <input style={{ display: "none" }} type="file" accept="image/*" id="logoInput" />
-                                                                <label style={{ height: '8vh', width: '100%', background: '#EEF0FE', cursor: 'pointer' }} for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
-                                                                    <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-camera mx-2"></i>
-                                                                </label>
-                                                                <input style={{ display: "none" }} type="file" accept="image/*" multiple id="logoInput" />
-                                                                <label style={{ height: '8vh', width: '100%', background: '#EEF0FE', cursor: 'pointer' }} for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
-                                                                    <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-circle-plus mx-2"></i>
-                                                                </label>
                                                                 <Link onClick={emojiDropdown}>
                                                                     <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
                                                                 </Link>

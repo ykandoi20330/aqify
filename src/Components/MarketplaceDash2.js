@@ -282,34 +282,27 @@ const MarketplaceDash2 = () => {
                               {item.projectName}
                             </h3>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Nesxt Js */}
                               {item.techStack}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Firebase */}
                               {item.techStack}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Medical */}
                               {item.techStack}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* SaaS */}
                               {item.techStack}
                             </button>
                           </div>
-                          <div>
+                          {/* <div>
                             <span className="d-flex align-items-center">
                               <i class="fa-solid fa-eye" style={{ color: "#3247ff" }}></i>
                               1.2K
                             </span>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="my-4">
                           <span className="col-6" style={{ color: "#636363", fontSize: "18px" }}>
-                            {/* Physical retailer in the apparel space looking for
-                            prominent DTC brands to buy into and collaborate
-                            with... */}
                             {item.description}
                           </span>
                         </div>
@@ -356,7 +349,6 @@ const MarketplaceDash2 = () => {
                             <div className="d-flex justify-content-start align-items-center">
                               <img width={40} src={cardLogo3} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                {/* {item}  */}
                                 Full
                               </span>
                             </div>
@@ -368,7 +360,6 @@ const MarketplaceDash2 = () => {
                             <div className="d-flex justify-content-start align-items-center">
                               <img width={40} src={cardLogo4} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                {/* $150K + */}
                                 ${item.valuation}k +
                               </span>
                             </div>
@@ -395,7 +386,6 @@ const MarketplaceDash2 = () => {
                 <br />
               </div>
               <div>
-                {/** data-bs-toggle="modal" data-bs-target="#exampleModal1" */}
                 {detail.map((it, i) => {
                   return (
                     <Link key={i} className='btn btn-primary rounded-pill px-5 py-2'
@@ -432,9 +422,6 @@ const MarketplaceDash2 = () => {
 
                     <div className='my-4'>
                       <span className='col-6' style={{ color: '#636363', fontSize: '16px' }}>
-                        {/* A design inspiration platform for SaaS apps that helps designers find inspiration for their next project by showcasing over 1,000 pages from over 100 SaaS apps, organized by category and page type. Designers can also
-                                    filter designs by color and fonts, and bookmark their favorites for later.<br /><br />
-                                    Project can be grown by doing proper content marketing through blogs and social media, further paid ads can also be utilized to get more customers for the app. */}
                         {item.description}
                       </span>
                     </div>
@@ -793,8 +780,6 @@ const MarketplaceDash2 = () => {
                 <div className='mx-3' style={{ color: '#636363', width: "100%" }}>
                   <div class="d-flex mb-3 my-3 ">
                     <div className='d-flex justify-content-center align-items-center'>
-                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-camera mx-2"></i>
-                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-microphone mx-2"></i>
                       <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
                     </div>
                     <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
