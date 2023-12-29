@@ -57,8 +57,11 @@ const Home1 = () => {
                                 <div>
                                     <div className='my-5'>
                                         <h1 className='main-h1 col-9'>
-                                            <span>Future Lift: Elevate with
-                                                Acqify's Effortless Start</span><br />
+                                            <span>
+                                                {/* Future Lift: Elevate with
+                                                Acqify's Effortless Start */}
+                                                How Does It Feel To Keep Profitable Acquisition Projects In Your Pocket?
+                                                </span><br />
                                             <TypeAnimation className='typeAnimation'
                                                 sequence={[
                                                     'Ecommerce', // Types 'One'
@@ -86,13 +89,17 @@ const Home1 = () => {
                                     </div>
                                     <div className='my-4'>
                                         <span className='main-span col-7 d-flex'>
-                                            Future Entrepreneurship: Simple Founder Exits. Join the
-                                            Exclusive Marketplace - Free, Direct, Private!
+                                            {/* Future Entrepreneurship: Simple Founder Exits. Join the
+                                            Exclusive Marketplace - Free, Direct, Private! */}
+                                            Acqify is a full-fledge marketplace where you acquire and sell assets
+                                             while overcoming acquisition blockades like a pro.
                                         </span>
                                     </div>
                                     <div className=''>
-                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Buy<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
-                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-outline-primary mx-2' to="/singup">Sell<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary my-1' to="/singup">Start Acqify's Tour!<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-outline-primary mx-1 my-2' to="/singup">
+                                            {/* Seller | Buyers |  */}
+                                        Successful Deals<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +121,7 @@ const Home1 = () => {
             < section >
                 <div className='Tamplate-secondPart d-flex flex-column align-items-center' style={{ padding: '4rem', height: '100%', background: '#EEF0FE', position: 'relative' }}>
                     <h1 className='listing-h1 text-center'>Featured On</h1>
-                    <span className='listing-span text-center'>Every Monday we publish new businesses for sale on our marketplace</span>
+                    <span className='listing-span text-center'>Every Monday, find new businesses for sale at Acqify!</span>
 
                     <div className='tamplate-logoBox d-flex' style={{ width: '100%' }}>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ width: '100%' }}>
@@ -144,25 +151,25 @@ const Home1 = () => {
                             <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
-                                        <h1>Buy a tiny project</h1>
-                                        <span className='col-8 d-flex' style={{ fontSize: '20px', fontWeight: '500' }}>Build a startup through acquisition for less than $100k vs. going from scratch.</span>
+                                        <h1>Buy a project</h1>
+                                        <span className='col-8 d-flex' style={{ fontSize: '20px', fontWeight: '500' }}>Building a business from scratch is rough! Acqify helps you buy online business that fit your criteria.</span>
                                         <div className='my-4'>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >View verified buyers on the marketplace</span>
+                                                <span >Get in touch with the verified buyers</span>
                                             </div>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >Make offers through the platform</span>
+                                                <span >Propose custom offers and deals to sellers</span>
                                             </div>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >Connect your card, buy projects</span>
+                                                <span >All transactions are online and card-friendly</span>
                                             </div>
-                                            <div className='my-3'>
+                                            {/* <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >View all $100k+ revenue listings</span>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className=''>
                                             <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/market">Explore Listing</Link>
@@ -175,25 +182,25 @@ const Home1 = () => {
                             <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
-                                        <h1>Sell a tiny project</h1>
-                                        <span className='d-flex col-8' style={{ fontSize: '20px', fontWeight: '500' }}>Liquidate that side project quickly, easily and for a fair price.</span>
+                                        <h1>Sell a project</h1>
+                                        <span className='d-flex col-8' style={{ fontSize: '20px', fontWeight: '500' }}>You get suitable liquidation options being our seller. List your business  and find your perfect buyer.</span>
                                         <div className='my-4'>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
+                                                <span >See  how other sellers are doing at Acqify</span>
+                                            </div>
+                                            <div className='my-3'>
+                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
+                                                <span >New to acquisitions? Learn how to sell online businesses!</span>
+                                            </div>
+                                            <div className='my-3'>
+                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
+                                                <span >Get your business valuation</span>
+                                            </div>
+                                            {/* <div className='my-3'>
+                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
                                                 <span >View all $100k+ revenue listings</span>
-                                            </div>
-                                            <div className='my-3'>
-                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >Make offers through the platform</span>
-                                            </div>
-                                            <div className='my-3'>
-                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >Connect your card, buy projects</span>
-                                            </div>
-                                            <div className='my-3'>
-                                                <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
-                                                <span >View all $100k+ revenue listings</span>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className=''>
                                             <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
@@ -219,23 +226,23 @@ const Home1 = () => {
                 <div className='info-card'>
                     <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className="card-four">
                         <img width={150} src={FourthCard1} alt="" />
-                        <h3 className='my-3'>List Anonymously</h3>
-                        <span>Sell or buy online businesses confidentially. List anonymously, connect securely, and close deals with confidence.</span>
+                        <h3 className='my-3'>Sshh..Keep Your Listings Hidden!</h3>
+                        <span>Buy and sell your business anonymously and crack your best deals securely.</span>
                     </div>
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="400" className="card-four">
                         <img width={150} src={FourthCard2} alt="" />
-                        <h3 className='my-3'>Largest Buyers Ecosystem</h3>
-                        <span className='largeSpan'>Explore unparalleled opportunities with the largest buyer ecosystem. Maximize your options, elevate your transactions, and achieve success on a grand scale.</span>
+                        <h3 className='my-3'>Get An Edge From Integrated Buyer Network</h3>
+                        <span className='largeSpan'>Discover diversified buyers worldwide, and hop on to streamline business scaling.</span>
                     </div>
                     <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="500" className="card-four">
                         <img width={150} src={FourthCard3} alt="" />
-                        <h3 className='my-3'>Faster Timelines</h3>
-                        <span>Accelerate success with faster timelines. Achieve your goals swiftly and efficiently, leaving no room for delays.</span>
+                        <h3 className='my-3'>Work On Flexible Timeframes</h3>
+                        <span>So you ate it and left no crumbs because closing acquisition deals in time yields that.</span>
                     </div>
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="600" className="card-four">
                         <img width={150} src={FourthCard4} alt="" />
-                        <h3 className='my-3'>Access to best counsel</h3>
-                        <span className='largeSpan'>Gain an edge with access to the best counsel. Elevate your decisions with expert guidance and strategic insights for unparalleled success.</span>
+                        <h3 className='my-3'>Receive Real-time Counseling </h3>
+                        <span className='largeSpan'>Become an easy decision-maker with hands-on expert guidance before locking your deals.</span>
                     </div>
                 </div>
             </section >
@@ -329,72 +336,72 @@ const Home1 = () => {
                     <div className="pricing-card" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ height: '90%' }}>
                         <span className='span1'>Basic</span>
                         <h1>Free</h1>
-                        <span className='col-10' style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Free for owners and affordable for accquirers.</span>
+                        <span className='col-10' style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
                         <div className='my-4'>
                             <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                            <span style={{ color: '#636363' }}>View verified buyers on the marketplace</span>
+                            <span style={{ color: '#636363' }}>Know about potential verified buyers on the marketplace</span>
                         </div>
                     </div>
 
                     <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400" style={{ height: '90%', width: '35%' }}>
                         <span className='span1'>Premium</span>
                         <h1>$99<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Go premium, never miss a deal.</span>
+                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Premium, Stay Updated On New Assets.</span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>2% Success Fee</span>
+                                <span style={{ color: '#636363' }}>—-<i class="fa-solid fa-chevron-right"></i> Success Fee/ Commission</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>View all $100k+ revenue listings</span>
+                                <span style={{ color: '#636363' }}>Quick access to all listings</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>Message sellers directly</span>
+                                <span style={{ color: '#636363' }}>Reach out to sellers directly</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>Verified acquirer profile</span>
+                                <span style={{ color: '#636363' }}>Get a hands-on official acquirer profile from Acqify</span>
                             </div>
-                            <div className='my-3'>
+                            {/* <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
                                 <span style={{ color: '#636363' }}>Private acquirer Discord invite</span>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='my-4'>
-                            <Link style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary' to="/singup">Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
+                            <Link style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary' to="/singup">Choose Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
 
                     <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="800" style={{ height: '90%', width: '35%' }}>
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Go pro, close deals for free</span>
+                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee</span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>No Success Fee</span>
+                                <span style={{ color: '#636363' }}>Lock deals without paying a success fee</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>View all $100k+ revenue listings</span>
+                                <span style={{ color: '#636363' }}>Quick access to all listings</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>Message sellers directly</span>
+                                <span style={{ color: '#636363' }}>Reach out to sellers directly</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>Verified acquirer profile</span>
+                                <span style={{ color: '#636363' }}>Get a hands-on official acquirer profile from Acqify</span>
                             </div>
-                            <div className='my-3'>
+                            {/* <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
                                 <span style={{ color: '#636363' }}>Private acquirer Discord invite</span>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='my-4'>
-                            <Link style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary' to="/singup">Select Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
+                            <Link style={{ fontSize: '1.5rem' }} className='pricing-btn2 btn btn-primary' to="/singup">Choose Plan<img style={{ width: '7%', margin: '0 0 0 3rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </div>
@@ -479,8 +486,8 @@ const Home1 = () => {
             {/** */}
             <section style={{ height: '150vh', background: '#EEF0FE' }}>
                 <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '50px 0' }}>
-                    <h2 className='fourth-h1'>Demo Video - How it’s Works</h2>
-                    <span style={{ color: '#636363' }}>Everything you need to acquire your next project.</span>
+                    <h2 className='fourth-h1' style={{width:'56%'}}>Demo Video - How To Start Your Journey With Aciqfy</h2>
+                    <span className='text-center' style={{ color: '#636363' }}>Explore all the tips for cracking high revenue deals for yourself!</span>
                 </div>
 
                 <div id="video" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="200" className='d-flex align-items-center justify-content-center'>

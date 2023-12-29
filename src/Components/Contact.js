@@ -93,9 +93,9 @@ const Contact = () => {
             backgroundSize: "cover",
           }}
         >
-          <h1 className="col-6 text-center">Contact Us</h1>
+          <h1 className="col-6 text-center">ASK US QUESTIONS, WE ARE ALL EARS!</h1>
           <span className="col-4 text-center" style={{ margin: "0rem" }}>
-            We'd really like to hear any feedback or issue that you might have.
+          Take a step ahead, tell us who you are, and the rest is on us.
           </span>
         </div>
       </section>
@@ -116,7 +116,7 @@ const Contact = () => {
                 name="name"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="Name"
+                placeholder="Your Full Name"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -134,7 +134,7 @@ const Contact = () => {
                 name="email"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="Email Address"
+                placeholder="Your Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -152,7 +152,7 @@ const Contact = () => {
                 name="message"
                 id="exampleFormControlTextarea1"
                 rows="3"
-                placeholder="Message"
+                placeholder="Your Query For Us!"
                 onChange={handleChange}
                 value={formData.message}
               ></textarea>
@@ -163,7 +163,7 @@ const Contact = () => {
               disabled={state.submitting}
               style={{ width: "30%", padding: "1.5rem 2.5rem" }}
             >
-              Send Us <img style={{ width: "10%" }} src={arrow} alt="" />
+              SEND TO ACQIFY! <img style={{ width: "10%" }} src={arrow} alt="" />
             </button>
           </form>
         </div>

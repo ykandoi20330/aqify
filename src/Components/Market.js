@@ -262,7 +262,7 @@ const Market = () => {
   //Sort by Price
   const filterPrice = (el) => {
     const price = card?.filter((p) => p.askingPrice === el)
-  
+
     setFilterSearch(price)
   }
 
@@ -346,8 +346,8 @@ const Market = () => {
             <div className="owner-content">
               <div>
                 <div className="my-5">
-                  <h1 className="main-h1 col-6">
-                    Welcome to the Marketplace <br />
+                  <h1 className="main-h1 text-start col-6">
+                    Our Marketplace Holds Flagship Online Businesses To Aaquire! <br />
                     <TypeAnimation
                       className="typeAnimation marketTypeAnimation"
                       style={{ fontSize: "3rem" }}
@@ -376,10 +376,7 @@ const Market = () => {
                 </div>
                 <div className="my-4">
                   <span className="main-span col-6 d-flex">
-                    List your startup for free with total anonymity to receive
-                    full or partial acquisition offers from verified buyers
-                    commission-free.List your business anonymously on the
-                    Marketplace to receive offers from acquirers
+                    Collaborate with new founders and make the best deals!
                   </span>
                 </div>
                 {/* <div className=''>
@@ -553,9 +550,9 @@ const Market = () => {
               style={{
                 display: "flex",
                 // flexWrap: "wrap",
-                flexDirection:'column',
-                justifyContent:'center',
-                alignItems:'center',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 width: "100%",
               }}
             >

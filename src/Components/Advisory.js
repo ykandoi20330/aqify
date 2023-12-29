@@ -30,16 +30,16 @@ const Advisory = () => {
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-8'>Advisor Directory
+                                <h1 className='main-h1 col-8'>Our Advisors Are Quite Helpful; Talk To Them!
                                 </h1>
                             </div>
                             <div className='my-4'>
                                 <span className='main-span col-7 d-flex'>
-                                    Affordable advice on valuations, negotiations, legal, tax, accounting & due diligence.
+                                Acqify’s advisors are here to help you with your doubts and queries by deal-centric recommendations. 
                                 </span>
                             </div>
                             <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Add your Advisor Profile<img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Take Me To The Experts! <img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>

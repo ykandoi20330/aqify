@@ -314,7 +314,7 @@ nav {
 }
 
 .main-h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bolder;
 }
 
@@ -1020,9 +1020,11 @@ ul {
 }
 
 .pricing-backgroundImage h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #fff;
   font-weight: 700;
+  width: 55%;
+  text-align: center;
 }
 
 .pricing-backgroundImage span {
@@ -1299,7 +1301,7 @@ textarea.form-control {
 .terms-card {
   top: -150px;
   margin: 0 1rem;
-  padding: 0 4rem;
+  padding: 4rem;
 
   border-radius: 20px;
   border: none;
@@ -1333,7 +1335,7 @@ textarea.form-control {
   background-clip: border-box !important;
   height: 100%;
   width: 90%;
-  justify-content: center;
+  justify-content: start;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -1500,23 +1502,23 @@ input[type=radio] {
 }
 
 @media screen and (min-width:768px) {
-  .navCollaspe{
+  .navCollaspe {
     width: 77px;
     overflow-x: hidden !important;
   }
 
-  .navCollaspe .nav-link1 span{
+  .navCollaspe .nav-link1 span {
     display: none;
   }
 
-  .navCollaspe .dash{
+  .navCollaspe .dash {
     display: none;
   }
-  
-  .navCollaspe .dashLogo{
+
+  .navCollaspe .dashLogo {
     display: none;
   }
-  
+
 }
 
 .sideContent {
@@ -2948,7 +2950,7 @@ input[type="file"] {
 
 /***************** Transfer Services Section *******************/
 
-.transferCard{
+.transferCard {
   background-color: #fff !important;
 }
 
@@ -3129,6 +3131,10 @@ input[type="file"] {
     height: 100% !important;
   }
 
+  .Tamplate-main {
+    height: 135vh !important;
+  }
+
   .homeSection {
     height: 120% !important;
   }
@@ -3272,6 +3278,10 @@ input[type="file"] {
   }
 
   /****************** Pricing section **********************/
+  .pricing-free {
+    width: 70% !important;
+  }
+
   .pricingCard2 {
     width: 70% !important;
     margin: 2rem 0 !important;
@@ -3404,16 +3414,16 @@ input[type="file"] {
     position: relative;
   }
 
-  .showProfile{
+  .showProfile {
     width: 100% !important;
   }
 
-  .detailmessage{
+  .detailmessage {
     display: flex;
     flex-direction: column !important;
   }
 
-  .showMessage{
+  .showMessage {
     height: 93% !important;
   }
 
@@ -3664,6 +3674,10 @@ input[type="file"] {
     display: flex;
     flex-direction: column !important;
     align-items: center;
+  }
+
+  .pricing-free {
+    width: 90% !important;
   }
 
   .pricingCard2 {
@@ -4110,6 +4124,10 @@ input[type="file"] {
 
   /* home content section */
 
+  .Tamplate-main {
+    height: 142vh !important;
+  }
+
   .video-div {
     width: 70% !important;
   }
@@ -4120,6 +4138,7 @@ input[type="file"] {
 
   .main-h1 {
     font-size: 2.5rem !important;
+    width: 95% !important;
   }
 
   .col-7 {
@@ -4372,6 +4391,12 @@ input[type="file"] {
     padding: 2rem !important;
   }
 
+  /************ Pricing section ***************/
+  .pricing-backgroundImage h1 {
+    width: 100% !important;
+    font-size: 2.5rem !important;
+  }
+
   /******************** Testimonails section **********************/
   .Testimonails-ul li {
     font-size: 30px !important;
@@ -4444,7 +4469,7 @@ input[type="file"] {
   }
 
   /************** Message dashboard section ***************/
-  .messageSend{
+  .messageSend {
     font-size: 1rem !important;
   }
 
@@ -4824,11 +4849,16 @@ input[type="file"] {
 
   /******************** Testimonails section **********************/
   .pricing-backgroundImage h1 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
 
   .Testimonails-ul li {
     font-size: 25px !important;
+  }
+
+  /************ Terms & Condition ***************/
+  .terms-card {
+    padding: 2rem !important;
   }
 
   /************************* Contact Section ************************/
@@ -5000,7 +5030,7 @@ input[type="file"] {
     font-size: 1.2rem !important;
   }
 
-  .messageSend{
+  .messageSend {
     font-size: 1rem !important;
   }
 }

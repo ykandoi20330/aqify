@@ -28,18 +28,18 @@ import Footer from './Footer'
 const Owner = () => {
     return (
         <>
-        <section>
-            <Navbar/>
-        </section>
+            <section>
+                <Navbar />
+            </section>
 
-        {/** */}
+            {/** */}
             <section>
                 <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-6'><span style={{marginRight:'1rem'}}>Acquire Without Cost: Have Your Cake and Eat It, Too!</span>
-                                <TypeAnimation className='typeAnimation'
+                                <h1 className='main-h1 col-7'><span style={{ marginRight: '1rem' }}>Time To Save On Money And Start Listing For Free!</span><br />
+                                    <TypeAnimation className='typeAnimation'
                                         sequence={[
                                             'Ecommerce', // Types 'One'
                                             1000, // Waits 1s
@@ -66,11 +66,11 @@ const Owner = () => {
                             </div>
                             <div className='my-4'>
                                 <span className='main-span col-6 d-flex'>
-                                    List your startup for free with total anonymity to receive full or partial acquisition offers from verified buyers commission-free.
+                                    Tap onto “get offers” button to tap into endless acquiring proposals from legitimate buyers.
                                 </span>
                             </div>
                             <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">List your business<img style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Get Offers! <img style={{ width: '10%' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -80,8 +80,8 @@ const Owner = () => {
             <section className='owner-first-section'>
                 <div>
                     <div className='d-flex flex-column align-items-center justify-content-center'>
-                        <h1 className='fourth-h1'>Our Marketplace Is Built For Owners Who...</h1>
-                        <span style={{ color: '#636363', fontSize: '20px', margin: '1rem 0 3rem 0' }}>Every Monday we publish new businesses for sale on our marketplace.</span>
+                        <h1 className='fourth-h1' style={{width:'85%'}}>Our Platform Gives You The Ultimate Selling Experience For Cracking Money-Packed Deals!</h1>
+                        <span className='text-center' style={{ color: '#636363', fontSize: '20px', margin: '1rem 0 3rem 0' }}>Become our privileged anonymous seller to get verified offers!</span>
                     </div>
                 </div>
                 <div className='Owner-card-div'>
@@ -107,10 +107,10 @@ const Owner = () => {
                 <div className="Sell-detail">
                     <div>
                         <div className='d-flex flex-column align-items-center justify-content-center'>
-                            <h1 className='fourth-h1' style={{ marginBottom: '3rem' }}>Sell To Private Equity Acquirers Like These</h1>
+                            <h1 className='fourth-h1' style={{ marginBottom: '3rem' }}>We Have A Long List Of Buyers For You, Take Your Time!</h1>
                         </div>
                     </div>
-                    <div className='owner-second-background' style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain '}}>
+                    <div className='owner-second-background' style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain ' }}>
                         <div className='d-flex flex-row align-items-center'>
                             <img style={{ width: '17%', margin: '0 3rem' }} src={roundedImg} alt="" />
                             <div className='owner-write-detail'>
@@ -141,57 +141,57 @@ const Owner = () => {
             <section className='owner-third-section'>
                 <div className='d-flex justify-content-between align-items-center'>
                     <div>
-                        <h1 className='owner-third-h1 col-4'>Get Acquisition Offers And Sell In 3 Easy Steps</h1>
+                        <h1 className='owner-third-h1 col-4'>Follow These 3 Simple Steps To 10X Lucrative Offers!</h1>
                         <div className='my-5'>
-                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">List your business<img style={{ width: '7%',margin:'0 0 0 4rem' }} src={arrow} alt="" /></Link>
+                            <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">List your business<img style={{ width: '7%', margin: '0 0 0 4rem' }} src={arrow} alt="" /></Link>
                         </div>
                     </div>
                 </div>
 
                 <div className="owner-third-card">
                     <h3>1.</h3>
-                    <div style={{padding:"2rem 6rem 4rem 3rem"}} className='owner-third-detail d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon1} alt="" />
-                            <h4>Sign up to list your business</h4>
+                            <h4>Make Your Seller Account</h4>
                         </div>
                         <div>
                             <ul>
-                                <li>Sign up as an owner to create a free account</li>
-                                <li>List your business on the Marketplace</li>
-                                <li>Choose a full acquisition or partial sale</li>
+                                <li>Sign yourself up as a seller to make a free account</li>
+                                <li>Create an anonymous listing</li>
+                                <li>Pick from full or partial acquisition sale</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="owner-third-card">
                     <h3>2.</h3>
-                    <div style={{padding:"2rem 6rem 4rem 3rem"}} className='owner-third-detail d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 6rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon2} alt="" />
-                            <h4>Connect with verified acquirers</h4>
+                            <h4>Start Networking With Buyers</h4>
                         </div>
                         <div>
                             <ul>
-                                <li>Review offers from buyers and investors</li>
-                                <li>Respond to favourable requests as you please</li>
-                                <li>Ask and answer questions from investors</li>
+                                <li>Receive offers from registered acquirers.</li>
+                                <li>Respond to the offers that interest you</li>
+                                <li>Interact with the buyers for real-time communication</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="owner-third-card">
                     <h3>3.</h3>
-                    <div style={{padding:"2rem 11rem 4rem 3rem"}} className='owner-third-detail d-flex justify-content-between'>
+                    <div style={{ padding: "2rem 11rem 4rem 3rem" }} className='owner-third-detail d-flex justify-content-between'>
                         <div>
                             <img width={80} src={cardIcon3} alt="" />
-                            <h4>Close a deal</h4>
+                            <h4>Shake Hands And Close deals</h4>
                         </div>
                         <div>
                             <ul>
-                                <li>Sign an NDA to share more details</li>
+                                <li>Sign and NDA for exchanging more details</li>
                                 <li>Negotiate terms and sign an LOI</li>
-                                <li>Close a deal and receive payout</li>
+                                <li>Have your payment soon after closing your deal</li>
                             </ul>
                         </div>
                     </div>
@@ -199,21 +199,21 @@ const Owner = () => {
             </section>
 
             <section className='owner-four-section'>
-                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ',backgroundPosition:'right'}}>
-                <div className='imageBottom-div d-flex justify-content-between align-items-center'>
-                    <div>
-                        <h1 className='owner-four-h1'>Get Offers From Professional Acquirers</h1>
-                        <span className='col-8 d-flex' style={{color:'#fff',fontSize:'20px'}}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>
-                        <div className='my-5'>
-                            <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Advisor Activity</Link>
+                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                    <div className='imageBottom-div d-flex justify-content-between align-items-center'>
+                        <div>
+                            <h1 className='owner-four-h1'>Head Over To Our Advisor Portal And Get A Second Opinion!</h1>
+                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>We recommend locking your sit-in with our experts to achieve your revenue target successfully. </span>
+                            <div className='my-5'>
+                                <Link style={{ fontSize: '1.5rem', fontSize: "20px", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Take Me To Advisor Portal!</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
 
             <section>
-                <Footer/>
+                <Footer />
             </section>
         </>
     )
