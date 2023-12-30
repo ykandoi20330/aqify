@@ -39,7 +39,7 @@ const Home1 = () => {
         Aos.init();
         const token = localStorage.getItem("token");
         if (token) {
-            window.location.href = `${ENV.FRONTEND_URL}/aqify#/MainDashboard`;
+            window.location.href = `${ENV.FRONTEND_URL}/aqify#/singin`;
         }
     }, [])
     return (
