@@ -22,6 +22,7 @@ import SellingDash from './Components/SellingDash';
 import ValuationTool from './Components/ValuationTool';
 import Testimonials from './Components/Testimonials';
 import Advisory from './Components/Advisory';
+import AdvisoryOnboard from './Components/AdvisoryOnboard';
 import MarketplaceDetail from './Components/MarketplaceDetail';
 import MessageDash2 from './Components/MessageDash2';
 import PaymentCardDash from './Components/PaymentCardDash';
@@ -71,6 +72,7 @@ function App() {
           <Route path="/valuation" element={<ValuationTool />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/advisory" element={<Advisory />} />
+          <Route path="/advisoryOnbaord" element={<AdvisoryOnboard />} />
           <Route path="/placeDetail" element={<MarketplaceDetail />} />
           {/* <Route path="/message" element={<MessageDash2 />} /> */}
           <Route path="/payCart" element={<PaymentCardDash />} />
