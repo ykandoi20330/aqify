@@ -39,7 +39,7 @@ const Advisory = () => {
                                 </span>
                             </div>
                             <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Take Me To The Experts! <img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/advisoryOnbaord">Take Me To The Experts! <img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -115,10 +115,10 @@ const Advisory = () => {
 
                                     <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                                         <div style={{ margin: '0 3rem 0 0' }}>
-                                            <span style={{ color: '#636363', fontWeight: '600' }}>Businesses Type</span>
+                                            <span style={{ color: '#636363', fontWeight: '600' }}>Prefered Deal Size?</span>
                                             <div className='d-flex justify-content-start align-items-center'>
                                                 <img width={40} src={cardLogo1} alt="" />
-                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>E-Commerce</span>
+                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>More than $5M</span>
                                             </div>
                                         </div>
                                         <div style={{ margin: '0 3rem 0 0' }}>
@@ -152,13 +152,13 @@ const Advisory = () => {
                 </div>
             </section>
 
-            <section className='d-flex justify-content-center' style={{ height: '20vh', background: '#EEF0FE ' }}>
+            {/* <section className='d-flex justify-content-center' style={{ height: '20vh', background: '#EEF0FE ' }}>
                 <div>
                     <div >
                         <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View Listing<img className='mx-2' style={{ width: '20px'}} src={arrow} alt="" /> </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section>
                 <Footer />

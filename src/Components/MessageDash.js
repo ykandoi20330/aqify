@@ -137,7 +137,7 @@ const MessageDash = () => {
                             allChats.length > 0 ? (
                                 <>
                                     <div className='detailmessage d-flex ' style={{ height: '80vh', color: '#c0c0c0', width: '100%' }}>
-                                        <div className='showProfile' style={{ width: '30%', height: '100%', overflowY: 'scroll' }}>
+                                        <div className='showProfile' style={{ width: '30%', overflowY: 'scroll' }}>
                                             {
                                                 allChats.map((chat, i) => {
                                                     return (
@@ -162,19 +162,23 @@ const MessageDash = () => {
 
                                         <div className='showMessage' style={{ background: '#EEF0FE', width: '100%', height: '100%', borderRadius: '10px' }}>
                                             <div className='MsgheadBox d-flex justify-content-center align-items-center' style={{ background: '#3247FF', color: '#fff', borderRadius: '10px 10px 0 0', height: '7vh' }}>
-                                                {allChats.map((msg, index) => {
+                                                {/* {allChats.map((msg, index) => {
                                                     return (
                                                         <h4 key={index} className='msg-h2'>{msg.userName}</h4>
                                                     )
-                                                })}
+                                                })} */}
+                                                <h4 className='msg-h2'>Acqify</h4>
                                             </div>
-                                            {emoji && <EmojiPicker onEmojiClick={(e)=> setChosenEmoji(e)} style={{ position: 'absolute' }} />}
+                                            {emoji && <EmojiPicker onEmojiClick={(e) => {
+                                                setChosenEmoji(e)
+                                                console.log(e)
+                                            }} style={{ position: 'absolute' }} />}
                                             {
                                                 selectedUserId ? <>
-                                                    <div className='d-flex justify-content-center flex-column' style={{ color: '#c0c0c0', width: '100%', height: '75%', overflowY: 'scroll', padding: '50px' }}>
+                                                    <div className='d-flex flex-column' style={{ color: '#c0c0c0', width: '100%', height: '75%', overflowY: 'scroll', padding: '50px' }}>
                                                         {messages.map(message => (
                                                             <div key={message._id} >
-                                                                <div className={(message.sender === id ? 'float-end' : 'text-start') + " text-left inline-block p-2 my-2 rounded-md text-sm " + (message.sender === id ? 'bg-primary text-white' : 'bg-light text-gray-500')} style={{ borderRadius: '50px', width: 'auto' }}>
+                                                                <div className={(message.sender === id ? 'float-end' : 'text-start') + " text-left inline-block p-2 my-2 rounded-md text-sm " + (message.sender === id ? 'bg-primary text-white' : 'bg-light text-primary')} style={{ borderRadius: '50px', width: 'fit-content' }}>
                                                                     {message.message}
                                                                 </div>
                                                             </div>
@@ -230,32 +234,33 @@ const MessageDash = () => {
                             </div>
 
                             <div>
-
-                                <div onClick={() => setShow(false)} style={{ textDecoration: 'none' }} className='d-flex justify-content-between my-5'>
+                                <div onClick={() => setShow(false)} style={{ textDecoration: 'none', cursor:'pointer' }} className='d-flex flex-column my-5'>
                                     {
                                         allChats.map((chat, i) => {
                                             return (
                                                 <>
-                                                    <div className='d-flex '>
-                                                        <div key={i} className="d-flex align-items-center" onClick={() => setSelectedUserId(chat._id)}>
-                                                            <img src={chat.pic} alt="" style={{
-                                                                width: '70px',
-                                                                height: '70px',
-                                                                borderRadius: '50%',
-                                                                objectFit: 'cover'
-                                                            }} />
-                                                            <div className='d-flex align-items-center flex-column'>
-                                                                <h2 className='msg-h2 mx-2' style={{
-                                                                    fontSize: '1.3rem',
-                                                                }}>{chat.userName}</h2>
+                                                    <div className='d-flex justify-content-between my-2'>
+                                                        <div className='d-flex '>
+                                                            <div key={i} className="d-flex align-items-center" onClick={() => setSelectedUserId(chat._id)}>
+                                                                <img src={chat.pic} alt="" style={{
+                                                                    width: '70px',
+                                                                    height: '70px',
+                                                                    borderRadius: '50%',
+                                                                    objectFit: 'cover'
+                                                                }} />
+                                                                <div className='d-flex align-items-center flex-column'>
+                                                                    <h2 className='msg-h2 mx-2' style={{
+                                                                        fontSize: '1.3rem',
+                                                                    }}>{chat.userName}</h2>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div className='d-flex align-items-center'>
-                                                        <span key={chat._id} style={{ color: '#c0c0c0' }}>Hello, I am owner of {chat.message}...</span>
-                                                        <div className='mx-3'>
-                                                            <span class="badge rounded-pill text-bg-danger">{i}+</span>
+                                                        <div className='d-flex align-items-center'>
+                                                            <span key={chat._id} style={{ color: '#c0c0c0' }}>Hello, I am owner of {chat.message}...</span>
+                                                            <div className='mx-3'>
+                                                                <span class="badge rounded-pill text-bg-danger">{i}+</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </>
@@ -276,7 +281,7 @@ const MessageDash = () => {
                                             className="Search-from form-control mx-2"
                                             placeholder="Write message..."
                                             value={newMessageText}
-                                            onChange={(ev) => setNewMessageText(ev.target.value)}/>
+                                            onChange={(ev) => setNewMessageText(ev.target.value)} />
                                         <div
                                             className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
                                             style={{ color: '#3247FF', right: '7%', position: 'absolute', textDecoration: 'none', cursor: 'pointer' }}
