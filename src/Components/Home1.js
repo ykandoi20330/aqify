@@ -97,7 +97,7 @@ const Home1 = () => {
                                     </div>
                                     <div className=''>
                                         <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary my-1' to="/singup">Start Acqify's Tour!<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
-                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-outline-primary mx-1 my-2' to="/singup">
+                                        <Link style={{ fontSize: '1.5rem' }} className='btn btn-outline-primary mx-2 my-2' to="/singup">
                                             {/* Seller | Buyers |  */}
                                         Successful Deals<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
                                     </div>

@@ -245,6 +245,11 @@ const MarketplaceDash2 = () => {
     setFilterSearch(tech)
   }
 
+  const filterLowToHigh = (Low) => {
+    const Lower = card?.filter((h) => h.askingPrice === Low).sort((l1, l2) => l2.askingPrice - l1.askingPrice)
+
+    setFilterSearch(Lower)
+  }
 
   return (
     <>
@@ -262,6 +267,8 @@ const MarketplaceDash2 = () => {
               filterPrice={filterPrice}
 
               filterTech={filterTech}
+
+              filterLowToHigh={filterLowToHigh}
             />
           </section>
 
