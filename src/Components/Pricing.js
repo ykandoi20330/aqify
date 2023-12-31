@@ -20,8 +20,9 @@ const Pricing = () => {
 
 
             <section className='pricing-first-section'>
-                <div style={{ height: "95vh", background: "linear-gradient(359deg, black, #000000f5)" }}>
-                    <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div style={{ background: "linear-gradient(359deg, black, #000000f5)" }}>
+                    <div className="pricing-backgroundImage" style={{ background:'#161616', padding:'4rem 0 8rem 0'}}>
+                    {/* backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' */}
                         <h1>ACQIFY’S LANS DON’T HURT YOUR BUDGET!</h1>
                         <span className='text-center'>Our pricing plans are tailored according to the budgets of buyers and sellers.</span>
                         <div>
@@ -37,20 +38,20 @@ const Pricing = () => {
 
             <section className="pricing-back" >
                 {show === 1 && <>
-                    <div className="pricing-card pricing-free" style={{ height: '60%', position: 'relative', top: '-152px', width:'35%' }}>
+                    <div className="pricing-card pricing-free" style={{ height: '60%', position: 'relative', top: '-75px', width:'35%' }}>
                         <span className='span1'>Basic</span>
                         <h1>Free</h1>
-                        <span className='col-10' style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
+                        <span className='col-10' style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
                         <div className='my-4'>
                             <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
                             <span style={{ color: '#636363' }}>Know about potential verified buyers on the marketplace</span>
                         </div>
                     </div>
 
-                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-75px', width: '35%' }}>
                         <span className='span1'>Prime</span>
                         <h1>Free</h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose any plan, and sell for free!</span>
+                        <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose any plan, and sell for free!</span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
@@ -81,20 +82,20 @@ const Pricing = () => {
                 }
 
                 {show === 2 && <>
-                    <div className="pricing-card pricing-free" style={{ height: '80%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricing-free" style={{ height: '80%', position: 'relative', top: '-75px', width: '35%' }}>
                         <span className='span1'>Basic</span>
                         <h2 className='my-3' style={{fontWeight:'900'}}>Listing your assets on Acqify is free of cost</h2>
-                        <span className='col-10' style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
+                        <span className='col-10' style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
                         <div className='my-4'>
                             <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
                             <span style={{ color: '#636363' }}>Know about potential verified buyers on the marketplace</span>
                         </div>
                     </div>
 
-                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-75px', width: '35%' }}>
                         <span className='span1'>Premium</span>
                         <h1>$99<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Premium, Stay Updated On New Assets</span>
+                        <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Premium, Stay Updated On New Assets</span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
@@ -122,10 +123,12 @@ const Pricing = () => {
                         </div>
                     </div>
 
-                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-152px', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" style={{ height: '110%', position: 'relative', top: '-75px', width: '35%' }}>
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee</span>
+                        <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee
+                        <br/>
+                        </span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />

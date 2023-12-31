@@ -12,12 +12,13 @@ const TermsCondition = () => {
             </section>
 
             <section className='pricing-first-section'>
-                <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="pricing-backgroundImage" style={{background:'#161616', padding:'4rem 0 8rem'}}>
+                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
                     <h1 className='col-6 text-center'>Terms & Privacy</h1>
                 </div>
             </section>
 
-            <section className="ligh-back" style={{ height: '100%' }} >
+            <section className="ligh-back align-items-center" style={{ height: '100%' }} >
                 <div className="terms-card">
                     <div>
                         <h1 className='mb-5' style={{fontWeight:'700'}}>TERMS</h1>

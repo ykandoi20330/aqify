@@ -33,7 +33,8 @@ const Acquirers = () => {
             </section>
             {/** */}
             <section>
-                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain'>
+                {/* backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' */}
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
@@ -109,7 +110,7 @@ const Acquirers = () => {
                             <h1 className='fourth-h1' style={{ marginBottom: '3rem', width: '60%' }}> Crack Your Next Promising Deal With Founders; Thank Us Later!</h1>
                         </div>
                     </div>
-                    <div className='owner-second-background' style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '75vh', backgroundSize: 'contain ' }}>
+                    <div className='owner-second-background' style={{ backgroundImage: `url(${BackPhoto})`, width: '100%', backgroundRepeat: 'no-repeat', padding: '3rem 0', backgroundSize: 'cover' }}>
                         <div className='d-flex flex-row align-items-center'>
                             <img style={{ width: '17%', margin: '0 3rem' }} src={roundedImg} alt="" />
                             <div className='owner-write-detail'>
@@ -198,7 +199,7 @@ const Acquirers = () => {
             </section>
 
             <section className='owner-four-section'>
-                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
                     <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Meet a Pro Acquirer Inside You, Get Verified at Acqify!</h1>

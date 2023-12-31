@@ -60,38 +60,39 @@ const MyProject = () => {
 
 
                     <div className="buying-card">
-                        <div className='buying-content d-flex flex-column justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
-                            <ul className='buying-div1 d-flex justify-content-between' style={{ listStyle: 'none', width: '92%', marginBottom: '1rem' }}>
-                                <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Project Name</Link></li>
-                                <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Active Status</Link></li>
-                                <li className='card-h3' style={{ padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Invoices</Link></li>
-                                <li className='card-h3' style={{ position: 'relative', left: '-66px', padding: '0 0 0.5rem 0' }}><Link style={{ textDecoration: 'none' }}>Prices</Link></li>
-                            </ul>
+                        <table style={{ width: '100%' }}>
+                            <tr style={{ listStyle: 'none', width: '92%', marginBottom: '1rem' }}>
+                                <th className=' py-2' ><Link style={{ textDecoration: 'none' }}>Project Name</Link></th>
+                                <th className=' py-2' ><Link style={{ textDecoration: 'none' }}>Active Status</Link></th>
+                                <th className=' py-2' ><Link style={{ textDecoration: 'none' }}>Invoices</Link></th>
+                                <th className=' py-2' ><Link style={{ textDecoration: 'none' }}>Prices</Link></th>
+                                <th className=' py-2' ><Link style={{ textDecoration: 'none' }}><br /></Link></th>
+                                {/*  card-h3*/}
+                            </tr>
+                            {card.map((item) => {
+                                return (
+                                    <>
+                                        <tr key={item.id} className=' my-2' style={{ listStyle: 'none' }}>
+                                            <td className='py-1'>{item.projectName}</td>
+                                            <td className='py-1'><Link style={{ padding: '0.3rem 1rem' }} className="btn btn-outline-primary rounded-pill" href="">Reviewing</Link></td>
+                                            <td className='py-1'>0/0</td>
+                                            <td className='py-1'>{item.askingPrice}</td>
+                                            <td className='py-1'><Link><img src={threeDots} alt="" /></Link></td>
+                                        </tr>
+                                    </>
+                                )
+                            })}
 
-                            <div className='buying-div2'>
-                                {card.map((item) => {
-                                    return (
-                                        <>
-                                            <div key={item.id} className='d-flex justify-content-between align-items-center my-2' style={{ listStyle: 'none' }}>
-                                                <span className='d-flex flex-wrap'>{item.projectName}</span>
-                                                <span><Link style={{ padding: '0.3rem 1rem' }} className="btn btn-outline-primary rounded-pill" href="">Reviewing</Link></span>
-                                                <span>0/0</span>
-                                                <span>{item.askingPrice}</span>
-                                                <span><Link><img src={threeDots} alt="" /></Link></span>
-                                            </div>
-                                        </>
-                                    )
-                                })}
-                                {/* <div className='d-flex justify-content-between align-items-center my-2' style={{ listStyle: 'none' }}>
+                             {/* <div className='d-flex justify-content-between align-items-center my-2' style={{ listStyle: 'none' }}>
                                         <span>UI Medical website</span>
                                         <span><Link style={{ padding: '0.3rem 1rem' }} className="btn btn-outline-primary rounded-pill" href="">Reviewing</Link></span>
                                         <span>0/0</span>
                                         <span>0</span>
                                         <span><Link><img src={threeDots} alt="" /></Link></span>
                                     </div> */}
-                            </div>
-                        </div>
+                        </table>
                     </div>
+
                 </div>
             </>
 

@@ -334,20 +334,20 @@ const Market = () => {
       {show === true && <>
         <section className="pricing-first-section">
           <div
-            className="pricing-backgroundImage"
-            style={{
+            className="pricing-backgroundImage" style={{background:'#161616', padding:'4rem 0 8rem 0'}}
+            >
+            {/* style={{
               backgroundImage: `url(${backgroundImg})`,
               width: "100%",
               height: "100vh",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
-            }}
-          >
+            }} */}
             <div className="owner-content">
               <div>
                 <div className="my-5">
                   <h1 className="main-h1 text-start col-6">
-                    Our Marketplace Holds Flagship Online Businesses To Aaquire! <br />
+                    Our Marketplace Holds Flagship Online Businesses To Acquire! <br />
                     <TypeAnimation
                       className="typeAnimation marketTypeAnimation"
                       style={{ fontSize: "3rem" }}
@@ -544,7 +544,7 @@ const Market = () => {
           className="marketMain"
           style={{ background: "#EEF0FE ", padding: "3rem" }}
         >
-          <section className="ligh-back my-5" style={{ height: "120%" }}>
+          <section className="ligh-back my-5" style={{ height: "fit-content" }}>
             <div
               className="card-container"
               style={{
@@ -574,12 +574,13 @@ const Market = () => {
                         src={item.link}
                         // src={require(`../images/template-images/${item.websiteName}.jpg`)}
                         alt=""
+                        className="marketLogoImage"
                         style={{
                           position: "relative",
-                          width: "100%",
+                          width: "18vw",
                           height: "200px",
                           objectFit: "cover",
-                          borderRadius: "20px 20px 0 0",
+                          borderRadius: "20px 20px 20px 20px",
                         }}
                       />
                       <div
@@ -595,7 +596,7 @@ const Market = () => {
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
@@ -605,7 +606,7 @@ const Market = () => {
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
@@ -615,7 +616,7 @@ const Market = () => {
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
@@ -625,7 +626,7 @@ const Market = () => {
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
@@ -686,14 +687,14 @@ const Market = () => {
                           ${item.askingPrice}
                         </h3>
                         <Link
-                          style={{ padding: "18px 48px" }}
+                          style={{ padding: "1.1rem 3rem" }}
                           className="btn btn-primary"
                           // to={`/placeDetail/${item.id}`}
                           onClick={() => detailPage(item)}
                         >
                           View details
                           <img
-                            style={{ width: "20px" }}
+                            style={{ width: "1.2rem" }}
                             src={arrow}
                             alt=""
                           />{" "}
@@ -742,7 +743,8 @@ const Market = () => {
           //////
           <>
             <section className='pricing-first-section'>
-              <div className="pricing-backgroundImage align-items-start" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+              <div className="pricing-backgroundImage align-items-start" style={{ background:'#161616',padding:'4rem 0 8rem 0' }}>
+              {/* backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' */}
                 <div className="owner-content">
                   <div>
                     {detail.map((dt, index) => {
@@ -769,7 +771,7 @@ const Market = () => {
 
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
 
-              <section className='placeDetail-section' style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
+              <section className='placeDetail-section' style={{ top: '-170px', position: 'relative', padding: '4rem' }}>
                 <>
                   {detail.map((item, index) => {
                     return (

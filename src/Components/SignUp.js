@@ -129,7 +129,7 @@ const SignUp = () => {
     <>
     <ToastContainer/>
       <section>
-        <div className="SignUp-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: '130%' }}>
+        <div className="SignUp-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: 'fit-content', padding:'2rem 0' }}>
           <div className="SignUp-first col-4 mx-2">
             <Link to="/"><img src={vector} alt="" /></Link>
             <h1 className="my-4" style={{ color: '#fff', fontWeight: '700' }}>Sign up for a free account to access the Marketplace</h1>

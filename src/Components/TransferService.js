@@ -18,7 +18,8 @@ const TransferService = () => {
             </section>
 
             <section className='pricing-first-section'>
-                <div className="Ownermain" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="Ownermain" style={{background:'#161616'}}>
+                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>

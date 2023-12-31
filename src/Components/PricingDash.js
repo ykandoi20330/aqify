@@ -71,8 +71,8 @@ const PricingDash = () => {
         {show === 1 && (
           <>
             <div
-              className="pricing-card"
-              style={{ height: "60%", position: "relative" }}
+              className="pricing-card pricing-free"
+              style={{ height: "fit-content", position: "relative" , width:'50%'}}
             >
               <span className="span1">Basic</span>
               <h1>Free</h1>
@@ -101,7 +101,7 @@ const PricingDash = () => {
 
             <div
               className="pricing-card pricingCard2"
-              style={{ height: "100%", position: "relative", width: "65%" }}
+              style={{ height: "fit-content", position: "relative", width: "60%" }}
             >
               <span className="span1">Prime</span>
               <h1>Free</h1>
@@ -190,7 +190,7 @@ const PricingDash = () => {
 
         {show === 2 && (
           <>
-            <div className="pricing-card" style={{ position: "relative" }}>
+            <div className="pricing-card pricing-free" style={{ position: "relative", width:'50%' }}>
               <span className="span1">Basic</span>
               <h1>Free</h1>
               <span
@@ -218,7 +218,7 @@ const PricingDash = () => {
 
             <div
               className="pricing-card pricingCard2"
-              style={{ height: "100%", position: "relative", width: "60%" }}
+              style={{ height: "fit-content", position: "relative", width: "60%" }}
             >
               <span className="span1">Premium</span>
               <h1>

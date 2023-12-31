@@ -14,7 +14,7 @@ const Footer = () => {
         <>
             <section className='footer-section'>
                 <div className='d-grid align-content-between align-items-center'>
-                    <div style={{width:'95%',top:'5vh',position:"relative"}} className='footer-main d-flex justify-content-between'>
+                    <div style={{width:'95%',position:"relative"}} className='footer-main d-flex justify-content-between'>
                         <div className="footer-main col-5">
                             <Link to="/"><img style={{ width: '35%', marginRight:'1rem' }} src={Logo} alt="" /></Link>
                             <span style={{ color: '#C0C0C0',fontSize:'20px' }}>- Unleashing Full Acquisitions Potential</span>

@@ -13,7 +13,8 @@ const FAQ = () => {
 
         {/** */}
             <section className='pricing-first-section'>
-                <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="pricing-backgroundImage" style={{background:'#161616', padding:'4rem 0 8rem 0'}}>
+                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
                     <h1 className='col-6 text-center'>DON’T LET DOUBTS COME IN YOUR WAY! HELP IS HERE!</h1>
                 </div>
             </section>

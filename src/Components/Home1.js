@@ -50,7 +50,8 @@ const Home1 = () => {
 
             {/** */}
             < section className='homeSection'>
-                <div className='Tamplate-main' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Tamplate-main' style={{background:'#161616' }}>
+                {/* backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat'  */}
                     <div className='fade-contain  d-flex flex-row'>
                         <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className='d-flex'>
                             <div className="content" style={{ top: '0px' }}>
@@ -110,16 +111,16 @@ const Home1 = () => {
                             </video>
                         </div>
                     </div>
-                    <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
+                    {/* <div style={{ bottom: '0', right: '0', position: 'absolute' }}>
                         <img className='bottomCircle1' src={circle1} alt="" />
                         <img className='bottomCircle2' src={circle2} alt="" />
-                    </div>
+                    </div> */}
                 </div >
             </section >
 
             {/*second section */}
             < section >
-                <div className='Tamplate-secondPart d-flex flex-column align-items-center' style={{ padding: '4rem', height: '100%', background: '#EEF0FE', position: 'relative' }}>
+                <div className='Tamplate-secondPart d-flex flex-column align-items-center' style={{ padding: '4rem',  background: '#EEF0FE', position: 'relative' }}>
                     <h1 className='listing-h1 text-center'>Featured On</h1>
                     <span className='listing-span text-center'>Every Monday, find new businesses for sale at Acqify!</span>
 
@@ -148,11 +149,11 @@ const Home1 = () => {
 
                     <div className='Explore-part d-flex justify-content-around' style={{ width: '100%' }}>
                         <div className='explore-div' data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '50%' }}>
-                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding:'2rem' }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
                                         <h1>Buy a project</h1>
-                                        <span className='col-8 d-flex' style={{ fontSize: '20px', fontWeight: '500' }}>Building a business from scratch is rough! Acqify helps you buy online business that fit your criteria.</span>
+                                        <span className='col-8 d-flex' style={{ fontSize: '1.2rem', fontWeight: '500' }}>Building a business from scratch is rough! Acqify helps you buy online business that fit your criteria.</span>
                                         <div className='my-4'>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
@@ -179,11 +180,11 @@ const Home1 = () => {
                             </div>
                         </div>
                         <div className='explore-div mx-3' data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '50%' }}>
-                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding:'2rem'  }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
                                         <h1>Sell a project</h1>
-                                        <span className='d-flex col-8' style={{ fontSize: '20px', fontWeight: '500' }}>You get suitable liquidation options being our seller. List your business  and find your perfect buyer.</span>
+                                        <span className='d-flex col-8' style={{ fontSize: '1.2rem', fontWeight: '500' }}>You get suitable liquidation options being our seller. List your business  and find your perfect buyer.</span>
                                         <div className='my-4'>
                                             <div className='my-3'>
                                                 <img style={{ marginRight: '1rem' }} width={25} src={trueImg} alt="" />
@@ -203,8 +204,8 @@ const Home1 = () => {
                                             </div> */}
                                         </div>
                                         <div className=''>
-                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light' to="/singup">Sign up</Link>
-                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2' to="#video">Demo</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-light mt-1' to="/singup">Sign up</Link>
+                                            <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light mx-2 mt-1' to="#video">Demo</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -328,25 +329,25 @@ const Home1 = () => {
             {/*Seven Home section */}
 
             <section>
-                <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
+                <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '3rem 0', background: '#EEF0FE' }}>
                     <h2 className='fourth-h1'>Acqify Premium</h2>
                     <span className='text-center' style={{ color: '#636363' }}>Everything you need to acquire your next project.</span>
                 </div>
-                <div className="pricing-back" style={{ height: '120vh' }}>
-                    <div className="pricing-card" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ height: '90%' }}>
+                <div className="pricing-back">
+                    <div className="pricing-card pricing-free" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ width: '35%' }}>
                         <span className='span1'>Basic</span>
                         <h1>Free</h1>
-                        <span className='col-10' style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
+                        <span className='col-10' style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Join Acqify and sell your business without paying a cent!</span>
                         <div className='my-4'>
                             <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
                             <span style={{ color: '#636363' }}>Know about potential verified buyers on the marketplace</span>
                         </div>
                     </div>
 
-                    <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400" style={{ height: '90%', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400" style={{ width: '35%' }}>
                         <span className='span1'>Premium</span>
                         <h1>$99<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Premium, Stay Updated On New Assets.</span>
+                        <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Premium, Stay Updated On New Assets.</span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
@@ -374,10 +375,12 @@ const Home1 = () => {
                         </div>
                     </div>
 
-                    <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="800" style={{ height: '90%', width: '35%' }}>
+                    <div className="pricing-card pricingCard2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="800" style={{ width: '35%' }}>
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
-                        <span style={{ color: '#636363', fontSize: '20px', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee</span>
+                        <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee
+                        <br/>
+                        </span>
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
@@ -445,7 +448,7 @@ const Home1 = () => {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3>$149<span style={{fontSize:'15px',color:'#636363'}}>/6mths</span></h3>
+                                            <h3>$149<span style={{fontSize:'1rem',color:'#636363'}}>/6mths</span></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -469,7 +472,7 @@ const Home1 = () => {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3>$199<span style={{fontSize:'15px',color:'#636363'}}>/year</span></h3>
+                                            <h3>$199<span style={{fontSize:'1rem',color:'#636363'}}>/year</span></h3>
                                         </div>
                                     </div>
 
@@ -484,7 +487,7 @@ const Home1 = () => {
             </section>
 
             {/** */}
-            <section style={{ height: '150vh', background: '#EEF0FE' }}>
+            <section style={{ background: '#EEF0FE' }}>
                 <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '50px 0' }}>
                     <h2 className='fourth-h1' style={{width:'56%'}}>Demo Video - How To Start Your Journey With Aciqfy</h2>
                     <span className='text-center' style={{ color: '#636363' }}>Explore all the tips for cracking high revenue deals for yourself!</span>

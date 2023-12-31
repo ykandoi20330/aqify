@@ -90,7 +90,7 @@ const SignIn = () => {
     <>
     <ToastContainer/>
       <section>
-        <div className="Signin-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: '130%' }}>
+        <div className="Signin-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: 'fit-content', padding:'2rem 0' }}>
           <div className="signIn-card">
             <div className="d-flex flex-column align-items-center mb-4">
               <div className='my-2'>

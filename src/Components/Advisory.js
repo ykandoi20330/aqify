@@ -26,7 +26,8 @@ const Advisory = () => {
 
             {/** */}
             <section>
-                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain'>
+                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }} */}
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
