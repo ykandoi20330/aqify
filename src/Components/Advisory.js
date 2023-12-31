@@ -1,4 +1,8 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import ENV from '../config.js'
+
 import backgroundImg from "./Owner/unsplash_5U_28ojjgms2.png"
 //
 import location from "./MarketDash/VectorLoaction.svg"
@@ -18,6 +22,26 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 
 const Advisory = () => {
+
+    const [card, setCard] = useState([]);
+    
+    useEffect(() => {
+        getCard();
+    }, []);
+
+    const getCard = async () => {
+        try {
+            const response = await axios.get(
+                `${ENV.BACKEND_URL}/advisory/getAdvisory`);
+            console.log(response.data.advisory);
+            setCard(response.data.advisory);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
     return (
         <>
             <section>

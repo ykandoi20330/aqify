@@ -66,7 +66,7 @@ const ProofOfFund = () => {
     proof.append("image", file);
     axios
       .post(
-        "https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813",
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
         proof,
         {
           headers: {
