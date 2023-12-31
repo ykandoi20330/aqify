@@ -23,34 +23,13 @@ const TransferService = () => {
     payerType: "",
   });
 
-<<<<<<< HEAD
-            <section className='pricing-first-section'>
-                <div className="Ownermain" style={{background:'#161616'}}>
-                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
-                    <div className="owner-content">
-                        <div>
-                            <div className='my-5'>
-                                <h1 className='main-h1 col-10'>Transfer By Acqify
-                                </h1>
-                            </div>
-                            <div className='my-4'>
-                                <span className='main-span col-7 d-flex'>
-                                    Safe and fast startup acquisition service — 24/7 support.
-                                </span>
-                            </div>
-                            <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Get Started Now<img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
-                            </div>
-                        </div>
-                    </div>
-=======
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     console.log(formData);
   };
->>>>>>> dcc59b0938553ced5fd38c41b27c82100eb5853a
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
     try {
@@ -65,16 +44,16 @@ const TransferService = () => {
           body: JSON.stringify({ formData }),
         }
       );
-        const data = await response.json();
-        console.warn(data);
-        setFormData({
-            startupName: "",
-            ownerName: "",
-            ownerEmail: "",
-            acquirerName: "",
-            acquirerEmail: "",
-            payerType: "",
-        });
+      const data = await response.json();
+      console.warn(data);
+      setFormData({
+        startupName: "",
+        ownerName: "",
+        ownerEmail: "",
+        acquirerName: "",
+        acquirerEmail: "",
+        payerType: "",
+      });
 
     } catch (error) {
       console.log(error);
@@ -87,43 +66,26 @@ const TransferService = () => {
         <Navbar />
       </section>
 
-      <section className="pricing-first-section">
-        <div
-          className="Ownermain"
-          style={{
-            backgroundImage: `url(${backgroundImg})`,
-            width: "100%",
-            height: "80vh",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
+      <section className='pricing-first-section'>
+        <div className="Ownermain" style={{ background: '#161616' }}>
+          {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
           <div className="owner-content">
             <div>
-              <div className="my-5">
-                <h1 className="main-h1 col-10">Transfer By Acqify</h1>
+              <div className='my-5'>
+                <h1 className='main-h1 col-10'>Transfer By Acqify
+                </h1>
               </div>
-              <div className="my-4">
-                <span className="main-span col-7 d-flex">
+              <div className='my-4'>
+                <span className='main-span col-7 d-flex'>
                   Safe and fast startup acquisition service — 24/7 support.
                 </span>
               </div>
-              <div className="">
-                <Link
-                  style={{ fontSize: "1.5rem" }}
-                  className="btn btn-primary"
-                  to="/singup"
-                >
-                  Get Started Now
-                  <img
-                    style={{ width: "7%", marginLeft: "20px" }}
-                    src={arrow}
-                    alt=""
-                  />
-                </Link>
+              <div className=''>
+                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Get Started Now<img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
