@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aqify/static/css/main.108d5d54.css",
-    "main.js": "/aqify/static/js/main.d298e436.js",
+    "main.css": "/aqify/static/css/main.9b1604d5.css",
+    "main.js": "/aqify/static/js/main.a86fd34a.js",
     "static/js/787.9353463e.chunk.js": "/aqify/static/js/787.9353463e.chunk.js",
     "static/media/unsplash_5U_28ojjgms.png": "/aqify/static/media/unsplash_5U_28ojjgms.32ced7bf2156e9cc06cb.png",
     "static/media/acqify.mp4": "/aqify/static/media/acqify.2f40c62005e4d3642e7a.mp4",
@@ -63,12 +63,12 @@
     "static/media/VectorProof.svg": "/aqify/static/media/VectorProof.e476e67ddfa0eaf428892ed880ef1532.svg",
     "static/media/folder.svg": "/aqify/static/media/folder.7d351de5cb399490ea66f4cfcf4e85eb.svg",
     "static/media/VectorFund.svg": "/aqify/static/media/VectorFund.9a2fa827de189b67a6ba7b2e7d06eb20.svg",
-    "main.108d5d54.css.map": "/aqify/static/css/main.108d5d54.css.map",
-    "main.d298e436.js.map": "/aqify/static/js/main.d298e436.js.map",
+    "main.9b1604d5.css.map": "/aqify/static/css/main.9b1604d5.css.map",
+    "main.a86fd34a.js.map": "/aqify/static/js/main.a86fd34a.js.map",
     "787.9353463e.chunk.js.map": "/aqify/static/js/787.9353463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.108d5d54.css",
-    "static/js/main.d298e436.js"
+    "static/css/main.9b1604d5.css",
+    "static/js/main.a86fd34a.js"
   ]
 }
