@@ -289,16 +289,16 @@ const MarketplaceDash2 = () => {
                               {item.projectName}
                             </h3>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {item.techStack}
+                              {item.techStack1}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {item.techStack}
+                              {item.techStack2}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {item.techStack}
+                              {item.techStack3}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {item.techStack}
+                              {item.techStack4}
                             </button>
                           </div>
                           {/* <div>
@@ -416,10 +416,10 @@ const MarketplaceDash2 = () => {
                       </div>
                       <div className="firstPart" style={{ marginLeft: "2rem" }}>
                         <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack1}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack2}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack3}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack4}</button>
                       </div>
                     </div>
                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
@@ -438,10 +438,10 @@ const MarketplaceDash2 = () => {
                       <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                           </div>
                           <div class="carousel-item">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" /> 
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" /> 
                           </div>
                         </div>
                       </div>

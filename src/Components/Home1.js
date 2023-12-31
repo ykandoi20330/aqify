@@ -20,6 +20,9 @@ import personImg from "./Aqify project/Ellipse 8.png"
 import circle1 from "./Aqify project/Ellipse 57.png"
 import circle2 from "./Aqify project/Ellipse 58.png"
 
+//Logos Images
+import microsoft from "./HomePage/microsoft-logo-svgrepo-com.svg"
+
 import Footer from "./Footer"
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation';
@@ -50,8 +53,8 @@ const Home1 = () => {
 
             {/** */}
             < section className='homeSection'>
-                <div className='Tamplate-main' style={{background:'#161616' }}>
-                {/* backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat'  */}
+                <div className='Tamplate-main' style={{ background: '#161616' }}>
+                    {/* backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat'  */}
                     <div className='fade-contain  d-flex flex-row'>
                         <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" className='d-flex'>
                             <div className="content" style={{ top: '0px' }}>
@@ -62,7 +65,7 @@ const Home1 = () => {
                                                 {/* Future Lift: Elevate with
                                                 Acqify's Effortless Start */}
                                                 How Does It Feel To Keep Profitable Acquisition Projects In Your Pocket?
-                                                </span><br />
+                                            </span><br />
                                             <TypeAnimation className='typeAnimation'
                                                 sequence={[
                                                     'Ecommerce', // Types 'One'
@@ -93,14 +96,14 @@ const Home1 = () => {
                                             {/* Future Entrepreneurship: Simple Founder Exits. Join the
                                             Exclusive Marketplace - Free, Direct, Private! */}
                                             Acqify is a full-fledge marketplace where you acquire and sell assets
-                                             while overcoming acquisition blockades like a pro.
+                                            while overcoming acquisition blockades like a pro.
                                         </span>
                                     </div>
                                     <div className=''>
                                         <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary my-1' to="/singup">Start Acqify's Tour!<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
                                         <Link style={{ fontSize: '1.5rem' }} className='btn btn-outline-primary mx-2 my-2' to="/singup">
                                             {/* Seller | Buyers |  */}
-                                        Successful Deals<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
+                                            Successful Deals<img className='mx-2' style={{ width: '10%' }} src={arrow} alt="" /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -120,36 +123,37 @@ const Home1 = () => {
 
             {/*second section */}
             < section >
-                <div className='Tamplate-secondPart d-flex flex-column align-items-center' style={{ padding: '4rem',  background: '#EEF0FE', position: 'relative' }}>
+                <div className='Tamplate-secondPart d-flex flex-column align-items-center' style={{ padding: '4rem', background: '#EEF0FE', position: 'relative' }}>
                     <h1 className='listing-h1 text-center'>Featured On</h1>
                     <span className='listing-span text-center'>Every Monday, find new businesses for sale at Acqify!</span>
 
                     <div className='tamplate-logoBox d-flex' style={{ width: '100%' }}>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ width: '100%' }}>
-                            <div className="card-tamplate text-center">
-                                <h4>Logo</h4>
+                            {/* className="card-tamplate " */}
+                            <div className="d-flex align-items-center justify-content-center">
+                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '100%' }}>
-                            <div className="card-tamplate text-center" >
-                                <h4>Logo</h4>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" style={{ width: '100%' }}>
-                            <div className="card-tamplate text-center" >
-                                <h4>Logo</h4>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="900" style={{ width: '100%' }}>
-                            <div className="card-tamplate text-center">
-                                <h4>Logo</h4>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
                     </div>
 
                     <div className='Explore-part d-flex justify-content-around' style={{ width: '100%' }}>
                         <div className='explore-div' data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '50%' }}>
-                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding:'2rem' }}>
+                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding: '2rem' }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
                                         <h1>Buy a project</h1>
@@ -180,7 +184,7 @@ const Home1 = () => {
                             </div>
                         </div>
                         <div className='explore-div mx-3' data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '50%' }}>
-                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding:'2rem'  }}>
+                            <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right', padding: '2rem' }}>
                                 <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                                     <div style={{ color: '#fff' }}>
                                         <h1>Sell a project</h1>
@@ -379,7 +383,7 @@ const Home1 = () => {
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
                         <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee
-                        <br/>
+                            <br />
                         </span>
                         <div className='my-4'>
                             <div className='my-3'>
@@ -413,22 +417,22 @@ const Home1 = () => {
             <section className='d-flex align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
 
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Join Premium Now <i class="fa-solid fa-chevron-right" style={{color: "#ffffff"}}></i>
+                    Join Premium Now <i class="fa-solid fa-chevron-right" style={{ color: "#ffffff" }}></i>
                 </button>
 
 
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content" style={{borderRadius:'20px'}}>
-                            <div class="modal-header" style={{border:'none'}}>
+                        <div class="modal-content" style={{ borderRadius: '20px' }}>
+                            <div class="modal-header" style={{ border: 'none' }}>
                                 <div>
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style={{fontWeight:'700'}}>Pricing plans</h1>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style={{ fontWeight: '700' }}>Pricing plans</h1>
                                     <span>Choose a plan that's right for you.</span>
                                 </div>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div className='' style={{border:'1px solid lightgray',borderRadius:'20px',padding:'2rem'}}>
+                                <div className='' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
                                     <div class="form-check d-flex justify-content-between">
                                         <div>
                                             <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -448,11 +452,11 @@ const Home1 = () => {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3>$149<span style={{fontSize:'1rem',color:'#636363'}}>/6mths</span></h3>
+                                            <h3>$149<span style={{ fontSize: '1rem', color: '#636363' }}>/6mths</span></h3>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='my-3' style={{border:'1px solid lightgray',borderRadius:'20px',padding:'2rem'}}>
+                                <div className='my-3' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
                                     <div class="form-check d-flex justify-content-between">
                                         <div>
                                             <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
@@ -472,13 +476,13 @@ const Home1 = () => {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3>$199<span style={{fontSize:'1rem',color:'#636363'}}>/year</span></h3>
+                                            <h3>$199<span style={{ fontSize: '1rem', color: '#636363' }}>/year</span></h3>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="modal-footer" style={{border:'none'}}>
+                            <div class="modal-footer" style={{ border: 'none' }}>
                                 <button type="button" class="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
                             </div>
                         </div>
@@ -489,7 +493,7 @@ const Home1 = () => {
             {/** */}
             <section style={{ background: '#EEF0FE' }}>
                 <div className='d-flex flex-column align-items-center justify-content-center' style={{ padding: '50px 0' }}>
-                    <h2 className='fourth-h1' style={{width:'56%'}}>Demo Video - How To Start Your Journey With Aciqfy</h2>
+                    <h2 className='fourth-h1' style={{ width: '56%' }}>Demo Video - How To Start Your Journey With Aciqfy</h2>
                     <span className='text-center' style={{ color: '#636363' }}>Explore all the tips for cracking high revenue deals for yourself!</span>
                 </div>
 

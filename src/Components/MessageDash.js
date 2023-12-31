@@ -244,11 +244,11 @@ const MessageDash = () => {
                                     " text-left inline-block p-2 my-2 rounded-md text-sm " +
                                     (message.sender === id
                                       ? "bg-primary text-white"
-                                      : "bg-light text-gray-500")
+                                      : "bg-light text-primary")
                                   }
                                   style={{
                                     borderRadius: "50px",
-                                    width: "auto",
+                                    width: "fit-content",
                                   }}
                                 >
                                   {message.message}
@@ -361,11 +361,12 @@ const MessageDash = () => {
                 <div
                   onClick={() => setShow(false)}
                   style={{ textDecoration: "none" }}
-                  className="d-flex justify-content-between my-5"
+                  className=" my-5"
                 >
                   {allChats.map((chat, i) => {
                     return (
                       <>
+                      <div className="d-flex justify-content-between my-2">
                         <div className="d-flex ">
                           <div
                             key={i}
@@ -404,6 +405,7 @@ const MessageDash = () => {
                               {i}+
                             </span>
                           </div>
+                        </div>
                         </div>
                       </>
                     );

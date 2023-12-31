@@ -3349,7 +3349,6 @@ input[type="file"] {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    width: fit-content !important;
   }
 
   /***************** Onbaord Section *******************/
@@ -4202,7 +4201,7 @@ input[type="file"] {
   }
 
   .firstPart {
-    width: 120% !important;
+    width: 100% !important;
   }
 
   .firstPart h3 {
