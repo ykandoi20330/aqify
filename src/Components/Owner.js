@@ -204,7 +204,7 @@ const Owner = () => {
                     <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Head Over To Our Advisor Portal And Get A Second Opinion!</h1>
-                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>We recommend locking your sit-in with our experts to achieve your revenue target successfully. </span>
+                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '1.2rem' }}>We recommend locking your sit-in with our experts to achieve your revenue target successfully. </span>
                             <div className='my-5'>
                                 <Link style={{ fontSize: '1.5rem', fontSize: "1.5rem", padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Take Me To Advisor Portal!</Link>
                             </div>

@@ -203,7 +203,7 @@ const Acquirers = () => {
                     <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Meet a Pro Acquirer Inside You, Get Verified at Acqify!</h1>
-                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>The slots are filling, and the listings are growing bigger.
+                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '1.2rem' }}>The slots are filling, and the listings are growing bigger.
                              The range of assets is endless. Join hands with Acqify to unlock all the acquiring perks!</span>
                             <div className='my-5'>
                                 <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Join Now!</Link>

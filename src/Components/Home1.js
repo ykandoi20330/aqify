@@ -22,6 +22,7 @@ import circle2 from "./Aqify project/Ellipse 58.png"
 
 //Logos Images
 import microsoft from "./HomePage/microsoft-logo-svgrepo-com.svg"
+import Xartup from "./HomePage/Xartup (1).png"
 
 import Footer from "./Footer"
 import { Link } from 'react-router-dom'
@@ -134,14 +135,14 @@ const Home1 = () => {
                                 <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
-                        <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '100%' }}>
+                        <div className='mx-2 d-flex align-items-center justify-content-center' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '100%' }}>
                             <div className="d-flex align-items-center justify-content-center">
-                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
+                                <img style={{ width: '10rem' }} src={Xartup} alt="" />
                             </div>
                         </div>
-                        <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" style={{ width: '100%' }}>
+                        <div className='mx-2 d-flex  align-items-center justify-content-center' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" style={{ width: '100%' }}>
                             <div className="d-flex align-items-center justify-content-center">
-                                <img style={{ width: '10rem' }} src={microsoft} alt="" />
+                                <img style={{ width: '10rem' }} src={Xartup} alt="" />
                             </div>
                         </div>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="900" style={{ width: '100%' }}>

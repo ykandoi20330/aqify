@@ -975,7 +975,7 @@ ul {
   --bs-card-group-margin: 0.75rem !important;
   position: relative !important;
   display: flex !important;
-  /* flex-direction: column !important; */
+  flex-direction: column !important;
   min-width: 0 !important;
   color: var(--bs-body-color) !important;
   word-wrap: break-word !important;
@@ -4146,7 +4146,7 @@ input[type="file"] {
 
   .main-h1 {
     font-size: 2.5rem !important;
-    width: 95% !important;
+    width: 93% !important;
   }
 
   .col-7 {
@@ -5139,19 +5139,19 @@ input[type="file"] {
 
 @media screen and (max-width:1200px) {
   html{
-    font-size:70%;
+    font-size:75%;
   }
 }
 
 @media screen and (max-width:992px) {
   html{
-    font-size: 65%;
+    font-size: 70%;
   }
 }
 
 @media screen and (max-width:768px) {
   html{
-    font-size: 55%;
+    font-size: 65%;
   }
 
   .pricing-backgroundImage{
@@ -5161,7 +5161,7 @@ input[type="file"] {
 
 @media screen and (max-width:600px) {
   html{
-    font-size: 45%;
+    font-size: 60%;
   }
 
   .pricing-backgroundImage{

@@ -441,7 +441,7 @@ const MarketplaceDash2 = () => {
                             <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                           </div>
                           <div class="carousel-item">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" /> 
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" />
                           </div>
                         </div>
                       </div>
@@ -724,7 +724,7 @@ const MarketplaceDash2 = () => {
                           <img src={offer} alt="" />
                           <span className='mx-2' >Make Offer</span>
                         </Link>
-                        <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                        <Link className='my-3 d-flex align-items-center justify-content-center' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                           <span className='mx-2' >Watch video Path</span>
                         </Link>
@@ -799,6 +799,35 @@ const MarketplaceDash2 = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content" style={{background:'#000'}}>
+              <div class="modal-header" style={{ border: 'none' }}>
+                {detail.map((item, i) => {
+                  return (
+                    <h1 key={i} class="modal-title fs-5" style={{color:'#fff'}} id="staticBackdropLabel">{item.projectName}</h1>
+                  )
+                })}
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {detail.map((items, i) => {
+                  return (
+                    <video key={i} style={{width:'100%'}} controls autoplay>
+                      <source src={items.video} type="video/mp4" />
+                    </video>
+                  )
+                })}
+              </div>
+              <div class="modal-footer" style={{ border: 'none' }}>
+                <button type="button" class="btn btn-secondary" style={{ padding: '0.5rem 1.5rem', borderRadius:'50px' }} data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

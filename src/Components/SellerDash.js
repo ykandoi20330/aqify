@@ -355,7 +355,7 @@ const SellerDash = () => {
       if (response.status === 201) {
         const data = await response.json();
         console.warn(data);
-        navigate("/MainDashboard/MarketDash");
+        navigate("/MarketDash2");
       } else if (response.status === 400) {
         console.log("Already Exist");
       } else {
