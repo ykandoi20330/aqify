@@ -5129,7 +5129,7 @@ input[type="file"] {
 
 @media screen and (max-width:1400px) {
   html{
-    font-size:80%;
+    font-size:88%;
   }
 
   .pricing-backgroundImage{
@@ -5139,19 +5139,19 @@ input[type="file"] {
 
 @media screen and (max-width:1200px) {
   html{
-    font-size:75%;
+    font-size:85%;
   }
 }
 
 @media screen and (max-width:992px) {
   html{
-    font-size: 70%;
+    font-size: 80%;
   }
 }
 
 @media screen and (max-width:768px) {
   html{
-    font-size: 65%;
+    font-size: 78%;
   }
 
   .pricing-backgroundImage{
@@ -5161,7 +5161,7 @@ input[type="file"] {
 
 @media screen and (max-width:600px) {
   html{
-    font-size: 60%;
+    font-size: 77%;
   }
 
   .pricing-backgroundImage{

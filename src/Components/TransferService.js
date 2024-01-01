@@ -106,7 +106,7 @@ const TransferService = () => {
               <div className="card-tamplate ">
                 <h3 className="my-3">Fully Transparent</h3>
                 <span>
-                  Microns act as a trusted middleman between buyer and seller.
+                  Acqify act as a trusted middleman between buyer and seller.
                   So they don't worry about stealing money or assets.
                 </span>
               </div>
@@ -382,9 +382,9 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span>
-                    It's a service offered by Microns, a marketplace
+                    It's a service offered by Acqify, a marketplace
                     specializing in buying and selling small online startups.
-                    Transfer by Microns helps users securely close their deals
+                    Transfer by Acqify helps users securely close their deals
                     by providing a service to ensure a smooth ownership
                     transition.
                   </span>{" "}
@@ -413,7 +413,7 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                    Only Microns buyers or sellers can use the transfer service.
+                    Only Acqify buyers or sellers can use the transfer service.
                     The service is designed to help both parties in the
                     transaction to complete the deal securely and fast.
                   </span>
