@@ -6,6 +6,7 @@
 
 export default {
     BACKEND_URL: "http://localhost:5000",
-    GOOGLE : "http://localhost:5000/auth/google",
+    GOOGLE: "http://localhost:5000/auth/google",
     FRONTEND_URL: "http://localhost:3000",
+    AGORA_APP_ID: "dddb85ef72bb477da91d180b9f804357",
 }
