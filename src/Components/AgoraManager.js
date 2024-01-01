@@ -13,6 +13,7 @@ import {
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { IMicrophoneAudioTrack, ICameraVideoTrack } from "agora-rtc-sdk-ng";
+import { useNavigate } from "react-router-dom";
 
 // Create the Agora context
 const AgoraContext = createContext(null);
@@ -37,7 +38,7 @@ export const AgoraManager = ({ config, children }) => {
     const agoraEngine = useRTCClient();
     const { isLoadingCam, localCameraTrack } = useLocalCameraTrack();
     const { isLoadingMic, localMicrophoneTrack } = useLocalMicrophoneTrack();
-
+    const navigate = useNavigate();
     const remoteUsers = useRemoteUsers();
     console.log(remoteUsers)
 
@@ -56,6 +57,8 @@ export const AgoraManager = ({ config, children }) => {
     });
 
     useClientEvent(agoraEngine, "user-left", (user) => {
+        user.videoTrack?.stop();
+        user.audioTrack?.stop();
         console.log("The user", user.uid, " has left the channel");
     });
 
@@ -74,13 +77,33 @@ export const AgoraManager = ({ config, children }) => {
     const deviceLoading = isLoadingMic || isLoadingCam;
     if (deviceLoading) return <div>Loading devices...</div>;
 
+    const toggleAudio = () => {
+        localMicrophoneTrack?.setMuted(!localMicrophoneTrack?.muted);
+    };
+
+    const toggleVideo = () => {
+        localCameraTrack?.setMuted(!localCameraTrack?.muted);
+    };
+
     // Render the AgoraProvider and associated UI components
     return (
         <AgoraProvider localCameraTrack={localCameraTrack} localMicrophoneTrack={localMicrophoneTrack}>
             {children}
-            <div id="videos">
+            <div id="videos" style={{
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row",
+                gap: 20,
+                flexWrap: "wrap",
+            }}>
                 {/* Render the local video track */}
-                <div className="vid" style={{ height: 300, width: 600 }}>
+                <div style={{
+                    height: 300,
+                    width: 600,
+                }}>
                     <LocalUser
                         audioTrack={localMicrophoneTrack}
                         cameraOn
@@ -89,11 +112,33 @@ export const AgoraManager = ({ config, children }) => {
                         playVideo
                         videoTrack={localCameraTrack}
                     />
+
+
+
+                    <button onClick={() => {
+                        toggleVideo()
+                    }}>
+                        {localCameraTrack?.muted ? "Start Video" : "Stop Video"}
+                    </button>
+
+                    <button onClick={() => {
+                        toggleAudio()
+                    }}>
+                        {
+                            localMicrophoneTrack?.muted ? "Start Audio" : "Stop Audio"
+                        }
+                    </button>
+
+                    <button onClick={() => {
+                        localCameraTrack?.close();
+                        localMicrophoneTrack?.close();
+                        navigate("/MainDashboard");
+                    }}>Leave</button>
+
                 </div>
                 {/* Render remote users' video and audio tracks */}
                 {remoteUsers.map((remoteUser) => (
                     <div className="vid" style={{ height: 300, width: 600 }} key={remoteUser.uid}>
-                        {remoteUser.uid}
                         <RemoteUser user={remoteUser} playVideo={true} playAudio={true} />
                     </div>
                 ))}
