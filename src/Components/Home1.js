@@ -238,7 +238,7 @@ const Home1 = () => {
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="400" className="card-four">
                         <img width={150} src={FourthCard2} alt="" />
                         <h3 className='my-3'>Get An Edge From Integrated Buyer Network</h3>
-                        <span className='largeSpan'>Discover diversified buyers worldwide, and hop on to streamline business scaling.</span>
+                        <span className=''>Discover diversified buyers worldwide, and hop on to streamline business scaling.</span>
                     </div>
                     <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="500" className="card-four">
                         <img width={150} src={FourthCard3} alt="" />
@@ -248,7 +248,7 @@ const Home1 = () => {
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="600" className="card-four">
                         <img width={150} src={FourthCard4} alt="" />
                         <h3 className='my-3'>Receive Real-time Counseling </h3>
-                        <span className='largeSpan'>Become an easy decision-maker with hands-on expert guidance before locking your deals.</span>
+                        <span className=''>Become an easy decision-maker with hands-on expert guidance before locking your deals.</span>
                     </div>
                 </div>
             </section >

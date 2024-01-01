@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <div className='hero1'>
-        <nav className='navbar navbar-expand-lg navbar-dark navline' id="middleNav" style={{ zIndex: "5", position: 'relative', top: '0px', background: '#161616' }}>
+        <nav className='navbar navbar-expand-lg navbar-dark navline py-3' id="middleNav" style={{ zIndex: "5", position: 'relative', top: '0px', background: '#161616' }}>
 
           <div class="container-fluid">
             <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /><span className='beta' style={{ color: '#c0c0c0', fontSize: '12px', position: 'relative', right: '-78px', top: '8px' }}>Beta</span></Link>
