@@ -128,6 +128,7 @@ const Pricing = () => {
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
                         <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee
                         <br/>
+                        <br/>
                         </span>
                         <div className='my-4'>
                             <div className='my-3'>

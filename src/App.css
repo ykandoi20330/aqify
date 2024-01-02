@@ -5,7 +5,7 @@
 }
 
 html{
-  font-size: 90%;
+  font-size: 96%;
 }
 
 body {
@@ -797,6 +797,20 @@ ul {
   width: 50%;
 }
 
+.socialIcon{
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.socialIcon:hover{
+  color: #3247FF;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+
+
 .first-ul li {
   padding: 0.8rem 0;
 }
@@ -854,7 +868,6 @@ ul {
   padding: 4rem 3rem;
   border-radius: 1.2rem;
   border: none;
-  /* margin: 0 2rem; */
   margin: 0.5rem 0.5rem;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -3617,9 +3630,6 @@ input[type="file"] {
     left: 0px;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -4337,9 +4347,6 @@ input[type="file"] {
     width: 95% !important;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -4744,9 +4751,6 @@ input[type="file"] {
     width: 95% !important;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -5129,7 +5133,7 @@ input[type="file"] {
 
 @media screen and (max-width:1400px) {
   html{
-    font-size:80%;
+    font-size:90%;
   }
 
   .pricing-backgroundImage{
@@ -5139,19 +5143,19 @@ input[type="file"] {
 
 @media screen and (max-width:1200px) {
   html{
-    font-size:75%;
+    font-size:88%;
   }
 }
 
 @media screen and (max-width:992px) {
   html{
-    font-size: 70%;
+    font-size:85%;
   }
 }
 
 @media screen and (max-width:768px) {
   html{
-    font-size: 65%;
+    font-size:82%;
   }
 
   .pricing-backgroundImage{
@@ -5161,7 +5165,7 @@ input[type="file"] {
 
 @media screen and (max-width:600px) {
   html{
-    font-size: 60%;
+    font-size: 80%;
   }
 
   .pricing-backgroundImage{

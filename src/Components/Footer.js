@@ -59,10 +59,14 @@ const Footer = () => {
                             <div style={{ color: '#C0C0C0' }}>Copyright @Acqify | 2023</div>
                             <div>
                                 <ul style={{ listStyle: 'none' }} className='d-flex'>
-                                    <li><Link to="/"><img className='socailLogo' src={socail2} alt="" /></Link></li>
+                                    {/* <li><Link to="/"><img className='socailLogo' src={socail2} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail3} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail4} alt="" /></Link></li>
-                                    <li><Link to="/"><img className='socailLogo' src={socail5} alt="" /></Link></li>
+                                    <li><Link to="/"><img className='socailLogo' src={socail5} alt="" /></Link></li> */}
+                                    <li><i class="fa-brands fa-facebook mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-instagram mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-twitter mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-linkedin mx-3 socialIcon" ></i></li>
                                 </ul>
                             </div>
                         </div>
