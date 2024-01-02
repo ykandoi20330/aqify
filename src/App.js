@@ -56,7 +56,7 @@ function App() {
       <HashRouter>
         {/* <Navbar /> */}
         <Routes>
-          <Route path="/" element={<Home1 />} />
+          <Route path="/" element={<SignIn />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/owner" element={<Owner />} />
           <Route path="/acquire" element={<Acquirers />} />
