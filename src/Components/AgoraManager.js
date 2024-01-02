@@ -42,6 +42,10 @@ export const AgoraManager = ({ config, children }) => {
     const remoteUsers = useRemoteUsers();
     console.log(remoteUsers)
 
+    const [cameraOn, setCameraOn] = useState(true);
+    const [micOn, setMicOn] = useState(true);
+    const [playVideo, setPlayVideo] = useState(true);
+
     // Join the Agora channel with the specified configuration
     usePublish([localCameraTrack, localMicrophoneTrack]);
 
@@ -51,6 +55,8 @@ export const AgoraManager = ({ config, children }) => {
         token: null,
         uid: null,
     });
+
+    console.log(localCameraTrack)
 
     useClientEvent(agoraEngine, "user-joined", (user) => {
         console.log("The user", user.uid, " has joined the channel");
@@ -66,6 +72,7 @@ export const AgoraManager = ({ config, children }) => {
         console.log("The user", user.uid, " has published media in the channel");
     });
 
+
     useEffect(() => {
         return () => {
             localCameraTrack?.close();
@@ -78,11 +85,13 @@ export const AgoraManager = ({ config, children }) => {
     if (deviceLoading) return <div>Loading devices...</div>;
 
     const toggleAudio = () => {
-        localMicrophoneTrack?.setMuted(!localMicrophoneTrack?.muted);
+        localMicrophoneTrack?.setEnabled(!micOn);
+        setMicOn(!micOn);
     };
 
     const toggleVideo = () => {
-        localCameraTrack?.setMuted(!localCameraTrack?.muted);
+        localCameraTrack?.setEnabled(!cameraOn);
+        setCameraOn(!cameraOn);
     };
 
     // Render the AgoraProvider and associated UI components
@@ -99,49 +108,72 @@ export const AgoraManager = ({ config, children }) => {
                 gap: 20,
                 flexWrap: "wrap",
             }}>
+                {/* Render remote users' video and audio tracks */}
+                {remoteUsers.map((remoteUser) => (
+                    <div className="vid" style={{ height: 300, width: 600, borderRadius: 50 }} key={remoteUser.uid}>
+                        {
+                            remoteUser.hasVideo
+                                ? <RemoteUser user={remoteUser} playVideo={true} playAudio={true} style={{
+                                    height: 300,
+                                    width: 600,
+                                    borderRadius: 50,
+                                }} />
+                                : <div style={{ height: 300, width: 600, backgroundColor: "gray", borderRadius: 50, }}></div>
+                        }
+                    </div>
+                ))}
                 {/* Render the local video track */}
                 <div style={{
                     height: 300,
                     width: 600,
+                    borderRadius: 50
                 }}>
-                    <LocalUser
-                        audioTrack={localMicrophoneTrack}
-                        cameraOn
-                        micOn
-                        playAudio
-                        playVideo
-                        videoTrack={localCameraTrack}
-                    />
-
-
-
-                    <button onClick={() => {
-                        toggleVideo()
-                    }}>
-                        {localCameraTrack?.muted ? "Start Video" : "Stop Video"}
-                    </button>
-
-                    <button onClick={() => {
-                        toggleAudio()
-                    }}>
-                        {
-                            localMicrophoneTrack?.muted ? "Start Audio" : "Stop Audio"
-                        }
-                    </button>
-
-                    <button onClick={() => {
-                        localCameraTrack?.close();
-                        localMicrophoneTrack?.close();
-                        navigate("/MainDashboard");
-                    }}>Leave</button>
-
+                    {
+                        cameraOn ? <LocalUser
+                            audioTrack={localMicrophoneTrack}
+                            cameraOn={cameraOn}
+                            micOn={micOn}
+                            playAudio={false}
+                            playVideo={true}
+                            videoTrack={localCameraTrack}
+                            style={{
+                                height: 300,
+                                width: 600,
+                                borderRadius: 50,
+                            }}
+                        /> : <div style={{ height: 300, width: 600, backgroundColor: "gray", borderRadius: 50, }}></div>
+                    }
                 </div>
-                {/* Render remote users' video and audio tracks */}
-                {remoteUsers.map((remoteUser) => (
-                    <div className="vid" style={{ height: 300, width: 600 }} key={remoteUser.uid}>
-                        <RemoteUser user={remoteUser} playVideo={true} playAudio={true} />
-                    </div>
-                ))}
+            </div>
+            <div style={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                display: "flex",
+                flexDirection: "row",
+                gap: 20,
+                padding: 20,
+            }}>
+                <button onClick={() => {
+                    toggleVideo()
+                }}>
+                    {!cameraOn ? "Start Video" : "Stop Video"}
+                </button>
+
+                <button onClick={() => {
+                    toggleAudio()
+                }}>
+                    {
+                        !micOn ? "Start Audio" : "Stop Audio"
+                    }
+                </button>
+
+                <button onClick={() => {
+                    localCameraTrack?.close();
+                    localMicrophoneTrack?.close();
+                    navigate("/MainDashboard");
+                }}>Leave</button>
+
             </div>
         </AgoraProvider>
     );

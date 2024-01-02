@@ -720,7 +720,7 @@ const MarketplaceDash2 = () => {
                           navigate(`/call/${item.ownerId}`);
                         }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
-                          <span className='mx-2'>Audio Call</span>
+                          <span className='mx-2'>Video Call</span>
                         </div>
                         <Link className='my-3 d-flex align-items-center justify-content-center' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <img src={offer} alt="" />
