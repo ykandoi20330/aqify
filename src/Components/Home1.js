@@ -128,9 +128,9 @@ const Home1 = () => {
                     <h1 className='listing-h1 text-center'>Featured On</h1>
                     <span className='listing-span text-center'>Every Monday, find new businesses for sale at Acqify!</span>
 
-                    <div className='tamplate-logoBox d-flex' style={{ width: '100%' }}>
+                    {/* <div className='tamplate-logoBox d-flex' style={{ width: '100%' }}>
                         <div className='mx-2' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100" style={{ width: '100%' }}>
-                            {/* className="card-tamplate " */}
+                            //* className="card-tamplate " //
                             <div className="d-flex align-items-center justify-content-center">
                                 <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
@@ -150,7 +150,7 @@ const Home1 = () => {
                                 <img style={{ width: '10rem' }} src={microsoft} alt="" />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className='Explore-part d-flex justify-content-around' style={{ width: '100%' }}>
                         <div className='explore-div' data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" style={{ width: '50%' }}>
@@ -238,7 +238,7 @@ const Home1 = () => {
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="400" className="card-four">
                         <img width={150} src={FourthCard2} alt="" />
                         <h3 className='my-3'>Get An Edge From Integrated Buyer Network</h3>
-                        <span className='largeSpan'>Discover diversified buyers worldwide, and hop on to streamline business scaling.</span>
+                        <span className=''>Discover diversified buyers worldwide, and hop on to streamline business scaling.</span>
                     </div>
                     <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="500" className="card-four">
                         <img width={150} src={FourthCard3} alt="" />
@@ -248,7 +248,7 @@ const Home1 = () => {
                     <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="600" className="card-four">
                         <img width={150} src={FourthCard4} alt="" />
                         <h3 className='my-3'>Receive Real-time Counseling </h3>
-                        <span className='largeSpan'>Become an easy decision-maker with hands-on expert guidance before locking your deals.</span>
+                        <span className=''>Become an easy decision-maker with hands-on expert guidance before locking your deals.</span>
                     </div>
                 </div>
             </section >
@@ -384,6 +384,7 @@ const Home1 = () => {
                         <span className='span1'>Pro</span>
                         <h1>$1,000<span style={{ fontSize: '20px', }}>/year</span></h1>
                         <span style={{ color: '#636363', fontSize: '1.2rem', fontWeight: '500' }}>Choose Pro, Waive Off Success Fee
+                            <br />
                             <br />
                         </span>
                         <div className='my-4'>
