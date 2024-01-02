@@ -47,7 +47,8 @@ import DashboardValuation from './Components/DashboardValuation'
 import ProofOfFund from './Components/ProofOfFund'
 import Favourite from './Components/Favourite'
 import NotifactionDash from './Components/NotifactionDash'
-import TransferService from './Components/TransferService';
+import TransferService from './Components/TransferService'
+import Agora from './Components/Agora';
 
 function App() {
   return (
@@ -60,7 +61,7 @@ function App() {
           <Route path="/owner" element={<Owner />} />
           <Route path="/acquire" element={<Acquirers />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/TransferService" element={<TransferService/>} />
+          <Route path="/TransferService" element={<TransferService />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<TermsCondition />} />
@@ -78,7 +79,7 @@ function App() {
           <Route path="/payCart" element={<PaymentCardDash />} />
           <Route path="/seller" element={<SellerDash />} />
           <Route path="MarketDash2" element={<MarketplaceDash2 />} />
-
+          <Route path="/call/:id" element={<Agora />} />
           <Route path="/MainDashboard" element={<MainDashboard />} >
             <Route path="proflie" element={<DashboardProfile />} />
             <Route path="contactDashboard" element={<ContactDashboard />} />
