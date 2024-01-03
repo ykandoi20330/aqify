@@ -70,7 +70,8 @@ const SignIn = () => {
             email: '',
             password: '',
           });
-          window.location.href = `${ENV.FRONTEND_URL}/aqify#/MainDashboard/Dashbaord`;
+          window.location.href = `${ENV.FRONTEND_URL}/#/MainDashboard/Dashbaord`;
+          // window.location.href = `${ENV.FRONTEND_URL}/aqify#/MainDashboard/Dashbaord`;
         }
         else if(response.status === 401){
           toast.error("Invalid Email or Password", toastOptions);
