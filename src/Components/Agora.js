@@ -30,19 +30,14 @@ export function Agora() {
 
 
     return (
-        <div style={{
-            width: "100vw",
-            height: "100vh",
-        }}>
-            <AgoraRTCProvider client={client}>
-                <AgoraManager config={{
-                    channelName: id,
-                    appId: ENV.AGORA_APP_ID,
-                }}>
-                </AgoraManager>
-            </AgoraRTCProvider>
+        <AgoraRTCProvider client={client}>
+            <AgoraManager config={{
+                channelName: id,
+                appId: ENV.AGORA_APP_ID,
+            }}>
+            </AgoraManager>
+        </AgoraRTCProvider>
 
-        </div>
     );
 }
 

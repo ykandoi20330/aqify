@@ -203,13 +203,14 @@ const MessageDash = () => {
                           height: "7vh",
                         }}
                       >
-                        {allChats.map((msg, index) => {
+                        {/* {allChats.map((msg, index) => {
                           return (
                             <h4 key={index} className="msg-h2">
                               {msg.userName}
                             </h4>
                           );
-                        })}
+                        })} */}
+                        <h4>Acqify</h4>
                       </div>
                       {emoji && (
                         <EmojiPicker
@@ -231,9 +232,10 @@ const MessageDash = () => {
                               width: "100%",
                               height: "75%",
                               overflowY: "scroll",
-                              padding: "50px",
+                              padding: "0 25px",
                             }}
                           >
+                            <div className="d-flex flex-column" style={{height:'100%'}}>
                             {messages.map((message) => (
                               <div key={message._id}>
                                 <div
@@ -255,6 +257,7 @@ const MessageDash = () => {
                                 </div>
                               </div>
                             ))}
+                            </div>
                           </div>
                           <div
                             className=""

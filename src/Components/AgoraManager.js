@@ -96,11 +96,14 @@ export const AgoraManager = ({ config, children }) => {
 
     // Render the AgoraProvider and associated UI components
     return (
+        <div style={{
+            height:'100vh'
+        }}>
         <AgoraProvider localCameraTrack={localCameraTrack} localMicrophoneTrack={localMicrophoneTrack}>
             {children}
             <div className="videoCall" id="videos" style={{
                 width: "100vw",
-                height: "100vh",
+                height: "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -196,6 +199,7 @@ export const AgoraManager = ({ config, children }) => {
 
             </div>
         </AgoraProvider>
+        </div>
     );
 };
 
