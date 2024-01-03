@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=BreveNews-Medium:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  /* fonts */
+  --caption1: Lexend;
+  --font-brevenews-medium: BreveNews-Medium;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --p2-size: 16px;
+  --caption1-size: 13px;
+  --h4-bold-size: 31px;
+  --h2-bold-size: 49px;
+
+  /* Colors */
+  --color-black: #000;
+  --black: #282a2b;
+  --color-gray-100: #121314;
+  --color-white: #fff;
+  --blacktxt: #636363;
+  --color-dimgray-100: #606060;
+  --gray-light: #c0c0c0;
+
+  /* Gaps */
+  --gap-13xl: 32px;
+  --gap-base: 16px;
+  --gap-5xs: 8px;
+  --gap-9xs: 4px;
+
+  /* Paddings */
+  --padding-13xl: 32px;
+  --padding-base: 16px;
+  --padding-5xs: 8px;
+  --padding-8xs-3: 4.3px;
+
+  /* Border radiuses */
+  --br-base: 16px;
+  --br-481xl: 500px;
+  --br-193xl-5: 212.5px;
+  --br-5xs: 8px;
+  --br-69xl: 88px;
+
+  /*sign in*/
+  /* fonts */
+  --caption1: Lexend;
+  --font-brevenews-medium: BreveNews-Medium;
+
+  /* font sizes */
+  --p2-size: 16px;
+  --caption1-size: 13px;
+  --h4-bold-size: 31px;
+
+  /* Colors */
+  --color-black: #000;
+  --black: #282a2b;
+  --color-gray-100: #121314;
+  --color-white: #fff;
+  --blacktxt: #636363;
+  --color-dimgray-100: #606060;
+  --gray-light: #c0c0c0;
+
+  /* Gaps */
+  --gap-base: 16px;
+  --gap-13xl: 32px;
+  --gap-5xs: 8px;
+  --gap-9xs: 4px;
+
+  /* Paddings */
+  --padding-13xl: 32px;
+  --padding-base: 16px;
+  --padding-5xs: 8px;
+
+  /* Border radiuses */
+  --br-base: 16px;
+  --br-5xs: 8px;
+  --br-69xl: 88px;
+
+
+  /* on board*/
+   /* fonts */
+   --p2: Lexend;
+
+   /* font sizes */
+   --p2-size: 16px;
+ 
+   /* Colors */
+   --color-black: #000;
+   --color-gray-100: #121314;
+   --blacktxt: #636363;
+   --gray-light: #c0c0c0;
+ 
+   /* Gaps */
+   --gap-5xs: 8px;
+   --gap-9xs: 4px;
+ 
+   /* Paddings */
+   --padding-13xl: 32px;
+   --padding-base: 16px;
+   --padding-5xs: 8px;
+ 
+   /* Border radiuses */
+   --br-base: 16px;
+   --br-5xs: 8px;
+
+     /* font sizes */
+  --p2-size: 16px;
+  --h3-bold-size: 39px;
+  --p1-size: 20px;
+  --h5-size: 25px;
+
+  /* Colors */
+  --bg: #eef0fe;
+  --color-white: #fff;
+  --blue: #3c4df9;
+  --black: #282a2b;
+  --light: #18191a;
+  --blacktxt: #636363;
+  --gray-light: #c0c0c0;
+
+  /* Gaps */
+  --gap-13xl: 32px;
+  --gap-base: 16px;
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-5xs: 8px;
+  --padding-8xs-3: 4.3px;
+  --padding-base: 16px;
+
+  /* Border radiuses */
+  --br-481xl: 500px;
+  --br-193xl-5: 212.5px;
+  --br-5xs: 8px;
+}
+
