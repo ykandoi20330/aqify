@@ -762,7 +762,7 @@ const Market = () => {
                       )
                     })}
                     <div className=''>
-                      <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' onClick={() => setShow(true)} >Back to your List<img className="mx-2" style={{ width: '8%' }} src={arrow} alt="" /></Link>
+                      <Link style={{ fontSize: '1.5rem', position:'relative', zIndex:'10' }} className='btn btn-primary' onClick={() => setShow(true)} >Back to your List<img className="mx-2" style={{ width: '8%' }} src={arrow} alt="" /></Link>
                     </div>
                   </div>
                 </div>
