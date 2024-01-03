@@ -47,7 +47,6 @@ const DashboardProfile = () => {
             pic: response.data.user.pic,
             statusOfFund: response.data.status ? response.data.status.status || "" : "",
           });
-          console.log(form.statusOfFund);
         } catch (error) {
           console.error(error);
         }
@@ -103,19 +102,12 @@ const DashboardProfile = () => {
     e.preventDefault();
     if (validation()) {
       try {
-        let token = null;
-        const cookies = document.cookie.split(";");
-        for (let cookie of cookies) {
-          const [cookieName, cookieValue] = cookie.trim().split("=");
-          if (cookieName === "token") {
-            token = cookieValue;
-            break;
-          }
-        }
+        const token = localStorage.getItem("token");
+        
 
         if (!token) {
           const user = JSON.parse(localStorage.getItem("user"));
-          token = user.token;
+          const token = user.token;
         }
 
         if (token) {
@@ -176,7 +168,7 @@ const DashboardProfile = () => {
 
     axios
       .post(
-        "https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813",
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
         formData,
         {
           headers: {
@@ -214,7 +206,6 @@ const DashboardProfile = () => {
     });
   };
 
-console.log(form.statusOfFund)
 
   return (
     <>
