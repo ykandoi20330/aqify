@@ -262,7 +262,7 @@ const Market = () => {
   //Sort by Price
   const filterPrice = (el) => {
     const price = card?.filter((p) => p.askingPrice === el)
-  
+
     setFilterSearch(price)
   }
 
@@ -334,20 +334,20 @@ const Market = () => {
       {show === true && <>
         <section className="pricing-first-section">
           <div
-            className="pricing-backgroundImage"
-            style={{
+            className="pricing-backgroundImage" style={{background:'#161616', padding:'4rem 0 8rem 0'}}
+            >
+            {/* style={{
               backgroundImage: `url(${backgroundImg})`,
               width: "100%",
               height: "100vh",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
-            }}
-          >
+            }} */}
             <div className="owner-content">
               <div>
                 <div className="my-5">
-                  <h1 className="main-h1 col-6">
-                    Welcome to the Marketplace <br />
+                  <h1 className="main-h1 text-start col-6">
+                    Our Marketplace Holds Flagship Online Businesses To Acquire! <br />
                     <TypeAnimation
                       className="typeAnimation marketTypeAnimation"
                       style={{ fontSize: "3rem" }}
@@ -376,10 +376,7 @@ const Market = () => {
                 </div>
                 <div className="my-4">
                   <span className="main-span col-6 d-flex">
-                    List your startup for free with total anonymity to receive
-                    full or partial acquisition offers from verified buyers
-                    commission-free.List your business anonymously on the
-                    Marketplace to receive offers from acquirers
+                    Collaborate with new founders and make the best deals!
                   </span>
                 </div>
                 {/* <div className=''>
@@ -547,15 +544,15 @@ const Market = () => {
           className="marketMain"
           style={{ background: "#EEF0FE ", padding: "3rem" }}
         >
-          <section className="ligh-back my-5" style={{ height: "120%" }}>
+          <section className="ligh-back my-5" style={{ height: "fit-content" }}>
             <div
               className="card-container"
               style={{
                 display: "flex",
                 // flexWrap: "wrap",
-                flexDirection:'column',
-                justifyContent:'center',
-                alignItems:'center',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 width: "100%",
               }}
             >
@@ -577,12 +574,13 @@ const Market = () => {
                         src={item.link}
                         // src={require(`../images/template-images/${item.websiteName}.jpg`)}
                         alt=""
+                        className="marketLogoImage"
                         style={{
                           position: "relative",
-                          width: "100%",
+                          width: "18vw",
                           height: "200px",
                           objectFit: "cover",
-                          borderRadius: "20px 20px 0 0",
+                          borderRadius: "20px 20px 20px 20px",
                         }}
                       />
                       <div
@@ -598,42 +596,42 @@ const Market = () => {
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
                         >
-                          {item.techStack}
+                          {item.techStack1}
                         </button>
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
                         >
-                          {item.techStack}
+                          {item.techStack2}
                         </button>
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
                         >
-                          {item.techStack}
+                          {item.techStack3}
                         </button>
                         <button
                           className="btn-card btn btn-outline-primary my-2"
                           style={{
-                            fontSize: "13px",
+                            fontSize: "0.7rem",
                             background: "#fff",
                             color: "#3247FF ",
                           }}
                         >
-                          {item.techStack}
+                          {item.techStack4}
                         </button>
                       </div>
                     </div>
@@ -689,14 +687,14 @@ const Market = () => {
                           ${item.askingPrice}
                         </h3>
                         <Link
-                          style={{ padding: "18px 48px" }}
+                          style={{ padding: "1.1rem 3rem" }}
                           className="btn btn-primary"
                           // to={`/placeDetail/${item.id}`}
                           onClick={() => detailPage(item)}
                         >
                           View details
                           <img
-                            style={{ width: "20px" }}
+                            style={{ width: "1.2rem" }}
                             src={arrow}
                             alt=""
                           />{" "}
@@ -745,7 +743,8 @@ const Market = () => {
           //////
           <>
             <section className='pricing-first-section'>
-              <div className="pricing-backgroundImage align-items-start" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+              <div className="pricing-backgroundImage align-items-start" style={{ background:'#161616',padding:'4rem 0 8rem 0' }}>
+              {/* backgroundImage: `url(${backgroundImg})`, width: '100%', height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' */}
                 <div className="owner-content">
                   <div>
                     {detail.map((dt, index) => {
@@ -772,7 +771,7 @@ const Market = () => {
 
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
 
-              <section className='placeDetail-section' style={{ top: '-220px', position: 'relative', padding: '4rem' }}>
+              <section className='placeDetail-section' style={{ top: '-170px', position: 'relative', padding: '4rem' }}>
                 <>
                   {detail.map((item, index) => {
                     return (
@@ -785,10 +784,10 @@ const Market = () => {
                             </div>
                             <div className="firstPart" style={{ marginLeft: "2rem" }}>
                               <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
-                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack1}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack2}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack3}</button>
+                              <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack4}</button>
                             </div>
                           </div>
                           <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
@@ -809,10 +808,10 @@ const Market = () => {
                             <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel">
                               <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                  <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                  <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                                 </div>
                                 <div class="carousel-item">
-                                  <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                                  <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" />
                                 </div>
                               </div>
                             </div>

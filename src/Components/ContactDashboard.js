@@ -107,7 +107,7 @@ const ContactDashboard = () => {
                 class="form-control"
                 name="name"
                 id="exampleFormControlInput1"
-                placeholder="&#128100; Name"
+                placeholder="Your Full Name"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -125,7 +125,7 @@ const ContactDashboard = () => {
                 class="form-control"
                 name="email"
                 id="exampleFormControlInput1"
-                placeholder="&#128386; Email Address"
+                placeholder="Your Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -143,7 +143,7 @@ const ContactDashboard = () => {
                 id="exampleFormControlTextarea1"
                 name="message"
                 rows="3"
-                placeholder="&#128386; Message"
+                placeholder="Your Query For Us!"
                 onChange={handleChange}
                 disabled={state.submitting}
                 value={formData.message}
@@ -154,7 +154,7 @@ const ContactDashboard = () => {
               type="submit"
               style={{ width: "30%", padding: "1.5rem 2.5rem" }}
             >
-              Send Us <img style={{ width: "10%" }} src={arrow} alt="" />
+              SEND TO ACQIFY! <img style={{ width: "10%" }} src={arrow} alt="" />
             </button>
           </div>
         </form>

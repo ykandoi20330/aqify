@@ -58,7 +58,6 @@ const SellerDash = () => {
     growthOpportunity: "",
     projectBackground: "",
     sellingReasoning: "",
-    techStack: "",
     askingPrice: "",
     multiplies: "",
     ttmRevenue: "",
@@ -88,32 +87,73 @@ const SellerDash = () => {
     YoutubeHandleFollowers: "",
     maxPrice: "",
     minPrice: "",
+    carouselImage1: "",
+    carouselImage2: "",
+    techStack1: "",
+    techStack2: "",
+    techStack3: "",
+    techStack4: "",
+    googleAnalytics: "",
+    video: "",
   });
 
-  const [text, setText] = useState("Upload Image/Logo")
+  const [text1, setText1] = useState("Upload Image/Logo");
+  const [text2, setText2] = useState("Upload Image");
+  const [text3, setText3] = useState("Upload Image");
+  const [text4, setText4] = useState("Add google Analytics");
+  const [text5, setText5] = useState("Upload Video");
 
-  const submitUpload = (e) => {
+
+  const submitUpload1 = (e) => {
     const file = e.target.files[0];
 
     const logo = new FormData();
-    logo.append('image', file);
+    logo.append("image", file);
 
-    axios.post(
-      'https://api.imgbb.com/1/upload?key=71f9e12d6c2a5c44979ee9ae356d9813',
-      logo,
-      {
-        headers: {
-          'Content-Type': 'multipart/form-data'
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
+        logo,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
-      }
-    )
+      )
       .then((res) => {
         console.log(res.data.data.url);
         setformData({
           ...formData,
           link: res.data.data.url,
         });
-        setText("Uploaded")
+        setText1("Uploaded");
+        console.log(formData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const submitUpload2 = (e) => {
+    const file = e.target.files[0];
+    const carouselImage1 = new FormData();
+    carouselImage1.append("image", file);
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
+        carouselImage1,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data.data.url);
+        setformData({
+          ...formData,
+          carouselImage1: res.data.data.url,
+        });
+        setText2("Uploaded");
         console.log(formData);
       })
       .catch((error) => {
@@ -121,7 +161,88 @@ const SellerDash = () => {
       });
   };
 
+  const submitUpload3 = (e) => {
+    const file = e.target.files[0];
+    const carouselImage2 = new FormData();
+    carouselImage2.append("image", file);
 
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
+        carouselImage2,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data.data.url);
+        setformData({
+          ...formData,
+          carouselImage2: res.data.data.url,
+        });
+        setText3("Uploaded");
+        console.log(formData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const submitUpload4 = (e) => {
+    const file = e.target.files[0];
+    const googleAnalytics = new FormData();
+    googleAnalytics.append("image", file);
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
+        googleAnalytics,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data.data.url);
+        setformData({
+          ...formData,
+          googleAnalytics: res.data.data.url,
+        });
+        setText4("Added");
+        console.log(formData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const submitUpload5 = (e) => {
+    const file = e.target.files[0];
+    const video = new FormData();
+    video.append("image", file);
+    axios
+      .post(
+        "https://api.imgbb.com/1/upload?key=097044605d74fdffac5df09db7352066",
+        video,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data.data.url);
+        setformData({
+          ...formData,
+          video: res.data.data.url,
+        });
+        setText5("Uploaded");
+        console.log(formData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     const getUser = async () => {
@@ -130,18 +251,17 @@ const SellerDash = () => {
         const decoded = jwtDecode(token);
         const id = decoded.id;
         try {
-          const response = await axios.get(
-            `${ENV.BACKEND_URL}/users/getUser`,
-            {
-              headers: { "x-auth-token": id },
-            }
-          );
+          const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
+            headers: { "x-auth-token": id },
+          });
           setformData({
             ...formData,
             ownerName: response.data.user.userName,
             ownerId: id,
             ownerEmail: response.data.user.email,
-            ownerImage: response.data.user.pic || "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=",
+            ownerImage:
+              response.data.user.pic ||
+              "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=",
           });
         } catch (error) {
           console.error(error);
@@ -223,22 +343,19 @@ const SellerDash = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await fetch(
-        `${ENV.BACKEND_URL}/business/addBusiness`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${ENV.BACKEND_URL}/business/addBusiness`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(formData),
+      });
       console.warn(response);
       if (response.status === 201) {
         const data = await response.json();
         console.warn(data);
-        navigate("/MainDashboard/MarketDash");
+        navigate("/MarketDash2");
       } else if (response.status === 400) {
         console.log("Already Exist");
       } else {
@@ -287,20 +404,36 @@ const SellerDash = () => {
                   </span>
                 </div>
                 <div>
-                  <label style={{ color: "#636363" }} for="logoInput" class="form-label">
-                    {text}
+                  <label
+                    style={{ color: "#636363" }}
+                    for="logoInput"
+                    class="form-label"
+                  >
+                    {text1}
                   </label>
                   <div class="mb-3 my-2">
-                    <input 
+                    <input
                       style={{ display: "none" }}
                       type="file"
                       accept="image/*"
                       id="logoInput"
-                      onChange={submitUpload}
+                      onChange={submitUpload1}
                     />
-                    <label style={{height:'8vh',width:'100%',background: '#EEF0FE',borderRadius: '0.375rem',border: '1px solid #C0C0C0'}}
-                     for="logoInput" class="custom-file-upload d-flex justify-content-center align-items-center">
-                      <i class="fas fa-cloud-upload-alt mx-2" style={{color: "#c0c0c0"}}></i>
+                    <label
+                      style={{
+                        height: "8vh",
+                        width: "100%",
+                        background: "#EEF0FE",
+                        borderRadius: "0.375rem",
+                        border: "1px solid #C0C0C0",
+                      }}
+                      for="logoInput"
+                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                    >
+                      <i
+                        class="fas fa-cloud-upload-alt mx-2"
+                        style={{ color: "#c0c0c0" }}
+                      ></i>
                     </label>
                     <img
                       src="#"
@@ -584,7 +717,7 @@ const SellerDash = () => {
                     <Link
                       style={{ textDecoration: "none", color: "#636363" }}
                       id="prev"
-                      to="/MainDashboard/MarketDash2"
+                      to="/MarketDash2"
                       onClick={() => {
                         setCurrentStep((prev) => prev - 1);
                       }}
@@ -709,7 +842,7 @@ const SellerDash = () => {
                       placeholder="Acqify"
                       value={formData.projectName}
                       onChange={handleChange}
-                      style={{ width: '50%' }}
+                      style={{ width: "50%" }}
                     />
                   </div>
                 </div>
@@ -846,6 +979,82 @@ const SellerDash = () => {
                   </div>
                 </div>
 
+                <div
+                  style={{
+                    color: "#636363",
+                    fontWeight: "500",
+                    fontSize: "18px",
+                  }}
+                >
+                  Carousel Images
+                </div>
+                <div className="d-flex" style={{ width: "100%" }}>
+                  <div class="mb-3 mx-2 my-2" style={{ width: "48%" }}>
+                    <input
+                      style={{ display: "none" }}
+                      type="file"
+                      accept="image/*"
+                      id="logoInput"
+                      onChange={submitUpload2}
+                    />
+                    {text2}
+                    <label
+                      style={{
+                        height: "8vh",
+                        width: "100%",
+                        background: "#EEF0FE",
+                        borderRadius: "0.375rem",
+                        border: "1px solid #C0C0C0",
+                      }}
+                      for="logoInput"
+                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                    >
+                      <i
+                        class="fas fa-cloud-upload-alt mx-2"
+                        style={{ color: "#c0c0c0" }}
+                      ></i>
+                    </label>
+                    <img
+                      src="#"
+                      alt="Logo Preview"
+                      id="logoPreview2"
+                      style={{ width: "200px", display: "none" }}
+                    />
+                  </div>
+                  <div class="mb-3 mx-2 my-2" style={{ width: "48%" }}>
+                    <input
+                      style={{ display: "none" }}
+                      type="file"
+                      accept="image/*"
+                      id="logoInput2"
+                      onChange={submitUpload3}
+                    />
+                    {text3}
+                    <label
+                      style={{
+                        height: "8vh",
+                        width: "100%",
+                        background: "#EEF0FE",
+                        borderRadius: "0.375rem",
+                        border: "1px solid #C0C0C0",
+                      }}
+                      for="logoInput2"
+                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                    >
+                      <i
+                        class="fas fa-cloud-upload-alt mx-2"
+                        style={{ color: "#c0c0c0" }}
+                      ></i>
+                    </label>
+                    <img
+                      src="#"
+                      alt="Logo Preview"
+                      id="logoPreview2"
+                      style={{ width: "200px", display: "none" }}
+                    />
+                  </div>
+                </div>
+
                 <div className="button d-flex justify-content-between align-items-center">
                   <div className="mt-5">
                     <Link
@@ -898,7 +1107,7 @@ const SellerDash = () => {
                   </span>
                 </div>
 
-                <div class="mb-3 my-3">
+                {/* <div class="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
                     class="form-label"
@@ -932,6 +1141,66 @@ const SellerDash = () => {
                     <option value="Wordpress">Wordpress</option>
                     <option value="Community">Community</option>
                   </select>
+                </div> */}
+
+                <div className="my-5">
+                  <div>
+                    <label
+                      style={{
+                        color: "#636363",
+                        fontWeight: "500",
+                        fontWeight: "bold",
+                        fontSize: "18px",
+                      }}
+                      for="inputEmail4"
+                      class="form-label"
+                    >
+                      Tech Stack
+                    </label>
+                    <div className="d-flex flex-wrap">
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail5"
+                        class="form-control mx-1 my-2"
+                        name="techStack1"
+                        placeholder="Ecommerce"
+                        value={formData.techStack1}
+                        onChange={handleChange}
+                      />
+
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail6"
+                        class="form-control mx-1 my-2"
+                        name="techStack2"
+                        placeholder="WooCommerce"
+                        value={formData.techStack2}
+                        onChange={handleChange}
+                      />
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail7"
+                        class="form-control mx-1 my-2"
+                        name="techStack3"
+                        placeholder="Saas"
+                        value={formData.techStack3}
+                        onChange={handleChange}
+                      />
+                      <input
+                        style={{ height: "7vh", width: "48%" }}
+                        type="text"
+                        id="inputEmail8"
+                        class="form-control mx-1 my-2"
+                        name="techStack4"
+                        placeholder="Wordpress"
+                        value={formData.techStack4}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div>
@@ -1214,16 +1483,25 @@ const SellerDash = () => {
                       Google Analytics
                     </span>
                   </div>
-                  <div
-                    className="d-flex align-items-center justify-content-center"
+                  <input
+                    type="file"
+                    id="image_input4"
+                    className="form-label "
+                    onChange={submitUpload4}
+                  />
+                  <label
+                    for="image_input4"
+                    class="form-label d-flex align-items-center justify-content-center"
                     style={{
                       background: "#EEF0FE",
                       borderRadius: "20px",
-                      height: "10vh",
+                      height: "8vh",
+                      width: "98%",
+                      textDecoration: "none",
                     }}
                   >
-                    <span>Add google Analytics</span>
-                  </div>
+                    <span >{text4}</span>
+                  </label>
 
                   <div>
                     <img style={{ width: "100%" }} src={analytics} alt="" />
@@ -1250,11 +1528,7 @@ const SellerDash = () => {
                           class="form-label"
                           id="image_input2"
                           multiple
-                          accept="video/mp4, video/mov"
-                          onChange={(e) => {
-                            inputDocument(e);
-                            handleFileUploadDocumentProof(e);
-                          }}
+                          onChange={submitUpload5}
                         />
                         <label
                           for="image_input2"
@@ -1265,7 +1539,7 @@ const SellerDash = () => {
                           <img src={upload} alt="" />
                           <br />
                           <br />
-                          <span>Upload Video</span>
+                          <span>{text5}</span>
                         </label>
                       </div>
                     </div>
@@ -1563,14 +1837,16 @@ const SellerDash = () => {
                   className={`step-item ${currentStep === i + 1 && "active"}`}
                 >
                   <div
-                    className={`circle ${currentStep === i + 1 && "active"} ${(i + 1 < currentStep || complete) && "complete"
-                      }`}
+                    className={`circle ${currentStep === i + 1 && "active"} ${
+                      (i + 1 < currentStep || complete) && "complete"
+                    }`}
                   >
                     {i + 1}
                   </div>
                   <p
-                    className={`tagname ${currentStep === i + 1 && "active"} ${(i + 1 < currentStep || complete) && "tagComplete"
-                      }`}
+                    className={`tagname ${currentStep === i + 1 && "active"} ${
+                      (i + 1 < currentStep || complete) && "tagComplete"
+                    }`}
                   >
                     {step}
                   </p>

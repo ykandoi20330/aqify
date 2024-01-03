@@ -78,19 +78,12 @@ const MarketplaceDash2 = () => {
 
   useEffect(() => {
     const getUsername = async () => {
-      let token = null;
-      const cookies = document.cookie.split(";");
-      for (let cookie of cookies) {
-        const [cookieName, cookieValue] = cookie.trim().split("=");
-        if (cookieName === "token") {
-          token = cookieValue;
-          localStorage.setItem("token", token);
-        }
-      }
+      const token = localStorage.getItem("token");
+      console.log(token);
 
       if (!token) {
         const user = JSON.parse(localStorage.getItem("user"));
-        token = user.token;
+        const token = user.token;
         localStorage.setItem("token", token);
       }
 
@@ -136,9 +129,9 @@ const MarketplaceDash2 = () => {
 
 
   const exploreMore = (pro) => {
-    const oldExplore = [...card];
-    const filterExplore = oldExplore?.filter((ex) => ex.category === pro)
-    setShow(filterExplore ? true : false)
+    const filterExplore = card?.filter((ex) => ex.projectName === pro)
+    setShow(true)
+    setFilterSearch(filterExplore)
   }
 
 
@@ -245,6 +238,11 @@ const MarketplaceDash2 = () => {
     setFilterSearch(tech)
   }
 
+  const filterLowToHigh = (Low) => {
+    const Lower = card?.filter((h) => h.askingPrice === Low).sort((l1, l2) => l2.askingPrice - l1.askingPrice)
+
+    setFilterSearch(Lower)
+  }
 
   return (
     <>
@@ -262,6 +260,8 @@ const MarketplaceDash2 = () => {
               filterPrice={filterPrice}
 
               filterTech={filterTech}
+
+              filterLowToHigh={filterLowToHigh}
             />
           </section>
 
@@ -282,34 +282,27 @@ const MarketplaceDash2 = () => {
                               {item.projectName}
                             </h3>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Nesxt Js */}
-                              {item.techStack}
+                              {item.techStack1}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Firebase */}
-                              {item.techStack}
+                              {item.techStack2}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* Medical */}
-                              {item.techStack}
+                              {item.techStack3}
                             </button>
                             <button className="btn-card btn btn-outline-primary my-2" style={{ fontSize: "9px" }}>
-                              {/* SaaS */}
-                              {item.techStack}
+                              {item.techStack4}
                             </button>
                           </div>
-                          <div>
+                          {/* <div>
                             <span className="d-flex align-items-center">
                               <i class="fa-solid fa-eye" style={{ color: "#3247ff" }}></i>
                               1.2K
                             </span>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="my-4">
                           <span className="col-6" style={{ color: "#636363", fontSize: "18px" }}>
-                            {/* Physical retailer in the apparel space looking for
-                            prominent DTC brands to buy into and collaborate
-                            with... */}
                             {item.description}
                           </span>
                         </div>
@@ -356,7 +349,6 @@ const MarketplaceDash2 = () => {
                             <div className="d-flex justify-content-start align-items-center">
                               <img width={40} src={cardLogo3} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                {/* {item}  */}
                                 Full
                               </span>
                             </div>
@@ -368,7 +360,6 @@ const MarketplaceDash2 = () => {
                             <div className="d-flex justify-content-start align-items-center">
                               <img width={40} src={cardLogo4} alt="" />
                               <span className="card-span" style={{ fontSize: "1.5rem" }}>
-                                {/* $150K + */}
                                 ${item.valuation}k +
                               </span>
                             </div>
@@ -395,10 +386,12 @@ const MarketplaceDash2 = () => {
                 <br />
               </div>
               <div>
-                {/** data-bs-toggle="modal" data-bs-target="#exampleModal1" */}
-                <Link className='btn btn-primary rounded-pill px-5 py-2'
-                  onClick={exploreMore}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
-                </Link>
+                {detail.map((it, i) => {
+                  return (
+                    <Link key={i} className='btn btn-primary rounded-pill px-5 py-2'
+                      onClick={() => exploreMore(it.projectName)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
+                    </Link>)
+                })}
               </div>
             </div>
           </section>
@@ -416,10 +409,10 @@ const MarketplaceDash2 = () => {
                       </div>
                       <div className="firstPart" style={{ marginLeft: "2rem" }}>
                         <h3 style={{ fontSize: '20px', fontWeight: '700' }}>{item.projectName}</h3>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
-                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack1}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack2}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack3}</button>
+                        <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack4}</button>
                       </div>
                     </div>
                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
@@ -429,9 +422,6 @@ const MarketplaceDash2 = () => {
 
                     <div className='my-4'>
                       <span className='col-6' style={{ color: '#636363', fontSize: '16px' }}>
-                        {/* A design inspiration platform for SaaS apps that helps designers find inspiration for their next project by showcasing over 1,000 pages from over 100 SaaS apps, organized by category and page type. Designers can also
-                                    filter designs by color and fonts, and bookmark their favorites for later.<br /><br />
-                                    Project can be grown by doing proper content marketing through blogs and social media, further paid ads can also be utilized to get more customers for the app. */}
                         {item.description}
                       </span>
                     </div>
@@ -441,10 +431,10 @@ const MarketplaceDash2 = () => {
                       <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                           </div>
                           <div class="carousel-item">
-                            <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
+                            <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" />
                           </div>
                         </div>
                       </div>
@@ -719,15 +709,17 @@ const MarketplaceDash2 = () => {
                           <img src={blueMsg} alt="" />
                           <span className='mx-2'>Message Seller</span>
                         </Link>
-                        <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                        <div onClick={() => {
+                          navigate(`/call/${item.ownerId}`);
+                        }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
-                          <span className='mx-2'>Audio Call</span>
-                        </Link>
+                          <span className='mx-2'>Video Call</span>
+                        </div>
                         <Link className='my-3 d-flex align-items-center justify-content-center' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <img src={offer} alt="" />
                           <span className='mx-2' >Make Offer</span>
                         </Link>
-                        <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                        <Link className='my-3 d-flex align-items-center justify-content-center' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                           <span className='mx-2' >Watch video Path</span>
                         </Link>
@@ -790,20 +782,47 @@ const MarketplaceDash2 = () => {
                 <div className='mx-3' style={{ color: '#636363', width: "100%" }}>
                   <div class="d-flex mb-3 my-3 ">
                     <div className='d-flex justify-content-center align-items-center'>
-                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-camera mx-2"></i>
-                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-microphone mx-2"></i>
                       <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
                     </div>
                     <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
                     <div
                       className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
-                      style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
+                      style={{ color: '#3247FF', right: '15%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
                       onClick={() => sendMessage()}
                     >
                       <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content" style={{ background: '#000' }}>
+              <div class="modal-header" style={{ border: 'none' }}>
+                {detail.map((item, i) => {
+                  return (
+                    <h1 key={i} class="modal-title fs-5" style={{ color: '#fff' }} id="staticBackdropLabel">{item.projectName}</h1>
+                  )
+                })}
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {detail.map((items, i) => {
+                  return (
+                    <video key={i} style={{ width: '100%' }} controls autoplay>
+                      <source src={items.video} type="video/mp4" />
+                    </video>
+                  )
+                })}
+              </div>
+              <div class="modal-footer" style={{ border: 'none' }}>
+                <button type="button" class="btn btn-secondary" style={{ padding: '0.5rem 1.5rem', borderRadius: '50px' }} data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

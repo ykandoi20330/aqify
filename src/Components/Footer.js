@@ -14,12 +14,13 @@ const Footer = () => {
         <>
             <section className='footer-section'>
                 <div className='d-grid align-content-between align-items-center'>
-                    <div style={{width:'95%',top:'5vh',position:"relative"}} className='footer-main d-flex justify-content-between'>
+                    <div style={{width:'95%',position:"relative"}} className='footer-main d-flex justify-content-between'>
                         <div className="footer-main col-5">
                             <Link to="/"><img style={{ width: '35%', marginRight:'1rem' }} src={Logo} alt="" /></Link>
-                            <span style={{ color: '#C0C0C0',fontSize:'20px' }}>- Leading acquistion platform</span>
+                            <span style={{ color: '#C0C0C0',fontSize:'20px' }}>- Unleashing Full Acquisitions Potential</span>
                             <div className='my-4' style={{ color: '#C0C0C0' }}>
-                                Acqify  is an up-market acquisition platform for $100K+ revenue startups. Our global marketplace makes it free and anonymous for business owners to attract full and partial acquisition offers directly. No listing fees. 100% anonymity.
+                            Acqify is a leading up-market acquisitions platform where all-scale acquirers and owners exchange assets and skyrocket their revenue. 
+                            Our global marketplace is proven to streamless acquisitions & mergers anonymously and securely for buyers and sellers—no fee to put up listings and execute confidential business transactions.
                             </div>
                         </div>
 
@@ -28,17 +29,17 @@ const Footer = () => {
                                 <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px" ,width:'70%' }}>Platform</li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/owner">For owners</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/acquire">For acquires</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/market">Market</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/">Stories</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/market">Marketplace</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/">Resources</Link></li>
                             </ul>
                         </div>
                         <div>
                             <ul className='first-ul' style={{ listStyle: 'none' }}>
                                 <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px"  ,width:'75%'  }}>Company</li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/">About</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/valuation">Valuation Tool</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/">About Acqify</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/contact">Contact us</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/pricing">Pricing</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/contact"> Contact us</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/faq">FAQ</Link></li>
                             </ul>
                         </div>
                         <div>
@@ -47,7 +48,7 @@ const Footer = () => {
                                 {/* <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Imprint</Link></li> */}
                                 <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Advisory</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/testimonials">Testimonials</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/faq">FAQ</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/valuation">Valuation Tool</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/terms">Terms and Conditions</Link></li>
                             </ul>
                         </div>
@@ -55,13 +56,17 @@ const Footer = () => {
 
                     <div>
                         <div className='Social-logo d-flex justify-content-between'>
-                            <div style={{ color: '#C0C0C0' }}>Copyright @Acqify</div>
+                            <div style={{ color: '#C0C0C0' }}>Copyright @Acqify | 2023</div>
                             <div>
                                 <ul style={{ listStyle: 'none' }} className='d-flex'>
-                                    <li><Link to="/"><img className='socailLogo' src={socail2} alt="" /></Link></li>
+                                    {/* <li><Link to="/"><img className='socailLogo' src={socail2} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail3} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail4} alt="" /></Link></li>
-                                    <li><Link to="/"><img className='socailLogo' src={socail5} alt="" /></Link></li>
+                                    <li><Link to="/"><img className='socailLogo' src={socail5} alt="" /></Link></li> */}
+                                    <li><i class="fa-brands fa-facebook mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-instagram mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-twitter mx-3 socialIcon" ></i></li>
+                                    <li><i class="fa-brands fa-linkedin mx-3 socialIcon" ></i></li>
                                 </ul>
                             </div>
                         </div>

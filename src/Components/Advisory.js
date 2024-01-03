@@ -1,4 +1,8 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import ENV from '../config.js'
+
 import backgroundImg from "./Owner/unsplash_5U_28ojjgms2.png"
 //
 import location from "./MarketDash/VectorLoaction.svg"
@@ -18,6 +22,64 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 
 const Advisory = () => {
+
+    const [card, setCard] = useState([]);
+    const [filterSearch, setFilterSearch] = useState([]);
+    const [searchTerm, setSearchTerm] = useState([]);
+
+    useEffect(() => {
+        getCard();
+    }, []);
+
+    const getCard = async () => {
+        try {
+            const response = await axios.get(
+                `${ENV.BACKEND_URL}/advisory/getAdvisory`);
+            console.log(response.data.advisory);
+            setCard(response.data.advisory);
+            setFilterSearch(response.data.advisory);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
+    const onSearch = (searchTerm) => {
+        setFilterSearch(card.filter(f => f.ownerName.toLowerCase().includes(searchTerm.toLowerCase())))
+    }
+
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value);
+        onSearch(e.target.value);
+    }
+
+
+    //location filters
+
+    const filterLocation = (loc) => {
+        const updatedLoc = card?.filter((l) => l.location === loc)
+
+        setFilterSearch(updatedLoc);
+    }
+
+    const handleLocationChange = (e) => {
+        filterLocation(e.target.value);
+    };
+
+    //deal size filters
+
+    const filterDeal = (deal) => {
+        const updatedLoc = card?.filter((d) => d.dealSize === deal)
+
+        setFilterSearch(updatedLoc);
+    }
+
+    const handleDealChange = (e) => {
+        filterDeal(e.target.value);
+    };
+
+
     return (
         <>
             <section>
@@ -26,20 +88,21 @@ const Advisory = () => {
 
             {/** */}
             <section>
-                <div className='Ownermain' style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }}>
+                <div className='Ownermain'>
+                    {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', backgroundRepeat: 'no-repeat' }} */}
                     <div className="owner-content">
                         <div>
                             <div className='my-5'>
-                                <h1 className='main-h1 col-8'>Advisor Directory
+                                <h1 className='main-h1 col-8'>Our Advisors Are Quite Helpful; Talk To Them!
                                 </h1>
                             </div>
                             <div className='my-4'>
                                 <span className='main-span col-7 d-flex'>
-                                    Affordable advice on valuations, negotiations, legal, tax, accounting & due diligence.
+                                    Acqify’s advisors are here to help you with your doubts and queries by deal-centric recommendations.
                                 </span>
                             </div>
                             <div className=''>
-                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/singup">Add your Advisor Profile<img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
+                                <Link style={{ fontSize: '1.5rem' }} className='btn btn-primary' to="/advisoryOnbaord">Take Me To The Experts! <img style={{ width: '7%', marginLeft: '20px' }} src={arrow} alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -50,15 +113,17 @@ const Advisory = () => {
                 <div className="advisory-card">
                     <div className='first-line d-flex align-items-center'>
                         <div class="mb-3 my-3 form-floating" style={{ width: '100%' }}>
-                            <input style={{ width: '97%' }} type="email" id="floatingInputValue" class="form-control" placeholder="Search" />
+                            <input style={{ width: '97%' }} type="email" id="floatingInputValue" class="form-control" value={searchTerm} onChange={handleSearch} placeholder="Search" />
                             <label for="floatingInputValue"><img src={search} alt="" /></label>
                         </div>
                         <div class="form-floating mx-2" style={{ width: '100%' }}>
-                            <select style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg" aria-label="Large select example">
+                            <select onChange={handleDealChange} style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg" aria-label="Large select example">
                                 <option id="floatingInputValue" selected>Deal Size</option>
-                                <option value="1">$0</option>
-                                <option value="2">$99</option>
-                                <option value="3">$10000</option>
+                                {card.map((deal) => {
+                                    return (
+                                        <option key={deal.id} value={deal.dealSize}>{deal.dealSize}</option>
+                                    )
+                                })}
                             </select>
                             <label for="floatingInputValue"><img src={doller} alt="" /></label>
                         </div>
@@ -66,11 +131,13 @@ const Advisory = () => {
 
                     <div className="second-line d-flex">
                         <div class="form-floating" style={{ width: '100%' }}>
-                            <select style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" aria-label="Large select example">
+                            <select onChange={handleLocationChange} style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" aria-label="Large select example">
                                 <option id="floatingInputValue" selected>Company Location</option>
-                                <option value="1">Mumbai</option>
-                                <option value="2">Hydrabad</option>
-                                <option value="3">Banglore</option>
+                                {card.map((loca) => {
+                                    return (
+                                        <option key={loca.id} value={loca.location}>{loca.location}</option>
+                                    )
+                                })}
                             </select>
                             <label for="floatingInputValue"><img src={location} alt="" /></label>
                         </div>
@@ -81,31 +148,28 @@ const Advisory = () => {
             <section>
                 <div className="ligh-back" style={{ height: '100%' }}>
                     <div className="AdvisoryMarket-card " style={{ padding: "3rem" }} >
-                        {[...Array(4)].map((num, index) => {
+                        {filterSearch.map((item, index) => {
                             const id = index + 1
                             return (
 
                                 <div className="advisoryDisplay-card" style={{ margin: "2rem 1rem" }}>
 
                                     <div className='advisory-div1 d-flex align-items-center'>
-                                        <div className='secondPart'>
-                                            <img style={{ width: '100%' }} src={cardProfile} alt="" />
+                                        <div className='secondPart' style={{ padding: '0 2rem' }}>
+                                            <img style={{ width: '100%', borderRadius: '1.2rem' }} src={item.ownerImage} alt="" />
                                         </div>
                                         <div className="firstPart" style={{ marginLeft: "2rem" }}>
-                                            <h3 style={{ fontSize: '25px', fontWeight: '700' }}>Taliesen Hollywood</h3>
-                                            <button className='btn-card btn btn-primary rounded-pill my-2' style={{ fontSize: '13px', background: '#cbd0ff', color: '#3247FF' }}>M&A Consultant</button><br />
-                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>Nesxt Js</button>
-                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>Firebase</button>
-                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>Medical</button>
-                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>SaaS</button>
+                                            <h3 style={{ fontSize: '25px', fontWeight: '700' }}>{item.ownerName}</h3>
+                                            <button className='btn-card btn btn-primary rounded-pill my-2' style={{ fontSize: '13px', background: '#cbd0ff', color: '#3247FF' }}>{item.category}</button><br />
+                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>{item.techStack1}</button>
+                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>{item.techStack2}</button>
+                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>{item.techStack3}</button>
+                                            <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '13px' }}>{item.techStack4}</button>
                                         </div>
                                     </div>
                                     <div className='my-4'>
                                         <span style={{ color: "#c0c0c0", fontSize: '13px' }}>Short Bio</span><br />
-                                        <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>
-                                            Taliesen is the CEO of Hahnbeck, a leading global M&A boutique focused on consumer retail and SaaS.
-                                            An experienced dealmaker with extensive connections in the CPG space,
-                                            Taliesen’s insights into e-commerce mergers......</span>
+                                        <span className='advisory-span col-6' style={{ color: '#636363', fontSize: '18px' }}>{item.shortBio}</span>
                                     </div>
 
                                     <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
@@ -115,31 +179,31 @@ const Advisory = () => {
 
                                     <div className='d-flex justify-content-between flex-wrap' style={{ width: '100%' }}>
                                         <div style={{ margin: '0 3rem 0 0' }}>
-                                            <span style={{ color: '#636363', fontWeight: '600' }}>Businesses Type</span>
+                                            <span style={{ color: '#636363', fontWeight: '600' }}>Prefered Deal Size?</span>
                                             <div className='d-flex justify-content-start align-items-center'>
                                                 <img width={40} src={cardLogo1} alt="" />
-                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>E-Commerce</span>
+                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>{item.dealSize}</span>
                                             </div>
                                         </div>
                                         <div style={{ margin: '0 3rem 0 0' }}>
                                             <span style={{ color: '#636363', fontWeight: '600' }}>Based in</span>
                                             <div className='d-flex justify-content-start align-items-center'>
                                                 <img width={40} src={cardLogo2} alt="" />
-                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>Anywhere</span>
+                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>{item.location}</span>
                                             </div>
                                         </div>
                                         <div style={{ margin: '0 3rem 0 0' }}>
                                             <span style={{ color: '#636363', fontWeight: '600' }}>Acquisition type</span>
                                             <div className='d-flex justify-content-start align-items-center'>
                                                 <img width={40} src={cardLogo3} alt="" />
-                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>Full</span>
+                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>{item.acquisitionType}</span>
                                             </div>
                                         </div>
                                         <div style={{ margin: '0 3rem 0 0' }}>
                                             <span style={{ color: '#636363', fontWeight: '600' }}>Valuation</span>
                                             <div className='d-flex justify-content-start align-items-center'>
                                                 <img width={40} src={cardLogo4} alt="" />
-                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>$150K +</span>
+                                                <span className='card-span' style={{ fontSize: '1.5rem' }}>{item.valuation}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -152,13 +216,13 @@ const Advisory = () => {
                 </div>
             </section>
 
-            <section className='d-flex justify-content-center' style={{ height: '20vh', background: '#EEF0FE ' }}>
+            {/* <section className='d-flex justify-content-center' style={{ height: '20vh', background: '#EEF0FE ' }}>
                 <div>
                     <div >
                         <Link style={{ padding: '18px 48px' }} className='btn btn-primary' to="/singup">View Listing<img className='mx-2' style={{ width: '20px'}} src={arrow} alt="" /> </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section>
                 <Footer />

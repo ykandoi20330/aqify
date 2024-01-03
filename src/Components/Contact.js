@@ -84,23 +84,23 @@ const Contact = () => {
       <ToastContainer />
       <section className="pricing-first-section">
         <div
-          className="pricing-backgroundImage"
-          style={{
+          className="pricing-backgroundImage" style={{background:'#161616', padding:'4rem 0 8rem 0'}}
+          >
+          {/* style={{
             backgroundImage: `url(${backgroundImg})`,
             width: "100%",
             height: "80vh",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-          }}
-        >
-          <h1 className="col-6 text-center">Contact Us</h1>
+          }} */}
+          <h1 className="col-6 text-center">ASK US QUESTIONS, WE ARE ALL EARS!</h1>
           <span className="col-4 text-center" style={{ margin: "0rem" }}>
-            We'd really like to hear any feedback or issue that you might have.
+          Take a step ahead, tell us who you are, and the rest is on us.
           </span>
         </div>
       </section>
 
-      <section className="contact-back" style={{ height: "120vh" }}>
+      <section className="contact-back" style={{height:'fit-content'}} >
         <div className="contact-card">
           <form onSubmit={collectData}>
             <div class="mb-3 my-3">
@@ -116,7 +116,7 @@ const Contact = () => {
                 name="name"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="&#128100; Name"
+                placeholder="Your Full Name"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -134,7 +134,7 @@ const Contact = () => {
                 name="email"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="&#128386; Email Address"
+                placeholder="Your Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -152,7 +152,7 @@ const Contact = () => {
                 name="message"
                 id="exampleFormControlTextarea1"
                 rows="3"
-                placeholder="&#128386; Message"
+                placeholder="Your Query For Us!"
                 onChange={handleChange}
                 value={formData.message}
               ></textarea>
@@ -163,7 +163,7 @@ const Contact = () => {
               disabled={state.submitting}
               style={{ width: "30%", padding: "1.5rem 2.5rem" }}
             >
-              Send Us <img style={{ width: "10%" }} src={arrow} alt="" />
+              SEND TO ACQIFY! <img style={{ width: "10%" }} src={arrow} alt="" />
             </button>
           </form>
         </div>

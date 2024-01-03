@@ -54,7 +54,7 @@ const TopMessage = () => {
             <br />
             <div className="d-flex justify-content-end">
               <div className="mx-2">
-                <Link to="/message">
+                <Link to="/MainDashboard/MessageDash">
                   <img src={message} alt="" />
                 </Link>
               </div>

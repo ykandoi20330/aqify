@@ -22,6 +22,7 @@ import SellingDash from './Components/SellingDash';
 import ValuationTool from './Components/ValuationTool';
 import Testimonials from './Components/Testimonials';
 import Advisory from './Components/Advisory';
+import AdvisoryOnboard from './Components/AdvisoryOnboard';
 import MarketplaceDetail from './Components/MarketplaceDetail';
 import MessageDash2 from './Components/MessageDash2';
 import PaymentCardDash from './Components/PaymentCardDash';
@@ -46,7 +47,8 @@ import DashboardValuation from './Components/DashboardValuation'
 import ProofOfFund from './Components/ProofOfFund'
 import Favourite from './Components/Favourite'
 import NotifactionDash from './Components/NotifactionDash'
-import TransferService from './Components/TransferService';
+import TransferService from './Components/TransferService'
+import Agora from './Components/Agora';
 
 function App() {
   return (
@@ -54,12 +56,12 @@ function App() {
       <HashRouter>
         {/* <Navbar /> */}
         <Routes>
-          <Route path="/" element={<Home1 />} />
+          <Route path="/" element={<SignIn />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/owner" element={<Owner />} />
           <Route path="/acquire" element={<Acquirers />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/TransferService" element={<TransferService/>} />
+          <Route path="/TransferService" element={<TransferService />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<TermsCondition />} />
@@ -71,12 +73,13 @@ function App() {
           <Route path="/valuation" element={<ValuationTool />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/advisory" element={<Advisory />} />
+          <Route path="/advisoryOnbaord" element={<AdvisoryOnboard />} />
           <Route path="/placeDetail" element={<MarketplaceDetail />} />
-          <Route path="/message" element={<MessageDash2 />} />
+          {/* <Route path="/message" element={<MessageDash2 />} /> */}
           <Route path="/payCart" element={<PaymentCardDash />} />
           <Route path="/seller" element={<SellerDash />} />
           <Route path="MarketDash2" element={<MarketplaceDash2 />} />
-
+          <Route path="/call/:id" element={<Agora />} />
           <Route path="/MainDashboard" element={<MainDashboard />} >
             <Route path="proflie" element={<DashboardProfile />} />
             <Route path="contactDashboard" element={<ContactDashboard />} />

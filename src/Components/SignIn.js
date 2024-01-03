@@ -1,5 +1,5 @@
 
-import React ,{useState}from 'react'
+import React ,{useEffect, useState}from 'react'
 import google from "./SignIn/google-svg.svg"
 import background from "./SignIn/unsplash5u-28ojjgms@2x2.png"
 import vector from "./SignIn/Frame 21.svg"
@@ -25,6 +25,14 @@ const SignIn = () => {
     password: '',
   });
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      navigate('/MainDashboard/Dashbaord');
+    }
+  } ,[]);
 
   
 
@@ -90,7 +98,7 @@ const SignIn = () => {
     <>
     <ToastContainer/>
       <section>
-        <div className="Signin-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: '130%' }}>
+        <div className="Signin-back" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'absolute', width: '100%', height: '100%', padding:'2rem 0' }}>
           <div className="signIn-card">
             <div className="d-flex flex-column align-items-center mb-4">
               <div className='my-2'>

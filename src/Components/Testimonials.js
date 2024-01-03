@@ -17,13 +17,14 @@ const Testimonials = () => {
         </section>
 
             <section className='pricing-first-section'>
-                <div className="pricing-backgroundImage" style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="pricing-backgroundImage" style={{background:'#161616', padding:'8rem 0 8rem 0'}} >
+                {/* style={{ backgroundImage: `url(${backgroundImg})`, width: '100%', height: '80vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} */}
                     <h1 className='col-6 text-center'>Testimonials</h1>
                 </div>
             </section>
 
-            <section className="ligh-back" style={{ height: '50vh' }} >
-                <div className='d-flex justify-content-center align-items-center' style={{ height: '50vh' }}>
+            <section className="ligh-back" style={{padding:'4rem 0'}} >
+                <div className='d-flex justify-content-center align-items-center'>
                     <div style={{ marginLeft: '-0px', position: 'relative' }}>
                         <ul className='Testimonails-ul'>
                             <li>2,000+<br /><span style={{ fontSize: '20px', fontWeight: '100' }}>Registered buyers and sellers</span></li>
@@ -113,11 +114,11 @@ const Testimonials = () => {
             </section>
 
             <section className='owner-four-section'>
-                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', height: '65vh', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
+                <div className="Imageowner-third-card" style={{ backgroundImage: `url(${BackSidePhoto})`, width: '100%', backgroundRepeat: 'no-repeat', backgroundSize: 'contain ', backgroundPosition: 'right' }}>
                     <div className='imageBottom-div d-flex justify-content-between align-items-center'>
                         <div>
                             <h1 className='owner-four-h1'>Get Offers From Professional Acquirers</h1>
-                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '20px' }}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>
+                            <span className='col-8 d-flex' style={{ color: '#fff', fontSize: '1.2rem' }}>The Acqify Advisor Directory connects owners with experts for valuations, due diligence, legal, tax, accounting and M&A.</span>
                             <div className='my-5'>
                                 <Link style={{ fontSize: '1.5rem', padding: "1rem 2rem" }} className='btn btn-outline-light' to="/advisory">Advisor Activity</Link>
                             </div>

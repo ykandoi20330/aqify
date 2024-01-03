@@ -30,8 +30,8 @@ const Favourite = () => {
   return (
     <>
       <section className="marketDash2-back" style={{ height: '100%' }} >
-        <div className='d-flex'>
-          <div className="market-card" >
+        <div className='d-flex flex-wrap'>
+          <div className=" d-flex flex-wrap" > {/**market-card */}
             {favourite.length > 0 ? favourite.map((item, index) => {
               const id = index + 1
               return (
@@ -59,7 +59,7 @@ const Favourite = () => {
                   <div className='d-flex justify-content-between' style={{ margin: '2rem 0 2rem 0' }}>
                     <h3 className='card-h3'>Metrics</h3>
                     <div className='d-flex justify-content-center align-items-center'>
-                      <Link style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' to="/MainDashboard/MarketDash2">View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
+                      <Link style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' to="/MarketDash2">View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
                       {/* <Link onClick={() => removeFromFavorites(item.id)}><i class="fa-solid fa-heart" style={{ color: '' }}></i></Link> */}
                       {favoriteChecker(item.category) ?
                         (<Link key={item.id} onClick={() => removeFromFavorites(item.category)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)

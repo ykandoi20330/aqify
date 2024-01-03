@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <div className='hero1'>
-        <nav className='navbar navbar-expand-lg navbar-dark navline' id="middleNav" style={{ zIndex: "5", position: 'absolute', width: '100%',height:'30vh', top:'-50px' }}>
+        <nav className='navbar navbar-expand-lg navbar-dark navline py-3' id="middleNav" style={{ zIndex: "5", position: 'relative', top: '0px', background: '#161616' }}>
 
           <div class="container-fluid">
             <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /><span className='beta' style={{ color: '#c0c0c0', fontSize: '12px', position: 'relative', right: '-78px', top: '8px' }}>Beta</span></Link>
@@ -31,15 +31,19 @@ const Navbar = () => {
                   <li className="nav-item">
                     <Link className="nav-link" to="/acquire">For Acquirers</Link>
                   </li>
-                  {/* <li className="nav-item">
-                  </li> */}
-                  <li class="nav-item dropdown">
+                  <li className="nav-item">
+                    <Link class="nav-link" to="/owner">For Owners</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link class="nav-link" to="/TransferService">Transfer service</Link>
+                  </li>
+                  {/* <li class="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="/"  role="button" data-bs-toggle="dropdown" aria-expanded="false">For Owners</Link>
                     <ul class="dropdown-menu ">
                       <li><Link class="dropdown-item" to="/owner">For Owners</Link></li>
                       <li><Link class="dropdown-item" to="/TransferService">Transfer service</Link></li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link className="nav-link" to="/pricing">Pricing</Link>
                   </li>

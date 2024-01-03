@@ -24,7 +24,8 @@ const MarketplaceDash = (props) => {
     const [isOpenmore, setIsOpenmore] = useState(false)
 
     const [searchTerm, setSearchTerm] = useState([]);
-    // const [locTerm, setLocTerm] = useState([]);
+    
+    const [lowTerm, setLowTerm] = useState([]);
 
     useEffect(() => {
         getCard();
@@ -77,6 +78,11 @@ const MarketplaceDash = (props) => {
         props.filterTech(t.target.value)
     }
 
+    const handleLowest = (l) => {
+        setLowTerm(l.target.value)
+        props.filterLowToHigh(l.target.value)
+    }
+
     return (
         <>
             <section className='Marketside d-flex justify-content-between align-items-center' style={{ background: '#EEF0FE' }}>
@@ -93,7 +99,7 @@ const MarketplaceDash = (props) => {
             </section>
 
             {/** */}
-            <section style={{ background: '#EEF0FE' }}>
+            <section style={{ background: '#EEF0FE', cursor:'pointer'}}>
                 <div className='first-line mb-3 d-flex justify-content-center align-items-center'>
                     <div class="mb-3 my-3 form-floating">
                         <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} />
@@ -125,7 +131,7 @@ const MarketplaceDash = (props) => {
                     </div>
                 </div>
 
-                <div className="second-line d-flex justify-content-center">
+                <div className="second-line d-flex justify-content-center" style={{cursor:'pointer'}}>
                     <div class="form-floating">
                         <div style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select mb-3 mx-2" onClick={toggleDropdownCategory}>Categories</div>
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
@@ -154,11 +160,11 @@ const MarketplaceDash = (props) => {
             </section>
 
 
-            <section className='cardOption d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
+            <section className='cardOption d-flex justify-content-center' style={{ background: '#EEF0FE', cursor:'pointer'}}>
                 {isOpenCategory && (
                     <div className="marketDash-card flex-wrap">
                         <div className='d-flex justify-content-end'>
-                            <img src={Close} alt="" />
+                            <img onClick={toggleDropdownCategory} src={Close} alt="" />
                         </div>
                         <div>
                             {card.map((cate, index) => {
@@ -175,10 +181,10 @@ const MarketplaceDash = (props) => {
                     </div>)}
 
                 {isOpen && (
-                    <div className="marketDash-card2" >
+                    <div className="marketDash-card2" style={{cursor:'pointer'}}>
                         <div className='filters d-flex justify-content-between mb-3'>
                             <span style={{ color: '#636363' }}>More Filters</span>
-                            <img src={Close} alt="" />
+                            <img onClick={toggleDropdown} src={Close} alt="" />
                         </div>
 
                         <div className="more-filters d-flex justify-content-between my-3">
@@ -231,12 +237,12 @@ const MarketplaceDash = (props) => {
                     </div>)}
 
                 {isOpenmore &&
-                    <div className="marketDash-card flex-wrap">
+                    <div className="marketDash-card flex-wrap" style={{cursor:'pointer'}}>
                         <div className='d-flex justify-content-end'>
-                            <img src={Close} alt="" />
+                            <img onClick={toggleDropdownMore} src={Close} alt="" />
                         </div>
-                        <div className='d-flex'>
-                            <div>
+                        <div className='d-flex my-3'>
+                            <div className='d-flex flex-column'>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
                                     <label class="form-check-label" for="inlineCheckbox1">Most Favorited</label>
@@ -251,7 +257,7 @@ const MarketplaceDash = (props) => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='d-flex flex-column'>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" />
                                     <label class="form-check-label" for="inlineCheckbox4">Sold</label>
@@ -261,7 +267,7 @@ const MarketplaceDash = (props) => {
                                     <label class="form-check-label" for="inlineCheckbox5">Premium</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6" />
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value={lowTerm} onChange={handleLowest} />
                                     <label class="form-check-label" for="inlineCheckbox6">Price (low to high)</label>
                                 </div>
                             </div>

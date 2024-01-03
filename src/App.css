@@ -4,8 +4,13 @@
   padding: 0;
 }
 
+html{
+  font-size: 96%;
+}
+
 body {
   overflow-x: hidden;
+  flex-grow: 1;
 }
 
 :root {
@@ -20,7 +25,6 @@ body {
 /* Nav Section */
 nav {
   /* position: fixed; */
-  top: 30px;
   display: flex;
   justify-content: space-around !important;
   overflow: hidden;
@@ -29,11 +33,11 @@ nav {
 .Logo {
   width: 50%;
   position: relative;
-  left: 75px;
+  left: 5rem;
   /* left: -460px; */
   /* background: #8383831c;
   border: none;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   backdrop-filter: blur(25px); */
 }
 
@@ -46,7 +50,7 @@ nav {
 .ul li .nav-link {
   color: #C0C0C0;
   text-decoration: none;
-  padding: 7px 15px;
+  padding: 0.5rem 1rem;
 }
 
 .ul li .nav-link:focus::after {
@@ -74,8 +78,8 @@ nav {
   padding-right: 0;
   padding-left: 0;
   /* border-bottom: var(--bs-nav-underline-border-width) solid transparent; */
-  border-bottom: 5px solid transparent;
-  border-radius: 5px;
+  border-bottom: 0.4rem solid transparent;
+  border-radius: 0.4rem;
 }
 
 .dropdown-toggle::after {
@@ -109,7 +113,7 @@ nav {
   overflow-y: visible;
   justify-content: space-around;
   align-items: center;
-  left: 75px;
+  left: 4.5rem;
   position: relative;
 }
 
@@ -131,7 +135,7 @@ nav {
 }
 
 .video {
-  height: 100%;
+  /* height: 100%; */
   width: 95%;
   border-radius: 11px;
 }
@@ -224,7 +228,7 @@ nav {
 
 .main {
   width: 100%;
-  height: 130vh;
+  /* height: 130vh; */
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -238,11 +242,11 @@ nav {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  left: 100px;
+  left: 6.2rem;
   position: relative;
   color: #fff;
-  top: 50px;
-  /* top: 150px; */
+  top: 4rem;
+  /* top: 16.2rem; */
 }
 
 /* .hero-images-wrapper {
@@ -252,15 +256,15 @@ nav {
 
 .split-content.home-hero-right {
   justify-content: end;
-  margin-top: 120px;
+  margin-top: 7.1rem;
   /* margin-right: -184px; */
   display: flex;
 }
 
 .image.home-hero {
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 7px 27px rgba(38, 55, 147, .05);
+  border-radius: 1.1rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 0.6rem 1.8rem rgba(38, 55, 147, .05);
 }
 
 .hero-images-wrapper {
@@ -314,7 +318,7 @@ nav {
 }
 
 .main-h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bolder;
 }
 
@@ -326,7 +330,7 @@ nav {
 
 .btn {
   padding: 1.2rem;
-  border-radius: 15px;
+  border-radius: 1rem;
   /* background-color: linear-gradient(45deg,#8341fe, #3247FF) !important; */
 }
 
@@ -341,7 +345,7 @@ nav {
   --bs-btn-active-color: #fff !important;
   --bs-btn-active-bg: #0b37d7 !important;
   --bs-btn-active-border-color: #0b37d7 !important;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-active-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff !important;
   --bs-btn-disabled-bg: #3247FF !important;
   --bs-btn-disabled-border-color: #3247FF !important;
@@ -357,7 +361,7 @@ nav {
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #f8f9fa;
   --bs-btn-active-border-color: #f8f9fa;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-active-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #f8f9fa;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #f8f9fa;
@@ -376,24 +380,24 @@ ul {
 }
 
 .main-ul li {
-  border-left: 5px solid #3247FF;
-  border-radius: 5px;
+  border-left: 0.3rem solid #3247FF;
+  border-radius: 0.3rem;
   margin-right: 5rem;
-  padding: 0 20px 0 20px;
-  font-size: 30px;
+  padding: 0 1.1rem 0 1.2rem;
+  font-size: 1.9rem;
   font-weight: bolder;
 }
 
 .bottomCircle1 {
-  left: 17px;
+  left: 1rem;
   position: absolute;
-  top: -37px;
+  top: -2rem;
   width: 80%;
 }
 
 .bottomCircle2 {
   width: 43%;
-  right: -80px;
+  right: -5rem;
   position: relative;
 }
 
@@ -401,7 +405,7 @@ ul {
 /*Second home section*/
 .Home-listing {
   background: #EEF0FE;
-  height: 220vh;
+  /* height: 220vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,7 +426,7 @@ ul {
 
 .card {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
 }
@@ -436,9 +440,9 @@ ul {
 }
 
 .btn-card {
-  padding: 5px 20px;
-  border-radius: 50px;
-  font-size: 25px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
   margin-right: 0.5rem;
 }
 
@@ -452,7 +456,7 @@ ul {
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #3247FF;
   --bs-btn-active-border-color: #3247FF;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-active-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #3247FF;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #3247FF;
@@ -460,9 +464,9 @@ ul {
 }
 
 .card-h3 {
-  padding: 0 20px 0 0;
-  border-bottom: 5px solid #3247FF;
-  border-radius: 5px;
+  padding: 0 1.2rem 0 0;
+  border-bottom: 0.3rem solid #3247FF;
+  border-radius: 0.3rem;
 }
 
 .card-span {
@@ -485,7 +489,7 @@ ul {
   /* left: 100px; */
   position: relative;
   background-color: #3247FF;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .data-content {
@@ -494,7 +498,7 @@ ul {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  left: 100px;
+  left: 6.2rem;
   position: relative;
   color: #fff;
 }
@@ -506,11 +510,11 @@ ul {
 }
 
 .data-ul li {
-  border-left: 5px solid #d9ddff9c;
-  border-radius: 5px;
+  border-left: 0.3rem solid #d9ddff9c;
+  border-radius: 0.3rem;
   margin-right: 5rem;
-  padding: 0 20px 0 20px;
-  font-size: 30px;
+  padding: 0 1.2rem 0 1.2rem;
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 
@@ -543,7 +547,7 @@ ul {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  left: 100px;
+  left: 6.2rem;
   position: relative;
 }
 
@@ -565,7 +569,8 @@ ul {
 .fourth-main {
   position: relative;
   background: #EEF0FE;
-  height: 160vh;
+  /* height: 160vh; */
+  padding: 0px 0 3rem 0;
 }
 
 .fourth-h1 {
@@ -588,10 +593,11 @@ ul {
 
 .card-four {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
   width: 45%;
+  height: 27rem;
   margin: 0.5rem 0.5rem;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -616,7 +622,7 @@ ul {
   display: flex !important;
   flex-direction: column !important;
   min-width: 0 !important;
-  height: var(--bs-card-height) !important;
+  /* height: var(--bs-card-height) !important; */
   color: var(--bs-body-color) !important;
   word-wrap: break-word !important;
   background-color: var(--bs-card-bg) !important;
@@ -628,7 +634,7 @@ ul {
 
 .fifth-main {
   background: #EEF0FE;
-  height: 120vh;
+  /* height: 120vh; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -656,7 +662,7 @@ ul {
 
 .overlay-slide {
   /* position: absolute;
-    bottom: -20px;
+    bottom: -1.2rem;
     left: 0;
     right: 0;
     overflow: hidden;
@@ -678,8 +684,8 @@ ul {
 
 .SlideCard-arrow {
   background: white;
-  padding: 6px 10px;
-  border-radius: 50px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3rem;
   margin: 0 0.3rem;
   cursor: pointer;
 }
@@ -689,12 +695,12 @@ ul {
 
 .six-main {
   position: relative;
-  height: 130vh;
+  /* height: 130vh; */
   background: linear-gradient(180deg, #3247FF, #5B5EEB);
 }
 
 .six-content {
-  /* left: 50px;
+  /* left: 6.2rem;
   position: relative; */
   padding: 6rem 0 0 0;
 }
@@ -707,15 +713,15 @@ ul {
 
 .quoteImg {
   width: 55%;
-  left: 100px;
+  left: 6.2rem;
   position: relative;
   opacity: 0.3;
 }
 
 .six-arrow {
   background: white;
-  padding: 6px 11px;
-  border-radius: 50px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6.2rem;
   margin: 0 0.3rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -723,7 +729,7 @@ ul {
 
 .six-card {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
   width: 45%;
@@ -768,7 +774,7 @@ ul {
 
 .seven-section {
   position: relative;
-  height: 120vh;
+  /* height: 120vh; */
 }
 
 .sevenImg {
@@ -784,12 +790,26 @@ ul {
   padding: 4rem 4rem 3rem 4rem;
   display: grid;
   justify-content: space-between;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .socailLogo {
   width: 50%;
 }
+
+.socialIcon{
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.socialIcon:hover{
+  color: #3247FF;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+
 
 .first-ul li {
   padding: 0.8rem 0;
@@ -805,12 +825,12 @@ ul {
 
 .Ownermain {
   width: 100%;
-  height: 120vh;
+  /* height: 120vh; */
+  padding: 4rem 0;
   position: relative;
   display: flex;
   justify-content: flex-start;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background:#161616;
 }
 
 .owner-second-section {
@@ -833,7 +853,8 @@ ul {
 .owner-first-section {
   position: relative;
   background: #EEF0FE;
-  height: 110vh;
+  /* height: 110vh; */
+  padding: 2rem 0;
 }
 
 .Owner-card-div {
@@ -845,9 +866,8 @@ ul {
 .owner-card {
   width: 50%;
   padding: 4rem 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
-  /* margin: 0 2rem; */
   margin: 0.5rem 0.5rem;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -882,7 +902,7 @@ ul {
 .owner-third-section {
   position: relative;
   background: #EEF0FE;
-  height: 200vh;
+  /* height: 200vh; */
   padding: 5rem;
 }
 
@@ -896,7 +916,7 @@ ul {
 .owner-third-card {
   width: 100%;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0rem;
   --bs-card-spacer-y: 1rem !important;
@@ -943,7 +963,7 @@ ul {
 
 .Imageowner-third-card {
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 10rem 0rem;
   background-color: #3247FF;
@@ -981,10 +1001,10 @@ ul {
 .owner-four-section {
   position: relative;
   background: #EEF0FE;
-  height: 120vh;
+  /* height: 120vh; */
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding: 0 5rem;
   /* background: linear-gradient(180deg,#3347FF, #595DEC , transparent); */
 }
 
@@ -1005,7 +1025,7 @@ ul {
 } */
 
 .pricing-back {
-  height: 90vh;
+  /* height: 90vh; */
   background: #EEF0FE;
   display: flex;
   justify-content: center;
@@ -1020,30 +1040,31 @@ ul {
 }
 
 .pricing-backgroundImage h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #fff;
   font-weight: 700;
+  width: 55%;
+  text-align: center;
 }
 
 .pricing-backgroundImage span {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #C0C0C0;
   margin: 2rem 0;
 }
 
 .ligh-back {
-  height: 90vh;
   background: #EEF0FE;
   display: flex;
   justify-content: center;
 }
 
 .pricing-card {
-  /* height: 50% !important; */
+  height: fit-content !important;
   margin: 0 1rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1077,13 +1098,13 @@ ul {
 
 .span1 {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.6rem;
   color: #282A2B;
 }
 
 .pricing-card h1 {
   font-weight: 700;
-  font-size: 61px;
+  font-size: 5rem;
   color: #282A2B;
   padding: 0 0 1rem 0;
 }
@@ -1160,20 +1181,20 @@ ul {
   background-size: var(--bs-accordion-btn-icon-width);
   transition: var(--bs-accordion-btn-icon-transition);
   background-color: blue;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 16.5px 16.5px 16.5px 16.5px;
 }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
   color: #636363;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .accordion-item {
   width: 75vw;
   border: unset !important;
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   margin: 2rem;
   padding: 2vh;
 }
@@ -1205,13 +1226,13 @@ ul {
   border-top-left-radius: unset !important;
   border-top-right-radius: unset !important;
   border: none;
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
 }
 
 .accordion-header {
   margin-bottom: 0;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   height: 8vh;
   display: flex;
   padding: 0 1rem;
@@ -1219,7 +1240,7 @@ ul {
 
 .accordion-flush .accordion-item .accordion-button,
 .accordion-flush .accordion-item .accordion-button.collapsed {
-  border-radius: 20px;
+  border-radius: 1.2rem;
 }
 
 
@@ -1233,11 +1254,11 @@ ul {
 }
 
 .contact-card {
-  top: -150px;
+  top: -6.2rem;
   margin: 0 1rem;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1267,7 +1288,7 @@ ul {
   word-wrap: break-word !important;
   background-color: var(--bs-card-bg) !important;
   background-clip: border-box !important;
-  height: 85%;
+  height: fit-content;
   width: 60%;
   justify-content: center;
   border-radius: 40px;
@@ -1297,11 +1318,11 @@ textarea.form-control {
 /*********** Terms & conditions ************/
 
 .terms-card {
-  top: -150px;
+  top: -6.2rem;
   margin: 0 1rem;
-  padding: 0 4rem;
+  padding: 4rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1333,8 +1354,8 @@ textarea.form-control {
   background-clip: border-box !important;
   height: 100%;
   width: 90%;
-  justify-content: center;
-  border-radius: 20px;
+  justify-content: start;
+  border-radius: 1.2rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -1353,7 +1374,7 @@ textarea.form-control {
 .marketInner-card {
   margin: 0 1rem;
   /* padding: 0 4rem; */
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1390,15 +1411,15 @@ textarea.form-control {
 }
 
 .MarketTool-card {
-  top: -150px;
+  top: -6.2rem;
   display: flex;
   justify-content: center;
   width: 90%;
-  height: 35vh;
+  height: fit-content;
   margin: 2rem 0rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1435,7 +1456,7 @@ textarea.form-control {
 .MarketPlace-card {
   margin: 0 1rem;
   /* padding: 0 4rem; */
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   border: none !important;
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -1500,23 +1521,23 @@ input[type=radio] {
 }
 
 @media screen and (min-width:768px) {
-  .navCollaspe{
+  .navCollaspe {
     width: 77px;
     overflow-x: hidden !important;
   }
 
-  .navCollaspe .nav-link1 span{
+  .navCollaspe .nav-link1 span {
     display: none;
   }
 
-  .navCollaspe .dash{
+  .navCollaspe .dash {
     display: none;
   }
-  
-  .navCollaspe .dashLogo{
+
+  .navCollaspe .dashLogo {
     display: none;
   }
-  
+
 }
 
 .sideContent {
@@ -1595,8 +1616,8 @@ dropdown-toggle::after {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
-  right: 20px;
-  top: 20px;
+  right: 1.2rem;
+  top: 1.2rem;
   position: absolute;
 }
 
@@ -1611,7 +1632,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1645,20 +1666,20 @@ dropdown-toggle::after {
 
 .inputTrue {
   background: gray;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.2rem;
   margin: 0 0.5rem 0 0;
 }
 
 .inputTrue:hover {
   background: #3247ff;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.2rem;
   margin: 0 0.5rem 0 0;
 }
 
 .btn1 {
-  border-radius: 50px !important;
+  border-radius: 6.2rem !important;
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -1701,7 +1722,7 @@ dropdown-toggle::after {
 :not(.btn-check)+.btn1:active {
   border-color: #3247ff;
   color: #3247ff;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -1713,7 +1734,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1752,7 +1773,7 @@ dropdown-toggle::after {
   margin: 2rem 0;
   padding: 3rem;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1800,7 +1821,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 3rem 7rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1855,7 +1876,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 2rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1893,7 +1914,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -1928,7 +1949,7 @@ dropdown-toggle::after {
 .btnFilter {
   color: #3247FF;
   border: 2px solid #3247FF;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.5rem 1.5rem;
   margin: 0.3rem 0.7rem 0 0;
 }
@@ -1940,7 +1961,7 @@ dropdown-toggle::after {
 :not(.btn-check)+.btnFilter:active {
   background: #3247ff !important;
   color: #fff !important;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -1982,7 +2003,7 @@ dropdown-toggle::after {
   background-clip: border-box;
   /* border: var(--bs-card-border-width) solid var(--bs-card-border-color); */
   /* border-radius: var(--bs-card-border-radius); */
-  border-radius: 20px;
+  border-radius: 1.2rem;
 }
 
 /*************** Feedback options *****************/
@@ -2001,10 +2022,10 @@ dropdown-toggle::after {
 .feedbtn {
   background: #3247FF;
   padding: 0.5rem 2rem;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   text-decoration: none;
   color: #fff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6.2rem 100px -1.2rem,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgb(10 37 64 / 16%) 0px -2px 6px 0px inset;
 }
@@ -2023,7 +2044,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2064,7 +2085,7 @@ dropdown-toggle::after {
   /* margin: 2rem 1rem; */
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2106,7 +2127,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 5rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2148,7 +2169,7 @@ dropdown-toggle::after {
   padding: 0.5rem 1.2rem;
   margin: 0.3rem 0.7rem 0 0;
   background: #EEF0FE;
-  border-radius: 50px !important;
+  border-radius: 6.2rem !important;
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2190,7 +2211,7 @@ dropdown-toggle::after {
 :not(.btn-check)+.btn2:active {
   border-color: #3247ff;
   color: #3247ff;
-  border-radius: 50px;
+  border-radius: 6.2rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -2206,11 +2227,11 @@ dropdown-toggle::after {
 
 .steps .circle {
   /* height: 100px; */
-  height: 50px;
-  width: 50px;
+  height: 3.2rem;
+  width: 3.2rem;
   color: #EEF0FE;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 1.6rem;
   font-weight: 500;
   display: flex;
   justify-content: center;
@@ -2324,7 +2345,7 @@ dropdown-toggle::after {
   margin: 2rem 1rem;
   padding: 5rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2368,7 +2389,7 @@ dropdown-toggle::after {
   padding: 5rem;
   overflow-y: clip;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2419,8 +2440,8 @@ input[type="file"] {
 .input-group label {
   cursor: pointer;
   border: 1px solid;
-  padding: 20px;
-  height: 20px;
+  padding: 1.2rem;
+  height: 1.2rem;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -2460,7 +2481,7 @@ input[type="file"] {
   border: 1px solid #C0C0C0;
   /* margin: 0 1rem; */
   padding: 1.5rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
   --bs-card-title-spacer-y: 0.5rem !important;
@@ -2500,7 +2521,7 @@ input[type="file"] {
   margin: 2rem 0rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2547,7 +2568,7 @@ input[type="file"] {
   border-radius: 5px;
   /* margin-right:5rem; */
   padding: 0 40px 0 40px;
-  font-size: 50px;
+  font-size: 3.2rem;
   font-weight: bolder;
   text-align: center;
 }
@@ -2556,15 +2577,15 @@ input[type="file"] {
 /************** Advisory Section  *****************/
 
 .advisory-card {
-  top: -150px;
+  top: -5rem;
   display: flex;
   justify-content: center;
   width: 90%;
-  height: 35vh;
+  height: fit-content;
   margin: 2rem 0rem;
   padding: 3rem;
 
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2611,7 +2632,7 @@ input[type="file"] {
   /* height: 100% !important; */
   width: 47% !important;
   padding: 3rem;
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   border: none;
   margin: 2rem 0;
   --bs-card-spacer-y: 1rem;
@@ -2682,7 +2703,7 @@ input[type="file"] {
 
 .signIn-card {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
   width: 35%;
@@ -2735,7 +2756,7 @@ input[type="file"] {
 
 .signUp-card {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
   width: 120%;
@@ -2780,7 +2801,7 @@ input[type="file"] {
 
 .onboard-card {
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   margin: 2rem 0;
   width: 40%;
@@ -2826,7 +2847,7 @@ input[type="file"] {
   /* height: 50% !important; */
   margin: 0 1rem;
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   border: none;
   --bs-card-spacer-y: 1rem !important;
   --bs-card-spacer-x: 1rem !important;
@@ -2862,7 +2883,7 @@ input[type="file"] {
 
 .Tamplate-main {
   width: 100%;
-  height: 120vh;
+  padding: 2rem 0;
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -2872,7 +2893,7 @@ input[type="file"] {
 
 .card-tamplate {
   padding: 3rem !important;
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   border: none !important;
   margin: 2rem 0 I !important;
   --bs-card-spacer-y: 1rem;
@@ -2911,7 +2932,7 @@ input[type="file"] {
 
 .Notifaction-Card {
   padding: 3rem !important;
-  border-radius: 20px !important;
+  border-radius: 1.2rem !important;
   border: none !important;
   margin: 2rem 0 !important;
   --bs-card-spacer-y: 1rem;
@@ -2948,7 +2969,7 @@ input[type="file"] {
 
 /***************** Transfer Services Section *******************/
 
-.transferCard{
+.transferCard {
   background-color: #fff !important;
 }
 
@@ -3020,7 +3041,7 @@ input[type="file"] {
 
   .data-ul li {
     margin-right: 1rem !important;
-    padding: 0px 0px 0 20px !important;
+    padding: 0px 0px 0 1.2rem !important;
   }
 
   /* Fifth Main home section */
@@ -3044,6 +3065,10 @@ input[type="file"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .marketLogoImage{
+    width: 100% !important;
   }
 
   .marketInner-card {
@@ -3128,6 +3153,8 @@ input[type="file"] {
   .main {
     height: 100% !important;
   }
+
+  
 
   .homeSection {
     height: 120% !important;
@@ -3220,7 +3247,7 @@ input[type="file"] {
 
   .data-ul li {
     margin-right: 2rem !important;
-    padding: 0px 0px 0 20px !important;
+    padding: 0px 0px 0 1.2rem !important;
   }
 
   .data-h1 {
@@ -3272,6 +3299,10 @@ input[type="file"] {
   }
 
   /****************** Pricing section **********************/
+  .pricing-free {
+    width: 70% !important;
+  }
+
   .pricingCard2 {
     width: 70% !important;
     margin: 2rem 0 !important;
@@ -3296,6 +3327,7 @@ input[type="file"] {
   .AdvisoryMarket-card {
     display: flex;
     flex-direction: column !important;
+    align-items: center;
   }
 
   .advisory-div1 {
@@ -3304,7 +3336,7 @@ input[type="file"] {
   }
 
   .advisory-span {
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
 
   /***************** Market section ********************/
@@ -3404,14 +3436,19 @@ input[type="file"] {
     position: relative;
   }
 
-  .showProfile{
+  .showProfile {
     width: 100% !important;
   }
 
-  .detailmessage{
+  .detailmessage {
     display: flex;
     flex-direction: column !important;
   }
+
+  .showMessage {
+    height: 93% !important;
+  }
+
 
 }
 
@@ -3504,7 +3541,7 @@ input[type="file"] {
   }
 
   .btn-card {
-    font-size: 17px !important;
+    font-size: 1rem !important;
   }
 
   /* Third Main home section */
@@ -3514,7 +3551,7 @@ input[type="file"] {
 
   .data-ul li {
     margin-right: 2rem !important;
-    padding: 0px 0px 0 20px !important;
+    padding: 0px 0px 0 1.2rem !important;
   }
 
   .data-h1 {
@@ -3542,7 +3579,7 @@ input[type="file"] {
   }
 
   .largeSpan {
-    font-size: 14px !important;
+    font-size: 0.8rem !important;
   }
 
   /* Fifth Main home section */
@@ -3593,9 +3630,6 @@ input[type="file"] {
     left: 0px;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -3637,7 +3671,7 @@ input[type="file"] {
   }
 
   .owner-write-detail span {
-    font-size: 12px !important;
+    font-size: 0.7rem !important;
   }
 
   .founder-content {
@@ -3661,6 +3695,10 @@ input[type="file"] {
     align-items: center;
   }
 
+  .pricing-free {
+    width: 90% !important;
+  }
+
   .pricingCard2 {
     width: 90% !important;
     margin: 1rem 0;
@@ -3672,9 +3710,6 @@ input[type="file"] {
 
   /*************** Market section ****************/
 
-  .MarketTool-card {
-    height: 55vh !important;
-  }
 
   .marketInner-card {
     margin: 1rem 1rem;
@@ -3685,6 +3720,7 @@ input[type="file"] {
 
   .placeDetail-section {
     padding: 0px !important;
+    top: -115px !important;
   }
 
   .detailContent {
@@ -3761,9 +3797,6 @@ input[type="file"] {
   }
 
   /*************************** Sign Up Section ************************/
-  .SignUp-back {
-    height: 150% !important;
-  }
 
   .signUp-card {
     width: 97% !important;
@@ -3852,28 +3885,18 @@ input[type="file"] {
 
   .buying-content {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly !important;
   }
 
   .buying-div1 {
-    width: 20% !important;
     display: flex;
-    flex-direction: column !important;
   }
 
   .buying-div1 li {
     left: 0px !important;
   }
 
-  .buying-div2 {
-    display: flex;
-    flex-direction: row !important;
-  }
-
   .buying-div2 div {
     display: flex;
-    flex-direction: column !important;
     margin-top: 0.5rem !important;
     margin-bottom: -2rem !important;
   }
@@ -3943,6 +3966,26 @@ input[type="file"] {
     position: relative;
   }
 
+  /*Footer section*/
+  .footer-section {
+    height: 100% !important;
+  }
+
+  .footer-main {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .col-5 {
+    flex: auto;
+    width: 100%;
+  }
+
+  .Social-logo {
+    margin-top: 5vh !important;
+  }
+
 }
 
 @media screen and (max-width:700px) {
@@ -3961,9 +4004,7 @@ input[type="file"] {
   }
 
   /********************* Market Section ************************/
-  .MarketTool-card {
-    height: 50vh !important;
-  }
+  
 
   .marketInner-card {
     margin: 1rem 1rem;
@@ -4115,6 +4156,7 @@ input[type="file"] {
 
   .main-h1 {
     font-size: 2.5rem !important;
+    width: 93% !important;
   }
 
   .col-7 {
@@ -4169,7 +4211,7 @@ input[type="file"] {
   }
 
   .firstPart {
-    width: 120% !important;
+    width: 100% !important;
   }
 
   .firstPart h3 {
@@ -4185,7 +4227,7 @@ input[type="file"] {
   }
 
   .btn-card {
-    font-size: 17px !important;
+    font-size: 1rem !important;
   }
 
   /* Third Main home section */
@@ -4206,7 +4248,7 @@ input[type="file"] {
 
   .data-ul li {
     margin-right: 2rem !important;
-    padding: 0px 0px 0 20px !important;
+    padding: 0px 0px 0 1.2rem !important;
   }
 
   .data-h1 {
@@ -4239,7 +4281,7 @@ input[type="file"] {
   }
 
   .largeSpan {
-    font-size: 14px !important;
+    font-size: 0.8rem !important;
   }
 
   .info-card {
@@ -4305,9 +4347,6 @@ input[type="file"] {
     width: 95% !important;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -4367,9 +4406,15 @@ input[type="file"] {
     padding: 2rem !important;
   }
 
+  /************ Pricing section ***************/
+  .pricing-backgroundImage h1 {
+    width: 100% !important;
+    font-size: 2.5rem !important;
+  }
+
   /******************** Testimonails section **********************/
   .Testimonails-ul li {
-    font-size: 30px !important;
+    font-size: 1.8rem !important;
   }
 
   /************************* Contact Section ************************/
@@ -4391,7 +4436,7 @@ input[type="file"] {
 
   .accordion-flush .accordion-item .accordion-button,
   .accordion-flush .accordion-item .accordion-button.collapsed {
-    font-size: 18px !important;
+    font-size: 1.1rem !important;
   }
 
   /********************* Advisory Section ************************/
@@ -4401,7 +4446,7 @@ input[type="file"] {
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 20px !important;
+    padding: 1.2rem !important;
   }
 
   .advisory-div1 {
@@ -4439,7 +4484,7 @@ input[type="file"] {
   }
 
   /************** Message dashboard section ***************/
-  .messageSend{
+  .messageSend {
     font-size: 1rem !important;
   }
 
@@ -4560,7 +4605,7 @@ input[type="file"] {
   }
 
   .card-h3 {
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
   }
 
   .list-icon {
@@ -4572,11 +4617,11 @@ input[type="file"] {
   }
 
   .btn-card {
-    font-size: 17px !important;
+    font-size: 1rem !important;
   }
 
   .ViewAllBtn {
-    padding: 20px 20px !important;
+    padding: 1.2rem 1.2rem !important;
     font-size: 1rem !important;
   }
 
@@ -4602,7 +4647,7 @@ input[type="file"] {
 
   .data-ul li {
     margin-right: 2rem !important;
-    padding: 0px 0px 0 20px !important;
+    padding: 0px 0px 0 1.2rem !important;
   }
 
   .data-h1 {
@@ -4639,7 +4684,7 @@ input[type="file"] {
   }
 
   .largeSpan {
-    font-size: 14px !important;
+    font-size: 0.8rem !important;
   }
 
   .info-card {
@@ -4649,6 +4694,7 @@ input[type="file"] {
 
   .card-four {
     width: 85%;
+    height: 100% !important;
   }
 
   /* Fifth Main home section */
@@ -4677,7 +4723,7 @@ input[type="file"] {
   }
 
   .overlay-span {
-    font-size: 20px !important;
+    font-size: 1.2rem !important;
   }
 
 
@@ -4705,9 +4751,6 @@ input[type="file"] {
     width: 95% !important;
   }
 
-  .six-card-content {
-    font-size: 0.8rem !important;
-  }
 
   .bitsCool {
     font-size: 1.5rem !important;
@@ -4787,10 +4830,6 @@ input[type="file"] {
 
   /********************** acquirer section ***********************/
 
-  .Ownermain {
-    height: 100vh !important;
-  }
-
   .owner-third-h1 {
     font-size: 2.5rem !important;
     width: 80%;
@@ -4801,7 +4840,7 @@ input[type="file"] {
   }
 
   .Imageowner-third-card {
-    padding: 0 0 0 0rem !important;
+    padding: 1rem 0rem !important;
   }
 
   .owner-four-h1 {
@@ -4813,17 +4852,22 @@ input[type="file"] {
     width: 100%;
     height: 100%;
     background: #0043ff29;
-    border-radius: 20px;
+    border-radius: 1.2rem;
     padding: 0 0 0px 2rem;
   }
 
   /******************** Testimonails section **********************/
   .pricing-backgroundImage h1 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
 
   .Testimonails-ul li {
-    font-size: 25px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /************ Terms & Condition ***************/
+  .terms-card {
+    padding: 2rem !important;
   }
 
   /************************* Contact Section ************************/
@@ -4831,7 +4875,7 @@ input[type="file"] {
   .contact-card {
     width: 90%;
     height: 60%;
-    padding: 0px 1.5rem !important;
+    padding: 1rem 2rem !important;
   }
 
   .form-control {
@@ -4926,7 +4970,7 @@ input[type="file"] {
     width: 30px !important;
     color: #EEF0FE;
     border-radius: 50%;
-    font-size: 15px !important;
+    font-size: 1rem !important;
   }
 
   .step-item:not(:first-child):before {
@@ -4935,7 +4979,7 @@ input[type="file"] {
     width: 80% !important;
     height: 4px !important;
     position: absolute;
-    top: 20px !important;
+    top: 1.2rem !important;
   }
 
   .tagname {
@@ -4944,7 +4988,7 @@ input[type="file"] {
     color: #c0c0c0;
     background: transparent;
     top: -35px;
-    font-size: 10px !important;
+    font-size: 0.6rem !important;
   }
 
   .Onboard-card {
@@ -4958,7 +5002,7 @@ input[type="file"] {
   }
 
   .btn2 {
-    font-size: 14px !important;
+    font-size: 0.8rem !important;
   }
 
   .Onboard-card3 {
@@ -4995,7 +5039,7 @@ input[type="file"] {
     font-size: 1.2rem !important;
   }
 
-  .messageSend{
+  .messageSend {
     font-size: 1rem !important;
   }
 }
@@ -5082,4 +5126,49 @@ input[type="file"] {
     top: 18px !important;
   }
 
+}
+
+
+/******** dynamic media query ***********/
+
+@media screen and (max-width:1400px) {
+  html{
+    font-size:90%;
+  }
+
+  .pricing-backgroundImage{
+    padding: 4rem 0 14rem 0 !important;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  html{
+    font-size:88%;
+  }
+}
+
+@media screen and (max-width:992px) {
+  html{
+    font-size:85%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  html{
+    font-size:82%;
+  }
+
+  .pricing-backgroundImage{
+    padding: 4rem 0 14rem 0 !important;
+  }
+}
+
+@media screen and (max-width:600px) {
+  html{
+    font-size: 80%;
+  }
+
+  .pricing-backgroundImage{
+    padding: 4rem 0 18rem 0 !important;
+  }
 }
