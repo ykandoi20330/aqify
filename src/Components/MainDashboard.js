@@ -33,22 +33,7 @@ const MainDashboard = () => {
 
   useEffect(() => {
     const getUsername = async () => {
-      let token = null;
-      const cookies = document.cookie.split(";");
-      for (let cookie of cookies) {
-        const [cookieName, cookieValue] = cookie.trim().split("=");
-        if (cookieName === "token") {
-          token = cookieValue;
-          localStorage.setItem("token", token);
-        }
-      }
-
-      if (!token) {
-        const user = JSON.parse(localStorage.getItem("user"));
-        token = user.token;
-        localStorage.setItem("token", token);
-      }
-
+      const token = localStorage.getItem("token");
       if (token) {
         const decoded = jwtDecode(token);
         const id = decoded.id;
