@@ -39,7 +39,8 @@ const TopMessage = () => {
 
 
   const logout = () => {
-    window.location.href = `${ENV.FRONTEND_URL}/aqify#/singin`;
+    window.location.href = `${ENV.FRONTEND_URL}/#/singin`;
+    // window.location.href = `${ENV.FRONTEND_URL}/aqify#/singin`;
     localStorage.clear();
   };
 

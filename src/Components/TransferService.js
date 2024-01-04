@@ -77,7 +77,7 @@ const TransferService = () => {
               </div>
               <div className='my-4'>
                 <span className='main-span col-7 d-flex'>
-                Acqify redefines swift and secure acquisitions for you so that you stick with us for longer!
+                  Acqify redefines swift and secure acquisitions for you so that you stick with us for longer!
                 </span>
               </div>
               <div className=''>
@@ -106,8 +106,8 @@ const TransferService = () => {
               <div className="card-tamplate ">
                 <h3 className="my-3">Honest and Credible Interactions</h3>
                 <span>
-                We stringently supervise the acquisitions and pave a path for trusted and
-                 infallible interaction on both ends which results in successful deals. 
+                  We stringently supervise the acquisitions and pave a path for trusted and
+                  infallible interaction on both ends which results in successful deals.
                 </span>
               </div>
             </div>
@@ -115,8 +115,8 @@ const TransferService = () => {
               <div className="card-tamplate ">
                 <h3 className="my-3">Tailored Customer Support from Backend</h3>
                 <span className="largeSpan">
-                Our helpline never meets any glitches or delays as we constantly address your concerns and 
-                provide satisfactory answers in time. 
+                  Our helpline never meets any glitches or delays as we constantly address your concerns and
+                  provide satisfactory answers in time.
                 </span>
               </div>
             </div>
@@ -124,8 +124,8 @@ const TransferService = () => {
               <div className="card-tamplate ">
                 <h3 className="my-3">Rapid and Guaranteed Transactions</h3>
                 <span>
-                We are relying on fully secured platforms for seamless transactions
-                 for the ease of our buyers and sellers. 
+                  We are relying on fully secured platforms for seamless transactions
+                  for the ease of our buyers and sellers.
                 </span>
               </div>
             </div>
@@ -138,8 +138,8 @@ const TransferService = () => {
           <div className="d-flex flex-column align-items-center justify-content-center mb-5">
             <h2 className="fourth-h1">How it works </h2>
             <span className="text-center" style={{ color: "#636363" }}>
-            We are here to hold your hand at every step of an acquisiton and provide our 
-            unwavering support from start to the end. 
+              We are here to hold your hand at every step of an acquisiton and provide our
+              unwavering support from start to the end.
             </span>
           </div>
         </div>
@@ -380,8 +380,8 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span>
-                  Transfer by Acqify helps users securely close their deals by providing a 
-                  service to ensure a smooth ownership transition.
+                    Transfer by Acqify helps users securely close their deals by providing a
+                    service to ensure a smooth ownership transition.
                   </span>{" "}
                   <br />
                 </div>
@@ -408,8 +408,8 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                  Only Acqify buyers or sellers can use the transfer service. The service is designed to help both parties in
-                   the transaction to complete the deal securely and fast.
+                    Only Acqify buyers or sellers can use the transfer service. The service is designed to help both parties in
+                    the transaction to complete the deal securely and fast.
                   </span>
                   <br />
                 </div>
@@ -436,9 +436,9 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                  We conduct basic due diligence on the startups listed on our marketplace. 
-                  The acquirers review basic metrics like revenue, traffic, and other relevant data points to ensure that
-                   the startups listed on our platform meet our quality standards.{" "}
+                    We conduct basic due diligence on the startups listed on our marketplace.
+                    The acquirers review basic metrics like revenue, traffic, and other relevant data points to ensure that
+                    the startups listed on our platform meet our quality standards.{" "}
                   </span>
                   <br />
                 </div>
@@ -465,9 +465,9 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                  After the agreement is signed, we handle payments and the transfer of assets. 
-                  We also provide 24/7 email support to help the buyer and
-                   seller successfully close the deal.
+                    After the agreement is signed, we handle payments and the transfer of assets.
+                    We also provide 24/7 email support to help the buyer and
+                    seller successfully close the deal.
                   </span>
                   <br />
                 </div>
@@ -483,7 +483,7 @@ const TransferService = () => {
                   aria-expanded="false"
                   aria-controls="flush-collapseFive"
                 >
-                  What are the legal obligations of Acqify to 
+                  What are the legal obligations of Acqify to
                   ensure successful acquisitions?
                 </button>
                 <img src="" alt="" />
@@ -495,8 +495,8 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                  We work with contract lawyers and financiers to draft agreements tailored to each transaction's specific needs. 
-                  These agreements are not generic templates sourced from the internet.
+                    We work with contract lawyers and financiers to draft agreements tailored to each transaction's specific needs.
+                    These agreements are not generic templates sourced from the internet.
                   </span>
                   <br />
                 </div>
@@ -523,9 +523,9 @@ const TransferService = () => {
               >
                 <div class="accordion-body">
                   <span className="my-3">
-                  Once we receive the payment from the buyer, 
-                  we notify the seller to send all assets upon agreement to the buyer. 
-                  The buyer needs to review everything and do their due diligence.
+                    Once we receive the payment from the buyer,
+                    we notify the seller to send all assets upon agreement to the buyer.
+                    The buyer needs to review everything and do their due diligence.
                   </span>
                   <br />
                 </div>
@@ -542,8 +542,8 @@ const TransferService = () => {
         >
           <h2 className="fourth-h1">Your First Step Towards Fast & Secure Transfer</h2>
           <span style={{ color: "rgb(99, 99, 99)" }}>
-          It’s time to leave scammy and slow payment methods for acquisitions because 
-          we have brought you the ultimate solution. 
+            It’s time to leave scammy and slow payment methods for acquisitions because
+            we have brought you the ultimate solution.
           </span>
         </div>
         <div className="SignUp-back" style={{ background: "#EEF0FE" }}>

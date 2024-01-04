@@ -4,43 +4,36 @@ import lightMessage from "./ProfileDashbaord/chatteardropdots1.svg";
 import Arrow from "./ProfileDashbaord/ArrowUp.svg";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-import ENV from '../config.js';
+import ENV from "../config.js";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [username, setUsername] = useState("");
-  const [Show, setShow] = useState(1)
-
+  const [Show, setShow] = useState(1);
 
   useEffect(() => {
     const getUsername = async () => {
-      let token = null;
-      const cookies = document.cookie.split(";");
-      for (let cookie of cookies) {
-        const [cookieName, cookieValue] = cookie.trim().split("=");
-        if (cookieName === "token") {
-          token = cookieValue;
-          localStorage.setItem("token", token);
-        }
-      }
+      const token = localStorage.getItem("token");
+      if (!token) {
+      const currentURL = window.location.href;
+      const [baseUrl, queryString] = currentURL.split("?");
+      const token = new URLSearchParams(queryString).get("token");
+      localStorage.setItem("token", token);
 
       if (!token) {
         const user = JSON.parse(localStorage.getItem("user"));
-        token = user.token;
+        const token = user.token;
         localStorage.setItem("token", token);
       }
-
-
+      window.location.reload();
+      }
       if (token) {
         const decoded = jwtDecode(token);
         const id = decoded.id;
         try {
-          const response = await axios.get(
-            `${ENV.BACKEND_URL}/users/getUser`,
-            {
-              headers: { "x-auth-token": id },
-            }
-          );
+          const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
+            headers: { "x-auth-token": id },
+          });
           setUsername(response.data.user.userName);
         } catch (error) {
           console.error(error);

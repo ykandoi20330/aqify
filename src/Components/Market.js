@@ -919,7 +919,6 @@ const Market = () => {
                               <div className='my-3'>
                                 <h1>${item.askingPrice}</h1>
                               </div>
-
                               <Link to="/singup" className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                                 <img src={blueMsg} alt="" />
                                 <span className='mx-2'>Message Seller</span>
