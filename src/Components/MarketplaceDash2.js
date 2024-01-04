@@ -126,6 +126,31 @@ const MarketplaceDash2 = () => {
     }
   };
 
+  const handleSchedule = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      console.log(token);
+      const response = await axios.post(
+        `${ENV.BACKEND_URL}/agora/schedule`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+          user: detail[0].ownerId,
+          time: new Date().toLocaleTimeString('en-US', { hour12: false, 
+            hour: "numeric", 
+            minute: "numeric"}),
+          listing: detail[0].projectName,
+        }
+        
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
 
 
   const exploreMore = (pro) => {
@@ -714,6 +739,10 @@ const MarketplaceDash2 = () => {
                         }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Video Call</span>
+                        </div>
+                        <div onClick={handleSchedule} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                          <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+                          <span className='mx-2'>Schedule</span>
                         </div>
                         <Link className='my-3 d-flex align-items-center justify-content-center' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <img src={offer} alt="" />
