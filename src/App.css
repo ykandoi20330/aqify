@@ -2965,6 +2965,14 @@ input[type="file"] {
     border-radius: var(--bs-card-border-radius);
 }
 
+.acceptBtn:hover{
+    background: #0b0b0b !important;
+}
+
+.rejectBtn:hover{
+    background: rgb(247, 0, 0) !important;
+}
+
 /***************** Transfer Services Section *******************/
 
 .transferCard {

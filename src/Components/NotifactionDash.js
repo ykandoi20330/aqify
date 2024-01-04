@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ENV from "../config.js";
 import { jwtDecode } from "jwt-decode";
+import { Link } from "react-router-dom";
 
 const NotifactionDash = () => {
   const [card, setCard] = useState([]);
@@ -20,7 +21,7 @@ const NotifactionDash = () => {
       const response = await axios.get(
         `${ENV.BACKEND_URL}/agora/notifications`,
         {
-          params: { user: id }, 
+          params: { user: id },
         }
       );
       console.log(response.data.notifications);
@@ -32,12 +33,26 @@ const NotifactionDash = () => {
 
   return (
     <>
-      <section>
+      <section className="d-flex justify-content-center align-items-center">
         <div
-          style={{ width: "97%", height: "85vh", color: "#c0c0c0" }}
-          className="Notifaction-Card d-flex justify-content-center align-items-center"
+          style={{ width: "97%", height: "85vh", overflowY:'scroll',color: "#fff" }}
+          className="Notifaction-Card d-flex align-items-center"
         >
-          <h1 style={{ color: "#c0c0c0" }}>No notification yet!</h1>
+          {card.map((item, index) => {
+            return (
+              <>
+                <div className="py-3 px-3 w-100 rounded-pill my-2 mx-1 d-flex justify-content-between align-items-center" style={{ background: '#3247FF' }} key={index}>
+                  <span>
+                    {item.message}
+                  </span>
+                  <span>
+                    <button className="acceptBtn rounded-pill px-3 py-1 mx-1 my-1  bg-gradient border border-0 text-light" style={{background:'#191919'}} >Accept</button>
+                    <button className="rejectBtn rounded-pill px-3 py-1 mx-1 my-1 bg-danger bg-gradient border border-0 text-light">Reject</button>
+                  </span>
+                </div>
+              </>
+            )
+          })}
         </div>
       </section>
     </>

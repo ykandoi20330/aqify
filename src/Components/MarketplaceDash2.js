@@ -137,12 +137,14 @@ const MarketplaceDash2 = () => {
             authorization: `Bearer ${token}`,
           },
           user: detail[0].ownerId,
-          time: new Date().toLocaleTimeString('en-US', { hour12: false, 
-            hour: "numeric", 
-            minute: "numeric"}),
+          time: new Date().toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: "numeric",
+            minute: "numeric"
+          }),
           listing: detail[0].projectName,
         }
-        
+
       );
       console.log(response.data);
     } catch (error) {
@@ -740,10 +742,10 @@ const MarketplaceDash2 = () => {
                           <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Video Call</span>
                         </div>
-                        <div onClick={handleSchedule} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                          <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
-                          <span className='mx-2'>Schedule</span>
-                        </div>
+                        <Link data-bs-target="#ScheduleModalToggle" data-bs-toggle="modal" className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                          <i class="fa-solid fa-calendar-days" style={{ color: "#005eff" }}></i>
+                          <span className='mx-2'>Schedule Video Call</span>
+                        </Link>
                         <Link className='my-3 d-flex align-items-center justify-content-center' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <img src={offer} alt="" />
                           <span className='mx-2' >Make Offer</span>
@@ -959,6 +961,52 @@ const MarketplaceDash2 = () => {
               </div>
               <div class="modal-footer" style={{ border: 'none' }}>
                 <button type="button" class="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Schdeule A vidoe meet time and Date */}
+      <section>
+        <div class="modal fade" id="ScheduleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header" style={{ border: 'none' }}>
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel" style={{ fontWeight: '700' }}>Select a Date & Time!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <label style={{ color: '#0005ff' }} for="birthdaytime" >Meeting (date and time):</label>
+                  <input style={{
+                    padding: '1rem',
+                    border: 'none',
+                    background: '#f4f4f4',
+                    color: '#0005ff',
+                    borderRadius: '50px',
+                  }} className="mx-3" type="datetime-local" id="birthdaytime" name="birthdaytime" />
+                </form>
+              </div>
+              <div class="modal-footer" style={{ border: 'none' }}>
+                <button type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header" style={{ border: 'none' }}>
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Scheduling a Video Call</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Your Meeting has been Scheduled On Your given Time!
+              </div>
+              <div class="modal-footer" style={{ border: 'none' }}>
+                <button class="btn btn-primary px-3 py-1" data-bs-dismiss="modal" aria-label="Close" onClick={handleSchedule}>Confirm meet!</button>
               </div>
             </div>
           </div>
