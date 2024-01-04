@@ -30,7 +30,7 @@ const Footer = () => {
                                 <li style={{ color: '#C0C0C0' }}><Link to="/owner">For owners</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/acquire">For acquires</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/market">Marketplace</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/">Resources</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/adminPanel">Resources</Link></li>
                             </ul>
                         </div>
                         <div>

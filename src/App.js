@@ -49,6 +49,7 @@ import Favourite from './Components/Favourite'
 import NotifactionDash from './Components/NotifactionDash'
 import TransferService from './Components/TransferService'
 import Agora from './Components/Agora';
+import AdminPanel from './Components/AdminPanel';
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path="/seller" element={<SellerDash />} />
           <Route path="MarketDash2" element={<MarketplaceDash2 />} />
           <Route path="/call/:id" element={<Agora />} />
+          <Route path="/adminPanel" element={<AdminPanel />} />
           <Route path="/MainDashboard" element={<MainDashboard />} >
             <Route path="proflie" element={<DashboardProfile />} />
             <Route path="contactDashboard" element={<ContactDashboard />} />
