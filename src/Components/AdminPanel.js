@@ -1,35 +1,184 @@
-import React, {useState, useEffect} from 'react'
-import DataTable from 'react-data-table-component'
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import logo from "./Aqify project/FrameWhiteLogo.svg";
+import folder from "./ProfileDashbaord/folder.svg";
+import address from "./ProfileDashbaord/addressbook.svg";
+import list from "./ProfileDashbaord/listnumbers.svg";
+import bell from "./ProfileDashbaord/bell.svg";
+import setting from "./ProfileDashbaord/gear.svg";
+import tag from "./ProfileDashbaord/tag.svg";
+import analytic from "./ProfileDashbaord/VectorAnalytics.svg";
+
+//card content
+import { Link, Outlet } from "react-router-dom";
+import logo1 from "./SignIn/vector.svg";
+import TopMessage from "./TopMessage";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import ENV from "../config.js";
 
+import { useNavigate } from "react-router-dom";
 const AdminPanel = () => {
+    const navigate = useNavigate();
 
-    const [card, setCard] = useState([]);
+    const logout = () => {
+        localStorage.clear();
+        navigate("/");
+    };
 
-    useEffect(() => {
-        getCard();
-    }, []);
+    const [role, setRole] = useState("");
+    const [navCollapse, setNavCollapse] = useState(false);
 
-    const getCard = async () => {
-        try {
-            const response = await axios.get(
-                `${ENV.BACKEND_URL}/business/getbusiness`);
-            console.log(response.data.business);
-            setCard(response.data.business);
+    // useEffect(() => {
+    //     const getUsername = async () => {
+    //         const token = localStorage.getItem("token");
+    //         if (token) {
+    //             const decoded = jwtDecode(token);
+    //             const id = decoded.id;
+    //             try {
+    //                 const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
+    //                     headers: { "x-auth-token": id },
+    //                 });
+    //                 setRole(response.data.user.role);
+    //             } catch (error) {
+    //                 console.error(error);
+    //             }
+    //         }
+    //     };
 
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
+    //     getUsername();
+    // }, [setRole]);
 
     return (
-        <div className='d-flex flex-column align-items-center'>
-            <h1>Listing DataTable</h1>
-            <DataTable />
-        </div>
-    )
-}
+        <>
+            <section className="profile-section">
+                <nav
+                    className={`navbar navbar-expand-lg dashboard ${navCollapse ? "navCollaspe" : ''}`}
+                    style={{ top: "0px" }}
+                >
+                    <div class="container-fluid" style={{ padding: "0rem" }}>
+                        <button
+                            style={{ margin: "0 1.5rem" }}
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar"
+                            aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            style={{ left: "0", transform: "translateX(-100%)" }}
+                            class="offcanvas offcanvas-end text-bg-dark"
+                            tabindex="-1"
+                            id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel"
+                        >
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                                    <Link className="navbar-brand" to="/">
+                                        <img
+                                            src={logo1}
+                                            alt="Logo"
+                                            style={{ left: "0px" }}
+                                            className="Logo"
+                                        />
+                                    </Link>
+                                    <br />
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close btn-close-white"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="offcanvas-body" style={{ left: "0px" }}>
+                                {/** */}
+                                <div class="Navdashboard d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
+                                    {/** */}
+                                    <div className="d-flex justify-content-bewteen align-items-center">
+                                        <Link
+                                            to="/"
+                                            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+                                        >
+                                            <img className="dashLogo" src={logo} alt="" />
+                                            <br />
+                                            <br />
+                                            <br />
+                                        </Link>
+                                        <div>
+                                            <Link className="d-flex align-items-center" style={{ background: '#000', padding: '0.6rem', borderRadius: '200px' }} onClick={() => setNavCollapse(!navCollapse)}>
+                                                <img src={logo1} alt="Logo" style={{ width: "20px" }} className="" />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    {/** */}
+                                    <hr />
+                                    <div
+                                        className="text-white"
+                                        style={{ textDecoration: "none" }}
+                                    >
+                                        <h2 className="dash">Admin Panel</h2>
+                                    </div>
+                                    <ul class="nav flex-column mb-auto">
+                                        <li class="nav-item">
+                                            <Link
+                                                to="/AdminPanel/AdminPanelListing"
+                                                class="nav-link1 text-white"
+                                                aria-current="page"
+                                            >
+                                                <img className="dashIcon"
+                                                    style={{ marginRight: "1rem" }}
+                                                    src={list}
+                                                    alt=""
+                                                />
+                                                <span>Lists</span>
+                                            </Link>
+                                        </li>
+                                        <li class="nav-item">
+                                            <Link
+                                                to="/"
+                                                class="nav-link1 text-white"
+                                                aria-current="page"
+                                            >
+                                                <img className="dashIcon"
+                                                    style={{ marginRight: "1rem" }}
+                                                    src={tag}
+                                                    alt=""
+                                                />
+                                                <span>Approve Lists</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/"
+                                                class="nav-link1 text-white"
+                                            >
+                                                <img className="dashIcon"
+                                                    style={{ marginRight: "1rem" }}
+                                                    src={analytic}
+                                                    alt=""
+                                                />
+                                                <span>Others</span>
+                                            </Link>
+                                        </li>
+
+
+                                    </ul>
+                                    <hr />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <section style={{width:'100%'}}>
+                    <Outlet/>
+                </section>
+            </section>
+        </>
+    );
+};
 
 export default AdminPanel

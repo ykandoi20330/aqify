@@ -869,7 +869,8 @@ const Market = () => {
                           </div>
 
                           <div className="chart my-3">
-                            <img style={{ width: '100%' }} src={chart} alt="" />
+                            {/* <img style={{ width: '100%' }} src={chart} alt="" /> */}
+                            <img style={{ width: '100%' }} src={item.googleAnalytics} alt="" />
                           </div>
 
                           <div className="description">
