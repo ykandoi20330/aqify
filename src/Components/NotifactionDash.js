@@ -138,6 +138,7 @@ const NotifactionDash = () => {
                         style={{ background: "#191919"}}
                         data-bs-target="#ScheduleModalToggle" data-bs-toggle="modal"
                         // onClick={() => handleReschedule(item.buyerId , item._id)}
+                        
                       >
                         Reschedule
                       </button>
