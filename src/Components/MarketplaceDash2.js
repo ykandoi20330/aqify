@@ -47,6 +47,8 @@ const MarketplaceDash2 = () => {
   // Chat
   const [listingMessage, setListingMessage] = useState('');
   const [ws, setWs] = useState(null);
+  const [selectedUserId, setSelectedUserId] = useState(''); 
+  const [messages, setMessages] = useState([]);
 
 
   //////MarketPlaceDetail
@@ -83,13 +85,13 @@ const MarketplaceDash2 = () => {
   };
 
   const navigate = useNavigate();
+  const [id, setId] = useState("");
 
   //seller username
 
   useEffect(() => {
     const getUsername = async () => {
       const token = localStorage.getItem("token");
-      console.log(token);
 
       if (!token) {
         const user = JSON.parse(localStorage.getItem("user"));
@@ -101,6 +103,7 @@ const MarketplaceDash2 = () => {
       if (token) {
         const decoded = jwtDecode(token);
         const id = decoded.id;
+        setId(id)
         try {
           const response = await axios.get(
             `${ENV.BACKEND_URL}/users/getUser`,
@@ -180,6 +183,49 @@ const MarketplaceDash2 = () => {
     getCard();
   }, []);
 
+  // const connectToWs = () => {
+  //   const ws = new WebSocket('ws://localhost:5000');
+  //   setWs(ws);
+  //   ws.addEventListener('message', handleMessage);
+  //   ws.addEventListener('close', () => {
+  //     setTimeout(() => {
+  //       console.log('Disconnected. Trying to reconnect.');
+  //       connectToWs();
+  //     }, 10000);
+  //   });
+  // }
+
+
+  // const sendMessage = () => {
+  //   if (ws && ws.readyState === WebSocket.OPEN) {
+  //     ws.send(JSON.stringify({
+  //       receiver: detail[0].ownerId,
+  //       messageString: listingMessage,
+  //     }));
+  //     setListingMessage('');
+  //     // navigate('/MainDashboard/MessageDash');
+  //   } else {
+  //     console.error('WebSocket not open');
+  //   }
+  // };
+
+  // const handleMessage = (ev) => {
+  //   console.log('Message received:', ev);
+  //   const messageData = JSON.parse(ev.data);
+  //   console.log({ ev, messageData });
+  //   if ('message' in messageData) {
+  //     if (messageData.sender === selectedUserId) {
+  //       // Assuming you have a state for messages
+  //       setMessages(prev => ([...prev, { ...messageData }]));
+  //     }
+  //   }
+  //   console.log('Running');
+  // };
+
+  // useEffect(() => {
+  //   connectToWs();
+  // }, []);
+
   const connectToWs = () => {
     const ws = new WebSocket('ws://localhost:5000');
     setWs(ws);
@@ -195,6 +241,7 @@ const MarketplaceDash2 = () => {
   const sendMessage = (ev) => {
     if (ev) ev.preventDefault();
     ws.send(JSON.stringify({
+      sender: id,
       reciever: detail[0].ownerId,
       messageString: listingMessage,
     }));
@@ -217,7 +264,6 @@ const MarketplaceDash2 = () => {
     connectToWs();
   }, []);
 
-
   const { favourite, addToFavorites, removeFromFavorites } = useAppContext();
 
   const getCard = async () => {
@@ -238,7 +284,6 @@ const MarketplaceDash2 = () => {
     return boolean;
   };
 
-  console.log('favorites are added', favourite)
 
   const onSearch = (searchTerm) => {
     setFilterSearch(card.filter(f => f.projectName.toLowerCase().includes(searchTerm.toLowerCase())))

@@ -62,7 +62,7 @@ const MessageDash = () => {
           },
         }
       );
-      console.log(data);
+      console.log("data", data);
       setMessages(data);
     } catch (err) {
       console.log(err);
@@ -77,6 +77,7 @@ const MessageDash = () => {
     if (ev) ev.preventDefault();
     ws.send(
       JSON.stringify({
+        sender: id,
         reciever: selectedUserId,
         messageString: newMessageText,
       })
@@ -97,14 +98,7 @@ const MessageDash = () => {
 
   useEffect(() => {
     const getAllChats = async () => {
-      let token = null;
-      const cookies = document.cookie.split(";");
-      for (let cookie of cookies) {
-        const [cookieName, cookieValue] = cookie.trim().split("=");
-        if (cookieName === "token") {
-          token = cookieValue;
-        }
-      }
+      const token = localStorage.getItem("token");
 
       if (token) {
         const userData = jwtDecode(token);
@@ -172,6 +166,7 @@ const MessageDash = () => {
                                 borderRadius: "50%",
                                 objectFit: "cover",
                               }}
+                              onClick={() => setSelectedUserId(chat._id)}
                             />
                             <h3
                               style={{
@@ -235,28 +230,31 @@ const MessageDash = () => {
                               padding: "0 25px",
                             }}
                           >
-                            <div className="d-flex flex-column" style={{height:'100%'}}>
-                            {messages.map((message) => (
-                              <div key={message._id}>
-                                <div
-                                  className={
-                                    (message.sender === id
-                                      ? "float-end"
-                                      : "text-start") +
-                                    " text-left inline-block p-2 my-2 rounded-md text-sm " +
-                                    (message.sender === id
-                                      ? "bg-primary text-white"
-                                      : "bg-light text-primary")
-                                  }
-                                  style={{
-                                    borderRadius: "50px",
-                                    width: "fit-content",
-                                  }}
-                                >
-                                  {message.message}
+                            <div
+                              className="d-flex flex-column"
+                              style={{ height: "100%" }}
+                            >
+                              {messages.map((message) => (
+                                <div key={message._id}>
+                                  <div
+                                    className={
+                                      (message.sender === id
+                                        ? "float-end"
+                                        : "text-start") +
+                                      " text-left inline-block p-2 my-2 rounded-md text-sm " +
+                                      (message.sender === id
+                                        ? "bg-primary text-white"
+                                        : "bg-light text-primary")
+                                    }
+                                    style={{
+                                      borderRadius: "50px",
+                                      width: "fit-content",
+                                    }}
+                                  >
+                                    {message.message}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              ))}
                             </div>
                           </div>
                           <div
@@ -369,46 +367,50 @@ const MessageDash = () => {
                   {allChats.map((chat, i) => {
                     return (
                       <>
-                      <div className="d-flex justify-content-between my-2">
-                        <div className="d-flex ">
-                          <div
-                            key={i}
-                            className="d-flex align-items-center"
-                            onClick={() => setSelectedUserId(chat._id)}
-                          >
-                            <img
-                              src={chat.pic}
-                              alt=""
-                              style={{
-                                width: "70px",
-                                height: "70px",
-                                borderRadius: "50%",
-                                objectFit: "cover",
-                              }}
-                            />
-                            <div className="d-flex align-items-center flex-column">
-                              <h2
-                                className="msg-h2 mx-2"
+                        <div className="d-flex justify-content-between my-2">
+                          <div className="d-flex ">
+                            <div
+                              key={i}
+                              className="d-flex align-items-center"
+                              onClick={() => setSelectedUserId(chat._id)}
+                            >
+                              <img
+                                src={chat.pic}
+                                alt=""
                                 style={{
-                                  fontSize: "1.3rem",
+                                  width: "70px",
+                                  height: "70px",
+                                  borderRadius: "50%",
+                                  objectFit: "cover",
                                 }}
-                              >
-                                {chat.userName}
-                              </h2>
+                              />
+                              <div className="d-flex align-items-center flex-column">
+                                <h2
+                                  className="msg-h2 mx-2"
+                                  style={{
+                                    fontSize: "1.3rem",
+                                  }}
+                                >
+                                  {chat.userName}
+                                </h2>
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div className="d-flex align-items-center">
-                          <span key={chat._id} style={{ color: "#c0c0c0" }}>
-                            Hello, I am owner of {chat.message}...
-                          </span>
-                          <div className="mx-3">
-                            <span class="badge rounded-pill text-bg-danger">
-                              {i}+
+                          <div className="d-flex align-items-center">
+                            <span
+                              key={chat._id}
+                              style={{ color: "#c0c0c0" }}
+                              onClick={() => setSelectedUserId(chat._id)}
+                            >
+                              Hello, I am owner of {chat.message}...
                             </span>
+                            <div className="mx-3">
+                              <span class="badge rounded-pill text-bg-danger">
+                                {i}+
+                              </span>
+                            </div>
                           </div>
-                        </div>
                         </div>
                       </>
                     );
