@@ -80,7 +80,7 @@ function App() {
           {/* <Route path="/message" element={<MessageDash2 />} /> */}
           <Route path="/payCart" element={<PaymentCardDash />} />
           <Route path="/seller" element={<SellerDash />} />
-          <Route path="MarketDash2" element={<MarketplaceDash2 />} />
+          <Route path="/MarketDash2" element={<MarketplaceDash2 />} />
           <Route path="/call/:id" element={<Agora />} />
           <Route path="/AdminPanel" element={<AdminPanel />}>
             <Route path="AdminPanelListing" element={<AdminPanelListing />} />
