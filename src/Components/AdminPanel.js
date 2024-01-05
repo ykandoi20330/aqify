@@ -28,25 +28,25 @@ const AdminPanel = () => {
     const [role, setRole] = useState("");
     const [navCollapse, setNavCollapse] = useState(false);
 
-    // useEffect(() => {
-    //     const getUsername = async () => {
-    //         const token = localStorage.getItem("token");
-    //         if (token) {
-    //             const decoded = jwtDecode(token);
-    //             const id = decoded.id;
-    //             try {
-    //                 const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
-    //                     headers: { "x-auth-token": id },
-    //                 });
-    //                 setRole(response.data.user.role);
-    //             } catch (error) {
-    //                 console.error(error);
-    //             }
-    //         }
-    //     };
+    useEffect(() => {
+        const getUsername = async () => {
+            const token = localStorage.getItem("token");
+            if (token) {
+                const decoded = jwtDecode(token);
+                const id = decoded.id;
+                try {
+                    const response = await axios.get(`${ENV.BACKEND_URL}/users/getUser`, {
+                        headers: { "x-auth-token": id },
+                    });
+                    setRole(response.data.user.role);
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        };
 
-    //     getUsername();
-    // }, [setRole]);
+        getUsername();
+    }, [setRole]);
 
     return (
         <>
@@ -138,7 +138,7 @@ const AdminPanel = () => {
                                         </li>
                                         <li class="nav-item">
                                             <Link
-                                                to="/"
+                                                to="#"
                                                 class="nav-link1 text-white"
                                                 aria-current="page"
                                             >
@@ -152,7 +152,7 @@ const AdminPanel = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                to="/"
+                                                to="#"
                                                 class="nav-link1 text-white"
                                             >
                                                 <img className="dashIcon"
@@ -173,7 +173,8 @@ const AdminPanel = () => {
                         </div>
                     </div>
                 </nav>
-                <section style={{width:'100%'}}>
+                <section className="sideContent">
+                    <TopMessage/>
                     <Outlet/>
                 </section>
             </section>

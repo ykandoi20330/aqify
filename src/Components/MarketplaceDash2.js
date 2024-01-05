@@ -267,7 +267,7 @@ const MarketplaceDash2 = () => {
   }
 
   const filterTech = (t) => {
-    const tech = card?.filter((p) => p.techStack === t)
+    const tech = card?.filter((p) => p.techStack1 === t )
 
     setFilterSearch(tech)
   }
@@ -1007,7 +1007,7 @@ const MarketplaceDash2 = () => {
             <div class="modal-content">
               <div class="modal-header" style={{ border: 'none' }}>
                 <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Scheduling a Video Call</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                {/* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
               </div>
               <div class="modal-body">
                 Your Request for the Meeting has been sent to the Seller!

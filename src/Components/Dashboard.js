@@ -103,7 +103,7 @@ const Dashboard = () => {
               style={{ height: "70vh", color: "#c0c0c0" }}
             >
               <img width={50} src={lightMessage} alt="" />
-              <span style={{ fontSize: "25px" }}>No conversations yet</span>
+              <span style={{ fontSize: "1.5rem" }}>No conversations yet</span>
             </div>
           </div>
         </div>

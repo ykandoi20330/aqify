@@ -79,9 +79,10 @@ const AdminPanelListing = () => {
 
 
     return (
-        <div className='d-flex flex-column align-items-center'>
-            <div className='d-flex align-items-center' style={{height:'20vh'}}>
-                <h1>Acqify Listing Data</h1>
+        <div className='d-flex flex-column align-items-start'>
+            <div className='d-flex justify-content-center flex-column' style={{height:'20vh',background:'#eef0fe'}}>
+                <h1 className='mx-3' style={{fontWeight:'700'}}>Acqify Listing Data</h1>
+                <span className='mx-3' style={{color:'#636363'}}>View and edit all listing settings</span>
             </div>
             <DataTable
                 title="Listings Details"
@@ -94,11 +95,11 @@ const AdminPanelListing = () => {
                 selectableRowsHighlight
                 highlightOnHover
                 actions={
-                    <Link className='btn btn-primary py-1 px-3 rounded-pill' to="/">export</Link>
+                    <Link className='btn btn-primary py-1 px-3 rounded-pill' to="#">export</Link>
                 }
                 subHeader
                 subHeaderComponent={
-                    <input style={{ height: '7vh' }} type="text" placeholder='Search Here' className='w-25 form-control' value={searchTerm} onChange={handleSearch} />
+                    <input style={{ height: '7vh' }} type="text" placeholder='Search Here' className='form-control' value={searchTerm} onChange={handleSearch} />
                 }
             />
         </div>

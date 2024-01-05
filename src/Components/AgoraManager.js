@@ -171,6 +171,7 @@ export const AgoraManager = ({ config, children }) => {
                 justifyContent: 'center',
                 gap: 20,
                 padding: 20,
+                zIndex:'10',
             }}>
                 <button style={{ background: '#222222', borderRadius: '200px', padding: '1rem', border: 'none' }} onClick={() => {
                     toggleVideo()
