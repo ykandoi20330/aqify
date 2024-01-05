@@ -72,7 +72,7 @@ const MarketplaceDash2 = () => {
   const handleShare = () => {
     console.log("share")
     setText("Link Copied")
-    navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash2`)
+    navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/#/MarketDash2`)
   }
 
   const handleDateTimeChange = (e) => {

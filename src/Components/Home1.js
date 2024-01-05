@@ -39,13 +39,13 @@ import acqify from "./acqify.mp4"
 // import ScrollTrigger from 'react-scroll-trigger';
 
 const Home1 = () => {
-    // useEffect(() => {
-    //     Aos.init();
-    //     const token = localStorage.getItem("token");
-    //     if (token) {
-    //         window.location.href = `${ENV.FRONTEND_URL}/#/singin`;
-    //     }
-    // }, [])
+    useEffect(() => {
+        Aos.init();
+        // const token = localStorage.getItem("token");
+        // if (token) {
+        //     window.location.href = `${ENV.FRONTEND_URL}/#/singin`;
+        // }
+    }, [])
     return (
         <>
             <section>
