@@ -45,7 +45,9 @@ const DashboardProfile = () => {
             about: response.data.user.about,
             role: response.data.user.role,
             pic: response.data.user.pic,
-            statusOfFund: response.data.status ? response.data.status.status || "" : "",
+            statusOfFund: response.data.status
+              ? response.data.status.status || ""
+              : "",
           });
         } catch (error) {
           console.error(error);
@@ -103,7 +105,6 @@ const DashboardProfile = () => {
     if (validation()) {
       try {
         const token = localStorage.getItem("token");
-        
 
         if (!token) {
           const user = JSON.parse(localStorage.getItem("user"));
@@ -206,7 +207,6 @@ const DashboardProfile = () => {
     });
   };
 
-
   return (
     <>
       <section className="profile-section">
@@ -262,7 +262,6 @@ const DashboardProfile = () => {
                   </form>
                 </span>
                 {form.statusOfFund === "verify" ? (
-                  
                   <Link
                     className="btn btn-primary rounded-pill"
                     style={{ padding: "0.5rem 0.8rem" }}

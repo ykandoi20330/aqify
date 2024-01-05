@@ -55,6 +55,7 @@ const MarketplaceDash2 = () => {
 
   // const [rating, setRating] = useState(null)
   // const [hover, setHover] = useState(null)
+  const [meetingTime, setMeetingTime] = useState("");
 
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
@@ -71,6 +72,15 @@ const MarketplaceDash2 = () => {
     setText("Link Copied")
     navigator.clipboard.writeText(`${ENV.FRONTEND_URL}/aqify#/MainDashboard/MarketDash2`)
   }
+
+  const handleDateTimeChange = (e) => {
+    setMeetingTime(e.target.value);
+  };
+
+  const handleSubmitTime = (e) => {
+    e.preventDefault();
+    console.log("Selected Date and Time:", meetingTime);
+  };
 
   const navigate = useNavigate();
 
@@ -137,11 +147,8 @@ const MarketplaceDash2 = () => {
             authorization: `Bearer ${token}`,
           },
           user: detail[0].ownerId,
-          time: new Date().toLocaleTimeString('en-US', {
-            hour12: false,
-            hour: "numeric",
-            minute: "numeric"
-          }),
+          time: meetingTime,
+        
           listing: detail[0].projectName,
         }
 
@@ -986,11 +993,11 @@ const MarketplaceDash2 = () => {
                     background: '#f4f4f4',
                     color: '#0005ff',
                     borderRadius: '50px',
-                  }} className="mx-3" type="datetime-local" id="birthdaytime" name="birthdaytime" />
+                  }} className="mx-3" onChange={handleDateTimeChange} type="datetime-local" id="birthdaytime" name="birthdaytime" />
                 </form>
               </div>
               <div class="modal-footer" style={{ border: 'none' }}>
-                <button type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
+                <button onClick={handleSubmitTime} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
               </div>
             </div>
           </div>
@@ -1003,7 +1010,7 @@ const MarketplaceDash2 = () => {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Your Meeting has been Scheduled On Your given Time!
+                Your Request for the Meeting has been sent to the Seller!
               </div>
               <div class="modal-footer" style={{ border: 'none' }}>
                 <button class="btn btn-primary px-3 py-1" data-bs-dismiss="modal" aria-label="Close" onClick={handleSchedule}>Confirm meet!</button>
