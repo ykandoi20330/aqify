@@ -180,7 +180,7 @@ const NotifactionDash = () => {
                 </form>
               </div>
               <div class="modal-footer" style={{ border: 'none' }}>
-                <button onClick={() => handleSubmitTime(item._id, item.buyerId)} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
+                <button onClick={() => handleSubmitTime()} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
               </div>
             </div>
           </div>
