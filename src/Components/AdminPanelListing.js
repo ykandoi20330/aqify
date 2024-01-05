@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import DataTable from 'react-data-table-component'
+import DataTable, { createTheme } from 'react-data-table-component'
 import axios from 'axios';
 import ENV from "../config.js";
 import { Link } from 'react-router-dom';
@@ -67,6 +67,53 @@ const AdminPanelListing = () => {
         },
     ]
 
+    // createTheme creates a new theme named solarized that overrides the build in dark theme
+    createTheme('solarized', {
+        text: {
+            primary: '#3247FF',
+            secondary: '#3247FF',
+        },
+        background: {
+            default: '#EEF0FE',
+        },
+        context: {
+            background: '#EEF0FE',
+            text: '#FFFFFF',
+        },
+        divider: {
+            default: '#EEF0FE',
+        },
+        action: {
+            //   button: 'rgba(0,0,0,.54)',
+            button: '#e6e9fd',
+            //   hover: 'rgba(0,0,0,.08)',
+            hover: '#e6e9fd',
+            disabled: 'rgba(0,0,0,.12)',
+        },
+    }, 'dark');
+
+
+    const customStyles = {
+        rows: {
+            style: {
+                paddingLeft: '0px',
+            },
+        },
+        headCells: {
+            style: {
+                paddingLeft: '0px',
+                paddingRight: '0px',
+            },
+        },
+        cells: {
+            style: {
+                paddingLeft: '0px', 
+                paddingRight: '0px',
+            },
+        }
+    }
+
+
     const onSearch = (searchTerm) => {
         setFilterSearch(card.filter(f => f.projectName.toLowerCase().includes(searchTerm.toLowerCase())))
     }
@@ -80,9 +127,9 @@ const AdminPanelListing = () => {
 
     return (
         <div className='d-flex flex-column align-items-start'>
-            <div className='d-flex justify-content-center flex-column' style={{height:'20vh',background:'#eef0fe'}}>
-                <h1 className='mx-3' style={{fontWeight:'700'}}>Acqify Listing Data</h1>
-                <span className='mx-3' style={{color:'#636363'}}>View and edit all listing settings</span>
+            <div className='d-flex justify-content-center flex-column' style={{ height: '20vh', background: '#eef0fe' }}>
+                <h1 className='mx-3' style={{ fontWeight: '700' }}>Acqify Listing Data</h1>
+                <span className='mx-3' style={{ color: '#636363' }}>View and edit all listing settings</span>
             </div>
             <DataTable
                 title="Listings Details"
@@ -101,6 +148,8 @@ const AdminPanelListing = () => {
                 subHeaderComponent={
                     <input style={{ height: '7vh' }} type="text" placeholder='Search Here' className='form-control' value={searchTerm} onChange={handleSearch} />
                 }
+                theme="solarized"
+                customStyles={customStyles}
             />
         </div>
     )
