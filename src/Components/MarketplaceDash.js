@@ -123,7 +123,7 @@ const MarketplaceDash = (props) => {
                             <option id="floatingInputValue" selected>Tech Stack</option>
                             {card.map((item) => {
                                 return (
-                                    <option key={item.id} value={item.techStack}>{item.techStack}</option>
+                                    <option key={item.id} value={item.techStack1}>{item.techStack1}</option>
                                 )
                             })}
                         </select>

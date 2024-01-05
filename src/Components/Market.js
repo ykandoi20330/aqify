@@ -250,7 +250,7 @@ const Market = () => {
   //TechStack filters
 
   const filterTech = (tech) => {
-    const updatedTech = card?.filter((t) => t.techStack === tech)
+    const updatedTech = card?.filter((t) => t.techStack2 === tech)
 
     setFilterSearch(updatedTech);
   }
@@ -438,7 +438,7 @@ const Market = () => {
                   <option id="floatingInputValue" selected>Tool</option>
                   {[...new Set(card)].map((tech) => {
                     return (
-                      <option key={tech.id} value={tech.techStack}>{tech.techStack}</option>
+                      <option key={tech.id} value={tech.techStack2}>{tech.techStack2}</option>
                     )
                   })}
                 </select>
@@ -533,9 +533,9 @@ const Market = () => {
               </div>
 
             </div>
-            <button style={{ width: "20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
+            {/* <button style={{ width: "20%" }} className="btn btn-primary market-btns" onClick={applyFilters}>Apply Filter
               <img style={{ width: "20px", marginLeft: "1rem" }} src={arrow} alt="" />{" "}
-            </button>
+            </button> */}
           </div>
 
         </section>
@@ -869,7 +869,8 @@ const Market = () => {
                           </div>
 
                           <div className="chart my-3">
-                            <img style={{ width: '100%' }} src={chart} alt="" />
+                            {/* <img style={{ width: '100%' }} src={chart} alt="" /> */}
+                            <img style={{ width: '100%' }} src={item.googleAnalytics} alt="" />
                           </div>
 
                           <div className="description">
