@@ -24,7 +24,7 @@ const MessageDash = () => {
   };
 
   const connectToWs = () => {
-    const ws = new WebSocket("ws://localhost:5000");
+    const ws = new WebSocket(`${ENV.WEBSOCKET_URL}`)
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {

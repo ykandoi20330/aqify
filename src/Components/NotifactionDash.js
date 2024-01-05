@@ -78,7 +78,7 @@ const NotifactionDash = () => {
     }
   };
 
-  const handleReschedule = async (e) => {
+  const handleReschedule = async (buyerId , notificationId ) => {
     try {
       console.log("Selected Date and Time:", meetingTime);
       const token = localStorage.getItem("token");
@@ -137,6 +137,7 @@ const NotifactionDash = () => {
                         className="acceptBtn rounded-pill px-3 py-1 mx-1 my-1 bg-gradient border border-0 text-light"
                         style={{ background: "#191919"}}
                         data-bs-target="#ScheduleModalToggle" data-bs-toggle="modal"
+                        // onClick={() => handleReschedule(item.buyerId , item._id)}
                       >
                         Reschedule
                       </button>
@@ -178,7 +179,7 @@ const NotifactionDash = () => {
                 </form>
               </div>
               <div class="modal-footer" style={{ border: 'none' }}>
-                <button onClick={handleSubmitTime} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
+                <button onClick={() => handleSubmitTime(item._id, item.buyerId)} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
               </div>
             </div>
           </div>
