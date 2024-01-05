@@ -11,6 +11,7 @@ const NotifactionDash = () => {
 
   const handleDateTimeChange = (e) => {
     setMeetingTime(e.target.value);
+    console.log("Selected Date and Time:", meetingTime);
   };
 
   const handleSubmitTime = (e) => {
@@ -79,6 +80,7 @@ const NotifactionDash = () => {
 
   const handleReschedule = async (e) => {
     try {
+      console.log("Selected Date and Time:", meetingTime);
       const token = localStorage.getItem("token");
       const decoded = jwtDecode(token);
       const id = decoded.id;
@@ -87,6 +89,7 @@ const NotifactionDash = () => {
         `${ENV.BACKEND_URL}/agora/notifications/reschedule`,
         {
           user: id,
+          time: meetingTime,
         }
       );
       console.log(response.data.notifications);
