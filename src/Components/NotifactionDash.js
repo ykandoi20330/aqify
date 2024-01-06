@@ -55,7 +55,7 @@ const NotifactionDash = () => {
         buyerId: buyerId,
       });
       console.log(response.data);
-      window.location.reload();
+      getCard();
     } catch (error) {
       console.error(error);
     }
@@ -74,7 +74,7 @@ const NotifactionDash = () => {
         time: time,
       });
       console.log(response.data);
-      window.location.reload();
+      getCard();
     } catch (error) {
       console.error(error);
     }
@@ -97,7 +97,7 @@ const NotifactionDash = () => {
         channelName: buyerId,
       });
       console.log(response.data);
-      window.location.reload();
+      getCard();
     } catch (error) {
       console.error(error);
     }
