@@ -2979,6 +2979,45 @@ input[type="file"] {
     background-color: #fff !important;
 }
 
+/***************** Admin Panel Approved Section *******************/
+
+.Approvedcard {
+    padding: 3rem;
+    border-radius: 1.2rem;
+    border: none;
+    margin: 2rem 0;
+    width: 95%;
+    margin: 0.5rem 0.5rem;
+    --bs-card-spacer-y: 1rem !important;
+    --bs-card-spacer-x: 1rem !important;
+    --bs-card-title-spacer-y: 0.5rem !important;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width) !important;
+    --bs-card-border-color: var(--bs-border-color-translucent) !important;
+    --bs-card-border-radius: var(--bs-border-radius) !important;
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width))) !important;
+    --bs-card-cap-padding-y: 0.5rem !important;
+    --bs-card-cap-padding-x: 1rem !important;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03) !important;
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg) !important;
+    --bs-card-img-overlay-padding: 1rem !important;
+    --bs-card-group-margin: 0.75rem !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    /* height: var(--bs-card-height) !important; */
+    color: var(--bs-body-color) !important;
+    word-wrap: break-word !important;
+    background-color: var(--bs-card-bg) !important;
+    background-clip: border-box !important;
+}
+
 
 
 
