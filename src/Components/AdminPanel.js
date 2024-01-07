@@ -7,6 +7,7 @@ import bell from "./ProfileDashbaord/bell.svg";
 import setting from "./ProfileDashbaord/gear.svg";
 import tag from "./ProfileDashbaord/tag.svg";
 import analytic from "./ProfileDashbaord/VectorAnalytics.svg";
+import proof from "./ProfileDashbaord/VectorProof.svg";
 
 //card content
 import { Link, Outlet } from "react-router-dom";
@@ -176,7 +177,7 @@ const AdminPanel = () => {
                                             >
                                                 <img className="dashIcon"
                                                     style={{ marginRight: "1rem" }}
-                                                    src={analytic}
+                                                    src={proof}
                                                     alt=""
                                                 />
                                                 <span>Feedback</span>
