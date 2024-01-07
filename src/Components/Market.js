@@ -393,12 +393,12 @@ const Market = () => {
         >
           <div className="MarketTool-card">
             <div className="second-line d-flex">
-              <div class="form-floating mb-2" style={{ width: "100%" }}>
+              <div className="form-floating mb-2" style={{ width: "100%" }}>
                 <input
                   style={{ width: "100%" }}
                   type="email"
                   id="floatingInputValue"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search"
                   onChange={handleSearch}
                 />
@@ -410,10 +410,10 @@ const Market = () => {
             </div>
 
             <div className="first-line d-flex">
-              <div class="form-floating" style={{ width: "100%" }}>
+              <div className="form-floating" style={{ width: "100%" }}>
                 <select
                   style={{ width: "97%", color: "#3247ff" }}
-                  class="form-control form-select form-select-lg mb-2"
+                  className="form-control form-select form-select-lg mb-2"
                   onChange={handleCategoryChange}
                   aria-label="Large select example"
                 >
@@ -427,13 +427,13 @@ const Market = () => {
                 <label for="floatingInputValue">
                   <img src="" alt="" />
                   <i
-                    class="fa-brands fa-squarespace"
+                    className="fa-brands fa-squarespace"
                     style={{ color: "#005eff" }}
                   ></i>
                 </label>
               </div>
-              <div class="form-floating mr-2" style={{ width: "100%" }}>
-                <select style={{ width: '97%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" onChange={handleToolChange} aria-label="Large select example">
+              <div className="form-floating mr-2" style={{ width: "100%" }}>
+                <select style={{ width: '97%', color: '#3247ff' }} className="form-control form-select form-select-lg mb-3" onChange={handleToolChange} aria-label="Large select example">
                   {/* value={filter.tools[0] || ''} */}
                   <option id="floatingInputValue" selected>Tool</option>
                   {[...new Set(card)].map((tech) => {
@@ -443,7 +443,7 @@ const Market = () => {
                   })}
                 </select>
                 {/* <div style={{ position: "relative" }}>
-                  <div class="form-control mb-2 px-5 d-flex align-items-center"
+                  <div className="form-control mb-2 px-5 d-flex align-items-center"
                     style={{
                       width: '95%', color: '#3247ff',
                       border: "1px solid #ccc",
@@ -503,15 +503,15 @@ const Market = () => {
                 <label className="" for="floatingInputValue">
                   <img src="" alt="" />
                   <i
-                    class="fa-solid fa-screwdriver-wrench"
+                    className="fa-solid fa-screwdriver-wrench"
                     style={{ color: "#005eff", marginRight: '5px' }}
                   ></i>
                 </label>
               </div>
-              <div class="form-floating mr-2" style={{ width: "100%" }}>
+              <div className="form-floating mr-2" style={{ width: "100%" }}>
                 <select
                   style={{ width: "100%", color: "#3247ff" }}
-                  class="form-control form-select form-select-lg mb-3"
+                  className="form-control form-select form-select-lg mb-3"
                   aria-label="Large select example"
                   // value={filter.technology} 
                   onChange={handleTechnologyChange}
@@ -528,7 +528,7 @@ const Market = () => {
                 </select>
                 <label for="floatingInputValue">
                   <img src="" alt="" />
-                  <i class="fa-solid fa-list" style={{ color: "#005eff" }}></i>
+                  <i className="fa-solid fa-list" style={{ color: "#005eff" }}></i>
                 </label>
               </div>
 
@@ -805,12 +805,12 @@ const Market = () => {
 
                           <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-                            <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel">
-                              <div class="carousel-inner">
-                                <div class="carousel-item active">
+                            <div id={`carouselExampleAutoplaying${index}`} className="carousel slide" data-bs-ride="carousel">
+                              <div className="carousel-inner">
+                                <div className="carousel-item active">
                                   <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                                 </div>
-                                <div class="carousel-item">
+                                <div className="carousel-item">
                                   <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" />
                                 </div>
                               </div>
@@ -925,7 +925,7 @@ const Market = () => {
                                 <span className='mx-2'>Message Seller</span>
                               </Link>
                               <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                                <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+                                <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                                 <span className='mx-2'>Audio Call</span>
                               </Link>
                               <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
@@ -933,11 +933,11 @@ const Market = () => {
                                 <span className='mx-2' >Make Offer</span>
                               </Link>
                               <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                                <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
+                                <i className="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                                 <span className='mx-2' >Watch video Path</span>
                               </Link>
                               <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                                <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                                <i className="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
                                 <span className='mx-2' >Share</span>
                               </Link>
                               <div className='my-3'>

@@ -26,9 +26,9 @@ const Pricing = () => {
                         <h1>ACQIFY’S LANS DON’T HURT YOUR BUDGET!</h1>
                         <span className='text-center'>Our pricing plans are tailored according to the budgets of buyers and sellers.</span>
                         <div>
-                            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                <button style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(1)}>Owners</button>
-                                <button style={{ padding: "1rem 4rem" }} type="button" class="btn btn-outline-primary" onClick={show => setShow(2)}>Acquirers</button>
+                            <div className="btn-group" role="group" aria-label="Basic outlined example">
+                                <button style={{ padding: "1rem 4rem" }} type="button" className="btn btn-outline-primary" onClick={show => setShow(1)}>Owners</button>
+                                <button style={{ padding: "1rem 4rem" }} type="button" className="btn btn-outline-primary" onClick={show => setShow(2)}>Acquirers</button>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ const Pricing = () => {
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>—-<i class="fa-solid fa-chevron-right"></i>  Success Fee/ Commission</span>
+                                <span style={{ color: '#636363' }}>—-<i className="fa-solid fa-chevron-right"></i>  Success Fee/ Commission</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />

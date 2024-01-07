@@ -68,17 +68,17 @@ const Home = () => {
         <div className='hero1'>
           <nav className='navbar navbar-expand-lg navbar-dark navline' id="middleNav" style={{ zIndex: "5", position: 'absolute', width: '100%' }}>
 
-            <div class="container-fluid">
+            <div className="container-fluid">
               <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
               </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo1' /></Link></h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"><Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo1' /></Link></h5>
+                  <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
 
 
                   {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" className='Logo' /></Link> 
@@ -100,8 +100,8 @@ const Home = () => {
 
                   <Link>
                     *style={{zIndex:'5',background:'#0e0e111f'}}
-                    <Link class="btn btn-outline-light mx-3" to="/singin" type="submit">Sign in</Link>
-                    <Link class="btn btn-primary" to="/singup" type="submit">Join <img style={{ width: '30%' }} src={arrow} alt="" /></Link>
+                    <Link className="btn btn-outline-light mx-3" to="/singin" type="submit">Sign in</Link>
+                    <Link className="btn btn-primary" to="/singup" type="submit">Join <img style={{ width: '30%' }} src={arrow} alt="" /></Link>
                   </Link>
                 </div>
 
@@ -703,14 +703,14 @@ const Home = () => {
               <div className='d-flex'>
 
                 <div >
-                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
-                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option11">
-                    <i class="fa-solid fa-eye"></i>1.2K</label>
+                  <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off" />
+                  <label className="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option11">
+                    <i className="fa-solid fa-eye"></i>1.2K</label>
                 </div>
                 <div >
-                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
-                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
-                    <i class="fa-solid fa-heart"></i></label>
+                  <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" />
+                  <label className="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option12">
+                    <i className="fa-solid fa-heart"></i></label>
                 </div>
 
                 <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
@@ -784,14 +784,14 @@ const Home = () => {
               <div className='d-flex'>
 
                 <div >
-                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
-                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
-                    <i class="fa-solid fa-eye"></i>1.2K</label>
+                  <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option13" autocomplete="off" />
+                  <label className="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option13">
+                    <i className="fa-solid fa-eye"></i>1.2K</label>
                 </div>
                 <div >
-                  <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
-                  <label class="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
-                    <i class="fa-solid fa-heart"></i></label>
+                  <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option14" autocomplete="off" />
+                  <label className="btn1" style={{ padding: "0.8rem 1rem", margin: '0.3rem 0.7rem 0 0', background: "#fff" }} for="option14">
+                    <i className="fa-solid fa-heart"></i></label>
                 </div>
 
                 <Link style={{ padding: '18px 48px' }} className='moreDetialBtn btn btn-primary' to="/singup">More Details <img style={{ width: '20px' }} src={arrow} alt="" /> </Link>
@@ -915,10 +915,10 @@ const Home = () => {
 
       < section className='fifth-main' >
         <div className='d-flex fifth-div' style={{ left: '50px', position: 'relative' }}>
-          <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" id="carouselExampleAutoplaying1" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-            <div class="carousel-inner">
+          <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="300" id="carouselExampleAutoplaying1" className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+            <div className="carousel-inner">
               <div className="slider-img">
-                <div class="carousel-item active">
+                <div className="carousel-item active">
 
                   <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} />
                   <div className="overlay-slide">
@@ -930,14 +930,14 @@ const Home = () => {
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
-                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i className="fa-solid fa-arrow-left"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i className="fa-solid fa-arrow-right"></i></Link>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="slider-img">
-                <div class="carousel-item active">
+                <div className="carousel-item active">
 
                   <img className='sildeimg' style={{ width: "100%", position: "relative" }} src={sildeImg} alt='' />
                   <div className="overlay-slide">
@@ -949,8 +949,8 @@ const Home = () => {
                       </div>
                     </div>
                     <div className='fifth-main-arrow'>
-                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
-                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev"><i className="fa-solid fa-arrow-left"></i></Link>
+                      <Link className='SlideCard-arrow' data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next"><i className="fa-solid fa-arrow-right"></i></Link>
                     </div>
                   </div>
                 </div>
@@ -980,8 +980,8 @@ const Home = () => {
             <div>
               <h1 className='six-h1'>Stories From Founders And Buyers</h1>
               <div className='my-5'>
-                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
-                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
+                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i className="fa-solid fa-arrow-left"></i></Link>
+                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i className="fa-solid fa-arrow-right"></i></Link>
               </div>
             </div>
             <div>
@@ -989,9 +989,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+          <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+            <div className="carousel-inner">
+              <div className="carousel-item active">
 
                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                   <div className="six-card">
@@ -1018,7 +1018,7 @@ const Home = () => {
 
               </div>
 
-              <div class="carousel-item">
+              <div className="carousel-item">
 
                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                   <div className="six-card">

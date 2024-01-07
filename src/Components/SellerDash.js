@@ -407,11 +407,11 @@ const SellerDash = () => {
                   <label
                     style={{ color: "#636363" }}
                     for="logoInput"
-                    class="form-label"
+                    className="form-label"
                   >
                     {text1}
                   </label>
-                  <div class="mb-3 my-2">
+                  <div className="mb-3 my-2">
                     <input
                       style={{ display: "none" }}
                       type="file"
@@ -428,10 +428,10 @@ const SellerDash = () => {
                         border: "1px solid #C0C0C0",
                       }}
                       for="logoInput"
-                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                      className="custom-file-upload d-flex justify-content-center align-items-center"
                     >
                       <i
-                        class="fas fa-cloud-upload-alt mx-2"
+                        className="fas fa-cloud-upload-alt mx-2"
                         style={{ color: "#c0c0c0" }}
                       ></i>
                     </label>
@@ -472,7 +472,7 @@ const SellerDash = () => {
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="category"
                         id="option9"
                         autocomplete="off"
@@ -480,15 +480,15 @@ const SellerDash = () => {
                         onChange={handleChange}
                         checked={formData.category === "Saas"}
                       />
-                      <label class="btn2" for="option9">
-                        <i class="fa-brands fa-soundcloud mx-2"></i>
+                      <label className="btn2" for="option9">
+                        <i className="fa-brands fa-soundcloud mx-2"></i>
                         Saas
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="category"
                         id="option10"
                         autocomplete="off"
@@ -496,15 +496,15 @@ const SellerDash = () => {
                         onChange={handleChange}
                         checked={formData.category === "Community"}
                       />
-                      <label class="btn2" for="option10">
-                        <i class="fa-solid fa-users-line mx-2"></i>
+                      <label className="btn2" for="option10">
+                        <i className="fa-solid fa-users-line mx-2"></i>
                         Community
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="category"
                         id="option11"
                         autocomplete="off"
@@ -512,15 +512,15 @@ const SellerDash = () => {
                         onChange={handleChange}
                         checked={formData.category === "Marketplace"}
                       />
-                      <label class="btn2" for="option11">
-                        <i class="fa-solid fa-shop mx-2"></i>
+                      <label className="btn2" for="option11">
+                        <i className="fa-solid fa-shop mx-2"></i>
                         Marketplace
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="category"
                         id="option12"
                         autocomplete="off"
@@ -528,15 +528,15 @@ const SellerDash = () => {
                         onChange={handleChange}
                         checked={formData.category === "Content"}
                       />
-                      <label class="btn2" for="option12">
-                        <i class="fa-solid fa-file-contract mx-2"></i>
+                      <label className="btn2" for="option12">
+                        <i className="fa-solid fa-file-contract mx-2"></i>
                         Content
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="category"
                         id="option13"
                         autocomplete="off"
@@ -544,8 +544,8 @@ const SellerDash = () => {
                         onChange={handleChange}
                         checked={formData.category === "Service"}
                       />
-                      <label class="btn2" for="option13">
-                        <i class="fa-solid fa-cube mx-2"></i>
+                      <label className="btn2" for="option13">
+                        <i className="fa-solid fa-cube mx-2"></i>
                         Service
                       </label>
                     </div>
@@ -553,17 +553,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Tagline
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="tagline"
                       id="exampleFormControlInput1"
                       placeholder="Acqify"
@@ -577,14 +577,14 @@ const SellerDash = () => {
                   <div className="my-2">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Asking price
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="askingPrice"
                           placeholder="$79k"
                           value={formData.askingPrice}
@@ -592,14 +592,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Multiplies
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="multiplies"
                           placeholder="2.8x profit 1.4x revenue"
                           value={formData.multiplies}
@@ -611,14 +611,14 @@ const SellerDash = () => {
                   <div className="my-2">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           TTM Revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="ttmRevenue"
                           placeholder="$57k"
                           value={formData.ttmRevenue}
@@ -626,14 +626,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           TTM Profit
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="ttmProfit"
                           placeholder="$28k"
                           value={formData.ttmProfit}
@@ -645,14 +645,14 @@ const SellerDash = () => {
                   <div className="my-2">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Monthly Revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="monthlyRevenue"
                           placeholder="$1k"
                           value={formData.monthlyRevenue}
@@ -660,14 +660,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Monthly Profit
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="monthlyProfit"
                           placeholder="$70"
                           value={formData.monthlyProfit}
@@ -679,14 +679,14 @@ const SellerDash = () => {
                   <div className="my-3">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Last Month Revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="lastMonthRevenue"
                           placeholder="$1,453"
                           value={formData.lastMonthRevenue}
@@ -694,14 +694,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Last Month Profit
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="lastMonthProfit"
                           placeholder="$750"
                           value={formData.lastMonthProfit}
@@ -764,17 +764,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Business/Asset Name
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="businessName"
                       id="exampleFormControlInput1"
                       placeholder="Acqify"
@@ -785,17 +785,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Where is your business located?
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="location"
                       id="exampleFormControlInput1"
                       placeholder="Acqify"
@@ -805,10 +805,10 @@ const SellerDash = () => {
                   </div>
                 </div>
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       What is your project name?
@@ -819,7 +819,7 @@ const SellerDash = () => {
                         color: "#636363",
                         fontSize: "16px",
                       }}
-                      class="form-control form-select form-select-lg"
+                      className="form-control form-select form-select-lg"
                       name="projectName"
                       aria-label="Large select example"
                       value={formData.projectName}
@@ -836,7 +836,7 @@ const SellerDash = () => {
                     </select> */}
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="projectName"
                       id="efloatingInputValue"
                       placeholder="Acqify"
@@ -848,10 +848,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -861,7 +861,7 @@ const SellerDash = () => {
                       Description
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell about your project details"
@@ -871,10 +871,10 @@ const SellerDash = () => {
                     ></textarea>
                   </div>
                 </div>
-                <div class="mb-3 my-3">
+                <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     Competitors
@@ -885,7 +885,7 @@ const SellerDash = () => {
                       color: "#636363",
                       fontSize: "16px",
                     }}
-                    class="form-control form-select form-select-lg"
+                    className="form-control form-select form-select-lg"
                     name="competitors"
                     placeholder="Select Competitors"
                     aria-label="Large select example"
@@ -906,12 +906,12 @@ const SellerDash = () => {
 
                 <div className="my-5 d-flex">
                   <div
-                    class="mb-3 my-3"
+                    className="mb-3 my-3"
                     style={{ width: "48%", marginRight: "5px" }}
                   >
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -922,7 +922,7 @@ const SellerDash = () => {
                     </label>
                     <input
                       type="date"
-                      class="form-control"
+                      className="form-control"
                       name="startDate"
                       id="exampleFormControlInput1"
                       placeholder="Month/Year"
@@ -930,10 +930,10 @@ const SellerDash = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div class="mb-3 my-3" style={{ width: "50%" }}>
+                  <div className="mb-3 my-3" style={{ width: "50%" }}>
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -944,7 +944,7 @@ const SellerDash = () => {
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       name="teamSize"
                       id="exampleFormControlInput1"
                       placeholder="3"
@@ -955,10 +955,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -968,7 +968,7 @@ const SellerDash = () => {
                       Business Model
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell about your Business Model"
@@ -989,7 +989,7 @@ const SellerDash = () => {
                   Carousel Images
                 </div>
                 <div className="d-flex" style={{ width: "100%" }}>
-                  <div class="mb-3 mx-2 my-2" style={{ width: "48%" }}>
+                  <div className="mb-3 mx-2 my-2" style={{ width: "48%" }}>
                     <input
                       style={{ display: "none" }}
                       type="file"
@@ -1007,10 +1007,10 @@ const SellerDash = () => {
                         border: "1px solid #C0C0C0",
                       }}
                       for="logoInput"
-                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                      className="custom-file-upload d-flex justify-content-center align-items-center"
                     >
                       <i
-                        class="fas fa-cloud-upload-alt mx-2"
+                        className="fas fa-cloud-upload-alt mx-2"
                         style={{ color: "#c0c0c0" }}
                       ></i>
                     </label>
@@ -1021,7 +1021,7 @@ const SellerDash = () => {
                       style={{ width: "200px", display: "none" }}
                     />
                   </div>
-                  <div class="mb-3 mx-2 my-2" style={{ width: "48%" }}>
+                  <div className="mb-3 mx-2 my-2" style={{ width: "48%" }}>
                     <input
                       style={{ display: "none" }}
                       type="file"
@@ -1039,10 +1039,10 @@ const SellerDash = () => {
                         border: "1px solid #C0C0C0",
                       }}
                       for="logoInput2"
-                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                      className="custom-file-upload d-flex justify-content-center align-items-center"
                     >
                       <i
-                        class="fas fa-cloud-upload-alt mx-2"
+                        className="fas fa-cloud-upload-alt mx-2"
                         style={{ color: "#c0c0c0" }}
                       ></i>
                     </label>
@@ -1107,10 +1107,10 @@ const SellerDash = () => {
                   </span>
                 </div>
 
-                {/* <div class="mb-3 my-3">
+                {/* <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
-                    class="form-label"
+                    className="form-label"
                     style={{
                       color: "#636363",
                       fontWeight: "bold",
@@ -1125,7 +1125,7 @@ const SellerDash = () => {
                       color: "#636363",
                       fontSize: "16px",
                     }}
-                    class="form-control form-select form-select-lg"
+                    className="form-control form-select form-select-lg"
                     name="techStack"
                     aria-label="Large select example"
                     value={formData.techStack}
@@ -1153,7 +1153,7 @@ const SellerDash = () => {
                         fontSize: "18px",
                       }}
                       for="inputEmail4"
-                      class="form-label"
+                      className="form-label"
                     >
                       Tech Stack
                     </label>
@@ -1162,7 +1162,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail5"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack1"
                         placeholder="Ecommerce"
                         value={formData.techStack1}
@@ -1173,7 +1173,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail6"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack2"
                         placeholder="WooCommerce"
                         value={formData.techStack2}
@@ -1183,7 +1183,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail7"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack3"
                         placeholder="Saas"
                         value={formData.techStack3}
@@ -1193,7 +1193,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail8"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack4"
                         placeholder="Wordpress"
                         value={formData.techStack4}
@@ -1204,10 +1204,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -1217,7 +1217,7 @@ const SellerDash = () => {
                       Growth opportunity
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell us about your growth opportunity"
@@ -1229,10 +1229,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -1242,7 +1242,7 @@ const SellerDash = () => {
                       Project Background
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell about your project details"
@@ -1254,10 +1254,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "bold",
@@ -1267,7 +1267,7 @@ const SellerDash = () => {
                       Selling Reasoning
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell about your Selling purpose"
@@ -1287,7 +1287,7 @@ const SellerDash = () => {
                         fontSize: "18px",
                       }}
                       for="inputEmail4"
-                      class="form-label"
+                      className="form-label"
                     >
                       Financing
                     </label>
@@ -1295,7 +1295,7 @@ const SellerDash = () => {
                       style={{ height: "7vh" }}
                       type="text"
                       id="inputEmail4"
-                      class="form-control"
+                      className="form-control"
                       name="financing"
                       placeholder="Bootstrapped"
                       value={formData.financing}
@@ -1320,14 +1320,14 @@ const SellerDash = () => {
                   <div className="">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           TTM Gross Revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="ttmGrossRevenue"
                           placeholder="$57k"
                           value={formData.ttmGrossRevenue}
@@ -1335,14 +1335,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           TTM Net Profit
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="ttmNetProfit"
                           placeholder="$28k"
                           value={formData.ttmNetProfit}
@@ -1354,14 +1354,14 @@ const SellerDash = () => {
                   <div className="my-3">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Last Month Gross Revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="lastMonthGrossRevenue"
                           placeholder="$1k"
                           value={formData.lastMonthGrossRevenue}
@@ -1369,14 +1369,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Last Month Net Profit
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="lastMonthNetProfit"
                           placeholder="$750"
                           value={formData.lastMonthNetProfit}
@@ -1403,14 +1403,14 @@ const SellerDash = () => {
                   <div className="">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Customers
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="customers"
                           placeholder="more than 100,000"
                           value={formData.customers}
@@ -1418,14 +1418,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Annual recurring revenue
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="annualRecurringRevenue"
                           placeholder="$57k"
                           value={formData.annualRecurringRevenue}
@@ -1437,14 +1437,14 @@ const SellerDash = () => {
                   <div className="my-3">
                     <div className="d-flex justify-content-between">
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Annual growth rate
                         </label>
                         <input
                           style={{ height: "7vh", width: "95%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="annualGrowthRate"
                           placeholder="5%"
                           value={formData.annualGrowthRate}
@@ -1452,14 +1452,14 @@ const SellerDash = () => {
                         />
                       </div>
                       <div style={{ width: "100%" }}>
-                        <label for="inputEmail4" class="form-label">
+                        <label for="inputEmail4" className="form-label">
                           Valuation
                         </label>
                         <input
                           style={{ height: "7vh", width: "100%" }}
                           type="text"
                           id="inputEmail4"
-                          class="form-control"
+                          className="form-control"
                           name="valuation"
                           placeholder="$150k"
                           value={formData.valuation}
@@ -1491,7 +1491,7 @@ const SellerDash = () => {
                   />
                   <label
                     for="image_input4"
-                    class="form-label d-flex align-items-center justify-content-center"
+                    className="form-label d-flex align-items-center justify-content-center"
                     style={{
                       background: "#EEF0FE",
                       borderRadius: "20px",
@@ -1511,7 +1511,7 @@ const SellerDash = () => {
                 <div>
                   <label
                     for="exampleFormControlTextarea1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     Build trust with buyers by including Video, Choose a video
@@ -1525,14 +1525,14 @@ const SellerDash = () => {
                       <div>
                         <input
                           type="file"
-                          class="form-label"
+                          className="form-label"
                           id="image_input2"
                           multiple
                           onChange={submitUpload5}
                         />
                         <label
                           for="image_input2"
-                          class="form-label text-center"
+                          className="form-label text-center"
                           style={{ color: "#636363" }}
                         >
                           {" "}
@@ -1601,14 +1601,14 @@ const SellerDash = () => {
                 <div className="">
                   <div className="d-flex justify-content-between">
                     <div style={{ width: "100%" }}>
-                      <label for="inputEmail4" class="form-label">
+                      <label for="inputEmail4" className="form-label">
                         Max Price
                       </label>
                       <input
                         style={{ height: "7vh", width: "95%" }}
                         type="text"
                         id="inputEmail4"
-                        class="form-control"
+                        className="form-control"
                         name="maxPrice"
                         placeholder="$ less than $100k"
                         value={formData.maxPrice}
@@ -1616,14 +1616,14 @@ const SellerDash = () => {
                       />
                     </div>
                     <div style={{ width: "100%" }}>
-                      <label for="inputEmail4" class="form-label">
+                      <label for="inputEmail4" className="form-label">
                         Min Price
                       </label>
                       <input
                         style={{ height: "7vh", width: "100%" }}
                         type="text"
                         id="inputEmail4"
-                        class="form-control"
+                        className="form-control"
                         name="minPrice"
                         placeholder="$ less than $100k"
                         value={formData.minPrice}

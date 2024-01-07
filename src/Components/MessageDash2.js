@@ -42,7 +42,7 @@
 //                                     <div className='d-flex align-items-center'>
 //                                         <span style={{ color: '#c0c0c0' }}>Hello, I am owner of ZyShip.com...</span>
 //                                         <div className='mx-3'>
-//                                             <span class="badge rounded-pill text-bg-danger">5+</span>
+//                                             <span className="badge rounded-pill text-bg-danger">5+</span>
 //                                         </div>
 //                                     </div>
 //                                 </Link>
@@ -113,16 +113,16 @@
 
 //                             <div>
 //                                 <div className='' style={{ color: '#636363', width: "100%" }}>
-//                                     <div class="d-flex mb-3 my-3 ">
+//                                     <div className="d-flex mb-3 my-3 ">
 //                                         <div className='d-flex justify-content-center align-items-center'>
-//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-camera mx-2"></i>
-//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-microphone mx-2"></i>
-//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
+//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-camera mx-2"></i>
+//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-microphone mx-2"></i>
+//                                             <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-face-smile mx-2"></i>
 //                                         </div>
-//                                         <input style={{ width: '100', background: '#fff', borderRadius: '50px' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." />
+//                                         <input style={{ width: '100', background: '#fff', borderRadius: '50px' }} type="text" id="floatingInputValue" className="Search-from form-control mx-2" placeholder="Write message..." />
 //                                         <Link className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
 //                                             style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none' }}>
-//                                             <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
+//                                             <><i style={{ fontSize: '1.5rem' }} className="messageSend fa-regular fa-paper-plane py-3"></i></>
 //                                         </Link>
 //                                     </div>
 //                                 </div>
@@ -141,7 +141,7 @@
 //                                     </div>
 //                                     <div className='d-flex flex-column'>
 //                                         <span>12/12/2022</span>
-//                                         <span style={{ width: '35%' }} class="badge rounded-pill text-bg-danger">5+</span>
+//                                         <span style={{ width: '35%' }} className="badge rounded-pill text-bg-danger">5+</span>
 //                                     </div>
 //                                 </div>
 //                             </div>
@@ -154,16 +154,16 @@
 
 //                                 <div>
 //                                     <div className='mx-3' style={{ color: '#636363', width: "100%" }}>
-//                                         <div class="d-flex mb-3 my-3 ">
+//                                         <div className="d-flex mb-3 my-3 ">
 //                                             <div className='d-flex justify-content-center align-items-center'>
-//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-camera mx-2"></i>
-//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-microphone mx-2"></i>
-//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
+//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-camera mx-2"></i>
+//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-microphone mx-2"></i>
+//                                                 <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-face-smile mx-2"></i>
 //                                             </div>
-//                                             <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." />
+//                                             <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" className="Search-from form-control mx-2" placeholder="Write message..." />
 //                                             <Link className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
 //                                                 style={{ color: '#3247FF', right: '5%', position: 'relative', textDecoration: 'none' }}>
-//                                                 <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
+//                                                 <><i style={{ fontSize: '1.5rem' }} className="messageSend fa-regular fa-paper-plane py-3"></i></>
 //                                             </Link>
 //                                         </div>
 //                                     </div>

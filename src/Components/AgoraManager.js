@@ -177,7 +177,7 @@ export const AgoraManager = ({ config, children }) => {
                     toggleVideo()
                 }}>
                     {/* {!cameraOn ? "Start Video" : "Stop Video"} */}
-                    {!cameraOn ? <i class="fa-solid fa-video px-1"  style={{ color: '#3247ff' }}></i> : <i class="fa-solid fa-video-slash px-1" style={{ color: '#fff' }}></i>}
+                    {!cameraOn ? <i className="fa-solid fa-video px-1"  style={{ color: '#3247ff' }}></i> : <i className="fa-solid fa-video-slash px-1" style={{ color: '#fff' }}></i>}
                 </button>
 
                 <button style={{ background: '#222222', borderRadius: '200px', padding: '1rem', border: 'none' }} onClick={() => {
@@ -185,7 +185,7 @@ export const AgoraManager = ({ config, children }) => {
                 }}>
                     {
                         // !micOn ? "Start Audio" : "Stop Audio"
-                        !micOn ? <i class="fa-solid fa-microphone px-2"  style={{ color: '#3247ff'}}></i> : <i class="fa-solid fa-microphone-slash px-1" style={{ color: '#fff' }}></i>
+                        !micOn ? <i className="fa-solid fa-microphone px-2"  style={{ color: '#3247ff'}}></i> : <i className="fa-solid fa-microphone-slash px-1" style={{ color: '#fff' }}></i>
                     }
                 </button>
 
@@ -195,7 +195,7 @@ export const AgoraManager = ({ config, children }) => {
                     navigate("/MainDashboard/Dashbaord");
                 }}>
                     {/* Leave */}
-                    <i class="fa-solid fa-phone px-1" style={{ color: '#fff' }}></i>
+                    <i className="fa-solid fa-phone px-1" style={{ color: '#fff' }}></i>
                 </button>
 
             </div>

@@ -112,20 +112,20 @@ const SignIn = () => {
             </div>
 
             <div>
-              <div class="form-floating mb-3 SignIn-input">
-                <input type="text" name='email' class="form-control" id="floatingInput" placeholder="" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
+              <div className="form-floating mb-3 SignIn-input">
+                <input type="text" name='email' className="form-control" id="floatingInput" placeholder="" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
                  onChange={handleChange}
                  value={formData.email}/>
-                <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-regular fa-envelope mx-2"></i></label>
+                <label for="floatingInput"><i style={{ color: '#fff' }} className="fa-regular fa-envelope mx-2"></i></label>
               </div>
             </div>
 
             <div>
-              <div class="form-floating mb-3 SignIn-input">
-                <input type="password" name="password" class="form-control" id="floatingInput" placeholder="" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }}
+              <div className="form-floating mb-3 SignIn-input">
+                <input type="password" name="password" className="form-control" id="floatingInput" placeholder="" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }}
                  onChange={handleChange}
                  value={formData.password}/>
-                <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-solid fa-shield-cat mx-2"></i></label>
+                <label for="floatingInput"><i style={{ color: '#fff' }} className="fa-solid fa-shield-cat mx-2"></i></label>
                 <span className="d-flex justify-content-end" style={{ color: '#6C7AFF' }}>Forgot Password?</span>
               </div>
             </div>

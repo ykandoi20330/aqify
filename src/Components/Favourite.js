@@ -49,7 +49,7 @@ const Favourite = () => {
                       <button className='btn-card btn btn-outline-primary my-2' style={{ fontSize: '9px' }}>{item.techStack}</button>
                     </div>
                     <div >
-                      <span className='d-flex align-items-center'><i class="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
+                      <span className='d-flex align-items-center'><i className="fa-solid fa-eye" style={{ color: '#3247ff' }}></i>1.2K</span>
                     </div>
                   </div>
                   <div className='my-4'>
@@ -60,11 +60,11 @@ const Favourite = () => {
                     <h3 className='card-h3'>Metrics</h3>
                     <div className='d-flex justify-content-center align-items-center'>
                       <Link style={{ padding: '12px 38px' }} className='btn btn-primary mx-2' to="/MarketDash2">View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
-                      {/* <Link onClick={() => removeFromFavorites(item.id)}><i class="fa-solid fa-heart" style={{ color: '' }}></i></Link> */}
+                      {/* <Link onClick={() => removeFromFavorites(item.id)}><i className="fa-solid fa-heart" style={{ color: '' }}></i></Link> */}
                       {favoriteChecker(item.category) ?
-                        (<Link key={item.id} onClick={() => removeFromFavorites(item.category)}> <i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
+                        (<Link key={item.id} onClick={() => removeFromFavorites(item.category)}> <i className="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                         :
-                        (<Link key={item.id} onClick={() => addToFavorites(item)}> <i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                        (<Link key={item.id} onClick={() => addToFavorites(item)}> <i className="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                     </div>
                   </div>
 

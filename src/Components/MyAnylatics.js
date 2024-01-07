@@ -29,14 +29,14 @@ const MyAnylatics = () => {
 
                             <div className='my-5'>
                                 <span style={{ color: '#636363' }}>Select Your Project</span>
-                                <div class="form-floating my-3">
-                                    <select style={{ width: '35vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
+                                <div className="form-floating my-3">
+                                    <select style={{ width: '35vw', color: '#3247ff', background: '#fff' }} className="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example">
                                         <option id="floatingInputValue" selected>Select project name</option>
                                         <option value="1">UI Design</option>
                                         <option value="2">UI Development</option>
                                         <option value="3">AI</option>
                                     </select>
-                                    <label for="floatingInputValue"><i class="fa-solid fa-check-double" style={{ color: "#005eff" }}></i></label>
+                                    <label for="floatingInputValue"><i className="fa-solid fa-check-double" style={{ color: "#005eff" }}></i></label>
                                 </div>
                             </div>
                         </div>

@@ -162,32 +162,32 @@ const SignUp = () => {
               </div>
 
               <div>
-                <div class="form-floating mb-3 SignIn-input">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="Enter Your Name" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
+                <div className="form-floating mb-3 SignIn-input">
+                  <input type="text" className="form-control" id="floatingInput" placeholder="Enter Your Name" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
                   name="userName"
                   onChange={handleChange}
                   value={formData.userName}/>
-                  <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-regular fa-user mx-2"></i></label>
+                  <label for="floatingInput"><i style={{ color: '#fff' }} className="fa-regular fa-user mx-2"></i></label>
                 </div>
               </div>
 
               <div>
-                <div class="form-floating mb-3 SignIn-input">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="Enter your Email" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
+                <div className="form-floating mb-3 SignIn-input">
+                  <input type="email" className="form-control" id="floatingInput" placeholder="Enter your Email" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
                   name="email"
                   onChange={handleChange}
                   value={formData.email}/>
-                  <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-regular fa-envelope mx-2"></i></label>
+                  <label for="floatingInput"><i style={{ color: '#fff' }} className="fa-regular fa-envelope mx-2"></i></label>
                 </div>
               </div>
 
               <div>
-                <div class="form-floating mb-3 SignIn-input">
-                  <input type="password" class="form-control" id="floatingInput" placeholder="Enter Password" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
+                <div className="form-floating mb-3 SignIn-input">
+                  <input type="password" className="form-control" id="floatingInput" placeholder="Enter Password" style={{ background: "#121314", color: '#c0c0c0', border: "1px solid #636363" }} 
                   name="password"
                   onChange={handleChange}
                   value={formData.password}/>
-                  <label for="floatingInput"><i style={{ color: '#fff' }} class="fa-solid fa-shield-cat mx-2"></i></label>
+                  <label for="floatingInput"><i style={{ color: '#fff' }} className="fa-solid fa-shield-cat mx-2"></i></label>
                   <span className="d-flex justify-content-end" style={{ color: '#fff' }}>Minimum 8 characters</span>
                 </div>
               </div>
@@ -196,20 +196,20 @@ const SignUp = () => {
                 <span style={{ color: '#fff' }}>Indicate your main account type</span>
                 <div className="d-flex my-2">
                   <div>
-                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off"  
+                    <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option11" autocomplete="off"  
                     onChange={handleOptionChange}
                     value="owner" />
-                    <label class="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option11">
-                      <i class="fa-solid fa-circle-check mx-2"></i>
+                    <label className="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option11">
+                      <i className="fa-solid fa-circle-check mx-2"></i>
                       Owner ( Seller )</label>
                   </div>
 
                   <div >
-                    <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" 
+                    <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option12" autocomplete="off" 
                     onChange={handleOptionChange}
                     value="acquirer" />
-                    <label class="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option12">
-                      <i class="fa-solid fa-circle-check mx-2"></i>
+                    <label className="btn1" style={{ padding: "0.5rem", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option12">
+                      <i className="fa-solid fa-circle-check mx-2"></i>
                       Acquirer (buyer)</label>
                   </div>
                 </div>

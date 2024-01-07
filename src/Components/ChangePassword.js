@@ -113,16 +113,16 @@ const ChangePassword = () => {
         </div>
 
         <div className="password-card">
-          {/* <div class="mb-3 my-3">
-                        <label for="exampleFormControlInput1" class="form-label" style={{color:'#636363'}}>Current Email</label>
-                        <input type="email" name='email' class="form-control" id="exampleFormControlInput1" placeholder="akashkumar0007@gmail.com"
+          {/* <div className="mb-3 my-3">
+                        <label for="exampleFormControlInput1" className="form-label" style={{color:'#636363'}}>Current Email</label>
+                        <input type="email" name='email' className="form-control" id="exampleFormControlInput1" placeholder="akashkumar0007@gmail.com"
                         value={formData.email}
                         onChange={handleChange}/>
                     </div> */}
-          <div class="mb-3 my-3">
+          <div className="mb-3 my-3">
             <label
               for="exampleFormControlInput1"
-              class="form-label"
+              className="form-label"
               style={{ color: "#636363" }}
             >
               Current Password
@@ -130,17 +130,17 @@ const ChangePassword = () => {
             <input
               type="password"
               name="oldPassword"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="**********"
               value={formData.oldPassword}
               onChange={handleChange}
             />
           </div>
-          <div class="mb-3 my-3">
+          <div className="mb-3 my-3">
             <label
               for="exampleFormControlInput1"
-              class="form-label"
+              className="form-label"
               style={{ color: "#636363" }}
             >
               New Password
@@ -148,17 +148,17 @@ const ChangePassword = () => {
             <input
               type="password"
               name="newPassword"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="**********"
               value={formData.newPassword}
               onChange={handleChange}
             />
           </div>
-          <div class="mb-3 my-3">
+          <div className="mb-3 my-3">
             <label
               for="exampleFormControlInput1"
-              class="form-label"
+              className="form-label"
               style={{ color: "#636363" }}
             >
               Confirm New Password
@@ -166,7 +166,7 @@ const ChangePassword = () => {
             <input
               type="password"
               name="confirmnewPassword"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="**********"
               value={formData.confirmnewPassword}
@@ -174,7 +174,7 @@ const ChangePassword = () => {
             />
           </div>
           <button
-            class="password-btn btn btn-primary my-3 rounded-pill"
+            className="password-btn btn btn-primary my-3 rounded-pill"
             type="submit"
             style={{ width: "30%", padding: "0.9rem 1.5rem" }}
             onClick={collectData}

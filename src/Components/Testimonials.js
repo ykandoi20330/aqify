@@ -41,8 +41,8 @@ const Testimonials = () => {
                         <div>
                             <h1 className='six-h1'>Stories From Founders And Buyers</h1>
                             <div className='my-5'>
-                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-left"></i></Link>
-                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-right"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i className="fa-solid fa-arrow-left"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i className="fa-solid fa-arrow-right"></i></Link>
                             </div>
                         </div>
                         <div>
@@ -50,9 +50,9 @@ const Testimonials = () => {
                         </div>
                     </div>
 
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
+                    <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
 
                                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">
@@ -79,7 +79,7 @@ const Testimonials = () => {
                                 </div>
                             </div>
 
-                            <div class="carousel-item">
+                            <div className="carousel-item">
 
                                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">

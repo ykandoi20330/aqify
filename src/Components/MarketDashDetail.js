@@ -123,7 +123,7 @@
 //                         </div>
 //                         <div>
 //                             <Link className='btn btn-primary rounded-pill px-5 py-2' data-bs-toggle="modal" data-bs-target="#exampleModal1" 
-//                             onClick={show => setShow(2)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i></Link>
+//                             onClick={show => setShow(2)}>Explore More<i className="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i></Link>
 //                         </div>
 //                     </div>
 //                 </section>
@@ -149,7 +149,7 @@
 //                             </div>
 //                             <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
 //                                 <h3 className='card-h3 py-2'>Description</h3>
-//                                 {/* <Link> <i class="fa-solid fa-heart"></i></Link> */}
+//                                 {/* <Link> <i className="fa-solid fa-heart"></i></Link> */}
 //                             </div>
 
 //                             <div className='my-4'>
@@ -163,12 +163,12 @@
 
 //                             <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-//                                 <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-//                                     <div class="carousel-inner">
-//                                         <div class="carousel-item active">
+//                                 <div id={`carouselExampleAutoplaying${index}`} className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+//                                     <div className="carousel-inner">
+//                                         <div className="carousel-item active">
 //                                             <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
 //                                         </div>
-//                                         <div class="carousel-item">
+//                                         <div className="carousel-item">
 //                                             <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
 //                                         </div>
 //                                     </div>
@@ -283,7 +283,7 @@
 //                                         <span className='mx-2'>Message Seller</span>
 //                                     </Link>
 //                                     <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                         <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+//                                         <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
 //                                         <span className='mx-2'>Audio Call</span>
 //                                     </Link>
 //                                     <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
@@ -291,11 +291,11 @@
 //                                         <span className='mx-2' >Make Offer</span>
 //                                     </Link>
 //                                     <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                         <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
+//                                         <i className="fa-solid fa-video" style={{ color: "#005eff" }}></i>
 //                                         <span className='mx-2' >Watch video Path</span>
 //                                     </Link>
 //                                     <Link className='my-3 d-flex align-items-center justify-content-center' onClick={handleShare} style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                         <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+//                                         <i className="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
 //                                         <span className='mx-2' >{text}</span>
 //                                     </Link>
 //                                     <div className='my-3'>
@@ -330,14 +330,14 @@
 //             {show === 2 && <MarketplaceDash2 />}
 
 //             <section>
-//                 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-//                     <div class="modal-dialog  modal-dialog-centered">
-//                         <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} class="modal-content">
-//                             <div class="modal-header" style={{ border: 'none' }}>
+//                 <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//                     <div className="modal-dialog  modal-dialog-centered">
+//                         <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} className="modal-content">
+//                             <div className="modal-header" style={{ border: 'none' }}>
 //                                 <br />
-//                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+//                                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 //                             </div>
-//                             <div class="modal-body">
+//                             <div className="modal-body">
 //                                 <div>
 //                                     <h6 className='text-center mb-4'>How Was the Listing and Pricing?</h6>
 //                                 </div>

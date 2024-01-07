@@ -112,12 +112,12 @@ const Advisory = () => {
             <section className='d-flex justify-content-center' style={{ background: '#EEF0FE' }}>
                 <div className="advisory-card">
                     <div className='first-line d-flex align-items-center'>
-                        <div class="mb-3 my-3 form-floating" style={{ width: '100%' }}>
-                            <input style={{ width: '97%' }} type="email" id="floatingInputValue" class="form-control" value={searchTerm} onChange={handleSearch} placeholder="Search" />
+                        <div className="mb-3 my-3 form-floating" style={{ width: '100%' }}>
+                            <input style={{ width: '97%' }} type="email" id="floatingInputValue" className="form-control" value={searchTerm} onChange={handleSearch} placeholder="Search" />
                             <label for="floatingInputValue"><img src={search} alt="" /></label>
                         </div>
-                        <div class="form-floating mx-2" style={{ width: '100%' }}>
-                            <select onChange={handleDealChange} style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg" aria-label="Large select example">
+                        <div className="form-floating mx-2" style={{ width: '100%' }}>
+                            <select onChange={handleDealChange} style={{ width: '100%', color: '#3247ff' }} className="form-control form-select form-select-lg" aria-label="Large select example">
                                 <option id="floatingInputValue" selected>Deal Size</option>
                                 {card.map((deal) => {
                                     return (
@@ -130,8 +130,8 @@ const Advisory = () => {
                     </div>
 
                     <div className="second-line d-flex">
-                        <div class="form-floating" style={{ width: '100%' }}>
-                            <select onChange={handleLocationChange} style={{ width: '100%', color: '#3247ff' }} class="form-control form-select form-select-lg mb-3" aria-label="Large select example">
+                        <div className="form-floating" style={{ width: '100%' }}>
+                            <select onChange={handleLocationChange} style={{ width: '100%', color: '#3247ff' }} className="form-control form-select form-select-lg mb-3" aria-label="Large select example">
                                 <option id="floatingInputValue" selected>Company Location</option>
                                 {card.map((loca) => {
                                     return (

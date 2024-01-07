@@ -93,12 +93,12 @@
 
 //                                         <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-//                                             <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel">
-//                                                 <div class="carousel-inner">
-//                                                     <div class="carousel-item active">
+//                                             <div id={`carouselExampleAutoplaying${index}`} className="carousel slide" data-bs-ride="carousel">
+//                                                 <div className="carousel-inner">
+//                                                     <div className="carousel-item active">
 //                                                         <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
 //                                                     </div>
-//                                                     <div class="carousel-item">
+//                                                     <div className="carousel-item">
 //                                                         <img style={{ borderRadius: '10px', width: '100%' }} src={slideImg} alt="" />
 //                                                     </div>
 //                                                 </div>
@@ -213,7 +213,7 @@
 //                                                     <span className='mx-2'>Message Seller</span>
 //                                                 </Link>
 //                                                 <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                                     <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+//                                                     <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
 //                                                     <span className='mx-2'>Audio Call</span>
 //                                                 </Link>
 //                                                 <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
@@ -221,11 +221,11 @@
 //                                                     <span className='mx-2' >Make Offer</span>
 //                                                 </Link>
 //                                                 <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                                     <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
+//                                                     <i className="fa-solid fa-video" style={{ color: "#005eff" }}></i>
 //                                                     <span className='mx-2' >Watch video Path</span>
 //                                                 </Link>
 //                                                 <Link className='my-3 d-flex align-items-center justify-content-center' style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-//                                                     <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+//                                                     <i className="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
 //                                                     <span className='mx-2' >Share</span>
 //                                                 </Link>
 //                                                 <div className='my-3'>

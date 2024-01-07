@@ -59,27 +59,27 @@
 //                                 <div className="cart-card" style={{ width: '98%' }}>
 //                                     <div>
 //                                         <div>
-//                                             <div class="mb-3 my-3">
-//                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
-//                                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
+//                                             <div className="mb-3 my-3">
+//                                                 <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
+//                                                 <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
 //                                             </div>
 //                                         </div>
 //                                         <div>
-//                                             <div class="mb-3 my-3">
-//                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
-//                                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
+//                                             <div className="mb-3 my-3">
+//                                                 <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
+//                                                 <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
 //                                             </div>
 //                                         </div>
 //                                         <div>
-//                                             <div class="mb-3 my-3">
-//                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
-//                                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
+//                                             <div className="mb-3 my-3">
+//                                                 <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
+//                                                 <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
 //                                             </div>
 //                                         </div>
 //                                         <div>
-//                                             <div class="mb-3 my-3">
-//                                                 <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
-//                                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
+//                                             <div className="mb-3 my-3">
+//                                                 <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
+//                                                 <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Acqify" />
 //                                             </div>
 //                                         </div>
 //                                     </div>

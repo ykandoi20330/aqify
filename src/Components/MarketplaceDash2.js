@@ -375,7 +375,7 @@ const MarketplaceDash2 = () => {
                           </div>
                           {/* <div>
                             <span className="d-flex align-items-center">
-                              <i class="fa-solid fa-eye" style={{ color: "#3247ff" }}></i>
+                              <i className="fa-solid fa-eye" style={{ color: "#3247ff" }}></i>
                               1.2K
                             </span>
                           </div> */}
@@ -391,9 +391,9 @@ const MarketplaceDash2 = () => {
                           <div className='d-flex align-items-center'>
                             <Link style={{ padding: '12px 38px' }} onClick={() => detailPage(item)} className='btn btn-primary mx-2'>View Listing<img className='mx-2' style={{ width: '15px' }} src={arrow} alt="" /> </Link>
                             {favoriteChecker(item.category) ?
-                              (<Link key={item.id} onClick={() => removeFromFavorites(item.category)}><i class="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
+                              (<Link key={item.id} onClick={() => removeFromFavorites(item.category)}><i className="fa-solid fa-heart" style={{ color: '' }}></i></Link>)
                               :
-                              (<Link key={item.id} onClick={() => addToFavorites(item)}><i class="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
+                              (<Link key={item.id} onClick={() => addToFavorites(item)}><i className="fa-solid fa-heart" style={{ color: '#c0c0c0' }}></i></Link>)}
                           </div>
                         </div>
 
@@ -468,7 +468,7 @@ const MarketplaceDash2 = () => {
                 {detail.map((it, i) => {
                   return (
                     <Link key={i} className='btn btn-primary rounded-pill px-5 py-2'
-                      onClick={() => exploreMore(it.projectName)}>Explore More<i class="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
+                      onClick={() => exploreMore(it.projectName)}>Explore More<i className="fa-solid fa-arrow-right mx-2" style={{ color: "#ffffff" }}></i>
                     </Link>)
                 })}
               </div>
@@ -496,7 +496,7 @@ const MarketplaceDash2 = () => {
                     </div>
                     <div className='d-flex justify-content-between' style={{ margin: '1rem 0 0rem 0' }}>
                       <h3 className='card-h3 py-2'>Description</h3>
-                      {/* <Link> <i class="fa-solid fa-heart"></i></Link> */}
+                      {/* <Link> <i className="fa-solid fa-heart"></i></Link> */}
                     </div>
 
                     <div className='my-4'>
@@ -507,12 +507,12 @@ const MarketplaceDash2 = () => {
 
                     <div className="imgSlider d-flex justify-content-center align-items-center" style={{ position: 'relative' }}>
 
-                      <div id={`carouselExampleAutoplaying${index}`} class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
+                      <div id={`carouselExampleAutoplaying${index}`} className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                        <div className="carousel-inner">
+                          <div className="carousel-item active">
                             <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage1} alt="" />
                           </div>
-                          <div class="carousel-item">
+                          <div className="carousel-item">
                             <img style={{ borderRadius: '10px', width: '100%' }} src={item.carouselImage2} alt="" />
                           </div>
                         </div>
@@ -733,7 +733,7 @@ const MarketplaceDash2 = () => {
                                 style={{ height: "6vh", width: "100%" }}
                                 type="text"
                                 id="inputEmail10"
-                                class="form-control"
+                                className="form-control"
                                 name="otherFeedback"
                                 placeholder="Enter comment..."
                                 value={feedback}
@@ -791,11 +791,11 @@ const MarketplaceDash2 = () => {
                         <div onClick={() => {
                           navigate(`/call/${item.ownerId}`);
                         }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                          <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+                          <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Video Call</span>
                         </div>
                         <Link data-bs-target="#ScheduleModalToggle" data-bs-toggle="modal" className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                          <i class="fa-solid fa-calendar-days" style={{ color: "#005eff" }}></i>
+                          <i className="fa-solid fa-calendar-days" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Schedule Video Call</span>
                         </Link>
                         <Link className='my-3 d-flex align-items-center justify-content-center' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
@@ -803,11 +803,11 @@ const MarketplaceDash2 = () => {
                           <span className='mx-2' >Make Offer</span>
                         </Link>
                         <Link className='my-3 d-flex align-items-center justify-content-center' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                          <i class="fa-solid fa-video" style={{ color: "#005eff" }}></i>
+                          <i className="fa-solid fa-video" style={{ color: "#005eff" }}></i>
                           <span className='mx-2' >Watch video Path</span>
                         </Link>
                         <Link className='my-3 d-flex align-items-center justify-content-center' onClick={handleShare} style={{ border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
-                          <i class="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
+                          <i className="fa-solid fa-share-nodes" style={{ color: "#005eff" }}></i>
                           <span className='mx-2' >{text}</span>
                         </Link>
                         <div className='my-3'>
@@ -841,11 +841,11 @@ const MarketplaceDash2 = () => {
 
       <section>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="mb-3">
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-body">
+                <div className="mb-3">
                   {detail.map((i) => {
                     return (
                       <>
@@ -863,17 +863,17 @@ const MarketplaceDash2 = () => {
               </div>
               <div>
                 <div className='mx-3' style={{ color: '#636363', width: "100%" }}>
-                  <div class="d-flex mb-3 my-3 ">
+                  <div className="d-flex mb-3 my-3 ">
                     <div className='d-flex justify-content-center align-items-center'>
-                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} class="fa-solid fa-face-smile mx-2"></i>
+                      <i style={{ color: '#3247FF', fontSize: '1.5rem' }} className="fa-solid fa-face-smile mx-2"></i>
                     </div>
-                    <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
+                    <input style={{ width: '100', background: '#fff', borderRadius: '50px', height: '8vh' }} type="text" id="floatingInputValue" className="Search-from form-control mx-2" placeholder="Write message..." value={listingMessage} onChange={(e) => setListingMessage(e.target.value)} />
                     <div
                       className='messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center'
                       style={{ color: '#3247FF', right: '15%', position: 'relative', textDecoration: 'none', cursor: 'pointer' }}
                       onClick={() => sendMessage()}
                     >
-                      <><i style={{ fontSize: '1.5rem' }} class="messageSend fa-regular fa-paper-plane py-3"></i></>
+                      <><i style={{ fontSize: '1.5rem' }} className="messageSend fa-regular fa-paper-plane py-3"></i></>
                     </div>
                   </div>
                 </div>
@@ -884,18 +884,18 @@ const MarketplaceDash2 = () => {
       </section>
 
       <section>
-        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content" style={{ background: '#000' }}>
-              <div class="modal-header" style={{ border: 'none' }}>
+        <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div className="modal-dialog modal-xl">
+            <div className="modal-content" style={{ background: '#000' }}>
+              <div className="modal-header" style={{ border: 'none' }}>
                 {detail.map((item, i) => {
                   return (
-                    <h1 key={i} class="modal-title fs-5" style={{ color: '#fff' }} id="staticBackdropLabel">{item.projectName}</h1>
+                    <h1 key={i} className="modal-title fs-5" style={{ color: '#fff' }} id="staticBackdropLabel">{item.projectName}</h1>
                   )
                 })}
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 {detail.map((items, i) => {
                   return (
                     <video key={i} style={{ width: '100%' }} controls autoplay>
@@ -904,8 +904,8 @@ const MarketplaceDash2 = () => {
                   )
                 })}
               </div>
-              <div class="modal-footer" style={{ border: 'none' }}>
-                <button type="button" class="btn btn-secondary" style={{ padding: '0.5rem 1.5rem', borderRadius: '50px' }} data-bs-dismiss="modal">Close</button>
+              <div className="modal-footer" style={{ border: 'none' }}>
+                <button type="button" className="btn btn-secondary" style={{ padding: '0.5rem 1.5rem', borderRadius: '50px' }} data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -913,14 +913,14 @@ const MarketplaceDash2 = () => {
       </section>
 
       {/* <section>
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog  modal-dialog-centered">
-            <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} class="modal-content">
-              <div class="modal-header" style={{ border: 'none' }}>
+        <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog  modal-dialog-centered">
+            <div style={{ background: '#191b1b', color: '#fff', borderRadius: '20px' }} className="modal-content">
+              <div className="modal-header" style={{ border: 'none' }}>
                 <br />
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <div>
                   <h6 className='text-center mb-4'>How Was the Listing and Pricing?</h6>
                 </div>
@@ -950,22 +950,22 @@ const MarketplaceDash2 = () => {
       </section> */}
 
       <section className='d-flex align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content" style={{ borderRadius: '20px' }}>
-              <div class="modal-header" style={{ border: 'none' }}>
+        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content" style={{ borderRadius: '20px' }}>
+              <div className="modal-header" style={{ border: 'none' }}>
                 <div>
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel" style={{ fontWeight: '700' }}>Pricing plans</h1>
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel" style={{ fontWeight: '700' }}>Pricing plans</h1>
                   <span>Choose a plan that's right for you.</span>
                 </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <div className='' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
-                  <div class="form-check d-flex justify-content-between">
+                  <div className="form-check d-flex justify-content-between">
                     <div>
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
-                      <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault1">
+                      <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label style={{ fontWeight: '800', fontSize: '1rem' }} className="form-check-label" for="flexRadioDefault1">
                         Premium Annually
                       </label>
                       <br />
@@ -986,10 +986,10 @@ const MarketplaceDash2 = () => {
                   </div>
                 </div>
                 <div className='my-3' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
-                  <div class="form-check d-flex justify-content-between">
+                  <div className="form-check d-flex justify-content-between">
                     <div>
-                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
-                      <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault2">
+                      <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
+                      <label style={{ fontWeight: '800', fontSize: '1rem' }} className="form-check-label" for="flexRadioDefault2">
                         Pro Annually
                       </label>
                       <br />
@@ -1011,8 +1011,8 @@ const MarketplaceDash2 = () => {
 
                 </div>
               </div>
-              <div class="modal-footer" style={{ border: 'none' }}>
-                <button type="button" class="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
+              <div className="modal-footer" style={{ border: 'none' }}>
+                <button type="button" className="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
               </div>
             </div>
           </div>
@@ -1022,14 +1022,14 @@ const MarketplaceDash2 = () => {
 
       {/* Schdeule A vidoe meet time and Date */}
       <section>
-        <div class="modal fade" id="ScheduleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header" style={{ border: 'none' }}>
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel" style={{ fontWeight: '700' }}>Select a Date & Time!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal fade" id="ScheduleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header" style={{ border: 'none' }}>
+                <h1 className="modal-title fs-5" id="exampleModalToggleLabel" style={{ fontWeight: '700' }}>Select a Date & Time!</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <form>
                   <label style={{ color: '#0005ff' }} for="birthdaytime" >Meeting (date and time):</label>
                   <input style={{
@@ -1041,24 +1041,24 @@ const MarketplaceDash2 = () => {
                   }} className="mx-3" onChange={handleDateTimeChange} type="datetime-local" id="birthdaytime" name="birthdaytime" />
                 </form>
               </div>
-              <div class="modal-footer" style={{ border: 'none' }}>
-                <button onClick={handleSubmitTime} type="submit" class="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
+              <div className="modal-footer" style={{ border: 'none' }}>
+                <button onClick={handleSubmitTime} type="submit" className="btn btn-primary py-1 px-3" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Book a call</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header" style={{ border: 'none' }}>
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Scheduling a Video Call</h1>
-                {/* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+        <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header" style={{ border: 'none' }}>
+                <h1 className="modal-title fs-5" id="exampleModalToggleLabel2">Scheduling a Video Call</h1>
+                {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Your Request for the Meeting has been sent to the Seller!
               </div>
-              <div class="modal-footer" style={{ border: 'none' }}>
-                <button class="btn btn-primary px-3 py-1" data-bs-dismiss="modal" aria-label="Close" onClick={handleSchedule}>Confirm meet!</button>
+              <div className="modal-footer" style={{ border: 'none' }}>
+                <button className="btn btn-primary px-3 py-1" data-bs-dismiss="modal" aria-label="Close" onClick={handleSchedule}>Confirm meet!</button>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const PricingDash = () => {
             </span>
             <div className="my-3">
               <div
-                class="btn-group"
+                className="btn-group"
                 role="group"
                 aria-label="Basic outlined example"
                 style={{ background: "transparent" }}
@@ -48,7 +48,7 @@ const PricingDash = () => {
                 <button
                   style={{ padding: "1rem 4rem" }}
                   type="button"
-                  class="btn btn-outline-primary"
+                  className="btn btn-outline-primary"
                   onClick={(show) => setShow(1)}
                 >
                   Owners
@@ -56,7 +56,7 @@ const PricingDash = () => {
                 <button
                   style={{ padding: "1rem 4rem" }}
                   type="button"
-                  class="btn btn-outline-primary"
+                  className="btn btn-outline-primary"
                   onClick={(show) => setShow(2)}
                 >
                   Acquirers

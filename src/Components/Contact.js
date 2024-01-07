@@ -103,10 +103,10 @@ const Contact = () => {
       <section className="contact-back" style={{height:'fit-content'}} >
         <div className="contact-card">
           <form onSubmit={collectData}>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlInput1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your full name
@@ -114,17 +114,17 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Your Full Name"
                 onChange={handleChange}
                 value={formData.name}
               />
             </div>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlInput1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your email address
@@ -132,23 +132,23 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Your Email Address"
                 onChange={handleChange}
                 value={formData.email}
               />
             </div>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlTextarea1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your message below
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 name="message"
                 id="exampleFormControlTextarea1"
                 rows="3"
@@ -158,7 +158,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <button
-              class="contact-btn btn btn-primary my-3"
+              className="contact-btn btn btn-primary my-3"
               type="submit"
               disabled={state.submitting}
               style={{ width: "30%", padding: "1.5rem 2.5rem" }}

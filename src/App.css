@@ -243,7 +243,8 @@ nav {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-    left: 6.2rem;
+    /* left: 6.2rem; */
+    left: 4.2rem;
     position: relative;
     color: #fff;
     top: 4rem;
@@ -800,13 +801,13 @@ ul {
 
 .socialIcon {
     color: #fff;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
 .socialIcon:hover {
     color: #3247FF;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
@@ -3366,6 +3367,7 @@ input[type="file"] {
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
+        height: fit-content !important;
     }
 
     /***************** Onbaord Section *******************/

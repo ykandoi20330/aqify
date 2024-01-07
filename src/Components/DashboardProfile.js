@@ -281,12 +281,12 @@ const DashboardProfile = () => {
               </div>
 
               <div style={{ width: "60%" }}>
-                <div class="mb-3 my-3">
-                  <div class="row">
-                    <div class="col">
+                <div className="mb-3 my-3">
+                  <div className="row">
+                    <div className="col">
                       <label
                         for="exampleFormControlInput1"
-                        class="form-label"
+                        className="form-label"
                         style={{ color: "#636363" }}
                       >
                         First name
@@ -294,17 +294,17 @@ const DashboardProfile = () => {
                       <input
                         style={{ height: "6vh" }}
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="First name"
                         name="firstName"
                         value={form.firstName}
                         onChange={handleChange}
                       />
                     </div>
-                    <div class="col">
+                    <div className="col">
                       <label
                         for="exampleFormControlInput1"
-                        class="form-label"
+                        className="form-label"
                         style={{ color: "#636363" }}
                       >
                         Last name
@@ -312,7 +312,7 @@ const DashboardProfile = () => {
                       <input
                         style={{ height: "6vh" }}
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Last name"
                         name="lastName"
                         value={form.lastName}
@@ -321,10 +321,10 @@ const DashboardProfile = () => {
                     </div>
                   </div>
                 </div>
-                <div class="mb-3 my-3">
+                <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     Username
@@ -332,24 +332,24 @@ const DashboardProfile = () => {
                   <input
                     style={{ height: "6vh" }}
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     name="userName"
                     value={form.userName}
                     onChange={handleChange}
                   />
                 </div>
-                <div class="mb-3 my-3">
+                <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlTextarea1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     About me
                   </label>
                   <textarea
                     style={{ height: "25vh" }}
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     name="about"
@@ -366,7 +366,7 @@ const DashboardProfile = () => {
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="options-base"
                         id="option8"
                         autocomplete="off"
@@ -374,7 +374,7 @@ const DashboardProfile = () => {
                         onClick={changeRoleowner}
                       />
                       <label
-                        class="btn1"
+                        className="btn1"
                         style={{
                           padding: "0.5rem",
                           margin: "0.3rem 0.7rem 0 0",
@@ -382,14 +382,14 @@ const DashboardProfile = () => {
                         }}
                         for="option8"
                       >
-                        <i class="fa-solid fa-circle-check mx-2"></i>
+                        <i className="fa-solid fa-circle-check mx-2"></i>
                         Owner( Seller )
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="options-base"
                         id="option9"
                         autocomplete="off"
@@ -397,7 +397,7 @@ const DashboardProfile = () => {
                         onClick={changeRoleacquire}
                       />
                       <label
-                        class="btn1"
+                        className="btn1"
                         style={{
                           padding: "0.5rem",
                           margin: "0.3rem 0.7rem 0 0",
@@ -405,14 +405,14 @@ const DashboardProfile = () => {
                         }}
                         for="option9"
                       >
-                        <i class="fa-solid fa-circle-check mx-2"></i>
+                        <i className="fa-solid fa-circle-check mx-2"></i>
                         Acquirer( buyer )
                       </label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        class="btn-check  rounded-pill"
+                        className="btn-check  rounded-pill"
                         name="options-base"
                         id="option10"
                         autocomplete="off"
@@ -420,7 +420,7 @@ const DashboardProfile = () => {
                         onClick={ChangeBoth}
                       />
                       <label
-                        class="btn1"
+                        className="btn1"
                         style={{
                           padding: "0.5rem",
                           margin: "0.3rem 0.7rem 0 0",
@@ -428,7 +428,7 @@ const DashboardProfile = () => {
                         }}
                         for="option10"
                       >
-                        <i class="fa-solid fa-circle-check mx-2"></i>
+                        <i className="fa-solid fa-circle-check mx-2"></i>
                         Owner and Aquirer
                       </label>
                     </div>
@@ -436,7 +436,7 @@ const DashboardProfile = () => {
                 </div>
 
                 <button
-                  class="profile-btn btn btn-primary my-3 rounded-pill"
+                  className="profile-btn btn btn-primary my-3 rounded-pill"
                   type="submit"
                   style={{ width: "40%", padding: "0.8rem 1.5rem" }}
                   onClick={collectData}

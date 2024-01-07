@@ -142,8 +142,8 @@
 //                         </div>
 
 //                         <div>
-//                             <div class="mb-3 my-3 form-floating">
-//                                 <input style={{ width: '100%' }} type="text" name='link' id="floatingInputValue" class="form-control" placeholder="Enter Full URL" value={formData.link} onChange={handleChange}/>
+//                             <div className="mb-3 my-3 form-floating">
+//                                 <input style={{ width: '100%' }} type="text" name='link' id="floatingInputValue" className="form-control" placeholder="Enter Full URL" value={formData.link} onChange={handleChange}/>
 //                                 <label for="floatingInputValue"><img src={clip} alt="" /></label>
 //                                 <span style={{ fontSize: '15px' }}>Your tiny project should contain a URL</span>
 //                             </div>
@@ -156,39 +156,39 @@
 //                         <div>
 //                             <div className='d-flex flex-wrap'>
 //                                 <div>
-//                                     <input type="radio" class="btn-check rounded-pill" name="category" id="option8" autocomplete="off" value={formData.category} onChange={handleChange} />
-//                                     <label class="btn2" for="option8">
-//                                         <i class="fa-solid fa-cart-shopping mx-2"></i>
+//                                     <input type="radio" className="btn-check rounded-pill" name="category" id="option8" autocomplete="off" value={formData.category} onChange={handleChange} />
+//                                     <label className="btn2" for="option8">
+//                                         <i className="fa-solid fa-cart-shopping mx-2"></i>
 //                                         Ecommerce</label>
 //                                 </div>
 //                                 <div >
-//                                     <input type="radio" class="btn-check  rounded-pill" name="category" id="option9" autocomplete="off" value={formData.category} onChange={handleChange}/>
-//                                     <label class="btn2" for="option9">
-//                                         <i class="fa-brands fa-soundcloud mx-2"></i>
+//                                     <input type="radio" className="btn-check  rounded-pill" name="category" id="option9" autocomplete="off" value={formData.category} onChange={handleChange}/>
+//                                     <label className="btn2" for="option9">
+//                                         <i className="fa-brands fa-soundcloud mx-2"></i>
 //                                         Saas</label>
 //                                 </div>
 //                                 <div>
-//                                     <input type="radio" class="btn-check  rounded-pill" name="category" id="option10" autocomplete="off" value={formData.category} onChange={handleChange}/>
-//                                     <label class="btn2" for="option10">
-//                                         <i class="fa-solid fa-users-line mx-2" ></i>
+//                                     <input type="radio" className="btn-check  rounded-pill" name="category" id="option10" autocomplete="off" value={formData.category} onChange={handleChange}/>
+//                                     <label className="btn2" for="option10">
+//                                         <i className="fa-solid fa-users-line mx-2" ></i>
 //                                         Community</label>
 //                                 </div>
 //                                 <div >
-//                                     <input type="radio" class="btn-check  rounded-pill" name="category" id="option11" autocomplete="off" value={formData.category} onChange={handleChange}/>
-//                                     <label class="btn2" for="option11">
-//                                         <i class="fa-solid fa-shop mx-2" ></i>
+//                                     <input type="radio" className="btn-check  rounded-pill" name="category" id="option11" autocomplete="off" value={formData.category} onChange={handleChange}/>
+//                                     <label className="btn2" for="option11">
+//                                         <i className="fa-solid fa-shop mx-2" ></i>
 //                                         Marketplace</label>
 //                                 </div>
 //                                 <div >
-//                                     <input type="radio" class="btn-check  rounded-pill" name="category" id="option12" autocomplete="off" value={formData.category} onChange={handleChange}/>
-//                                     <label class="btn2" for="option12">
-//                                         <i class="fa-solid fa-file-contract mx-2"></i>
+//                                     <input type="radio" className="btn-check  rounded-pill" name="category" id="option12" autocomplete="off" value={formData.category} onChange={handleChange}/>
+//                                     <label className="btn2" for="option12">
+//                                         <i className="fa-solid fa-file-contract mx-2"></i>
 //                                         Content</label>
 //                                 </div>
 //                                 <div >
-//                                     <input type="radio" class="btn-check  rounded-pill" name="category" id="option13" autocomplete="off" value={formData.category} onChange={handleChange}/>
-//                                     <label class="btn2" for="option13">
-//                                         <i class="fa-solid fa-cube mx-2"></i>
+//                                     <input type="radio" className="btn-check  rounded-pill" name="category" id="option13" autocomplete="off" value={formData.category} onChange={handleChange}/>
+//                                     <label className="btn2" for="option13">
+//                                         <i className="fa-solid fa-cube mx-2"></i>
 //                                         Service</label>
 //                                 </div>
 
@@ -225,27 +225,27 @@
 //                             </div>
 
 //                             <div>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
-//                                     <input type="text" class="form-control" name='businessName' id="exampleFormControlInput1" placeholder="Acqify" value={formData.businessName} onChange={handleChange} />
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Business/Asset Name</label>
+//                                     <input type="text" className="form-control" name='businessName' id="exampleFormControlInput1" placeholder="Acqify" value={formData.businessName} onChange={handleChange} />
 //                                 </div>
 //                             </div>
 //                             <div>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>When did your business begin operations?</label>
-//                                     <input type="date" class="form-control" name='startDate' id="exampleFormControlInput1" placeholder="Month/Year" value={formData.startDate} onChange={handleChange}/>
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>When did your business begin operations?</label>
+//                                     <input type="date" className="form-control" name='startDate' id="exampleFormControlInput1" placeholder="Month/Year" value={formData.startDate} onChange={handleChange}/>
 //                                 </div>
 //                             </div>
 //                             <div>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Where is your business located?</label>
-//                                     <input type="text" class="form-control" name='location' id="exampleFormControlInput1" placeholder="Acqify" value={formData.location} onChange={handleChange}/>
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Where is your business located?</label>
+//                                     <input type="text" className="form-control" name='location' id="exampleFormControlInput1" placeholder="Acqify" value={formData.location} onChange={handleChange}/>
 //                                 </div>
 //                             </div>
 //                             <div>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>What is your project name?</label>
-//                                     <select style={{ width: '60%', color: '#636363', fontSize: '16px' }} class="form-control form-select form-select-lg" name='projectName' aria-label="Large select example" value={formData.projectName} onChange={handleChange}>
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>What is your project name?</label>
+//                                     <select style={{ width: '60%', color: '#636363', fontSize: '16px' }} className="form-control form-select form-select-lg" name='projectName' aria-label="Large select example" value={formData.projectName} onChange={handleChange}>
 //                                         <option id="floatingInputValue" selected>Select project name</option>
 //                                         <option value="UI Design">UI Design</option>
 //                                         <option value="UI Development">UI  Development</option>
@@ -262,44 +262,44 @@
 //                             <div>
 //                                 <div className='d-flex flex-wrap'>
 //                                     <div>
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option8" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option8">Ecommerce</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option8" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option8">Ecommerce</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option9" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option9"> Saas</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option9" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option9"> Saas</label>
 //                                     </div>
 //                                     <div>
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option10" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option10">Community</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option10" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option10">Community</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option11" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option11">Marketplace</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option11" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option11">Marketplace</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option12" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option12">Content</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option12" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option12">Content</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option13" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option13">Service</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option13" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option13">Service</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option14" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option14">Wordpress</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option14" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option14">Wordpress</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option15" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option15">Add-on</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option15" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option15">Add-on</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option16" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option16">Chrome-extension</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option16" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option16">Chrome-extension</label>
 //                                     </div>
 //                                     <div >
-//                                         <input type="radio" class="btn-check  rounded-pill" name="otherCategories" id="option17" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
-//                                         <label class="btn2" for="option17">Crypto</label>
+//                                         <input type="radio" className="btn-check  rounded-pill" name="otherCategories" id="option17" autocomplete="off" value={formData.otherCategories} onChange={handleChange}/>
+//                                         <label className="btn2" for="option17">Crypto</label>
 //                                     </div>
 
 //                                 </div>
@@ -336,14 +336,14 @@
 //                             </div>
 
 //                             <div>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>Tagline</label>
-//                                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Acqify" name='tagline' value={formData.tagline} onChange={handleChange}/>
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>Tagline</label>
+//                                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Acqify" name='tagline' value={formData.tagline} onChange={handleChange}/>
 //                                 </div>
 //                             </div>
 //                             <div className='my-5'>
-//                                 <div class="mb-3 my-3">
-//                                     <label for="exampleFormControlInput1" class="form-label" style={{ color: '#636363' }}>When did your business begin operations?</label>
+//                                 <div className="mb-3 my-3">
+//                                     <label for="exampleFormControlInput1" className="form-label" style={{ color: '#636363' }}>When did your business begin operations?</label>
 //                                     <div className='d-flex justify-content-evenly'>
 //                                         <div className='divInput'>
 //                                             <div className='d-flex flex-column align-items-center justify-content-center'>
@@ -354,8 +354,8 @@
 
 //                                                 </div>
 //                                                 <div>
-//                                                     <input type="file" class="form-label" id="image_input" multiple accept='image/*' onChange={(e) => { inputLogo(e); handleFileUploadLogo(e); }}/>
-//                                                     <label for="image_input" class="form-label" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Logo</span></label>
+//                                                     <input type="file" className="form-label" id="image_input" multiple accept='image/*' onChange={(e) => { inputLogo(e); handleFileUploadLogo(e); }}/>
+//                                                     <label for="image_input" className="form-label" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Logo</span></label>
 //                                                 </div>
 //                                             </div>
 //                                         </div>
@@ -365,8 +365,8 @@
 //                                                     <img src={image} className="" id="img" alt="" />
 //                                                 </div>
 //                                                 <div>
-//                                                     <input type="file" class="form-label" id="image_input1" multiple accept='images/*' onChange={(e)=>{input(e);handleFileUploadListingImage(e);}} />
-//                                                     <label for="image_input1" class="form-label text-center" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Listing images</span></label>
+//                                                     <input type="file" className="form-label" id="image_input1" multiple accept='images/*' onChange={(e)=>{input(e);handleFileUploadListingImage(e);}} />
+//                                                     <label for="image_input1" className="form-label text-center" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Listing images</span></label>
 //                                                 </div>
 //                                             </div>
 //                                         </div>
@@ -375,9 +375,9 @@
 //                             </div>
 
 //                             <div>
-//                                 <div class="mb-3 my-5">
-//                                     <label for="exampleFormControlTextarea1" class="form-label" style={{ color: '#636363' }}>Description</label>
-//                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Tell about your project details' name='description' value={formData.description} onChange={handleChange}></textarea>
+//                                 <div className="mb-3 my-5">
+//                                     <label for="exampleFormControlTextarea1" className="form-label" style={{ color: '#636363' }}>Description</label>
+//                                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Tell about your project details' name='description' value={formData.description} onChange={handleChange}></textarea>
 //                                 </div>
 //                             </div>
 
@@ -385,27 +385,27 @@
 //                                 <div className="">
 //                                     <div className='d-flex justify-content-between'>
 //                                         <div style={{ width: '100%' }}>
-//                                             <label for="inputEmail4" class="form-label">Monthly Net Profit</label>
-//                                             <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control" name='montlyProfit'  placeholder="$000" value={formData.monthlyProfit} onChange={handleChange}/>
+//                                             <label for="inputEmail4" className="form-label">Monthly Net Profit</label>
+//                                             <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" className="form-control" name='montlyProfit'  placeholder="$000" value={formData.monthlyProfit} onChange={handleChange}/>
 //                                         </div>
 //                                         <div style={{ width: '100%' }}>
-//                                             <label for="inputEmail4" class="form-label">Monthly Revenue</label>
-//                                             <input style={{ height: '7vh', width: '100%' }} type="text" id="inputEmail4" class="form-control" name='monthlyRevenue' placeholder="$000" value={formData.monthlyRevenue} onChange={handleChange}/>
+//                                             <label for="inputEmail4" className="form-label">Monthly Revenue</label>
+//                                             <input style={{ height: '7vh', width: '100%' }} type="text" id="inputEmail4" className="form-control" name='monthlyRevenue' placeholder="$000" value={formData.monthlyRevenue} onChange={handleChange}/>
 //                                         </div>
 //                                     </div>
 //                                 </div>
 //                             </div>
 
 //                             <div>
-//                                 <label for="exampleFormControlTextarea1" class="form-label" style={{ color: '#636363' }}>Build trust with buyers by including files, screenshots or walkthroughs that clearly show evidence of stated financials</label>
+//                                 <label for="exampleFormControlTextarea1" className="form-label" style={{ color: '#636363' }}>Build trust with buyers by including files, screenshots or walkthroughs that clearly show evidence of stated financials</label>
 //                                 <div className='divInput-document'>
 //                                     <div className='d-flex flex-column align-items-center justify-content-center'>
 //                                         <div className="img-container" id="display_image">
 //                                             <img src={document} className="" id="img" alt="" />
 //                                         </div>
 //                                         <div>
-//                                             <input type="file" class="form-label" id="image_input2" multiple accept='.jpeg, .png,.jpg,.pdf' onChange={(e)=>{inputDocument(e);handleFileUploadDocumentProof(e);}} />
-//                                             <label for="image_input2" class="form-label text-center" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Documents ( s )</span></label>
+//                                             <input type="file" className="form-label" id="image_input2" multiple accept='.jpeg, .png,.jpg,.pdf' onChange={(e)=>{inputDocument(e);handleFileUploadDocumentProof(e);}} />
+//                                             <label for="image_input2" className="form-label text-center" style={{ color: '#636363' }}> <img src={upload} alt="" /><br /><br /><span >Upload Documents ( s )</span></label>
 //                                         </div>
 //                                     </div>
 //                                 </div>
@@ -421,53 +421,53 @@
 //                                     <div className='social-input d-flex'>
 
 //                                         <div className=''>
-//                                             <label for="inputEmail4" class="form-label">Instagram</label>
+//                                             <label for="inputEmail4" className="form-label">Instagram</label>
 //                                             <div className='d-flex'>
-//                                                 <div class="mb-3 my-3 form-floating" style={{ width: '60%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" name='InstagramHandle' placeholder="Instagram" value={formData.InstagramHandle} onChange={handleChange}/>
-//                                                     <label for="floatingInputValue"><i class="fa-brands fa-instagram" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 my-3 form-floating" style={{ width: '60%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" name='InstagramHandle' placeholder="Instagram" value={formData.InstagramHandle} onChange={handleChange}/>
+//                                                     <label for="floatingInputValue"><i className="fa-brands fa-instagram" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
-//                                                 <div class="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" name='InstagramHandleFollowers' placeholder="Users" value={formData.InstagramHandleFollowers} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" name='InstagramHandleFollowers' placeholder="Users" value={formData.InstagramHandleFollowers} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
 //                                             </div>
 
-//                                             <label for="inputEmail4" class="form-label">Facebook</label>
+//                                             <label for="inputEmail4" className="form-label">Facebook</label>
 //                                             <div className='d-flex'>
-//                                                 <div class="mb-3 my-3 form-floating" style={{ width: '60%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" name='FacebookHandle' placeholder="Facebook" value={formData.FacebookHandle} onChange={handleChange}/>
-//                                                     <label for="floatingInputValue"><i class="fa-brands fa-facebook" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 my-3 form-floating" style={{ width: '60%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" name='FacebookHandle' placeholder="Facebook" value={formData.FacebookHandle} onChange={handleChange}/>
+//                                                     <label for="floatingInputValue"><i className="fa-brands fa-facebook" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
-//                                                 <div class="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Users" name='FacebookHandleFollowers' value={formData.FacebookHandleFollowers} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" placeholder="Users" name='FacebookHandleFollowers' value={formData.FacebookHandleFollowers} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
 //                                             </div>
 //                                         </div>
 
 //                                         <div className=''>
-//                                             <label for="inputEmail4" class="form-label">Twitter</label>
+//                                             <label for="inputEmail4" className="form-label">Twitter</label>
 //                                             <div className='d-flex'>
-//                                                 <div class="mb-3 my-3 form-floating" style={{ width: '60%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Twitter" name='TwitterHandle' value={formData.TwitterHandle} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-brands fa-twitter" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 my-3 form-floating" style={{ width: '60%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" placeholder="Twitter" name='TwitterHandle' value={formData.TwitterHandle} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-brands fa-twitter" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
-//                                                 <div class="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Users" name='TwitterHandleFollowers' value={formData.TwitterHandleFollowers} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" placeholder="Users" name='TwitterHandleFollowers' value={formData.TwitterHandleFollowers} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
 //                                             </div>
 
-//                                             <label for="inputEmail4" class="form-label">Youtube</label>
+//                                             <label for="inputEmail4" className="form-label">Youtube</label>
 //                                             <div className='d-flex'>
-//                                                 <div class="mb-3 my-3 form-floating" style={{ width: '60%' }} >
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Youtube" name='YoutubeHandle' value={formData.YoutubeHandle} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-brands fa-youtube" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 my-3 form-floating" style={{ width: '60%' }} >
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" placeholder="Youtube" name='YoutubeHandle' value={formData.YoutubeHandle} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-brands fa-youtube" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
-//                                                 <div class="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
-//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" class="form-control mx-2" placeholder="Users" name='YoutubeHandleFollowers' value={formData.YoutubeHandleFollowers} onChange={handleChange} />
-//                                                     <label for="floatingInputValue"><i class="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
+//                                                 <div className="mb-3 mx-2 my-3 form-floating" style={{ width: '10%' }}>
+//                                                     <input style={{ width: '100%' }} type="email" id="floatingInputValue" className="form-control mx-2" placeholder="Users" name='YoutubeHandleFollowers' value={formData.YoutubeHandleFollowers} onChange={handleChange} />
+//                                                     <label for="floatingInputValue"><i className="fa-solid fa-users" style={{ color: " #005eff" }}></i></label>
 //                                                 </div>
 //                                             </div>
 //                                         </div>
@@ -508,12 +508,12 @@
 //                             <div className="">
 //                                 <div className='d-flex justify-content-between'>
 //                                     <div style={{ width: '100%' }}>
-//                                         <label for="inputEmail4" class="form-label">Max Price</label>
-//                                         <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" class="form-control" name='maxPrice' placeholder="$ less than $100k" value={formData.maxPrice} onChange={handleChange} />
+//                                         <label for="inputEmail4" className="form-label">Max Price</label>
+//                                         <input style={{ height: '7vh', width: '95%' }} type="text" id="inputEmail4" className="form-control" name='maxPrice' placeholder="$ less than $100k" value={formData.maxPrice} onChange={handleChange} />
 //                                     </div>
 //                                     <div style={{ width: '100%' }}>
-//                                         <label for="inputEmail4" class="form-label">Min Price</label>
-//                                         <input style={{ height: '7vh', width: '100%' }} type="text" id="inputEmail4" class="form-control" name='minPrice' placeholder="$ less than $100k" value={formData.minPrice} onChange={handleChange} />
+//                                         <label for="inputEmail4" className="form-label">Min Price</label>
+//                                         <input style={{ height: '7vh', width: '100%' }} type="text" id="inputEmail4" className="form-control" name='minPrice' placeholder="$ less than $100k" value={formData.minPrice} onChange={handleChange} />
 //                                     </div>
 //                                 </div>
 //                             </div>

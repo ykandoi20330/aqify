@@ -261,7 +261,7 @@ const MessageDash = () => {
                             className=""
                             style={{ color: "#636363", width: "100%" }}
                           >
-                            <div class="d-flex mb-3 my-3 ">
+                            <div className="d-flex mb-3 my-3 ">
                               <div className="d-flex justify-content-center align-items-center">
                                 <Link onClick={emojiDropdown}>
                                   <i
@@ -269,7 +269,7 @@ const MessageDash = () => {
                                       color: "#3247FF",
                                       fontSize: "1.5rem",
                                     }}
-                                    class="fa-solid fa-face-smile mx-2"
+                                    className="fa-solid fa-face-smile mx-2"
                                   ></i>
                                 </Link>
                               </div>
@@ -303,7 +303,7 @@ const MessageDash = () => {
                                 <>
                                   <i
                                     style={{ fontSize: "1.5rem" }}
-                                    class="messageSend fa-regular fa-paper-plane py-3"
+                                    className="messageSend fa-regular fa-paper-plane py-3"
                                   ></i>
                                 </>
                               </div>
@@ -406,7 +406,7 @@ const MessageDash = () => {
                               Hello, I am owner of {chat.message}...
                             </span>
                             <div className="mx-3">
-                              <span class="badge rounded-pill text-bg-danger">
+                              <span className="badge rounded-pill text-bg-danger">
                                 {i}+
                               </span>
                             </div>
@@ -420,7 +420,7 @@ const MessageDash = () => {
 
               <div>
                 <div className="" style={{ color: "#636363", width: "100%" }}>
-                  <div class="d-flex mb-3 my-3 ">
+                  <div className="d-flex mb-3 my-3 ">
                     <input
                       style={{
                         width: "100",
@@ -449,7 +449,7 @@ const MessageDash = () => {
                       <>
                         <i
                           style={{ fontSize: "1.5rem" }}
-                          class="messageSend fa-regular fa-paper-plane py-3"
+                          className="messageSend fa-regular fa-paper-plane py-3"
                         ></i>
                       </>
                     </div>

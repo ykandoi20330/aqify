@@ -169,17 +169,17 @@ const NotifactionDash = () => {
       {/* Re-Schedule A vidoe meet time and Date */}
       <section>
         <div
-          class="modal fade"
+          className="modal fade"
           id="ScheduleModalToggle"
           aria-hidden="true"
           aria-labelledby="exampleModalToggleLabel"
-          tabindex="-1"
+          tabIndex="-1"
         >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header" style={{ border: "none" }}>
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header" style={{ border: "none" }}>
                 <h1
-                  class="modal-title fs-5"
+                  className="modal-title fs-5"
                   id="exampleModalToggleLabel"
                   style={{ fontWeight: "700" }}
                 >
@@ -187,12 +187,12 @@ const NotifactionDash = () => {
                 </h1>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <form>
                   <label style={{ color: "#0005ff" }} for="birthdaytime">
                     Reschedule Meeting (date and time):
@@ -213,11 +213,11 @@ const NotifactionDash = () => {
                   />
                 </form>
               </div>
-              <div class="modal-footer" style={{ border: "none" }}>
+              <div className="modal-footer" style={{ border: "none" }}>
                 <button
                   onClick={handleSubmitTime}
                   type="submit"
-                  class="btn btn-primary py-1 px-3"
+                  className="btn btn-primary py-1 px-3"
                   data-bs-target="#exampleModalToggle2"
                   data-bs-toggle="modal"
                 >
@@ -228,27 +228,27 @@ const NotifactionDash = () => {
           </div>
         </div>
         <div
-          class="modal fade"
+          className="modal fade"
           id="exampleModalToggle2"
           aria-hidden="true"
           aria-labelledby="exampleModalToggleLabel2"
-          tabindex="-1"
+          tabIndex="-1"
         >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header" style={{ border: "none" }}>
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header" style={{ border: "none" }}>
+                <h1 className="modal-title fs-5" id="exampleModalToggleLabel2">
                   Re-Scheduling a Video Call
                 </h1>
-                {/* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+                {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Your Request for the Meeting has been re-scheduling with the
                 acquire!
               </div>
-              <div class="modal-footer" style={{ border: "none" }}>
+              <div className="modal-footer" style={{ border: "none" }}>
                 <button
-                  class="btn btn-primary px-3 py-1"
+                  className="btn btn-primary px-3 py-1"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                   onClick={handleReschedule}

@@ -212,11 +212,11 @@ const SellerDash = () => {
                   <label
                     style={{ color: "#636363" }}
                     for="logoInput"
-                    class="form-label"
+                    className="form-label"
                   >
                     {text}
                   </label>
-                  <div class="mb-3 my-2">
+                  <div className="mb-3 my-2">
                     <input
                       style={{ display: "none" }}
                       type="file"
@@ -233,10 +233,10 @@ const SellerDash = () => {
                         border: "1px solid #C0C0C0",
                       }}
                       for="logoInput"
-                      class="custom-file-upload d-flex justify-content-center align-items-center"
+                      className="custom-file-upload d-flex justify-content-center align-items-center"
                     >
                       <i
-                        class="fas fa-cloud-upload-alt mx-2"
+                        className="fas fa-cloud-upload-alt mx-2"
                         style={{ color: "#c0c0c0" }}
                       ></i>
                     </label>
@@ -250,17 +250,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Enter Your Name
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="ownerName"
                       id="exampleFormControlInput1"
                       placeholder="Acqify"
@@ -277,10 +277,10 @@ const SellerDash = () => {
                   <h3 className="card-h3 pb-2 my-4">Category</h3>
                 </div>
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="category"
                       id="efloatingInputValue"
                       placeholder="Acqify"
@@ -301,7 +301,7 @@ const SellerDash = () => {
                         fontSize: "18px",
                       }}
                       for="inputEmail4"
-                      class="form-label"
+                      className="form-label"
                     >
                       Tech Stack
                     </label>
@@ -310,7 +310,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail5"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack1"
                         placeholder="Ecommerce"
                         value={formData.techStack1}
@@ -321,7 +321,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail6"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack2"
                         placeholder="WooCommerce"
                         value={formData.techStack2}
@@ -331,7 +331,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail7"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack3"
                         placeholder="Saas"
                         value={formData.techStack3}
@@ -341,7 +341,7 @@ const SellerDash = () => {
                         style={{ height: "7vh", width: "48%" }}
                         type="text"
                         id="inputEmail8"
-                        class="form-control mx-1 my-2"
+                        className="form-control mx-1 my-2"
                         name="techStack4"
                         placeholder="Wordpress"
                         value={formData.techStack4}
@@ -404,10 +404,10 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-5">
+                  <div className="mb-3 my-5">
                     <label
                       for="exampleFormControlTextarea1"
-                      class="form-label"
+                      className="form-label"
                       style={{
                         color: "#636363",
                         fontWeight: "500",
@@ -417,7 +417,7 @@ const SellerDash = () => {
                       Short Bio
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Tell us about your self"
@@ -429,17 +429,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput2"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Prefered Deal Size?
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="dealSize"
                       id="exampleFormControlInput2"
                       placeholder="More than $5M"
@@ -450,17 +450,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Where is your business located?
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="location"
                       id="exampleFormControlInput1"
                       placeholder="Acqify"
@@ -471,17 +471,17 @@ const SellerDash = () => {
                 </div>
 
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Acquisition Type?
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="acquisitionType"
                       id="exampleFormControlInput1"
                       placeholder="Full"
@@ -492,14 +492,14 @@ const SellerDash = () => {
                 </div>
 
                 <div style={{ width: "100%" }}>
-                  <label for="inputEmail4" class="form-label">
+                  <label for="inputEmail4" className="form-label">
                     Valuation
                   </label>
                   <input
                     style={{ width: "100%" }}
                     type="text"
                     id="inputEmail4"
-                    class="form-control"
+                    className="form-control"
                     name="valuation"
                     placeholder="$150k"
                     value={formData.valuation}

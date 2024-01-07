@@ -15,7 +15,7 @@ const ProjectBuying = () => {
                         <span style={{ color: '#636363' }}>0 active purchases, Buy your first Project.</span>
                     </div>
                     <div>
-                        <Link to='/MarketDash2' className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} ><img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt="" />Marketplace</Link> {/**  <i class="fa-solid fa-arrow-trend-up mx-1" style={{color: "#ffffff"}}></i> */}
+                        <Link to='/MarketDash2' className='btn btn-primary rounded-pill' style={{ padding: '0.6rem 1.2rem' }} ><img style={{ width: '10%', marginRight: '10px' }} src={arrow} alt="" />Marketplace</Link> {/**  <i className="fa-solid fa-arrow-trend-up mx-1" style={{color: "#ffffff"}}></i> */}
                     </div>
                 </div>
 

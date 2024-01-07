@@ -145,42 +145,42 @@ const TransferService = () => {
         </div>
         <div className="info-card">
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               🤝
             </div>
             <h3 className="my-3"> 1. Provision of a Licensed Agreement</h3>
             <span>Both the parties show faith in a set of terms and conditions by signing an agreement.</span>
           </div>
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               💵
             </div>
             <h3 className="my-3">2. Safe and Encrypted Transactions</h3>
             <span className="largeSpan"> Once a deal is done, the buyer transfer the asset’s amount to the seller.</span>
           </div>
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               📦
             </div>
             <h3 className="my-3">3. Declaring the Asset</h3>
             <span className="largeSpan">The sellers transfer the legal rights to the buyers during the asset declaration.</span>
           </div>
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               👍
             </div>
             <h3 className="my-3">4. Official Asset Approval</h3>
             <span className="largeSpan"> The buyers cross-check the nitty grittys of the asset and submit their approval.</span>
           </div>
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               💸
             </div>
             <h3 className="my-3">5. Deal Accomplishment</h3>
             <span className="largeSpan">At this point, the deal has been successfully closed for both the ends.</span>
           </div>
           <div className="card-four align-items-center">
-            <div class="emojitextbig" style={{ fontSize: "4rem" }}>
+            <div className="emojitextbig" style={{ fontSize: "4rem" }}>
               🎉
             </div>
             <h3 className="my-3">6. Success</h3>
@@ -203,14 +203,14 @@ const TransferService = () => {
                   data-bs-target="#carouselExampleAutoplaying"
                   data-bs-slide="next"
                 >
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <i className="fa-solid fa-arrow-left"></i>
                 </Link>
                 <Link
                   className="six-arrow"
                   data-bs-target="#carouselExampleAutoplaying"
                   data-bs-slide="prev"
                 >
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -221,13 +221,13 @@ const TransferService = () => {
 
           <div
             id="carouselExampleAutoplaying"
-            class="carousel slide"
+            className="carousel slide"
             data-bs-ride="carousel"
           >
             {" "}
             {/*data-bs-touch="false" */}
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
                 <div className="six-card-main d-flex justify-content-evenly my-4">
                   <div className="six-card">
                     <span className="six-card-content">
@@ -287,7 +287,7 @@ const TransferService = () => {
                 </div>
               </div>
 
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <div className="six-card-main d-flex justify-content-evenly my-4">
                   <div className="six-card">
                     <span className="six-card-content">
@@ -358,11 +358,11 @@ const TransferService = () => {
               FAQ →{" "}
             </h2>
           </div>
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+          <div className="accordion accordion-flush" id="accordionFlushExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne"
@@ -375,10 +375,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseOne"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span>
                     Transfer by Acqify helps users securely close their deals by providing a
                     service to ensure a smooth ownership transition.
@@ -387,10 +387,10 @@ const TransferService = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseTwo"
@@ -403,10 +403,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseTwo"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span className="my-3">
                     Only Acqify buyers or sellers can use the transfer service. The service is designed to help both parties in
                     the transaction to complete the deal securely and fast.
@@ -415,10 +415,10 @@ const TransferService = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseThree"
@@ -431,10 +431,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseThree"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span className="my-3">
                     We conduct basic due diligence on the startups listed on our marketplace.
                     The acquirers review basic metrics like revenue, traffic, and other relevant data points to ensure that
@@ -444,10 +444,10 @@ const TransferService = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseFour"
@@ -460,10 +460,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseFour"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span className="my-3">
                     After the agreement is signed, we handle payments and the transfer of assets.
                     We also provide 24/7 email support to help the buyer and
@@ -473,10 +473,10 @@ const TransferService = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseFive"
@@ -490,10 +490,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseFive"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span className="my-3">
                     We work with contract lawyers and financiers to draft agreements tailored to each transaction's specific needs.
                     These agreements are not generic templates sourced from the internet.
@@ -502,10 +502,10 @@ const TransferService = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseSix"
@@ -518,10 +518,10 @@ const TransferService = () => {
               </h2>
               <div
                 id="flush-collapseSix"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   <span className="my-3">
                     Once we receive the payment from the buyer,
                     we notify the seller to send all assets upon agreement to the buyer.
@@ -553,10 +553,10 @@ const TransferService = () => {
               style={{ width: "100%" }}
             >
               <div>
-                <div class=" mb-3 SignIn-input">
+                <div className=" mb-3 SignIn-input">
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="floatingInput"
                     value={formData.startupName}
                     onChange={handleChange}
@@ -566,10 +566,10 @@ const TransferService = () => {
                 </div>
               </div>
               <div>
-                <div class=" mb-3 SignIn-input">
+                <div className=" mb-3 SignIn-input">
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="floatingInput"
                     placeholder="Owner Full Name"
                     value={formData.ownerName}
@@ -580,10 +580,10 @@ const TransferService = () => {
               </div>
 
               <div>
-                <div class=" mb-3 SignIn-input">
+                <div className=" mb-3 SignIn-input">
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     id="floatingInput"
                     value={formData.ownerEmail}
                     onChange={handleChange}
@@ -594,10 +594,10 @@ const TransferService = () => {
               </div>
 
               <div>
-                <div class=" mb-3 SignIn-input">
+                <div className=" mb-3 SignIn-input">
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     value={formData.acquirerName}
                     onChange={handleChange}
                     id="floatingInput"
@@ -608,10 +608,10 @@ const TransferService = () => {
               </div>
 
               <div>
-                <div class=" mb-3 SignIn-input">
+                <div className=" mb-3 SignIn-input">
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     id="floatingInput"
                     value={formData.acquirerEmail}
                     onChange={handleChange}
@@ -629,7 +629,7 @@ const TransferService = () => {
                   <div>
                     <input
                       type="radio"
-                      class="btn-check  rounded-pill"
+                      className="btn-check  rounded-pill"
                       name="payerType"
                       id="option11"
                       autocomplete="off"
@@ -638,7 +638,7 @@ const TransferService = () => {
                       checked={formData.payerType === "owner"}
                     />
                     <label
-                      class="btn1"
+                      className="btn1"
                       style={{
                         padding: "0.5rem",
                         margin: "0.3rem 0.7rem 0 0",
@@ -646,7 +646,7 @@ const TransferService = () => {
                       }}
                       for="option11"
                     >
-                      <i class="fa-solid fa-circle-check mx-2"></i>
+                      <i className="fa-solid fa-circle-check mx-2"></i>
                       Owner ( Seller )
                     </label>
                   </div>
@@ -654,7 +654,7 @@ const TransferService = () => {
                   <div>
                     <input
                       type="radio"
-                      class="btn-check  rounded-pill"
+                      className="btn-check  rounded-pill"
                       name="payerType"
                       onChange={handleChange}
                       checked={formData.payerType === "acquirer"}
@@ -663,7 +663,7 @@ const TransferService = () => {
                       value="acquirer"
                     />
                     <label
-                      class="btn1"
+                      className="btn1"
                       style={{
                         padding: "0.5rem",
                         margin: "0.3rem 0.7rem 0 0",
@@ -671,14 +671,14 @@ const TransferService = () => {
                       }}
                       for="option12"
                     >
-                      <i class="fa-solid fa-circle-check mx-2"></i>
+                      <i className="fa-solid fa-circle-check mx-2"></i>
                       Acquirer (buyer)
                     </label>
                   </div>
                   <div>
                     <input
                       type="radio"
-                      class="btn-check  rounded-pill"
+                      className="btn-check  rounded-pill"
                       name="payerType"
                       value="50/50"
                       onChange={handleChange}
@@ -687,7 +687,7 @@ const TransferService = () => {
                       autocomplete="off"
                     />
                     <label
-                      class="btn1"
+                      className="btn1"
                       style={{
                         padding: "0.5rem",
                         margin: "0.3rem 0.7rem 0 0",
@@ -695,7 +695,7 @@ const TransferService = () => {
                       }}
                       for="option13"
                     >
-                      <i class="fa-solid fa-circle-check mx-2"></i>
+                      <i className="fa-solid fa-circle-check mx-2"></i>
                       50/50
                     </label>
                   </div>

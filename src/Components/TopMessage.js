@@ -69,10 +69,10 @@ const TopMessage = () => {
                 </Link>
               </div>
               <div className="mx-1">
-                <div class="dropdown">
+                <div className="dropdown">
                   <Link
                     to="#"
-                    class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                    className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
@@ -80,12 +80,12 @@ const TopMessage = () => {
                   </Link>
                   <ul
                     style={{ border: "none" }}
-                    class="dropdown-menu dropdown-menu-lg-end shadow"
+                    className="dropdown-menu dropdown-menu-lg-end shadow"
                   >
                     <li>
-                      <Link class="dropdown-item" to="/MainDashboard/proflie">
+                      <Link className="dropdown-item" to="/MainDashboard/proflie">
                         <i
-                          class="fa-solid fa-user mx-2"
+                          className="fa-solid fa-user mx-2"
                           style={{ color: "#005eff" }}
                         ></i>
                         My Profile

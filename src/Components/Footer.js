@@ -14,7 +14,7 @@ const Footer = () => {
         <>
             <section className='footer-section'>
                 <div className='d-grid align-content-between align-items-center'>
-                    <div style={{width:'95%',position:"relative"}} className='footer-main d-flex justify-content-between'>
+                    <div style={{width:'95%',position:"relative", padding:'0 0 2rem 0'}} className='footer-main d-flex justify-content-between'>
                         <div className="footer-main col-5">
                             <Link to="/"><img style={{ width: '35%', marginRight:'1rem' }} src={Logo} alt="" /></Link>
                             <span style={{ color: '#C0C0C0',fontSize:'20px' }}>- Unleashing Full Acquisitions Potential</span>
@@ -63,10 +63,10 @@ const Footer = () => {
                                     <li><Link to="/"><img className='socailLogo' src={socail3} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail4} alt="" /></Link></li>
                                     <li><Link to="/"><img className='socailLogo' src={socail5} alt="" /></Link></li> */}
-                                    <li><i class="fa-brands fa-facebook mx-3 socialIcon" ></i></li>
-                                    <li><i class="fa-brands fa-instagram mx-3 socialIcon" ></i></li>
-                                    <li><i class="fa-brands fa-twitter mx-3 socialIcon" ></i></li>
-                                    <li><i class="fa-brands fa-linkedin mx-3 socialIcon" ></i></li>
+                                    <li><i className="fa-brands fa-facebook mx-3 socialIcon" ></i></li>
+                                    <li><i className="fa-brands fa-instagram mx-3 socialIcon" ></i></li>
+                                    <li><i className="fa-brands fa-twitter mx-3 socialIcon" ></i></li>
+                                    <li><i className="fa-brands fa-linkedin mx-3 socialIcon" ></i></li>
                                 </ul>
                             </div>
                         </div>

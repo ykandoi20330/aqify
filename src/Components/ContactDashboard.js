@@ -94,17 +94,17 @@ const ContactDashboard = () => {
                 Contact us
               </h1>
             </div>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlInput1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your full name
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 name="name"
                 id="exampleFormControlInput1"
                 placeholder="Your Full Name"
@@ -112,17 +112,17 @@ const ContactDashboard = () => {
                 value={formData.name}
               />
             </div>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlInput1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your email address
               </label>
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 name="email"
                 id="exampleFormControlInput1"
                 placeholder="Your Email Address"
@@ -130,16 +130,16 @@ const ContactDashboard = () => {
                 value={formData.email}
               />
             </div>
-            <div class="mb-3 my-3">
+            <div className="mb-3 my-3">
               <label
                 for="exampleFormControlTextarea1"
-                class="form-label"
+                className="form-label"
                 style={{ color: "#636363" }}
               >
                 Please enter your message below
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 name="message"
                 rows="3"
@@ -150,7 +150,7 @@ const ContactDashboard = () => {
               ></textarea>
             </div>
             <button
-              class="contact-btn btn btn-primary my-3"
+              className="contact-btn btn btn-primary my-3"
               type="submit"
               style={{ width: "30%", padding: "1.5rem 2.5rem" }}
             >

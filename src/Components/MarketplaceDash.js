@@ -94,19 +94,19 @@ const MarketplaceDash = (props) => {
                     </div>
                 </div>
                 <div className='AddButton ' style={{ width: '20%' }}>
-                    <Link class="btn btn-primary mx-2" to="/seller" >Add List<i class="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link> {/* type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" */}
+                    <Link className="btn btn-primary mx-2" to="/seller" >Add List<i className="fa-solid fa-circle-plus mx-2" style={{ color: "#fff" }}></i></Link> {/* type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" */}
                 </div>
             </section>
 
             {/** */}
             <section style={{ background: '#EEF0FE', cursor:'pointer'}}>
                 <div className='first-line mb-3 d-flex justify-content-center align-items-center'>
-                    <div class="mb-3 my-3 form-floating">
-                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" class="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} />
+                    <div className="mb-3 my-3 form-floating">
+                        <input style={{ width: '41vw', background: '#fff' }} type="email" id="floatingInputValue" className="Search-from form-control mx-2" placeholder="Search" value={searchTerm} onChange={handleSearch} />
                         <label for="floatingInputValue"><img src={search} alt="" /></label>
                     </div>
-                    <div class="form-floating" >
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example"
+                    <div className="form-floating" >
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} className="form-control form-select form-select-lg mx-2" aria-label="Large select example"
                             onChange={handlePrice}>
                             <option id="floatingInputValue" selected>Price</option>
                             {card.map((price) => {
@@ -117,8 +117,8 @@ const MarketplaceDash = (props) => {
                         </select>
                         <label for="floatingInputValue"><img src={doller} alt="" /></label>
                     </div>
-                    <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mx-2" aria-label="Large select example"
+                    <div className="form-floating">
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} className="form-control form-select form-select-lg mx-2" aria-label="Large select example"
                             onChange={handleTech} >
                             <option id="floatingInputValue" selected>Tech Stack</option>
                             {card.map((item) => {
@@ -127,17 +127,17 @@ const MarketplaceDash = (props) => {
                                 )
                             })}
                         </select>
-                        <label for="floatingInputValue"><i class="fa-solid fa-screwdriver-wrench" style={{ color: "#005eff", marginRight: '5px' }}></i></label>
+                        <label for="floatingInputValue"><i className="fa-solid fa-screwdriver-wrench" style={{ color: "#005eff", marginRight: '5px' }}></i></label>
                     </div>
                 </div>
 
                 <div className="second-line d-flex justify-content-center" style={{cursor:'pointer'}}>
-                    <div class="form-floating">
-                        <div style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select mb-3 mx-2" onClick={toggleDropdownCategory}>Categories</div>
+                    <div className="form-floating">
+                        <div style={{ width: '20vw', color: '#3247ff', background: '#fff' }} className="form-control form-select mb-3 mx-2" onClick={toggleDropdownCategory}>Categories</div>
                         <label for="floatingInputValue"><img src={pie} alt="" /></label>
                     </div>
-                    <div class="form-floating">
-                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} class="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example"
+                    <div className="form-floating">
+                        <select style={{ width: '20vw', color: '#3247ff', background: '#fff' }} className="form-control form-select form-select-lg mb-3 mx-2" aria-label="Large select example"
                             onChange={onFilterLocation} >
                             <option id="floatingInputValue" selected>Company Location</option>
                             {card.map((item) => {
@@ -148,13 +148,13 @@ const MarketplaceDash = (props) => {
                         </select>
                         <label for="floatingInputValue"><img src={location} alt="" /></label>
                     </div>
-                    <div class="form-floating">
-                        <div class="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }} onClick={toggleDropdown}>More Filters</div>
+                    <div className="form-floating">
+                        <div className="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }} onClick={toggleDropdown}>More Filters</div>
                         <label for="floatingInputValue"><img src={filter} alt="" /></label>
                     </div>
-                    <div class="form-floating">
-                        <div class="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }} onClick={toggleDropdownMore}>Sort</div>
-                        <label for="floatingInputValue"><i class="fa-solid fa-arrow-down-wide-short" style={{ color: '#3247ff' }}></i></label>
+                    <div className="form-floating">
+                        <div className="form-control form-select mb-3 mx-2" style={{ width: '20vw', color: '#3247ff', background: '#fff' }} onClick={toggleDropdownMore}>Sort</div>
+                        <label for="floatingInputValue"><i className="fa-solid fa-arrow-down-wide-short" style={{ color: '#3247ff' }}></i></label>
                     </div>
                 </div>
             </section>
@@ -170,7 +170,7 @@ const MarketplaceDash = (props) => {
                             {card.map((cate, index) => {
                                 return (
                                     <>
-                                        <input type="radio" class="btn-check rounded-pill" name="options-base" id={`option${index}`} autocomplete="off" onChange={handlecategory} value={cate.category} />
+                                        <input type="radio" className="btn-check rounded-pill" name="options-base" id={`option${index}`} autocomplete="off" onChange={handlecategory} value={cate.category} />
                                         <label className="btnFilter" for={`option${index}`}>
                                             {cate.category}
                                         </label>
@@ -189,20 +189,20 @@ const MarketplaceDash = (props) => {
 
                         <div className="more-filters d-flex justify-content-between my-3">
                             <div className="">
-                                <label for="inputEmail4" class="form-label">Community Size</label>
-                                <input style={{ height: '7vh' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$ 000" />
+                                <label for="inputEmail4" className="form-label">Community Size</label>
+                                <input style={{ height: '7vh' }} type="text" id="inputEmail4" className="form-control mx-2" placeholder="$ 000" />
                             </div>
                             <div className="offersRecieved" style={{ width: '45%' }}>
-                                <label for="inputEmail4" class="form-label">Offers Recieved</label>
+                                <label for="inputEmail4" className="form-label">Offers Recieved</label>
                                 <div className='d-flex'>
                                     <div>
-                                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option1" placeholder="Yes" autocomplete="off" value="" />
-                                        <label class="btn1" style={{ margin: '0.3rem 0.7rem 0 0', padding: '10px 40px', background: "#EEF0FE" }} for="option1">
+                                        <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option1" placeholder="Yes" autocomplete="off" value="" />
+                                        <label className="btn1" style={{ margin: '0.3rem 0.7rem 0 0', padding: '10px 40px', background: "#EEF0FE" }} for="option1">
                                             Yes</label>
                                     </div>
                                     <div>
-                                        <input type="radio" class="btn-check  rounded-pill" name="options-base" id="option2" placeholder="No" autocomplete="off" value="" />
-                                        <label class="btn1" style={{ padding: "10px 40px", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option2">
+                                        <input type="radio" className="btn-check  rounded-pill" name="options-base" id="option2" placeholder="No" autocomplete="off" value="" />
+                                        <label className="btn1" style={{ padding: "10px 40px", margin: '0.3rem 0.7rem 0 0', background: "#EEF0FE" }} for="option2">
                                             No</label>
                                     </div>
                                 </div>
@@ -210,18 +210,18 @@ const MarketplaceDash = (props) => {
                         </div>
                         <div className='my-3'>
                             <div className="">
-                                <label for="inputEmail4" class="form-label">Monthly Net Profit</label>
+                                <label for="inputEmail4" className="form-label">Monthly Net Profit</label>
                                 <div className='d-flex'>
-                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$20000" />
-                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" class="form-control mx-2" placeholder="$500000" />
+                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" className="form-control mx-2" placeholder="$20000" />
+                                    <input style={{ height: '7vh', width: '60%' }} type="text" id="inputEmail4" className="form-control mx-2" placeholder="$500000" />
                                 </div>
                             </div>
                         </div>
 
                         <div className='my-3'>
                             <div>
-                                <label style={{ color: "#636363" }} for="customRange1" class="form-label">Project Age ( premium listing )</label>
-                                <input type="range" min="1" max='10' value={number} onChange={(e) => setNumber(e.target.value)} class="form-range" id="customRange1" />
+                                <label style={{ color: "#636363" }} for="customRange1" className="form-label">Project Age ( premium listing )</label>
+                                <input type="range" min="1" max='10' value={number} onChange={(e) => setNumber(e.target.value)} className="form-range" id="customRange1" />
                                 <div className='d-flex justify-content-between'>
                                     <span>
                                         <span className='number'>{number} Years</span>
@@ -243,32 +243,32 @@ const MarketplaceDash = (props) => {
                         </div>
                         <div className='d-flex my-3'>
                             <div className='d-flex flex-column'>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                                    <label class="form-check-label" for="inlineCheckbox1">Most Favorited</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                    <label className="form-check-label" for="inlineCheckbox1">Most Favorited</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">Newest</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                    <label className="form-check-label" for="inlineCheckbox2">Newest</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3" />
-                                    <label class="form-check-label" for="inlineCheckbox3">Most Viewed</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3" />
+                                    <label className="form-check-label" for="inlineCheckbox3">Most Viewed</label>
                                 </div>
                             </div>
 
                             <div className='d-flex flex-column'>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" />
-                                    <label class="form-check-label" for="inlineCheckbox4">Sold</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" />
+                                    <label className="form-check-label" for="inlineCheckbox4">Sold</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5" />
-                                    <label class="form-check-label" for="inlineCheckbox5">Premium</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5" />
+                                    <label className="form-check-label" for="inlineCheckbox5">Premium</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value={lowTerm} onChange={handleLowest} />
-                                    <label class="form-check-label" for="inlineCheckbox6">Price (low to high)</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value={lowTerm} onChange={handleLowest} />
+                                    <label className="form-check-label" for="inlineCheckbox6">Price (low to high)</label>
                                 </div>
                             </div>
                         </div>

@@ -109,17 +109,17 @@ const ProofOfFund = () => {
 
               <div>
                 <div>
-                  <div class="mb-3 my-3">
+                  <div className="mb-3 my-3">
                     <label
                       for="exampleFormControlInput1"
-                      class="form-label"
+                      className="form-label"
                       style={{ color: "#636363" }}
                     >
                       Business/Asset Name
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlInput1"
                       name="businessName"
                       value={formData.businessName}
@@ -131,17 +131,17 @@ const ProofOfFund = () => {
               </div>
 
               <div>
-                <div class="mb-3 my-3">
+                <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     What is your project name?
                   </label>
                   <select
                     style={{ width: "80%", color: "#636363", fontSize: "16px" }}
-                    class="form-control form-select form-select-lg"
+                    className="form-control form-select form-select-lg"
                     aria-label="Large select example"
                     name="projectName"
                     value={formData.projectName}
@@ -160,17 +160,17 @@ const ProofOfFund = () => {
               </div>
 
               <div>
-                <div class="mb-3 my-3">
+                <div className="mb-3 my-3">
                   <label
                     for="exampleFormControlInput1"
-                    class="form-label"
+                    className="form-label"
                     style={{ color: "#636363" }}
                   >
                     Where is your business located?
                   </label>
                   <select
                     style={{ width: "80%", color: "#636363", fontSize: "16px" }}
-                    class="form-control form-select form-select-lg"
+                    className="form-control form-select form-select-lg"
                     aria-label="Large select example"
                     name="location"
                     value={formData.location}
@@ -243,7 +243,7 @@ const ProofOfFund = () => {
                       <div>
                         <input
                           type="file"
-                          class="form-label"
+                          className="form-label"
                           id="image_input2"
                           multiple
                           name="document"
@@ -251,7 +251,7 @@ const ProofOfFund = () => {
                         />
                         <label
                           for="image_input2"
-                          class="form-label text-center"
+                          className="form-label text-center"
                           style={{ color: "#636363" }}
                         >
                           {" "}

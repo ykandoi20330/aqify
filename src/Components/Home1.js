@@ -260,8 +260,8 @@ const Home1 = () => {
                         <div>
                             <h1 className='six-h1'>Stories From Founders And Buyers</h1>
                             <div className='my-5'>
-                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></Link>
-                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i className="fa-solid fa-arrow-left"></i></Link>
+                                <Link className='six-arrow' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i className="fa-solid fa-arrow-right"></i></Link>
                             </div>
                         </div>
                         <div>
@@ -269,9 +269,9 @@ const Home1 = () => {
                         </div>
                     </div>
 
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
+                    <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel"> {/*data-bs-touch="false" */}
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
 
                                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">
@@ -298,7 +298,7 @@ const Home1 = () => {
 
                             </div>
 
-                            <div class="carousel-item">
+                            <div className="carousel-item">
 
                                 <div className='six-card-main d-flex justify-content-evenly my-4'>
                                     <div className="six-card">
@@ -356,7 +356,7 @@ const Home1 = () => {
                         <div className='my-4'>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
-                                <span style={{ color: '#636363' }}>—-<i class="fa-solid fa-chevron-right"></i> Success Fee/ Commission</span>
+                                <span style={{ color: '#636363' }}>—-<i className="fa-solid fa-chevron-right"></i> Success Fee/ Commission</span>
                             </div>
                             <div className='my-3'>
                                 <img style={{ marginRight: '1rem' }} width={40} src={trueImg} alt="" />
@@ -418,27 +418,27 @@ const Home1 = () => {
 
             <section className='d-flex align-items-center justify-content-center' style={{ padding: '50px 0', background: '#EEF0FE' }}>
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Join Premium Now <i class="fa-solid fa-chevron-right" style={{ color: "#ffffff" }}></i>
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Join Premium Now <i className="fa-solid fa-chevron-right" style={{ color: "#ffffff" }}></i>
                 </button>
 
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content" style={{ borderRadius: '20px' }}>
-                            <div class="modal-header" style={{ border: 'none' }}>
+                <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content" style={{ borderRadius: '20px' }}>
+                            <div className="modal-header" style={{ border: 'none' }}>
                                 <div>
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style={{ fontWeight: '700' }}>Pricing plans</h1>
+                                    <h1 className="modal-title fs-5" id="staticBackdropLabel" style={{ fontWeight: '700' }}>Pricing plans</h1>
                                     <span>Choose a plan that's right for you.</span>
                                 </div>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                 <div className='' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
-                                    <div class="form-check d-flex justify-content-between">
+                                    <div className="form-check d-flex justify-content-between">
                                         <div>
-                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
-                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault1">
+                                            <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
+                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} className="form-check-label" for="flexRadioDefault1">
                                                 Premium Annually
                                             </label>
                                             <br />
@@ -459,10 +459,10 @@ const Home1 = () => {
                                     </div>
                                 </div>
                                 <div className='my-3' style={{ border: '1px solid lightgray', borderRadius: '20px', padding: '2rem' }}>
-                                    <div class="form-check d-flex justify-content-between">
+                                    <div className="form-check d-flex justify-content-between">
                                         <div>
-                                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
-                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} class="form-check-label" for="flexRadioDefault2">
+                                            <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
+                                            <label style={{ fontWeight: '800', fontSize: '1rem' }} className="form-check-label" for="flexRadioDefault2">
                                                 Pro Annually
                                             </label>
                                             <br />
@@ -484,8 +484,8 @@ const Home1 = () => {
 
                                 </div>
                             </div>
-                            <div class="modal-footer" style={{ border: 'none' }}>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
+                            <div className="modal-footer" style={{ border: 'none' }}>
+                                <button type="button" className="btn btn-primary rounded-pill py-2 px-5">Confirm</button>
                             </div>
                         </div>
                     </div>
