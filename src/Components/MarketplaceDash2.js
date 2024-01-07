@@ -54,6 +54,7 @@ const MarketplaceDash2 = () => {
   //////MarketPlaceDetail
   const [text, setText] = useState("Share")
   const [username, setUsername] = useState("");
+  const [pic, setPic] = useState("");
 
   // const [rating, setRating] = useState(null)
   // const [hover, setHover] = useState(null)
@@ -112,6 +113,7 @@ const MarketplaceDash2 = () => {
             }
           );
           setUsername(response.data.user.userName);
+          setPic(response.data.user.pic);
         } catch (error) {
           console.error(error);
         }
@@ -130,6 +132,7 @@ const MarketplaceDash2 = () => {
         {
           feedback,
           username,
+          pic,
         }
       );
       console.log(response.data);

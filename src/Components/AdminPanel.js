@@ -49,6 +49,9 @@ const AdminPanel = () => {
                     console.error(error);
                 }
             }
+            else {
+                navigate("/");
+            }
         };
 
         getUsername();
