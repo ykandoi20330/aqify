@@ -138,7 +138,7 @@ const AdminPanel = () => {
                                         </li>
                                         <li className="nav-item">
                                             <Link
-                                                to="#"
+                                                to="/AdminPanel/AdminApproveList"
                                                 className="nav-link1 text-white"
                                                 aria-current="page"
                                             >
@@ -152,7 +152,7 @@ const AdminPanel = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                to="#"
+                                                to="/AdminPanel/AdminChatHistoy"
                                                 className="nav-link1 text-white"
                                             >
                                                 <img className="dashIcon"
@@ -165,7 +165,7 @@ const AdminPanel = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                to="#"
+                                                to="/AdminPanel/AdminFeedback"
                                                 className="nav-link1 text-white"
                                             >
                                                 <img className="dashIcon"

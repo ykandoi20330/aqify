@@ -51,6 +51,9 @@ import TransferService from './Components/TransferService'
 import Agora from './Components/Agora';
 import AdminPanelListing from './Components/AdminPanelListing';
 import AdminPanel from './Components/AdminPanel';
+import AdminApproveList from './Components/AdminApproveList';
+import AdminChatHistoy from './Components/AdminChatHistoy';
+import AdminFeedback from './Components/AdminFeedback';
 
 function App() {
   return (
@@ -84,6 +87,9 @@ function App() {
           <Route path="/call/:id" element={<Agora />} />
           <Route path="/AdminPanel" element={<AdminPanel />}>
             <Route path="AdminPanelListing" element={<AdminPanelListing />} />
+            <Route path="AdminApproveList" element={<AdminApproveList />} />
+            <Route path="AdminChatHistoy" element={<AdminChatHistoy />} />
+            <Route path="AdminFeedback" element={<AdminFeedback />} />
           </Route>
           <Route path="/MainDashboard" element={<MainDashboard />} >
             <Route path="proflie" element={<DashboardProfile />} />
