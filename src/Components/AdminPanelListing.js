@@ -27,6 +27,28 @@ const AdminPanelListing = () => {
         }
     }
 
+    const handleDeny = async (id) => {
+        try {
+            const response = await axios.post(
+                `${ENV.BACKEND_URL}/business/deny`, { id: id });
+            console.log(response.data.business);
+            getCard();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+const handleApprove = async (id) => {
+        try {
+            const response = await axios.post(
+                `${ENV.BACKEND_URL}/business/approve`, { id: id });
+            console.log(response.data.business);
+            getCard();
+        } catch (error) {
+            console.error(error);
+        }
+    }       
+
     const columns = [
         {
             name: "Project Name",
@@ -59,11 +81,11 @@ const AdminPanelListing = () => {
         },
         {
             name: 'Approve Listing',
-            cell: row => <button className='btn btn-primary py-1 px-3 rounded-pill' onClick={() => alert(row.projectName)}>Approve</button>
+            cell: row => <button className='btn btn-primary py-1 px-3 rounded-pill' onClick={() => handleApprove(row._id)}>Approve</button>
         },
         {
             name: 'Cancel Listing',
-            cell: row => <button className='btn btn-danger py-1 px-3 rounded-pill' onClick={() => alert(row.projectName)}>Deny</button>
+            cell: row => <button className='btn btn-danger py-1 px-3 rounded-pill' onClick={() => handleDeny(row._id)}>Deny</button>
         },
     ]
 

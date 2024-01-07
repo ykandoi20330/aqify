@@ -269,7 +269,7 @@ const MarketplaceDash2 = () => {
   const getCard = async () => {
     try {
       const response = await axios.get(
-        `${ENV.BACKEND_URL}/business/getbusiness`);
+        `${ENV.BACKEND_URL}/business/getApprovedBusiness`);
       console.log(response.data.business);
       setCard(response.data.business);
       setFilterSearch(response.data.business)

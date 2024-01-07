@@ -26,6 +26,7 @@ const AdminPanel = () => {
     };
 
     const [role, setRole] = useState("");
+    const[admin,setAdmin]=useState(false);
     const [navCollapse, setNavCollapse] = useState(false);
 
     useEffect(() => {
@@ -39,6 +40,10 @@ const AdminPanel = () => {
                         headers: { "x-auth-token": id },
                     });
                     setRole(response.data.user.role);
+                    setAdmin(response.data.user.admin);
+                    if (!response.data.user.admin) {
+                        navigate("/");
+                    }
                 } catch (error) {
                     console.error(error);
                 }
@@ -47,6 +52,7 @@ const AdminPanel = () => {
 
         getUsername();
     }, [setRole]);
+
 
     return (
         <>

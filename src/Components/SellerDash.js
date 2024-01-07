@@ -444,13 +444,13 @@ const SellerDash = () => {
                   </div>
                 </div>
 
-                <div
+                {/* <div
                   className="d-flex justify-content-between"
                   style={{ margin: "1rem 0 0rem 0" }}
                 >
                   <h3 className="card-h3 pb-2 my-4">Category</h3>
-                </div>
-
+                </div> */}
+{/* 
                 <div>
                   <div className="d-flex flex-wrap">
                     <div>
@@ -550,8 +550,29 @@ const SellerDash = () => {
                       </label>
                     </div>
                   </div>
+                </div> */}
+                <div>
+                  <div className="mb-3 my-5">
+                    <label
+                      for="exampleFormControlInput1"
+                      className="form-label"
+                      style={{ color: "#636363" }}
+                    >
+                      Category
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="category"
+                      id="exampleFormControlInput1"
+                      placeholder="Ecommerce"
+                      value={formData.category}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
 
+                
                 <div>
                   <div className="mb-3 my-5">
                     <label
