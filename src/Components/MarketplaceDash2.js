@@ -794,6 +794,12 @@ const MarketplaceDash2 = () => {
                           <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Video Call</span>
                         </div>
+                          {/* <div onClick={() => {
+                            navigate(`/call/${item.ownerId}`);
+                          }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
+                            <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
+                            <span className='mx-2'>Video Call</span>
+                          </div> */}
                         <Link data-bs-target="#ScheduleModalToggle" data-bs-toggle="modal" className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                           <i className="fa-solid fa-calendar-days" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Schedule Video Call</span>
