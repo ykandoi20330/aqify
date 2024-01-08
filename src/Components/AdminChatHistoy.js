@@ -1,4 +1,4 @@
-import React, { useEffect, useState , useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import ENV from "../config.js";
 import Axios from "axios";
@@ -34,23 +34,20 @@ const AdminChatHistoy = () => {
   };
 
   const handleMsg = async (selectedSenderId) => {
-    getAllChats();
+    getAllChats(selectedSenderId);
   };
 
   const getChat = async () => {
-    const token = localStorage.getItem("token");
     if (!selectedRecieverId) return;
     try {
       const { data } = await Axios.get(
-        `${ENV.BACKEND_URL}/chat/get-chat/${selectedRecieverId}`,
+        `${ENV.BACKEND_URL}/chat/getchat/${selectedRecieverId}`,
         {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
+          params: { id: selectedSenderId },
         }
       );
-      console.log("data", data);
       setMessages(data);
+      console.log(data);
     } catch (err) {
       console.log(err);
     }
@@ -60,7 +57,7 @@ const AdminChatHistoy = () => {
     getChat();
   }, [selectedRecieverId]);
 
-  const getAllChats = async () => {
+  const getAllChats = async (selectedSenderId) => {
     Axios.get(`${ENV.BACKEND_URL}/chat/allChats`, {
       params: { id: selectedSenderId },
     })
@@ -93,7 +90,11 @@ const AdminChatHistoy = () => {
                 id="userDropdown"
                 className="mx-2"
                 onChange={handleUserSelect}
-                style={{ color: "#000", background: "#EEF0FE", borderRadius:'5px' }}
+                style={{
+                  color: "#000",
+                  background: "#EEF0FE",
+                  borderRadius: "5px",
+                }}
               >
                 <option value="">Select a user</option>
                 {cards.map((user, index) => (
@@ -181,45 +182,43 @@ const AdminChatHistoy = () => {
                         <h4>Acqify</h4>
                       </div>
                       {selectedRecieverId ? (
-                        <>
+                        <div
+                          className="d-flex justify-content-center flex-column"
+                          style={{
+                            color: "#c0c0c0",
+                            width: "100%",
+                            height: "85%",
+                            overflowY: "scroll",
+                            padding: "0 25px",
+                          }}
+                        >
                           <div
-                            className="d-flex justify-content-center flex-column"
-                            style={{
-                              color: "#c0c0c0",
-                              width: "100%",
-                              height: "85%",
-                              overflowY: "scroll",
-                              padding: "0 25px",
-                            }}
+                            className="d-flex flex-column"
+                            style={{ height: "100%" }}
                           >
-                            <div
-                              className="d-flex flex-column"
-                              style={{ height: "100%" }}
-                            >
-                              {messages.map((message) => (
-                                <div key={message._id}>
-                                  <div
-                                    className={
-                                      (message.sender === id
-                                        ? "float-end"
-                                        : "text-start") +
-                                      " text-left inline-block p-2 my-2 rounded-md text-sm " +
-                                      (message.sender === id
-                                        ? "bg-primary text-white"
-                                        : "bg-light text-primary")
-                                    }
-                                    style={{
-                                      borderRadius: "50px",
-                                      width: "fit-content",
-                                    }}
-                                  >
-                                    {message.message}
-                                  </div>
+                            {messages.map((message) => (
+                              <div key={message._id}>
+                                <div
+                                  className={`${
+                                    message.sender === selectedSenderId
+                                      ? "float-end"
+                                      : "text-start"
+                                  } inline-block p-2 my-2 rounded-md text-sm ${
+                                    message.sender === selectedSenderId
+                                      ? "bg-primary text-white"
+                                      : "bg-light text-primary"
+                                  }`}
+                                  style={{
+                                    borderRadius: "50px",
+                                    width: "fit-content",
+                                  }}
+                                >
+                                  {message.message}
                                 </div>
-                              ))}
-                            </div>
+                              </div>
+                            ))}
                           </div>
-                        </>
+                        </div>
                       ) : (
                         <div
                           className="d-flex justify-content-center align-items-center flex-column"
@@ -330,8 +329,7 @@ const AdminChatHistoy = () => {
             </>
           )}
         </div>
-        <section>
-        </section>
+        <section></section>
       </section>
     </>
   );

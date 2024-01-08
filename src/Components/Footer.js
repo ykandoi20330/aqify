@@ -46,6 +46,7 @@ const Footer = () => {
                             <ul className='first-ul' style={{ listStyle: 'none' }}>
                                 <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px"  ,width:'45%'  }}>Legal</li>
                                 {/* <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Imprint</Link></li> */}
+                                <li style={{ color: '#C0C0C0' }}><Link to="/AdminPanel">Admin</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Advisory</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/testimonials">Testimonials</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/valuation">Valuation Tool</Link></li>
