@@ -75,6 +75,7 @@ const MarketplaceDash2 = () => {
     otherFeedback: "",
     username: "",
     pic: "",
+    listingName: "",
   });
 
   const handleShare = () => {
@@ -131,11 +132,15 @@ const MarketplaceDash2 = () => {
     getUsername();
   }, [setUsername]);
 
-  const handleFeedback = async () => {
+  const handleList = async (projectName) => {
     try {
+      const data = {
+        ...feedback,
+        listingName: projectName,
+      };
       const response = await axios.post(
         `${ENV.BACKEND_URL}/users/feedback`,
-        feedback
+        data
       );
       console.log(response.data);
       setFeedback("");
@@ -154,7 +159,6 @@ const MarketplaceDash2 = () => {
         },
         user: detail[0].ownerId,
         time: meetingTime,
-
         listing: detail[0].projectName,
       });
       console.log(response.data);
@@ -942,13 +946,14 @@ const MarketplaceDash2 = () => {
                                     }}
                                   />
                                   <label htmlFor="next">
-                                    <span className="feedbtn"
-                                    onClick={() => {
-                                      setFeedback({
-                                        ...feedback,
-                                        basicFeedback: "Yes",
-                                      });
-                                    }}
+                                    <span
+                                      className="feedbtn"
+                                      onClick={() => {
+                                        setFeedback({
+                                          ...feedback,
+                                          basicFeedback: "Yes",
+                                        });
+                                      }}
                                     >
                                       {currentStep === 3 ? "Finish" : "Yes"}
                                     </span>
@@ -1010,17 +1015,17 @@ const MarketplaceDash2 = () => {
                                       currentStep === steps.length
                                         ? setComplete(true)
                                         : setCurrentStep((prev) => prev + 1);
-                                     
                                     }}
                                   />
                                   <label htmlFor="next">
-                                    <span className="feedbtn"
-                                     onClick={() => {
-                                      setFeedback({
-                                        ...feedback,
-                                        moreDetails: "Very good",
-                                      });
-                                    }}
+                                    <span
+                                      className="feedbtn"
+                                      onClick={() => {
+                                        setFeedback({
+                                          ...feedback,
+                                          moreDetails: "Very good",
+                                        });
+                                      }}
                                     >
                                       {currentStep === steps.length
                                         ? "Finish"
@@ -1089,13 +1094,14 @@ const MarketplaceDash2 = () => {
                                     }}
                                   />
                                   <label htmlFor="next">
-                                    <span className="feedbtn"
-                                    onClick={() => {
-                                      setFeedback({
-                                        ...feedback,
-                                        buildFeedback: "Yes",
-                                      });
-                                    }}
+                                    <span
+                                      className="feedbtn"
+                                      onClick={() => {
+                                        setFeedback({
+                                          ...feedback,
+                                          buildFeedback: "Yes",
+                                        });
+                                      }}
                                     >
                                       {" "}
                                       {currentStep === steps.length
@@ -1177,7 +1183,9 @@ const MarketplaceDash2 = () => {
                                             textDecoration: "none",
                                             color: "white",
                                           }}
-                                          onClick={handleFeedback}
+                                          onClick={() => {
+                                            handleList(item.projectName);
+                                          }}
                                         >
                                           Send
                                         </Link>
