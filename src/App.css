@@ -2037,7 +2037,7 @@ dropdown-toggle::after {
     color: #fff;
 }
 
-.feedInput{
+.feedInput {
     display: none;
 }
 
@@ -2694,7 +2694,7 @@ input[type="file"] {
     content: "";
     background-color: transparent !important;
     border-radius: none !important;
-} 
+}
 
 /* Sign in Css*/
 
@@ -2969,11 +2969,11 @@ input[type="file"] {
     border-radius: var(--bs-card-border-radius);
 }
 
-.acceptBtn:hover{
+.acceptBtn:hover {
     background: #0b0b0b !important;
 }
 
-.rejectBtn:hover{
+.rejectBtn:hover {
     background: rgb(247, 0, 0) !important;
 }
 
@@ -3029,7 +3029,8 @@ input[type="file"] {
     border-radius: 1.2rem;
     border: none;
     margin: 2rem 0;
-    width: 95%;
+    /* width: 95%; */
+    width: 34vw;
     margin: 0.5rem 0.5rem;
     --bs-card-spacer-y: 1rem !important;
     --bs-card-spacer-x: 1rem !important;
@@ -3052,8 +3053,9 @@ input[type="file"] {
     --bs-card-group-margin: 0.75rem !important;
     position: relative !important;
     display: flex !important;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* align-items: center; */
     min-width: 0 !important;
     /* height: var(--bs-card-height) !important; */
     color: var(--bs-body-color) !important;
@@ -3548,6 +3550,17 @@ input[type="file"] {
     .vid {
         width: 95% !important;
         height: 47% !important;
+    }
+
+
+    /***************** Admin Panel Feedback Section *******************/
+
+    .AdminFeedbackcard {
+        padding: 1%;
+        border-radius: 1.2rem;
+        border: none;
+        margin: 2rem 0;
+        width: 95% !important;
     }
 
 

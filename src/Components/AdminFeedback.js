@@ -33,18 +33,35 @@ const AdminFeedback = () => {
           </div>
         </div>
 
-        <div>
+        <div className='d-flex flex-wrap align-items-center justify-content-center'>
           {cards.map((item, index) => {
             return (
               <div key={index} className='AdminFeedbackcard'>
-                <div className='d-flex align-items-center'>
+                <div className='d-flex align-items-center py-2 px-3'>
                   <img style={{borderRadius:'5px'}} width={50} src={item.pic || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" } alt="" />
                   <div>
                     <h4 className='mx-2'>{item.username}</h4>
                   </div>
                 </div>
-                <div>
-                  {item.feed}
+                <hr/>
+                <div className='py-2 px-3'>
+                  <div className='my-2'>
+                    <h5>1).Did you Like it?</h5>
+                    <span style={{color:'#3247FF', fontWeight:'700'}}>{item.basicFeedback}</span>
+                  </div>
+                  <div className='my-2'>
+                    <h5>2).How was the Pricing?</h5>
+                    <span style={{color:'#3247FF', fontWeight:'700'}}>{item.moreDetails}</span>
+                  </div>
+                  <div className='my-2'>
+                    <h5>3).Acquisition financing?</h5>
+                    <span>( not having enough money )</span><br/>
+                    <span style={{color:'#3247FF', fontWeight:'700'}}>{item.buildFeedback}</span>
+                  </div>
+                  <div className='my-2'>
+                    <h5>4).Other feedback you’re giving?</h5>
+                    <span style={{color:'#3247FF', fontWeight:'700'}}>{item.otherFeedback}</span>
+                  </div>
                 </div>
               </div>
             )
