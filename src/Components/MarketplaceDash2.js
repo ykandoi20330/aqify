@@ -47,7 +47,7 @@ const MarketplaceDash2 = () => {
   // Chat
   const [listingMessage, setListingMessage] = useState('');
   const [ws, setWs] = useState(null);
-  const [selectedUserId, setSelectedUserId] = useState(''); 
+  const [selectedUserId, setSelectedUserId] = useState('');
   const [messages, setMessages] = useState([]);
 
 
@@ -154,7 +154,7 @@ const MarketplaceDash2 = () => {
           },
           user: detail[0].ownerId,
           time: meetingTime,
-        
+
           listing: detail[0].projectName,
         }
 
@@ -315,7 +315,7 @@ const MarketplaceDash2 = () => {
   }
 
   const filterTech = (t) => {
-    const tech = card?.filter((p) => p.techStack1 === t )
+    const tech = card?.filter((p) => p.techStack1 === t)
 
     setFilterSearch(tech)
   }
@@ -623,30 +623,34 @@ const MarketplaceDash2 = () => {
                           </div>
                           <div className="SecondFeedback d-flex">
                             <div className="mt-4">
-                              <Link
+                              <input
+                                type="text"
+                                id="next"
+                                className="feedInput"
                                 style={{ textDecoration: "none", color: "#636363" }}
-                                id="prev"
+                                // id="prev"
                                 onClick={() => {
-                                  setCurrentStep((prev) => prev - 1);
+                                  setCurrentStep((prev) => prev + 1);
                                 }}
-                              >
-                                <span className="feedbtn mx-5 my-2">No</span>
-                              </Link>
+                              />
+                              <label htmlFor="next"><span className="feedbtn me-5 my-2">No</span></label>
                             </div>
                             <div className="mt-4">
                               {!complete && (
-                                <Link
-                                  id="next"
-                                  className="feedbtn mx-5 my-2"
-                                  onClick={() => {
-                                    currentStep === 4
-                                      ? setComplete(true)
-                                      : setCurrentStep((prev) => prev + 1);
-                                  }}
-                                >
-                                  {currentStep === 3 ? "Finish" : "Yes"}
-                                </Link>
-                              )}
+                                <>
+                                  <input
+                                    type="text"
+                                    id="next"
+                                    className="feedInput"
+
+                                    onClick={() => {
+                                      currentStep === 4
+                                        ? setComplete(true)
+                                        : setCurrentStep((prev) => prev + 1)
+                                    }}
+                                  />
+                                  <label htmlFor="next"><span className="feedbtn">{currentStep === 3 ? "Finish" : "Yes"}</span></label>
+                                </>)}
                             </div>
                           </div>
                         </div>)}
@@ -661,29 +665,34 @@ const MarketplaceDash2 = () => {
                           </div>
                           <div className="SecondFeedback d-flex">
                             <div className="mt-4">
-                              <Link
+                              <input
+                                type="text"
+                                id="next"
+                                className="feedInput"
                                 style={{ textDecoration: "none", color: "#636363" }}
-                                id="prev"
+                                // id="prev"
                                 onClick={() => {
-                                  setCurrentStep((prev) => prev - 1);
+                                  setCurrentStep((prev) => prev + 1);
                                 }}
-                              >
-                                <span className="feedbtn mx-5 my-2">Very bad</span>
-                              </Link>
+                              />
+                              <label htmlFor="next"><span className="feedbtn me-5 my-2">Very bad</span></label>
                             </div>
                             <div className="mt-4">
                               {!complete && (
-                                <Link
-                                  id="next"
-                                  className="feedbtn mx-5 my-2"
-                                  onClick={() => {
-                                    currentStep === steps.length
-                                      ? setComplete(true)
-                                      : setCurrentStep((prev) => prev + 1);
-                                  }}
-                                >
-                                  {currentStep === steps.length ? "Finish" : "Very good"}
-                                </Link>
+                                <>
+                                  <input
+                                    type="text"
+                                    id="next"
+                                    className="feedInput"
+
+                                    onClick={() => {
+                                      currentStep === steps.length
+                                        ? setComplete(true)
+                                        : setCurrentStep((prev) => prev + 1);
+                                    }}
+                                  />
+                                  <label htmlFor="next"><span className="feedbtn">{currentStep === steps.length ? "Finish" : "Very good"}</span></label>
+                                </>
                               )}
                             </div>
                           </div>
@@ -698,29 +707,33 @@ const MarketplaceDash2 = () => {
                           </div>
                           <div className="SecondFeedback d-flex">
                             <div className="mt-4">
-                              <Link
+                              <input
+                                type="text"
+                                id="next"
+                                className="feedInput"
                                 style={{ textDecoration: "none", color: "#636363" }}
-                                id="prev"
+                                // id="prev"
                                 onClick={() => {
-                                  setCurrentStep((prev) => prev - 1);
+                                  setCurrentStep((prev) => prev + 1);
                                 }}
-                              >
-                                <span className="feedbtn mx-5 my-2">No</span>
-                              </Link>
+                              />
+                              <label htmlFor="next"><span className="feedbtn me-5 my-2">No</span></label>
                             </div>
                             <div className="mt-4">
                               {!complete && (
-                                <Link
-                                  id="next"
-                                  className="feedbtn mx-5 my-2"
-                                  onClick={() => {
-                                    currentStep === steps.length
-                                      ? setComplete(true)
-                                      : setCurrentStep((prev) => prev + 1);
-                                  }}
-                                >
-                                  {currentStep === steps.length ? "Yes" : "Yes"}
-                                </Link>
+                                <>
+                                  <input
+                                    type="text"
+                                    id="next"
+                                    className="feedInput"
+                                    onClick={() => {
+                                      currentStep === steps.length
+                                        ? setComplete(true)
+                                        : setCurrentStep((prev) => prev + 1);
+                                    }}
+                                  />
+                                  <label htmlFor="next"><span className="feedbtn"> {currentStep === steps.length ? "Yes" : "Yes"}</span></label>
+                                </>
                               )}
                             </div>
                           </div>
@@ -746,31 +759,37 @@ const MarketplaceDash2 = () => {
                           </div>
                           <div className="SecondFeedback d-flex">
                             <div className="mt-4">
-                              <Link
+                            <input
+                                type="text"
+                                id="next"
+                                className="feedInput"
                                 style={{ textDecoration: "none", color: "#636363" }}
-                                id="prev"
+                                // id="prev"
                                 onClick={() => {
-                                  setCurrentStep((prev) => prev - 1);
+                                  setCurrentStep((prev) => prev + 1);
                                 }}
-                              >
-                                <span className="feedbtn mx-5 my-2">Cancel</span>
-                              </Link>
+                              />
+                              <label htmlFor="next"><span className="feedbtn me-5 my-2">Cancel</span></label> 
+                              
                             </div>
                             <div className="mt-4">
                               {!complete && (
-                                <Link
-                                  id="next"
-                                  className="feedbtn mx-5 my-2"
+                                <>
+                                <input
+                                type="text"
+                                id="next"
+                                className="feedInput"
+                                  
                                   onClick={() => {
                                     currentStep === 3
                                       ? setComplete(true)
                                       : setCurrentStep((prev) => prev + 1);
                                   }}
-                                >
-                                  {currentStep === steps.length ? <Link style={{ textDecoration: "none", color: "white" }} onClick={handleFeedback}>Send</Link>
+                                />
+                                 <label htmlFor="next"><span className="feedbtn">{currentStep === steps.length ? <Link style={{ textDecoration: "none", color: "white" }} onClick={handleFeedback}>Send</Link>
                                     : "Send"}
-                                </Link>
-                              )}
+                                </span></label> 
+                                </> )}
                             </div>
                           </div>
                         </div>)}
@@ -797,7 +816,7 @@ const MarketplaceDash2 = () => {
                           <i className="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>
                           <span className='mx-2'>Video Call</span>
                         </div>
-                          {/* <div onClick={() => {
+                        {/* <div onClick={() => {
                             navigate(`/call/${item.ownerId}`);
                           }} className='my-3 d-flex align-items-center justify-content-center' style={{ cursor: 'pointer', border: '2px solid #3247ff', color: '#3247ff', borderRadius: "15px", padding: '1rem 2rem', textAlign: 'center', width: '100%', textDecoration: 'none' }}>
                             <i class="fa-solid fa-phone-volume" style={{ color: "#005eff" }}></i>

@@ -2037,6 +2037,10 @@ dropdown-toggle::after {
     color: #fff;
 }
 
+.feedInput{
+    display: none;
+}
+
 
 /*************** Project buying dashboard ******************/
 
@@ -2669,15 +2673,15 @@ input[type="file"] {
 
 /****************************** Sign in Section *********************************/
 
-.form-floating>.form-control-plaintext~label,
+/* .form-floating>.form-control-plaintext~label,
 .form-floating>.form-control:focus~label,
 .form-floating>.form-control:not(:placeholder-shown)~label,
 .form-floating>.form-select~label {
     color: gray;
-    /* transform: scale(.85) translateY(-0.5rem) translateX(0.15rem); */
+    /// transform: scale(.85) translateY(-0.5rem) translateX(0.15rem); ///
     transform: scale(.85) translateY(0.5rem) translateX(0.15rem);
     background-color: transparent !important;
-}
+}*/
 
 .form-floating>.form-control-plaintext~label::after,
 .form-floating>.form-control:focus~label::after,
@@ -2690,7 +2694,7 @@ input[type="file"] {
     content: "";
     background-color: transparent !important;
     border-radius: none !important;
-}
+} 
 
 /* Sign in Css*/
 

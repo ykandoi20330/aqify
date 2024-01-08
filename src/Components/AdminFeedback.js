@@ -38,7 +38,7 @@ const AdminFeedback = () => {
             return (
               <div key={index} className='AdminFeedbackcard'>
                 <div className='d-flex align-items-center'>
-                  <img width={50} src={item.pic || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" } alt="" />
+                  <img style={{borderRadius:'5px'}} width={50} src={item.pic || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" } alt="" />
                   <div>
                     <h4 className='mx-2'>{item.username}</h4>
                   </div>
