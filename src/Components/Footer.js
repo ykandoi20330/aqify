@@ -30,7 +30,7 @@ const Footer = () => {
                                 <li style={{ color: '#C0C0C0' }}><Link to="/owner">For owners</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/acquire">For acquires</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/market">Marketplace</Link></li>
-                                <li style={{ color: '#C0C0C0' }}><Link to="/adminPanel/AdminPanelListing">Resources</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/">Resources</Link></li>
                             </ul>
                         </div>
                         <div>
@@ -46,7 +46,7 @@ const Footer = () => {
                             <ul className='first-ul' style={{ listStyle: 'none' }}>
                                 <li style={{ color: '#fff',fontSize:'20px',borderBottom: "3px solid #3247FF",borderRadius: "3px"  ,width:'45%'  }}>Legal</li>
                                 {/* <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Imprint</Link></li> */}
-                                <li style={{ color: '#C0C0C0' }}><Link to="/AdminPanel">Admin</Link></li>
+                                <li style={{ color: '#C0C0C0' }}><Link to="/AdminPanel/AdminPanelListing">Admin</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/advisory">Advisory</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/testimonials">Testimonials</Link></li>
                                 <li style={{ color: '#C0C0C0' }}><Link to="/valuation">Valuation Tool</Link></li>
