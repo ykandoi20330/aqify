@@ -319,13 +319,50 @@ const MarketplaceDash2 = () => {
     setFilterSearch(tech);
   };
 
-  const filterLowToHigh = (Low) => {
-    const Lower = card
-      ?.filter((h) => h.askingPrice === Low)
-      .sort((l1, l2) => l2.askingPrice - l1.askingPrice);
-
+  const filterLowToHigh = () => {
+    const Lower = card?.sort((a, b) => a.askingPrice - b.askingPrice).filter((fl) => fl)
+    //  console.log(Lower)
     setFilterSearch(Lower);
   };
+
+  const MostView = (view) =>{
+    // const View = card?.sort((a, b) => b.askingPrice - a.askingPrice)
+    const View =  card?.filter((v) => v.category === view);
+    // console.log(View);
+    setFilterSearch(View)
+  }
+
+  const Newest = (n) => {
+    const added = card?.reverse(n).filter((em) => em);
+    setFilterSearch(added)
+  }
+
+  const MostFav = (fav) => {
+    const Fav = card?.filter((fv) => favoriteChecker(fv.category) === fav);
+    setFilterSearch(Fav)
+  }
+
+  //apply filters
+  const CommunitySize = (cm) =>{
+    const com = card?.filter((m) => m.customers === cm );
+    setFilterSearch(com)
+  }
+
+  const NetProfit = (Np) =>{
+    const net = card?.filter((pf) => pf.lastMonthNetProfit === Np );
+    setFilterSearch(net)
+  }
+
+  const MonthProfit = (Mp) =>{
+    const Month = card?.filter((month) => month.monthlyProfit === Mp );
+    setFilterSearch(Month)
+  }
+
+  const rangeFilter = (r) => {
+    const range = card?.filter((rg)=> rg.teamSize === r)
+    setFilterSearch(range)
+  }
+
 
   return (
     <>
@@ -339,6 +376,13 @@ const MarketplaceDash2 = () => {
               filterPrice={filterPrice}
               filterTech={filterTech}
               filterLowToHigh={filterLowToHigh}
+              MostView={MostView}
+              Newest={Newest}
+              MostFav={MostFav}
+              CommunitySize={CommunitySize}
+              NetProfit={NetProfit}
+              MonthProfit={MonthProfit}
+              rangeFilter={rangeFilter}
             />
           </section>
 
