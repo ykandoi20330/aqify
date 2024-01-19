@@ -54,6 +54,7 @@ import AdminPanel from './Components/AdminPanel';
 import AdminApproveList from './Components/AdminApproveList';
 import AdminChatHistoy from './Components/AdminChatHistoy';
 import AdminFeedback from './Components/AdminFeedback';
+import SpeechToText from './Components/testvc';
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
             <Route path="ProofFund" element={<ProofOfFund />} />
             <Route path="favorites" element={<Favourite />} />
             <Route path="Notification" element={<NotifactionDash />} />
+            <Route path="vc" element={<SpeechToText />} />
           </Route>
 
         </Routes>
