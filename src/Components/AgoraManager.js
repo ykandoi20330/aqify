@@ -36,15 +36,6 @@ export const useAgoraContext = () => {
 export const AgoraManager = ({ config, children }) => {
 
 
-    var SpeechRecognition = window.webkitSpeechRecognition || window.speechRecognition;
-    var recognition = new SpeechRecognition();
-    recognition.continuous = true;
-    
-
-const [transContent, setTransContent] = useState('');
-const [noteContent, setNoteContent] = useState('');
-
-
     // Retrieve local camera and microphone tracks and remote users
     const agoraEngine = useRTCClient();
     const { isLoadingCam, localCameraTrack } = useLocalCameraTrack();
@@ -92,10 +83,6 @@ const [noteContent, setNoteContent] = useState('');
     }, []);
 
 
-    useEffect(() => {
-        startTraans();
-    }, []);
-
 
     // Check if devices are still loading
     const deviceLoading = isLoadingMic || isLoadingCam;
@@ -111,48 +98,6 @@ const [noteContent, setNoteContent] = useState('');
         setCameraOn(!cameraOn);
     };
 
-
-const startTraans = () => {
-    console.log('started');
-    recognition.start();
-
-
-    recognition.onresult = (event) => {
-        const current = event.resultIndex;
-        const transcript = event.results[current][0].transcript;
-
-        // Split the transcript into individual words
-        const words = transcript.split(' ');
-
-        // Log each word individually
-        words.forEach((word) => {
-            console.log(word);
-            setTransContent((prevContent) => prevContent + word + ' ');
-        });
-    };
-};
-
-
-const stopTraans = () => {
-    console.log('Voice recognition is off.');
-    recognition.stop();
-    setTransContent(transContent);
-};
-
-    
-    // Optional: Handle other recognition events
-    recognition.onstart = () => {
-        console.log('Recognition started');
-    };
-    
-    recognition.onend = () => {
-        console.log('Recognition ended');
-    };
-    
-    recognition.onerror = (event) => {
-        console.error('Recognition error:', event.error);
-    };
-    
 
     // Render the AgoraProvider and associated UI components
     return (
@@ -257,10 +202,6 @@ const stopTraans = () => {
                     {/* Leave */}
                     <i className="fa-solid fa-phone px-1" style={{ color: '#fff' }}></i>
                 </button>
-
-                <button onClick={startTraans}>Start</button>
-                <button onClick={stopTraans}>Stop</button>
-
             </div>
         </AgoraProvider>
         </div>
