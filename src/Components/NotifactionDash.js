@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ENV from "../config.js";
 import { jwtDecode } from "jwt-decode";
+import emailjs from "@emailjs/browser";
 
 const NotifactionDash = () => {
   const [card, setCard] = useState([]);
@@ -74,11 +75,49 @@ const NotifactionDash = () => {
         time: time,
       });
       console.log(response.data);
+      handleEmail1(response);
+      handleEmail2(response);
       getCard();
     } catch (error) {
       console.error(error);
     }
   };
+
+  const handleEmail1 = async (response) => {
+    emailjs.send(
+      "service_vy4h3iu",
+      "template_jr2ippq",
+      {
+        from_name: "Acqify",
+        from_email: "aamish@acqify.co",
+        to_email: response.data.email1,
+        message: `Your meeting with ${response.data.firstName2 +  response.data.lastName2} has been scheduled at ${response.data.time} . Link: https://acqify.co/#/call/${response.data.channelName}`,
+      },
+      "d0q75IL42sp_4qDf5"
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
+  const handleEmail2 = async (response) => {
+    emailjs.send(
+      "service_vy4h3iu",
+      "template_jr2ippq",
+      {
+        from_name: "Acqify",
+        from_email: "aamish@acqify.co",
+        to_email: response.data.email2,
+        message: `Your meeting with ${response.data.firstName1 +  response.data.lastName1} has been scheduled for ${response.data.time} . link: https://acqify.co/#/call/${response.data.channelName}`,
+      },
+      "d0q75IL42sp_4qDf5"
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
 
   const handleReschedule = async () => {
     try {
@@ -96,6 +135,8 @@ const NotifactionDash = () => {
         otherId: buyerId,
         channelName: buyerId,
       });
+      handleEmail1(response);
+      handleEmail2(response);
       console.log(response.data);
       getCard();
     } catch (error) {

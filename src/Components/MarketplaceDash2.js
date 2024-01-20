@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 // card logo images
 import cardLogo1 from "./Market/Frame 33.png";
@@ -149,6 +150,25 @@ const MarketplaceDash2 = () => {
     }
   };
 
+  const handleEmail = async (response) => {
+    emailjs.send(
+      "service_vy4h3iu",
+      "template_jr2ippq",
+      {
+        from_name: "Acqify",
+        from_email: "aamish@acqify.co",
+        to_email: response.data.email,
+        message: `You have a invitation for meeting with ${response.data.firstName + response.data.lastName} at ${meetingTime}. To accept the invitation please click on the link https://acqify.co//#/MainDashboard/Notification`,
+      },
+      "d0q75IL42sp_4qDf5"
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
+
   const handleSchedule = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -161,6 +181,7 @@ const MarketplaceDash2 = () => {
         time: meetingTime,
         listing: detail[0].projectName,
       });
+      handleEmail(response);
       console.log(response.data);
     } catch (error) {
       console.error(error);
@@ -320,49 +341,50 @@ const MarketplaceDash2 = () => {
   };
 
   const filterLowToHigh = () => {
-    const Lower = card?.sort((a, b) => a.askingPrice - b.askingPrice).filter((fl) => fl)
+    const Lower = card
+      ?.sort((a, b) => a.askingPrice - b.askingPrice)
+      .filter((fl) => fl);
     //  console.log(Lower)
     setFilterSearch(Lower);
   };
 
-  const MostView = (view) =>{
+  const MostView = (view) => {
     // const View = card?.sort((a, b) => b.askingPrice - a.askingPrice)
-    const View =  card?.filter((v) => v.category === view);
+    const View = card?.filter((v) => v.category === view);
     // console.log(View);
-    setFilterSearch(View)
-  }
+    setFilterSearch(View);
+  };
 
   const Newest = (n) => {
     const added = card?.reverse(n).filter((em) => em);
-    setFilterSearch(added)
-  }
+    setFilterSearch(added);
+  };
 
   const MostFav = (fav) => {
     const Fav = card?.filter((fv) => favoriteChecker(fv.category) === fav);
-    setFilterSearch(Fav)
-  }
+    setFilterSearch(Fav);
+  };
 
   //apply filters
-  const CommunitySize = (cm) =>{
-    const com = card?.filter((m) => m.customers === cm );
-    setFilterSearch(com)
-  }
+  const CommunitySize = (cm) => {
+    const com = card?.filter((m) => m.customers === cm);
+    setFilterSearch(com);
+  };
 
-  const NetProfit = (Np) =>{
-    const net = card?.filter((pf) => pf.lastMonthNetProfit === Np );
-    setFilterSearch(net)
-  }
+  const NetProfit = (Np) => {
+    const net = card?.filter((pf) => pf.lastMonthNetProfit === Np);
+    setFilterSearch(net);
+  };
 
-  const MonthProfit = (Mp) =>{
-    const Month = card?.filter((month) => month.monthlyProfit === Mp );
-    setFilterSearch(Month)
-  }
+  const MonthProfit = (Mp) => {
+    const Month = card?.filter((month) => month.monthlyProfit === Mp);
+    setFilterSearch(Month);
+  };
 
   const rangeFilter = (r) => {
-    const range = card?.filter((rg)=> rg.teamSize === r)
-    setFilterSearch(range)
-  }
-
+    const range = card?.filter((rg) => rg.teamSize === r);
+    setFilterSearch(range);
+  };
 
   return (
     <>
