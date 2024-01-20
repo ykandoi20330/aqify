@@ -20,7 +20,14 @@ import { jwtDecode } from "jwt-decode";
 import ENV from "../config.js";
 
 import { useNavigate } from "react-router-dom";
+import NotificationBadge from "react-notification-badge";
+import { Effect } from "react-notification-badge";
+import Axios from "axios";
+
 const MainDashboard = () => {
+  const [allChats, setAllChats] = useState([]);
+  const [id, setId] = useState(null);
+  const [card, setCard] = useState([]);
   const navigate = useNavigate();
 
   const logout = () => {
@@ -50,6 +57,57 @@ const MainDashboard = () => {
 
     getUsername();
   }, [setRole]);
+
+
+
+  useEffect(() => {
+    getCard();
+  }, []);
+
+  const getCard = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const decoded = jwtDecode(token);
+      const id = decoded.id;
+
+      const response = await axios.get(
+        `${ENV.BACKEND_URL}/agora/notifications`,
+        {
+          params: { user: id },
+        }
+      );
+      console.log(response.data.notifications);
+      setCard(response.data.notifications);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    const getAllChats = async () => {
+      const token = localStorage.getItem("token");
+
+      if (token) {
+        const userData = jwtDecode(token);
+        setId(userData.id);
+
+        Axios.get(`${ENV.BACKEND_URL}/chat/all`, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        })
+          .then(({ data }) => {
+            console.log(data);
+            setAllChats(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    };
+    getAllChats();
+  }, []);
+
 
   return (
     <>
@@ -244,12 +302,17 @@ const MainDashboard = () => {
                           alt=""
                         />
                         <span>Messages</span>
+                        <NotificationBadge
+                          className="notificationBadge"
+                          count={allChats.length}
+                          effect={Effect.SCALE}
+                        />
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/MainDashboard/Notification"
-                        className="nav-link1 text-white"
+                        className="nav-link1 text-white "
                       >
                         <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
@@ -257,6 +320,11 @@ const MainDashboard = () => {
                           alt=""
                         />
                         <span>Notifications</span>
+                        <NotificationBadge
+                          className="notificationBadge"
+                          count={card.length}
+                          effect={Effect.SCALE}
+                        />
                       </Link>
                     </li>
                     <li className="nav-item dropdown">

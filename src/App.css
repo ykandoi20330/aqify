@@ -2977,6 +2977,45 @@ input[type="file"] {
     background: rgb(247, 0, 0) !important;
 }
 
+.notificationBadge{
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    display: inline-block;
+    position: absolute;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: rgb(212, 19, 13);
+    border-radius: 10px;
+    top: -29px !important;
+    right: -2px;
+    transform: scale(1, 1);
+}
+.notificationBadge2{
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    display: inline-block;
+    position: absolute;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: rgb(212, 19, 13);
+    border-radius: 10px;
+    top: -10px !important;
+    right: -2px;
+    transform: scale(1, 1);
+}
+
 /***************** Transfer Services Section *******************/
 
 .transferCard {

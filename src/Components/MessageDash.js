@@ -6,6 +6,9 @@ import Axios from "axios";
 import ENV from "../config.js";
 import { jwtDecode } from "jwt-decode";
 import EmojiPicker from "emoji-picker-react";
+import NotificationBadge from "react-notification-badge";
+import { Effect } from "react-notification-badge";
+import axios from "axios";
 
 const MessageDash = () => {
   const [ws, setWs] = useState(null);
@@ -16,8 +19,14 @@ const MessageDash = () => {
   const [id, setId] = useState(null); // this is the id of the user that is currently logged in
 
   const [emoji, setEmoji] = useState(false);
+  const [video, setVideo] = useState(false);
   const [chosenEmoji, setChosenEmoji] = useState("");
   const [show, setShow] = useState(true);
+
+  const [meetingTime, setMeetingTime] = useState("");
+  const [buyerId, setBuyerId] = useState("");
+  const [notificationId, setNotificationId] = useState("");
+  const [card, setCard] = useState([])
 
   const emojiDropdown = () => {
     setEmoji(!emoji);
@@ -121,6 +130,65 @@ const MessageDash = () => {
     getAllChats();
   }, []);
 
+
+  //videos section
+  const getCard = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const decoded = jwtDecode(token);
+      const id = decoded.id;
+
+      const response = await axios.get(
+        `${ENV.BACKEND_URL}/agora/notifications`,
+        {
+          params: { user: id },
+        }
+      );
+      console.log(response.data.notifications);
+      setCard(response.data.notifications);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleDateTimeChange = (e) => {
+    setMeetingTime(e.target.value);
+    console.log("Selected Date and Time:", meetingTime);
+  };
+
+  const handleSubmitTime = (e) => {
+    e.preventDefault();
+    console.log("Selected Date and Time:", meetingTime);
+  };
+
+  const handleReschedule = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const decoded = jwtDecode(token);
+      const id = decoded.id;
+
+      const response = await axios.post(`${ENV.BACKEND_URL}/agora/reschedule`, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+        user: id,
+        time: meetingTime,
+        notificationId: notificationId,
+        otherId: buyerId,
+        channelName: buyerId,
+      });
+      console.log(response.data);
+      getCard();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+  useEffect(() => {
+    getCard();
+  }, []);
+
   return (
     <>
       <div className="sideContent">
@@ -218,6 +286,102 @@ const MessageDash = () => {
                           style={{ position: "absolute" }}
                         />
                       )}
+                      <>
+                        {/* Schedule A vidoe meet time and Date */}
+                        <section>
+                          <div
+                            className="modal fade"
+                            id="ScheduleModalToggle"
+                            aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel"
+                            tabIndex="-1"
+                          >
+                            <div className="modal-dialog modal-dialog-centered">
+                              <div className="modal-content">
+                                <div className="modal-header" style={{ border: "none" }}>
+                                  <h1
+                                    className="modal-title fs-5"
+                                    id="exampleModalToggleLabel"
+                                    style={{ fontWeight: "700" }}
+                                  >
+                                    Select a Date & Time!
+                                  </h1>
+                                  <button
+                                    type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                  ></button>
+                                </div>
+                                <div className="modal-body">
+                                  <form>
+                                    <label style={{ color: "#0005ff" }} for="birthdaytime">
+                                      Reschedule Meeting (date and time):
+                                    </label>
+                                    <input
+                                      style={{
+                                        padding: "1rem",
+                                        border: "none",
+                                        background: "#f4f4f4",
+                                        color: "#0005ff",
+                                        borderRadius: "50px",
+                                      }}
+                                      className="mx-2 my-2"
+                                      onChange={handleDateTimeChange}
+                                      type="datetime-local"
+                                      id="birthdaytime"
+                                      name="birthdaytime"
+                                    />
+                                  </form>
+                                </div>
+                                <div className="modal-footer" style={{ border: "none" }}>
+                                  <button
+                                    onClick={handleSubmitTime}
+                                    type="submit"
+                                    className="btn btn-primary py-1 px-3"
+                                    data-bs-target="#exampleModalToggle2"
+                                    data-bs-toggle="modal"
+                                  >
+                                    Book a call
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="modal fade"
+                            id="exampleModalToggle2"
+                            aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2"
+                            tabIndex="-1"
+                          >
+                            <div className="modal-dialog modal-dialog-centered">
+                              <div className="modal-content">
+                                <div className="modal-header" style={{ border: "none" }}>
+                                  <h1 className="modal-title fs-5" id="exampleModalToggleLabel2">
+                                    Scheduling a Video Call
+                                  </h1>
+                                  {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+                                </div>
+                                <div className="modal-body">
+                                  Your Request for the Meeting has been scheduling with the
+                                  acquire!
+                                </div>
+                                <div className="modal-footer" style={{ border: "none" }}>
+                                  <button
+                                    className="btn btn-primary px-3 py-1"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                    onClick={handleReschedule}
+                                  >
+                                    Confirm meet!
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </>
                       {selectedUserId ? (
                         <>
                           <div
@@ -270,6 +434,16 @@ const MessageDash = () => {
                                       fontSize: "1.5rem",
                                     }}
                                     className="fa-solid fa-face-smile mx-2"
+                                  ></i>
+                                </Link>
+                                <Link data-bs-target="#ScheduleModalToggle"
+                                  data-bs-toggle="modal">
+                                  <i
+                                    style={{
+                                      color: "#3247FF",
+                                      fontSize: "1.5rem",
+                                    }}
+                                    className="fa-solid fa-video mx-2"
                                   ></i>
                                 </Link>
                               </div>
@@ -406,8 +580,13 @@ const MessageDash = () => {
                               Hello, I am owner of {chat.message}...
                             </span>
                             <div className="mx-3">
-                              <span className="badge rounded-pill text-bg-danger">
-                                {i}+
+                              {/* {messages.map((item)=>(<>{item.message}</>))} */}
+                              <span>
+                                <NotificationBadge
+                                  className="notificationBadge2"
+                                  count={allChats.length}
+                                  effect={Effect.SCALE}
+                                />
                               </span>
                             </div>
                           </div>
@@ -415,45 +594,6 @@ const MessageDash = () => {
                       </>
                     );
                   })}
-                </div>
-              </div>
-
-              <div>
-                <div className="" style={{ color: "#636363", width: "100%" }}>
-                  <div className="d-flex mb-3 my-3 ">
-                    <input
-                      style={{
-                        width: "100",
-                        background: "#fff",
-                        height: "8vh",
-                        borderRadius: "50px",
-                      }}
-                      type="text"
-                      id="floatingInputValue"
-                      className="Search-from form-control mx-2"
-                      placeholder="Write message..."
-                      value={newMessageText}
-                      onChange={(ev) => setNewMessageText(ev.target.value)}
-                    />
-                    <div
-                      className="messageSendBtn text-center mx-2 d-flex  justify-content-center align-items-center"
-                      style={{
-                        color: "#3247FF",
-                        right: "7%",
-                        position: "absolute",
-                        textDecoration: "none",
-                        cursor: "pointer",
-                      }}
-                      onClick={() => sendMessage()}
-                    >
-                      <>
-                        <i
-                          style={{ fontSize: "1.5rem" }}
-                          className="messageSend fa-regular fa-paper-plane py-3"
-                        ></i>
-                      </>
-                    </div>
-                  </div>
                 </div>
               </div>
             </>
