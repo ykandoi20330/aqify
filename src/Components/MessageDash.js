@@ -82,8 +82,15 @@ const MessageDash = () => {
     getChat();
   }, [selectedUserId]);
 
+  const mobileNumberRegex = /(\+\d{1,2}\s?)?(\d{10}|\d{3}\s?\d{7}|\d{4}\s?\d{6}|\d{5}\s?\d{5}|\d{6}\s?\d{4})/;
+  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/;
+
   const sendMessage = (ev) => {
     if (ev) ev.preventDefault();
+      if (emailRegex.test(newMessageText) || mobileNumberRegex.test(newMessageText)) {
+      alert("Sending email or mobile number is not allowed");
+      return;
+    }
     ws.send(
       JSON.stringify({
         sender: id,

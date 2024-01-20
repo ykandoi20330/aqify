@@ -102,16 +102,16 @@ const SignUp = () => {
           navigate('/MainDashboard/Dashbaord')
         }
         else if(response.status === 404){
-          toast.error("User Already Exist", toastOptions);
+          toast.error("Username or Email Already Taken", toastOptions);
         } 
         else if(response.status === 400){
           toast.error("Please enter correct data", toastOptions);
         }
         else {
-          console.error('Error:', response.statusText);
+          toast.error('Error:', response.statusText);
         }
       } catch (error) {
-        console.error('Error:', error);
+        toast.error('Username already taken', error);
       }
     }
   };

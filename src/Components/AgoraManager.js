@@ -34,6 +34,8 @@ export const useAgoraContext = () => {
 
 // AgoraManager component responsible for handling Agora-related logic and rendering UI
 export const AgoraManager = ({ config, children }) => {
+
+
     // Retrieve local camera and microphone tracks and remote users
     const agoraEngine = useRTCClient();
     const { isLoadingCam, localCameraTrack } = useLocalCameraTrack();
@@ -80,6 +82,8 @@ export const AgoraManager = ({ config, children }) => {
         };
     }, []);
 
+
+
     // Check if devices are still loading
     const deviceLoading = isLoadingMic || isLoadingCam;
     if (deviceLoading) return <div>Loading devices...</div>;
@@ -93,6 +97,7 @@ export const AgoraManager = ({ config, children }) => {
         localCameraTrack?.setEnabled(!cameraOn);
         setCameraOn(!cameraOn);
     };
+
 
     // Render the AgoraProvider and associated UI components
     return (
@@ -197,7 +202,6 @@ export const AgoraManager = ({ config, children }) => {
                     {/* Leave */}
                     <i className="fa-solid fa-phone px-1" style={{ color: '#fff' }}></i>
                 </button>
-
             </div>
         </AgoraProvider>
         </div>
