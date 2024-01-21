@@ -76,8 +76,11 @@ const MainDashboard = () => {
           params: { user: id },
         }
       );
+      const unreadMessages = response.data.notifications.filter(
+        (item) => !item.read
+      );
       console.log(response.data.notifications);
-      setCard(response.data.notifications);
+      setCard(unreadMessages);
     } catch (error) {
       console.error(error);
     }
@@ -107,6 +110,24 @@ const MainDashboard = () => {
     };
     getAllChats();
   }, []);
+
+  const handleTrue = async () =>{
+  try {
+    const token = localStorage.getItem("token");
+    const decoded = jwtDecode(token);
+    const id = decoded.id;
+
+    const response = await axios.get(
+      `${ENV.BACKEND_URL}/agora/notificationsTrue`,
+      {
+        params: { user: id },
+      }
+    );
+    getCard();
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 
   return (
@@ -319,7 +340,7 @@ const MainDashboard = () => {
                           src={bell}
                           alt=""
                         />
-                        <span>Notifications</span>
+                        <span onClick={handleTrue}>Notifications</span>
                         <NotificationBadge
                           className="notificationBadge"
                           count={card.length}

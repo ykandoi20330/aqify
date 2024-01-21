@@ -333,7 +333,7 @@ const AdminPanelListing = () => {
                                                 className="d-flex justify-content-between"
                                                 style={{ position: "absolute", width: "100%" }}
                                             >
-                                                <Link
+                                                {/* <Link
                                                     style={{
                                                         background: "#3247ff",
                                                         borderRadius: "50px",
@@ -343,8 +343,8 @@ const AdminPanelListing = () => {
                                                     data-bs-slide="next"
                                                 >
                                                     <img src={Left} alt="" />
-                                                </Link>
-                                                <Link
+                                                </Link> */}
+                                                {/* <Link
                                                     style={{
                                                         background: "#3247ff",
                                                         borderRadius: "50px",
@@ -354,7 +354,7 @@ const AdminPanelListing = () => {
                                                     data-bs-slide="prev"
                                                 >
                                                     <img src={Right} alt="" />
-                                                </Link>
+                                                </Link> */}
                                             </div>
                                         </div>
 
@@ -550,7 +550,7 @@ const AdminPanelListing = () => {
                                             </div>
                                         </div>
 
-                                        <div>
+                                        {/* <div>
                                             <div className="feedback my-3">
                                                 <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
                                                     <h3 style={{ color: "#000" }}>Did you Like it?</h3>
@@ -592,7 +592,7 @@ const AdminPanelListing = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div
@@ -620,7 +620,7 @@ const AdminPanelListing = () => {
                                                     <h1>${item.askingPrice}</h1>
                                                 </div>
 
-                                                <Link
+                                                {/* <Link
                                                     to="#"
                                                     className="my-3 d-flex align-items-center justify-content-center"
                                                     data-bs-toggle="modal"
@@ -681,8 +681,8 @@ const AdminPanelListing = () => {
                                                         style={{ color: "#005eff" }}
                                                     ></i>
                                                     <span className="mx-2">Schedule Video Call</span>
-                                                </Link>
-                                                <Link
+                                                </Link> */}
+                                                {/* <Link
                                                     className="my-3 d-flex align-items-center justify-content-center"
                                                     data-bs-toggle="modal"
                                                     data-bs-target="#staticBackdrop"
@@ -747,7 +747,7 @@ const AdminPanelListing = () => {
                                                     >
                                                         <img src={cart} alt="" className="mx-2" /> Buy Now
                                                     </Link>
-                                                </div>
+                                                </div> */}
                                             </div>
 
                                             <div>

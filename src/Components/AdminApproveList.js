@@ -215,7 +215,7 @@ const AdminApproveList = () => {
                                                 className="d-flex justify-content-between"
                                                 style={{ position: "absolute", width: "100%" }}
                                             >
-                                                <Link
+                                                {/* <Link
                                                     style={{
                                                         background: "#3247ff",
                                                         borderRadius: "50px",
@@ -236,7 +236,7 @@ const AdminApproveList = () => {
                                                     data-bs-slide="prev"
                                                 >
                                                     <img src={Right} alt="" />
-                                                </Link>
+                                                </Link> */}
                                             </div>
                                         </div>
 
@@ -432,7 +432,7 @@ const AdminApproveList = () => {
                                             </div>
                                         </div>
 
-                                        <div>
+                                        {/* <div>
                                             <div className="feedback my-3">
                                                 <div className="FirstFeedback d-flex flex-column justify-content-center align-items-center text-center">
                                                     <h3 style={{ color: "#000" }}>Did you Like it?</h3>
@@ -474,7 +474,7 @@ const AdminApproveList = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div
@@ -502,7 +502,7 @@ const AdminApproveList = () => {
                                                     <h1>${item.askingPrice}</h1>
                                                 </div>
 
-                                                <Link
+                                                {/* <Link
                                                     to="#"
                                                     className="my-3 d-flex align-items-center justify-content-center"
                                                     data-bs-toggle="modal"
@@ -580,8 +580,8 @@ const AdminApproveList = () => {
                                                 >
                                                     <img src={offer} alt="" />
                                                     <span className="mx-2">Make Offer</span>
-                                                </Link>
-                                                <Link
+                                                </Link> */}
+                                                {/* <Link
                                                     className="my-3 d-flex align-items-center justify-content-center"
                                                     type="button"
                                                     data-bs-toggle="modal"
@@ -628,8 +628,8 @@ const AdminApproveList = () => {
                                                         to="/MainDashboard/PaymentDash"
                                                     >
                                                         <img src={cart} alt="" className="mx-2" /> Buy Now
-                                                    </Link>
-                                                </div>
+                                                    </Link> */}
+                                                {/* </div> */}
                                             </div>
 
                                             <div>

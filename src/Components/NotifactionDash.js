@@ -11,6 +11,8 @@ const NotifactionDash = () => {
   const [meetingTime, setMeetingTime] = useState("");
   const [buyerId, setBuyerId] = useState("");
   const [notificationId, setNotificationId] = useState("");
+  const [unreadCount, setUnreadCount] = useState(0);
+
 
   const handleDateTimeChange = (e) => {
     setMeetingTime(e.target.value);
@@ -38,7 +40,11 @@ const NotifactionDash = () => {
           params: { user: id },
         }
       );
+      const unreadMessages = response.data.notifications.filter(
+        (item) => !item.read
+      );
       console.log(response.data.notifications);
+      setUnreadCount(unreadMessages.length);
       setCard(response.data.notifications);
     } catch (error) {
       console.error(error);

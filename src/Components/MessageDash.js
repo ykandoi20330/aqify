@@ -9,6 +9,8 @@ import EmojiPicker from "emoji-picker-react";
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
+
 
 const MessageDash = () => {
   const [ws, setWs] = useState(null);
@@ -119,13 +121,13 @@ const MessageDash = () => {
       if (token) {
         const userData = jwtDecode(token);
         setId(userData.id);
-
+        
         Axios.get(`${ENV.BACKEND_URL}/chat/all`, {
           headers: {
             authorization: `Bearer ${token}`,
           },
         })
-          .then(({ data }) => {
+        .then(({ data }) => {
             console.log(data);
             setAllChats(data);
           })
@@ -168,28 +170,62 @@ const MessageDash = () => {
     console.log("Selected Date and Time:", meetingTime);
   };
 
-  const handleReschedule = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      const decoded = jwtDecode(token);
-      const id = decoded.id;
+  const handleEmail1 = async (response) => {
+    emailjs.send(
+      "service_vy4h3iu",
+      "template_jr2ippq",
+      {
+        from_name: "Acqify",
+        from_email: "aamish@acqify.co",
+        to_email: response.data.email1,
+        message: `Your meeting with ${response.data.firstName2 +  response.data.lastName2} has been scheduled at ${meetingTime} . Link: https://acqify.co/#/call/${selectedUserId}`,
+      },
+      "d0q75IL42sp_4qDf5"
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
 
-      const response = await axios.post(`${ENV.BACKEND_URL}/agora/reschedule`, {
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
-        user: id,
-        time: meetingTime,
-        notificationId: notificationId,
-        otherId: buyerId,
-        channelName: buyerId,
-      });
+  const handleEmail2 = async (response) => {
+    emailjs.send(
+      "service_vy4h3iu",
+      "template_jr2ippq",
+      {
+        from_name: "Acqify",
+        from_email: "aamish@acqify.co",
+        to_email: response.data.email2,
+        message: `Your meeting with ${response.data.firstName1 +  response.data.lastName1} has been scheduled for ${meetingTime} . link: https://acqify.co/#/call/${selectedUserId}`,
+      },
+      "d0q75IL42sp_4qDf5"
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
+  const handleReschedule = async () => {
+    console.log("Selected Date and Time:", selectedUserId , id , meetingTime);
+    try {
+      const response = await axios.post(
+        `${ENV.BACKEND_URL}/agora/chatSchedule`,
+        {
+          user1: id,
+          user2: selectedUserId,
+        }
+      );
+
       console.log(response.data);
-      getCard();
+      handleEmail1(response);
+      handleEmail2(response);
+
     } catch (error) {
       console.error(error);
     }
-  };
+   }
+  
 
 
   useEffect(() => {
