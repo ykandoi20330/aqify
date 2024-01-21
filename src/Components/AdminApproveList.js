@@ -467,7 +467,7 @@ const AdminApproveList = () => {
                                                             <label htmlFor="next">
                                                                 <span
                                                                     className="feedbtn"
-                                                                >
+                                                                >Yes
                                                                 </span>
                                                             </label>
                                                         </>

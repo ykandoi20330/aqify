@@ -15,17 +15,17 @@ const Dashboard = () => {
     const getUsername = async () => {
       const token = localStorage.getItem("token");
       if (!token) {
-      const currentURL = window.location.href;
-      const [baseUrl, queryString] = currentURL.split("?");
-      const token = new URLSearchParams(queryString).get("token");
-      localStorage.setItem("token", token);
-
-      if (!token) {
-        const user = JSON.parse(localStorage.getItem("user"));
-        const token = user.token;
+        const currentURL = window.location.href;
+        const [baseUrl, queryString] = currentURL.split("?");
+        const token = new URLSearchParams(queryString).get("token");
         localStorage.setItem("token", token);
-      }
-      window.location.reload();
+
+        if (!token) {
+          const user = JSON.parse(localStorage.getItem("user"));
+          const token = user.token;
+          localStorage.setItem("token", token);
+        }
+        window.location.reload();
       }
       if (token) {
         const decoded = jwtDecode(token);
@@ -50,64 +50,54 @@ const Dashboard = () => {
     <>
       {Show === 1 &&
         <>
-        <div className="sideContent">
-          <div
-            className="d-flex justify-content-between"
-            style={{ marginTop: "6vh" }}
-          >
-            <div>
-              <span style={{ color: "#636363", fontWeight: "500" }}>
-                Welcome back,
-              </span>
-              <h1
-                style={{
-                  fontWeight: "700",
-                  paddingBottom: "0.5rem",
-                  color: "#3247ff",
-                }}
-              >
-                {username}
-              </h1>{" "}
-            </div>
-            <div>
-              <Link
-                to="/MainDashboard/PricingDash"
-                style={{ padding: "0.5rem 1.3rem" }}
-                className="btn btn-primary rounded-pill"
-              >
-                Upgrade
-                <img src={Arrow} alt="" />
-              </Link>
-            </div>
-          </div>
-          <br />
-
-          <div className="message-card">
-            <div>
-              <h2
-                style={{
-                  fontWeight: "700",
-                  width: "28%",
-                  borderBottom: "4px solid #3247ff",
-                  borderRadius: "5px",
-                  paddingBottom: "0.5rem",
-                }}
-              >
-                {" "}
-                <img src={message} alt="" /> Messages
-              </h2>
-            </div>
-
+          <div className="sideContent">
             <div
-              className="d-flex justify-content-center align-items-center flex-column"
-              style={{ height: "70vh", color: "#c0c0c0" }}
+              className="d-flex justify-content-between"
+              style={{ marginTop: "6vh" }}
             >
-              <img width={50} src={lightMessage} alt="" />
-              <span style={{ fontSize: "1.5rem" }}>No conversations yet</span>
+              <div>
+                <span style={{ color: "#636363", fontWeight: "500" }}>
+                  Hello,
+                </span>
+                <h1
+                  style={{
+                    fontWeight: "700",
+                    paddingBottom: "0.5rem",
+                    color: "#3247ff",
+                  }}
+                >
+                  {username}
+                </h1>{" "}
+              </div>
+              <div>
+                <Link
+                  to="/MainDashboard/PricingDash"
+                  style={{ padding: "0.5rem 1.3rem" }}
+                  className="btn btn-primary rounded-pill"
+                >
+                  Upgrade
+                  <img src={Arrow} alt="" />
+                </Link>
+              </div>
+            </div>
+            <br />
+
+            <div className="message-card">
+              <div
+                className="d-flex justify-content-center align-items-center flex-column"
+                style={{ height: "70vh", color: "#c0c0c0" }}
+              >
+                <div className="text-center my-5">
+                  <h1 style={{ color: "#636363", fontWeight: "500" }}><span class="waving-hand">👋</span>Welcome back!</h1>
+                  <span style={{ fontSize: "1.5rem", fontWeight: "500" }}>Acqify is a full-fledge marketplace platform.</span>
+                </div>
+                <div>
+                  <Link className="btn btn-primary py-2 px-4 rounded-pill my-5" to="/MarketDash2">Explore Acqify</Link>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-    </>}
+        </>}
     </>
   );
 };
