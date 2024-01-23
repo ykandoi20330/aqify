@@ -17,6 +17,7 @@ const MessageDash = () => {
   const [allChats, setAllChats] = useState([]); // this is the list of all the chats that the user has brougt by the function get AllChats
   const [selectedUserId, setSelectedUserId] = useState(null); // this is the id of the user that the user is currently chatting with
   const [messages, setMessages] = useState([]); // this is the list of all the messages that the user has sent to the selected user
+  const [newMessageCount, setNewMessageCount] = useState(0); // this is the number of new messages that the user has recieved from the selected user
   const [newMessageText, setNewMessageText] = useState(""); // this is the text that the user is currently typing in the input field
   const [id, setId] = useState(null); // this is the id of the user that is currently logged in
 
@@ -74,7 +75,11 @@ const MessageDash = () => {
         }
       );
       console.log("data", data);
+      const unreadMessages = data.filter(
+        (item) => !item.read
+      );
       setMessages(data);
+      setNewMessageCount(unreadMessages.length);
     } catch (err) {
       console.log(err);
     }
@@ -285,6 +290,8 @@ const MessageDash = () => {
                               }}
                             >
                               {chat.userName}
+                             
+
                             </h3>
                           </div>
                         );
@@ -625,11 +632,11 @@ const MessageDash = () => {
                             <div className="mx-3">
                               {/* {messages.map((item)=>(<>{item.message}</>))} */}
                               <span>
-                                <NotificationBadge
+                                {/* <NotificationBadge
                                   className="notificationBadge2"
                                   count={allChats.length}
                                   effect={Effect.SCALE}
-                                />
+                                /> */}
                               </span>
                             </div>
                           </div>

@@ -323,11 +323,11 @@ const MainDashboard = () => {
                           alt=""
                         />
                         <span>Messages</span>
-                        <NotificationBadge
+                        {/* <NotificationBadge
                           className="notificationBadge"
                           count={allChats.length}
                           effect={Effect.SCALE}
-                        />
+                        /> */}
                       </Link>
                     </li>
                     <li>
