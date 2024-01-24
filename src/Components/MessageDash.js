@@ -80,6 +80,7 @@ const MessageDash = () => {
       );
       setMessages(data);
       setNewMessageCount(unreadMessages.length);
+      console.log("this is unread count of message", unreadMessages);
     } catch (err) {
       console.log(err);
     }
@@ -630,13 +631,12 @@ const MessageDash = () => {
                               Hello, I am owner of {chat.message}...
                             </span>
                             <div className="mx-3">
-                              {/* {messages.map((item)=>(<>{item.message}</>))} */}
                               <span>
-                                {/* <NotificationBadge
+                                <NotificationBadge
                                   className="notificationBadge2"
-                                  count={allChats.length}
+                                  count={newMessageCount.length}
                                   effect={Effect.SCALE}
-                                /> */}
+                                />
                               </span>
                             </div>
                           </div>

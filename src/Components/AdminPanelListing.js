@@ -121,7 +121,7 @@ const AdminPanelListing = () => {
         },
         {
             name: 'Details Listing',
-            cell: row => <button className='btn btn-danger py-1 px-3 rounded-pill' onClick={() => detailPage(row._id)}>Details</button>
+            cell: row => <button className='btn btn-secondary py-1 px-3 rounded-pill' onClick={() => detailPage(row._id)}>Details</button>
         },
     ]
 
