@@ -28,6 +28,8 @@ const MainDashboard = () => {
   const [allChats, setAllChats] = useState([]);
   const [id, setId] = useState(null);
   const [card, setCard] = useState([]);
+  const [unreadCount, setUnreadCount] = useState(true);
+  const [unreadMessageCount, setUnreadMessageCount] = useState(true);
   const navigate = useNavigate();
 
   const logout = () => {
@@ -76,11 +78,11 @@ const MainDashboard = () => {
           params: { user: id },
         }
       );
-      // const unreadMessages = response.data.notifications.filter(
-      //   (item) => !item.read
-      // );
-      // console.log(response.data.notifications);
-      // setCard(unreadMessages);
+      const unreadMessages = response.data.notifications.filter(
+        (item) => !item.read
+      );
+      console.log(response.data.notifications);
+      setCard(unreadMessages);
     } catch (error) {
       console.error(error);
     }
@@ -127,6 +129,13 @@ const MainDashboard = () => {
   } catch (error) {
     console.error(error);
   }
+}
+
+const handleBadge = () => {
+  setUnreadCount(false)
+}
+const handleMessageBadge = () => {
+  setUnreadMessageCount(false)
 }
 
 
@@ -316,6 +325,7 @@ const MainDashboard = () => {
                       <Link
                         to="/MainDashboard/MessageDash"
                         className="nav-link1 text-white"
+                        onClick={handleMessageBadge}
                       >
                         <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
@@ -323,17 +333,19 @@ const MainDashboard = () => {
                           alt=""
                         />
                         <span>Messages</span>
+                        {unreadMessageCount === true  &&
                         <NotificationBadge
                           className="notificationBadge"
                           count={allChats.length}
                           effect={Effect.SCALE}
-                        />
+                        />}
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/MainDashboard/Notification"
                         className="nav-link1 text-white "
+                        onClick={handleBadge}
                       >
                         <img className="dashIcon"
                           style={{ marginRight: "1rem" }}
@@ -341,11 +353,12 @@ const MainDashboard = () => {
                           alt=""
                         />
                         <span onClick={handleTrue}>Notifications</span>
+                        {unreadCount === true  &&
                         <NotificationBadge
                           className="notificationBadge"
                           count={card.length}
                           effect={Effect.SCALE}
-                        />
+                        />}
                       </Link>
                     </li>
                     <li className="nav-item dropdown">
